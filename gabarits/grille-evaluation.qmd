@@ -1,0 +1,28 @@
+---
+title: "Gabarit de grille d’évaluation"
+format:
+  html:
+    embed-resources: true
+---
+
+## Informations
+
+- Évaluation:
+- Date:
+- Niveau d’IA permis:
+- Format de remise:
+
+## Critères
+
+| Critère | Excellent | Satisfaisant | À améliorer | Insuffisant |
+|---|---|---|---|---|
+| Exactitude technique | Résultat correct et bien vérifié | Résultat globalement correct | Erreurs limitées | Erreurs importantes |
+| Reproductibilité | Relance complète documentée | Relance possible avec ajustements mineurs | Instructions incomplètes | Non reproductible |
+| Qualité du code | Code clair, modulaire et lisible | Code lisible | Code répétitif ou fragile | Code difficile à suivre |
+| Documentation | Décisions bien expliquées | Documentation suffisante | Documentation partielle | Documentation absente |
+| Jugement | Limites et choix discutés | Choix expliqués | Justification faible | Choix non justifiés |
+| Transparence IA | Usage clair et proportionné | Usage déclaré | Déclaration incomplète | Usage masqué ou interdit |
+
+## Commentaires
+
+Ajouter une rétroaction courte, concrète et orientée vers l’amélioration.

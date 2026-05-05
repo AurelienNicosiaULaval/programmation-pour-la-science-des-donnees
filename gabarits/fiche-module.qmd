@@ -1,0 +1,65 @@
+---
+title: "Gabarit de fiche-module"
+format:
+  html:
+    embed-resources: true
+---
+
+Remplacer ce gabarit par le contenu du module.
+
+## Question du module
+
+Formuler la difficulté de projet que le module aide à résoudre.
+
+## Objectifs du module
+
+- Objectif observable 1.
+- Objectif observable 2.
+- Objectif observable 3.
+
+## Compétences visées
+
+- Compétence technique.
+- Compétence de documentation.
+- Compétence de validation.
+
+## Avant la classe
+
+- Lecture courte.
+- Exemples R à exécuter.
+- Mini-test.
+- Préparation du dépôt.
+
+## Pendant la classe
+
+- Retour sur les difficultés.
+- Démonstration ciblée.
+- Atelier guidé.
+- Revue de code ou discussion.
+
+## Après la classe
+
+- Finaliser le livrable.
+- Ajouter tests ou validations.
+- Mettre à jour le portfolio.
+- Documenter l’usage de l’IA si pertinent.
+
+## Défi de la semaine
+
+Décrire le défi en une phrase.
+
+## Livrables
+
+- Fichier ou dossier attendu.
+- Trace Git.
+- Note ou réflexion.
+
+## Variante STT-6230
+
+Indiquer l’attente supplémentaire pour le niveau maîtrise.
+
+## Ressources
+
+- Notes du cours.
+- Documentation officielle.
+- Lecture complémentaire.

@@ -1,0 +1,70 @@
+---
+title: "STT-4230 / STT-6230 - Programmation pour la science des données"
+format:
+  html:
+    embed-resources: true
+---
+
+Ce site regroupe le matériel du cours STT-4230 / STT-6230, offert à partir de l’automne 2026 à l’Université Laval. Il est conçu comme un point d’entrée unique pour les notes, laboratoires, défis, consignes de portfolio, projets et ressources techniques.
+
+Le cours ne vise pas seulement à apprendre R. Il vise à apprendre à développer des projets de science des données robustes, reproductibles, lisibles, collaboratifs et livrables.
+
+## Logique pédagogique
+
+Le cours suit une pédagogie inversée. La séance de laboratoire de 3 heures doit rester un moment de production accompagnée.
+
+Chaque semaine suit la même structure:
+
+1. Avant la classe: lire, exécuter quelques exemples R, répondre au mini-test et préparer le dépôt.
+2. Pendant la classe: clarifier les notions difficiles, observer une démonstration ciblée, travailler en laboratoire et demander de l’aide.
+3. Après la classe: finaliser le défi, stabiliser le code, mettre à jour le portfolio et documenter les décisions.
+
+## Semaine type
+
+| Moment | Travail attendu | Trace |
+|---|---|---|
+| Avant | Lecture courte, exemples R, mini-test | Question d’entrée, commit initial ou note |
+| Pendant | Atelier guidé, exercice, revue de code | Commit, pull request, note technique |
+| Après | Défi, portfolio, réflexion | Livrable, journal, `ai-log.md` si pertinent |
+
+## Modules
+
+Le cours est structuré en 12 modules:
+
+- 1. [Structuration de projets de science des données](modules/01-structuration-projets/index.qmd)
+- 2. [Manipulation et gestion de données](modules/02-manipulation-donnees/index.qmd)
+- 3. [Visualisation](modules/03-visualisation/index.qmd)
+- 4. [Rapports, applications web et tableaux de bord](modules/04-rapports-applications-tableaux-bord/index.qmd)
+- 5. [Programmation orientée objet](modules/05-programmation-orientee-objet/index.qmd)
+- 6. [Programmation fonctionnelle avec tidyverse](modules/06-programmation-fonctionnelle/index.qmd)
+- 7. [Profilage, optimisation de code et performance](modules/07-profilage-optimisation-performance/index.qmd)
+- 8. [Programmation asynchrone et parallèle](modules/08-programmation-parallele/index.qmd)
+- 9. [Modèles d’apprentissage automatique](modules/09-modeles-apprentissage-automatique/index.qmd)
+- 10. [Déploiement et mise en production](modules/10-deploiement-production/index.qmd)
+- 11. [Cycle de vie des modèles](modules/11-cycle-vie-modeles/index.qmd)
+- 12. [Collaboration, documentation et packages](modules/12-collaboration-documentation-package/index.qmd)
+
+## Évaluations
+
+Les évaluations valorisent le produit final, mais aussi le processus de développement: structure du dépôt, historique Git, tests, documentation, reproductibilité, revue de code et capacité à expliquer les choix.
+
+Les composantes prévues sont les mini-tests, les défis hebdomadaires, le portfolio individuel, les projets, la revue de code et l’autoévaluation.
+
+## Portfolio et GitHub
+
+Le portfolio individuel est construit progressivement. Il doit contenir des traces concrètes du travail: code, visualisations, rapports, applications ou prototypes, documentation, réflexions et déclarations d’usage de l’IA lorsque nécessaire.
+
+GitHub est utilisé pour versionner le travail, documenter les contributions, soutenir la revue de code et rendre la progression visible.
+
+## IA générative
+
+L’IA générative est encadrée plutôt qu’interdite par défaut. Elle peut aider à comprendre, diagnostiquer, tester ou refactoriser, mais l’étudiante ou l’étudiant demeure responsable de comprendre, vérifier, modifier et défendre le travail remis.
+
+Consulter la page [Politique d’utilisation de l’IA](ia.qmd).
+
+## À compléter
+
+- Ajouter les contenus détaillés des modules.
+- Ajouter les jeux de données autorisés.
+- Adapter le calendrier aux dates exactes de l’automne 2026.
+- Valider les règles institutionnelles sur l’IA et la protection des données.

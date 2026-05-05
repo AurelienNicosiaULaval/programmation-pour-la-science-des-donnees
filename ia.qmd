@@ -1,0 +1,77 @@
+---
+title: "Politique d’utilisation de l’IA générative"
+format:
+  html:
+    embed-resources: true
+---
+
+L’IA générative est un objet d’apprentissage et un outil de soutien. Elle peut expliquer, proposer, relire et aider à déboguer. Elle ne remplace pas la compréhension, la vérification et la responsabilité intellectuelle.
+
+## Règle simple
+
+Tu peux utiliser l’IA si tu peux ensuite expliquer, vérifier, modifier et défendre ce qu’elle t’a aidé à produire. Si tu ne comprends pas le résultat, il n’est pas prêt à être remis.
+
+## Niveaux d’autorisation
+
+| Niveau | Règle |
+|---:|---|
+| 0 | Aucune IA pour cette tâche. |
+| 1 | IA permise pour comprendre, mais pas pour produire le livrable. |
+| 2 | IA permise avec déclaration dans `ai-log.md`. |
+| 3 | IA attendue comme outil de comparaison, de tests ou de revue de code. |
+
+## Usages permis
+
+- Comprendre une erreur R ou un message Git.
+- Demander une explication d’un concept technique.
+- Obtenir une première version de code à tester.
+- Refactoriser du code répétitif.
+- Générer des cas de tests avec `testthat`.
+- Relire un README, une fonction ou un rapport.
+- Comparer deux stratégies de programmation.
+- Préparer une revue de code ou une checklist.
+
+## Usages interdits
+
+- Remettre du code non compris.
+- Masquer une contribution importante de l’IA.
+- Inventer ou embellir des résultats.
+- Déléguer la justification statistique ou méthodologique.
+- Copier une réponse sans validation locale.
+- Soumettre des données confidentielles, nominatives ou sensibles dans un outil externe non approuvé.
+- Utiliser l’IA pour contourner une consigne individuelle.
+
+## Déclaration obligatoire
+
+Chaque projet ou défi qui autorise l’IA au niveau 2 ou 3 doit contenir un fichier `ai-log.md` ou une déclaration équivalente.
+
+La déclaration doit indiquer:
+
+- l’outil utilisé;
+- la tâche demandée;
+- le résumé de la réponse utile;
+- les vérifications faites;
+- les modifications intégrées au projet.
+
+Un gabarit est disponible dans [gabarits/declaration-ia.qmd](gabarits/declaration-ia.qmd).
+
+## Exemples acceptables
+
+- Demander trois hypothèses pour diagnostiquer un message d’erreur, puis tester chaque hypothèse localement.
+- Demander une revue de lisibilité d’une fonction déjà écrite, puis adapter les suggestions.
+- Demander des tests unitaires possibles et conserver seulement ceux qui correspondent au comportement attendu.
+
+## Exemples non acceptables
+
+- Demander à l’IA de faire le travail complet et remettre le résultat sans validation.
+- Utiliser des données confidentielles dans une requête.
+- Générer une interprétation statistique sans vérifier les résultats et les hypothèses.
+
+## Responsabilité
+
+La personne qui remet un travail est responsable du code, des choix statistiques, des résultats, de la documentation et des limites. L’usage de l’IA ne transfère pas cette responsabilité.
+
+## TODO
+
+- Vérifier la politique institutionnelle applicable à l’automne 2026.
+- Préciser les niveaux d’IA dans chaque consigne d’évaluation.

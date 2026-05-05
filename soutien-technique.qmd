@@ -1,0 +1,51 @@
+---
+title: "Soutien technique"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page regroupe les procédures de dépannage et les ressources de rattrapage.
+
+## Diagnostic initial
+
+Un diagnostic non noté est prévu en début de session pour vérifier:
+
+- importation d’un fichier;
+- manipulation simple de données;
+- graphique de base;
+- petite fonction;
+- commit Git.
+
+Le diagnostic sert à orienter le soutien, pas à classer les étudiantes et étudiants.
+
+## Question technique efficace
+
+Inclure:
+
+- le système utilisé;
+- la version de R;
+- la commande exécutée;
+- le message d’erreur complet;
+- un exemple minimal reproductible;
+- ce qui était attendu;
+- ce qui a été obtenu.
+
+## Erreurs fréquentes à documenter
+
+- Problème d’authentification GitHub.
+- Mauvais répertoire de travail.
+- Package non installé.
+- Chemin absolu local.
+- Fichier de données manquant.
+- Conflit Git.
+
+## IA et dépannage
+
+L’IA peut aider à comprendre une erreur si le niveau d’IA de la tâche le permet. Ne jamais transmettre de données sensibles ou confidentielles à un outil externe non approuvé.
+
+## TODO
+
+- Ajouter les consignes SSH GitHub.
+- Ajouter une FAQ vivante.
+- Ajouter les ressources de rattrapage R.

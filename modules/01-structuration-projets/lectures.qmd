@@ -1,0 +1,32 @@
+---
+title: "Structuration de projets de science des données - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Lecture principale
+
+Ajouter ici les notes maison ou l’extrait principal.
+
+## Lecture complémentaire
+
+Ajouter une documentation officielle ou une référence stable.
+
+## Geste R à reproduire
+
+- Exemple 1 à exécuter.
+- Exemple 2 à exécuter.
+
+## Trace attendue
+
+Indiquer la trace à ajouter au portfolio ou au dépôt.
+
+## Mini-test
+
+Prévoir des questions courtes liées à la préparation.
+
+## TODO
+
+- Ajouter les liens précis.
+- Vérifier que la charge reste raisonnable.

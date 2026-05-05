@@ -1,0 +1,79 @@
+---
+title: "Manipulation et gestion de données"
+description: "Comment importer, nettoyer et valider des données réelles sans fragiliser le pipeline?"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment importer, nettoyer et valider des données réelles sans fragiliser le pipeline?
+
+## Objectifs du module
+
+- importer plusieurs formats de données
+- identifier les problèmes de types, valeurs manquantes et doublons
+- produire un pipeline de nettoyage reproductible
+- documenter les limites des données
+
+## Compétences visées
+
+- utiliser readr, dplyr, tidyr et outils connexes
+- écrire des validations simples
+- séparer données brutes et données transformées
+- préserver la traçabilité des transformations
+
+## Avant la classe
+
+- Lire la page [Avant la classe](avant.qmd).
+- Exécuter les exemples indiqués.
+- Répondre au mini-test de préparation.
+- Préparer le dépôt GitHub ou le dossier de travail.
+
+## Pendant la classe
+
+- Revenir sur les difficultés.
+- Observer une démonstration ciblée.
+- Réaliser le [laboratoire](laboratoire.qmd).
+- Documenter les décisions importantes.
+
+## Après la classe
+
+- Finaliser le [défi](defi.qmd).
+- Mettre à jour le portfolio.
+- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
+- Vérifier que le livrable se relance.
+
+## Défi de la semaine
+
+Construire un script d’importation et de validation pour un jeu de données imparfait.
+
+## Livrables
+
+- `scripts/01_import_data.R` ou équivalent
+- données traitées non sensibles
+- note sur la source et les limites
+- validation minimale documentée
+
+## Variante STT-6230
+
+Comparer deux stratégies de validation ou ajouter un contrôle automatisé plus robuste.
+
+## Rappel IA
+
+Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Après la classe](apres.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Défi](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)
+
+## Ressources
+
+Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

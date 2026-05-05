@@ -1,0 +1,44 @@
+---
+title: "Démarrage étudiant"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page explique comment utiliser le site et se préparer au cours.
+
+## Utiliser le site
+
+Commencer par lire la page du module de la semaine. Chaque module indique quoi faire avant, pendant et après la séance.
+
+## Préparation hebdomadaire
+
+Avant la séance:
+
+- lire les notes courtes;
+- exécuter les exemples R;
+- répondre au mini-test;
+- préparer le dépôt GitHub;
+- noter une question ou une erreur à discuter.
+
+## GitHub
+
+Chaque personne doit travailler dans son dépôt personnel lorsque demandé. Les commits doivent être fréquents et lisibles.
+
+## Remises
+
+Les consignes préciseront le format exact: lien GitHub, fichier rendu, pull request, issue, rapport Quarto ou autre livrable.
+
+## Portfolio
+
+Le portfolio est mis à jour chaque semaine. Il doit contenir les traces du travail, pas seulement les résultats finaux.
+
+## IA
+
+Vérifier le niveau d’IA permis pour chaque tâche. Si l’IA est utilisée de façon significative, documenter l’usage dans `ai-log.md`.
+
+## Où trouver de l’aide
+
+- Page [Soutien technique](soutien-technique.qmd).
+- Canal officiel du cours.
+- Équipe enseignante pendant les laboratoires.

@@ -1,0 +1,26 @@
+---
+title: "Rapports, applications web et tableaux de bord - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Ressources internes
+
+- Notes du module.
+- Laboratoire.
+- Défi.
+- Solution minimale, à publier après la séance si pertinent.
+
+## Ressources externes
+
+Ajouter des liens vers documentation officielle, chapitres ou guides.
+
+## Erreurs fréquentes
+
+- Erreur fréquente 1 à documenter.
+- Erreur fréquente 2 à documenter.
+
+## Données
+
+Indiquer les jeux de données autorisés, leur source et les limites d’utilisation.

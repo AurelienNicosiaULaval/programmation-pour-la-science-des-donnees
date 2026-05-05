@@ -1,0 +1,79 @@
+---
+title: "Profilage, optimisation de code et performance"
+description: "Comment optimiser seulement ce qui mérite d’être optimisé?"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment optimiser seulement ce qui mérite d’être optimisé?
+
+## Objectifs du module
+
+- mesurer le temps d’exécution
+- identifier les goulots d’étranglement
+- améliorer un code sans changer les sorties
+- documenter les compromis de performance
+
+## Compétences visées
+
+- utiliser des outils de mesure et de profilage
+- distinguer lisibilité et performance
+- vérifier l’équivalence des résultats
+- raisonner sur mémoire et vectorisation
+
+## Avant la classe
+
+- Lire la page [Avant la classe](avant.qmd).
+- Exécuter les exemples indiqués.
+- Répondre au mini-test de préparation.
+- Préparer le dépôt GitHub ou le dossier de travail.
+
+## Pendant la classe
+
+- Revenir sur les difficultés.
+- Observer une démonstration ciblée.
+- Réaliser le [laboratoire](laboratoire.qmd).
+- Documenter les décisions importantes.
+
+## Après la classe
+
+- Finaliser le [défi](defi.qmd).
+- Mettre à jour le portfolio.
+- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
+- Vérifier que le livrable se relance.
+
+## Défi de la semaine
+
+Profiler une fonction ou un pipeline court, puis proposer une amélioration validée.
+
+## Livrables
+
+- mesure initiale
+- version améliorée
+- comparaison des sorties
+- note de performance
+
+## Variante STT-6230
+
+Ajouter une analyse de sensibilité ou une comparaison avec une stratégie plus avancée.
+
+## Rappel IA
+
+Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Après la classe](apres.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Défi](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)
+
+## Ressources
+
+Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

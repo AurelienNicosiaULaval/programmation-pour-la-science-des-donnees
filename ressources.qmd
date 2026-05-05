@@ -1,0 +1,47 @@
+---
+title: "Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page regroupe les ressources utiles pour le cours.
+
+## R et environnement
+
+- R.
+- Positron.
+- RStudio comme solution de repli.
+- Quarto.
+- Git.
+- GitHub.
+
+## Programmation et science des données
+
+- tidyverse.
+- ggplot2.
+- tidymodels.
+- shiny.
+- testthat.
+- renv.
+
+## Ressources internes
+
+- [Démarrage](demarrage.qmd)
+- [Dépendances R](dependances.qmd)
+- [Soutien technique](soutien-technique.qmd)
+- [Politique IA](ia.qmd)
+
+## Documents sources du projet
+
+Les trois PDF de conception sont conservés à la racine du dépôt pendant la phase de construction:
+
+- `stt4230_fiches_completes_consolidees.pdf`
+- `fiche_lectures_structure_hebdomadaire_STT4230_STT6230.pdf`
+- `stt4230_fiches_points_a_ne_pas_oublier.pdf`
+
+## TODO
+
+- Déplacer ou copier les documents institutionnels autorisés dans `assets/documents/`.
+- Ajouter les liens officiels validés.
+- Ajouter les jeux de données recommandés.

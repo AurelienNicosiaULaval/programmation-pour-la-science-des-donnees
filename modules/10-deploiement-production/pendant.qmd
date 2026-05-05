@@ -1,0 +1,32 @@
+---
+title: "Déploiement et mise en production - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Déroulement prévu
+
+1. Retour sur les lectures et le mini-test.
+2. Clarification des concepts difficiles.
+3. Démonstration courte.
+4. Travail guidé en laboratoire.
+5. Revue de code ou discussion ciblée.
+6. Synthèse et prochaines étapes.
+
+## Points de contrôle
+
+- Le dépôt est à jour.
+- Le code de départ fonctionne.
+- Une première trace est commitée.
+- Les difficultés sont documentées.
+
+## Accompagnement
+
+Utiliser le temps de laboratoire pour poser des questions précises, montrer un message d’erreur, demander une revue courte ou valider une décision de structure.
+
+## TODO enseignant
+
+- Ajouter le déroulement minute par minute si nécessaire.
+- Ajouter les extraits de code de démonstration.
+- Préparer les questions de synthèse.

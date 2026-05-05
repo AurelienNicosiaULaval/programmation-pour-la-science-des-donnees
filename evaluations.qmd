@@ -1,0 +1,60 @@
+---
+title: "Évaluations"
+format:
+  html:
+    embed-resources: true
+---
+
+Les évaluations doivent reconnaître la qualité du produit final et la qualité du processus: structure, historique Git, tests, documentation, reproductibilité, collaboration et jugement.
+
+## Pondération provisoire
+
+| Élément | Poids | Format | Ce qui est évalué |
+|---|---:|---|---|
+| Préparation et mini-validations | 10 % | Individuel | Lectures, quiz courts, questions de préparation |
+| Mini-livrables de module | 20 % | Individuel ou duo | Petites productions liées au module |
+| Projet filé | 30 % | Équipe | Dépôt complet, données, rapport, application, pipeline |
+| Épreuve pratique individuelle | 20 % | Individuel | Déboguer, structurer, expliquer et modifier du code R |
+| Revue de code et collaboration | 10 % | Équipe et individuel | Pull requests, issues, commentaires, contributions Git |
+| Démonstration finale | 10 % | Équipe avec questions individuelles | Produit, décisions, limites |
+
+Cette pondération provient des fiches de conception et doit être validée avant la diffusion officielle.
+
+## Mini-tests hebdomadaires
+
+- Courts et liés aux lectures.
+- Visent la préparation, pas seulement la sanction.
+- Peuvent inclure une question personnelle liée au portfolio.
+- Doivent préciser le niveau d’IA permis.
+
+## Défis hebdomadaires
+
+- Petits livrables pratiques.
+- Réalisés dans un dépôt Git.
+- Conçus pour faire progresser le portfolio.
+- Corrigés avec une grille courte et stable.
+
+## Portfolio individuel
+
+Le portfolio documente la progression. Il contient les traces de code, documentation, réflexions, visualisations, rapports, prototypes et usages déclarés de l’IA.
+
+## Projets
+
+Les projets permettent d’intégrer les apprentissages dans un produit de science des données plus complet. La contribution individuelle doit être vérifiable par Git, issues, pull requests, bilan individuel et questions orales si nécessaire.
+
+## Autoévaluation et réflexion
+
+Une courte réflexion hebdomadaire aide à identifier les apprentissages, difficultés et prochaines actions.
+
+## Grille commune de qualité
+
+- Exactitude technique.
+- Reproductibilité.
+- Qualité du code.
+- Documentation.
+- Interprétation et jugement.
+- Transparence sur l’IA lorsque l’IA est autorisée.
+
+## Différenciation STT-4230 / STT-6230
+
+STT-4230 exige un livrable fonctionnel, reproductible, bien structuré et documenté. STT-6230 ajoute une justification technique, une comparaison d’approches, des tests supplémentaires, une analyse de performance ou une note méthodologique courte selon le livrable.

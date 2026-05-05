@@ -1,0 +1,50 @@
+---
+title: "Gabarit de fiche-défi"
+format:
+  html:
+    embed-resources: true
+---
+
+## Contexte
+
+Décrire la situation de départ et le problème à résoudre.
+
+## Objectif
+
+Indiquer ce que la personne doit être capable de produire ou démontrer.
+
+## Consignes
+
+- Consigne 1.
+- Consigne 2.
+- Consigne 3.
+
+## Livrable attendu
+
+- Fichier ou dossier à remettre.
+- Format attendu.
+- Lien GitHub ou rendu.
+
+## Critères d’évaluation
+
+| Critère | Attente |
+|---|---|
+| Exactitude | Le résultat est correct et vérifié. |
+| Reproductibilité | Le livrable peut être relancé. |
+| Qualité du code | Le code est lisible et structuré. |
+| Documentation | Les décisions sont expliquées. |
+| Processus | Les commits et traces sont cohérents. |
+
+## Place de l’IA
+
+Niveau d’IA permis: à préciser.
+
+Si l’IA est utilisée au niveau 2 ou 3, ajouter une entrée dans `ai-log.md`.
+
+## Checklist de remise
+
+- Le code s’exécute.
+- Les fichiers attendus sont présents.
+- Le README ou la note explique comment reproduire.
+- Les données sensibles sont absentes.
+- L’usage de l’IA est déclaré si nécessaire.

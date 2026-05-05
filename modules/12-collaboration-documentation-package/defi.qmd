@@ -1,0 +1,49 @@
+---
+title: "Collaboration, documentation et packages - Défi"
+format:
+  html:
+    embed-resources: true
+---
+
+## Contexte
+
+Ce défi transforme le contenu du module en trace concrète dans le portfolio.
+
+## Objectif
+
+Transformer un extrait du projet en composant documenté, testé et révisable.
+
+## Consignes
+
+- Travailler dans le dépôt demandé.
+- Produire un livrable minimal mais reproductible.
+- Documenter les étapes nécessaires.
+- Faire des commits lisibles.
+
+## Livrable attendu
+
+- documentation finale
+- trace de revue de code
+- bilan de contribution
+- démonstration ou présentation
+
+## Place de l’IA
+
+Niveau à préciser pour ce défi. Si le niveau 2 ou 3 est autorisé, ajouter une entrée dans `ai-log.md`.
+
+## Critères
+
+- Exactitude technique.
+- Reproductibilité.
+- Qualité du code.
+- Documentation.
+- Trace Git.
+- Transparence IA si applicable.
+
+## Checklist de remise
+
+- Le code s’exécute.
+- Les fichiers attendus sont présents.
+- Le README ou la note explique comment reproduire.
+- Les données sensibles sont absentes.
+- L’usage de l’IA est déclaré si nécessaire.

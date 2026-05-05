@@ -1,0 +1,46 @@
+---
+title: "Profilage, optimisation de code et performance - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Arriver au laboratoire avec une compréhension minimale de la question suivante:
+
+> Comment optimiser seulement ce qui mérite d’être optimisé?
+
+## À lire
+
+- Notes maison du module.
+- Documentation ou extrait externe à ajouter.
+- Consigne du défi à parcourir.
+
+## À faire rouler dans R
+
+- Exemple court 1 à ajouter.
+- Exemple court 2 à ajouter.
+- Vérification de l’environnement de travail.
+
+## À vérifier dans le portfolio
+
+- Dépôt à jour.
+- README compréhensible.
+- Dernier commit poussé sur GitHub.
+- Question ou difficulté notée.
+
+## Mini-test
+
+Prévoir 5 à 8 questions:
+
+- diagnostic de compréhension;
+- choix technique;
+- lecture de code;
+- question personnelle liée au portfolio.
+
+## TODO enseignant
+
+- Ajouter les lectures exactes.
+- Ajouter les exemples R.
+- Définir le niveau d’IA permis pour le mini-test.

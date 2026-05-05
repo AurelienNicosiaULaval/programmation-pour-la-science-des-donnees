@@ -1,0 +1,42 @@
+---
+title: "Gabarit de fiche-laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Mise en contexte
+
+Décrire le problème travaillé pendant la séance.
+
+## Préparation
+
+- Lecture ou rappel.
+- Dépôt à cloner ou mettre à jour.
+- Fichiers nécessaires.
+
+## Activité guidée
+
+1. Étape guidée 1.
+2. Étape guidée 2.
+3. Étape guidée 3.
+
+## Exercices
+
+- Exercice 1.
+- Exercice 2.
+- Exercice 3.
+
+## Défis supplémentaires
+
+- Extension 1.
+- Extension 2.
+
+## Retour réflexif
+
+Répondre brièvement:
+
+- Qu’est-ce qui fonctionne?
+- Qu’est-ce qui reste fragile?
+- Quelle vérification manque encore?
+- Quelle trace doit être ajoutée au portfolio?

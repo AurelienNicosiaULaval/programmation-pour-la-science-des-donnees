@@ -1,0 +1,79 @@
+---
+title: "Programmation asynchrone et parallèle"
+description: "Quand le parallèle aide-t-il, et quand complique-t-il inutilement le projet?"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Quand le parallèle aide-t-il, et quand complique-t-il inutilement le projet?
+
+## Objectifs du module
+
+- comprendre les usages de future, promises et furrr
+- identifier les limites du calcul parallèle
+- préserver la reproductibilité
+- documenter les risques et coûts
+
+## Compétences visées
+
+- configurer un plan de calcul raisonnable
+- comparer exécution séquentielle et parallèle
+- contrôler les graines aléatoires lorsque nécessaire
+- éviter les effets de bord non maîtrisés
+
+## Avant la classe
+
+- Lire la page [Avant la classe](avant.qmd).
+- Exécuter les exemples indiqués.
+- Répondre au mini-test de préparation.
+- Préparer le dépôt GitHub ou le dossier de travail.
+
+## Pendant la classe
+
+- Revenir sur les difficultés.
+- Observer une démonstration ciblée.
+- Réaliser le [laboratoire](laboratoire.qmd).
+- Documenter les décisions importantes.
+
+## Après la classe
+
+- Finaliser le [défi](defi.qmd).
+- Mettre à jour le portfolio.
+- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
+- Vérifier que le livrable se relance.
+
+## Défi de la semaine
+
+Adapter une tâche répétitive à une exécution parallèle mesurée et documentée.
+
+## Livrables
+
+- script séquentiel
+- script parallèle
+- comparaison prudente
+- note sur reproductibilité et limites
+
+## Variante STT-6230
+
+Analyser les coûts de parallélisation et proposer une règle de décision.
+
+## Rappel IA
+
+Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Après la classe](apres.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Défi](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)
+
+## Ressources
+
+Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

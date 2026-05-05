@@ -1,0 +1,60 @@
+---
+title: "Portfolio individuel"
+format:
+  html:
+    embed-resources: true
+---
+
+Le portfolio individuel est construit progressivement pendant la session. Il montre les traces du travail, les décisions prises, les apprentissages et la capacité à livrer un projet reproductible.
+
+## Rôle du portfolio
+
+- Conserver les livrables hebdomadaires.
+- Documenter la progression.
+- Montrer la qualité du code et de la documentation.
+- Rendre visibles les validations, tests et corrections.
+- Déclarer l’usage significatif de l’IA.
+
+## Structure suggérée
+
+```text
+portfolio-stt4230/
+  README.md
+  ai-log.md
+  journal/
+  semaines/
+  R/
+  scripts/
+  reports/
+  figures/
+  data/
+    raw/
+    processed/
+```
+
+## Trace hebdomadaire minimale
+
+- Ce qui a été produit.
+- Ce qui a été difficile.
+- Ce qui a été vérifié.
+- Ce qui doit être repris.
+- Référence aux commits, issues ou pull requests utiles.
+
+## README
+
+Le README doit permettre à une autre personne de comprendre le projet, installer les dépendances, exécuter les scripts principaux et retrouver les livrables.
+
+## `ai-log.md`
+
+Le fichier `ai-log.md` doit être proportionné. Il n’a pas besoin d’être long, mais il doit permettre de comprendre les usages significatifs de l’IA.
+
+## Évaluation
+
+Le portfolio peut être évalué selon:
+
+- régularité;
+- clarté;
+- reproductibilité;
+- qualité des traces Git;
+- capacité à expliquer les décisions;
+- transparence sur l’IA.

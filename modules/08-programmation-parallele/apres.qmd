@@ -1,0 +1,33 @@
+---
+title: "Programmation asynchrone et parallèle - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consolidation
+
+Après le laboratoire, finaliser le travail amorcé et stabiliser le livrable.
+
+## À faire
+
+- Finaliser le défi: Adapter une tâche répétitive à une exécution parallèle mesurée et documentée.
+- Relancer le code depuis une session propre.
+- Mettre à jour le README ou la note technique.
+- Ajouter une trace au portfolio.
+- Déclarer l’usage de l’IA si nécessaire.
+
+## Réflexion courte
+
+Répondre dans le journal du portfolio:
+
+- Qu’est-ce que j’ai appris?
+- Qu’est-ce qui reste fragile?
+- Quelle erreur ou difficulté ai-je rencontrée?
+- Quelle vérification ai-je faite?
+
+## TODO enseignant
+
+- Ajouter les exercices supplémentaires.
+- Ajouter une solution minimale après la séance.
+- Ajouter les erreurs fréquentes observées.

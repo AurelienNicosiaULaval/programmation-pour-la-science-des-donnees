@@ -1,0 +1,40 @@
+---
+title: "Gabarit de déclaration d’usage de l’IA"
+format:
+  html:
+    embed-resources: true
+---
+
+## Identification
+
+- Nom:
+- Travail:
+- Date:
+- Niveau d’IA autorisé:
+
+## Outil utilisé
+
+Indiquer l’outil ou les outils utilisés.
+
+## Tâche demandée
+
+Décrire brièvement la demande faite à l’IA.
+
+## Résumé de l’aide obtenue
+
+Résumer les éléments utiles, sans copier une longue réponse.
+
+## Vérifications effectuées
+
+- Code exécuté localement.
+- Tests ou contrôles réalisés.
+- Documentation consultée.
+- Résultats comparés.
+
+## Modifications intégrées
+
+Décrire ce qui a été conservé, modifié ou rejeté.
+
+## Responsabilité
+
+Je confirme avoir compris, vérifié et adapté le contenu remis.

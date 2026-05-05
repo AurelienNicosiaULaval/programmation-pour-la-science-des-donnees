@@ -1,0 +1,48 @@
+---
+title: "Projets"
+format:
+  html:
+    embed-resources: true
+---
+
+Les projets servent à intégrer les compétences du cours dans un produit de science des données plus complet.
+
+## Projet court ou de mi-session
+
+Le projet court peut vérifier la capacité à structurer un dépôt, importer des données, produire une analyse reproductible et documenter les choix.
+
+## Projet final
+
+Le projet final peut inclure:
+
+- données réelles ou réalistes;
+- pipeline de données;
+- visualisations;
+- rapport Quarto;
+- application ou tableau de bord si pertinent;
+- modèle ou prototype;
+- documentation de reproduction;
+- bilan des limites;
+- déclaration d’usage de l’IA.
+
+## Travail en équipe
+
+Le travail en équipe doit inclure des contributions vérifiables:
+
+- issues assignées;
+- pull requests;
+- commits individuels;
+- revue de code;
+- fichier `docs/contributions.md`;
+- bilan individuel final.
+
+## Différenciation STT-6230
+
+Les personnes inscrites à STT-6230 doivent ajouter une note technique ou méthodologique, par exemple une comparaison d’approches, une analyse de performance, une discussion des limites ou un plan de mise en production.
+
+## TODO
+
+- Définir les thèmes autorisés.
+- Définir les jalons.
+- Préparer les grilles.
+- Préciser les règles de présentation orale.

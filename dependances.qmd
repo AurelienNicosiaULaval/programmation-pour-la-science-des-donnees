@@ -1,0 +1,79 @@
+---
+title: "Dépendances R et reproductibilité"
+format:
+  html:
+    embed-resources: true
+---
+
+Le cours recommande une gestion des dépendances par projet avec `renv`. Aucun package n’est installé automatiquement par ce site.
+
+## Packages probablement utiles
+
+```r
+packages <- c(
+  "tidyverse",
+  "quarto",
+  "knitr",
+  "rmarkdown",
+  "renv",
+  "here",
+  "fs",
+  "usethis",
+  "gitcreds",
+  "gert",
+  "ggplot2",
+  "dplyr",
+  "tidyr",
+  "readr",
+  "purrr",
+  "tidymodels",
+  "shiny",
+  "bslib",
+  "profvis",
+  "future",
+  "promises",
+  "furrr",
+  "testthat",
+  "devtools",
+  "roxygen2"
+)
+```
+
+## Initialiser `renv`
+
+```r
+renv::init()
+```
+
+## Restaurer un environnement
+
+```r
+renv::restore()
+```
+
+Selon la documentation de `renv`, `renv::restore()` compare les packages du fichier `renv.lock` avec ceux de la bibliothèque du projet et installe les versions requises lorsque nécessaire.
+
+## Mettre à jour le fichier `renv.lock`
+
+```r
+renv::snapshot()
+```
+
+## Rendre le site localement
+
+```bash
+quarto render
+```
+
+## Prévisualiser le site
+
+```bash
+quarto preview
+```
+
+## Bonnes pratiques
+
+- Ne pas versionner `.Rproj.user`, `.Rhistory`, `.RData`, ni les secrets.
+- Documenter les packages nécessaires.
+- Utiliser des chemins relatifs.
+- Vérifier le rendu sur une machine propre avant une remise importante.

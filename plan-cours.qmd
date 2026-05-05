@@ -1,0 +1,38 @@
+---
+title: "Plan de cours"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page sert de point d’ancrage pour le plan de cours officiel. Elle doit être synchronisée avec la version déposée dans les systèmes institutionnels.
+
+## Description officielle
+
+Bonnes pratiques de codage et gestion du versionnage du code. Manipulation et gestion des données. Visualisation des données. Rédaction de rapports et création d’applications web. Programmation orientée objet pour la science des données. Pipelines de transformation des données. Optimisation du code. Programmation parallèle. Cycle de vie d’un modèle, déploiement et mise en production. Collaboration et documentation. Ce cours utilise le langage de programmation R.
+
+## Préalable
+
+STT-1100 ou IFT-4902.
+
+## Objectif général
+
+Développer la capacité à concevoir, programmer, documenter, tester et livrer des projets de science des données en R selon des pratiques professionnelles.
+
+## Objectifs spécifiques
+
+- Structurer un projet R reproductible.
+- Manipuler, valider et documenter des données.
+- Produire des visualisations et rapports adaptés à un public défini.
+- Développer des fonctions, objets et pipelines réutilisables.
+- Mesurer et améliorer la performance d’un code.
+- Utiliser GitHub pour collaborer, réviser et documenter.
+- Encadrer l’usage de l’IA générative de façon transparente et vérifiable.
+
+## À compléter
+
+- Modalités institutionnelles.
+- Barème final.
+- Règles de retard.
+- Disponibilités de l’équipe enseignante.
+- Dates officielles.

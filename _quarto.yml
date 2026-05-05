@@ -1,0 +1,97 @@
+project:
+  type: website
+  output-dir: _site
+
+lang: fr
+
+website:
+  title: "STT-4230 / STT-6230"
+  description: "Programmation pour la science des données"
+  page-navigation: true
+  search: true
+  navbar:
+    left:
+      - text: "Accueil"
+        href: index.qmd
+      - text: "Plan"
+        href: plan-cours.qmd
+      - text: "Calendrier"
+        href: calendrier.qmd
+      - text: "Modules"
+        menu:
+        - modules/01-structuration-projets/index.qmd
+        - modules/02-manipulation-donnees/index.qmd
+        - modules/03-visualisation/index.qmd
+        - modules/04-rapports-applications-tableaux-bord/index.qmd
+        - modules/05-programmation-orientee-objet/index.qmd
+        - modules/06-programmation-fonctionnelle/index.qmd
+        - modules/07-profilage-optimisation-performance/index.qmd
+        - modules/08-programmation-parallele/index.qmd
+        - modules/09-modeles-apprentissage-automatique/index.qmd
+        - modules/10-deploiement-production/index.qmd
+        - modules/11-cycle-vie-modeles/index.qmd
+        - modules/12-collaboration-documentation-package/index.qmd
+      - text: "Évaluations"
+        href: evaluations.qmd
+      - text: "Portfolio"
+        href: portfolio.qmd
+      - text: "IA"
+        href: ia.qmd
+      - text: "Ressources"
+        href: ressources.qmd
+    right:
+      - text: "Démarrage"
+        href: demarrage.qmd
+      - text: "Communication"
+        href: communication.qmd
+  sidebar:
+    - id: modules
+      title: "Modules"
+      style: "floating"
+      collapse-level: 1
+      contents:
+        - modules/01-structuration-projets/index.qmd
+        - modules/02-manipulation-donnees/index.qmd
+        - modules/03-visualisation/index.qmd
+        - modules/04-rapports-applications-tableaux-bord/index.qmd
+        - modules/05-programmation-orientee-objet/index.qmd
+        - modules/06-programmation-fonctionnelle/index.qmd
+        - modules/07-profilage-optimisation-performance/index.qmd
+        - modules/08-programmation-parallele/index.qmd
+        - modules/09-modeles-apprentissage-automatique/index.qmd
+        - modules/10-deploiement-production/index.qmd
+        - modules/11-cycle-vie-modeles/index.qmd
+        - modules/12-collaboration-documentation-package/index.qmd
+    - id: evaluations
+      title: "Évaluations"
+      contents:
+        - evaluations.qmd
+        - portfolio.qmd
+        - projets.qmd
+        - ia.qmd
+    - id: ressources
+      title: "Ressources"
+      contents:
+        - demarrage.qmd
+        - lectures.qmd
+        - ressources.qmd
+        - dependances.qmd
+        - soutien-technique.qmd
+        - contribution.qmd
+        - communication.qmd
+  page-footer:
+    left: "STT-4230 / STT-6230 - Université Laval"
+    right: "Contenu sous licence CC BY-NC-SA 4.0, sauf indication contraire."
+
+format:
+  html:
+    theme:
+      light: cosmo
+    css: assets/css/styles.scss
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    embed-resources: true
+
+execute:
+  freeze: auto

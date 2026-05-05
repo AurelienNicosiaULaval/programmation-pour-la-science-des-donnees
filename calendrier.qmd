@@ -1,0 +1,32 @@
+---
+title: "Calendrier"
+format:
+  html:
+    embed-resources: true
+---
+
+Ce calendrier est une structure de travail. Les dates exactes doivent être ajustées lorsque le calendrier universitaire de l’automne 2026 sera confirmé.
+
+| Semaine | Thème | Préparation | Trace attendue |
+|---:|---|---|---|
+| 1 | Mise en route | Fonctionnement, environnement, GitHub, portfolio | README initial et journal de départ |
+| 2 | Projet, Git, structure | Workflow Git et structure de dépôt | Structure et conventions |
+| 3 | Dépendances et reproductibilité | `renv`, chemins relatifs, `.gitignore` | `renv.lock` ou stratégie documentée |
+| 4 | Données et nettoyage | Importation, tidy data, transformation | Pipeline de données |
+| 5 | Défi 1 et consolidation | Révision projet, Git, données | Trace défi 1 |
+| 6 | Visualisation | ggplot2 et communication visuelle | Figure améliorée |
+| 7 | Quarto et communication | Rapports reproductibles | Rapport Quarto |
+| 8 | Défi 2 | Fonctions, pipeline, visualisation | Trace défi 2 et `ai-log.md` |
+| 9 | Consolidation | Nettoyage du portfolio | `consolidation.md` |
+| 10 | Fonctions et purrr | Fonctions, itérations | Fonction dans `R/` |
+| 11 | POO et architecture | S3 ou R6 selon le choix final | Note POO |
+| 12 | Optimisation et parallèle | Profilage, future, furrr | Note d’optimisation |
+| 13 | Défi 3 | IA comme assistant technique | Rapport technique |
+| 14 | Modèle, pipeline, cycle de vie | tidymodels et pipeline | Pipeline modèle |
+| 15 | Package, documentation, présentation | README, tests, présentation | Bilan final |
+
+## TODO
+
+- Associer chaque semaine à une date.
+- Préciser les échéances de mini-tests et défis.
+- Ajouter les séances de revue de code toutes les 2 ou 3 semaines.

@@ -1,0 +1,79 @@
+---
+title: "Visualisation"
+description: "Comment produire des graphiques exploratoires utiles et des figures communicables?"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment produire des graphiques exploratoires utiles et des figures communicables?
+
+## Objectifs du module
+
+- construire des graphiques avec ggplot2
+- améliorer la lisibilité et l’accessibilité des figures
+- relier choix visuels et question statistique
+- documenter une transformation visuelle avant et après révision
+
+## Compétences visées
+
+- choisir des géométries adaptées
+- utiliser des titres, axes et légendes informatifs
+- vérifier la lisibilité des couleurs
+- produire des figures reproductibles
+
+## Avant la classe
+
+- Lire la page [Avant la classe](avant.qmd).
+- Exécuter les exemples indiqués.
+- Répondre au mini-test de préparation.
+- Préparer le dépôt GitHub ou le dossier de travail.
+
+## Pendant la classe
+
+- Revenir sur les difficultés.
+- Observer une démonstration ciblée.
+- Réaliser le [laboratoire](laboratoire.qmd).
+- Documenter les décisions importantes.
+
+## Après la classe
+
+- Finaliser le [défi](defi.qmd).
+- Mettre à jour le portfolio.
+- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
+- Vérifier que le livrable se relance.
+
+## Défi de la semaine
+
+Réviser une visualisation exploratoire pour en faire une figure interprétable par un public défini.
+
+## Livrables
+
+- script de visualisation
+- figure avant et figure après
+- courte justification des choix
+- trace portfolio
+
+## Variante STT-6230
+
+Ajouter une discussion des compromis de perception visuelle ou une variante alternative motivée.
+
+## Rappel IA
+
+Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Après la classe](apres.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Défi](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)
+
+## Ressources
+
+Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

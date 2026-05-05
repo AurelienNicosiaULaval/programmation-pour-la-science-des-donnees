@@ -1,0 +1,45 @@
+---
+title: "Communication et équipe"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page doit préciser les canaux de communication et les rôles de l’équipe enseignante.
+
+## Canaux
+
+- Plateforme institutionnelle pour les annonces officielles.
+- Forum ou canal structuré pour les questions techniques.
+- GitHub pour les issues liées aux projets lorsque demandé.
+
+## Demander de l’aide efficacement
+
+Une bonne demande d’aide contient:
+
+- le contexte;
+- l’objectif;
+- le message d’erreur complet;
+- un exemple minimal reproductible;
+- ce qui a déjà été essayé;
+- le lien vers le commit ou le fichier concerné.
+
+## Rôle de l’enseignant
+
+- Présenter les objectifs.
+- Clarifier les concepts.
+- Accompagner les décisions techniques.
+- Donner une rétroaction sur les livrables.
+
+## Rôle de l’auxiliaire
+
+- Soutenir les laboratoires.
+- Aider au diagnostic technique.
+- Contribuer à la FAQ.
+- Orienter vers les ressources de rattrapage.
+
+## TODO
+
+- Ajouter les noms et coordonnées.
+- Ajouter les disponibilités.
+- Ajouter les règles de délai de réponse.

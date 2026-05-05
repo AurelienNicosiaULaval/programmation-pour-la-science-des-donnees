@@ -1,0 +1,79 @@
+---
+title: "Structuration de projets de science des données"
+description: "Comment transformer un dossier de scripts en projet reproductible, lisible et partageable?"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment transformer un dossier de scripts en projet reproductible, lisible et partageable?
+
+## Objectifs du module
+
+- organiser un projet R avec une structure claire
+- utiliser Git et GitHub pour versionner le travail
+- documenter les dépendances et les étapes de reproduction
+- préparer le portfolio individuel
+
+## Compétences visées
+
+- créer un README utile
+- configurer `.gitignore` et `renv`
+- faire des commits lisibles
+- expliquer le cycle exploration, stabilisation, livraison
+
+## Avant la classe
+
+- Lire la page [Avant la classe](avant.qmd).
+- Exécuter les exemples indiqués.
+- Répondre au mini-test de préparation.
+- Préparer le dépôt GitHub ou le dossier de travail.
+
+## Pendant la classe
+
+- Revenir sur les difficultés.
+- Observer une démonstration ciblée.
+- Réaliser le [laboratoire](laboratoire.qmd).
+- Documenter les décisions importantes.
+
+## Après la classe
+
+- Finaliser le [défi](defi.qmd).
+- Mettre à jour le portfolio.
+- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
+- Vérifier que le livrable se relance.
+
+## Défi de la semaine
+
+Mettre en place le dépôt personnel du portfolio et produire une première documentation de reproduction.
+
+## Livrables
+
+- `README.md` initial
+- structure de dossiers cohérente
+- premiers commits
+- journal de départ du portfolio
+
+## Variante STT-6230
+
+Ajouter une courte note justifiant les choix de structure et leurs limites pour un projet collaboratif.
+
+## Rappel IA
+
+Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Après la classe](apres.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Défi](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)
+
+## Ressources
+
+Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

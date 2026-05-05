@@ -1,0 +1,39 @@
+---
+title: "Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+Les lectures servent à préparer un geste technique précis. Elles ne remplacent pas le laboratoire.
+
+## Structure hebdomadaire
+
+Chaque préparation doit contenir:
+
+1. une lecture courte;
+2. deux ou trois exemples R à exécuter;
+3. un mini-test;
+4. une trace dans le portfolio;
+5. une question ou difficulté à apporter en classe.
+
+## Charge visée
+
+La préparation avant la séance doit rester raisonnable, environ 45 à 60 minutes au total.
+
+## Sources de référence à intégrer progressivement
+
+- R for Data Science, 2e édition.
+- Happy Git and GitHub for the useR.
+- Documentation Quarto.
+- Advanced R.
+- R Packages, 2e édition.
+- Mastering Shiny.
+- Tidy Modeling with R.
+- Documentation `targets`, `future`, `furrr` et `renv`.
+
+## TODO
+
+- Ajouter les liens précis.
+- Identifier les lectures obligatoires et complémentaires.
+- Ajouter les extraits associés à chaque module.

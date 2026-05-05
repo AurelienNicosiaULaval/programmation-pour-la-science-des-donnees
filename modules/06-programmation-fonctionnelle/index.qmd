@@ -1,0 +1,79 @@
+---
+title: "Programmation fonctionnelle avec tidyverse"
+description: "Comment remplacer le copier-coller par des fonctions et des itérations fiables?"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment remplacer le copier-coller par des fonctions et des itérations fiables?
+
+## Objectifs du module
+
+- écrire des fonctions claires
+- utiliser purrr pour automatiser des tâches répétitives
+- tester les fonctions importantes
+- réduire la duplication dans un pipeline
+
+## Compétences visées
+
+- définir entrées et sorties d’une fonction
+- utiliser `map()` et ses variantes
+- manipuler des listes et tableaux imbriqués
+- documenter les fonctions de projet
+
+## Avant la classe
+
+- Lire la page [Avant la classe](avant.qmd).
+- Exécuter les exemples indiqués.
+- Répondre au mini-test de préparation.
+- Préparer le dépôt GitHub ou le dossier de travail.
+
+## Pendant la classe
+
+- Revenir sur les difficultés.
+- Observer une démonstration ciblée.
+- Réaliser le [laboratoire](laboratoire.qmd).
+- Documenter les décisions importantes.
+
+## Après la classe
+
+- Finaliser le [défi](defi.qmd).
+- Mettre à jour le portfolio.
+- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
+- Vérifier que le livrable se relance.
+
+## Défi de la semaine
+
+Refactoriser un bloc répétitif en fonctions testées et appelées par un pipeline.
+
+## Livrables
+
+- fonction dans `R/` ou dossier équivalent
+- exemple reproductible
+- tests `testthat` minimaux
+- note avant et après refactorisation
+
+## Variante STT-6230
+
+Comparer une solution `purrr` à une autre stratégie et justifier le choix retenu.
+
+## Rappel IA
+
+Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Après la classe](apres.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Défi](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)
+
+## Ressources
+
+Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

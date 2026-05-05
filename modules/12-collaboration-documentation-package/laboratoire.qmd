@@ -1,0 +1,39 @@
+---
+title: "Collaboration, documentation et packages - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Mise en contexte
+
+Présenter un problème réaliste lié au module.
+
+## Préparation
+
+- Ouvrir le dépôt.
+- Vérifier l’environnement R.
+- Lire les consignes.
+
+## Activité guidée
+
+1. Examiner la structure de départ.
+2. Exécuter le code fourni.
+3. Modifier une partie ciblée.
+4. Vérifier le résultat.
+5. Committer une trace claire.
+
+## Exercices
+
+- Exercice individuel à ajouter.
+- Exercice en duo à ajouter.
+- Question de revue de code à ajouter.
+
+## Défis supplémentaires
+
+- Extension pour approfondissement.
+- Variante STT-6230 si pertinente.
+
+## Retour réflexif
+
+Noter une décision technique, une difficulté et une vérification effectuée.

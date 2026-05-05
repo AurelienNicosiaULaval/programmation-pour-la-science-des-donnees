@@ -1,0 +1,79 @@
+---
+title: "Déploiement et mise en production"
+description: "Que faut-il documenter pour qu’un livrable fonctionne ailleurs que sur son ordinateur?"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Que faut-il documenter pour qu’un livrable fonctionne ailleurs que sur son ordinateur?
+
+## Objectifs du module
+
+- préparer un livrable déployable
+- documenter l’environnement et les dépendances
+- gérer les secrets sans les versionner
+- choisir un mode de publication adapté
+
+## Compétences visées
+
+- utiliser variables d’environnement et `.gitignore`
+- documenter les étapes de déploiement
+- préparer un rapport ou une application publiable
+- vérifier les contraintes d’exécution
+
+## Avant la classe
+
+- Lire la page [Avant la classe](avant.qmd).
+- Exécuter les exemples indiqués.
+- Répondre au mini-test de préparation.
+- Préparer le dépôt GitHub ou le dossier de travail.
+
+## Pendant la classe
+
+- Revenir sur les difficultés.
+- Observer une démonstration ciblée.
+- Réaliser le [laboratoire](laboratoire.qmd).
+- Documenter les décisions importantes.
+
+## Après la classe
+
+- Finaliser le [défi](defi.qmd).
+- Mettre à jour le portfolio.
+- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
+- Vérifier que le livrable se relance.
+
+## Défi de la semaine
+
+Rédiger un plan de déploiement et publier un livrable simple selon les contraintes du cours.
+
+## Livrables
+
+- plan de déploiement
+- README mis à jour
+- vérification des secrets
+- lien ou preuve de rendu
+
+## Variante STT-6230
+
+Ajouter une analyse des risques de mise en production ou une option alternative de déploiement.
+
+## Rappel IA
+
+Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Après la classe](apres.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Défi](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)
+
+## Ressources
+
+Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.
