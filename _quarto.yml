@@ -13,6 +13,8 @@ website:
     left:
       - text: "Accueil"
         href: index.qmd
+      - text: "Roadmap"
+        href: roadmap.qmd
       - text: "Plan"
         href: plan-cours.qmd
       - text: "Calendrier"
@@ -72,6 +74,7 @@ website:
     - id: ressources
       title: "Ressources"
       contents:
+        - roadmap.qmd
         - demarrage.qmd
         - lectures.qmd
         - ressources.qmd

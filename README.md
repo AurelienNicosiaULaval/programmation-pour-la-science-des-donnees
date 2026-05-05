@@ -6,12 +6,16 @@ Ce dépôt contient la structure de base du site de cours: modules, laboratoires
 
 ## Cloner le dépôt
 
-Utiliser de préférence une URL SSH, en remplaçant `OWNER/REPO` par le dépôt réel:
+Utiliser de préférence une URL SSH:
 
 ```bash
-git clone git@github.com:OWNER/REPO.git
-cd REPO
+git clone git@github.com:AurelienNicosiaULaval/programmation-pour-la-science-des-donnees.git
+cd programmation-pour-la-science-des-donnees
 ```
+
+## Roadmap
+
+La page `roadmap.qmd` sert de tableau de bord pour organiser le développement du matériel pédagogique.
 
 ## Prévisualiser le site
 

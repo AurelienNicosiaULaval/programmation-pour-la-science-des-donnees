@@ -9,6 +9,8 @@ Ce site regroupe le matériel du cours STT-4230 / STT-6230, offert à partir de 
 
 Le cours ne vise pas seulement à apprendre R. Il vise à apprendre à développer des projets de science des données robustes, reproductibles, lisibles, collaboratifs et livrables.
 
+La [roadmap de travail](roadmap.qmd) indique dans quel ordre le site et le matériel pédagogique seront développés.
+
 ## Logique pédagogique
 
 Le cours suit une pédagogie inversée. La séance de laboratoire de 3 heures doit rester un moment de production accompagnée.
