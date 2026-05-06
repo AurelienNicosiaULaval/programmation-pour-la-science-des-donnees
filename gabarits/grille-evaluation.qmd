@@ -9,7 +9,7 @@ format:
 
 - Évaluation:
 - Date:
-- Niveau d’IA permis:
+- Statut d’IA:
 - Format de remise:
 
 ## Critères

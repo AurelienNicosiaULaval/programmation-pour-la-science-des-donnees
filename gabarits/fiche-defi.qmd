@@ -37,9 +37,15 @@ Indiquer ce que la personne doit être capable de produire ou démontrer.
 
 ## Place de l’IA
 
-Niveau d’IA permis: à préciser.
+Statut d’IA permis: à préciser.
 
-Si l’IA est utilisée au niveau 2 ou 3, ajouter une entrée dans `ai-log.md`.
+Pour les trois défis techniques notés:
+
+- Défi technique 1: IA non permise.
+- Défi technique 2: IA permise, déclarée.
+- Défi technique 3: IA intégrée à la tâche.
+
+Lorsque l’IA est permise et déclarée ou intégrée à la tâche, ajouter une entrée dans `ai-log.md` ou dans l’espace prévu par la consigne.
 
 ## Checklist de remise
 

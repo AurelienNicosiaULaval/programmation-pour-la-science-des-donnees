@@ -4,6 +4,8 @@ Site Quarto du cours STT-4230 / STT-6230 à l’Université Laval.
 
 Ce dépôt contient la structure de base du site de cours: modules, laboratoires, défis, évaluations, portfolio, politique d’utilisation de l’IA, ressources et gabarits.
 
+La source de cohérence pédagogique est la page `cadrage.qmd`, appuyée sur le PDF `stt4230_document_cadrage_unique_codex.pdf`.
+
 ## Cloner le dépôt
 
 Utiliser de préférence une URL SSH:
@@ -57,7 +59,7 @@ renv::snapshot()
 
 1. Copier le gabarit `gabarits/fiche-module.qmd`.
 2. Créer un dossier dans `modules/`.
-3. Ajouter les pages `index.qmd`, `avant.qmd`, `pendant.qmd`, `apres.qmd`, `laboratoire.qmd`, `defi.qmd`, `lectures.qmd`, `ressources.qmd`.
+3. Ajouter au minimum `index.qmd`, une lecture courte, des exemples R, un atelier, une checklist, un livrable, une grille, une solution minimale, une solution professionnelle et une extension STT-6230.
 4. Ajouter l’entrée correspondante dans `_quarto.yml`.
 5. Exécuter `quarto render`.
 
@@ -65,7 +67,7 @@ renv::snapshot()
 
 1. Copier `gabarits/fiche-defi.qmd`.
 2. Placer la consigne dans `defis/` ou dans le dossier du module.
-3. Indiquer le niveau d’IA permis.
+3. Indiquer le statut d’IA.
 4. Ajouter les critères d’évaluation.
 5. Vérifier le rendu.
 

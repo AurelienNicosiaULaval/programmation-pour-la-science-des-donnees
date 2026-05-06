@@ -10,7 +10,7 @@ format:
 - Nom:
 - Travail:
 - Date:
-- Niveau d’IA autorisé:
+- Statut d’IA:
 
 ## Outil utilisé
 

@@ -7,6 +7,8 @@ format:
 
 Cette page sert de point d’ancrage pour le plan de cours officiel. Elle doit être synchronisée avec la version déposée dans les systèmes institutionnels.
 
+Statut provisoire: pour l’instant, cette page stabilise seulement les modules et les évaluations. Les éléments institutionnels, les dates officielles et les modalités détaillées seront complétés à la fin du développement du cours.
+
 ## Description officielle
 
 Bonnes pratiques de codage et gestion du versionnage du code. Manipulation et gestion des données. Visualisation des données. Rédaction de rapports et création d’applications web. Programmation orientée objet pour la science des données. Pipelines de transformation des données. Optimisation du code. Programmation parallèle. Cycle de vie d’un modèle, déploiement et mise en production. Collaboration et documentation. Ce cours utilise le langage de programmation R.
@@ -29,10 +31,47 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 - Utiliser GitHub pour collaborer, réviser et documenter.
 - Encadrer l’usage de l’IA générative de façon transparente et vérifiable.
 
+## Progression proposée
+
+| Semaine | Thème | Production visée |
+|---:|---|---|
+| 1 | Mise en route, diagnostic R/Git/Positron | Installer, cloner, diagnostiquer, créer le point de départ |
+| 2 | Structure de projet, Git, GitHub | Créer un dépôt propre, conventions, README, premiers commits |
+| 3 | Dépendances et reproductibilité | `renv`, `.gitignore`, chemins relatifs, relance sur autre machine |
+| 4 | Données et nettoyage | Importer, valider, nettoyer, sauvegarder des données |
+| 5 | Défi 1 et consolidation | Vérification individuelle sans IA: projet, données, Git |
+| 6 | Visualisation | Produire et améliorer des figures lisibles et utiles |
+| 7 | Quarto, rapports, communication | Compiler un rapport reproductible et clair |
+| 8 | Défi 2 | Fonctions, pipeline, visualisation, rapport, IA déclarée |
+| 9 | Consolidation | Nettoyer portfolio et projet, rattrapage, revue intermédiaire |
+| 10 | Fonctions, `purrr`, pipelines | Transformer du copier-coller en fonctions et pipelines |
+| 11 | POO et architecture | S3 ou R6 selon le choix final, structurer les objets du projet |
+| 12 | Optimisation et parallélisation | Mesurer, profiler, comparer, paralléliser avec `future` et `furrr` |
+| 13 | Défi 3 | Diagnostic technique avec IA intégrée et vérification obligatoire |
+| 14 | Modèle, pipeline, cycle de vie | `tidymodels`, `targets`, validation, suivi et reproduction du modèle |
+| 15 | Package, documentation, démonstration finale | README final, tests, présentation, bilan et livraison |
+
+## Évaluations
+
+La structure suivante est retenue comme plan final d’évaluation.
+
+| Évaluation | Pondération | Type | Moment | IA |
+|---|---:|---|---|---|
+| Mini-tests de préparation | 10 % | Individuel | Semaines 2 à 14, sauf semaines de défi si souhaité | Permise |
+| Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14 | Permise, déclarée |
+| Défi technique 1 | 10 % | Individuel en laboratoire | Semaine 5 | Non permise |
+| Défi technique 2 | 10 % | Individuel en laboratoire | Semaine 8 | Permise, déclarée |
+| Défi technique 3 | 10 % | Individuel en laboratoire | Semaine 13 | Intégrée |
+| Revue de code, présentation et bilan final | 10 % | Équipe + individuel | Semaine 15 | Permise, déclarée |
+| Total | 100 % |  |  |  |
+
+Les critères détaillés, les consignes et les différences entre STT-4230 et STT-6230 sont regroupés dans la page [Évaluations](evaluations.qmd).
+
 ## À compléter
 
 - Modalités institutionnelles.
-- Barème final.
 - Règles de retard.
 - Disponibilités de l’équipe enseignante.
 - Dates officielles.
+- Version finale du plan de cours.

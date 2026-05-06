@@ -13,6 +13,8 @@ website:
     left:
       - text: "Accueil"
         href: index.qmd
+      - text: "Cadrage"
+        href: cadrage.qmd
       - text: "Roadmap"
         href: roadmap.qmd
       - text: "Plan"
@@ -70,10 +72,13 @@ website:
         - evaluations.qmd
         - portfolio.qmd
         - projets.qmd
+        - defis.qmd
+        - presentation.qmd
         - ia.qmd
     - id: ressources
       title: "Ressources"
       contents:
+        - cadrage.qmd
         - roadmap.qmd
         - demarrage.qmd
         - lectures.qmd

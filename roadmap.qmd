@@ -8,9 +8,19 @@ format:
 
 Cette page sert de tableau de bord pour organiser le travail de conception du cours. Elle indique ce que nous développons ensemble, dans quel ordre, et ce qui constitue un livrable utilisable.
 
+## Source de cohérence
+
+Le dépôt doit maintenant fonctionner avec une seule source de cadrage pédagogique: `stt4230_document_cadrage_unique_codex.pdf`.
+
+La page [Cadrage pédagogique](cadrage.qmd) traduit ce PDF en décisions opérationnelles. Les anciennes fiches PDF qui introduisaient des pondérations ou des composantes contradictoires ne doivent plus guider le développement.
+
 ## Principe de travail
 
-Le site existe déjà comme structure Quarto publiée. La suite consiste à transformer progressivement cette structure en cours enseignable, en commençant par les éléments qui déterminent toutes les consignes: vision pédagogique, évaluations, gabarits, premières semaines, puis modules avancés.
+Le site existe déjà comme structure Quarto publiée. La suite consiste à transformer progressivement cette structure en cours enseignable, en respectant trois priorités:
+
+1. garder les évaluations cohérentes avec le document de cadrage unique;
+2. faire apparaître les dimensions professionnelles dans les modules;
+3. produire des consignes utilisables directement en laboratoire.
 
 Chaque phase doit produire quelque chose de directement utilisable: une page stabilisée, un gabarit, une consigne, un laboratoire, une grille ou un module prêt à tester.
 
@@ -21,54 +31,42 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Dépôt GitHub | Fait | Dépôt public créé et synchronisé. |
 | Publication GitHub Pages | Fait | Le site est publié automatiquement. |
 | Structure Quarto | Fait | Pages principales, modules, gabarits et workflow présents. |
-| Contenu pédagogique détaillé | À développer | Le contenu est encore volontairement minimal. |
-| Évaluations finales | À stabiliser | La pondération actuelle est provisoire. |
-| Semaines 1 à 4 | Priorité immédiate | Ces semaines doivent devenir enseignables en premier. |
+| Source de cadrage | Fait | Un seul PDF de référence est conservé. |
+| Évaluations finales | Fait | Le plan final d’évaluation est fixé. |
+| Cadrage pédagogique | Fait | Le cadrage a été validé comme source de cohérence pour la suite. |
+| Plan de cours | Fait | La version limitée aux modules et aux évaluations est validée. |
+| Page évaluations | Fait | Le tableau global, les rôles des défis, les traces attendues et les règles IA sont validés. |
+| Contenu pédagogique détaillé | À développer | Le contenu des modules reste volontairement minimal. |
+| Semaines 1 à 5 | Priorité immédiate | Ces semaines doivent devenir enseignables en premier. |
 
 ## Vue d’ensemble
 
 | Phase | Priorité | Résultat attendu |
 |---:|---|---|
-| 1 | Très haute | Cadrage officiel du cours |
+| 1 | Très haute | Cadrage documentaire cohérent |
 | 2 | Très haute | Gabarits pédagogiques finaux |
-| 3 | Très haute | Semaines 1 à 4 enseignables |
-| 5 | Haute | Évaluations majeures cohérentes |
+| 3 | Très haute | Semaines 1 à 5 enseignables |
 | 4 | Haute | Modules pratiques centraux |
+| 5 | Haute | Consignes d’évaluation majeures |
 | 6 | Moyenne | Modules avancés de fin de session |
 | 7 | Haute | Expérience étudiante et soutien technique |
 | 8 | Finale | Version v1 stable du site |
 
-## Phase 1 - Stabiliser la vision du cours
+## Phase 1 - Stabiliser le cadrage documentaire
 
-Objectif: transformer les fiches de conception en cadre pédagogique officiel.
+Objectif: faire du site Quarto la version lisible et cohérente du cadrage pédagogique.
 
 Livrables:
 
-- version solide du plan de cours;
-- version stabilisée des évaluations;
-- politique IA finalisée;
-- rôle exact du portfolio;
-- calendrier provisoire aligné avec les 15 semaines.
-
-Pages concernées:
-
-- [Plan de cours](plan-cours.qmd)
-- [Évaluations](evaluations.qmd)
-- [Politique IA](ia.qmd)
-- [Portfolio](portfolio.qmd)
-- [Calendrier](calendrier.qmd)
-
-Questions à traiter:
-
-- Quels objectifs d’apprentissage doivent apparaître dans le plan officiel?
-- Quelle pondération conserver pour les évaluations?
-- Quelles attentes distinguent clairement STT-4230 et STT-6230?
-- Quels usages de l’IA sont permis, déclarés ou interdits?
-- Quelle trace hebdomadaire est attendue dans le portfolio?
+- page [Cadrage pédagogique](cadrage.qmd);
+- version provisoire du [Plan de cours](plan-cours.qmd), limitée aux modules et aux évaluations;
+- page [Évaluations](evaluations.qmd) validée comme version officielle de conception;
+- page [Politique IA](ia.qmd) alignée sur les statuts d’IA;
+- pages [Portfolio](portfolio.qmd), [Projets](projets.qmd) et [Calendrier](calendrier.qmd) cohérentes avec les évaluations.
 
 Critère de fin de phase:
 
-Une personne étudiante peut comprendre la logique du cours, les évaluations, le rôle de l’IA, le rôle du portfolio et le rythme hebdomadaire.
+Une personne étudiante peut comprendre la structure du cours, les évaluations, le statut d’IA de chaque composante, le rôle du portfolio, le projet filé et le rythme hebdomadaire.
 
 ## Phase 2 - Construire les gabarits pédagogiques
 
@@ -78,9 +76,10 @@ Livrables:
 
 - gabarit final de module;
 - gabarit final de laboratoire;
-- gabarit final de défi;
+- gabarit final de défi technique;
 - gabarit de mini-test;
 - gabarit de journal de portfolio;
+- gabarits GitHub pour portfolio, projet et défi;
 - grille commune d’évaluation.
 
 Pages concernées:
@@ -96,79 +95,36 @@ Pages concernées:
 - `gabarits/mini-test.qmd`
 - `gabarits/journal-portfolio.qmd`
 
-Questions à traiter:
-
-- Quel niveau de détail rendre obligatoire dans chaque consigne?
-- Quelle forme doivent prendre les traces Git?
-- Quel format de remise utiliser par défaut?
-- Quelle partie des consignes doit être commune à tous les modules?
-
 Critère de fin de phase:
 
 Chaque nouvelle séance peut être créée par copie d’un gabarit sans choix structurel important à refaire.
 
-## Phase 3 - Préparer les premières semaines
+## Phase 3 - Préparer les semaines 1 à 5
 
-Objectif: rendre les semaines 1 à 4 réellement enseignables.
+Objectif: rendre le démarrage du cours et le premier défi technique réellement enseignables.
 
-Modules prioritaires:
+Contenus prioritaires:
 
-1. [Structuration de projets](modules/01-structuration-projets/index.qmd)
-2. Git, GitHub et reproductibilité, à intégrer surtout dans le module 1
-3. Dépendances, `renv`, chemins et secrets, à intégrer dans les modules 1 et 10
-4. [Manipulation et validation de données](modules/02-manipulation-donnees/index.qmd)
+1. mise en route, diagnostic initial et soutien;
+2. Git, GitHub et structure de projet;
+3. dépendances, `renv`, chemins, `.gitignore` et secrets;
+4. importation, validation et nettoyage de données;
+5. défi technique 1 sans IA.
 
 Livrables:
-
-- notes courtes;
-- laboratoires guidés;
-- mini-tests;
-- défis;
-- ressources de rattrapage;
-- diagnostic initial non noté.
-
-À créer ou renforcer:
 
 - guide de démarrage GitHub;
-- activité de diagnostic semaine 1;
-- premier défi portfolio;
-- première fiche de dépannage;
-- premières ressources de rattrapage R.
+- diagnostic initial non noté;
+- ressources de rattrapage R;
+- laboratoire sur structure de dépôt et reproductibilité;
+- laboratoire sur données imparfaites;
+- module 1 complet;
+- consigne du défi technique 1;
+- grille du défi technique 1.
 
 Critère de fin de phase:
 
-Les quatre premières semaines peuvent être données en laboratoire sans devoir improviser les consignes principales.
-
-## Phase 5 - Développer les projets et évaluations majeures
-
-Objectif: rendre les évaluations cohérentes, équitables et réalisables.
-
-Livrables:
-
-- consigne du projet court ou de mi-session;
-- consigne du projet final;
-- consigne d’épreuve pratique individuelle;
-- grilles d’évaluation;
-- modèle de contribution individuelle;
-- attentes supplémentaires STT-6230.
-
-Pages concernées:
-
-- [Évaluations](evaluations.qmd)
-- [Projets](projets.qmd)
-- [Portfolio](portfolio.qmd)
-- [Politique IA](ia.qmd)
-
-Questions à traiter:
-
-- Quels livrables doivent compter pour le portfolio?
-- Quel niveau d’IA est permis dans chaque évaluation?
-- Comment vérifier la contribution individuelle?
-- Quelles attentes supplémentaires sont raisonnables pour STT-6230?
-
-Critère de fin de phase:
-
-Les consignes d’évaluation permettent de comprendre quoi remettre, comment le remettre, comment l’IA peut être utilisée et comment le travail sera évalué.
+Les cinq premières semaines peuvent être données sans improviser les consignes principales.
 
 ## Phase 4 - Construire le coeur pratique du cours
 
@@ -187,13 +143,40 @@ Livrables:
 
 - exemples R courts;
 - laboratoires guidés;
-- défis liés au portfolio;
-- erreurs fréquentes;
-- solutions minimales à publier après les séances.
+- activités de revue de code;
+- traces portfolio;
+- solutions minimales à publier après les séances;
+- consignes des défis techniques 2 et 3.
 
 Critère de fin de phase:
 
-Chaque module central contient une préparation, un laboratoire, un défi, une trace portfolio et une ressource de soutien.
+Chaque module central contient une préparation, un laboratoire, une trace portfolio, une ressource de soutien et un lien explicite avec les dimensions professionnelles.
+
+## Phase 5 - Développer les consignes d’évaluation majeures
+
+Objectif: rendre les évaluations cohérentes, équitables et réalisables.
+
+Livrables:
+
+- consigne du portfolio GitHub individuel;
+- consigne du projet filé en équipe;
+- page [Défis techniques](defis.qmd);
+- page [Revue de code, présentation et bilan final](presentation.qmd);
+- consigne de revue de code, présentation et bilan final;
+- grilles d’évaluation;
+- modèle de contribution individuelle;
+- attentes supplémentaires STT-6230.
+
+Questions à traiter:
+
+- Quels jalons structurent le projet filé?
+- Quels livrables doivent compter pour le portfolio GitHub individuel?
+- Comment vérifier la contribution individuelle?
+- Quelles attentes supplémentaires sont raisonnables pour STT-6230?
+
+Critère de fin de phase:
+
+Les consignes d’évaluation permettent de comprendre quoi remettre, comment le remettre, comment l’IA peut être utilisée et comment le travail sera évalué.
 
 ## Phase 6 - Finaliser les modules avancés
 
@@ -231,13 +214,6 @@ Livrables:
 - modèle de demande d’aide;
 - guide de tenue du portfolio.
 
-Pages concernées:
-
-- [Démarrage étudiant](demarrage.qmd)
-- [Dépendances R](dependances.qmd)
-- [Soutien technique](soutien-technique.qmd)
-- [Communication](communication.qmd)
-
 Critère de fin de phase:
 
 Une personne étudiante peut préparer son environnement, comprendre quoi faire avant la semaine 1, demander de l’aide efficacement et maintenir son portfolio.
@@ -260,17 +236,6 @@ Critère de fin de phase:
 
 Le site peut être utilisé comme version officielle de départ du cours.
 
-## Ordre de travail recommandé
-
-1. Stabiliser le cadrage officiel.
-2. Finaliser les gabarits et conventions.
-3. Rendre les semaines 1 à 4 enseignables.
-4. Stabiliser les évaluations majeures.
-5. Développer les modules pratiques centraux.
-6. Développer les modules avancés.
-7. Finaliser l’expérience étudiante.
-8. Durcir le site et publier une version v1.
-
 ## Rituel de validation
 
 À la fin de chaque phase:
@@ -279,17 +244,16 @@ Le site peut être utilisé comme version officielle de départ du cours.
 - vérifier les liens internes;
 - vérifier que les nouvelles pages apparaissent dans la navigation;
 - relire les consignes du point de vue étudiant;
-- vérifier que l’usage de l’IA est explicite pour chaque livrable;
+- vérifier que le statut d’IA est explicite pour chaque livrable;
+- vérifier que les dimensions professionnelles apparaissent dans les livrables;
 - pousser sur GitHub;
 - confirmer que GitHub Pages déploie correctement.
 
 ## Prochaine action recommandée
 
-La prochaine étape logique est de commencer la phase 1 en stabilisant les pages suivantes dans cet ordre:
+La prochaine étape logique est de poursuivre la phase 1 en relisant les pages restantes dans cet ordre:
 
-1. [Plan de cours](plan-cours.qmd)
-2. [Évaluations](evaluations.qmd)
-3. [Politique IA](ia.qmd)
-4. [Portfolio](portfolio.qmd)
-5. [Calendrier](calendrier.qmd)
-
+1. [Politique IA](ia.qmd)
+2. [Portfolio](portfolio.qmd)
+3. [Projets](projets.qmd)
+4. [Calendrier](calendrier.qmd)

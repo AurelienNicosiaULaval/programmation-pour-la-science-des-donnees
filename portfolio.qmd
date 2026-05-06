@@ -20,13 +20,19 @@ Le portfolio individuel est construit progressivement pendant la session. Il mon
 ```text
 portfolio-stt4230/
   README.md
-  ai-log.md
-  journal/
-  semaines/
+  .gitignore
+  renv.lock
+  docs/
+    conventions.md
+    ai-log.md
+    bilan-final.md
+  modules/
+    semaine-01/
+    semaine-02/
   R/
   scripts/
   reports/
-  figures/
+  outputs/
   data/
     raw/
     processed/
@@ -34,11 +40,23 @@ portfolio-stt4230/
 
 ## Trace hebdomadaire minimale
 
-- Ce qui a été produit.
-- Ce qui a été difficile.
-- Ce qui a été vérifié.
-- Ce qui doit être repris.
-- Référence aux commits, issues ou pull requests utiles.
+Chaque semaine, le portfolio doit contenir au minimum:
+
+- un fichier de code, de rapport ou de note technique;
+- une courte note explicative dans le dossier du module;
+- 2 à 3 commits significatifs;
+- une mise à jour du README, du journal IA ou des conventions si pertinent.
+
+La courte note explicative peut indiquer ce qui a été produit, ce qui a été difficile, ce qui a été vérifié, ce qui doit être repris et les commits, issues ou pull requests utiles.
+
+## Traces professionnelles à accumuler
+
+- Validation ou test d’un élément de code.
+- Journal d’erreur ou exemple minimal reproductible.
+- Revue de code donnée ou reçue.
+- Transformation d’un script exploratoire en code plus stable.
+- Note sur les limites d’un jeu de données.
+- Déclaration d’usage de l’IA lorsque nécessaire.
 
 ## README
 
@@ -50,7 +68,11 @@ Le fichier `ai-log.md` doit être proportionné. Il n’a pas besoin d’être l
 
 ## Évaluation
 
-Le portfolio peut être évalué selon:
+Le portfolio GitHub individuel compte pour 20 % de la note finale. Il est individuel, cumulatif et autorise l’IA lorsque son usage est déclaré.
+
+Les jalons prévus sont les semaines 3, 9 et 14.
+
+Il peut être évalué selon:
 
 - régularité;
 - clarté;

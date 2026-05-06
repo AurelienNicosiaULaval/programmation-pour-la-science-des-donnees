@@ -5,46 +5,117 @@ format:
     embed-resources: true
 ---
 
-Les évaluations doivent reconnaître la qualité du produit final et la qualité du processus: structure, historique Git, tests, documentation, reproductibilité, collaboration et jugement.
+Cette page précise le plan final d’évaluation du cours STT-4230 / STT-6230.
 
-## Pondération provisoire
+Les évaluations reconnaissent la qualité du produit final et la qualité du processus: structure du dépôt, historique Git, tests, documentation, reproductibilité, collaboration et capacité à expliquer le code.
 
-| Élément | Poids | Format | Ce qui est évalué |
-|---|---:|---|---|
-| Préparation et mini-validations | 10 % | Individuel | Lectures, quiz courts, questions de préparation |
-| Mini-livrables de module | 20 % | Individuel ou duo | Petites productions liées au module |
-| Projet filé | 30 % | Équipe | Dépôt complet, données, rapport, application, pipeline |
-| Épreuve pratique individuelle | 20 % | Individuel | Déboguer, structurer, expliquer et modifier du code R |
-| Revue de code et collaboration | 10 % | Équipe et individuel | Pull requests, issues, commentaires, contributions Git |
-| Démonstration finale | 10 % | Équipe avec questions individuelles | Produit, décisions, limites |
+## Principes
 
-Cette pondération provient des fiches de conception et doit être validée avant la diffusion officielle.
+- Évaluer des productions concrètes réalisées en R.
+- Vérifier la reproductibilité des analyses, rapports, applications ou pipelines.
+- Tenir compte du processus de développement: commits, issues, pull requests, corrections et documentation.
+- Distinguer clairement les responsabilités individuelles et les responsabilités d’équipe.
+- Rendre l’usage de l’IA explicite lorsque l’IA est autorisée.
+- Éviter une structure trop lourde: les traces hebdomadaires sont intégrées au portfolio plutôt qu’évaluées séparément.
+- Prévoir des attentes supplémentaires raisonnables pour STT-6230.
 
-## Mini-tests hebdomadaires
+## Tableau global
 
-- Courts et liés aux lectures.
-- Visent la préparation, pas seulement la sanction.
-- Peuvent inclure une question personnelle liée au portfolio.
-- Doivent préciser le niveau d’IA permis.
+| Composante | Pondération | Type | Moment | Règle IA |
+|---|---:|---|---|---|
+| Mini-tests de préparation | 10 % | Individuel | Semaines 2 à 14, sauf semaines de défi si souhaité | Permise |
+| Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14 | Permise, déclarée |
+| Défi technique 1 | 10 % | Individuel en laboratoire | Semaine 5 | Non permise |
+| Défi technique 2 | 10 % | Individuel en laboratoire | Semaine 8 | Permise, déclarée |
+| Défi technique 3 | 10 % | Individuel en laboratoire | Semaine 13 | Intégrée |
+| Revue de code, présentation et bilan final | 10 % | Équipe + individuel | Semaine 15 | Permise, déclarée |
+| Total | 100 % |  |  |  |
 
-## Défis hebdomadaires
+Cette table remplace les formulations provisoires précédentes.
 
-- Petits livrables pratiques.
-- Réalisés dans un dépôt Git.
-- Conçus pour faire progresser le portfolio.
-- Corrigés avec une grille courte et stable.
+## Rôle des trois défis techniques
 
-## Portfolio individuel
+Les trois défis techniques ne sont pas trois examens semblables. Ils ont trois rôles pédagogiques distincts.
 
-Le portfolio documente la progression. Il contient les traces de code, documentation, réflexions, visualisations, rapports, prototypes et usages déclarés de l’IA.
+| Défi | Moment | Rôle | Ce qui est vérifié | Règle IA |
+|---|---:|---|---|---|
+| Défi 1 | Semaine 5 | Vérifier les bases individuelles | Structure de projet, Git, importation, nettoyage simple, chemins relatifs, README minimal | Non permise |
+| Défi 2 | Semaine 8 | Vérifier la programmation avec aide encadrée | Fonctions, pipeline, visualisation, rapport Quarto court, capacité à documenter l’aide reçue | Permise, déclarée |
+| Défi 3 | Semaine 13 | Vérifier le jugement professionnel avec IA | Diagnostic, débogage, optimisation, parallélisation ou amélioration d’un mini-projet, validation des suggestions IA | Intégrée |
 
-## Projets
+Le défi 1 répond à la question suivante: est-ce que l’étudiante ou l’étudiant peut fonctionner seul dans un projet R propre?
 
-Les projets permettent d’intégrer les apprentissages dans un produit de science des données plus complet. La contribution individuelle doit être vérifiable par Git, issues, pull requests, bilan individuel et questions orales si nécessaire.
+Le défi 2 répond à la question suivante: est-ce que l’étudiante ou l’étudiant peut produire un livrable technique en utilisant l’IA de façon transparente et contrôlée?
 
-## Autoévaluation et réflexion
+Le défi 3 répond à la question suivante: est-ce que l’étudiante ou l’étudiant sait utiliser l’IA comme assistant technique sans perdre son jugement professionnel?
 
-Une courte réflexion hebdomadaire aide à identifier les apprentissages, difficultés et prochaines actions.
+Les activités appelées “défi” dans les modules servent de préparation ou de pratique. Seuls les trois défis techniques indiqués dans la table d’évaluation comptent chacun pour 10 %.
+
+## Traces attendues
+
+| Composante | Traces attendues |
+|---|---|
+| Mini-tests de préparation | Résultat du quiz, micro-réponse personnelle liée au module, question ou difficulté à apporter au laboratoire |
+| Portfolio GitHub individuel | Dépôt individuel, dossiers hebdomadaires, scripts, fonctions, rapports, README, conventions, `ai-log`, bilan final, commits réguliers |
+| Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, pipeline de modèle, documentation, issues, contributions, `ai-log` |
+| Défi 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
+| Défi 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `ai-log` ou fichier de réflexion IA |
+| Défi 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
+| Revue de code, présentation et bilan final | Pull request ou issue, commentaire de revue, support de présentation, démonstration, bilan individuel, contributions vérifiables |
+
+## Trace hebdomadaire du portfolio
+
+Chaque semaine, l’étudiante ou l’étudiant ajoute au minimum:
+
+- un fichier de code, de rapport ou de note technique;
+- une courte note explicative dans le dossier du module;
+- 2 à 3 commits significatifs;
+- une mise à jour du README, du journal IA ou des conventions si pertinent.
+
+## Règles IA
+
+### IA non permise
+
+Cette règle s’applique au défi technique 1.
+
+L’utilisation d’outils d’IA générative n’est pas permise pour cette évaluation. L’objectif est de vérifier les compétences individuelles de base en structuration de projet, manipulation de fichiers, importation de données, utilisation de Git et rédaction minimale de documentation. Les notes de cours, la documentation officielle et le code produit antérieurement par l’étudiante ou l’étudiant sont permis. Toute utilisation d’un outil d’IA générative pendant cette évaluation constitue un non-respect des consignes.
+
+### IA permise, déclarée
+
+Cette règle s’applique au portfolio GitHub individuel, au projet filé en équipe, au défi technique 2 et à la revue de code, présentation et bilan final.
+
+L’utilisation d’outils d’IA générative est permise, à condition d’être déclarée lorsque l’aide obtenue influence de manière significative le code, la documentation, l’analyse ou le livrable remis. L’étudiante ou l’étudiant doit documenter l’usage dans le fichier `ai-log.md` ou dans la section prévue à cet effet. Le travail remis doit être compris, vérifié, adapté au contexte du projet et défendable. Le fait de remettre du code ou du texte non compris, non vérifié ou non déclaré peut être pénalisé.
+
+### IA intégrée
+
+Cette règle s’applique au défi technique 3.
+
+L’utilisation d’un outil d’IA générative fait partie de l’évaluation. L’objectif n’est pas seulement de produire une solution, mais de démontrer un jugement professionnel dans l’usage de l’IA. L’étudiante ou l’étudiant doit formuler une requête pertinente, tester la réponse obtenue, vérifier le résultat, adapter la proposition au contexte du projet et documenter ce qui a été conservé, modifié ou rejeté. L’évaluation porte autant sur la qualité du diagnostic, de la vérification et de l’explication que sur le résultat final.
+
+### IA permise pour les mini-tests
+
+Les mini-tests de préparation sont réalisés à livre ouvert. L’utilisation d’outils d’IA générative est permise pour clarifier une notion, obtenir un exemple ou reformuler une explication. L’étudiante ou l’étudiant demeure responsable de comprendre les réponses soumises. Les défis techniques individuels servent à vérifier la maîtrise réelle des compétences.
+
+## Composantes
+
+### Mini-tests de préparation
+
+Les mini-tests sont courts et liés à la préparation hebdomadaire. Ils visent la préparation au laboratoire et la vérification des lectures. Ils peuvent inclure une micro-réponse personnelle liée au module, ainsi qu’une question ou une difficulté à apporter au laboratoire.
+
+### Portfolio GitHub individuel
+
+Le portfolio GitHub individuel est évalué de façon cumulative. Il documente la progression, les traces de code, les décisions, les réflexions, les validations, les rapports, les prototypes et les usages déclarés de l’IA.
+
+### Projet filé en équipe
+
+Le projet filé en équipe intègre plusieurs compétences du cours dans un dépôt reproductible. Il peut inclure un pipeline de données, un rapport Quarto, des visualisations, une application ou un tableau de bord, un pipeline de modèle et une documentation de reproduction.
+
+La contribution individuelle doit être vérifiable par Git, issues, pull requests, fichier de contributions, bilan individuel et questions orales si nécessaire.
+
+### Revue de code, présentation et bilan final
+
+Cette composante combine une revue de code, une présentation du produit et un bilan final. Elle comporte une part d’équipe et une part individuelle. Elle permet de vérifier les décisions de conception, les limites, les validations effectuées, la contribution individuelle et les apprentissages.
 
 ## Grille commune de qualité
 
@@ -54,7 +125,10 @@ Une courte réflexion hebdomadaire aide à identifier les apprentissages, diffic
 - Documentation.
 - Interprétation et jugement.
 - Transparence sur l’IA lorsque l’IA est autorisée.
+- Capacité à expliquer et défendre le travail remis.
 
 ## Différenciation STT-4230 / STT-6230
 
-STT-4230 exige un livrable fonctionnel, reproductible, bien structuré et documenté. STT-6230 ajoute une justification technique, une comparaison d’approches, des tests supplémentaires, une analyse de performance ou une note méthodologique courte selon le livrable.
+STT-4230 exige des livrables fonctionnels, reproductibles, bien structurés et documentés. STT-6230 ajoute une justification technique, une comparaison d’approches, des tests supplémentaires, une analyse de performance ou une note méthodologique courte selon le livrable.
+
+Consulter aussi les pages [Portfolio individuel](portfolio.qmd), [Projets](projets.qmd), [Défis techniques](defis.qmd), [Politique IA](ia.qmd) et [Revue de code, présentation et bilan final](presentation.qmd).

@@ -42,7 +42,17 @@ Inclure:
 
 ## IA et dépannage
 
-L’IA peut aider à comprendre une erreur si le niveau d’IA de la tâche le permet. Ne jamais transmettre de données sensibles ou confidentielles à un outil externe non approuvé.
+L’IA peut aider à comprendre une erreur si le statut d’IA de la tâche le permet. Ne jamais transmettre de données sensibles ou confidentielles à un outil externe non approuvé.
+
+## Ressources de rattrapage
+
+Les ressources de rattrapage doivent couvrir au minimum:
+
+- importation et manipulation de données;
+- graphiques de base;
+- fonctions simples;
+- commits Git;
+- lecture de messages d’erreur.
 
 ## TODO
 

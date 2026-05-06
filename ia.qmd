@@ -11,14 +11,44 @@ L’IA générative est un objet d’apprentissage et un outil de soutien. Elle 
 
 Tu peux utiliser l’IA si tu peux ensuite expliquer, vérifier, modifier et défendre ce qu’elle t’a aidé à produire. Si tu ne comprends pas le résultat, il n’est pas prêt à être remis.
 
-## Niveaux d’autorisation
+## Statuts d’IA dans les évaluations
 
-| Niveau | Règle |
-|---:|---|
-| 0 | Aucune IA pour cette tâche. |
-| 1 | IA permise pour comprendre, mais pas pour produire le livrable. |
-| 2 | IA permise avec déclaration dans `ai-log.md`. |
-| 3 | IA attendue comme outil de comparaison, de tests ou de revue de code. |
+| Statut | Règle |
+|---|---|
+| Non permise | Aucun outil d’IA générative pendant l’évaluation. |
+| Permise | IA autorisée pour clarifier une notion, obtenir un exemple ou reformuler une explication. |
+| Permise, déclarée | IA autorisée, mais tout usage significatif doit être documenté dans `ai-log.md` ou dans la section prévue. |
+| Intégrée | IA attendue comme partie de la tâche: formuler, tester, vérifier, adapter et documenter l’apport de l’IA. |
+
+## Application aux évaluations
+
+| Évaluation | IA |
+|---|---|
+| Mini-tests de préparation | Permise |
+| Portfolio GitHub individuel | Permise, déclarée |
+| Défi technique 1 | Non permise |
+| Défi technique 2 | Permise, déclarée |
+| Défi technique 3 | Intégrée |
+| Projet filé en équipe | Permise, déclarée |
+| Revue de code, présentation et bilan final | Permise, déclarée |
+
+## Formulations officielles
+
+### IA non permise
+
+L’utilisation d’outils d’IA générative n’est pas permise pour cette évaluation. L’objectif est de vérifier les compétences individuelles de base en structuration de projet, manipulation de fichiers, importation de données, utilisation de Git et rédaction minimale de documentation. Les notes de cours, la documentation officielle et le code produit antérieurement par l’étudiante ou l’étudiant sont permis. Toute utilisation d’un outil d’IA générative pendant cette évaluation constitue un non-respect des consignes.
+
+### IA permise, déclarée
+
+L’utilisation d’outils d’IA générative est permise, à condition d’être déclarée lorsque l’aide obtenue influence de manière significative le code, la documentation, l’analyse ou le livrable remis. L’étudiante ou l’étudiant doit documenter l’usage dans le fichier `ai-log.md` ou dans la section prévue à cet effet. Le travail remis doit être compris, vérifié, adapté au contexte du projet et défendable. Le fait de remettre du code ou du texte non compris, non vérifié ou non déclaré peut être pénalisé.
+
+### IA intégrée
+
+L’utilisation d’un outil d’IA générative fait partie de l’évaluation. L’objectif n’est pas seulement de produire une solution, mais de démontrer un jugement professionnel dans l’usage de l’IA. L’étudiante ou l’étudiant doit formuler une requête pertinente, tester la réponse obtenue, vérifier le résultat, adapter la proposition au contexte du projet et documenter ce qui a été conservé, modifié ou rejeté. L’évaluation porte autant sur la qualité du diagnostic, de la vérification et de l’explication que sur le résultat final.
+
+### IA permise pour les mini-tests
+
+Les mini-tests de préparation sont réalisés à livre ouvert. L’utilisation d’outils d’IA générative est permise pour clarifier une notion, obtenir un exemple ou reformuler une explication. L’étudiante ou l’étudiant demeure responsable de comprendre les réponses soumises. Les défis techniques individuels servent à vérifier la maîtrise réelle des compétences.
 
 ## Usages permis
 
@@ -43,7 +73,7 @@ Tu peux utiliser l’IA si tu peux ensuite expliquer, vérifier, modifier et dé
 
 ## Déclaration obligatoire
 
-Chaque projet ou défi qui autorise l’IA au niveau 2 ou 3 doit contenir un fichier `ai-log.md` ou une déclaration équivalente.
+Chaque projet, portfolio ou défi qui utilise le statut “permise, déclarée” ou “intégrée” doit contenir un fichier `ai-log.md` ou une déclaration équivalente.
 
 La déclaration doit indiquer:
 
@@ -71,7 +101,6 @@ Un gabarit est disponible dans [gabarits/declaration-ia.qmd](gabarits/declaratio
 
 La personne qui remet un travail est responsable du code, des choix statistiques, des résultats, de la documentation et des limites. L’usage de l’IA ne transfère pas cette responsabilité.
 
-## TODO
+## À valider institutionnellement
 
 - Vérifier la politique institutionnelle applicable à l’automne 2026.
-- Préciser les niveaux d’IA dans chaque consigne d’évaluation.

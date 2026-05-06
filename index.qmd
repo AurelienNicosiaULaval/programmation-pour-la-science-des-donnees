@@ -9,7 +9,7 @@ Ce site regroupe le matériel du cours STT-4230 / STT-6230, offert à partir de 
 
 Le cours ne vise pas seulement à apprendre R. Il vise à apprendre à développer des projets de science des données robustes, reproductibles, lisibles, collaboratifs et livrables.
 
-La [roadmap de travail](roadmap.qmd) indique dans quel ordre le site et le matériel pédagogique seront développés.
+La page [Cadrage pédagogique](cadrage.qmd) fixe les décisions consolidées du cours. La [roadmap de travail](roadmap.qmd) indique dans quel ordre le site et le matériel pédagogique seront développés.
 
 ## Logique pédagogique
 
@@ -29,28 +29,35 @@ Chaque semaine suit la même structure:
 | Pendant | Atelier guidé, exercice, revue de code | Commit, pull request, note technique |
 | Après | Défi, portfolio, réflexion | Livrable, journal, `ai-log.md` si pertinent |
 
-## Modules
+## Dimensions professionnelles
 
-Le cours est structuré en 12 modules:
+Les modules, laboratoires, défis et projets doivent faire réapparaître régulièrement les dimensions suivantes: tests et validation, débogage, revue de code, données réelles, éthique et confidentialité, accessibilité, environnements et secrets, passage de l’exploration à la production, contribution individuelle, double niveau STT-4230 / STT-6230, diagnostic et soutien.
 
-- 1. [Structuration de projets de science des données](modules/01-structuration-projets/index.qmd)
-- 2. [Manipulation et gestion de données](modules/02-manipulation-donnees/index.qmd)
-- 3. [Visualisation](modules/03-visualisation/index.qmd)
-- 4. [Rapports, applications web et tableaux de bord](modules/04-rapports-applications-tableaux-bord/index.qmd)
-- 5. [Programmation orientée objet](modules/05-programmation-orientee-objet/index.qmd)
-- 6. [Programmation fonctionnelle avec tidyverse](modules/06-programmation-fonctionnelle/index.qmd)
-- 7. [Profilage, optimisation de code et performance](modules/07-profilage-optimisation-performance/index.qmd)
-- 8. [Programmation asynchrone et parallèle](modules/08-programmation-parallele/index.qmd)
-- 9. [Modèles d’apprentissage automatique](modules/09-modeles-apprentissage-automatique/index.qmd)
-- 10. [Déploiement et mise en production](modules/10-deploiement-production/index.qmd)
-- 11. [Cycle de vie des modèles](modules/11-cycle-vie-modeles/index.qmd)
-- 12. [Collaboration, documentation et packages](modules/12-collaboration-documentation-package/index.qmd)
+## Progression
+
+Le cours est structuré en 15 semaines:
+
+1. Mise en route, diagnostic R/Git/Positron
+2. Structure de projet, Git, GitHub
+3. Dépendances et reproductibilité
+4. Données et nettoyage
+5. Défi technique 1 et consolidation
+6. Visualisation
+7. Quarto, rapports, communication
+8. Défi technique 2
+9. Consolidation
+10. Fonctions, `purrr`, pipelines
+11. POO et architecture
+12. Optimisation et parallélisation
+13. Défi technique 3
+14. Modèle, pipeline, cycle de vie
+15. Package, documentation, démonstration finale
 
 ## Évaluations
 
 Les évaluations valorisent le produit final, mais aussi le processus de développement: structure du dépôt, historique Git, tests, documentation, reproductibilité, revue de code et capacité à expliquer les choix.
 
-Les composantes prévues sont les mini-tests, les défis hebdomadaires, le portfolio individuel, les projets, la revue de code et l’autoévaluation.
+Les composantes prévues sont les mini-tests de préparation, le portfolio GitHub individuel, trois défis techniques, le projet filé en équipe, puis la présentation, la revue de code et le bilan final.
 
 ## Portfolio et GitHub
 
@@ -66,7 +73,7 @@ Consulter la page [Politique d’utilisation de l’IA](ia.qmd).
 
 ## À compléter
 
-- Ajouter les contenus détaillés des modules.
+- Ajouter les contenus détaillés des semaines et modules.
 - Ajouter les jeux de données autorisés.
 - Adapter le calendrier aux dates exactes de l’automne 2026.
 - Valider les règles institutionnelles sur l’IA et la protection des données.

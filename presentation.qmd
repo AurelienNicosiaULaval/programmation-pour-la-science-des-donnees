@@ -1,0 +1,40 @@
+---
+title: "Revue de code, présentation et bilan final"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette composante compte pour 10 % de la note finale. Elle combine une part d’équipe et une part individuelle. L’IA est permise et déclarée.
+
+## Objectif
+
+Vérifier que l’équipe peut expliquer le produit livré, les choix techniques, les limites, les validations effectuées et les contributions individuelles.
+
+## Éléments attendus
+
+- Revue d’un extrait de code significatif.
+- Présentation courte du projet filé.
+- Discussion des choix, limites et compromis.
+- Bilan de contribution individuelle.
+- Réponses aux questions.
+
+## Traces attendues
+
+- Pull request ou issue.
+- Commentaire de revue.
+- Support bref de présentation.
+- Démonstration.
+- Dépôt final propre.
+- `docs/contributions.md` ou document équivalent.
+- Bilan final individuel.
+- Contributions vérifiables.
+- Déclaration IA si l’IA a été utilisée de façon significative.
+
+## Points à vérifier
+
+- Le projet se relance.
+- Les contributions individuelles sont vérifiables.
+- Les limites sont nommées clairement.
+- Les choix techniques sont justifiés.
+- Les attentes supplémentaires STT-6230 sont explicites lorsque nécessaire.

@@ -62,7 +62,7 @@ Comparer une solution `purrr` à une autre stratégie et justifier le choix rete
 
 ## Rappel IA
 
-Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+Le statut d’IA doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
 
 ## Pages du module
 

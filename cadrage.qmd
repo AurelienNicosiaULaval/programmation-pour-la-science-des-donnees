@@ -1,0 +1,253 @@
+---
+title: "Cadrage pédagogique"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page est la synthèse opérationnelle du document `stt4230_document_cadrage_unique_codex.pdf`. Elle sert de source de cohérence pour le site Quarto du cours.
+
+## Décision centrale
+
+| Dimension | Formulation retenue |
+|---|---|
+| Nature du cours | Cours de laboratoire informatique de 3 h par semaine, le mercredi après-midi. |
+| Méthodologie | Projet filé, studio de programmation, portfolio GitHub, défis techniques et revue de code. |
+| Technologie | R, Positron recommandé, RStudio en repli, GitHub, Quarto, `renv`, Shiny ou Quarto dashboard, `targets`, `tidymodels`. |
+| IA générative | Autorisée de façon encadrée, transparente et vérifiable. Elle devient une compétence, pas une zone grise. |
+| Finalité | Former des personnes capables de développer, documenter, tester, collaborer et livrer un projet de science des données en R. |
+
+## Vision exécutive
+
+Le cours doit fonctionner comme un laboratoire professionnel de science des données en R. Il ne vise pas seulement l’apprentissage de fonctions R, mais la capacité à transformer une analyse en produit reproductible, documenté, robuste, collaboratif et livrable.
+
+Phrase directrice: à la fin du cours, l’étudiante ou l’étudiant ne sait pas seulement écrire du code R. Elle ou il sait développer, organiser, documenter, tester, collaborer, optimiser et livrer un projet de science des données en R.
+
+## Méthodologie pédagogique
+
+| Composante | Rôle | Trace attendue |
+|---|---|---|
+| Projet filé | Donner une cohérence à tous les modules | Dépôt d’équipe, rapport, application ou dashboard, pipeline, documentation |
+| Portfolio individuel | Documenter la progression personnelle | Dépôt individuel avec modules, scripts, rapports, `ai-log`, bilan |
+| Studio de programmation | Utiliser le laboratoire pour produire, corriger et discuter | Commits, corrections, revue de code, livrable court |
+| Sprints | Structurer la progression en blocs de 2 ou 3 semaines | Jalons du projet, rétroactions régulières |
+| Revue de code | Développer la lecture critique et la collaboration | Issues, pull requests, commentaires, refactorisations |
+| IA encadrée | Former au jugement technique avec IA | `ai-log`, vérifications, explication du code |
+
+Narration du cours: on part de projets imparfaits, puis chaque semaine ajoute une pratique professionnelle.
+
+Transformation cible: dossier désordonné -> projet R structuré -> pipeline de données -> visualisations -> rapport ou application -> fonctions et objets -> tests -> optimisation -> modèle -> déploiement -> documentation finale.
+
+## Semaine type
+
+| Moment | Durée cible | Travail | Trace |
+|---|---:|---|---|
+| Avant mercredi | 45 à 60 min | Lecture courte, exemples R, mini-test, préparation du dépôt | Quiz, question, commit initial ou note courte |
+| Début du labo | 25 à 35 min | Retour sur mini-test, erreurs fréquentes, concepts difficiles | Questions traitées, points de vigilance |
+| Démonstration | 25 à 40 min | Observer un geste technique complet dans Positron/R | Code de référence ou exemple minimal |
+| Atelier | 75 à 95 min | Produire dans le dépôt individuel ou d’équipe | Script, rapport, fonction, test, graphique, issue ou PR |
+| Revue et synthèse | 20 à 30 min | Comparer, relire, discuter, consolider | Commit, note, exit ticket, tâche à finir |
+| Après mercredi | 30 à 90 min | Finaliser, documenter, nettoyer, pousser sur GitHub | Livrable stable et historique Git lisible |
+
+Une lecture ne doit jamais être seulement un texte. Elle doit contenir un geste R à reproduire, une décision à prendre et une trace à laisser dans le portfolio.
+
+## Progression proposée
+
+| Semaine | Thème | Production visée |
+|---:|---|---|
+| 1 | Mise en route, diagnostic R/Git/Positron | Installer, cloner, diagnostiquer, créer le point de départ |
+| 2 | Structure de projet, Git, GitHub | Dépôt propre, conventions, README, premiers commits |
+| 3 | Dépendances et reproductibilité | `renv`, `.gitignore`, chemins relatifs, relance sur autre machine |
+| 4 | Données et nettoyage | Importer, valider, nettoyer, sauvegarder des données |
+| 5 | Défi 1 et consolidation | Vérification individuelle sans IA: projet, données, Git |
+| 6 | Visualisation | Figures lisibles et utiles |
+| 7 | Quarto, rapports, communication | Rapport reproductible et clair |
+| 8 | Défi 2 | Fonctions, pipeline, visualisation, rapport, IA déclarée |
+| 9 | Consolidation | Portfolio et projet nettoyés, revue intermédiaire |
+| 10 | Fonctions, `purrr`, pipelines | Copier-coller transformé en fonctions et pipelines |
+| 11 | POO et architecture | S3 ou R6 selon le choix final |
+| 12 | Optimisation et parallélisation | Mesurer, profiler, comparer, paralléliser avec `future` et `furrr` |
+| 13 | Défi 3 | Diagnostic technique avec IA intégrée et vérification obligatoire |
+| 14 | Modèle, pipeline, cycle de vie | `tidymodels`, `targets`, validation, suivi et reproduction du modèle |
+| 15 | Package, documentation, démonstration finale | README final, tests, présentation, bilan et livraison |
+
+## Architecture des évaluations
+
+| Évaluation | Poids | Type | Moment | IA |
+|---|---:|---|---|---|
+| Mini-tests de préparation | 10 % | Individuel | Semaines 2 à 14, sauf semaines de défi si souhaité | Permise |
+| Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14 | Permise, déclarée |
+| Défi technique 1 | 10 % | Individuel en laboratoire | Semaine 5 | Non permise |
+| Défi technique 2 | 10 % | Individuel en laboratoire | Semaine 8 | Permise, déclarée |
+| Défi technique 3 | 10 % | Individuel en laboratoire | Semaine 13 | Intégrée |
+| Revue de code, présentation et bilan final | 10 % | Équipe + individuel | Semaine 15 | Permise, déclarée |
+
+## Jalons d’évaluation
+
+| Semaine | Évaluation ou jalon |
+|---:|---|
+| 1 | Diagnostic non noté R/Git/Positron |
+| 3 | Premier jalon portfolio: structure, README, conventions |
+| 5 | Défi technique 1 |
+| 6 | Jalon projet 1: proposition, dépôt, données, plan |
+| 8 | Défi technique 2 |
+| 10 | Jalon portfolio: fonctions, scripts, documentation |
+| 12 | Jalon projet 2: pipeline, visualisations, rapport ou application partielle |
+| 13 | Défi technique 3 |
+| 14 | Remise finale du projet et du portfolio |
+| 15 | Présentations, revue de code et bilan final |
+
+## Portfolio individuel
+
+Le portfolio est un dépôt GitHub individuel. Il doit montrer une progression régulière, pas une reconstruction de fin de session.
+
+Structure minimale:
+
+```text
+portfolio-stt4230/
+  README.md
+  .gitignore
+  renv.lock
+  docs/
+    conventions.md
+    ai-log.md
+    bilan-final.md
+  modules/
+    semaine-01/
+    semaine-02/
+  R/
+  scripts/
+  reports/
+  outputs/
+  data/
+    raw/
+    processed/
+```
+
+Exigence minimale hebdomadaire: un fichier de code ou de rapport, une courte note explicative, 2 à 3 commits significatifs et une mise à jour du README, des conventions ou du `ai-log` lorsque pertinent.
+
+## IA générative
+
+| Niveau | Règle | Usage typique |
+|---:|---|---|
+| 0 | Aucune IA | Défi 1 ou tâche de vérification de base |
+| 1 | IA permise pour comprendre, mais pas produire le livrable | Clarifier une erreur ou un concept |
+| 2 | IA permise avec `ai-log` obligatoire | Refactorisation, aide au rapport, suggestion de code |
+| 3 | IA attendue comme outil de comparaison, de tests ou de revue | Défi 3, optimisation, vérification critique |
+
+Règle simple: l’IA est permise si la personne peut ensuite expliquer, vérifier, modifier et défendre ce qu’elle a aidé à produire.
+
+Interdictions:
+
+- remettre du code non compris;
+- masquer une contribution importante de l’IA;
+- inventer ou embellir des résultats;
+- soumettre des données confidentielles, nominatives ou sensibles dans un outil externe non approuvé;
+- utiliser l’IA pour contourner une consigne individuelle.
+
+## Architecture GitHub
+
+Une organisation GitHub du cours est recommandée.
+
+| Type de dépôt | Responsable | Utilité |
+|---|---|---|
+| Dépôts enseignants | Enseignante ou enseignant | Notes, ateliers, solutions, gabarits, données, grilles |
+| Portfolio individuel | Étudiante ou étudiant | Progression personnelle, traces hebdomadaires, traces de code et documentation |
+| Projet d’équipe | Équipe | Produit final de science des données, collaboration, livrables majeurs |
+| Défis techniques | Enseignante ou enseignant, puis étudiante ou étudiant | Épreuves pratiques distribuées comme dépôts de départ |
+
+GitHub Classroom peut être utilisé. Si l’intégration est trop lourde, utiliser des dépôts modèles et une remise MonPortail contenant le lien GitHub.
+
+## Gabarit de module
+
+Chaque module doit répondre à une question de production.
+
+Un module complet contient:
+
+- objectifs mesurables;
+- mise en situation;
+- lecture courte;
+- exemples R;
+- atelier;
+- checklist;
+- livrable;
+- grille;
+- solution minimale;
+- solution professionnelle;
+- extension maîtrise.
+
+## Dimensions professionnelles
+
+Ces dimensions ne sont pas de nouveaux modules. Elles doivent revenir comme réflexes professionnels dans les ateliers, le portfolio, les défis et le projet.
+
+| Dimension | Moment minimal | Trace attendue |
+|---|---|---|
+| Tests et validation | Données, fonctions, modèles, package | `testthat`, assertions, vérification du pipeline |
+| Débogage | Semaines 1 à 5, défis | Exemple minimal reproductible, journal d’erreur |
+| Revue de code | Toutes les 2 ou 3 semaines | Issue, PR, commentaires, correction après revue |
+| Données réelles | Module données et projet | CSV, Excel, JSON, API, SQL ou DuckDB |
+| Éthique et confidentialité | IA, données, déploiement | Règles sur données sensibles, section éthique |
+| Accessibilité | Visualisation, Quarto, Shiny | Figures lisibles, rapport utile, interface claire |
+| Environnements et secrets | Module 1, API, déploiement | `renv`, `.env` non versionné, variables documentées |
+| Exploration vers production | Tous les modules | Avant/après, refactorisation, pipeline principal |
+| Contribution individuelle | Projet d’équipe | `docs/contributions.md`, bilan, historique Git |
+| Double niveau | Tous les gros livrables | Attentes STT-6230 explicites |
+| Diagnostic et soutien | Semaine 1 et tout le cours | Diagnostic non noté, FAQ, canal de dépannage |
+
+## Différenciation STT-4230 et STT-6230
+
+| Dimension | STT-4230 | STT-6230 |
+|---|---|---|
+| Code | Fonctionnel, clair, structuré | Plus robuste, modulaire et justifié |
+| Documentation | README clair, instructions de base | README + note technique avec choix et limites |
+| Projet | Pipeline complet et reproductible | Pipeline complet + discussion des compromis |
+| Optimisation | Repérer et améliorer un goulot simple | Comparer des stratégies et documenter les gains |
+| Modèle | Utiliser un pipeline de modèle | Discuter validation, limites et cycle de vie |
+| IA | Déclarer et vérifier | Analyser de façon critique l’apport et les limites |
+
+Trace supplémentaire recommandée pour STT-6230: `docs/note-technique.md`.
+
+## Architecture technologique
+
+| Couche | Choix recommandé | Rôle |
+|---|---|---|
+| IDE | Positron, RStudio en repli | Développement en R, console, Git, Quarto |
+| Langage | R | Langage officiel du cours |
+| Publication | Quarto | Notes, rapports, site web, livrables |
+| Versionnage | Git + GitHub | Historique, collaboration, issues, PR, remises |
+| Dépendances | `renv` | Reproductibilité de l’environnement R |
+| Qualité | `testthat`, `lintr`, `styler` | Tests, style, robustesse |
+| Données | tidyverse, readxl, jsonlite, DBI, DuckDB | Formats réalistes |
+| Applications | Shiny, bslib, Quarto dashboard | Livrables web et tableaux de bord |
+| Pipelines | `targets` | Dépendances entre étapes et reproduction |
+| Modèles | tidymodels, recipes, yardstick, tune | Pipeline de modélisation |
+| Performance | bench, profvis, future, furrr | Mesure, optimisation, parallélisation |
+
+## Priorités de production
+
+| Priorité | Livrable | Description |
+|---:|---|---|
+| 1 | Squelette Quarto du site | Navigation, accueil, modules, évaluations, guides |
+| 2 | Module template | Gabarit réutilisable pour tous les modules |
+| 3 | Module 1 complet | Diagnostic, installation, portfolio, GitHub, structure de projet |
+| 4 | Énoncés d’évaluation | Portfolio, projet filé, défis techniques, présentation |
+| 5 | Gabarits GitHub | Portfolio-template, projet-template, défi-template |
+| 6 | Politique IA | Niveaux 0 à 3, `ai-log`, exemples |
+| 7 | Grilles de correction | Rubriques stables et courtes |
+| 8 | FAQ technique | Installation, Git, SSH, Quarto, erreurs fréquentes |
+
+## Checklist finale
+
+- Les objectifs parlent-ils de développer, documenter, tester, collaborer et livrer?
+- Chaque module produit-il une trace concrète dans le portfolio ou le projet?
+- Les usages de l’IA sont-ils clairs pour chaque évaluation?
+- Au moins un défi sans IA, un avec IA déclarée et un avec IA intégrée sont-ils prévus?
+- Le portfolio indique-t-il quoi ajouter chaque semaine?
+- La contribution individuelle est-elle vérifiable?
+- Les attentes STT-6230 sont-elles explicites?
+- Un autre ordinateur peut-il relancer les livrables principaux?
+- Les consignes précisent-elles quoi ne pas envoyer dans un outil IA?
+- La FAQ et les procédures techniques sont-elles disponibles avant la semaine 1?
+- La préparation hebdomadaire reste-t-elle raisonnable?
+- Les grilles reconnaissent-elles la progression et pas seulement le résultat final?

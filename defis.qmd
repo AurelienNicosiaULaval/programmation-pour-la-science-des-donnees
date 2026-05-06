@@ -1,0 +1,73 @@
+---
+title: "Défis techniques"
+format:
+  html:
+    embed-resources: true
+---
+
+Les défis techniques sont des évaluations individuelles réalisées en laboratoire. Ils vérifient la capacité à produire, diagnostiquer, documenter, justifier et vérifier du code R dans un temps limité.
+
+## Vue d’ensemble
+
+| Défi | Semaine | Poids | Rôle | IA |
+|---|---:|---:|---|---|
+| Défi technique 1 | 5 | 10 % | Vérifier les bases individuelles | Non permise |
+| Défi technique 2 | 8 | 10 % | Vérifier la programmation avec aide encadrée | Permise, déclarée |
+| Défi technique 3 | 13 | 10 % | Vérifier le jugement professionnel avec IA | Intégrée |
+
+## Défi technique 1
+
+Le premier défi vérifie les bases du travail individuel sans IA:
+
+- structure de projet;
+- importation et nettoyage simple de données;
+- chemins relatifs;
+- usage de Git et commits;
+- README minimal ou note courte de reproduction;
+- historique Git lisible.
+
+Question centrale: est-ce que l’étudiante ou l’étudiant peut fonctionner seul dans un projet R propre?
+
+## Défi technique 2
+
+Le deuxième défi autorise l’IA avec déclaration. Il vise:
+
+- fonctions;
+- pipeline simple;
+- visualisation;
+- rapport Quarto court;
+- adaptation et vérification de toute aide reçue;
+- entrée obligatoire dans `ai-log.md` ou dans un fichier de réflexion IA.
+
+Question centrale: est-ce que l’étudiante ou l’étudiant peut produire un livrable technique en utilisant l’IA de façon transparente et contrôlée?
+
+## Défi technique 3
+
+Le troisième défi intègre l’IA à la tâche. Il évalue:
+
+- diagnostic technique;
+- débogage;
+- optimisation, parallélisation ou amélioration d’un mini-projet;
+- comparaison avant/après;
+- vérification obligatoire;
+- mini-rapport technique;
+- jugement critique sur les propositions de l’IA.
+
+Question centrale: est-ce que l’étudiante ou l’étudiant sait utiliser l’IA comme assistant technique sans perdre son jugement professionnel?
+
+## Traces attendues
+
+| Défi | Traces |
+|---|---|
+| Défi technique 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
+| Défi technique 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `ai-log` ou fichier de réflexion IA |
+| Défi technique 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
+
+## Critères communs
+
+- Exactitude technique.
+- Reproductibilité.
+- Qualité du code.
+- Documentation minimale.
+- Respect du statut d’IA.
+- Capacité à expliquer les décisions.

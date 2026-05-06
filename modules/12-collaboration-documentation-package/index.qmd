@@ -15,7 +15,7 @@ Comment livrer un projet que d’autres peuvent lire, réviser et prolonger?
 - organiser une collaboration avec issues et pull requests
 - documenter un projet professionnellement
 - créer la structure minimale d’un package R
-- préparer une démonstration finale
+- préparer la présentation, la revue de code et le bilan final
 
 ## Compétences visées
 
@@ -54,7 +54,7 @@ Transformer un extrait du projet en composant documenté, testé et révisable.
 - documentation finale
 - trace de revue de code
 - bilan de contribution
-- démonstration ou présentation
+- présentation finale
 
 ## Variante STT-6230
 
@@ -62,7 +62,7 @@ Ajouter une note technique sur architecture, limites et pistes de maintenance.
 
 ## Rappel IA
 
-Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+Le statut d’IA doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
 
 ## Pages du module
 

@@ -43,4 +43,4 @@ Prévoir 5 à 8 questions:
 
 - Ajouter les lectures exactes.
 - Ajouter les exemples R.
-- Définir le niveau d’IA permis pour le mini-test.
+- Indiquer le statut d’IA du mini-test.

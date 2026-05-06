@@ -27,6 +27,7 @@ Cette page regroupe les ressources utiles pour le cours.
 
 ## Ressources internes
 
+- [Cadrage pédagogique](cadrage.qmd)
 - [Démarrage](demarrage.qmd)
 - [Dépendances R](dependances.qmd)
 - [Soutien technique](soutien-technique.qmd)
@@ -34,14 +35,13 @@ Cette page regroupe les ressources utiles pour le cours.
 
 ## Documents sources du projet
 
-Les trois PDF de conception sont conservés à la racine du dépôt pendant la phase de construction:
+Un seul PDF de cadrage est conservé à la racine du dépôt afin d’éviter les contradictions entre documents de conception:
 
-- `stt4230_fiches_completes_consolidees.pdf`
-- `fiche_lectures_structure_hebdomadaire_STT4230_STT6230.pdf`
-- `stt4230_fiches_points_a_ne_pas_oublier.pdf`
+- `stt4230_document_cadrage_unique_codex.pdf`
+
+La page [Cadrage pédagogique](cadrage.qmd) traduit ce document en décisions opérationnelles pour le site.
 
 ## TODO
 
-- Déplacer ou copier les documents institutionnels autorisés dans `assets/documents/`.
 - Ajouter les liens officiels validés.
 - Ajouter les jeux de données recommandés.

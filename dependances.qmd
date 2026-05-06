@@ -76,4 +76,6 @@ quarto preview
 - Ne pas versionner `.Rproj.user`, `.Rhistory`, `.RData`, ni les secrets.
 - Documenter les packages nécessaires.
 - Utiliser des chemins relatifs.
+- Documenter les variables d’environnement sans exposer les clés.
+- Conserver les fichiers `.env` hors Git.
 - Vérifier le rendu sur une machine propre avant une remise importante.

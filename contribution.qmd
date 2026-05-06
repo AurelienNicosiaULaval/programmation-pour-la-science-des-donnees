@@ -11,7 +11,7 @@ Cette page décrit comment contribuer au dépôt du site de cours.
 
 1. Copier le gabarit [fiche-module.qmd](gabarits/fiche-module.qmd).
 2. Créer un dossier dans `modules/`.
-3. Ajouter les pages `index.qmd`, `avant.qmd`, `pendant.qmd`, `apres.qmd`, `laboratoire.qmd`, `defi.qmd`, `lectures.qmd`, `ressources.qmd`.
+3. Ajouter une lecture courte, des exemples R, un atelier, une checklist, un livrable, une grille, une solution minimale, une solution professionnelle et une extension STT-6230.
 4. Ajouter le module dans `_quarto.yml`.
 5. Exécuter `quarto render`.
 
@@ -19,7 +19,7 @@ Cette page décrit comment contribuer au dépôt du site de cours.
 
 1. Copier [fiche-defi.qmd](gabarits/fiche-defi.qmd).
 2. Placer la consigne dans `defis/`.
-3. Indiquer le niveau d’IA permis.
+3. Indiquer le statut d’IA.
 4. Ajouter les critères d’évaluation.
 5. Vérifier les liens et le rendu.
 

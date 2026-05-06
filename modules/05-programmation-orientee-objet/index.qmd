@@ -62,7 +62,7 @@ Discuter un compromis entre S3, R6 et une solution fonctionnelle plus simple.
 
 ## Rappel IA
 
-Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+Le statut d’IA doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
 
 ## Pages du module
 

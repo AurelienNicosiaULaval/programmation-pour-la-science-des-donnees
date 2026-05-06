@@ -7,6 +7,8 @@ format:
 
 Remplacer ce gabarit par le contenu du module.
 
+Un module complet contient une lecture courte, des exemples R, un atelier, une checklist, un livrable, une grille, une solution minimale, une solution professionnelle et une extension maîtrise.
+
 ## Question du module
 
 Formuler la difficulté de projet que le module aide à résoudre.
@@ -53,6 +55,22 @@ Décrire le défi en une phrase.
 - Fichier ou dossier attendu.
 - Trace Git.
 - Note ou réflexion.
+
+## Checklist
+
+- Le dépôt contient les fichiers attendus.
+- Le code se relance.
+- Une validation ou un test minimal est présent lorsque pertinent.
+- Le statut d’IA est respecté.
+- La trace portfolio est ajoutée.
+
+## Solution minimale
+
+Décrire le seuil de réussite attendu.
+
+## Solution professionnelle
+
+Décrire une version plus robuste, lisible ou réutilisable.
 
 ## Variante STT-6230
 

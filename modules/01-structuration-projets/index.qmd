@@ -62,7 +62,7 @@ Ajouter une courte note justifiant les choix de structure et leurs limites pour 
 
 ## Rappel IA
 
-Le niveau d’IA permis doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+Le statut d’IA doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
 
 ## Pages du module
 

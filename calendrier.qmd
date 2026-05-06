@@ -12,21 +12,21 @@ Ce calendrier est une structure de travail. Les dates exactes doivent être ajus
 | 1 | Mise en route | Fonctionnement, environnement, GitHub, portfolio | README initial et journal de départ |
 | 2 | Projet, Git, structure | Workflow Git et structure de dépôt | Structure et conventions |
 | 3 | Dépendances et reproductibilité | `renv`, chemins relatifs, `.gitignore` | `renv.lock` ou stratégie documentée |
-| 4 | Données et nettoyage | Importation, tidy data, transformation | Pipeline de données |
-| 5 | Défi 1 et consolidation | Révision projet, Git, données | Trace défi 1 |
+| 4 | Données et nettoyage | Importation, tidy data, transformation | Pipeline de données et revue courte |
+| 5 | Défi technique 1 et consolidation | Révision projet, Git, données | Trace défi 1, IA non permise |
 | 6 | Visualisation | ggplot2 et communication visuelle | Figure améliorée |
-| 7 | Quarto et communication | Rapports reproductibles | Rapport Quarto |
-| 8 | Défi 2 | Fonctions, pipeline, visualisation | Trace défi 2 et `ai-log.md` |
+| 7 | Quarto et communication | Rapports reproductibles | Rapport Quarto et revue courte |
+| 8 | Défi technique 2 | Fonctions, pipeline, visualisation | Trace défi 2 et `ai-log.md` |
 | 9 | Consolidation | Nettoyage du portfolio | `consolidation.md` |
-| 10 | Fonctions et purrr | Fonctions, itérations | Fonction dans `R/` |
+| 10 | Fonctions et purrr | Fonctions, itérations | Fonction dans `R/`, test minimal |
 | 11 | POO et architecture | S3 ou R6 selon le choix final | Note POO |
-| 12 | Optimisation et parallèle | Profilage, future, furrr | Note d’optimisation |
-| 13 | Défi 3 | IA comme assistant technique | Rapport technique |
+| 12 | Optimisation et parallèle | Profilage, future, furrr | Note d’optimisation et revue courte |
+| 13 | Défi technique 3 | IA intégrée à la tâche | Rapport technique et trace IA |
 | 14 | Modèle, pipeline, cycle de vie | tidymodels et pipeline | Pipeline modèle |
-| 15 | Package, documentation, présentation | README, tests, présentation | Bilan final |
+| 15 | Package, documentation, démonstration finale | README, tests, présentation | Bilan final et livraison |
 
 ## TODO
 
 - Associer chaque semaine à une date.
-- Préciser les échéances de mini-tests et défis.
-- Ajouter les séances de revue de code toutes les 2 ou 3 semaines.
+- Préciser les échéances des mini-tests et des trois défis techniques.
+- Confirmer les semaines de revue de code selon le calendrier institutionnel.

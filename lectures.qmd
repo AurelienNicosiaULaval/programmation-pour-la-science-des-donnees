@@ -17,6 +17,14 @@ Chaque préparation doit contenir:
 4. une trace dans le portfolio;
 5. une question ou difficulté à apporter en classe.
 
+| Étape | Charge indicative | Fonction |
+|---|---:|---|
+| Lire | 15 à 25 min | Comprendre le geste technique de la semaine |
+| Exécuter | 10 à 20 min | Faire rouler deux ou trois exemples R |
+| Vérifier | 10 à 15 min | Répondre au mini-test |
+| Préparer | 5 à 10 min | Noter une question, préparer le dépôt ou déposer une trace |
+| Produire | Laboratoire | Transformer la préparation en livrable accompagné |
+
 ## Charge visée
 
 La préparation avant la séance doit rester raisonnable, environ 45 à 60 minutes au total.

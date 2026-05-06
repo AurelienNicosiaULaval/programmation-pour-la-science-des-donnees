@@ -35,7 +35,7 @@ Le portfolio est mis à jour chaque semaine. Il doit contenir les traces du trav
 
 ## IA
 
-Vérifier le niveau d’IA permis pour chaque tâche. Si l’IA est utilisée de façon significative, documenter l’usage dans `ai-log.md`.
+Vérifier le statut d’IA pour chaque tâche. Si l’IA est utilisée de façon significative, documenter l’usage dans `ai-log.md`.
 
 ## Où trouver de l’aide
 
