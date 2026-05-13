@@ -55,6 +55,11 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 
 La structure suivante est retenue comme plan final d’évaluation.
 
+Pour l’instant, le site présente deux versions du dispositif d’évaluation:
+
+- [version normale](evaluations.qmd), reproduite ci-dessous;
+- [version ungrading](evaluations-ungrading.qmd), conservée comme scénario de conception à comparer avant la version officielle.
+
 | Évaluation | Pondération | Type | Moment | IA |
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Semaines 2 à 14, sauf semaines de défi si souhaité | Permise |
@@ -66,7 +71,7 @@ La structure suivante est retenue comme plan final d’évaluation.
 | Revue de code, présentation et bilan final | 10 % | Équipe + individuel | Semaine 15 | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
-Les critères détaillés, les consignes et les différences entre STT-4230 et STT-6230 sont regroupés dans la page [Évaluations](evaluations.qmd).
+Les critères détaillés, les consignes et les différences entre STT-4230 et STT-6230 sont regroupés dans la page [Évaluations - version normale](evaluations.qmd). Le scénario [Évaluations - version ungrading](evaluations-ungrading.qmd) documente l’option fondée sur les preuves d’apprentissage et l’autoévaluation guidée.
 
 ## À compléter
 

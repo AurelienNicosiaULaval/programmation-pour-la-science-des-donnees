@@ -36,7 +36,11 @@ website:
         - modules/11-cycle-vie-modeles/index.qmd
         - modules/12-collaboration-documentation-package/index.qmd
       - text: "Évaluations"
-        href: evaluations.qmd
+        menu:
+        - text: "Version normale"
+          href: evaluations.qmd
+        - text: "Version ungrading"
+          href: evaluations-ungrading.qmd
       - text: "Portfolio"
         href: portfolio.qmd
       - text: "IA"
@@ -69,7 +73,10 @@ website:
     - id: evaluations
       title: "Évaluations"
       contents:
-        - evaluations.qmd
+        - text: "Version normale"
+          href: evaluations.qmd
+        - text: "Version ungrading"
+          href: evaluations-ungrading.qmd
         - portfolio.qmd
         - projets.qmd
         - defis.qmd

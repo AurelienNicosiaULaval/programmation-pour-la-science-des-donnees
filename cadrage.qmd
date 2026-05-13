@@ -73,6 +73,8 @@ Une lecture ne doit jamais être seulement un texte. Elle doit contenir un geste
 
 ## Architecture des évaluations
 
+Deux versions du dispositif d’évaluation sont maintenant conservées sur le site. La version normale ci-dessous garde les pondérations par composante. La [version ungrading](evaluations-ungrading.qmd) reprend les mêmes composantes, mais les interprète comme des preuves d’apprentissage accompagnées de rétroaction, de révision et d’autoévaluation guidée.
+
 | Évaluation | Poids | Type | Moment | IA |
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Semaines 2 à 14, sauf semaines de défi si souhaité | Permise |

@@ -1,21 +1,35 @@
 ---
-title: "Portfolio individuel"
+title: "Portfolio GitHub individuel"
 format:
   html:
     embed-resources: true
 ---
 
-Le portfolio individuel est construit progressivement pendant la session. Il montre les traces du travail, les décisions prises, les apprentissages et la capacité à livrer un projet reproductible.
+Le portfolio GitHub individuel est construit progressivement pendant la session. Il montre les traces du travail, les décisions prises, les apprentissages et la capacité à développer un projet R reproductible.
+
+## Modalités d’évaluation
+
+| Élément | Modalité |
+|---|---|
+| Pondération | 20 % |
+| Type | Individuel, cumulatif |
+| Jalons | Semaines 3, 9 et 14 |
+| IA | Permise, déclarée |
+| Remise | Directement dans un dépôt GitHub individuel |
+
+Le portfolio n’est pas un dossier assemblé à la fin de la session. Il doit montrer une progression réelle dans le temps.
 
 ## Rôle du portfolio
 
-- Conserver les livrables hebdomadaires.
-- Documenter la progression.
+- Conserver les traces hebdomadaires du cours.
+- Documenter la progression individuelle.
 - Montrer la qualité du code et de la documentation.
-- Rendre visibles les validations, tests et corrections.
+- Rendre visibles les validations, tests, corrections et reprises.
+- Relier les lectures, laboratoires, défis et projets.
 - Déclarer l’usage significatif de l’IA.
+- Préparer le bilan final individuel.
 
-## Structure suggérée
+## Structure minimale
 
 ```text
 portfolio-stt4230/
@@ -29,6 +43,7 @@ portfolio-stt4230/
   modules/
     semaine-01/
     semaine-02/
+    semaine-03/
   R/
   scripts/
   reports/
@@ -38,16 +53,86 @@ portfolio-stt4230/
     processed/
 ```
 
+Cette structure peut être adaptée si le README explique clairement l’organisation retenue.
+
 ## Trace hebdomadaire minimale
 
-Chaque semaine, le portfolio doit contenir au minimum:
+Chaque semaine, l’étudiante ou l’étudiant ajoute au minimum:
 
 - un fichier de code, de rapport ou de note technique;
 - une courte note explicative dans le dossier du module;
 - 2 à 3 commits significatifs;
 - une mise à jour du README, du journal IA ou des conventions si pertinent.
 
-La courte note explicative peut indiquer ce qui a été produit, ce qui a été difficile, ce qui a été vérifié, ce qui doit être repris et les commits, issues ou pull requests utiles.
+La courte note explicative peut indiquer:
+
+- ce qui a été produit;
+- ce qui a été difficile;
+- ce qui a été vérifié;
+- ce qui doit être repris;
+- les commits, issues ou pull requests utiles.
+
+## Contenu attendu
+
+| Élément | Attente |
+|---|---|
+| `README.md` | Présenter le portfolio, expliquer la structure, indiquer comment relancer les exemples principaux |
+| `.gitignore` | Exclure les fichiers temporaires, historiques locaux, secrets et sorties lourdes non nécessaires |
+| `renv.lock` | Documenter l’environnement R lorsque pertinent |
+| `docs/conventions.md` | Décrire les conventions de nommage, dossiers, scripts et commits |
+| `docs/ai-log.md` | Déclarer les usages significatifs de l’IA |
+| `docs/bilan-final.md` | Synthétiser les apprentissages, difficultés, contributions et prochaines pistes |
+| `modules/semaine-XX/` | Conserver les traces hebdomadaires |
+| `R/` | Regrouper les fonctions réutilisables |
+| `scripts/` | Contenir les scripts d’exécution ou de préparation |
+| `reports/` | Contenir les rapports Quarto ou documents analytiques |
+| `outputs/` | Contenir les sorties utiles à conserver |
+| `data/` | Séparer données brutes et données traitées lorsque des données sont utilisées |
+
+`renv.lock` est attendu lorsque le portfolio contient du code R dont les dépendances doivent être relancées de façon fiable. Si le fichier n’est pas encore pertinent à un jalon donné, le README doit expliquer comment les dépendances sont gérées.
+
+## README
+
+Le README doit permettre à une autre personne de comprendre le portfolio sans explication orale. Il doit au minimum contenir:
+
+- une courte description du portfolio;
+- la structure des dossiers;
+- les principales commandes ou étapes pour relancer les livrables;
+- les liens vers les semaines ou livrables importants;
+- une note sur les dépendances R;
+- une indication sur la déclaration IA.
+
+## `ai-log.md`
+
+L’IA est permise et déclarée pour le portfolio. Le fichier `ai-log.md` doit être proportionné: il n’a pas besoin d’être long, mais il doit permettre de comprendre les usages significatifs de l’IA.
+
+Chaque entrée importante devrait indiquer:
+
+- l’outil utilisé;
+- la tâche demandée;
+- le résumé de la réponse utile;
+- les vérifications faites;
+- les modifications intégrées au portfolio.
+
+Les usages mineurs pour reformuler une question ou clarifier une notion simple n’ont pas besoin d’être consignés en détail, sauf si la consigne de la semaine le demande.
+
+## Commits
+
+Les commits doivent rendre la progression visible. Un bon historique Git contient:
+
+- des commits réguliers;
+- des messages compréhensibles;
+- des changements regroupés par intention;
+- des corrections visibles après rétroaction;
+- peu de gros commits vagues de fin de session.
+
+## Jalons
+
+| Moment | Attentes principales |
+|---|---|
+| Semaine 3 | Dépôt créé, README initial, structure de dossiers, conventions de base, premières traces hebdomadaires |
+| Semaine 9 | Progression visible, plusieurs modules documentés, fonctions ou scripts réutilisables, premières validations, `ai-log` si pertinent |
+| Semaine 14 | Portfolio complet, README à jour, traces hebdomadaires organisées, bilan final, usages IA déclarés |
 
 ## Traces professionnelles à accumuler
 
@@ -57,26 +142,34 @@ La courte note explicative peut indiquer ce qui a été produit, ce qui a été 
 - Transformation d’un script exploratoire en code plus stable.
 - Note sur les limites d’un jeu de données.
 - Déclaration d’usage de l’IA lorsque nécessaire.
+- Comparaison entre une première version et une version améliorée.
 
-## README
+## Critères d’évaluation
 
-Le README doit permettre à une autre personne de comprendre le projet, installer les dépendances, exécuter les scripts principaux et retrouver les livrables.
+| Critère | Ce qui est observé |
+|---|---|
+| Régularité | Traces réparties dans le temps, commits significatifs, progression réelle |
+| Organisation | Structure claire, fichiers bien nommés, README utile |
+| Reproductibilité | Code relançable, dépendances documentées, chemins relatifs |
+| Qualité du code | Lisibilité, modularité, fonctions lorsque pertinent, absence de duplication excessive |
+| Validation | Tests, vérifications, diagnostics ou contrôles de cohérence |
+| Réflexion | Notes sur les difficultés, reprises, décisions et apprentissages |
+| Transparence IA | `ai-log.md` présent et proportionné lorsque l’IA influence le travail |
 
-## `ai-log.md`
+## Différenciation STT-4230 / STT-6230
 
-Le fichier `ai-log.md` doit être proportionné. Il n’a pas besoin d’être long, mais il doit permettre de comprendre les usages significatifs de l’IA.
+Pour STT-4230, le portfolio doit montrer un travail régulier, compréhensible, reproductible et correctement documenté.
 
-## Évaluation
+Pour STT-6230, le portfolio doit ajouter au moins une trace plus avancée, par exemple:
 
-Le portfolio GitHub individuel compte pour 20 % de la note finale. Il est individuel, cumulatif et autorise l’IA lorsque son usage est déclaré.
+- une note technique courte;
+- une comparaison d’approches;
+- une validation plus formelle;
+- une analyse de performance;
+- une discussion plus approfondie des limites.
 
-Les jalons prévus sont les semaines 3, 9 et 14.
+## Modalités de remise
 
-Il peut être évalué selon:
-
-- régularité;
-- clarté;
-- reproductibilité;
-- qualité des traces Git;
-- capacité à expliquer les décisions;
-- transparence sur l’IA.
+- Les jalons sont les semaines 3, 9 et 14.
+- `renv.lock` est utilisé lorsque pertinent pour documenter l’environnement R.
+- La remise se fait directement dans le dépôt GitHub individuel.

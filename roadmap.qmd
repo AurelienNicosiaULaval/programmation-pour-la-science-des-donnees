@@ -34,8 +34,11 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Source de cadrage | Fait | Un seul PDF de référence est conservé. |
 | Évaluations finales | Fait | Le plan final d’évaluation est fixé. |
 | Cadrage pédagogique | Fait | Le cadrage a été validé comme source de cohérence pour la suite. |
-| Plan de cours | Fait | La version limitée aux modules et aux évaluations est validée. |
-| Page évaluations | Fait | Le tableau global, les rôles des défis, les traces attendues et les règles IA sont validés. |
+| Plan de cours | Fait | La version limitée aux modules et aux évaluations est stabilisée. |
+| Page évaluations | Fait | Le tableau global, les rôles des défis, les traces attendues et les règles IA sont stabilisés. |
+| Version ungrading des évaluations | En conception | Une page séparée documente le scénario ungrading à comparer avec la version normale. |
+| Politique IA | Fait | Les statuts IA et leurs formulations officielles sont stabilisés. |
+| Portfolio GitHub individuel | Fait | Jalons 3, 9 et 14, `renv.lock` lorsque pertinent, remise GitHub. |
 | Contenu pédagogique détaillé | À développer | Le contenu des modules reste volontairement minimal. |
 | Semaines 1 à 5 | Priorité immédiate | Ces semaines doivent devenir enseignables en premier. |
 
@@ -60,7 +63,8 @@ Livrables:
 
 - page [Cadrage pédagogique](cadrage.qmd);
 - version provisoire du [Plan de cours](plan-cours.qmd), limitée aux modules et aux évaluations;
-- page [Évaluations](evaluations.qmd) validée comme version officielle de conception;
+- page [Évaluations - version normale](evaluations.qmd) présentée comme version de référence actuelle;
+- page [Évaluations - version ungrading](evaluations-ungrading.qmd) conservée comme scénario de conception;
 - page [Politique IA](ia.qmd) alignée sur les statuts d’IA;
 - pages [Portfolio](portfolio.qmd), [Projets](projets.qmd) et [Calendrier](calendrier.qmd) cohérentes avec les évaluations.
 
@@ -253,7 +257,5 @@ Le site peut être utilisé comme version officielle de départ du cours.
 
 La prochaine étape logique est de poursuivre la phase 1 en relisant les pages restantes dans cet ordre:
 
-1. [Politique IA](ia.qmd)
-2. [Portfolio](portfolio.qmd)
-3. [Projets](projets.qmd)
-4. [Calendrier](calendrier.qmd)
+1. [Projets](projets.qmd)
+2. [Calendrier](calendrier.qmd)

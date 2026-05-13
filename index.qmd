@@ -59,6 +59,11 @@ Les évaluations valorisent le produit final, mais aussi le processus de dévelo
 
 Les composantes prévues sont les mini-tests de préparation, le portfolio GitHub individuel, trois défis techniques, le projet filé en équipe, puis la présentation, la revue de code et le bilan final.
 
+Deux versions du dispositif d’évaluation sont conservées pour l’instant:
+
+- [version normale](evaluations.qmd), avec composantes pondérées;
+- [version ungrading](evaluations-ungrading.qmd), avec rétroaction, preuves d’apprentissage, révision et autoévaluation guidée.
+
 ## Portfolio et GitHub
 
 Le portfolio individuel est construit progressivement. Il doit contenir des traces concrètes du travail: code, visualisations, rapports, applications ou prototypes, documentation, réflexions et déclarations d’usage de l’IA lorsque nécessaire.

@@ -1,11 +1,13 @@
 ---
-title: "Évaluations"
+title: "Évaluations - version normale"
 format:
   html:
     embed-resources: true
 ---
 
-Cette page précise le plan final d’évaluation du cours STT-4230 / STT-6230.
+Cette page conserve la version normale du plan d’évaluation du cours STT-4230 / STT-6230.
+
+Une [version ungrading](evaluations-ungrading.qmd) est aussi disponible sur le site pour comparer une approche fondée sur la rétroaction, les preuves d’apprentissage, la révision et l’autoévaluation guidée.
 
 Les évaluations reconnaissent la qualité du produit final et la qualité du processus: structure du dépôt, historique Git, tests, documentation, reproductibilité, collaboration et capacité à expliquer le code.
 
@@ -32,7 +34,7 @@ Les évaluations reconnaissent la qualité du produit final et la qualité du pr
 | Revue de code, présentation et bilan final | 10 % | Équipe + individuel | Semaine 15 | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
-Cette table remplace les formulations provisoires précédentes.
+Dans la version normale, cette table remplace les formulations provisoires précédentes.
 
 ## Rôle des trois défis techniques
 

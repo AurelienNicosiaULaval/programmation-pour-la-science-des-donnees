@@ -1,0 +1,163 @@
+---
+title: "Évaluations - version ungrading"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page présente une version de conception du dispositif d’évaluation fondée sur l’ungrading. Elle doit être lue avec la [version normale](evaluations.qmd), conservée sur le site pour comparaison.
+
+La version ungrading ne supprime pas l’évaluation. Elle déplace le centre de gravité: moins de points accumulés pendant la session, plus de rétroaction, de révision, de preuves d’apprentissage et d’autoévaluation guidée.
+
+Cette version garde une note finale institutionnelle. Le cours doit rester compatible avec les exigences du plan de cours, notamment la description des modalités d’évaluation, des pondérations, des critères généraux et du barème de conversion vers la note finale.
+
+## Statut
+
+Cette version est une proposition de travail. Elle n’est pas encore la version officielle du plan de cours.
+
+Deux versions sont donc présentes sur le site:
+
+- [version normale](evaluations.qmd): évaluation par composantes pondérées;
+- version ungrading: mêmes composantes, mais interprétées comme preuves d’apprentissage.
+
+## Principes
+
+- Évaluer des productions concrètes en R.
+- Remplacer les notes intermédiaires par des rétroactions courtes, fréquentes et actionnables lorsque c’est possible.
+- Permettre la révision des livrables cumulatifs.
+- Utiliser les commits, rapports, tests, validations et journaux comme preuves d’apprentissage.
+- Maintenir des vérifications individuelles, surtout pour les compétences de base et le jugement avec IA.
+- Demander une autoévaluation structurée aux jalons importants.
+- Confier la décision finale à la personne enseignante, à partir des preuves disponibles.
+
+## Pourquoi cette approche convient au cours
+
+Le cours repose déjà sur des pratiques compatibles avec l’ungrading:
+
+- portfolio GitHub cumulatif;
+- projet filé avec jalons;
+- historique Git observable;
+- documentation de reproduction;
+- reprises après rétroaction;
+- bilan final individuel;
+- usage de l’IA encadré, vérifiable et défendable.
+
+L’ungrading est donc cohérent avec l’objectif du cours: former des personnes capables de développer, tester, documenter, expliquer et améliorer un projet de science des données en R.
+
+## Tableau global
+
+La pondération est conservée pour rendre la version compatible avec une note finale institutionnelle. Dans la pratique, chaque composante produit surtout des preuves et de la rétroaction.
+
+| Composante | Poids final | Rôle dans la version ungrading | Preuves principales |
+|---|---:|---|---|
+| Mini-tests de préparation | 10 % | Préparation régulière et diagnostic formatif | Quiz complétés, micro-réponses, questions apportées au laboratoire |
+| Portfolio GitHub individuel | 20 % | Dossier de progression individuelle | Commits, scripts, rapports, notes hebdomadaires, validations, `ai-log`, bilan |
+| Projet filé en équipe | 30 % | Production intégratrice | Dépôt d’équipe, jalons, documentation, rapport ou application, contributions vérifiables |
+| Défi technique 1 | 10 % | Vérification individuelle des bases sans IA | Code fonctionnel, structure de projet, README court, Git |
+| Défi technique 2 | 10 % | Vérification individuelle avec IA déclarée | Fonctions, pipeline, visualisation, rapport court, trace IA |
+| Défi technique 3 | 10 % | Vérification du jugement professionnel avec IA intégrée | Diagnostic, comparaison avant/après, tests, validation des suggestions IA |
+| Revue de code, présentation et bilan final | 10 % | Synthèse, défense et autoévaluation finale | Revue, démonstration, bilan individuel, justification de la progression |
+| Total | 100 % |  |  |
+
+## Ce qui change par rapport à la version normale
+
+| Dimension | Version normale | Version ungrading |
+|---|---|---|
+| Rétroaction | Associée à une note ou à une grille sommative | Associée à des pistes de révision et à des critères de maîtrise |
+| Portfolio | Note cumulative de 20 % | Dossier de preuves avec autoévaluation aux jalons |
+| Projet | Jalons et remise finale notés | Jalons formatifs, remise finale interprétée avec les preuves de contribution |
+| Défis techniques | Notes critériées | Vérifications individuelles conservées, avec rétroaction critériée |
+| Mini-tests | Composante notée | Trace de préparation régulière, possiblement complété / à reprendre |
+| Bilan final | Composante de synthèse | Pièce centrale de l’autoévaluation finale |
+| Note finale | Somme pondérée des résultats | Jugement final fondé sur les preuves, puis conversion en note institutionnelle |
+
+## Statuts utilisés pendant la session
+
+Les travaux peuvent recevoir un statut plutôt qu’une note chiffrée.
+
+| Statut | Signification | Action attendue |
+|---|---|---|
+| À reprendre | La preuve est absente, incomplète, non relançable ou trop fragile | Corriger et soumettre une nouvelle version lorsque la composante le permet |
+| Minimal | Les attentes essentielles sont présentes, mais la preuve demeure limitée | Stabiliser, documenter ou valider davantage |
+| Satisfaisant | Les attentes principales sont atteintes de façon claire | Conserver la trace et poursuivre |
+| Solide | Le travail est robuste, lisible, reproductible et bien justifié | Utiliser comme preuve forte dans le bilan |
+| Excellent | Le travail dépasse les attentes par son autonomie, sa validation ou sa transférabilité | Utiliser comme preuve forte dans le bilan final |
+
+## Jalons ungrading
+
+| Moment | Activité | Rétroaction et autoévaluation |
+|---|---|---|
+| Semaine 3 | Premier jalon portfolio | Rétroaction courte sur structure, README, conventions et premières traces |
+| Semaine 5 | Défi technique 1 | Vérification individuelle sans IA, statut ou note critériée selon le choix final |
+| Semaine 6 | Jalon projet 1 | Rétroaction sur proposition, dépôt, données, plan et risques |
+| Semaine 8 | Défi technique 2 | Vérification individuelle avec IA déclarée |
+| Semaine 9 | Jalon portfolio intermédiaire | Autoévaluation courte: preuves fortes, preuves faibles, reprises nécessaires |
+| Semaine 12 | Jalon projet 2 | Rétroaction sur pipeline, visualisations, rapport ou application partielle |
+| Semaine 13 | Défi technique 3 | Vérification du jugement professionnel avec IA intégrée |
+| Semaine 14 | Remise finale portfolio et projet | Dossier de preuves complet et bilan final individuel |
+| Semaine 15 | Présentation, revue de code et bilan | Discussion de synthèse et proposition de note finale justifiée |
+
+## Autoévaluation finale
+
+L’autoévaluation finale est déposée dans `docs/bilan-final.md` ou dans un formulaire équivalent.
+
+Elle doit répondre brièvement aux questions suivantes:
+
+1. Quelles compétences du cours sont les mieux démontrées?
+2. Quelles preuves concrètes appuient cette affirmation?
+3. Quelles reprises ou améliorations ont été réalisées après rétroaction?
+4. Quelles limites demeurent dans le portfolio ou le projet?
+5. Comment l’IA a-t-elle été utilisée, vérifiée et documentée?
+6. Quelle note finale est proposée, et pourquoi?
+
+La proposition de note par la personne étudiante n’est pas automatique. Elle sert de pièce d’évaluation. La décision finale revient à la personne enseignante, à partir des preuves et des critères annoncés.
+
+## Conversion finale
+
+La conversion finale doit être stabilisée avant le dépôt officiel du plan de cours.
+
+Une version possible:
+
+| Niveau final | Description synthétique | Conversion indicative |
+|---|---|---|
+| Excellent | Preuves nombreuses, robustes, transférables, très bien expliquées | A- à A+ |
+| Solide | Preuves complètes, reproductibles, bien documentées et défendables | B+ à A- |
+| Satisfaisant | Attentes principales atteintes avec quelques limites | C+ à B |
+| Minimal | Attentes essentielles atteintes, mais preuves fragiles ou inégales | D à C |
+| Insuffisant | Preuves absentes, non relançables ou incompatibles avec les objectifs | E |
+
+Cette table ne remplace pas encore un barème officiel. Elle sert à discuter la logique de conversion.
+
+## Garde-fous
+
+- Les défis techniques restent des vérifications individuelles.
+- Le défi 1 demeure sans IA.
+- Les usages significatifs de l’IA doivent être déclarés.
+- Une autoévaluation non appuyée par des preuves ne suffit pas.
+- Les livrables non reproductibles ou non défendables ne peuvent pas soutenir une note élevée.
+- Les règles de retard, d’intégrité, de confidentialité et de révision de note devront être précisées dans la version officielle.
+
+## Charge de correction
+
+Pour rendre cette version réaliste, la rétroaction devrait rester ciblée.
+
+Format recommandé:
+
+- 2 ou 3 points forts observables;
+- 2 ou 3 priorités de reprise;
+- un statut global;
+- une indication claire sur la prochaine action.
+
+Les rétroactions longues devraient être réservées aux jalons majeurs, aux défis techniques et aux situations problématiques.
+
+## Références
+
+Blum, S. D. (dir.). (2020). [Ungrading: Why Rating Students Undermines Learning (and What to Do Instead)](https://wvupressonline.com/ungrading). West Virginia University Press.
+
+Hackerson, E. L., Slominski, T., Johnson, N., Buncher, J. B., Ismael, S., Singelmann, L., Leontyev, A., Knopps, A. G., McDarby, A., Nguyen, J. J., Condry, D. L. J., Nyachwaya, J. M., Wissman, K. T., Falkner, W., Grieger, K., Montplaisir, L., Hodgson, A. et Momsen, J. L. (2024). [Alternative grading practices in undergraduate STEM education: a scoping review](https://link.springer.com/article/10.1186/s43031-024-00106-8). Disciplinary and Interdisciplinary Science Education Research, 6, article 15.
+
+Stranford, S. A. (2024). [Fostering student agency and motivation: co-creation of a rubric for self-evaluation in an ungraded course](https://www.frontiersin.org/articles/10.3389/feduc.2023.1213444/full). Frontiers in Education, 8, 1213444.
+
+Université Laval. (2026). [Plan de cours](https://www.enseigner.ulaval.ca/pedagogie/plan-de-cours). Enseigner à l’Université Laval.
+
+Université Laval. (2026). [Différentes fonctions de l’évaluation](https://www.enseigner.ulaval.ca/pedagogie/differentes-fonctions-de-levaluation). Enseigner à l’Université Laval.
