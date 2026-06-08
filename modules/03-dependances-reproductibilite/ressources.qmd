@@ -1,0 +1,81 @@
+---
+title: "Dépendances et reproductibilité - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Ressources internes
+
+- [Dépendances R et reproductibilité](../../dependances.qmd)
+- [Portfolio GitHub individuel](../../portfolio.qmd)
+- [Soutien technique](../../soutien-technique.qmd)
+- [Politique IA](../../ia.qmd)
+- [Laboratoire du module](laboratoire.qmd)
+- [Défi de module](defi.qmd)
+
+## Documentation externe
+
+- renv: [Project Environments](https://rstudio.github.io/renv/)
+- renv: [restore](https://rstudio.github.io/renv/reference/restore.html)
+- GitHub: [Ignoring files](https://docs.github.com/en/get-started/git-basics/ignoring-files)
+- Quarto: [Project Basics](https://quarto.org/docs/projects/quarto-projects.html)
+
+## Fichiers généralement ignorés
+
+| Fichier ou motif | Raison |
+|---|---|
+| `.Rhistory` | Historique local de commandes |
+| `.RData` | Objets locaux qui masquent la reproduction réelle |
+| `.Rproj.user/` | Paramètres locaux de l’éditeur |
+| `.DS_Store` | Métadonnées macOS |
+| `.env` | Variables d’environnement et secrets |
+| `*.log` | Journaux temporaires |
+| `*.tmp` | Fichiers temporaires |
+
+## Fichiers souvent versionnés
+
+| Fichier | Raison |
+|---|---|
+| `README.md` | Documentation principale |
+| `.gitignore` | Règles d’exclusion partagées |
+| `renv.lock` | Versions des packages R |
+| `renv/activate.R` | Activation de l’environnement `renv` |
+| `.Rprofile` | Activation du projet lorsque générée par `renv` |
+| `scripts/*.R` | Code source |
+| `reports/*.qmd` | Rapports reproductibles |
+
+## Dépannage rapide
+
+| Situation | Vérification | Action raisonnable |
+|---|---|---|
+| Un package manque | `requireNamespace("nom", quietly = TRUE)` | Installer ou documenter la dépendance |
+| `renv::restore()` échoue | Lire le message complet | Vérifier version de R, package, système et accès internet |
+| `.RData` apparaît dans Git | `git status` | Ajouter `.RData` à `.gitignore`, puis ne pas l’ajouter |
+| Un secret apparaît | `git status` et `git diff --staged` | Retirer du commit et demander de l’aide |
+| Le script ne trouve pas un fichier | `getwd()` et `list.files()` | Utiliser un chemin relatif depuis la racine |
+
+## Modèle de note de dépendances
+
+```md
+# Dépendances
+
+## Version de R
+
+À compléter.
+
+## Packages
+
+- package 1
+- package 2
+
+## Reproduction
+
+1. Ouvrir le projet depuis la racine.
+2. Restaurer les dépendances si `renv.lock` existe.
+3. Exécuter les scripts indiqués dans le README.
+
+## Limites
+
+Indiquer les éléments non couverts par `renv`, par exemple dépendances système ou données externes.
+```

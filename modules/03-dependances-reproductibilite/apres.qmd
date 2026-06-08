@@ -1,0 +1,46 @@
+---
+title: "Dépendances et reproductibilité - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de consolidation
+
+Finaliser le jalon portfolio 1. Le dépôt doit montrer une structure claire, un README utile, des conventions de base, des premières traces et une première réflexion sur la reproductibilité.
+
+## À faire après le laboratoire
+
+1. Relire `README.md`.
+2. Relire `docs/conventions.md`.
+3. Relire `docs/dependances.md`.
+4. Exécuter `source("scripts/verifier_structure.R")` si ce fichier existe.
+5. Exécuter `source("scripts/verifier_dependances.R")` si ce fichier existe.
+6. Vérifier `git status`.
+7. Faire un commit final si nécessaire.
+8. Pousser vers GitHub.
+
+## Checklist du jalon portfolio 1
+
+| Élément | Question de vérification |
+|---|---|
+| Structure | Les dossiers principaux existent-ils et correspondent-ils au README? |
+| README | Une autre personne comprend-elle comment naviguer dans le dépôt? |
+| Conventions | Les noms de fichiers, dossiers et commits sont-ils documentés? |
+| Dépendances | Les packages utilisés sont-ils identifiables? |
+| Reproductibilité | Les scripts principaux sont-ils exécutables depuis la racine? |
+| Git | Les commits montrent-ils une progression réelle? |
+| IA | Les usages significatifs sont-ils déclarés dans `docs/ai-log.md`? |
+
+## Réflexion courte
+
+Répondre dans le journal:
+
+- Qu’est-ce qui est maintenant reproductible?
+- Qu’est-ce qui ne l’est pas encore?
+- Quel fichier ne doit jamais être ajouté à Git?
+- Quelle vérification dois-je refaire avant la prochaine remise?
+
+## Préparation de la semaine 4
+
+La semaine 4 portera sur les données et le nettoyage. Le portfolio doit donc être prêt à recevoir des fichiers de données, des scripts d’importation, des sorties traitées et des notes sur les limites des données.

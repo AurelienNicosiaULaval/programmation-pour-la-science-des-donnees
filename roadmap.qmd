@@ -43,10 +43,11 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Gabarits de projet | Fait | Proposition de projet, contributions individuelles et journal IA. |
 | Gabarits hebdomadaires | Fait | Mini-test et journal de portfolio. |
 | Calendrier relatif | Fait | La structure hebdomadaire est alignée sur les jalons; les dates exactes restent à ajouter. |
-| Contenu pédagogique détaillé | En cours | Les modules 1 et 2 sont maintenant prêts à tester; les autres modules restent à développer. |
+| Contenu pédagogique détaillé | En cours | Les modules 1, 2 et 3 sont maintenant prêts à tester; les autres modules restent à développer. |
 | Module 1 | Fait | Mise en route, diagnostic technique, dépôt portfolio et ressources de dépannage. |
 | Module 2 | Fait | Structure de projet, Git, GitHub, chemins relatifs, mini-test et conventions. |
-| Semaines 1 à 5 | En cours | Les semaines 1 et 2 sont prêtes à tester; les semaines 3 à 5 restent prioritaires. |
+| Module 3 | Fait | Dépendances, `.gitignore`, `renv`, reproductibilité et jalon portfolio 1. |
+| Semaines 1 à 5 | En cours | Les semaines 1 à 3 sont prêtes à tester; les semaines 4 et 5 restent prioritaires. |
 
 ## Vue d’ensemble
 
@@ -128,6 +129,8 @@ Livrables:
 - laboratoire sur structure de dépôt et reproductibilité;
 - laboratoire sur données imparfaites;
 - module 1 complet;
+- module 2 complet;
+- module 3 complet;
 - consigne du défi technique 1;
 - grille du défi technique 1.
 
@@ -141,7 +144,7 @@ Objectif: développer les compétences de programmation professionnelle en R.
 
 Modules à développer:
 
-- [Visualisation](modules/03-visualisation/index.qmd)
+- Visualisation, à créer pour la semaine 6
 - [Rapports, applications web et tableaux de bord](modules/04-rapports-applications-tableaux-bord/index.qmd)
 - [Programmation fonctionnelle](modules/06-programmation-fonctionnelle/index.qmd)
 - [Programmation orientée objet](modules/05-programmation-orientee-objet/index.qmd)
@@ -260,10 +263,10 @@ Le site peut être utilisé comme version officielle de départ du cours.
 
 ## Prochaine action recommandée
 
-La prochaine étape logique est de poursuivre la préparation des semaines 3 à 5:
+La prochaine étape logique est de poursuivre la préparation des semaines 4 et 5:
 
-1. compléter la semaine 3 sur dépendances, `renv`, `.gitignore`, sorties et reproductibilité;
+1. compléter la semaine 4 sur données, importation, validation et nettoyage;
 2. stabiliser la consigne du défi technique 1;
 3. préparer les ressources de rattrapage R/Git;
 4. vérifier le parcours étudiant de démarrage;
-5. relire les modules 1 et 2 après une simulation de première séance.
+5. relire les modules 1 à 3 après une simulation de première séance.

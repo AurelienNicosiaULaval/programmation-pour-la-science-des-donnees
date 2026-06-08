@@ -1,0 +1,55 @@
+---
+title: "Dépendances et reproductibilité - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de la séance
+
+Préparer le jalon portfolio 1 en vérifiant que le dépôt est compréhensible, que les dépendances sont documentées et que les fichiers inutiles ou sensibles sont exclus de Git.
+
+## Déroulement proposé
+
+| Temps | Activité | Résultat |
+|---:|---|---|
+| 0:00 à 0:20 | Retour sur le mini-test | Vocabulaire commun sur packages, `.gitignore`, `renv` |
+| 0:20 à 0:45 | Démonstration: identifier les dépendances | Packages utilisés et packages déclarés sont distingués |
+| 0:45 à 1:10 | Démonstration: `.gitignore` et fichiers à exclure | Les risques de versionner historiques, secrets et sorties lourdes sont clarifiés |
+| 1:10 à 2:25 | Laboratoire guidé | Le portfolio est préparé pour le jalon 1 |
+| 2:25 à 2:45 | Revue rapide du README | Une autre personne peut comprendre comment relancer |
+| 2:45 à 3:00 | Synthèse | Chaque personne identifie ce qui reste à finaliser |
+
+## Démonstration courte
+
+La démonstration suit ce cycle:
+
+1. ouvrir un dépôt avec quelques scripts;
+2. repérer les packages utilisés;
+3. vérifier `.gitignore`;
+4. créer ou mettre à jour une note sur les dépendances;
+5. exécuter un script depuis une session propre;
+6. faire un commit ciblé.
+
+## Points de contrôle
+
+Avant la fin du laboratoire:
+
+- le README indique comment relancer les scripts principaux;
+- `.gitignore` exclut les fichiers locaux et sensibles;
+- `docs/conventions.md` ou le README indique où placer données, sorties et scripts;
+- les packages utilisés sont documentés;
+- `renv.lock` existe ou le README explique pourquoi il n’est pas encore pertinent;
+- `git status` ne montre pas de fichier qui devrait être ignoré.
+
+## Revue rapide du README
+
+Une autre personne doit pouvoir répondre:
+
+- Quel est l’objectif du dépôt?
+- Où sont les traces des semaines 1, 2 et 3?
+- Quelle commande permet de vérifier la structure?
+- Quels packages sont nécessaires?
+- Quels fichiers ne doivent pas être versionnés?
+
+Si une réponse n’est pas évidente, corriger le README ou les conventions.

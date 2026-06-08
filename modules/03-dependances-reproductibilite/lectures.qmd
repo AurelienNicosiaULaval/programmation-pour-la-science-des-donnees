@@ -1,0 +1,72 @@
+---
+title: "Dépendances et reproductibilité - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif des lectures
+
+Les lectures de la semaine 3 servent à comprendre comment documenter l’environnement R, les packages et les fichiers nécessaires à la reproduction d’un projet.
+
+## Lectures internes
+
+Lire les pages suivantes:
+
+- [Dépendances R et reproductibilité](../../dependances.qmd)
+- [Portfolio GitHub individuel](../../portfolio.qmd)
+- [Soutien technique](../../soutien-technique.qmd)
+- [Politique d’utilisation de l’IA générative](../../ia.qmd), sections "IA permise, déclarée" et "Données sensibles, code et confidentialité"
+
+## Documentation officielle utile
+
+- Posit, [renv documentation](https://rstudio.github.io/renv/).
+- Posit, [renv restore](https://rstudio.github.io/renv/reference/restore.html).
+- GitHub Docs, [Ignoring files](https://docs.github.com/en/get-started/git-basics/ignoring-files).
+- Quarto, [Project Basics](https://quarto.org/docs/projects/quarto-projects.html).
+
+## Geste R à reproduire
+
+Depuis la racine du portfolio:
+
+```r
+sessionInfo()
+
+files <- list.files(
+  path = ".",
+  pattern = "\\.(R|qmd|Rmd)$",
+  recursive = TRUE,
+  full.names = TRUE
+)
+
+files
+```
+
+## Geste Git à reproduire
+
+```bash
+git status
+git check-ignore -v .Rhistory .RData .env 2>/dev/null
+```
+
+Si `git check-ignore` ne retourne rien pour un fichier qui devrait être ignoré, vérifier `.gitignore`.
+
+## Trace attendue
+
+Conserver dans le portfolio:
+
+- une note `docs/dependances.md`;
+- une mise à jour de `.gitignore`;
+- une note dans `modules/semaine-03/journal.qmd` ou `.md`;
+- un commit qui documente les dépendances;
+- un commit qui prépare le jalon portfolio 1.
+
+## Mini-test
+
+Le mini-test de semaine 3 porte sur:
+
+- packages installés, chargés et déclarés;
+- rôle de `renv.lock`;
+- fichiers à ignorer;
+- secrets et fichiers sensibles;
+- reproduction depuis la racine d’un projet.

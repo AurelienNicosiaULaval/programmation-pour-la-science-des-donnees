@@ -1,0 +1,222 @@
+---
+title: "Dépendances et reproductibilité - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif du laboratoire
+
+Préparer le portfolio pour le jalon 1 en documentant les dépendances, les fichiers à ignorer et les étapes minimales de reproduction.
+
+## Résultat attendu
+
+À la fin du laboratoire, le dépôt contient au minimum:
+
+```text
+portfolio-stt4230/
+  README.md
+  .gitignore
+  docs/
+    conventions.md
+    dependances.md
+    ai-log.md
+  modules/
+    semaine-01/
+    semaine-02/
+    semaine-03/
+      journal.qmd
+  scripts/
+    verifier_structure.R
+    verifier_dependances.R
+```
+
+`renv.lock` est attendu si le portfolio contient déjà du code R dépendant de packages externes. Si le fichier n’est pas encore pertinent, le README doit expliquer comment les dépendances sont gérées pour l’instant.
+
+## Étape 1 - Vérifier l’état du dépôt
+
+Depuis la racine du dépôt:
+
+```bash
+git status
+```
+
+Dans R:
+
+```r
+getwd()
+sessionInfo()
+```
+
+Noter dans le journal si le répertoire de travail n’est pas la racine du dépôt.
+
+## Étape 2 - Mettre à jour `.gitignore`
+
+Vérifier que `.gitignore` contient au minimum:
+
+```text
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+.env
+.env.*
+*.log
+*.tmp
+```
+
+Ajouter aussi les règles nécessaires pour les fichiers propres au projet. Ne pas ignorer automatiquement tous les résultats: certaines sorties utiles peuvent être conservées si elles sont petites, reproductibles et documentées.
+
+## Étape 3 - Documenter les dépendances
+
+Créer `docs/dependances.md`.
+
+```md
+# Dépendances du portfolio
+
+## Version de R
+
+À compléter avec `R.version.string`.
+
+## Packages utilisés
+
+- À compléter selon les scripts présents.
+
+## Gestion des dépendances
+
+Indiquer si `renv.lock` est utilisé.
+
+## Reproduction
+
+Les scripts doivent être exécutés depuis la racine du dépôt.
+```
+
+Dans R, produire une première liste des packages appelés dans les fichiers.
+
+```r
+files <- list.files(
+  path = ".",
+  pattern = "\\.(R|qmd|Rmd)$",
+  recursive = TRUE,
+  full.names = TRUE
+)
+
+extract_packages <- function(file) {
+  lines <- readLines(file, warn = FALSE)
+  calls <- grep("library\\(|require\\(", lines, value = TRUE)
+
+  packages <- gsub(".*(library|require)\\(([^)]+)\\).*", "\\2", calls)
+  packages <- gsub("[\"' ]", "", packages)
+
+  data.frame(
+    file = file,
+    package = packages,
+    stringsAsFactors = FALSE
+  )
+}
+
+packages_used <- do.call(rbind, lapply(files, extract_packages))
+packages_used
+```
+
+Si `packages_used` est `NULL`, noter qu’aucun package n’a encore été détecté automatiquement.
+
+## Étape 4 - Ajouter un script de vérification des dépendances
+
+Créer `scripts/verifier_dependances.R`.
+
+```r
+# Vérification minimale des dépendances utilisées dans le portfolio
+
+required_packages <- c(
+  "tibble"
+)
+
+package_status <- data.frame(
+  package = required_packages,
+  installed = vapply(required_packages, requireNamespace, logical(1), quietly = TRUE)
+)
+
+print(package_status)
+
+if (!all(package_status$installed)) {
+  missing_packages <- package_status$package[!package_status$installed]
+  stop(
+    "Packages manquants: ",
+    paste(missing_packages, collapse = ", "),
+    call. = FALSE
+  )
+}
+```
+
+Adapter `required_packages` selon les scripts réels du portfolio. Ne pas ajouter un package seulement parce qu’il pourrait être utile plus tard.
+
+## Étape 5 - Décider si `renv` est pertinent maintenant
+
+Si le portfolio contient déjà du code qui dépend de packages externes, initialiser `renv` depuis la racine du dépôt:
+
+```r
+renv::init()
+renv::snapshot()
+```
+
+Si `renv` n’est pas encore pertinent, écrire dans le README:
+
+```md
+Le fichier `renv.lock` sera ajouté lorsque le portfolio contiendra des dépendances R à restaurer de façon fiable. Pour l’instant, les packages utilisés sont documentés dans `docs/dependances.md`.
+```
+
+## Étape 6 - Rédiger le journal de semaine 3
+
+Dans `modules/semaine-03/journal.qmd`, ajouter:
+
+```markdown
+---
+title: "Journal semaine 3"
+format:
+  html:
+    embed-resources: true
+---
+
+## Dépendances
+
+Indiquer les packages utilisés ou l’absence de dépendances externes pour l’instant.
+
+## Fichiers ignorés
+
+Noter une règle `.gitignore` ajoutée ou vérifiée.
+
+## Reproduction
+
+Décrire une commande exécutée depuis une session propre.
+
+## Jalon portfolio 1
+
+Indiquer ce qui est prêt et ce qui reste à améliorer.
+```
+
+## Étape 7 - Faire un commit ciblé
+
+```bash
+git status
+git add README.md .gitignore docs/dependances.md modules/semaine-03/journal.qmd scripts/verifier_dependances.R
+git commit -m "Documenter les dependances du portfolio"
+```
+
+Si `renv.lock` a été créé:
+
+```bash
+git add renv.lock renv/activate.R .Rprofile
+git commit -m "Ajouter renv au portfolio"
+```
+
+## Vérification finale
+
+Avant de quitter:
+
+- `README.md` explique comment reproduire les éléments principaux;
+- `.gitignore` exclut les fichiers locaux, temporaires et sensibles;
+- les dépendances sont documentées;
+- `renv.lock` existe ou son absence est justifiée;
+- le journal de semaine 3 prépare explicitement le jalon portfolio 1;
+- `git status` ne montre pas de fichier inattendu.

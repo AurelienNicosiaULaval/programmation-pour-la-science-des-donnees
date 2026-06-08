@@ -1,0 +1,57 @@
+---
+title: "Dépendances et reproductibilité - Défi de module"
+format:
+  html:
+    embed-resources: true
+---
+
+## Nature du défi
+
+Ce défi de module sert à finaliser le jalon portfolio 1. Il n’est pas le défi technique 1, qui aura lieu à la semaine 5.
+
+## Objectif
+
+Produire un dépôt portfolio dont la structure, les dépendances et les premières étapes de reproduction sont explicites.
+
+## Consignes
+
+Dans le dépôt `portfolio-stt4230`, produire:
+
+- un README à jour;
+- un `.gitignore` adapté au projet;
+- un fichier `docs/dependances.md`;
+- un journal dans `modules/semaine-03/`;
+- un script `scripts/verifier_dependances.R`, si pertinent;
+- `renv.lock`, si le portfolio contient déjà des dépendances R à restaurer;
+- une justification courte si `renv.lock` n’est pas encore pertinent.
+
+## Livrable attendu
+
+| Élément | Attente minimale |
+|---|---|
+| `README.md` | Explique la structure et les étapes de reproduction |
+| `.gitignore` | Exclut fichiers locaux, temporaires, secrets et sorties non nécessaires |
+| `docs/dependances.md` | Documente R, packages et stratégie de dépendances |
+| `modules/semaine-03/journal.qmd` ou `.md` | Prépare le jalon portfolio 1 |
+| Git | Historique lisible et poussé sur GitHub |
+
+## Place de l’IA
+
+Statut: permise pour comprendre et diagnostiquer; déclarée si elle influence le livrable.
+
+L’IA peut aider à comprendre une erreur d’installation, une règle `.gitignore` ou une sortie de `renv`. Toute proposition doit être vérifiée localement.
+
+Ajouter une entrée dans `docs/ai-log.md` si l’IA influence de manière significative la documentation, le script de vérification ou une décision de reproductibilité.
+
+## Critères de réussite
+
+- Le dépôt est compréhensible sans explication orale.
+- Les dépendances sont identifiables.
+- Les fichiers à ignorer sont exclus de Git.
+- Le README correspond à la structure réelle.
+- `renv.lock` existe ou son absence est justifiée.
+- Les usages significatifs de l’IA sont déclarés lorsque pertinent.
+
+## Variante STT-6230
+
+Ajouter une note technique courte sur une limite de reproductibilité qui ne peut pas être entièrement résolue par `renv`.

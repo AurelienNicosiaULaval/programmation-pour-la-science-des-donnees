@@ -1,0 +1,95 @@
+---
+title: "Dépendances et reproductibilité - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Arriver en classe avec un dépôt portfolio structuré et une première liste des packages nécessaires pour relancer les scripts déjà présents.
+
+Temps recommandé: 45 à 60 minutes.
+
+## À lire
+
+- [Dépendances R et reproductibilité](../../dependances.qmd)
+- [Portfolio GitHub individuel](../../portfolio.qmd), sections "Structure minimale", "`renv.lock`" et "Jalons"
+- [Soutien technique](../../soutien-technique.qmd), section "Question technique efficace"
+- [Lectures du module](lectures.qmd)
+
+## À vérifier dans le portfolio
+
+Depuis la racine du dépôt:
+
+```bash
+git status
+ls
+```
+
+Dans R:
+
+```r
+getwd()
+list.files(recursive = TRUE)
+sessionInfo()
+```
+
+Vérifier si les fichiers suivants existent:
+
+```r
+required_paths <- c(
+  "README.md",
+  ".gitignore",
+  "docs/conventions.md",
+  "modules/semaine-01",
+  "modules/semaine-02",
+  "scripts"
+)
+
+data.frame(
+  path = required_paths,
+  exists = file.exists(required_paths)
+)
+```
+
+## Identifier les packages utilisés
+
+Chercher dans les scripts et rapports les appels à `library()` ou `require()`.
+
+```r
+files <- list.files(
+  path = ".",
+  pattern = "\\.(R|qmd|Rmd)$",
+  recursive = TRUE,
+  full.names = TRUE
+)
+
+library_calls <- unlist(lapply(files, function(file) {
+  lines <- readLines(file, warn = FALSE)
+  grep("library\\(|require\\(", lines, value = TRUE)
+}))
+
+library_calls
+```
+
+Si la sortie est vide, ce n’est pas un problème. La semaine sert aussi à documenter qu’il n’y a pas encore beaucoup de dépendances.
+
+## Mini-test de préparation
+
+Répondre brièvement avant la séance:
+
+1. Quelle différence fais-tu entre installer un package et le charger avec `library()`?
+2. À quoi sert `.gitignore`?
+3. Pourquoi ne faut-il pas versionner `.Rhistory` ou `.RData`?
+4. Que documente un fichier `renv.lock`?
+5. Donne un exemple de fichier qui devrait être conservé dans Git et un exemple de fichier qui devrait être ignoré.
+
+Statut IA du mini-test: permise pour clarifier une notion, mais les réponses doivent être formulées et comprises par la personne étudiante.
+
+## À apporter en classe
+
+- Une sortie de `sessionInfo()`.
+- Une liste provisoire des packages utilisés.
+- Une question sur `.gitignore`, `renv` ou la reproduction.
+- Une difficulté réelle liée au jalon portfolio 1.

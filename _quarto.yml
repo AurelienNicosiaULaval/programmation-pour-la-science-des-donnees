@@ -25,7 +25,7 @@ website:
         menu:
         - modules/01-structuration-projets/index.qmd
         - modules/02-structure-git-github/index.qmd
-        - modules/03-visualisation/index.qmd
+        - modules/03-dependances-reproductibilite/index.qmd
         - modules/04-rapports-applications-tableaux-bord/index.qmd
         - modules/05-programmation-orientee-objet/index.qmd
         - modules/06-programmation-fonctionnelle/index.qmd
@@ -56,7 +56,7 @@ website:
       contents:
         - modules/01-structuration-projets/index.qmd
         - modules/02-structure-git-github/index.qmd
-        - modules/03-visualisation/index.qmd
+        - modules/03-dependances-reproductibilite/index.qmd
         - modules/04-rapports-applications-tableaux-bord/index.qmd
         - modules/05-programmation-orientee-objet/index.qmd
         - modules/06-programmation-fonctionnelle/index.qmd
