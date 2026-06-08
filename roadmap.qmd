@@ -48,6 +48,7 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Module 2 | Fait | Structure de projet, Git, GitHub, chemins relatifs, mini-test et conventions. |
 | Module 3 | Fait | Dépendances, `.gitignore`, `renv`, reproductibilité et jalon portfolio 1. |
 | Semaines 1 à 5 | En cours | Les semaines 1 à 3 sont prêtes à tester; les semaines 4 et 5 restent prioritaires. |
+| Couverture du contenu | À surveiller | SQL/API, fichiers volumineux, débogage, assertions et `testthat` doivent apparaître explicitement dans les semaines 4, 5, 10 et 15. |
 
 ## Vue d’ensemble
 
@@ -118,8 +119,8 @@ Contenus prioritaires:
 1. mise en route, diagnostic initial et soutien;
 2. Git, GitHub et structure de projet;
 3. dépendances, `renv`, chemins, `.gitignore` et secrets;
-4. importation, validation et nettoyage de données;
-5. défi technique 1 sans IA.
+4. importation, validation et nettoyage de données, avec fichiers volumineux, SQL/API en aperçu, assertions et débogage;
+5. défi technique 1 sans IA, limité à 1 h, suivi d’un atelier de consolidation.
 
 Livrables:
 
@@ -132,6 +133,7 @@ Livrables:
 - module 2 complet;
 - module 3 complet;
 - consigne du défi technique 1;
+- atelier sur débogage, messages d’erreur et assertions simples;
 - grille du défi technique 1.
 
 Critère de fin de phase:
@@ -156,6 +158,8 @@ Livrables:
 - exemples R courts;
 - laboratoires guidés;
 - activités de revue de code;
+- tests automatisés avec `testthat` à partir de la semaine 10;
+- rappels sur assertions et validation dans les défis et le projet;
 - traces portfolio;
 - solutions minimales à publier après les séances;
 - consignes des défis techniques 2 et 3.
@@ -265,8 +269,8 @@ Le site peut être utilisé comme version officielle de départ du cours.
 
 La prochaine étape logique est de poursuivre la préparation des semaines 4 et 5:
 
-1. compléter la semaine 4 sur données, importation, validation et nettoyage;
-2. stabiliser la consigne du défi technique 1;
+1. compléter la semaine 4 sur données, importation, validation, nettoyage, fichiers volumineux, SQL/API en aperçu et assertions;
+2. stabiliser la consigne du défi technique 1 en précisant le format 1 h + atelier de consolidation;
 3. préparer les ressources de rattrapage R/Git;
 4. vérifier le parcours étudiant de démarrage;
 5. relire les modules 1 à 3 après une simulation de première séance.

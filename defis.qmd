@@ -7,6 +7,8 @@ format:
 
 Les défis techniques sont des évaluations individuelles réalisées en laboratoire. Ils vérifient la capacité à produire, diagnostiquer, documenter, justifier et vérifier du code R dans un temps limité.
 
+Chaque défi technique dure environ une heure. Le reste de la séance demeure un atelier d’apprentissage, de consolidation ou de transfert vers le portfolio et le projet. Une fois le défi remis, le livrable évalué n’est plus modifié.
+
 ## Vue d’ensemble
 
 | Défi | Semaine | Poids | Rôle | IA |
@@ -28,6 +30,8 @@ Le premier défi vérifie les bases du travail individuel sans IA:
 
 Question centrale: est-ce que l’étudiante ou l’étudiant peut fonctionner seul dans un projet R propre?
 
+Après la remise, le reste de la séance sert à consolider les mêmes habiletés sur un exemple analogue: structure de dépôt, importation, nettoyage simple, chemins relatifs, messages d’erreur et mise à jour du portfolio. L’atelier reste sans IA afin de respecter l’objectif du défi 1.
+
 ## Défi technique 2
 
 Le deuxième défi autorise l’IA avec déclaration. Il vise:
@@ -40,6 +44,8 @@ Le deuxième défi autorise l’IA avec déclaration. Il vise:
 - entrée obligatoire dans `ai-log.md` ou dans un fichier de réflexion IA.
 
 Question centrale: est-ce que l’étudiante ou l’étudiant peut produire un livrable technique en utilisant l’IA de façon transparente et contrôlée?
+
+Après la remise, le reste de la séance sert à comparer des stratégies de validation, à discuter des usages déclarés de l’IA et à améliorer un exemple non évalué. Le défi remis n’est pas corrigé pendant cet atelier.
 
 ## Défi technique 3
 
@@ -54,6 +60,19 @@ Le troisième défi intègre l’IA à la tâche. Il évalue:
 - jugement critique sur les propositions de l’IA.
 
 Question centrale: est-ce que l’étudiante ou l’étudiant sait utiliser l’IA comme assistant technique sans perdre son jugement professionnel?
+
+Après la remise, le reste de la séance sert à faire un post-mortem technique: tests, vérifications, limites des propositions de l’IA, justification des choix et transfert vers le projet final.
+
+## Déroulement type d’une séance de défi
+
+| Moment | Activité | Rôle |
+|---:|---|---|
+| 0:00 à 0:15 | Mise en place | Rappeler les consignes, vérifier les fichiers, le dépôt et la règle IA |
+| 0:15 à 1:15 | Défi individuel | Travail évalué en temps limité |
+| 1:15 à 1:30 | Remise et pause | Déposer le livrable et vérifier que la remise est complète |
+| 1:30 à 2:10 | Retour technique guidé | Discuter des stratégies et erreurs fréquentes sans corriger les remises |
+| 2:10 à 2:55 | Atelier de consolidation | Travailler sur un exemple analogue, le portfolio ou le projet |
+| 2:55 à 3:00 | Trace de sortie | Noter ce qui est maîtrisé et ce qui reste à reprendre |
 
 ## Traces attendues
 

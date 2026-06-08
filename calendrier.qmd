@@ -9,6 +9,8 @@ Ce calendrier est une structure de travail. Les dates exactes doivent être ajus
 
 Les semaines sont indiquées de façon relative. Les mini-tests de préparation sont prévus les semaines sans défi technique, sauf ajustement selon le rythme réel du groupe.
 
+Les défis techniques individuels occupent environ une heure de la séance. Le reste de la séance demeure un temps d’apprentissage: retour technique, consolidation, portfolio, projet ou atelier de transfert. Le travail fait après la remise du défi ne modifie pas le livrable évalué.
+
 ## Vue synthèse
 
 | Semaine | Thème | Préparation | Travail en laboratoire | Échéances et traces |
@@ -16,18 +18,18 @@ Les semaines sont indiquées de façon relative. Les mini-tests de préparation 
 | 1 | Mise en route | Fonctionnement du cours, environnement R, GitHub, portfolio | Diagnostic initial, installation, premiers repères | README initial et journal de départ |
 | 2 | Structure de projet, Git, GitHub | Workflow Git, chemins relatifs, conventions | Créer ou nettoyer un dépôt | Mini-test, structure et conventions |
 | 3 | Dépendances et reproductibilité | `renv`, `.gitignore`, chemins relatifs | Relancer un projet sur une autre machine ou session propre | Mini-test, jalon portfolio 1 |
-| 4 | Données et nettoyage | Importation, validation, tidy data, transformation | Construire un premier pipeline de données | Mini-test, pipeline de données et revue courte |
-| 5 | Défi technique 1 | Révision projet, Git, importation, nettoyage simple | Défi individuel en laboratoire, sans IA | Défi 1, aucune IA |
+| 4 | Données et nettoyage | Importation, validation, tidy data, transformation, fichiers volumineux, SQL/API en aperçu | Construire un premier pipeline de données avec vérifications et assertions simples | Mini-test, pipeline de données et revue courte |
+| 5 | Défi technique 1 et consolidation | Révision projet, Git, importation, nettoyage simple | Défi individuel 1 h sans IA, puis atelier de consolidation Git, données et portfolio | Défi 1, aucune IA; atelier non évalué |
 | 6 | Visualisation | `ggplot2`, choix graphiques, communication visuelle | Produire et améliorer une figure | Mini-test, proposition du projet d’équipe |
 | 7 | Quarto et communication | Rapports reproductibles, narration et résultats | Compiler un rapport Quarto court | Mini-test, rapport Quarto et revue courte |
-| 8 | Défi technique 2 | Fonctions, pipeline, visualisation, IA déclarée | Défi individuel en laboratoire | Défi 2, trace dans `ai-log.md` |
+| 8 | Défi technique 2 et consolidation | Fonctions, pipeline, visualisation, IA déclarée | Défi individuel 1 h, puis atelier sur validation et usage déclaré de l’IA | Défi 2, trace dans `ai-log.md`; atelier non évalué |
 | 9 | Consolidation | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test, jalon portfolio 2, point de suivi projet formatif |
-| 10 | Fonctions et `purrr` | Fonctions, itérations, réduction du copier-coller | Transformer du code exploratoire en fonctions | Mini-test, fonction dans `R/`, test minimal |
+| 10 | Fonctions, `purrr` et tests | Fonctions, itérations, réduction du copier-coller, assertions, `testthat` | Transformer du code exploratoire en fonctions testables | Mini-test, fonction dans `R/`, test minimal |
 | 11 | POO et architecture | S3 ou R6 selon le choix final | Structurer des objets ou composants du projet | Mini-test, note POO ou architecture |
 | 12 | Optimisation et parallèle | Profilage, `future`, `furrr` | Mesurer, comparer, améliorer ou paralléliser | Mini-test, version intermédiaire du projet |
-| 13 | Défi technique 3 | IA intégrée à la tâche, vérification obligatoire | Défi individuel en laboratoire | Défi 3, rapport technique et trace IA |
+| 13 | Défi technique 3 et consolidation | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis post-mortem technique sur tests, validation et limites | Défi 3, rapport technique et trace IA; atelier non évalué |
 | 14 | Modèle, pipeline, cycle de vie | `tidymodels`, `targets`, validation, suivi | Stabiliser le livrable final et la reproduction | Mini-test, remise finale projet, jalon portfolio 3 |
-| 15 | Package, documentation, démonstration finale | README final, tests, présentation, revue | Présentations, revue de code, discussion finale | Présentation, revue de code, bilan final |
+| 15 | Package, documentation, démonstration finale | README final, tests, présentation, revue | Présentations, revue de code, discussion finale, vérification des tests | Présentation, revue de code, bilan final |
 
 ## Jalons d’évaluation
 
@@ -52,14 +54,24 @@ Les mini-tests servent à soutenir la préparation hebdomadaire. Ils sont courts
 | Semaines | Statut prévu |
 |---|---|
 | 2, 3, 4 | Mini-tests réguliers |
-| 5 | Pas de mini-test prévu si le défi technique occupe la semaine |
+| 5 | Pas de mini-test prévu quand un défi technique est prévu |
 | 6, 7 | Mini-tests réguliers |
-| 8 | Pas de mini-test prévu si le défi technique occupe la semaine |
+| 8 | Pas de mini-test prévu quand un défi technique est prévu |
 | 9, 10, 11, 12 | Mini-tests réguliers |
-| 13 | Pas de mini-test prévu si le défi technique occupe la semaine |
+| 13 | Pas de mini-test prévu quand un défi technique est prévu |
 | 14 | Mini-test ou courte préparation finale, selon le rythme du groupe |
 
-## TODO
+## Déroulement des semaines de défi
+
+| Semaine | Défi | Déroulement prévu |
+|---:|---|---|
+| 5 | Défi technique 1 | 15 min de mise en place, 60 min de défi individuel, remise, puis atelier de consolidation sans IA |
+| 8 | Défi technique 2 | 15 min de mise en place, 60 min de défi individuel, remise, puis atelier sur validation et déclaration de l’IA |
+| 13 | Défi technique 3 | 15 min de mise en place, 60 min de défi individuel, remise, puis post-mortem technique sur tests, limites et jugement professionnel |
+
+Les ateliers qui suivent les défis servent à apprendre à partir de tâches analogues, à consolider le portfolio ou à avancer le projet. Ils ne servent pas à modifier le livrable évalué.
+
+## Dates à confirmer
 
 - Associer chaque semaine à une date.
 - Confirmer les semaines de revue de code selon le calendrier institutionnel.
