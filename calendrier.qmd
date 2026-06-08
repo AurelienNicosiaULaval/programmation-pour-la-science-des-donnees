@@ -7,26 +7,59 @@ format:
 
 Ce calendrier est une structure de travail. Les dates exactes doivent être ajustées lorsque le calendrier universitaire de l’automne 2026 sera confirmé.
 
-| Semaine | Thème | Préparation | Trace attendue |
+Les semaines sont indiquées de façon relative. Les mini-tests de préparation sont prévus les semaines sans défi technique, sauf ajustement selon le rythme réel du groupe.
+
+## Vue synthèse
+
+| Semaine | Thème | Préparation | Travail en laboratoire | Échéances et traces |
+|---:|---|---|---|---|
+| 1 | Mise en route | Fonctionnement du cours, environnement R, GitHub, portfolio | Diagnostic initial, installation, premiers repères | README initial et journal de départ |
+| 2 | Structure de projet, Git, GitHub | Workflow Git, chemins relatifs, conventions | Créer ou nettoyer un dépôt | Mini-test, structure et conventions |
+| 3 | Dépendances et reproductibilité | `renv`, `.gitignore`, chemins relatifs | Relancer un projet sur une autre machine ou session propre | Mini-test, jalon portfolio 1 |
+| 4 | Données et nettoyage | Importation, validation, tidy data, transformation | Construire un premier pipeline de données | Mini-test, pipeline de données et revue courte |
+| 5 | Défi technique 1 | Révision projet, Git, importation, nettoyage simple | Défi individuel en laboratoire, sans IA | Défi 1, aucune IA |
+| 6 | Visualisation | `ggplot2`, choix graphiques, communication visuelle | Produire et améliorer une figure | Mini-test, proposition du projet d’équipe |
+| 7 | Quarto et communication | Rapports reproductibles, narration et résultats | Compiler un rapport Quarto court | Mini-test, rapport Quarto et revue courte |
+| 8 | Défi technique 2 | Fonctions, pipeline, visualisation, IA déclarée | Défi individuel en laboratoire | Défi 2, trace dans `ai-log.md` |
+| 9 | Consolidation | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test, jalon portfolio 2, point de suivi projet formatif |
+| 10 | Fonctions et `purrr` | Fonctions, itérations, réduction du copier-coller | Transformer du code exploratoire en fonctions | Mini-test, fonction dans `R/`, test minimal |
+| 11 | POO et architecture | S3 ou R6 selon le choix final | Structurer des objets ou composants du projet | Mini-test, note POO ou architecture |
+| 12 | Optimisation et parallèle | Profilage, `future`, `furrr` | Mesurer, comparer, améliorer ou paralléliser | Mini-test, version intermédiaire du projet |
+| 13 | Défi technique 3 | IA intégrée à la tâche, vérification obligatoire | Défi individuel en laboratoire | Défi 3, rapport technique et trace IA |
+| 14 | Modèle, pipeline, cycle de vie | `tidymodels`, `targets`, validation, suivi | Stabiliser le livrable final et la reproduction | Mini-test, remise finale projet, jalon portfolio 3 |
+| 15 | Package, documentation, démonstration finale | README final, tests, présentation, revue | Présentations, revue de code, discussion finale | Présentation, revue de code, bilan final |
+
+## Jalons d’évaluation
+
+| Semaine | Jalon | Composante | Nature |
 |---:|---|---|---|
-| 1 | Mise en route | Fonctionnement, environnement, GitHub, portfolio | README initial et journal de départ |
-| 2 | Projet, Git, structure | Workflow Git et structure de dépôt | Structure et conventions |
-| 3 | Dépendances et reproductibilité | `renv`, chemins relatifs, `.gitignore` | `renv.lock` ou stratégie documentée |
-| 4 | Données et nettoyage | Importation, tidy data, transformation | Pipeline de données et revue courte |
-| 5 | Défi technique 1 et consolidation | Révision projet, Git, données | Trace défi 1, IA non permise |
-| 6 | Visualisation | ggplot2 et communication visuelle | Figure améliorée |
-| 7 | Quarto et communication | Rapports reproductibles | Rapport Quarto et revue courte |
-| 8 | Défi technique 2 | Fonctions, pipeline, visualisation | Trace défi 2 et `ai-log.md` |
-| 9 | Consolidation | Nettoyage du portfolio | `consolidation.md` |
-| 10 | Fonctions et purrr | Fonctions, itérations | Fonction dans `R/`, test minimal |
-| 11 | POO et architecture | S3 ou R6 selon le choix final | Note POO |
-| 12 | Optimisation et parallèle | Profilage, future, furrr | Note d’optimisation et revue courte |
-| 13 | Défi technique 3 | IA intégrée à la tâche | Rapport technique et trace IA |
-| 14 | Modèle, pipeline, cycle de vie | tidymodels et pipeline | Pipeline modèle |
-| 15 | Package, documentation, démonstration finale | README, tests, présentation | Bilan final et livraison |
+| 3 | Jalon portfolio 1 | Portfolio individuel | Structure, README, conventions, premières traces |
+| 5 | Défi technique 1 | Défi individuel | Vérification des bases sans IA |
+| 6 | Proposition du projet | Projet d’équipe | Sujet, données, question, risques, dépôt initial |
+| 8 | Défi technique 2 | Défi individuel | Programmation avec IA permise et déclarée |
+| 9 | Jalon portfolio 2 | Portfolio individuel | Progression, fonctions, scripts, documentation |
+| 9 | Point de suivi projet | Projet d’équipe | Formatif, sans points distincts |
+| 12 | Version intermédiaire du projet | Projet d’équipe | Pipeline partiel, rapport ou tableau de bord partiel |
+| 13 | Défi technique 3 | Défi individuel | Jugement professionnel avec IA intégrée |
+| 14 | Remise finale du projet | Projet d’équipe | Produit final, reproduction, limites, contributions |
+| 14 | Jalon portfolio 3 | Portfolio individuel | Portfolio complet et bilan final |
+| 15 | Présentation, revue de code et bilan | Équipe + individuel | Démonstration, revue, défense, contribution |
+
+## Mini-tests
+
+Les mini-tests servent à soutenir la préparation hebdomadaire. Ils sont courts et liés aux lectures ou gestes R à reproduire avant le laboratoire.
+
+| Semaines | Statut prévu |
+|---|---|
+| 2, 3, 4 | Mini-tests réguliers |
+| 5 | Pas de mini-test prévu si le défi technique occupe la semaine |
+| 6, 7 | Mini-tests réguliers |
+| 8 | Pas de mini-test prévu si le défi technique occupe la semaine |
+| 9, 10, 11, 12 | Mini-tests réguliers |
+| 13 | Pas de mini-test prévu si le défi technique occupe la semaine |
+| 14 | Mini-test ou courte préparation finale, selon le rythme du groupe |
 
 ## TODO
 
 - Associer chaque semaine à une date.
-- Préciser les échéances des mini-tests et des trois défis techniques.
 - Confirmer les semaines de revue de code selon le calendrier institutionnel.

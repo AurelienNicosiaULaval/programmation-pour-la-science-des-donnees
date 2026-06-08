@@ -1,0 +1,241 @@
+---
+title: "Structure de projet, Git, GitHub et chemins relatifs - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif du laboratoire
+
+Nettoyer le dépôt portfolio pour qu’il soit compréhensible par une autre personne et relançable depuis la racine du projet.
+
+## Résultat attendu
+
+À la fin du laboratoire, le dépôt contient au minimum:
+
+```text
+portfolio-stt4230/
+  README.md
+  docs/
+    ai-log.md
+    conventions.md
+  modules/
+    semaine-01/
+    semaine-02/
+      journal.qmd
+  scripts/
+    diagnostic.R
+    verifier_structure.R
+  outputs/
+```
+
+## Étape 1 - Observer l’état du dépôt
+
+Depuis la racine du dépôt:
+
+```bash
+pwd
+git status
+git log --oneline --max-count=5
+```
+
+Dans R:
+
+```r
+getwd()
+list.files(recursive = TRUE)
+```
+
+Noter dans le journal si R et le terminal ne pointent pas vers le même endroit.
+
+## Étape 2 - Créer les dossiers et conventions
+
+```bash
+mkdir -p docs modules/semaine-02 scripts outputs
+touch docs/conventions.md modules/semaine-02/journal.qmd scripts/verifier_structure.R
+```
+
+Dans `docs/conventions.md`, ajouter:
+
+```md
+# Conventions du portfolio
+
+## Organisation
+
+- `modules/`: traces hebdomadaires.
+- `scripts/`: scripts R exécutables depuis la racine.
+- `outputs/`: sorties utiles à conserver.
+- `docs/`: conventions, journal IA et bilan.
+
+## Nommage
+
+- Utiliser des noms courts, descriptifs et sans espaces.
+- Préférer les minuscules et les traits d’union.
+- Ajouter le numéro de semaine pour les traces hebdomadaires.
+
+## Git
+
+- Faire des commits réguliers.
+- Regrouper les changements par intention.
+- Éviter les messages vagues comme `update` ou `fix`.
+```
+
+Faire un commit ciblé:
+
+```bash
+git status
+git add docs/conventions.md modules/semaine-02/journal.qmd scripts/verifier_structure.R
+git commit -m "Ajouter les conventions du portfolio"
+```
+
+## Étape 3 - Ajouter une vérification de structure
+
+Dans `scripts/verifier_structure.R`, placer le code suivant.
+
+```r
+# Vérification minimale de la structure du portfolio
+
+required_paths <- c(
+  "README.md",
+  "docs",
+  "docs/conventions.md",
+  "modules",
+  "modules/semaine-01",
+  "modules/semaine-02",
+  "scripts",
+  "outputs"
+)
+
+structure_check <- tibble::tibble(
+  path = required_paths,
+  exists = file.exists(required_paths)
+)
+
+print(structure_check)
+
+if (!all(structure_check$exists)) {
+  missing_paths <- structure_check$path[!structure_check$exists]
+  stop(
+    "Chemins manquants: ",
+    paste(missing_paths, collapse = ", "),
+    call. = FALSE
+  )
+}
+```
+
+Exécuter:
+
+```r
+source("scripts/verifier_structure.R")
+```
+
+Si le package `tibble` n’est pas installé, utiliser cette version en R de base:
+
+```r
+required_paths <- c(
+  "README.md",
+  "docs",
+  "docs/conventions.md",
+  "modules",
+  "modules/semaine-01",
+  "modules/semaine-02",
+  "scripts",
+  "outputs"
+)
+
+structure_check <- data.frame(
+  path = required_paths,
+  exists = file.exists(required_paths)
+)
+
+print(structure_check)
+stopifnot(all(structure_check$exists))
+```
+
+## Étape 4 - Corriger les chemins absolus
+
+Chercher les chemins absolus dans les fichiers texte du dépôt.
+
+```bash
+grep -R -n "/Users\\|/home\\|C:\\\\" README.md docs modules scripts 2>/dev/null
+```
+
+Remplacer les chemins absolus par des chemins relatifs depuis la racine du dépôt.
+
+Exemple à éviter:
+
+```r
+readr::read_csv("/Users/monnom/portfolio-stt4230/data/raw/fichier.csv")
+```
+
+Exemple préférable:
+
+```r
+readr::read_csv("data/raw/fichier.csv")
+```
+
+S’il n’y a pas encore de données, ne pas créer de faux fichier de données. Ajouter seulement une note dans le README pour rappeler que les chemins doivent être relatifs.
+
+## Étape 5 - Mettre à jour le README
+
+Ajouter ou corriger dans `README.md`:
+
+- la structure réelle du dépôt;
+- les commandes principales pour vérifier le dépôt;
+- le rôle de `docs/conventions.md`;
+- une note indiquant que les scripts doivent être exécutés depuis la racine;
+- le statut de l’IA pour le portfolio.
+
+## Étape 6 - Ajouter le journal de semaine 2
+
+Dans `modules/semaine-02/journal.qmd`, ajouter:
+
+```markdown
+---
+title: "Journal semaine 2"
+format:
+  html:
+    embed-resources: true
+---
+
+## Ce que j’ai nettoyé
+
+Décrire une modification de structure ou de documentation.
+
+## Chemins relatifs
+
+Indiquer une vérification faite pour éviter les chemins absolus.
+
+## Git
+
+Noter une commande Git utilisée et ce qu’elle a permis de comprendre.
+
+## Prochaine action
+
+Indiquer ce qui doit être stabilisé avant le jalon portfolio de la semaine 3.
+```
+
+## Étape 7 - Faire un commit final
+
+```bash
+git status
+git add README.md docs/conventions.md modules/semaine-02/journal.qmd scripts/verifier_structure.R
+git commit -m "Stabiliser la structure du portfolio"
+git status
+```
+
+Si le dépôt distant est configuré:
+
+```bash
+git push
+```
+
+## Vérification finale
+
+Avant de quitter:
+
+- le README correspond à la structure réelle;
+- `source("scripts/verifier_structure.R")` fonctionne ou l’erreur est comprise;
+- aucun chemin absolu local n’est nécessaire;
+- `git log --oneline --max-count=5` montre une progression lisible;
+- le journal de semaine 2 contient une prochaine action pour le jalon de semaine 3.

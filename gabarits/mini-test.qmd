@@ -1,0 +1,88 @@
+---
+title: "Gabarit de mini-test"
+format:
+  html:
+    embed-resources: true
+---
+
+Cours: STT-4230 / STT-6230
+
+Semaine:
+
+Module:
+
+Statut IA:
+
+## Objectif
+
+Vérifier la préparation avant le laboratoire et identifier les points à clarifier en classe.
+
+Le mini-test doit rester court. Il vise la préparation, pas une évaluation longue.
+
+## Consignes
+
+- Répondre avant le laboratoire.
+- Utiliser les notes de cours, la documentation officielle et les exemples fournis.
+- Déclarer l’usage significatif de l’IA si la consigne de la semaine le demande.
+- Noter au moins une question ou difficulté à apporter en laboratoire.
+
+## Question 1: compréhension
+
+Énoncer une question courte liée à la lecture ou au concept principal du module.
+
+Réponse:
+
+## Question 2: lecture de code
+
+Présenter un court extrait de code R et demander ce qu’il produit, ce qui pourrait échouer ou ce qui devrait être vérifié.
+
+```r
+# Exemple à remplacer
+library(tidyverse)
+
+data <- tibble(x = c(1, 2, NA), y = c("a", "b", "c"))
+
+data |>
+  filter(!is.na(x))
+```
+
+Réponse:
+
+## Question 3: décision ou justification
+
+Demander une justification courte liée à une décision de projet.
+
+Exemple: pourquoi utiliser un chemin relatif plutôt qu’un chemin absolu?
+
+Réponse:
+
+## Question 4: préparation du dépôt
+
+Indiquer la trace attendue dans le dépôt ou le portfolio.
+
+Exemple: créer ou mettre à jour un fichier `modules/semaine-XX/notes.md`.
+
+Trace déposée:
+
+Lien vers le commit, si demandé:
+
+## Question à apporter au laboratoire
+
+Formuler une question, une erreur rencontrée ou un point à clarifier.
+
+Question:
+
+## Correction rapide
+
+À remplir par la personne enseignante après le mini-test, si nécessaire.
+
+- Points généralement bien compris:
+- Points à revoir en classe:
+- Erreurs fréquentes:
+
+## Checklist
+
+- Le mini-test a été soumis.
+- Une trace de préparation existe dans le dépôt ou le portfolio lorsque demandé.
+- Une question ou difficulté a été formulée.
+- L’usage de l’IA a été déclaré si nécessaire.

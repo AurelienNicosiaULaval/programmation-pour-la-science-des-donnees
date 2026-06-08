@@ -1,5 +1,5 @@
 ---
-title: "Profilage, optimisation de code et performance - Avant la classe"
+title: "Profilage, optimisation et performance - Avant la classe"
 format:
   html:
     embed-resources: true
@@ -7,40 +7,23 @@ format:
 
 ## Objectif de préparation
 
-Arriver au laboratoire avec une compréhension minimale de la question suivante:
+Arriver avec un exemple de code R qui pourrait être mesuré ou amélioré.
 
-> Comment optimiser seulement ce qui mérite d’être optimisé?
+## À préparer
 
-## À lire
+- Repérer un script du portfolio qui contient une boucle, une transformation répétée ou une opération lente.
+- Noter ce qui semble lent et pourquoi.
+- Vérifier que le script s’exécute depuis la racine du dépôt.
 
-- Notes maison du module.
-- Documentation ou extrait externe à ajouter.
-- Consigne du défi à parcourir.
+## Mini-test prévu
 
-## À faire rouler dans R
+Questions courtes sur:
 
-- Exemple court 1 à ajouter.
-- Exemple court 2 à ajouter.
-- Vérification de l’environnement de travail.
+- la différence entre mesurer et deviner;
+- les risques d’optimiser trop tôt;
+- la lisibilité du code;
+- la documentation d’un compromis technique.
 
-## À vérifier dans le portfolio
+## Trace à apporter
 
-- Dépôt à jour.
-- README compréhensible.
-- Dernier commit poussé sur GitHub.
-- Question ou difficulté notée.
-
-## Mini-test
-
-Prévoir 5 à 8 questions:
-
-- diagnostic de compréhension;
-- choix technique;
-- lecture de code;
-- question personnelle liée au portfolio.
-
-## TODO enseignant
-
-- Ajouter les lectures exactes.
-- Ajouter les exemples R.
-- Indiquer le statut d’IA du mini-test.
+Une courte note dans le portfolio indiquant le script choisi, la partie à mesurer et l’hypothèse initiale.

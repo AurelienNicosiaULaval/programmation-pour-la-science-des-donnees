@@ -7,40 +7,25 @@ format:
 
 ## Objectif de préparation
 
-Arriver au laboratoire avec une compréhension minimale de la question suivante:
+Identifier ce qui empêcherait une autre personne d’exécuter un projet R sur sa machine.
 
-> Que faut-il documenter pour qu’un livrable fonctionne ailleurs que sur son ordinateur?
+## À préparer
 
-## À lire
+- Choisir un livrable du portfolio ou du projet d’équipe.
+- Vérifier les commandes nécessaires pour l’exécuter.
+- Noter les dépendances importantes.
+- Repérer une étape implicite qui devrait être documentée.
 
-- Notes maison du module.
-- Documentation ou extrait externe à ajouter.
-- Consigne du défi à parcourir.
+## Mini-test prévu
 
-## À faire rouler dans R
+Questions courtes sur:
 
-- Exemple court 1 à ajouter.
-- Exemple court 2 à ajouter.
-- Vérification de l’environnement de travail.
+- la reproduction d’un livrable;
+- les dépendances;
+- les paramètres d’exécution;
+- les sorties attendues;
+- les limites d’un déploiement minimal.
 
-## À vérifier dans le portfolio
+## Trace à apporter
 
-- Dépôt à jour.
-- README compréhensible.
-- Dernier commit poussé sur GitHub.
-- Question ou difficulté notée.
-
-## Mini-test
-
-Prévoir 5 à 8 questions:
-
-- diagnostic de compréhension;
-- choix technique;
-- lecture de code;
-- question personnelle liée au portfolio.
-
-## TODO enseignant
-
-- Ajouter les lectures exactes.
-- Ajouter les exemples R.
-- Indiquer le statut d’IA du mini-test.
+Une liste courte des étapes nécessaires pour exécuter le livrable choisi.

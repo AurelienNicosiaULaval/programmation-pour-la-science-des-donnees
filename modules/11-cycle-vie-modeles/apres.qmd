@@ -5,29 +5,21 @@ format:
     embed-resources: true
 ---
 
-## Consolidation
+## Objectif de consolidation
 
-Après le laboratoire, finaliser le travail amorcé et stabiliser le livrable.
+Stabiliser la fiche de suivi et vérifier qu’elle serait compréhensible sans explication orale.
 
 ## À faire
 
-- Finaliser le défi: Produire une fiche de suivi pour un modèle ou prototype construit dans le cours.
-- Relancer le code depuis une session propre.
-- Mettre à jour le README ou la note technique.
-- Ajouter une trace au portfolio.
-- Déclarer l’usage de l’IA si nécessaire.
+- Relire la fiche de suivi.
+- Vérifier que les données et la version du code sont identifiables.
+- Ajouter une limite si elle manque.
+- Faire un commit si le document a été corrigé.
 
 ## Réflexion courte
 
-Répondre dans le journal du portfolio:
+Répondre dans le journal:
 
-- Qu’est-ce que j’ai appris?
-- Qu’est-ce qui reste fragile?
-- Quelle erreur ou difficulté ai-je rencontrée?
-- Quelle vérification ai-je faite?
-
-## TODO enseignant
-
-- Ajouter les exercices supplémentaires.
-- Ajouter une solution minimale après la séance.
-- Ajouter les erreurs fréquentes observées.
+- Quelle vérification devrait être refaite plus tard?
+- Quelle utilisation du modèle serait risquée?
+- Quelle information manque encore?

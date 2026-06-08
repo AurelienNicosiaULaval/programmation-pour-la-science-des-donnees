@@ -1,0 +1,33 @@
+---
+title: "Structure de projet, Git, GitHub et chemins relatifs - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de consolidation
+
+Stabiliser le portfolio avant le jalon de la semaine 3. Le dépôt n’a pas besoin d’être complet, mais sa structure doit être claire et cohérente avec le README.
+
+## À faire après le laboratoire
+
+1. Relire `README.md`.
+2. Relire `docs/conventions.md`.
+3. Exécuter `source("scripts/verifier_structure.R")`.
+4. Exécuter `git status`.
+5. Faire un commit si des corrections ont été faites.
+6. Pousser vers GitHub si le dépôt distant est configuré.
+
+## Vérification de cohérence
+
+Répondre dans le journal de semaine 2:
+
+- Est-ce que chaque dossier annoncé dans le README existe vraiment?
+- Est-ce que chaque fichier important est à un endroit prévisible?
+- Est-ce qu’un autre étudiant pourrait comprendre où ajouter une trace de semaine 3?
+- Est-ce que les chemins importants sont relatifs?
+- Est-ce que l’historique Git montre des étapes compréhensibles?
+
+## Préparation de la semaine 3
+
+La semaine 3 portera sur les dépendances et la reproductibilité, notamment `renv`, `.gitignore`, les sorties à conserver et les sorties à exclure. Avant cette séance, le dépôt devrait avoir une structure stable et un README à jour.

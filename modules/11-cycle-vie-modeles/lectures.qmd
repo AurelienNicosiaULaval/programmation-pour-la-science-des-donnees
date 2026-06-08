@@ -5,28 +5,24 @@ format:
     embed-resources: true
 ---
 
-## Lecture principale
+## Objectif des lectures
 
-Ajouter ici les notes maison ou l’extrait principal.
+Préparer les notions de suivi, validation, limites et maintenance d’un modèle.
 
-## Lecture complémentaire
+## Lecture interne
 
-Ajouter une documentation officielle ou une référence stable.
+Relire les pages du portfolio, du projet et de la politique IA en portant attention aux traces de validation.
 
-## Geste R à reproduire
+## Geste à reproduire
 
-- Exemple 1 à exécuter.
-- Exemple 2 à exécuter.
+Choisir un modèle ou pipeline existant et noter:
+
+- les données utilisées;
+- la version du code;
+- la validation disponible;
+- une limite importante;
+- une vérification future.
 
 ## Trace attendue
 
-Indiquer la trace à ajouter au portfolio ou au dépôt.
-
-## Mini-test
-
-Prévoir des questions courtes liées à la préparation.
-
-## TODO
-
-- Ajouter les liens précis.
-- Vérifier que la charge reste raisonnable.
+Ajouter une courte note de préparation dans le portfolio.

@@ -1,0 +1,71 @@
+---
+title: "Structure de projet, Git, GitHub et chemins relatifs - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif des lectures
+
+Les lectures de la semaine 2 servent à stabiliser le vocabulaire Git, à comprendre le rôle d’un projet R et à éviter les chemins dépendants d’un ordinateur particulier.
+
+## Lectures internes
+
+Lire les pages suivantes:
+
+- [Portfolio GitHub individuel](../../portfolio.qmd)
+- [Soutien technique](../../soutien-technique.qmd)
+- [Politique d’utilisation de l’IA générative](../../ia.qmd), sections "IA permise, déclarée" et "Ne jamais faire"
+
+## Documentation officielle utile
+
+- Chacon et Straub, Pro Git, section [Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository), documentation Git.
+- GitHub Docs, [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+- Posit, [RStudio Projects](https://docs.posit.co/ide/user/ide/guide/code/projects.html).
+
+## Geste Git à reproduire
+
+Depuis la racine du portfolio:
+
+```bash
+git status
+git log --oneline --max-count=5
+git diff
+```
+
+Noter dans le journal ce que chaque commande permet d’observer.
+
+## Geste R à reproduire
+
+Dans R:
+
+```r
+project_files <- list.files(recursive = TRUE)
+
+data.frame(
+  path = project_files,
+  has_absolute_marker = grepl("/Users|/home|C:", project_files)
+)
+```
+
+Cette vérification ne remplace pas la recherche dans le contenu des fichiers, mais elle aide à repérer des noms de fichiers problématiques.
+
+## Trace attendue
+
+Conserver dans le portfolio:
+
+- un `docs/conventions.md`;
+- un `scripts/verifier_structure.R`;
+- une note dans `modules/semaine-02/journal.qmd` ou `.md`;
+- un commit qui ajoute les conventions;
+- un commit qui stabilise le README ou corrige la structure.
+
+## Mini-test
+
+Le mini-test de semaine 2 porte sur:
+
+- les états Git de base;
+- les messages de commit;
+- les chemins relatifs;
+- l’organisation d’un projet R;
+- le lien entre README, structure et reproduction.

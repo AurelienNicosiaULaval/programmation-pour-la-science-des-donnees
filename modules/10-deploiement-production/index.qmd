@@ -1,6 +1,6 @@
 ---
 title: "Déploiement et mise en production"
-description: "Que faut-il documenter pour qu’un livrable fonctionne ailleurs que sur son ordinateur?"
+description: "Préparer un livrable R utilisable hors de l’environnement de développement"
 format:
   html:
     embed-resources: true
@@ -8,72 +8,37 @@ format:
 
 ## Question du module
 
-Que faut-il documenter pour qu’un livrable fonctionne ailleurs que sur son ordinateur?
+Comment préparer un projet R pour qu’une autre personne puisse l’exécuter, le vérifier et l’utiliser dans un contexte réaliste?
 
 ## Objectifs du module
 
-- préparer un livrable déployable
-- documenter l’environnement et les dépendances
-- gérer les secrets sans les versionner
-- choisir un mode de publication adapté
+- distinguer prototype, livrable et mise en production;
+- documenter les étapes d’exécution;
+- identifier les dépendances et les paramètres essentiels;
+- prévoir les erreurs fréquentes;
+- préparer un plan minimal de maintenance.
 
-## Compétences visées
+## Place dans le cours
 
-- utiliser variables d’environnement et `.gitignore`
-- documenter les étapes de déploiement
-- préparer un rapport ou une application publiable
-- vérifier les contraintes d’exécution
+Ce module relie les apprentissages sur Git, Quarto, fonctions, performance et modélisation. Il prépare la finalisation du projet d’équipe.
 
-## Avant la classe
+## Trace attendue
 
-- Lire la page [Avant la classe](avant.qmd).
-- Exécuter les exemples indiqués.
-- Répondre au mini-test de préparation.
-- Préparer le dépôt GitHub ou le dossier de travail.
+- un README de reproduction;
+- une commande ou procédure d’exécution;
+- une note sur les dépendances;
+- une section sur les limites et les risques.
 
-## Pendant la classe
+## Place de l’IA
 
-- Revenir sur les difficultés.
-- Observer une démonstration ciblée.
-- Réaliser le [laboratoire](laboratoire.qmd).
-- Documenter les décisions importantes.
-
-## Après la classe
-
-- Finaliser le [défi](defi.qmd).
-- Mettre à jour le portfolio.
-- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
-- Vérifier que le livrable se relance.
-
-## Défi de la semaine
-
-Rédiger un plan de déploiement et publier un livrable simple selon les contraintes du cours.
-
-## Livrables
-
-- plan de déploiement
-- README mis à jour
-- vérification des secrets
-- lien ou preuve de rendu
-
-## Variante STT-6230
-
-Ajouter une analyse des risques de mise en production ou une option alternative de déploiement.
-
-## Rappel IA
-
-Le statut d’IA doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+Statut prévu: permise, déclarée lorsque l’IA influence la documentation, le code ou l’analyse des risques.
 
 ## Pages du module
 
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
-- [Après la classe](apres.qmd)
 - [Laboratoire](laboratoire.qmd)
+- [Après la classe](apres.qmd)
 - [Défi](defi.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)
-
-## Ressources
-
-Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

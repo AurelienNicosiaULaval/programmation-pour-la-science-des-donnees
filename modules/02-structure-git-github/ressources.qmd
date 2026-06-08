@@ -1,0 +1,66 @@
+---
+title: "Structure de projet, Git, GitHub et chemins relatifs - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Ressources internes
+
+- [Portfolio GitHub individuel](../../portfolio.qmd)
+- [Soutien technique](../../soutien-technique.qmd)
+- [Politique IA](../../ia.qmd)
+- [Laboratoire du module](laboratoire.qmd)
+- [Défi de module](defi.qmd)
+
+## Documentation externe
+
+- Git: [Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+- GitHub: [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+- Posit: [RStudio Projects](https://docs.posit.co/ide/user/ide/guide/code/projects.html)
+
+## Commandes Git utiles
+
+| Commande | Utilité |
+|---|---|
+| `git status` | Voir les fichiers modifiés, indexés ou non suivis |
+| `git diff` | Voir les changements non indexés |
+| `git diff --staged` | Voir les changements qui seront inclus dans le prochain commit |
+| `git add fichier` | Ajouter un fichier à l’index |
+| `git commit -m "message"` | Enregistrer une version du projet |
+| `git log --oneline --max-count=5` | Voir les derniers commits |
+| `git remote -v` | Voir les dépôts distants configurés |
+| `git push` | Envoyer les commits vers GitHub |
+
+## Dépannage rapide
+
+| Situation | Vérification | Action raisonnable |
+|---|---|---|
+| `git status` montre beaucoup de fichiers inconnus | Lire les noms avant d’ajouter | Ajouter seulement les fichiers pertinents |
+| Un fichier sensible apparaît | Ne pas faire `git add` | Ajouter une règle dans `.gitignore` et demander de l’aide |
+| `git diff` est vide mais `git status` montre un fichier indexé | Exécuter `git diff --staged` | Vérifier ce qui sera committé |
+| `git push` échoue | Lire le message complet | Vérifier `git remote -v` et l’authentification SSH |
+| R ne trouve pas un fichier | Vérifier `getwd()` et `list.files()` | Utiliser un chemin relatif depuis la racine |
+| Le README ne correspond pas au dépôt | Comparer avec `list.files(recursive = TRUE)` | Mettre le README à jour |
+
+## Exemples de messages de commit
+
+| Trop vague | Plus utile |
+|---|---|
+| `update` | `Mettre a jour le README du portfolio` |
+| `fix` | `Corriger le chemin du script diagnostic` |
+| `stuff` | `Ajouter les conventions de nommage` |
+| `semaine 2` | `Ajouter le journal de la semaine 2` |
+
+Les accents dans les messages de commit sont possibles, mais une version sans accents reste acceptable si l’environnement les gère mal.
+
+## Rappel de sécurité
+
+Avant chaque commit, vérifier qu’aucun fichier sensible n’est ajouté:
+
+```bash
+git status
+git diff --staged
+```
+
+Ne jamais committer une clé privée SSH, un jeton GitHub, un mot de passe, un fichier de données confidentielles ou une sortie contenant des renseignements personnels.

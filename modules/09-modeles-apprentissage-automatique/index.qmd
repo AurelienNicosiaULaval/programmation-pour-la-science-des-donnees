@@ -1,6 +1,6 @@
 ---
 title: "Modèles d’apprentissage automatique"
-description: "Comment construire un pipeline de modèle reproductible plutôt qu’un modèle isolé?"
+description: "Construire un pipeline de modélisation reproductible et interprétable"
 format:
   html:
     embed-resources: true
@@ -8,72 +8,37 @@ format:
 
 ## Question du module
 
-Comment construire un pipeline de modèle reproductible plutôt qu’un modèle isolé?
+Comment intégrer un modèle prédictif dans un projet R sans perdre la reproductibilité, la validation et la documentation?
 
 ## Objectifs du module
 
-- structurer un pipeline tidymodels
-- définir une stratégie de validation
-- évaluer un modèle avec des métriques pertinentes
-- documenter hyperparamètres et limites
+- distinguer exploration, entraînement, validation et communication;
+- structurer un pipeline de modélisation;
+- documenter les données d’entrée et la variable cible;
+- séparer performance apparente et performance évaluée;
+- relier les résultats du modèle aux limites des données.
 
-## Compétences visées
+## Place dans le cours
 
-- préparer données, recette et modèle
-- utiliser validation croisée lorsque pertinent
-- séparer entraînement et évaluation
-- interpréter les résultats avec prudence
+Ce module sera développé après les bases de programmation, de visualisation, de reproductibilité et d’optimisation. Il prépare les modules sur le cycle de vie des modèles et le déploiement.
 
-## Avant la classe
+## Trace attendue
 
-- Lire la page [Avant la classe](avant.qmd).
-- Exécuter les exemples indiqués.
-- Répondre au mini-test de préparation.
-- Préparer le dépôt GitHub ou le dossier de travail.
+- un script ou rapport de modélisation;
+- une séparation claire entre préparation et évaluation;
+- une mesure de performance justifiée;
+- une note sur les limites et les risques d’interprétation.
 
-## Pendant la classe
+## Place de l’IA
 
-- Revenir sur les difficultés.
-- Observer une démonstration ciblée.
-- Réaliser le [laboratoire](laboratoire.qmd).
-- Documenter les décisions importantes.
-
-## Après la classe
-
-- Finaliser le [défi](defi.qmd).
-- Mettre à jour le portfolio.
-- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
-- Vérifier que le livrable se relance.
-
-## Défi de la semaine
-
-Construire un pipeline de modélisation minimal avec validation et rapport court.
-
-## Livrables
-
-- pipeline de modèle
-- métriques d’évaluation
-- rapport Quarto court
-- note sur les limites
-
-## Variante STT-6230
-
-Comparer deux modèles ou deux jeux d’hyperparamètres avec justification technique.
-
-## Rappel IA
-
-Le statut d’IA doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+Statut prévu: permise, déclarée lorsque l’IA influence le choix du modèle, le code, l’interprétation ou la rédaction.
 
 ## Pages du module
 
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
-- [Après la classe](apres.qmd)
 - [Laboratoire](laboratoire.qmd)
+- [Après la classe](apres.qmd)
 - [Défi](defi.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)
-
-## Ressources
-
-Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

@@ -1,0 +1,56 @@
+---
+title: "Structure de projet, Git, GitHub et chemins relatifs - Défi de module"
+format:
+  html:
+    embed-resources: true
+---
+
+## Nature du défi
+
+Ce défi de module est une activité de préparation au jalon portfolio de la semaine 3. Il n’est pas le défi technique 1, qui aura lieu à la semaine 5.
+
+## Objectif
+
+Stabiliser la structure du portfolio et produire une trace Git lisible.
+
+## Consignes
+
+Dans le dépôt `portfolio-stt4230`, produire:
+
+- un `README.md` à jour;
+- un fichier `docs/conventions.md`;
+- un script `scripts/verifier_structure.R`;
+- un journal dans `modules/semaine-02/`;
+- au moins deux commits lisibles depuis la semaine 1 ou la semaine 2;
+- une vérification des chemins absolus.
+
+## Livrable attendu
+
+| Élément | Attente minimale |
+|---|---|
+| `README.md` | Décrit la structure réelle et les commandes de vérification |
+| `docs/conventions.md` | Explique les conventions de dossiers, noms de fichiers et commits |
+| `scripts/verifier_structure.R` | Vérifie que les chemins essentiels existent |
+| `modules/semaine-02/journal.qmd` ou `.md` | Documente une correction de structure et une prochaine action |
+| Git | Historique lisible, avec changements regroupés par intention |
+
+## Place de l’IA
+
+Statut: permise pour comprendre et diagnostiquer; déclarée si elle influence le livrable.
+
+L’IA peut expliquer une commande Git, aider à comprendre une erreur ou proposer une formulation de convention. Toute proposition doit être adaptée au dépôt réel.
+
+Ajouter une entrée dans `docs/ai-log.md` si l’IA influence de manière significative la documentation, le script ou une décision de structure.
+
+## Critères de réussite
+
+- La structure du dépôt correspond au README.
+- Le script de vérification fonctionne ou l’erreur est documentée.
+- Les chemins importants sont relatifs.
+- Les conventions sont assez précises pour guider les prochaines semaines.
+- Les commits sont lisibles et séparés par intention.
+- Les usages significatifs de l’IA sont déclarés lorsque pertinent.
+
+## Variante STT-6230
+
+Ajouter une note technique courte dans `modules/semaine-02/` qui compare deux organisations possibles du portfolio et justifie le choix retenu.

@@ -7,40 +7,25 @@ format:
 
 ## Objectif de préparation
 
-Arriver au laboratoire avec une compréhension minimale de la question suivante:
+Réfléchir aux informations nécessaires pour suivre un modèle après sa création.
 
-> Comment suivre, maintenir et réviser un modèle après sa première livraison?
+## À préparer
 
-## À lire
+- Choisir un modèle ou pipeline de modélisation.
+- Identifier les données utilisées.
+- Noter la version du code ou du dépôt.
+- Décrire une vérification à refaire plus tard.
 
-- Notes maison du module.
-- Documentation ou extrait externe à ajouter.
-- Consigne du défi à parcourir.
+## Mini-test prévu
 
-## À faire rouler dans R
+Questions courtes sur:
 
-- Exemple court 1 à ajouter.
-- Exemple court 2 à ajouter.
-- Vérification de l’environnement de travail.
+- versionnement;
+- validation;
+- suivi des performances;
+- limites d’utilisation;
+- documentation des décisions.
 
-## À vérifier dans le portfolio
+## Trace à apporter
 
-- Dépôt à jour.
-- README compréhensible.
-- Dernier commit poussé sur GitHub.
-- Question ou difficulté notée.
-
-## Mini-test
-
-Prévoir 5 à 8 questions:
-
-- diagnostic de compréhension;
-- choix technique;
-- lecture de code;
-- question personnelle liée au portfolio.
-
-## TODO enseignant
-
-- Ajouter les lectures exactes.
-- Ajouter les exemples R.
-- Indiquer le statut d’IA du mini-test.
+Une note indiquant ce qui devrait être suivi si le modèle était réutilisé dans un autre contexte.

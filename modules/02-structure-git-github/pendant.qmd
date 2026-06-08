@@ -1,0 +1,55 @@
+---
+title: "Structure de projet, Git, GitHub et chemins relatifs - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de la séance
+
+Transformer le portfolio initial en dépôt plus robuste: structure lisible, chemins relatifs, conventions de base et historique Git défendable.
+
+## Déroulement proposé
+
+| Temps | Activité | Résultat |
+|---:|---|---|
+| 0:00 à 0:20 | Retour sur le mini-test | Les notions Git et chemins relatifs sont stabilisées |
+| 0:20 à 0:45 | Lecture collective de `git status`, `git diff`, `git log` | Les états Git courants sont reconnus |
+| 0:45 à 1:10 | Démonstration: nettoyer un dépôt désorganisé | Une méthode de tri est visible |
+| 1:10 à 2:20 | Laboratoire guidé | Le portfolio est nettoyé et documenté |
+| 2:20 à 2:45 | Revue en duo | Une autre personne peut comprendre la structure |
+| 2:45 à 3:00 | Synthèse | Chaque personne fixe une action avant la semaine 3 |
+
+## Démonstration courte
+
+La démonstration suit ce cycle:
+
+1. observer une structure de dépôt confuse;
+2. classer les fichiers selon leur rôle;
+3. corriger un chemin absolu;
+4. vérifier que le code s’exécute depuis la racine;
+5. faire un commit ciblé;
+6. mettre à jour le README.
+
+## Points de contrôle
+
+Avant la fin du laboratoire:
+
+- `README.md` décrit la structure réelle;
+- `docs/conventions.md` existe ou une section "Conventions" est présente dans le README;
+- les chemins importants sont relatifs;
+- `git status` est compris;
+- les commits séparent les intentions;
+- la question ou difficulté de la semaine est documentée dans le journal.
+
+## Revue en duo
+
+Chaque personne montre son dépôt à une autre personne. La personne qui relit doit pouvoir répondre:
+
+- Où sont les traces de la semaine 1?
+- Où seront les traces de la semaine 2?
+- Où placer un script réutilisable?
+- Où placer une sortie conservée?
+- Quelle commande permet de voir l’état Git?
+
+Si une réponse n’est pas évidente, le README ou les conventions doivent être améliorés.

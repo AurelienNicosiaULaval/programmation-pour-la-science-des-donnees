@@ -1,0 +1,70 @@
+---
+title: "Structure de projet, Git, GitHub et chemins relatifs"
+description: "Nettoyer un dépôt, documenter les conventions et produire une trace Git lisible"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment organiser un projet R pour qu’il soit compréhensible, versionné et relançable sans dépendre d’un ordinateur précis?
+
+## Rôle dans le cours
+
+La semaine 1 a créé le point de départ du portfolio. La semaine 2 transforme ce départ en structure de travail plus solide: dossiers, chemins relatifs, conventions de nommage, commits, README et mini-test de préparation.
+
+Cette semaine prépare directement le jalon portfolio de la semaine 3, où la structure, les conventions et les premières traces seront évaluées.
+
+## Objectifs du module
+
+À la fin de la semaine, chaque personne devrait pouvoir:
+
+- distinguer fichiers sources, données, sorties, rapports et documentation;
+- repérer les chemins absolus qui empêchent la reproduction;
+- utiliser des chemins relatifs depuis la racine du projet;
+- expliquer le rôle de `git status`, `git add`, `git commit`, `git log` et `git diff`;
+- écrire des messages de commit lisibles;
+- mettre à jour le README et les conventions du portfolio;
+- diagnostiquer un dépôt Git dans un état simple mais réaliste.
+
+## Livrables de la semaine
+
+| Élément | Trace attendue |
+|---|---|
+| Mini-test | Réponses courtes sur Git, chemins relatifs et structure de projet |
+| Portfolio | Structure revue et cohérente avec le README |
+| Conventions | `docs/conventions.md` initial ou section équivalente dans le README |
+| Journal | `modules/semaine-02/journal.qmd` ou `journal.md` |
+| Git | Commits distincts pour structure, documentation et correction |
+
+## Déroulement
+
+| Moment | Page à utiliser | Résultat |
+|---|---|---|
+| Avant la classe | [Avant la classe](avant.qmd) | Préparer le mini-test et vérifier l’état du dépôt |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Diagnostiquer les structures et les états Git |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Nettoyer le portfolio et corriger les chemins |
+| Après la classe | [Après la classe](apres.qmd) | Stabiliser les conventions avant la semaine 3 |
+
+## Place de l’IA
+
+Statut: permise pour comprendre et diagnostiquer; déclarée si elle influence le livrable.
+
+L’IA peut être utilisée pour expliquer une commande Git, interpréter un message d’erreur ou proposer une formulation de convention. Elle ne doit pas remplacer l’exécution locale des commandes, ni produire des commits ou des fichiers que la personne ne comprend pas.
+
+Si l’IA influence de manière significative `README.md`, `docs/conventions.md`, le journal ou une décision de structure, ajouter une entrée dans `docs/ai-log.md`.
+
+## Variante STT-6230
+
+Ajouter une courte note technique de 200 à 300 mots sur un choix de structure. La note doit comparer deux options raisonnables, indiquer celle retenue et justifier le compromis.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Après la classe](apres.qmd)
+- [Défi de module](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)

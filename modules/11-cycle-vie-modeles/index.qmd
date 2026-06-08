@@ -1,6 +1,6 @@
 ---
 title: "Cycle de vie des modèles"
-description: "Comment suivre, maintenir et réviser un modèle après sa première livraison?"
+description: "Suivre, vérifier et maintenir un modèle au-delà de sa première version"
 format:
   html:
     embed-resources: true
@@ -8,72 +8,37 @@ format:
 
 ## Question du module
 
-Comment suivre, maintenir et réviser un modèle après sa première livraison?
+Comment documenter et maintenir un modèle après sa première mise au point?
 
 ## Objectifs du module
 
-- décrire le cycle de vie d’un modèle
-- identifier les risques de dérive des données et des performances
-- proposer des indicateurs de suivi
-- documenter les responsabilités
+- décrire les étapes du cycle de vie d’un modèle;
+- documenter les données, la version du code et les résultats;
+- repérer les risques de dérive ou de mauvaise utilisation;
+- proposer une stratégie de suivi;
+- relier validation technique et responsabilité professionnelle.
 
-## Compétences visées
+## Place dans le cours
 
-- suivre versions, données et résultats
-- définir des seuils de révision
-- séparer résultat technique et décision responsable
-- communiquer les limites d’un modèle
+Ce module se situe en fin de session. Il relie modélisation, reproductibilité, documentation, maintenance et communication des limites.
 
-## Avant la classe
+## Trace attendue
 
-- Lire la page [Avant la classe](avant.qmd).
-- Exécuter les exemples indiqués.
-- Répondre au mini-test de préparation.
-- Préparer le dépôt GitHub ou le dossier de travail.
+- une fiche de suivi de modèle;
+- une note sur les hypothèses et limites;
+- une procédure de vérification;
+- une réflexion sur la maintenance.
 
-## Pendant la classe
+## Place de l’IA
 
-- Revenir sur les difficultés.
-- Observer une démonstration ciblée.
-- Réaliser le [laboratoire](laboratoire.qmd).
-- Documenter les décisions importantes.
-
-## Après la classe
-
-- Finaliser le [défi](defi.qmd).
-- Mettre à jour le portfolio.
-- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
-- Vérifier que le livrable se relance.
-
-## Défi de la semaine
-
-Produire une fiche de suivi pour un modèle ou prototype construit dans le cours.
-
-## Livrables
-
-- fiche de suivi
-- indicateurs proposés
-- risques identifiés
-- responsabilités documentées
-
-## Variante STT-6230
-
-Ajouter une discussion méthodologique sur dérive, recalibrage ou robustesse.
-
-## Rappel IA
-
-Le statut d’IA doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+Statut prévu: permise, déclarée lorsque l’IA influence le diagnostic, la documentation, la vérification ou l’interprétation.
 
 ## Pages du module
 
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
-- [Après la classe](apres.qmd)
 - [Laboratoire](laboratoire.qmd)
+- [Après la classe](apres.qmd)
 - [Défi](defi.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)
-
-## Ressources
-
-Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

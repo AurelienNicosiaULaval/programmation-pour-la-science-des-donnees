@@ -1,6 +1,6 @@
 ---
 title: "Structuration de projets de science des données"
-description: "Comment transformer un dossier de scripts en projet reproductible, lisible et partageable?"
+description: "Mise en route, diagnostic technique et départ du portfolio GitHub"
 format:
   html:
     embed-resources: true
@@ -8,72 +8,63 @@ format:
 
 ## Question du module
 
-Comment transformer un dossier de scripts en projet reproductible, lisible et partageable?
+Comment passer d’un ensemble de fichiers locaux à un projet R documenté, versionné et prêt à être enrichi pendant toute la session?
+
+## Rôle dans le cours
+
+Ce premier module sert à installer le rythme de travail du cours. Il ne vise pas encore une analyse de données complète. Il vise plutôt à rendre visibles les bases nécessaires pour la suite: environnement R, éditeur, terminal, Git, GitHub, documentation et portfolio.
+
+La semaine 1 produit une première trace dans le portfolio. Cette trace n’est pas un jalon noté, mais elle prépare le premier jalon du portfolio prévu à la semaine 3.
 
 ## Objectifs du module
 
-- organiser un projet R avec une structure claire
-- utiliser Git et GitHub pour versionner le travail
-- documenter les dépendances et les étapes de reproduction
-- préparer le portfolio individuel
+À la fin de la semaine, chaque personne devrait pouvoir:
 
-## Compétences visées
+- vérifier que R, Git, Quarto et un éditeur de code sont accessibles;
+- créer ou préparer un dépôt GitHub personnel pour le portfolio;
+- expliquer la structure minimale du portfolio;
+- produire un `README.md` initial utile;
+- ajouter un journal de départ dans `modules/semaine-01/`;
+- faire au moins deux commits lisibles;
+- formuler une demande d’aide technique avec les informations nécessaires.
 
-- créer un README utile
-- configurer `.gitignore` et `renv`
-- faire des commits lisibles
-- expliquer le cycle exploration, stabilisation, livraison
+## Livrables de la semaine
 
-## Avant la classe
+| Élément | Trace attendue |
+|---|---|
+| Diagnostic technique | Résultat du diagnostic R conservé dans le portfolio ou noté dans le journal |
+| Portfolio | Dépôt `portfolio-stt4230` créé ou préparé |
+| Documentation | `README.md` initial avec objectif, structure et commandes de base |
+| Journal | `modules/semaine-01/journal.qmd` ou `journal.md` |
+| Git | Au moins deux commits et, si possible, une synchronisation avec GitHub |
 
-- Lire la page [Avant la classe](avant.qmd).
-- Exécuter les exemples indiqués.
-- Répondre au mini-test de préparation.
-- Préparer le dépôt GitHub ou le dossier de travail.
+## Déroulement
 
-## Pendant la classe
+| Moment | Page à utiliser | Résultat |
+|---|---|---|
+| Avant la classe | [Avant la classe](avant.qmd) | Vérifier les accès et noter les blocages |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Créer la trace de départ du portfolio |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Diagnostiquer, documenter, committer, pousser |
+| Après la classe | [Après la classe](apres.qmd) | Stabiliser le dépôt et préparer la semaine 2 |
 
-- Revenir sur les difficultés.
-- Observer une démonstration ciblée.
-- Réaliser le [laboratoire](laboratoire.qmd).
-- Documenter les décisions importantes.
+## Place de l’IA
 
-## Après la classe
+Statut: permise pour comprendre, diagnostiquer et reformuler.
 
-- Finaliser le [défi](defi.qmd).
-- Mettre à jour le portfolio.
-- Ajouter une entrée dans `ai-log.md` si l’IA a été utilisée de façon significative.
-- Vérifier que le livrable se relance.
+L’IA peut être utilisée pour comprendre un message d’erreur, demander une explication sur Git ou reformuler une note personnelle. Elle ne doit pas remplacer la vérification locale: les commandes doivent être exécutées, les résultats doivent être inspectés et le README doit correspondre au dépôt réel.
 
-## Défi de la semaine
-
-Mettre en place le dépôt personnel du portfolio et produire une première documentation de reproduction.
-
-## Livrables
-
-- `README.md` initial
-- structure de dossiers cohérente
-- premiers commits
-- journal de départ du portfolio
+Si l’IA influence de manière significative le contenu du README, du journal ou d’une décision technique, ajouter une courte entrée dans `docs/ai-log.md` lorsque ce fichier existe. Ne jamais transmettre de jeton d’accès, clé SSH privée, fichier confidentiel ou donnée sensible à un outil externe.
 
 ## Variante STT-6230
 
-Ajouter une courte note justifiant les choix de structure et leurs limites pour un projet collaboratif.
-
-## Rappel IA
-
-Le statut d’IA doit être indiqué dans chaque consigne. Par défaut, l’IA peut être utilisée pour comprendre ou diagnostiquer, mais les livrables doivent être compris, vérifiés et documentés.
+Ajouter dans le journal une courte note de 150 à 250 mots sur une limite de la structure choisie. Par exemple: séparation des dossiers, nommage des scripts, gestion future des dépendances, distinction entre exploration et livraison, ou usage de Git dans un contexte collaboratif.
 
 ## Pages du module
 
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
-- [Après la classe](apres.qmd)
 - [Laboratoire](laboratoire.qmd)
-- [Défi](defi.qmd)
+- [Après la classe](apres.qmd)
+- [Défi de module](defi.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)
-
-## Ressources
-
-Ajouter ici les notes maison, extraits de documentation officielle, jeux de données autorisés et exemples R.

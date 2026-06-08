@@ -1,0 +1,86 @@
+---
+title: "Gabarit de journal de portfolio"
+format:
+  html:
+    embed-resources: true
+---
+
+Cours: STT-4230 / STT-6230
+
+Semaine:
+
+Module:
+
+Date:
+
+## Résumé du travail
+
+Décrire brièvement ce qui a été produit cette semaine.
+
+## Fichiers ajoutés ou modifiés
+
+| Fichier | Rôle |
+|---|---|
+|  |  |
+|  |  |
+|  |  |
+
+## Commits utiles
+
+| Commit | Description |
+|---|---|
+|  |  |
+|  |  |
+|  |  |
+
+## Ce qui fonctionne
+
+- À compléter.
+
+## Ce qui reste fragile
+
+- À compléter.
+
+## Vérifications effectuées
+
+Indiquer les vérifications, tests, relances ou contrôles de cohérence.
+
+- À compléter.
+
+## Difficultés rencontrées
+
+Décrire les erreurs, blocages ou incertitudes.
+
+- À compléter.
+
+## Reprises ou améliorations
+
+Indiquer ce qui a été corrigé après rétroaction, test ou relecture.
+
+- À compléter.
+
+## Usage de l’IA
+
+Remplir cette section seulement si l’IA a influencé de façon significative le code, la documentation, l’analyse ou le livrable.
+
+| Outil | Tâche demandée | Vérification faite | Décision |
+|---|---|---|---|
+|  |  |  | Conservé / modifié / rejeté |
+
+## Lien avec le projet ou les évaluations
+
+Indiquer comment cette trace peut aider le portfolio, le projet, un défi technique ou le bilan final.
+
+## Prochaine action
+
+Indiquer une action concrète à faire avant la prochaine séance.
+
+- À compléter.
+
+## Checklist
+
+- Au moins un fichier utile a été ajouté ou modifié.
+- Le code se relance lorsque pertinent.
+- Le README, les conventions ou le journal IA ont été mis à jour si nécessaire.
+- Les commits sont lisibles.
+- Les limites ou difficultés sont documentées.

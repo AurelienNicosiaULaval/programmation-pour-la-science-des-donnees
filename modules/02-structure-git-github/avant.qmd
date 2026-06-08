@@ -1,0 +1,75 @@
+---
+title: "Structure de projet, Git, GitHub et chemins relatifs - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Arriver en classe avec un dépôt portfolio local, un premier historique Git et une question précise sur la structure ou la synchronisation.
+
+Temps recommandé: 45 à 60 minutes.
+
+## À lire
+
+- [Portfolio GitHub individuel](../../portfolio.qmd), sections "Structure minimale", "README", "Commits" et "Jalons"
+- [Soutien technique](../../soutien-technique.qmd), section "Question technique efficace"
+- [Lectures du module](lectures.qmd)
+- [Ressources du module](ressources.qmd), section "Dépannage rapide"
+
+## À vérifier dans le portfolio
+
+Depuis la racine du dépôt `portfolio-stt4230`, exécuter:
+
+```bash
+pwd
+git status
+git log --oneline --max-count=5
+```
+
+Dans R, exécuter:
+
+```r
+getwd()
+list.files(recursive = TRUE)
+```
+
+Comparer les deux sorties. Le répertoire affiché par `pwd` dans le terminal et celui affiché par `getwd()` dans R devraient correspondre à la racine du projet ou être compris clairement.
+
+## Diagnostic de chemins
+
+Dans le dépôt, chercher s’il existe des chemins absolus. Adapter la commande selon le système.
+
+Sur macOS ou Linux:
+
+```bash
+grep -R -n "/Users\\|/home" README.md docs modules scripts 2>/dev/null
+```
+
+Sur Windows, dans Git Bash:
+
+```bash
+grep -R -n "C:\\\\" README.md docs modules scripts 2>/dev/null
+```
+
+Si une commande ne fonctionne pas, noter le message complet. La correction se fera en laboratoire.
+
+## Mini-test de préparation
+
+Répondre brièvement avant la séance:
+
+1. À quoi sert `git status`?
+2. Quelle est la différence entre un fichier modifié et un fichier indexé avec `git add`?
+3. Pourquoi un chemin comme `/Users/prenom/projet/data/fichier.csv` pose-t-il problème dans un dépôt partagé?
+4. Où placerais-tu un script R réutilisable dans le portfolio?
+5. Écris un exemple de message de commit trop vague et une version améliorée.
+
+Statut IA du mini-test: permise pour clarifier une notion, mais les réponses doivent être formulées et comprises par la personne étudiante.
+
+## À apporter en classe
+
+- Une sortie de `git status`.
+- Une question ou difficulté Git.
+- Une décision de structure à valider.
+- Un exemple de chemin ou fichier dont l’emplacement est incertain.

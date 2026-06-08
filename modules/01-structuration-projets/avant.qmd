@@ -7,40 +7,68 @@ format:
 
 ## Objectif de préparation
 
-Arriver au laboratoire avec une compréhension minimale de la question suivante:
+Arriver en classe avec une idée claire de son environnement de travail: ce qui fonctionne, ce qui manque, et ce qui doit être diagnostiqué ensemble.
 
-> Comment transformer un dossier de scripts en projet reproductible, lisible et partageable?
+Temps recommandé: 30 à 45 minutes.
 
 ## À lire
 
-- Notes maison du module.
-- Documentation ou extrait externe à ajouter.
-- Consigne du défi à parcourir.
+- [Démarrage étudiant](../../demarrage.qmd)
+- [Portfolio GitHub individuel](../../portfolio.qmd), sections "Structure minimale", "README" et "Commits"
+- [Soutien technique](../../soutien-technique.qmd), sections "Diagnostic initial" et "Question technique efficace"
+- [Lectures du module](lectures.qmd)
 
-## À faire rouler dans R
+## À préparer
 
-- Exemple court 1 à ajouter.
-- Exemple court 2 à ajouter.
-- Vérification de l’environnement de travail.
+- Un compte GitHub accessible.
+- Un éditeur de code installé ou disponible: Positron, RStudio ou VS Code.
+- Une installation de R fonctionnelle.
+- Une installation de Git fonctionnelle.
+- Une installation de Quarto fonctionnelle, si elle est déjà disponible.
 
-## À vérifier dans le portfolio
+Il n’est pas grave si tout ne fonctionne pas avant la première séance. L’objectif est de repérer les blocages tôt.
 
-- Dépôt à jour.
-- README compréhensible.
-- Dernier commit poussé sur GitHub.
-- Question ou difficulté notée.
+## Diagnostic R à exécuter
+
+Créer un fichier temporaire, par exemple `diagnostic-semaine-01.R`, puis exécuter le code suivant dans R.
+
+```r
+# Diagnostic technique de départ pour STT-4230 / STT-6230
+
+check_command <- function(command, args = "--version") {
+  result <- tryCatch(
+    system2(command, args = args, stdout = TRUE, stderr = TRUE),
+    error = function(error) {
+      paste("Non trouvé ou non accessible:", conditionMessage(error))
+    }
+  )
+
+  paste(result, collapse = "\n")
+}
+
+diagnostic <- list(
+  r_version = R.version.string,
+  platform = R.version$platform,
+  system = Sys.info()[c("sysname", "release", "machine")],
+  working_directory = getwd(),
+  git = check_command("git"),
+  quarto = check_command("quarto")
+)
+
+diagnostic
+```
+
+## À noter avant la classe
+
+Dans un fichier texte, ou dans un brouillon, noter:
+
+- la version de R affichée;
+- si `git --version` fonctionne;
+- si `quarto --version` fonctionne;
+- le répertoire de travail affiché par R;
+- un message d’erreur complet, si une commande échoue;
+- une question précise à apporter au laboratoire.
 
 ## Mini-test
 
-Prévoir 5 à 8 questions:
-
-- diagnostic de compréhension;
-- choix technique;
-- lecture de code;
-- question personnelle liée au portfolio.
-
-## TODO enseignant
-
-- Ajouter les lectures exactes.
-- Ajouter les exemples R.
-- Indiquer le statut d’IA du mini-test.
+Il n’y a pas de mini-test à la semaine 1. Le diagnostic technique est non noté et sert à orienter le soutien.

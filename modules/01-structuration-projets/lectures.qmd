@@ -5,28 +5,67 @@ format:
     embed-resources: true
 ---
 
-## Lecture principale
+## Objectif des lectures
 
-Ajouter ici les notes maison ou l’extrait principal.
+Les lectures de la semaine 1 servent à comprendre le rôle du portfolio, à préparer le diagnostic technique et à repérer les blocages avant le laboratoire.
 
-## Lecture complémentaire
+## Lectures internes
 
-Ajouter une documentation officielle ou une référence stable.
+Lire les pages suivantes:
+
+- [Démarrage étudiant](../../demarrage.qmd)
+- [Portfolio GitHub individuel](../../portfolio.qmd)
+- [Soutien technique](../../soutien-technique.qmd)
+- [Politique d’utilisation de l’IA générative](../../ia.qmd), sections "Statuts d’IA dans les évaluations" et "Règles générales"
+
+## Documentation officielle utile
+
+Ces ressources servent de références stables pour les outils utilisés au début du cours:
+
+- Chacon et Straub, Pro Git, section [About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control), documentation officielle Git.
+- GitHub Docs, [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+- Quarto, [Guide](https://quarto.org/docs/guide/), documentation officielle Quarto.
+- Posit, [Positron documentation](https://positron.posit.co/welcome.html).
+- Posit, [renv documentation](https://rstudio.github.io/renv/).
+
+La semaine 1 n’exige pas encore de maîtriser `renv`. Le lien est fourni pour situer la suite, car la reproductibilité des dépendances sera travaillée plus directement à la semaine 3.
 
 ## Geste R à reproduire
 
-- Exemple 1 à exécuter.
-- Exemple 2 à exécuter.
+Exécuter le diagnostic suivant dans R avant ou pendant le laboratoire.
+
+```r
+check_command <- function(command, args = "--version") {
+  result <- tryCatch(
+    system2(command, args = args, stdout = TRUE, stderr = TRUE),
+    error = function(error) {
+      paste("Non trouvé ou non accessible:", conditionMessage(error))
+    }
+  )
+
+  paste(result, collapse = "\n")
+}
+
+diagnostic <- list(
+  r_version = R.version.string,
+  platform = R.version$platform,
+  working_directory = getwd(),
+  git = check_command("git"),
+  quarto = check_command("quarto")
+)
+
+diagnostic
+```
 
 ## Trace attendue
 
-Indiquer la trace à ajouter au portfolio ou au dépôt.
+Conserver dans le portfolio:
+
+- le fichier `scripts/diagnostic.R`;
+- une note dans `modules/semaine-01/journal.qmd` ou `.md`;
+- un commit qui ajoute la structure de départ;
+- un commit qui ajoute ou corrige le diagnostic.
 
 ## Mini-test
 
-Prévoir des questions courtes liées à la préparation.
-
-## TODO
-
-- Ajouter les liens précis.
-- Vérifier que la charge reste raisonnable.
+Il n’y a pas de mini-test à la semaine 1. Le diagnostic est non noté.

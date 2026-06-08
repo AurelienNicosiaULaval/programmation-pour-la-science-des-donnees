@@ -1,0 +1,103 @@
+---
+title: "Proposition de projet"
+format:
+  html:
+    embed-resources: true
+---
+
+Cours: STT-4230 / STT-6230
+
+Équipe:
+
+Date:
+
+Lien vers le dépôt GitHub:
+
+## Titre provisoire
+
+Indiquer un titre court et descriptif.
+
+## Membres de l’équipe
+
+| Nom | Rôle prévu | Responsabilités initiales |
+|---|---|---|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
+## Question ou problème
+
+Décrire la question principale du projet en quelques phrases.
+
+La question doit être assez précise pour être traitée pendant la session.
+
+## Source de données
+
+| Élément | Description |
+|---|---|
+| Nom de la source |  |
+| Lien ou référence |  |
+| Type de données |  |
+| Format prévu |  |
+| Conditions d’utilisation |  |
+| Données sensibles ou personnelles | Non / Oui, expliquer |
+
+## Variables ou informations utiles
+
+Décrire les variables principales ou les éléments de données qui seront utilisés.
+
+| Variable ou champ | Description | Utilité prévue |
+|---|---|---|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
+## Produit final envisagé
+
+Cocher ou décrire le produit final prévu:
+
+- Rapport Quarto.
+- Tableau de bord Quarto.
+- Application Shiny légère.
+- Autre produit, à préciser.
+
+## Plan de travail initial
+
+| Étape | Responsable principal | Trace prévue |
+|---|---|---|
+| Importer les données |  |  |
+| Nettoyer les données |  |  |
+| Explorer les données |  |  |
+| Produire les visualisations |  |  |
+| Construire le rapport ou tableau de bord |  |  |
+| Vérifier ou tester le pipeline |  |  |
+| Documenter les limites |  |  |
+
+## Risques et limites
+
+Indiquer les principaux risques du projet:
+
+- données difficiles à obtenir;
+- données trop volumineuses;
+- variables manquantes;
+- portée trop large;
+- problème de confidentialité;
+- dépendances techniques;
+- autre risque.
+
+## Usage prévu de l’IA
+
+Décrire brièvement les usages anticipés de l’IA, si pertinent.
+
+L’usage significatif devra être documenté dans `docs/ai-log.md`.
+
+## Critères d’acceptation du sujet
+
+Avant le jalon, vérifier que le projet respecte les conditions suivantes:
+
+- la source de données est accessible;
+- la question est réaliste;
+- les données peuvent être citées ou utilisées;
+- aucune donnée personnelle ou sensible non autorisée n’est utilisée;
+- le projet permet de produire un livrable reproductible en R;
+- les contributions individuelles pourront être visibles.

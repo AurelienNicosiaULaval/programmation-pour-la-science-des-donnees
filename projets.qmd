@@ -7,25 +7,166 @@ format:
 
 Le projet filé en équipe sert à intégrer les compétences du cours dans un produit de science des données plus complet. Il compte pour 30 % de la note finale.
 
-L’IA est permise et déclarée.
+L’IA est permise et déclarée. Le travail remis doit rester compris, vérifié, adapté au contexte et défendable par l’équipe.
 
-Les jalons prévus sont la semaine 6, la semaine 12 et la remise finale de la semaine 14.
+Le projet est semi-dirigé. Les équipes choisissent un sujet et une source de données, mais le sujet doit être approuvé afin de garder les projets réalisables, comparables et compatibles avec les objectifs du cours.
 
-## Projet filé en équipe
+## Modalités
 
-Le projet filé peut inclure:
+| Élément | Modalité |
+|---|---|
+| Pondération | 30 % |
+| Type | Équipe, avec traces individuelles |
+| Taille d’équipe | 3 personnes par défaut; 2 ou 4 avec approbation |
+| Remise | Dépôt GitHub d’équipe |
+| Produit final | Rapport Quarto ou tableau de bord Quarto/Shiny |
+| Jalons officiels | Semaines 6, 12 et 14 |
+| IA | Permise, déclarée |
 
-- données réelles ou réalistes;
-- pipeline de données;
-- visualisations;
-- rapport Quarto;
-- application ou tableau de bord si pertinent;
-- pipeline de modèle ou prototype;
-- documentation de reproduction;
-- issues;
-- contributions individuelles;
-- bilan des limites;
-- `ai-log`.
+## Objectif du projet
+
+Le projet doit transformer un jeu de données en produit reproductible de science des données. Le résultat attendu n’est pas seulement une analyse finale, mais un dépôt organisé qui montre comment les données ont été obtenues, nettoyées, analysées, validées, documentées et communiquées.
+
+Le projet doit permettre de vérifier les compétences suivantes:
+
+- structurer un dépôt R;
+- documenter une source de données;
+- importer, nettoyer et valider des données;
+- produire des visualisations ou tableaux interprétables;
+- construire un rapport, un tableau de bord ou une application légère;
+- utiliser GitHub pour collaborer;
+- documenter les contributions individuelles;
+- expliquer les limites du travail;
+- déclarer et vérifier l’usage de l’IA lorsque pertinent.
+
+## Choix du sujet
+
+Chaque équipe choisit un sujet à partir d’une source de données publique, fictive ou explicitement autorisée.
+
+Les données doivent être suffisamment riches pour permettre:
+
+- une étape de nettoyage;
+- une exploration descriptive;
+- au moins une visualisation utile;
+- une validation ou un test;
+- une interprétation des limites;
+- une amélioration progressive entre les jalons.
+
+Les sources de données suivantes sont recommandées comme points de départ:
+
+| Source | Usage possible |
+|---|---|
+| [Données Québec](https://www.donneesquebec.ca/) | Données publiques québécoises, municipales ou gouvernementales |
+| [Gouvernement ouvert du Canada](https://rechercher.ouvert.canada.ca/data/) | Données publiques fédérales |
+| [Données ouvertes, statistiques et archives - Canada.ca](https://www.canada.ca/fr/services/science/donnees-ouvertes.html) | Données ouvertes, tableaux statistiques et ressources fédérales |
+| [Données ouvertes - Ville de Québec](https://www.ville.quebec.qc.ca/services/donnees-services-ouverts/index.aspx) | Données municipales et services urbains |
+
+Une autre source peut être utilisée si elle est documentée, stable, accessible et appropriée pour un usage pédagogique.
+
+## Thèmes suggérés
+
+| Thème | Exemples de questions |
+|---|---|
+| Environnement | Comment une variable environnementale varie-t-elle selon le lieu, la saison ou le temps? |
+| Transport et mobilité | Quels patrons observe-t-on dans les déplacements, accidents, infrastructures ou services? |
+| Santé publique | Comment décrire une tendance ou une différence entre régions sans identifier des personnes? |
+| Population et territoire | Comment représenter une variable démographique ou socioéconomique à l’échelle locale? |
+| Éducation ou formation | Comment suivre une progression, une participation ou une réussite avec des données fictives ou agrégées? |
+| Services municipaux | Comment analyser la répartition ou l’évolution d’un service public? |
+| Projet méthodologique R | Comment rendre un pipeline plus reproductible, plus lisible ou plus robuste? |
+
+## Sujets non acceptés
+
+Un sujet peut être refusé si:
+
+- les données contiennent des renseignements personnels ou sensibles;
+- l’accès dépend d’identifiants privés ou d’une clé API personnelle non partageable;
+- les données ne peuvent pas être citées ou réutilisées;
+- le projet repose surtout sur du scraping fragile;
+- la question est trop large pour une session;
+- le livrable ne permet pas de démontrer les compétences du cours.
+
+## Structure minimale du dépôt
+
+La structure peut être adaptée, mais le README doit expliquer clairement l’organisation retenue.
+
+```text
+projet-stt4230/
+  README.md
+  .gitignore
+  renv.lock
+  docs/
+    contributions.md
+    ai-log.md
+    limites.md
+    note-technique-stt6230.md
+  data/
+    raw/
+    processed/
+  R/
+  scripts/
+  reports/
+  outputs/
+  dashboard/
+```
+
+`renv.lock` est attendu lorsque le projet contient des dépendances R nécessaires pour reproduire le livrable. Si le fichier n’est pas encore stabilisé à un jalon donné, le README doit expliquer comment installer les dépendances.
+
+## Jalons
+
+| Moment | Jalon | Livrable attendu |
+|---|---|---|
+| Semaine 6 | Proposition | Sujet, équipe, question, source de données, risques, dépôt initial |
+| Semaine 9 | Point de suivi | Importation, nettoyage initial, premières visualisations, problèmes rencontrés |
+| Semaine 12 | Version intermédiaire | Pipeline partiel, rapport ou tableau de bord partiel, validations initiales, contributions visibles |
+| Semaine 14 | Remise finale | Produit complet, documentation de reproduction, limites, contribution individuelle, `ai-log` si pertinent |
+| Semaine 15 | Présentation et revue | Démonstration, revue de code, bilan final individuel |
+
+Le point de suivi de la semaine 9 est formatif. Il sert à éviter les projets trop tardifs, trop larges ou techniquement bloqués.
+
+## Livrable de la semaine 6
+
+La proposition doit contenir:
+
+- le titre provisoire du projet;
+- les noms des membres de l’équipe;
+- la question ou le problème étudié;
+- la source de données;
+- une courte description des variables utiles;
+- les limites connues des données;
+- le type de produit final envisagé;
+- les risques techniques;
+- une première répartition des tâches;
+- le lien vers le dépôt GitHub.
+
+## Livrable de la semaine 12
+
+La version intermédiaire doit contenir:
+
+- un README utilisable;
+- une importation des données;
+- un nettoyage initial;
+- au moins une visualisation ou un tableau utile;
+- une première trace de validation;
+- un rapport ou tableau de bord partiel;
+- des issues, commits ou pull requests montrant les contributions;
+- une liste des tâches restantes.
+
+## Livrable final de la semaine 14
+
+Le dépôt final doit contenir:
+
+- un README clair;
+- une procédure de reproduction;
+- les scripts ou fonctions nécessaires;
+- les données brutes et traitées lorsque leur diffusion est permise;
+- un rapport Quarto ou un tableau de bord;
+- des visualisations interprétables;
+- une trace de validation ou de tests;
+- une discussion des limites;
+- `docs/contributions.md`;
+- `docs/ai-log.md` si l’IA a été utilisée de façon significative;
+- `docs/note-technique-stt6230.md` pour les personnes inscrites à STT-6230.
 
 ## Dimensions obligatoires
 
@@ -40,7 +181,9 @@ Chaque projet doit rendre visibles:
 
 ## Travail en équipe
 
-Le travail en équipe doit inclure des contributions vérifiables:
+Le travail en équipe doit inclure des contributions vérifiables. Les contributions ne doivent pas seulement être déclarées à la fin; elles doivent apparaître dans l’historique du dépôt.
+
+Les traces attendues sont:
 
 - issues assignées;
 - pull requests;
@@ -49,17 +192,78 @@ Le travail en équipe doit inclure des contributions vérifiables:
 - fichier `docs/contributions.md`;
 - bilan individuel final.
 
+Le fichier `docs/contributions.md` doit indiquer, pour chaque membre:
+
+- les tâches principales réalisées;
+- les fichiers ou sections associés;
+- les commits, issues ou pull requests utiles;
+- les difficultés rencontrées;
+- les éléments relus ou testés pour l’équipe.
+
+## Usage de l’IA
+
+L’IA est permise, mais elle doit être utilisée comme aide au développement, à la compréhension, à la vérification ou à la révision. Elle ne remplace pas le jugement de l’équipe.
+
+Une entrée dans `docs/ai-log.md` est attendue lorsque l’IA influence de façon significative:
+
+- le code;
+- la structure du dépôt;
+- la rédaction du rapport;
+- l’interprétation;
+- la correction d’erreurs;
+- la comparaison de méthodes.
+
+Chaque entrée importante doit indiquer:
+
+- l’outil utilisé;
+- la tâche demandée;
+- ce qui a été conservé;
+- ce qui a été modifié ou rejeté;
+- la vérification effectuée.
+
 ## Revue de code, présentation et bilan final
 
-La revue de code, la présentation et le bilan final comptent ensemble pour 10 % de la note finale. Cette composante combine une part d’équipe et une part individuelle.
+La revue de code, la présentation et le bilan final comptent ensemble pour 10 % de la note finale. Cette composante est évaluée séparément du projet, mais elle s’appuie sur le même dépôt.
+
+Consulter la page [Revue de code, présentation et bilan final](presentation.qmd).
 
 ## Différenciation STT-6230
 
-Les personnes inscrites à STT-6230 doivent ajouter une note technique ou méthodologique, par exemple une comparaison d’approches, une analyse de performance, une discussion des limites ou un plan de mise en production.
+Les personnes inscrites à STT-6230 doivent ajouter une note technique courte dans `docs/note-technique-stt6230.md`.
 
-## TODO
+Cette note doit contenir au moins un élément parmi les suivants:
 
-- Définir les thèmes autorisés.
-- Définir les jalons.
-- Préparer les grilles.
-- Préciser les règles de présentation, de revue de code et de bilan.
+- comparaison de deux approches;
+- validation plus formelle;
+- analyse de performance;
+- automatisation avec `targets`;
+- discussion méthodologique des limites;
+- plan de mise en production ou de maintenance;
+- réflexion sur la robustesse du pipeline.
+
+La note doit être liée au projet, pas ajoutée comme texte indépendant.
+
+## Répartition quantitative
+
+Le projet compte pour 30 points. Le point de suivi de la semaine 9 est formatif et ne reçoit pas de points distincts.
+
+| Élément évalué | Points |
+|---|---:|
+| Proposition de la semaine 6: sujet, question, source, portée, risques et dépôt initial | 4 |
+| Version intermédiaire de la semaine 12: progression, pipeline partiel, rapport ou tableau de bord partiel | 6 |
+| Pipeline de données et reproductibilité: importation, nettoyage, dépendances, chemins relatifs, relance | 6 |
+| Produit final: analyse, visualisations, rapport Quarto ou tableau de bord | 7 |
+| Validation, limites et jugement: tests, contrôles de cohérence, interprétation prudente | 3 |
+| Collaboration et traces individuelles: issues, commits, pull requests, `docs/contributions.md` | 3 |
+| Transparence IA et documentation finale: `ai-log`, README, documentation de reproduction | 1 |
+| Total | 30 |
+
+Pour STT-6230, la note technique courte est obligatoire. Son absence limite l’accès aux points associés à la validation, aux limites, au jugement et à la documentation.
+
+## Gabarits fournis
+
+Les gabarits suivants peuvent être copiés dans le dépôt d’équipe:
+
+- [Proposition de projet](gabarits/proposition-projet.qmd)
+- [Contributions individuelles](gabarits/contributions.md)
+- [Journal d’utilisation de l’IA](gabarits/ai-log.md)

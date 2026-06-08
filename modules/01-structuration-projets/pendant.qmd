@@ -5,28 +5,49 @@ format:
     embed-resources: true
 ---
 
-## Déroulement prévu
+## Objectif de la séance
 
-1. Retour sur les lectures et le mini-test.
-2. Clarification des concepts difficiles.
-3. Démonstration courte.
-4. Travail guidé en laboratoire.
-5. Revue de code ou discussion ciblée.
-6. Synthèse et prochaines étapes.
+Créer le point de départ du portfolio individuel et vérifier que chaque personne sait où travailler, quoi documenter et comment signaler un problème technique.
+
+## Déroulement proposé
+
+| Temps | Activité | Résultat |
+|---:|---|---|
+| 0:00 à 0:20 | Accueil, rôle du portfolio, logique du cours | Les attentes de la semaine 1 sont explicites |
+| 0:20 à 0:45 | Diagnostic R, Git, Quarto, éditeur | Les blocages techniques sont repérés |
+| 0:45 à 1:10 | Démonstration: dépôt, README, commit | Le cycle modifier, vérifier, committer est visible |
+| 1:10 à 2:15 | Laboratoire guidé | Le dépôt portfolio contient une première structure |
+| 2:15 à 2:40 | Synchronisation GitHub et dépannage | Les commits sont poussés lorsque possible |
+| 2:40 à 3:00 | Retour collectif et billet de sortie | Chaque personne sait quoi terminer après la séance |
+
+## Démonstration courte
+
+La démonstration montre seulement le cycle minimal:
+
+1. ouvrir un dossier de projet;
+2. créer ou modifier `README.md`;
+3. vérifier `git status`;
+4. ajouter un fichier avec `git add`;
+5. faire un commit avec un message lisible;
+6. pousser vers GitHub lorsque l’authentification est prête.
 
 ## Points de contrôle
 
-- Le dépôt est à jour.
-- Le code de départ fonctionne.
-- Une première trace est commitée.
-- Les difficultés sont documentées.
+Avant de quitter le laboratoire, vérifier:
 
-## Accompagnement
+- le dossier du portfolio existe;
+- le fichier `README.md` existe;
+- le dossier `modules/semaine-01/` existe;
+- le journal de départ existe;
+- `git status` donne un état compréhensible;
+- au moins un commit a été créé;
+- un blocage GitHub est documenté si la synchronisation échoue.
 
-Utiliser le temps de laboratoire pour poser des questions précises, montrer un message d’erreur, demander une revue courte ou valider une décision de structure.
+## Billet de sortie
 
-## TODO enseignant
+Répondre en trois à cinq phrases dans le journal de départ:
 
-- Ajouter le déroulement minute par minute si nécessaire.
-- Ajouter les extraits de code de démonstration.
-- Préparer les questions de synthèse.
+- Qu’est-ce qui fonctionne dans mon environnement?
+- Qu’est-ce qui ne fonctionne pas encore?
+- Quelle est la prochaine vérification à faire?
+- De quelle information aurais-je besoin pour recevoir de l’aide efficacement?

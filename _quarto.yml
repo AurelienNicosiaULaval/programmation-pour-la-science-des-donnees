@@ -24,7 +24,7 @@ website:
       - text: "Modules"
         menu:
         - modules/01-structuration-projets/index.qmd
-        - modules/02-manipulation-donnees/index.qmd
+        - modules/02-structure-git-github/index.qmd
         - modules/03-visualisation/index.qmd
         - modules/04-rapports-applications-tableaux-bord/index.qmd
         - modules/05-programmation-orientee-objet/index.qmd
@@ -36,11 +36,7 @@ website:
         - modules/11-cycle-vie-modeles/index.qmd
         - modules/12-collaboration-documentation-package/index.qmd
       - text: "Évaluations"
-        menu:
-        - text: "Version normale"
-          href: evaluations.qmd
-        - text: "Version ungrading"
-          href: evaluations-ungrading.qmd
+        href: evaluations.qmd
       - text: "Portfolio"
         href: portfolio.qmd
       - text: "IA"
@@ -59,7 +55,7 @@ website:
       collapse-level: 1
       contents:
         - modules/01-structuration-projets/index.qmd
-        - modules/02-manipulation-donnees/index.qmd
+        - modules/02-structure-git-github/index.qmd
         - modules/03-visualisation/index.qmd
         - modules/04-rapports-applications-tableaux-bord/index.qmd
         - modules/05-programmation-orientee-objet/index.qmd
@@ -73,10 +69,7 @@ website:
     - id: evaluations
       title: "Évaluations"
       contents:
-        - text: "Version normale"
-          href: evaluations.qmd
-        - text: "Version ungrading"
-          href: evaluations-ungrading.qmd
+        - evaluations.qmd
         - portfolio.qmd
         - projets.qmd
         - defis.qmd
@@ -109,4 +102,4 @@ format:
     embed-resources: true
 
 execute:
-  freeze: auto
+  freeze: false

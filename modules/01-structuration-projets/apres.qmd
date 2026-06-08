@@ -5,29 +5,39 @@ format:
     embed-resources: true
 ---
 
-## Consolidation
+## Objectif de consolidation
 
-Après le laboratoire, finaliser le travail amorcé et stabiliser le livrable.
+Stabiliser le dépôt de départ avant la semaine 2. Le but n’est pas de rendre le portfolio parfait, mais de s’assurer qu’il existe, qu’il est compréhensible et qu’il pourra recevoir les traces suivantes.
 
-## À faire
+## À faire après le laboratoire
 
-- Finaliser le défi: Mettre en place le dépôt personnel du portfolio et produire une première documentation de reproduction.
-- Relancer le code depuis une session propre.
-- Mettre à jour le README ou la note technique.
-- Ajouter une trace au portfolio.
-- Déclarer l’usage de l’IA si nécessaire.
+1. Relire le `README.md` comme si une autre personne devait comprendre le dépôt.
+2. Relancer `source("scripts/diagnostic.R")` depuis la racine du dépôt.
+3. Corriger le journal de départ pour qu’il reflète l’état réel de l’environnement.
+4. Vérifier `git status`.
+5. Faire un commit si des fichiers ont été modifiés.
+6. Pousser vers GitHub si l’authentification fonctionne.
+7. Noter le blocage exact si GitHub ne fonctionne pas encore.
+
+## Trace minimale à conserver
+
+Le dossier `modules/semaine-01/` doit contenir un journal avec:
+
+- ce qui fonctionne;
+- ce qui ne fonctionne pas;
+- une commande qui a été exécutée;
+- une erreur ou une difficulté observée, si applicable;
+- une prochaine action concrète.
 
 ## Réflexion courte
 
-Répondre dans le journal du portfolio:
+Répondre dans le journal:
 
-- Qu’est-ce que j’ai appris?
-- Qu’est-ce qui reste fragile?
-- Quelle erreur ou difficulté ai-je rencontrée?
-- Quelle vérification ai-je faite?
+- Qu’est-ce que je peux maintenant reproduire sans aide?
+- Quelle partie de mon environnement reste incertaine?
+- Quelle information dois-je fournir pour recevoir une aide efficace?
+- Quelle habitude Git dois-je renforcer avant la semaine 2?
 
-## TODO enseignant
+## Préparation de la semaine 2
 
-- Ajouter les exercices supplémentaires.
-- Ajouter une solution minimale après la séance.
-- Ajouter les erreurs fréquentes observées.
+La semaine 2 portera sur la structure de projet, Git, GitHub et les chemins relatifs. Avant cette séance, le dépôt portfolio devrait être accessible localement, même si la synchronisation GitHub n’est pas encore réglée.

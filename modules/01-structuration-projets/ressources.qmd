@@ -7,20 +7,61 @@ format:
 
 ## Ressources internes
 
-- Notes du module.
-- Laboratoire.
-- Défi.
-- Solution minimale, à publier après la séance si pertinent.
+- [Démarrage étudiant](../../demarrage.qmd)
+- [Portfolio GitHub individuel](../../portfolio.qmd)
+- [Soutien technique](../../soutien-technique.qmd)
+- [Politique IA](../../ia.qmd)
+- [Laboratoire du module](laboratoire.qmd)
+- [Défi de module](defi.qmd)
 
-## Ressources externes
+## Documentation externe
 
-Ajouter des liens vers documentation officielle, chapitres ou guides.
+- Git: [Pro Git - About Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+- GitHub: [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+- Quarto: [Quarto Guide](https://quarto.org/docs/guide/)
+- Positron: [Positron documentation](https://positron.posit.co/welcome.html)
+- renv: [Project Environments](https://rstudio.github.io/renv/)
 
-## Erreurs fréquentes
+## Dépannage rapide
 
-- Erreur fréquente 1 à documenter.
-- Erreur fréquente 2 à documenter.
+| Situation | Vérification à faire | Information à fournir pour demander de l’aide |
+|---|---|---|
+| `git` n’est pas trouvé | Exécuter `git --version` dans le terminal | Système utilisé, message complet, méthode d’installation |
+| `quarto` n’est pas trouvé | Exécuter `quarto --version` | Message complet et éditeur utilisé |
+| Mauvais répertoire de travail | Exécuter `getwd()` dans R et `pwd` dans le terminal | Répertoire attendu et répertoire obtenu |
+| `git push` est refusé | Exécuter `git remote -v` et noter le message | URL du dépôt sans secret, message d’erreur complet |
+| Fichier absent | Exécuter `list.files(recursive = TRUE)` dans R | Nom du fichier attendu et endroit où il se trouve |
+| Package absent | Exécuter `sessionInfo()` | Nom du package, commande utilisée, message complet |
+| Chemin absolu local | Vérifier si un chemin commence par `/Users/`, `C:/` ou un nom personnel | Fichier contenant le chemin et ligne concernée |
 
-## Données
+## Modèle de demande d’aide
 
-Indiquer les jeux de données autorisés, leur source et les limites d’utilisation.
+```text
+Contexte:
+
+Ce que je voulais faire:
+
+Commande exécutée:
+
+Message d’erreur complet:
+
+Résultat de getwd() ou pwd:
+
+Résultat de sessionInfo(), si le problème concerne R:
+
+Ce que j’ai déjà essayé:
+
+Ce que je pense être la cause:
+```
+
+## Rappel de sécurité
+
+Ne jamais publier ou transmettre:
+
+- une clé SSH privée;
+- un jeton GitHub;
+- un mot de passe;
+- un fichier contenant des données confidentielles;
+- une capture d’écran contenant des informations sensibles.
+
+En cas de doute, demander avant de pousser le fichier sur GitHub.

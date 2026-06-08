@@ -1,49 +1,56 @@
 ---
-title: "Structuration de projets de science des données - Défi"
+title: "Structuration de projets de science des données - Défi de module"
 format:
   html:
     embed-resources: true
 ---
 
-## Contexte
+## Nature du défi
 
-Ce défi transforme le contenu du module en trace concrète dans le portfolio.
+Ce défi de module est une activité de départ pour le portfolio. Il ne remplace pas les défis techniques notés du cours. Il prépare le jalon portfolio de la semaine 3.
 
 ## Objectif
 
-Mettre en place le dépôt personnel du portfolio et produire une première documentation de reproduction.
+Créer une première version utilisable du portfolio GitHub individuel.
 
 ## Consignes
 
-- Travailler dans le dépôt demandé.
-- Produire un livrable minimal mais reproductible.
-- Documenter les étapes nécessaires.
-- Faire des commits lisibles.
+Dans le dépôt `portfolio-stt4230`, produire:
+
+- une structure minimale de dossiers;
+- un `README.md` initial;
+- un script `scripts/diagnostic.R`;
+- un journal dans `modules/semaine-01/`;
+- au moins deux commits lisibles;
+- une synchronisation GitHub, si l’authentification est prête.
 
 ## Livrable attendu
 
-- `README.md` initial
-- structure de dossiers cohérente
-- premiers commits
-- journal de départ du portfolio
+| Élément | Attente minimale |
+|---|---|
+| `README.md` | Décrit l’objectif du dépôt, sa structure et les commandes de base |
+| `scripts/diagnostic.R` | Affiche la version de R, le système, le répertoire de travail, Git et Quarto |
+| `modules/semaine-01/journal.qmd` ou `.md` | Résume l’état de départ, les difficultés et la prochaine action |
+| Git | Contient au moins deux commits avec messages compréhensibles |
+| GitHub | Dépôt poussé si l’accès est prêt, blocage documenté sinon |
 
 ## Place de l’IA
 
-Niveau à préciser pour ce défi. Si le niveau 2 ou 3 est autorisé, ajouter une entrée dans `ai-log.md`.
+Statut: permise pour comprendre, diagnostiquer et reformuler.
 
-## Critères
+L’IA peut aider à comprendre une erreur, proposer une formulation de README ou expliquer une commande Git. La personne étudiante doit vérifier les commandes localement et adapter le texte au dépôt réel.
 
-- Exactitude technique.
-- Reproductibilité.
-- Qualité du code.
-- Documentation.
-- Trace Git.
-- Transparence IA si applicable.
+Ajouter une entrée dans `docs/ai-log.md` seulement si l’IA influence de manière significative un choix technique, du code ou une formulation reprise dans le portfolio.
 
-## Checklist de remise
+## Critères de réussite
 
-- Le code s’exécute.
-- Les fichiers attendus sont présents.
-- Le README ou la note explique comment reproduire.
-- Les données sensibles sont absentes.
-- L’usage de l’IA est déclaré si nécessaire.
+- Le dépôt est lisible sans explication orale.
+- Les commandes indiquées dans le README correspondent aux fichiers réels.
+- Les chemins sont relatifs au dépôt.
+- Les messages d’erreur ne sont pas masqués.
+- Les commits montrent une progression.
+- Les usages significatifs de l’IA sont déclarés lorsque pertinent.
+
+## Variante STT-6230
+
+Ajouter une courte note dans le journal sur une limite de la structure actuelle et une amélioration possible pour un projet collaboratif.

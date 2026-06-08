@@ -7,20 +7,16 @@ format:
 
 ## Ressources internes
 
-- Notes du module.
-- Laboratoire.
-- Défi.
-- Solution minimale, à publier après la séance si pertinent.
+- [Portfolio GitHub individuel](../../portfolio.qmd)
+- [Projets](../../projets.qmd)
+- [Politique IA](../../ia.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Défi](defi.qmd)
 
-## Ressources externes
+## Questions de vérification
 
-Ajouter des liens vers documentation officielle, chapitres ou guides.
-
-## Erreurs fréquentes
-
-- Erreur fréquente 1 à documenter.
-- Erreur fréquente 2 à documenter.
-
-## Données
-
-Indiquer les jeux de données autorisés, leur source et les limites d’utilisation.
+- Le modèle peut-il être relié à une version du code?
+- Les données d’entrée sont-elles identifiables?
+- La validation est-elle documentée?
+- Les limites sont-elles explicites?
+- Une vérification future est-elle prévue?

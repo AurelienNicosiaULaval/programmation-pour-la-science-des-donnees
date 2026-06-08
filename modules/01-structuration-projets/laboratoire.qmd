@@ -5,35 +5,213 @@ format:
     embed-resources: true
 ---
 
-## Mise en contexte
+## Objectif du laboratoire
 
-Présenter un problème réaliste lié au module.
+Mettre en place un dépôt de portfolio minimal, documenté et versionné. Le laboratoire n’exige pas une analyse statistique. Il installe l’espace de travail qui servira pendant la session.
 
-## Préparation
+## Résultat attendu
 
-- Ouvrir le dépôt.
-- Vérifier l’environnement R.
-- Lire les consignes.
+À la fin du laboratoire, le dépôt contient au minimum:
 
-## Activité guidée
+```text
+portfolio-stt4230/
+  README.md
+  .gitignore
+  docs/
+    ai-log.md
+  modules/
+    semaine-01/
+      .gitkeep
+      journal.qmd
+  scripts/
+    .gitkeep
+    diagnostic.R
+  outputs/
+    .gitkeep
+```
 
-1. Examiner la structure de départ.
-2. Exécuter le code fourni.
-3. Modifier une partie ciblée.
-4. Vérifier le résultat.
-5. Committer une trace claire.
+La structure peut être adaptée, mais le README doit expliquer l’organisation réelle du dépôt.
 
-## Exercices
+## Étape 1 - Créer ou ouvrir le dépôt
 
-- Exercice individuel à ajouter.
-- Exercice en duo à ajouter.
-- Question de revue de code à ajouter.
+Option A: dépôt déjà créé sur GitHub.
 
-## Défis supplémentaires
+```bash
+git clone git@github.com:VOTRE-COMPTE/portfolio-stt4230.git
+cd portfolio-stt4230
+```
 
-- Extension pour approfondissement.
-- Variante STT-6230 si pertinente.
+Option B: dossier local sans dépôt Git.
 
-## Retour réflexif
+```bash
+mkdir portfolio-stt4230
+cd portfolio-stt4230
+git init
+```
 
-Noter une décision technique, une difficulté et une vérification effectuée.
+Remplacer `VOTRE-COMPTE` par le nom du compte GitHub. Si l’authentification SSH n’est pas prête, travailler localement et documenter le blocage.
+
+## Étape 2 - Créer la structure minimale
+
+```bash
+mkdir -p docs modules/semaine-01 scripts outputs
+touch .gitignore docs/ai-log.md modules/semaine-01/.gitkeep scripts/.gitkeep outputs/.gitkeep
+```
+
+Ajouter dans `.gitignore`:
+
+```text
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+*.html
+*.log
+```
+
+Faire un premier commit qui capture seulement la structure de départ.
+
+```bash
+git status
+git add .gitignore docs/ai-log.md modules/semaine-01/.gitkeep scripts/.gitkeep outputs/.gitkeep
+git commit -m "Initialiser la structure du portfolio"
+```
+
+## Étape 3 - Rédiger un README initial
+
+Le `README.md` doit être court, mais utile.
+
+````md
+# Portfolio STT-4230 / STT-6230
+
+Ce dépôt regroupe mes traces de travail pour le cours de programmation pour la science des données.
+
+## Structure
+
+- `modules/`: traces hebdomadaires.
+- `scripts/`: scripts R exécutables.
+- `outputs/`: sorties conservées.
+- `docs/`: conventions, bilan et journal IA lorsque pertinent.
+
+## Reproduction
+
+Les scripts doivent être exécutés depuis la racine du dépôt.
+
+```r
+source("scripts/diagnostic.R")
+```
+
+## IA
+
+Les usages significatifs de l’IA seront déclarés dans `docs/ai-log.md`.
+````
+
+Créer ou modifier ensuite le fichier `README.md` avec ce contenu.
+
+## Étape 4 - Ajouter le diagnostic R
+
+Dans `scripts/diagnostic.R`, placer le code suivant.
+
+```r
+# Diagnostic technique de départ pour STT-4230 / STT-6230
+
+check_command <- function(command, args = "--version") {
+  result <- tryCatch(
+    system2(command, args = args, stdout = TRUE, stderr = TRUE),
+    error = function(error) {
+      paste("Non trouvé ou non accessible:", conditionMessage(error))
+    }
+  )
+
+  paste(result, collapse = "\n")
+}
+
+diagnostic <- list(
+  r_version = R.version.string,
+  platform = R.version$platform,
+  system = Sys.info()[c("sysname", "release", "machine")],
+  working_directory = getwd(),
+  git = check_command("git"),
+  quarto = check_command("quarto")
+)
+
+print(diagnostic)
+```
+
+Exécuter ensuite:
+
+```r
+source("scripts/diagnostic.R")
+```
+
+Si une commande échoue, copier le message complet dans le journal de départ.
+
+## Étape 5 - Rédiger le journal de départ
+
+Dans `modules/semaine-01/journal.qmd`, ajouter:
+
+```markdown
+---
+title: "Journal semaine 1"
+format:
+  html:
+    embed-resources: true
+---
+
+## État de départ
+
+- R fonctionne: oui / non / à vérifier
+- Git fonctionne: oui / non / à vérifier
+- Quarto fonctionne: oui / non / à vérifier
+- GitHub fonctionne: oui / non / à vérifier
+
+## Ce que j’ai fait
+
+Décrire les fichiers créés et les commandes importantes.
+
+## Ce qui reste fragile
+
+Noter une erreur, une hésitation ou une décision à valider.
+
+## Prochaine action
+
+Indiquer la prochaine vérification à faire avant la semaine 2.
+```
+
+## Étape 6 - Faire un second commit lisible
+
+```bash
+git status
+git add README.md modules/semaine-01/journal.qmd scripts/diagnostic.R
+git commit -m "Ajouter le README et le diagnostic de depart"
+```
+
+Les messages de commit peuvent être adaptés, mais ils doivent décrire l’intention du changement. Le point important est de conserver au moins deux étapes visibles: la structure, puis la documentation et le diagnostic.
+
+## Étape 7 - Pousser vers GitHub si possible
+
+Si le dépôt distant existe déjà:
+
+```bash
+git push
+```
+
+Si le dépôt local doit être associé à GitHub:
+
+```bash
+git remote add origin git@github.com:VOTRE-COMPTE/portfolio-stt4230.git
+git branch -M main
+git push -u origin main
+```
+
+Si `git push` échoue, ne pas effacer le dépôt local. Noter le message d’erreur complet et consulter [Ressources](ressources.qmd).
+
+## Vérification finale
+
+Avant de quitter:
+
+- `git status` ne contient pas de surprise;
+- le dépôt contient au moins un commit;
+- le README explique la structure;
+- le journal semaine 1 mentionne les blocages réels;
+- aucun secret, jeton d’accès ou fichier confidentiel n’a été ajouté.
