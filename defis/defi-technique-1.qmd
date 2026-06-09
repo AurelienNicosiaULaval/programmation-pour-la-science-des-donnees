@@ -1,0 +1,213 @@
+---
+title: "Défi technique 1 - Bases individuelles sans IA"
+format:
+  html:
+    embed-resources: true
+---
+
+## Résumé
+
+Le défi technique 1 est une évaluation individuelle de 10 % réalisée en laboratoire. La durée du travail évalué est de 1 h. L’IA générative n’est pas permise.
+
+Le défi vérifie les bases individuelles:
+
+- structure de projet;
+- chemins relatifs;
+- importation de données;
+- nettoyage simple;
+- validation par assertions;
+- sauvegarde d’une version propre;
+- README minimal;
+- usage de Git.
+
+Le jeu de données fourni est fictif. Il représente de petites observations de stations de mobilité dans différents secteurs de Québec. Il sert à évaluer le pipeline technique, pas à produire une analyse substantielle.
+
+## Règle IA
+
+Statut: IA non permise.
+
+Pendant le défi évalué, il est interdit d’utiliser un outil d’IA générative pour écrire, corriger, expliquer, traduire ou diagnostiquer le code ou la documentation.
+
+Sont permis:
+
+- les notes de cours;
+- la documentation officielle;
+- le code produit antérieurement par la personne étudiante;
+- les messages d’aide de R et des packages;
+- les fonctions de recherche dans l’éditeur;
+- Git et GitHub pour versionner et remettre.
+
+Toute utilisation d’un outil d’IA générative pendant le défi constitue un non-respect de la consigne.
+
+## Fichier fourni
+
+Télécharger le fichier suivant:
+
+- [defi-technique-1-donnees.csv](defi-technique-1-donnees.csv)
+
+Le fichier contient volontairement plusieurs problèmes:
+
+- types de colonnes à convertir;
+- valeurs manquantes codées de différentes façons;
+- date invalide;
+- valeur numérique impossible;
+- ligne dupliquée;
+- identifiant manquant;
+- modalité non reconnue.
+
+## Structure attendue
+
+Créer ou utiliser un dossier `defi-technique-1/` dans le dépôt individuel.
+
+Structure minimale:
+
+```text
+defi-technique-1/
+  data/
+    raw/
+      defi-technique-1-donnees.csv
+    processed/
+  R/
+    01-nettoyage.R
+  README.md
+```
+
+Les noms exacts peuvent varier légèrement, mais le dépôt doit rester clair et reproductible.
+
+## Travail demandé
+
+### 1. Importer
+
+Importer le fichier depuis `data/raw/` avec un chemin relatif.
+
+Le script doit:
+
+- charger explicitement les packages utilisés;
+- lire le fichier;
+- traiter les codes de valeurs manquantes;
+- inspecter ou contrôler les types.
+
+### 2. Nettoyer
+
+Produire un objet `donnees_propres` ou un nom équivalent.
+
+Le nettoyage doit traiter au minimum:
+
+- les dates;
+- les colonnes numériques;
+- les valeurs manquantes importantes;
+- les doublons;
+- les valeurs impossibles;
+- les modalités de `etat_station`.
+
+Les décisions de nettoyage doivent être lisibles dans le code ou dans le README.
+
+### 3. Valider
+
+Ajouter au moins quatre assertions.
+
+Les assertions doivent vérifier au minimum:
+
+- aucune ligne sans `station_id`;
+- aucune date manquante après nettoyage;
+- aucune valeur négative dans `nb_passages`;
+- aucune valeur négative dans `precip_mm`;
+- aucune modalité de `etat_station` en dehors des valeurs acceptées;
+- aucune duplication de la clé `station_id` + `date_observation`.
+
+Il est acceptable de choisir quatre validations parmi cette liste, à condition que le choix soit cohérent avec le nettoyage effectué.
+
+### 4. Sauvegarder
+
+Sauvegarder la donnée propre dans:
+
+```text
+defi-technique-1/data/processed/defi1_donnees_propres.csv
+```
+
+Le fichier brut ne doit pas être modifié.
+
+### 5. Documenter
+
+Le fichier `README.md` doit contenir:
+
+- une courte description du défi;
+- la commande ou le script à exécuter;
+- deux problèmes trouvés dans les données;
+- deux décisions de nettoyage;
+- une limite restante;
+- la mention explicite que l’IA n’a pas été utilisée.
+
+### 6. Versionner
+
+Faire au moins deux commits lisibles.
+
+Exemples:
+
+```text
+Ajouter la structure du defi technique 1
+Nettoyer et valider les donnees du defi 1
+```
+
+## Remise
+
+Remettre l’URL du dépôt GitHub individuel contenant le dossier `defi-technique-1/`.
+
+La remise doit contenir:
+
+- le fichier brut dans `data/raw/`;
+- le script R;
+- le fichier propre dans `data/processed/`;
+- le README;
+- les commits Git.
+
+Le travail fait après la remise du défi ne modifie pas le livrable évalué.
+
+## Grille d’évaluation
+
+Le défi est évalué sur 10 points.
+
+| Critère | Points | Attente |
+|---|---:|---|
+| Structure de projet et Git | 1.5 | Dossiers clairs, chemins relatifs, au moins deux commits lisibles |
+| Importation | 1.5 | Fichier lu correctement, valeurs manquantes et types inspectés ou contrôlés |
+| Nettoyage | 2.0 | Problèmes principaux traités de façon lisible et cohérente |
+| Validation | 2.0 | Au moins quatre assertions pertinentes et exécutées |
+| Reproductibilité et sauvegarde | 1.0 | Script relançable, donnée propre sauvegardée au bon endroit |
+| README | 1.0 | Procédure, décisions, limite et absence d’IA documentées |
+| Qualité générale du code | 1.0 | Code lisible, organisé, sans chemins absolus ni manipulations manuelles opaques |
+| Total | 10.0 |  |
+
+## Attentes STT-6230
+
+Les personnes inscrites à STT-6230 doivent ajouter dans le README une justification technique de 5 à 8 lignes sur une décision de nettoyage discutable.
+
+Exemples:
+
+- transformer une valeur impossible en `NA`;
+- exclure une ligne;
+- recoder une modalité inconnue;
+- conserver une ligne malgré une valeur manquante.
+
+Cette attente est évaluée dans les mêmes 10 points, principalement dans les critères “Nettoyage”, “Validation” et “README”.
+
+## Déroulement de la séance
+
+| Moment | Activité |
+|---:|---|
+| 0:00 à 0:10 | Télécharger les données, créer la structure, vérifier la règle IA |
+| 0:10 à 0:50 | Importer, nettoyer, valider et sauvegarder |
+| 0:50 à 1:00 | Finaliser README, commits et remise |
+
+Après la remise, le reste de la séance sert à un atelier de consolidation sur un exemple analogue. Cet atelier n’est pas utilisé pour modifier le livrable évalué.
+
+## Checklist avant remise
+
+- Le script s’exécute depuis la racine du dépôt.
+- Le fichier brut est intact.
+- Le fichier propre est créé.
+- Les assertions passent.
+- Le README explique comment reproduire.
+- Les commits sont présents.
+- Aucun chemin absolu n’est utilisé.
+- Aucune IA générative n’a été utilisée.

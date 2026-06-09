@@ -44,6 +44,8 @@ Les trois défis techniques ne sont pas trois examens semblables. Ils ont trois 
 | Défi 2 | Semaine 8 | Vérifier la programmation avec aide encadrée | Fonctions, pipeline, visualisation, rapport Quarto court, capacité à documenter l’aide reçue | Permise, déclarée |
 | Défi 3 | Semaine 13 | Vérifier le jugement professionnel avec IA | Diagnostic, débogage, optimisation, parallélisation ou amélioration d’un mini-projet, validation des suggestions IA | Intégrée |
 
+La consigne détaillée du premier défi est disponible ici: [Défi technique 1 - Bases individuelles sans IA](defis/defi-technique-1.qmd).
+
 Le défi 1 répond à la question suivante: est-ce que l’étudiante ou l’étudiant peut fonctionner seul dans un projet R propre?
 
 Le défi 2 répond à la question suivante: est-ce que l’étudiante ou l’étudiant peut produire un livrable technique en utilisant l’IA de façon transparente et contrôlée?

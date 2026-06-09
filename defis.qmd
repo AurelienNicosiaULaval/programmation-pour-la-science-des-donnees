@@ -19,6 +19,8 @@ Chaque défi technique dure environ une heure. Le reste de la séance demeure un
 
 ## Défi technique 1
 
+Consigne détaillée: [Défi technique 1 - Bases individuelles sans IA](defis/defi-technique-1.qmd).
+
 Le premier défi vérifie les bases du travail individuel sans IA:
 
 - structure de projet;
