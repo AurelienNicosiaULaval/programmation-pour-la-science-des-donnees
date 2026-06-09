@@ -38,8 +38,8 @@ Une bonne demande d’aide contient:
 - Contribuer à la FAQ.
 - Orienter vers les ressources de rattrapage.
 
-## TODO
+## Informations à confirmer
 
-- Ajouter les noms et coordonnées.
-- Ajouter les disponibilités.
-- Ajouter les règles de délai de réponse.
+Les noms, coordonnées, disponibilités et délais de réponse seront ajoutés lorsque l’équipe enseignante et les modalités institutionnelles seront confirmées.
+
+En attendant, les demandes techniques doivent inclure les éléments listés ci-dessus afin de permettre un diagnostic reproductible.

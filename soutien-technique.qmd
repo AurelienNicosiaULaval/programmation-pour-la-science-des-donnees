@@ -46,7 +46,7 @@ L’IA peut aider à comprendre une erreur si le statut d’IA de la tâche le p
 
 ## Ressources de rattrapage
 
-Les ressources de rattrapage doivent couvrir au minimum:
+Les ressources de rattrapage couvrent au minimum:
 
 - importation et manipulation de données;
 - graphiques de base;
@@ -54,8 +54,14 @@ Les ressources de rattrapage doivent couvrir au minimum:
 - commits Git;
 - lecture de messages d’erreur.
 
-## TODO
+Ressource disponible pour le premier défi: [Rattrapage R/Git pour le défi technique 1](ressources/rattrapage-r-git-defi-1.qmd).
 
-- Ajouter les consignes SSH GitHub.
-- Ajouter une FAQ vivante.
-- Ajouter les ressources de rattrapage R.
+## Authentification GitHub
+
+L’authentification GitHub doit être configurée avant les remises qui utilisent un dépôt distant. La méthode privilégiée est SSH lorsque l’environnement de la personne étudiante le permet.
+
+Référence officielle: GitHub Docs, Connecting to GitHub with SSH: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>.
+
+## FAQ vivante
+
+Les questions récurrentes seront ajoutées ici au fil de la session, avec une réponse courte et une procédure de diagnostic reproductible.

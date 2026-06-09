@@ -29,19 +29,17 @@ Chaque préparation doit contenir:
 
 La préparation avant la séance doit rester raisonnable, environ 45 à 60 minutes au total.
 
-## Sources de référence à intégrer progressivement
+## Références principales
 
-- R for Data Science, 2e édition.
-- Happy Git and GitHub for the useR.
-- Documentation Quarto.
-- Advanced R.
-- R Packages, 2e édition.
-- Mastering Shiny.
-- Tidy Modeling with R.
-- Documentation `targets`, `future`, `furrr` et `renv`.
+- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). R for Data Science, 2e édition: <https://r4ds.hadley.nz/>.
+- Bryan, J. et Hester, J. Happy Git and GitHub for the useR: <https://happygitwithr.com/>.
+- Documentation officielle Quarto: <https://quarto.org/docs/>.
+- Wickham, H. (2019). Advanced R, 2e édition: <https://adv-r.hadley.nz/>.
+- Wickham, H. et Bryan, J. (2023). R Packages, 2e édition: <https://r-pkgs.org/>.
+- Wickham, H. (2021). Mastering Shiny: <https://mastering-shiny.org/>.
+- Kuhn, M. et Silge, J. (2022). Tidy Modeling with R: <https://www.tmwr.org/>.
+- Documentation officielle `renv`: <https://rstudio.github.io/renv/>.
 
-## TODO
+## Lectures par module
 
-- Ajouter les liens précis.
-- Identifier les lectures obligatoires et complémentaires.
-- Ajouter les extraits associés à chaque module.
+Les lectures obligatoires et complémentaires sont précisées dans les pages de chaque module. Les premières semaines privilégient les textes courts et directement exécutables afin de préparer les laboratoires.

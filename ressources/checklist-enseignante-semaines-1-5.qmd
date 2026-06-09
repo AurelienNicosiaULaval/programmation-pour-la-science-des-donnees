@@ -1,0 +1,77 @@
+---
+title: "Checklist enseignante semaines 1 à 5"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page sert de liste de vérification pour préparer les cinq premières semaines du cours. Elle ne contient pas la consigne exacte, le fichier de données ni la solution du défi technique 1.
+
+## Objectif
+
+Vérifier que le parcours étudiant mène progressivement au premier défi technique:
+
+1. créer et maintenir un projet R;
+2. utiliser Git et GitHub avec des commits lisibles;
+3. travailler avec des chemins relatifs;
+4. relancer un projet depuis une session propre;
+5. importer, nettoyer, valider et sauvegarder un petit jeu de données;
+6. remettre un livrable individuel sans IA pendant une période limitée à 1 h.
+
+## Avant la semaine 1
+
+- Vérifier que les pages [Démarrage](../demarrage.qmd), [Soutien technique](../soutien-technique.qmd) et [Communication](../communication.qmd) sont accessibles.
+- Préparer le canal officiel d’annonces et le canal de questions techniques.
+- Vérifier que les consignes de dépôt GitHub individuel sont prêtes.
+- Préparer un exemple minimal pour tester R, Quarto et Git.
+- Prévoir une procédure courte pour les personnes qui arrivent sans environnement fonctionnel.
+
+## Parcours étudiant simulé
+
+| Semaine | Ce que la personne étudiante doit pouvoir faire | Ce que l’équipe enseignante prépare | Point de vigilance |
+|---:|---|---|---|
+| 1 | Ouvrir R, lancer un script court, comprendre le rôle du portfolio et faire un premier diagnostic | Démonstration du dépôt, diagnostic non noté, aide à l’installation | Le diagnostic sert au soutien, pas au classement |
+| 2 | Créer ou nettoyer une structure de projet, utiliser des chemins relatifs et faire des commits | Exemple de dépôt propre, mini-test, activité Git guidée | Repérer rapidement les chemins absolus et les fichiers oubliés |
+| 3 | Gérer `.gitignore`, `renv` lorsque pertinent, dépendances et relance depuis une session propre | Jalon portfolio 1, activité de reproduction, rappel sur les secrets | Vérifier que les fichiers générés et secrets ne sont pas committés |
+| 4 | Importer, inspecter, nettoyer, valider et sauvegarder des données | Laboratoire de nettoyage, mini-test, pratique sans IA en fin de séance | Distinguer pratique formative et défi technique évalué |
+| 5 | Réaliser un défi individuel de 1 h sans IA, puis participer à un atelier de consolidation | Fichier évalué fourni au début du défi, minuterie, procédure de remise, activité analogue après remise | Le travail post-remise ne modifie pas le livrable évalué |
+
+## Semaine 5
+
+Avant la séance:
+
+- préparer le matériel exact du défi hors site public;
+- vérifier que le fichier évalué n’est pas lié dans le site;
+- préparer une procédure de remise simple;
+- préparer une activité analogue pour l’atelier de consolidation;
+- prévoir une courte grille de correction cohérente avec la page [Préparation au défi technique 1](../defis/preparation-defi-technique-1.qmd).
+
+Pendant la séance:
+
+1. rappeler la règle IA non permise;
+2. distribuer le fichier évalué au début du défi;
+3. laisser 60 minutes pour le travail individuel;
+4. vérifier la remise;
+5. faire une pause courte;
+6. animer un retour technique sans corriger les remises;
+7. lancer l’atelier de consolidation sur un exemple analogue.
+
+Après la séance:
+
+- archiver les remises;
+- noter les erreurs fréquentes;
+- ajuster la fiche de rattrapage si nécessaire;
+- préparer une solution minimale à publier seulement si elle ne révèle pas une variante réutilisée;
+- vérifier que le site public ne contient pas le matériel exact du défi.
+
+## Vérification rapide du site
+
+- La page [Calendrier](../calendrier.qmd) indique que le défi occupe environ 1 h.
+- La page [Défis techniques](../defis.qmd) indique que l’atelier suivant la remise ne modifie pas le livrable évalué.
+- La page [Évaluations](../evaluations.qmd) indique que la consigne exacte et le fichier évalué ne sont pas publiés sur le site.
+- La page [Préparation au défi technique 1](../defis/preparation-defi-technique-1.qmd) donne les compétences à pratiquer sans révéler le fichier évalué.
+- La fiche [Rattrapage R/Git pour le défi technique 1](rattrapage-r-git-defi-1.qmd) permet de pratiquer les gestes de base.
+
+## Décision à garder stable
+
+Le défi technique 1 est une vérification individuelle de base. Il ne doit pas devenir un examen long ni une séance complète. Le reste de la journée sert à apprendre à partir de tâches analogues, à consolider Git, les chemins relatifs, l’importation, le nettoyage et le portfolio.

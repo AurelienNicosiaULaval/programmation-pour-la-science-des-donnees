@@ -9,7 +9,7 @@ format:
 
 Le laboratoire part d’un petit fichier météorologique volontairement imparfait. La tâche consiste à produire une version propre, à documenter les décisions et à ajouter des vérifications minimales.
 
-Le jeu de données est fictif. Il sert à pratiquer le pipeline, pas à tirer des conclusions météorologiques.
+Le jeu de données est fictif. Il sert à pratiquer le pipeline, pas à tirer des conclusions météorologiques. Le défi technique 1 utilisera plutôt un jeu de données québécois réel ou un extrait pédagogique dérivé d’une source ouverte québécoise, fourni seulement au moment de l’évaluation.
 
 ## Objectifs
 

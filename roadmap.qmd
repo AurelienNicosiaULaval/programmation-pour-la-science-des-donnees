@@ -49,7 +49,7 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Module 3 | Fait | Dépendances, `.gitignore`, `renv`, reproductibilité et jalon portfolio 1. |
 | Module 4 | Fait | Données, nettoyage, validation, fichiers volumineux en aperçu, SQL/API en aperçu et assertions simples. |
 | Défi technique 1 | Fait | Directives publiques de préparation sur le site; consigne exacte et fichier évalué à conserver hors site jusqu’au moment du défi. |
-| Semaines 1 à 5 | En cours | Les modules 1 à 4 et le défi technique 1 sont prêts à tester; les ressources de rattrapage restent à renforcer. |
+| Semaines 1 à 5 | Fait | Parcours public simulé, checklist enseignante ajoutée, ressources de rattrapage prêtes et matériel exact du défi conservé hors site public. |
 | Couverture du contenu | À surveiller | SQL/API, fichiers volumineux, débogage, assertions et `testthat` doivent apparaître explicitement dans les semaines 4, 5, 10 et 15. |
 
 ## Vue d’ensemble
@@ -135,8 +135,8 @@ Livrables:
 - module 2 complet;
 - module 3 complet;
 - module 4 complet;
-- consigne du défi technique 1;
-- fichier de données du défi technique 1 conservé hors site jusqu’au moment de l’évaluation;
+- directives publiques du défi technique 1;
+- consigne exacte et fichier de données du défi technique 1 conservés hors site public jusqu’au moment de l’évaluation;
 - atelier sur débogage, messages d’erreur et assertions simples;
 - grille du défi technique 1.
 
@@ -271,10 +271,10 @@ Le site peut être utilisé comme version officielle de départ du cours.
 
 ## Prochaine action recommandée
 
-La prochaine étape logique est de compléter le soutien autour des premières semaines:
+La prochaine étape logique est de construire le module de visualisation de la semaine 6:
 
-1. préparer les ressources de rattrapage R/Git;
-2. préparer une solution minimale du défi technique 1 hors site public;
-3. vérifier le parcours étudiant de démarrage;
-4. relire les modules 1 à 4 et le défi technique 1 après une simulation des premières séances;
-5. planifier le module de visualisation de la semaine 6.
+1. fixer les objectifs de visualisation avec `ggplot2`;
+2. préparer un laboratoire sur une figure reproductible et améliorable;
+3. relier la visualisation à la proposition du projet d’équipe;
+4. définir la trace portfolio attendue;
+5. prévoir les critères du mini-test de la semaine 6.
