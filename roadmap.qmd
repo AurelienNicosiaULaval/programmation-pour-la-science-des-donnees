@@ -43,11 +43,12 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Gabarits de projet | Fait | Proposition de projet, contributions individuelles et journal IA. |
 | Gabarits hebdomadaires | Fait | Mini-test et journal de portfolio. |
 | Calendrier relatif | Fait | La structure hebdomadaire est alignée sur les jalons; les dates exactes restent à ajouter. |
-| Contenu pédagogique détaillé | En cours | Les modules 1, 2 et 3 sont maintenant prêts à tester; les autres modules restent à développer. |
+| Contenu pédagogique détaillé | En cours | Les modules 1 à 4 sont maintenant prêts à tester; les autres modules restent à développer. |
 | Module 1 | Fait | Mise en route, diagnostic technique, dépôt portfolio et ressources de dépannage. |
 | Module 2 | Fait | Structure de projet, Git, GitHub, chemins relatifs, mini-test et conventions. |
 | Module 3 | Fait | Dépendances, `.gitignore`, `renv`, reproductibilité et jalon portfolio 1. |
-| Semaines 1 à 5 | En cours | Les semaines 1 à 3 sont prêtes à tester; les semaines 4 et 5 restent prioritaires. |
+| Module 4 | Fait | Données, nettoyage, validation, fichiers volumineux en aperçu, SQL/API en aperçu et assertions simples. |
+| Semaines 1 à 5 | En cours | Les semaines 1 à 4 sont prêtes à tester; la semaine 5 reste prioritaire. |
 | Couverture du contenu | À surveiller | SQL/API, fichiers volumineux, débogage, assertions et `testthat` doivent apparaître explicitement dans les semaines 4, 5, 10 et 15. |
 
 ## Vue d’ensemble
@@ -132,6 +133,7 @@ Livrables:
 - module 1 complet;
 - module 2 complet;
 - module 3 complet;
+- module 4 complet;
 - consigne du défi technique 1;
 - atelier sur débogage, messages d’erreur et assertions simples;
 - grille du défi technique 1.
@@ -147,7 +149,7 @@ Objectif: développer les compétences de programmation professionnelle en R.
 Modules à développer:
 
 - Visualisation, à créer pour la semaine 6
-- [Rapports, applications web et tableaux de bord](modules/04-rapports-applications-tableaux-bord/index.qmd)
+- Rapports, applications web et tableaux de bord, à replacer dans la progression après la visualisation
 - [Programmation fonctionnelle](modules/06-programmation-fonctionnelle/index.qmd)
 - [Programmation orientée objet](modules/05-programmation-orientee-objet/index.qmd)
 - [Profilage, optimisation et performance](modules/07-profilage-optimisation-performance/index.qmd)
@@ -267,10 +269,10 @@ Le site peut être utilisé comme version officielle de départ du cours.
 
 ## Prochaine action recommandée
 
-La prochaine étape logique est de poursuivre la préparation des semaines 4 et 5:
+La prochaine étape logique est de poursuivre la préparation de la semaine 5:
 
-1. compléter la semaine 4 sur données, importation, validation, nettoyage, fichiers volumineux, SQL/API en aperçu et assertions;
-2. stabiliser la consigne du défi technique 1 en précisant le format 1 h + atelier de consolidation;
+1. stabiliser la consigne du défi technique 1 en précisant le format 1 h + atelier de consolidation;
+2. préparer le jeu de données et la solution minimale du défi technique 1;
 3. préparer les ressources de rattrapage R/Git;
 4. vérifier le parcours étudiant de démarrage;
-5. relire les modules 1 à 3 après une simulation de première séance.
+5. relire les modules 1 à 4 après une simulation des premières séances.

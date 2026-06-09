@@ -1,0 +1,140 @@
+---
+title: "Données, nettoyage et validation - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Checklist d’importation
+
+Avant de nettoyer:
+
+- le fichier est-il dans `data/raw/`?
+- le chemin est-il relatif?
+- le séparateur est-il correct?
+- les noms de colonnes sont-ils lisibles?
+- les valeurs manquantes sont-elles codées explicitement?
+- les types ont-ils été inspectés?
+- les messages d’importation ont-ils été lus?
+
+## Checklist de nettoyage
+
+Avant de sauvegarder:
+
+- les données brutes sont intactes;
+- chaque correction importante est documentée;
+- les types clés sont corrects;
+- les identifiants nécessaires ne sont pas manquants;
+- les valeurs impossibles sont traitées;
+- les doublons sont compris;
+- les assertions passent;
+- la version propre est sauvegardée dans `data/processed/`.
+
+## Assertions utiles
+
+Exemples à adapter:
+
+```r
+stopifnot(nrow(data) > 0)
+stopifnot(all(!is.na(data$id)))
+stopifnot(all(data$date >= as.Date("2000-01-01")))
+stopifnot(all(data$valeur >= 0 | is.na(data$valeur)))
+stopifnot(all(data$type %in% c("A", "B", "C")))
+```
+
+Pour un projet plus grand, ces vérifications pourront être déplacées dans des fonctions et testées avec `testthat` à partir de la semaine 10.
+
+## Messages d’erreur fréquents
+
+| Message ou symptôme | Cause possible | Réaction |
+|---|---|---|
+| Colonne lue en `<chr>` au lieu de `<dbl>` | Valeur non numérique ou décimale mal reconnue | Inspecter les valeurs distinctes et utiliser `parse_number()` |
+| Beaucoup de `NA` après conversion | Codes manquants non déclarés ou format inattendu | Vérifier `na =` et les valeurs originales |
+| Fichier introuvable | Mauvaise racine de projet ou chemin absolu | Repartir de la racine et vérifier `getwd()` |
+| Jointure qui augmente trop le nombre de lignes | Clé non unique | Compter les clés avant la jointure |
+| Script qui marche seulement sur une machine | Chemin local ou fichier non versionné | Utiliser chemins relatifs et README |
+
+## Aperçu fichiers volumineux
+
+Si un fichier est trop lourd:
+
+- éviter de le committer dans Git;
+- garder un échantillon reproductible pour l’enseignement ou les tests;
+- lire seulement les colonnes nécessaires;
+- envisager `vroom` pour des fichiers délimités;
+- envisager `arrow` ou Parquet pour des données plus grandes;
+- envisager `duckdb` pour interroger sans tout charger en mémoire.
+
+## Aperçu SQL
+
+Structure minimale d’une extraction:
+
+```r
+# Load libraries
+library(DBI)
+library(duckdb)
+
+# Connect to an in-memory database
+con <- dbConnect(duckdb(), dbdir = ":memory:")
+
+# Copy an R data frame to the database
+dbWriteTable(con, "meteo", donnees_nettoyees)
+
+# Query only the summary needed
+resume <- dbGetQuery(
+  con,
+  "
+  select
+    station_id,
+    avg(temperature_c) as temperature_moyenne
+  from meteo
+  group by station_id
+  "
+)
+
+dbDisconnect(con, shutdown = TRUE)
+```
+
+## Aperçu API
+
+Une requête API doit être documentée:
+
+- URL;
+- paramètres;
+- date de téléchargement;
+- statut de la réponse;
+- fichier brut sauvegardé si possible;
+- transformation effectuée après réception.
+
+Exemple de squelette:
+
+```r
+# Load libraries
+library(httr2)
+
+# Build request
+req <- request("https://exemple.org/api/donnees") |>
+  req_url_query(region = "QC", format = "json")
+
+# Perform request
+resp <- req_perform(req)
+
+# Check response
+resp_check_status(resp)
+
+# Parse JSON content
+donnees_api <- resp_body_json(resp)
+```
+
+Ce squelette ne doit pas être exécuté tel quel: l’URL est fictive.
+
+## Sources
+
+- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). R for Data Science, 2e édition: <https://r4ds.hadley.nz/>.
+- Documentation officielle `readr`: <https://readr.tidyverse.org/>.
+- Documentation officielle `vroom`: <https://vroom.tidyverse.org/>.
+- Documentation officielle `DBI`: <https://dbi.r-dbi.org/>.
+- Documentation officielle `dbplyr`: <https://dbplyr.tidyverse.org/>.
+- Documentation DuckDB R Client: <https://duckdb.org/docs/current/clients/r>.
+- Documentation officielle `httr2`: <https://httr2.r-lib.org/>.
+- Documentation Apache Arrow R: <https://arrow.apache.org/docs/r/>.

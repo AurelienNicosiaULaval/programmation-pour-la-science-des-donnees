@@ -1,0 +1,45 @@
+---
+title: "Données, nettoyage et validation - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Lectures obligatoires
+
+Lire avant la séance:
+
+1. Wickham, Çetinkaya-Rundel et Grolemund (2023), R for Data Science, 2e édition, chapitre [Data import](https://r4ds.hadley.nz/data-import).
+2. Wickham, Çetinkaya-Rundel et Grolemund (2023), R for Data Science, 2e édition, chapitre [Data tidying](https://r4ds.hadley.nz/data-tidy).
+3. Documentation officielle `readr`, page [Read Rectangular Text Data](https://readr.tidyverse.org/).
+
+## Lectures ciblées pendant le laboratoire
+
+Consulter au besoin:
+
+- documentation `tidyr`, fonction [`pivot_longer()`](https://tidyr.tidyverse.org/reference/pivot_longer.html);
+- documentation `dplyr`, page [Mutating joins](https://dplyr.tidyverse.org/reference/mutate-joins.html);
+- documentation `vroom`, page [Read and Write Rectangular Text Data Quickly](https://vroom.tidyverse.org/);
+- documentation `readxl`, page [Read Excel Files](https://readxl.tidyverse.org/).
+
+## Aperçu SQL, API et fichiers volumineux
+
+Ces lectures ne sont pas à maîtriser entièrement cette semaine. Elles servent à savoir où aller quand un CSV local n’est plus le bon outil.
+
+- Documentation officielle `DBI`, page [R Database Interface](https://dbi.r-dbi.org/).
+- Documentation officielle `dbplyr`, page [A dplyr backend for databases](https://dbplyr.tidyverse.org/).
+- Documentation DuckDB, page [R Client](https://duckdb.org/docs/current/clients/r).
+- Documentation officielle `httr2`, page [Perform HTTP Requests and Process the Responses](https://httr2.r-lib.org/).
+- Documentation Apache Arrow R, page [Arrow R Package](https://arrow.apache.org/docs/r/).
+
+## Questions de lecture
+
+1. Pourquoi est-il risqué de laisser R deviner les types de colonnes sans inspection?
+2. Comment distinguer une valeur manquante réelle d’un code comme `"N/D"`?
+3. Pourquoi conserver les données brutes intactes?
+4. Quelle vérification minimale ferait échouer le pipeline si les données changent?
+5. Quand une base de données ou un format comme Parquet devient-il plus approprié qu’un CSV?
+
+## Référence bibliographique principale
+
+Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). R for Data Science, 2e édition. O’Reilly. Version en ligne: <https://r4ds.hadley.nz/>.

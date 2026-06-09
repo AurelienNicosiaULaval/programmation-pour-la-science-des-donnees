@@ -1,0 +1,67 @@
+---
+title: "Données, nettoyage et validation - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif après la séance
+
+Stabiliser la trace de la semaine 4 et préparer le défi technique 1. Le dépôt doit montrer que le pipeline peut être relancé et que les décisions de nettoyage sont documentées.
+
+## À faire
+
+1. Relancer le script de nettoyage depuis une session R propre.
+2. Vérifier que les fichiers attendus sont créés dans `data/processed/`.
+3. Lire le fichier `docs/nettoyage-semaine-04.md`.
+4. Ajouter une courte entrée dans le journal de portfolio.
+5. Vérifier `git status`.
+6. Faire un commit final si nécessaire.
+
+## Entrée de portfolio suggérée
+
+Répondre en 150 à 250 mots:
+
+- Quelle erreur de données as-tu détectée?
+- Comment l’as-tu corrigée ou documentée?
+- Quelle assertion protège ton pipeline?
+- Quelle limite reste présente?
+- Qu’est-ce que tu devrais être capable de refaire sans IA au défi 1?
+
+## Checklist de préparation au défi technique 1
+
+| Élément | Vérification |
+|---|---|
+| Projet | Le dépôt s’ouvre depuis la racine |
+| Chemins | Aucun chemin absolu local |
+| Données | Les données brutes et transformées sont séparées |
+| Script | Le pipeline se relance en entier |
+| Assertions | Une erreur importante arrête le script |
+| README | La procédure minimale est indiquée |
+| Git | Les commits sont lisibles |
+| IA | Aucune dépendance à l’IA pour les gestes de base |
+
+## Erreurs fréquentes à corriger
+
+- sauvegarder le fichier propre dans `data/raw/`;
+- modifier manuellement un CSV sans documenter la décision;
+- ignorer les messages de type imprimés par `readr`;
+- utiliser un chemin local comme `/Users/...`;
+- supprimer des lignes sans expliquer pourquoi;
+- confondre “aucune précipitation” et “précipitation inconnue”;
+- oublier de relancer depuis une session propre.
+
+## Si le travail n’est pas terminé
+
+Prioriser dans cet ordre:
+
+1. script qui se relance;
+2. fichier propre sauvegardé;
+3. assertions minimales;
+4. note de nettoyage;
+5. entrée portfolio;
+6. amélioration du style de code.
+
+## Place de l’IA
+
+L’IA peut servir à relire la note de nettoyage ou à expliquer un message d’erreur. Ne pas l’utiliser pour remplacer la pratique individuelle requise avant le défi technique 1.

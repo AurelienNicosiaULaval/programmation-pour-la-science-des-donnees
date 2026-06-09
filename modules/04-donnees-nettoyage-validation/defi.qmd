@@ -1,0 +1,63 @@
+---
+title: "Données, nettoyage et validation - Défi de module"
+format:
+  html:
+    embed-resources: true
+---
+
+## Rôle du défi de module
+
+Ce défi de module est une trace formative. Il prépare le défi technique 1 de la semaine 5, mais il ne le remplace pas.
+
+## Objectif
+
+Nettoyer un second petit fichier de données et produire une note de validation courte.
+
+## Consigne
+
+À partir d’un fichier fourni en laboratoire ou d’un fichier créé par la personne enseignante:
+
+1. importer les données avec des chemins relatifs;
+2. inspecter les types et les valeurs manquantes;
+3. corriger au moins trois problèmes;
+4. ajouter au moins trois assertions;
+5. sauvegarder la version propre dans `data/processed/`;
+6. documenter les décisions dans `docs/nettoyage-defi-module-04.md`;
+7. faire au moins un commit lisible.
+
+## Livrables
+
+- script R de nettoyage;
+- fichier propre dans `data/processed/`;
+- note de nettoyage dans `docs/`;
+- commits Git lisibles.
+
+## Contraintes
+
+- Les données brutes ne doivent pas être écrasées.
+- Les chemins absolus sont interdits.
+- Une correction manuelle doit être documentée.
+- Les assertions doivent être exécutées dans le script.
+- Le dépôt doit pouvoir être relancé depuis une session propre.
+
+## Place de l’IA
+
+Statut: permise pour comprendre et diagnostiquer; déclarée si elle influence le livrable.
+
+Pour préparer le défi technique 1, refaire au moins une partie du défi de module sans IA: importation, inspection, nettoyage minimal, assertion et commit.
+
+## Critères
+
+| Critère | Attente |
+|---|---|
+| Importation | Fichier lu depuis un chemin relatif avec types inspectés |
+| Nettoyage | Transformations lisibles et justifiées |
+| Validation | Assertions pertinentes et exécutées |
+| Reproductibilité | Script relançable depuis la racine |
+| Documentation | Décisions de nettoyage explicites |
+| Git | Commits cohérents |
+| IA | Usage déclaré lorsque pertinent |
+
+## Variante STT-6230
+
+Ajouter une comparaison entre une validation par assertions simples et une validation plus structurée qui pourrait être automatisée dans un projet plus grand.

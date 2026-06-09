@@ -1,0 +1,197 @@
+---
+title: "Données, nettoyage et validation - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Mise en contexte
+
+Le laboratoire part d’un petit fichier météorologique volontairement imparfait. La tâche consiste à produire une version propre, à documenter les décisions et à ajouter des vérifications minimales.
+
+Le jeu de données est fictif. Il sert à pratiquer le pipeline, pas à tirer des conclusions météorologiques.
+
+## Objectifs
+
+- Créer une structure `data/raw/` et `data/processed/`.
+- Lire un fichier brut avec des types contrôlés.
+- Corriger des valeurs manquantes, formats numériques et doublons.
+- Ajouter des assertions.
+- Sauvegarder une version propre.
+- Faire des commits lisibles.
+
+## Script de départ complet
+
+Créer un fichier `scripts/04-nettoyage-meteo.R` ou `R/04-nettoyage-meteo.R`, puis y placer le code suivant.
+
+```r
+# Load libraries
+library(tidyverse)
+
+# Create project folders
+dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
+dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
+dir.create("docs", recursive = TRUE, showWarnings = FALSE)
+
+# Create a small raw data file for the exercise
+meteo_brut <- tribble(
+  ~station_id, ~date_obs, ~temperature_c, ~precip_mm, ~qualite,
+  "QC-001", "2026-01-03", "-8,2", "0", "ok",
+  "QC-001", "2026-01-04", "-6,1", "2,5", "ok",
+  "QC-002", "2026-01-03", "N/D", "1,0", "a_verifier",
+  "QC-002", "2026-01-04", "-5,4", "-3,0", "erreur",
+  "QC-003", "2026-01-03", "-12,0", "", "ok",
+  "QC-003", "2026-01-03", "-12,0", "", "ok"
+)
+
+write_csv2(meteo_brut, "data/raw/meteo_quebec_brut.csv", na = "")
+
+# Import raw data
+donnees_brutes <- read_csv2(
+  "data/raw/meteo_quebec_brut.csv",
+  col_types = cols(.default = col_character()),
+  na = c("", "NA", "N/D")
+)
+
+# Inspect raw data
+glimpse(donnees_brutes)
+summary(donnees_brutes)
+count(donnees_brutes, station_id)
+
+# Clean data
+donnees_nettoyees <- donnees_brutes |>
+  mutate(
+    date_obs = lubridate::ymd(date_obs),
+    temperature_c = parse_number(
+      temperature_c,
+      locale = locale(decimal_mark = ",")
+    ),
+    precip_mm = parse_number(
+      precip_mm,
+      locale = locale(decimal_mark = ",")
+    ),
+    qualite = str_to_lower(qualite),
+    precip_mm = if_else(precip_mm < 0, NA_real_, precip_mm)
+  ) |>
+  filter(!is.na(station_id), !is.na(date_obs)) |>
+  distinct()
+
+# Validation
+stopifnot(nrow(donnees_nettoyees) > 0)
+stopifnot(all(!is.na(donnees_nettoyees$station_id)))
+stopifnot(all(!is.na(donnees_nettoyees$date_obs)))
+stopifnot(all(donnees_nettoyees$precip_mm >= 0 | is.na(donnees_nettoyees$precip_mm)))
+stopifnot(all(donnees_nettoyees$qualite %in% c("ok", "a_verifier", "erreur")))
+
+# Summarize missingness after cleaning
+resume_validation <- donnees_nettoyees |>
+  summarise(
+    n_lignes = n(),
+    n_stations = n_distinct(station_id),
+    n_temperature_manquante = sum(is.na(temperature_c)),
+    n_precipitation_manquante = sum(is.na(precip_mm))
+  )
+
+print(resume_validation)
+
+# Save processed data
+write_csv(donnees_nettoyees, "data/processed/meteo_quebec_propre.csv")
+write_csv(resume_validation, "data/processed/resume_validation.csv")
+
+# Optional SQL preview with DuckDB if installed
+if (requireNamespace("duckdb", quietly = TRUE) &&
+    requireNamespace("DBI", quietly = TRUE)) {
+  con <- DBI::dbConnect(duckdb::duckdb(), dbdir = ":memory:")
+  on.exit(DBI::dbDisconnect(con, shutdown = TRUE), add = TRUE)
+
+  DBI::dbWriteTable(con, "meteo", donnees_nettoyees)
+
+  resume_sql <- DBI::dbGetQuery(
+    con,
+    "
+    select
+      station_id,
+      avg(temperature_c) as temperature_moyenne,
+      sum(precip_mm) as precipitation_totale
+    from meteo
+    group by station_id
+    order by station_id
+    "
+  )
+
+  print(resume_sql)
+}
+```
+
+## Travail demandé
+
+### Partie 1 - Exécuter et inspecter
+
+1. Exécuter le script une première fois.
+2. Lire les messages d’importation.
+3. Inspecter `donnees_brutes` et `donnees_nettoyees`.
+4. Identifier au moins quatre problèmes présents dans la donnée brute.
+
+### Partie 2 - Documenter les décisions
+
+Créer `docs/nettoyage-semaine-04.md` avec:
+
+- la liste des problèmes détectés;
+- la correction effectuée pour chacun;
+- une décision qui pourrait être contestée;
+- une vérification qui protège contre une erreur future.
+
+### Partie 3 - Ajouter une fonction de validation
+
+Remplacer les assertions dispersées par une fonction:
+
+```r
+verifier_meteo <- function(data) {
+  stopifnot(nrow(data) > 0)
+  stopifnot(all(!is.na(data$station_id)))
+  stopifnot(all(!is.na(data$date_obs)))
+  stopifnot(all(data$precip_mm >= 0 | is.na(data$precip_mm)))
+  stopifnot(all(data$qualite %in% c("ok", "a_verifier", "erreur")))
+  invisible(data)
+}
+
+verifier_meteo(donnees_nettoyees)
+```
+
+### Partie 4 - Committer
+
+Faire au moins deux commits:
+
+1. `Ajouter le pipeline de nettoyage meteo`
+2. `Documenter les validations de la semaine 4`
+
+## Extension individuelle
+
+Modifier le fichier brut pour ajouter une nouvelle erreur, par exemple:
+
+- une date impossible;
+- une station manquante;
+- une qualité non reconnue;
+- une précipitation négative;
+- une ligne dupliquée avec une valeur différente.
+
+Adapter le pipeline pour que cette erreur soit détectée ou documentée.
+
+## Variante STT-6230
+
+Ajouter une note de 250 à 350 mots qui compare deux stratégies:
+
+- corriger la précipitation négative en `NA`;
+- exclure complètement la ligne.
+
+La note doit expliquer la conséquence statistique possible de chaque choix.
+
+## Trace de sortie
+
+Avant de quitter:
+
+- relancer le script depuis une session R propre;
+- vérifier que `data/processed/meteo_quebec_propre.csv` existe;
+- vérifier que les assertions passent;
+- faire `git status`;
+- pousser si la consigne de dépôt le demande.

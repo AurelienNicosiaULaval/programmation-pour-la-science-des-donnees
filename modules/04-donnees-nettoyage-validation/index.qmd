@@ -1,0 +1,75 @@
+---
+title: "Données, nettoyage et validation"
+description: "Importer, diagnostiquer, nettoyer et sauvegarder des données avec des vérifications explicites"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment transformer un fichier de données imparfait en jeu de données documenté, nettoyé, sauvegardé et vérifié?
+
+## Rôle dans le cours
+
+La semaine 4 prépare directement le défi technique 1. Les semaines 1 à 3 ont stabilisé le dépôt, GitHub, les chemins relatifs, les dépendances et la reproductibilité. Cette semaine ajoute le premier pipeline de données: importer, inspecter, corriger, valider, sauvegarder et documenter.
+
+Le but n’est pas de couvrir toutes les sources de données possibles. Le but est que chaque personne sache quoi vérifier lorsqu’un fichier ne se lit pas comme prévu, lorsqu’une colonne a le mauvais type, lorsqu’une valeur impossible apparaît ou lorsqu’un fichier devient trop lourd pour une manipulation naïve.
+
+## Objectifs du module
+
+À la fin de la semaine, chaque personne devrait pouvoir:
+
+- importer un fichier texte rectangulaire avec des types de colonnes explicites;
+- reconnaître les problèmes fréquents d’importation: noms de colonnes, valeurs manquantes, séparateurs, encodage, types et lignes dupliquées;
+- nettoyer un jeu de données en gardant une trace lisible des décisions;
+- ajouter des assertions simples avec `stopifnot()` ou une fonction de vérification;
+- sauvegarder une version propre dans `data/processed/`;
+- distinguer données brutes, données transformées et résultats;
+- expliquer quand envisager `vroom`, `duckdb`, `arrow` ou une extraction SQL/API;
+- préparer le défi technique 1 sans dépendre de l’IA.
+
+## Livrables de la semaine
+
+| Élément | Trace attendue |
+|---|---|
+| Mini-test | Questions courtes sur importation, types, valeurs manquantes, assertions et chemins |
+| Laboratoire | Script de nettoyage reproductible et version propre des données |
+| Portfolio | Courte note sur une erreur de données trouvée et la vérification utilisée |
+| Git | Commits lisibles séparant importation, nettoyage et documentation |
+| Préparation au défi 1 | Dépôt capable de relancer un pipeline simple sans IA |
+
+## Déroulement
+
+| Moment | Page à utiliser | Résultat |
+|---|---|---|
+| Avant la classe | [Avant la classe](avant.qmd) | Lire un court exemple d’importation et préparer le mini-test |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Diagnostiquer les erreurs fréquentes et choisir les vérifications |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Construire un pipeline `raw -> processed` avec assertions |
+| Après la classe | [Après la classe](apres.qmd) | Finaliser la trace portfolio et préparer le défi 1 |
+
+## Place de l’IA
+
+Statut: permise pour comprendre, diagnostiquer et comparer des options; déclarée si elle influence le livrable.
+
+L’IA peut aider à expliquer un message d’erreur, à proposer une fonction de nettoyage ou à comparer deux stratégies. La personne étudiante doit toutefois exécuter le code, inspecter les sorties et être capable d’expliquer chaque transformation.
+
+Le défi technique 1 de la semaine 5 se fera sans IA. La semaine 4 doit donc aussi inclure du temps de pratique sans assistance pour consolider les gestes de base.
+
+## Sources techniques
+
+Les outils présentés s’appuient sur la documentation officielle de `readr`, `tidyr`, `dplyr`, `vroom`, `DBI`, `dbplyr`, `duckdb`, `httr2` et `arrow`, ainsi que sur les chapitres d’importation et de données rangées de R for Data Science, deuxième édition. Les liens sont regroupés dans les pages [Lectures](lectures.qmd) et [Ressources](ressources.qmd).
+
+## Variante STT-6230
+
+Ajouter une courte note technique de 250 à 350 mots sur une limite du pipeline de nettoyage. Exemples: hypothèse discutable sur les valeurs manquantes, choix d’exclure une ligne, conversion de type incertaine, limite d’un CSV pour un fichier volumineux, ou intérêt d’une requête SQL plutôt qu’un chargement complet en mémoire.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Après la classe](apres.qmd)
+- [Défi de module](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)

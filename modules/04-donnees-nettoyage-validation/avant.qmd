@@ -1,0 +1,62 @@
+---
+title: "Données, nettoyage et validation - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Arriver en classe avec les gestes de base prêts: lire un fichier, inspecter les types, repérer les valeurs manquantes et comprendre pourquoi une vérification explicite est nécessaire.
+
+## À faire avant la séance
+
+1. Lire les sections obligatoires de la page [Lectures](lectures.qmd).
+2. Vérifier que le dépôt portfolio contient les dossiers `data/raw/`, `data/processed/`, `R/` et `docs/`.
+3. Ouvrir une session R propre depuis la racine du projet.
+4. Tester les commandes suivantes dans la console:
+
+```r
+# Load libraries
+library(tidyverse)
+
+# Check project folders
+dir.exists(c("data/raw", "data/processed", "R", "docs"))
+```
+
+Si une valeur est `FALSE`, créer le dossier manquant avant la séance.
+
+## Mini-test de préparation
+
+Le mini-test peut porter sur:
+
+- la différence entre données brutes et données nettoyées;
+- le rôle de `col_types`;
+- la différence entre `NA`, chaîne vide et code de valeur manquante comme `"N/D"`;
+- l’usage de `parse_number()`, `ymd()` ou `as.Date()`;
+- le rôle d’une assertion;
+- le choix entre lire tout un fichier en mémoire ou utiliser un outil comme `vroom`, `duckdb` ou `arrow`.
+
+## Questions à préparer
+
+Répondre brièvement dans le journal de portfolio:
+
+1. Quel type d’erreur d’importation as-tu déjà rencontré?
+2. Quelle différence fais-tu entre nettoyer une donnée et modifier arbitrairement une donnée?
+3. Quelle vérification minimale devrais-tu faire avant de sauvegarder un fichier propre?
+
+## Pratique sans IA
+
+Pendant 15 à 20 minutes, pratiquer sans IA:
+
+- ouvrir un script R;
+- lire un fichier;
+- inspecter `glimpse()`, `summary()` et `count()`;
+- corriger une colonne;
+- sauvegarder un fichier dans `data/processed/`.
+
+Cette pratique prépare le défi technique 1, qui sera sans IA.
+
+## Place de l’IA
+
+L’IA est permise pour comprendre une lecture ou un message d’erreur. Si elle influence une décision de nettoyage ou une phrase du portfolio, ajouter une entrée dans `docs/ai-log.md`.

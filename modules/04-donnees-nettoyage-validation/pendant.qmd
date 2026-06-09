@@ -1,0 +1,81 @@
+---
+title: "Données, nettoyage et validation - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de la séance
+
+Construire un réflexe professionnel: ne pas seulement obtenir un tableau qui “marche”, mais produire une donnée propre dont les transformations sont lisibles et vérifiées.
+
+## Séquence proposée
+
+| Bloc | Durée | Activité | Résultat |
+|---|---:|---|---|
+| Retour sur le mini-test | 15 min | Types, valeurs manquantes, chemins, assertions | Clarifier les erreurs fréquentes |
+| Démonstration | 30 min | Importer un fichier imparfait et lire les messages | Identifier les problèmes avant de nettoyer |
+| Discussion guidée | 20 min | Quoi corriger, quoi garder, quoi documenter | Distinguer correction et décision arbitraire |
+| Laboratoire | 90 min | Pipeline `raw -> processed` | Script et fichier propre |
+| Retour technique | 25 min | Comparer les vérifications | Préparer le défi 1 |
+
+## Points techniques à montrer
+
+### Importation
+
+- utiliser des chemins relatifs;
+- lire le message imprimé par `readr`;
+- spécifier les types de colonnes lorsque le fichier est stabilisé;
+- reconnaître un séparateur inadéquat;
+- repérer un problème d’encodage ou de décimale.
+
+### Diagnostic
+
+- inspecter `glimpse()`, `count()`, `distinct()`, `summary()` et `problems()`;
+- compter les valeurs manquantes par colonne;
+- chercher les lignes dupliquées;
+- vérifier les valeurs impossibles;
+- repérer une clé non unique avant une jointure.
+
+### Nettoyage
+
+- renommer les colonnes de façon cohérente;
+- convertir les types;
+- recoder les valeurs manquantes;
+- documenter une exclusion;
+- sauvegarder la donnée nettoyée sans écraser la donnée brute.
+
+### Validation
+
+- écrire des assertions simples avec `stopifnot()`;
+- créer une petite fonction `verifier_donnees()`;
+- arrêter le pipeline si une hypothèse minimale est violée;
+- garder les vérifications proches du code de nettoyage.
+
+## Aperçu fichiers volumineux, SQL et API
+
+Cette semaine introduit seulement les réflexes de base:
+
+- si un fichier est trop lourd pour être chargé confortablement, envisager `vroom`, `arrow`, `duckdb` ou une lecture par colonnes;
+- si les données vivent dans une base, extraire seulement les colonnes et lignes nécessaires avec SQL;
+- si les données viennent d’une API, sauvegarder la réponse brute ou un extrait reproductible, puis documenter la requête.
+
+Ces outils seront repris plus tard. Ici, ils servent surtout à comprendre pourquoi un pipeline doit être explicite et vérifiable.
+
+## Questions de discussion
+
+- Quelle transformation est purement technique?
+- Quelle transformation demande un jugement statistique?
+- Quelle erreur devrait arrêter le pipeline immédiatement?
+- Quelle erreur peut être documentée sans bloquer l’analyse?
+- Qu’est-ce qui doit apparaître dans le README?
+
+## Préparation au défi 1
+
+Terminer la séance avec 10 minutes sans IA:
+
+- retrouver le script;
+- relancer le pipeline;
+- inspecter le fichier sauvegardé;
+- expliquer une assertion;
+- faire un commit clair.
