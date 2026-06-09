@@ -61,6 +61,8 @@ Avant le défi, chaque personne devrait être capable de refaire sans IA:
 
 Pour se préparer, reprendre les activités du module [Données, nettoyage et validation](../modules/04-donnees-nettoyage-validation/index.qmd).
 
+Une fiche de rattrapage est aussi disponible ici: [Rattrapage R/Git pour le défi technique 1](../ressources/rattrapage-r-git-defi-1.qmd).
+
 À pratiquer en priorité:
 
 - relancer le laboratoire depuis une session R propre;

@@ -32,6 +32,7 @@ Cette page regroupe les ressources utiles pour le cours.
 - [Dépendances R](dependances.qmd)
 - [Soutien technique](soutien-technique.qmd)
 - [Politique IA](ia.qmd)
+- [Rattrapage R/Git pour le défi technique 1](ressources/rattrapage-r-git-defi-1.qmd)
 
 ## Documents sources du projet
 
@@ -41,7 +42,10 @@ Un seul PDF de cadrage est conservé à la racine du dépôt afin d’éviter le
 
 La page [Cadrage pédagogique](cadrage.qmd) traduit ce document en décisions opérationnelles pour le site.
 
-## TODO
+## Liens de référence
 
-- Ajouter les liens officiels validés.
-- Ajouter les jeux de données recommandés.
+- R for Data Science, 2e édition: <https://r4ds.hadley.nz/>
+- Documentation officielle `readr`: <https://readr.tidyverse.org/>
+- Documentation officielle `dplyr`: <https://dplyr.tidyverse.org/>
+- Documentation officielle `stringr`: <https://stringr.tidyverse.org/>
+- Happy Git and GitHub for the useR: <https://happygitwithr.com/>

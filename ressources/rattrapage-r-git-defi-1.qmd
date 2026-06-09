@@ -1,0 +1,157 @@
+---
+title: "Rattrapage R/Git pour le défi technique 1"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif
+
+Cette fiche aide à se préparer au défi technique 1 sans révéler la consigne évaluée. Elle regroupe les gestes à pratiquer avant le défi: structure de projet, importation CSV, nettoyage minimal, assertions, sauvegarde et commits Git.
+
+## Séquence minimale à pratiquer
+
+Avant le défi, refaire cette séquence sans IA:
+
+1. créer les dossiers `data/raw/`, `data/processed/`, `R/` et `docs/`;
+2. placer un fichier CSV dans `data/raw/`;
+3. créer un script dans `R/`;
+4. charger explicitement les packages;
+5. lire le fichier avec un chemin relatif;
+6. inspecter les noms, types et valeurs manquantes;
+7. convertir une date ou une colonne numérique;
+8. créer une variable dérivée simple;
+9. écrire au moins quatre assertions;
+10. sauvegarder une version propre dans `data/processed/`;
+11. écrire un README court;
+12. faire au moins deux commits lisibles.
+
+## Structure de projet
+
+Structure recommandée:
+
+```text
+defi-technique-1/
+  data/
+    raw/
+    processed/
+  R/
+  README.md
+```
+
+Commandes utiles dans R:
+
+```r
+dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
+dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
+dir.create("R", recursive = TRUE, showWarnings = FALSE)
+```
+
+## Importation CSV
+
+Exemple générique:
+
+```r
+# Load libraries
+library(tidyverse)
+
+# Import data
+donnees_brutes <- read_csv(
+  "data/raw/mon_fichier.csv",
+  col_types = cols(.default = col_character())
+)
+
+# Inspect
+glimpse(donnees_brutes)
+summary(donnees_brutes)
+```
+
+Lire d’abord les colonnes comme texte peut aider à préserver les codes géographiques ou administratifs. Ensuite, convertir explicitement les colonnes nécessaires.
+
+## Conversions fréquentes
+
+```r
+donnees_propres <- donnees_brutes |>
+  mutate(
+    date = lubridate::ymd(date),
+    population = parse_number(population),
+    superficie = parse_number(superficie),
+    densite = population / superficie
+  )
+```
+
+À vérifier:
+
+- une date invalide devient souvent `NA`;
+- un code comme `"01"` ne doit pas devenir `1` si le zéro est significatif;
+- une colonne numérique importée comme texte doit être convertie avant les calculs;
+- une division par zéro ou par une valeur manquante doit être comprise.
+
+## Assertions
+
+Une assertion sert à arrêter le script si une hypothèse importante est fausse.
+
+Exemples:
+
+```r
+stopifnot(nrow(donnees_propres) > 0)
+stopifnot(all(!is.na(donnees_propres$id)))
+stopifnot(all(donnees_propres$population >= 0))
+stopifnot(all(donnees_propres$superficie > 0))
+stopifnot(all(donnees_propres$densite >= 0))
+```
+
+Une bonne assertion vérifie une condition importante pour la suite. Une assertion décorative ne protège pas le pipeline.
+
+## Sauvegarde
+
+```r
+write_csv(donnees_propres, "data/processed/donnees_propres.csv")
+```
+
+Ne jamais écraser le fichier brut dans `data/raw/`.
+
+## README minimal
+
+Le README devrait indiquer:
+
+- la source du fichier;
+- le script à exécuter;
+- deux transformations effectuées;
+- deux vérifications ou assertions;
+- une limite restante;
+- la règle IA respectée.
+
+## Git avant remise
+
+Commandes utiles:
+
+```bash
+git status
+git add .
+git commit -m "Ajouter la structure du defi"
+git commit -m "Nettoyer et valider les donnees"
+git status
+git push
+```
+
+Avant de remettre, vérifier que `git status` ne cache pas un fichier important oublié.
+
+## Erreurs à éviter
+
+- utiliser un chemin absolu;
+- travailler dans la console sans script;
+- modifier manuellement le fichier brut;
+- sauvegarder la donnée propre dans `data/raw/`;
+- oublier de relancer le script depuis une session propre;
+- écrire des assertions qui ne testent rien;
+- committer seulement à la toute fin avec un message vague;
+- utiliser l’IA pendant le défi.
+
+## Sources utiles
+
+- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). R for Data Science, 2e édition: <https://r4ds.hadley.nz/>.
+- Documentation officielle `readr`: <https://readr.tidyverse.org/>.
+- Documentation officielle `dplyr`: <https://dplyr.tidyverse.org/>.
+- Documentation officielle `stringr`: <https://stringr.tidyverse.org/>.
+- Bryan, J. et Hester, J. Happy Git and GitHub for the useR: <https://happygitwithr.com/>.

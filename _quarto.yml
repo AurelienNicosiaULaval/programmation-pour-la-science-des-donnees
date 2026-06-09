@@ -84,6 +84,7 @@ website:
         - demarrage.qmd
         - lectures.qmd
         - ressources.qmd
+        - ressources/rattrapage-r-git-defi-1.qmd
         - dependances.qmd
         - soutien-technique.qmd
         - contribution.qmd
