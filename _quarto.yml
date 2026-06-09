@@ -1,8 +1,6 @@
 project:
   type: website
   output-dir: _site
-  resources:
-    - defis/defi-technique-1-municipalites-quebec.csv
 
 lang: fr
 
@@ -75,7 +73,7 @@ website:
         - portfolio.qmd
         - projets.qmd
         - defis.qmd
-        - defis/defi-technique-1.qmd
+        - defis/preparation-defi-technique-1.qmd
         - presentation.qmd
         - ia.qmd
     - id: ressources

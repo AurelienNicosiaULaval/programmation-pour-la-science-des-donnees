@@ -19,7 +19,7 @@ Chaque défi technique dure environ une heure. Le reste de la séance demeure un
 
 ## Défi technique 1
 
-Consigne détaillée: [Défi technique 1 - Bases individuelles sans IA](defis/defi-technique-1.qmd).
+Préparation et directives publiques: [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd).
 
 Le premier défi vérifie les bases du travail individuel sans IA:
 
@@ -31,6 +31,8 @@ Le premier défi vérifie les bases du travail individuel sans IA:
 - historique Git lisible.
 
 Question centrale: est-ce que l’étudiante ou l’étudiant peut fonctionner seul dans un projet R propre?
+
+La consigne exacte et le fichier de données évalué seront fournis au moment du défi. Ils ne sont pas publiés sur le site du cours.
 
 Après la remise, le reste de la séance sert à consolider les mêmes habiletés sur un exemple analogue: structure de dépôt, importation, nettoyage simple, chemins relatifs, messages d’erreur et mise à jour du portfolio. L’atelier reste sans IA afin de respecter l’objectif du défi 1.
 

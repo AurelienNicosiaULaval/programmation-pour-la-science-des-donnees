@@ -1,0 +1,111 @@
+---
+title: "Préparation au défi technique 1"
+format:
+  html:
+    embed-resources: true
+---
+
+## Rôle du défi
+
+Le défi technique 1 vérifie que chaque personne peut travailler seule dans un petit projet R propre, reproductible et versionné.
+
+Le défi dure environ 1 h et compte pour 10 % de la note finale. Le reste de la séance sert à un atelier de consolidation sur des tâches analogues. Le travail fait après la remise ne modifie pas le livrable évalué.
+
+## Ce qui sera évalué
+
+Le défi portera sur les bases individuelles vues dans les semaines 1 à 4:
+
+- structure de projet;
+- chemins relatifs;
+- importation d’un fichier de données;
+- nettoyage simple;
+- validation par assertions;
+- sauvegarde d’une version propre;
+- README minimal;
+- commits Git lisibles.
+
+Le jeu de données évalué sera fourni au début du défi. Il s’agira de données québécoises réelles ou d’un extrait pédagogique dérivé d’une source ouverte québécoise. Les détails du fichier évalué ne sont pas publiés sur le site du cours.
+
+## Règle IA
+
+Statut: IA non permise.
+
+Pendant le défi évalué, il est interdit d’utiliser un outil d’IA générative pour écrire, corriger, expliquer, traduire ou diagnostiquer le code ou la documentation.
+
+Sont permis:
+
+- les notes de cours;
+- la documentation officielle;
+- le code produit antérieurement par la personne étudiante;
+- les messages d’aide de R et des packages;
+- les fonctions de recherche dans l’éditeur;
+- Git et GitHub pour versionner et remettre.
+
+Toute utilisation d’un outil d’IA générative pendant le défi constitue un non-respect de la consigne.
+
+## Préparation recommandée
+
+Avant le défi, chaque personne devrait être capable de refaire sans IA:
+
+1. créer une structure de projet avec `data/raw/`, `data/processed/`, `R/` et `README.md`;
+2. lire un fichier CSV avec un chemin relatif;
+3. inspecter les noms, types et valeurs manquantes;
+4. convertir des dates ou des colonnes numériques;
+5. créer une petite variable dérivée;
+6. écrire au moins quatre assertions avec `stopifnot()`;
+7. sauvegarder un fichier propre dans `data/processed/`;
+8. expliquer brièvement les décisions de nettoyage dans un README;
+9. faire au moins deux commits lisibles.
+
+## Exercices de préparation
+
+Pour se préparer, reprendre les activités du module [Données, nettoyage et validation](../modules/04-donnees-nettoyage-validation/index.qmd).
+
+À pratiquer en priorité:
+
+- relancer le laboratoire depuis une session R propre;
+- modifier un fichier brut et vérifier que les assertions réagissent correctement;
+- refaire un pipeline court sans consulter l’IA;
+- utiliser un jeu de données ouvert du Québec pour pratiquer l’importation et la validation.
+
+## Directives générales de remise
+
+La remise se fera par dépôt GitHub individuel.
+
+Le dépôt devra contenir:
+
+- le fichier brut fourni;
+- un script R relançable;
+- un fichier propre sauvegardé;
+- un README court;
+- des commits Git lisibles.
+
+La consigne exacte, le fichier de données et les détails de la grille seront fournis au moment du défi.
+
+## Critères généraux
+
+Le défi sera évalué sur 10 points selon les dimensions suivantes:
+
+| Dimension | Attente |
+|---|---|
+| Structure et Git | Dossiers clairs, chemins relatifs, commits lisibles |
+| Importation | Fichier lu correctement, types inspectés |
+| Nettoyage | Transformations simples, justifiées et reproductibles |
+| Validation | Assertions pertinentes et exécutées |
+| Sauvegarde | Donnée propre sauvegardée au bon endroit |
+| README | Procédure, décisions et limite documentées |
+| Code | Code lisible, sans chemins absolus ni manipulations opaques |
+
+## À éviter
+
+- utiliser un chemin local comme `/Users/...`;
+- modifier manuellement le fichier brut;
+- écraser les données brutes;
+- ignorer les messages d’importation;
+- écrire des assertions qui ne vérifient rien d’utile;
+- remettre un script qui fonctionne seulement dans une session déjà préparée;
+- utiliser l’IA pendant le défi.
+
+## Après la remise
+
+Après la remise, la séance continue avec un atelier de consolidation. L’atelier permet de revoir les erreurs fréquentes, les stratégies de nettoyage, les messages d’erreur et les assertions. Il ne sert pas à modifier le livrable évalué.
