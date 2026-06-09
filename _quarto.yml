@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: _site
   resources:
-    - defis/defi-technique-1-donnees.csv
+    - defis/defi-technique-1-municipalites-quebec.csv
 
 lang: fr
 

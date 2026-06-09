@@ -20,7 +20,9 @@ Le défi vérifie les bases individuelles:
 - README minimal;
 - usage de Git.
 
-Le jeu de données fourni est fictif. Il représente de petites observations de stations de mobilité dans différents secteurs de Québec. Il sert à évaluer le pipeline technique, pas à produire une analyse substantielle.
+Le fichier fourni est un extrait pédagogique réel du Répertoire des municipalités du Québec diffusé sur Données Québec. L’extrait conserve seulement des colonnes non nominatives: code, nom, désignation, région administrative, MRC, dates, superficies, population, mode d’élection et division territoriale.
+
+Source: Ministère des Affaires municipales et de l’Habitation, Répertoire des municipalités du Québec, ressource “Liste des municipalités (csv)”, Données Québec. Fichier source: <https://donneesouvertes.affmunqc.net/repertoire/MUN.csv>. Licence indiquée par Données Québec: Attribution (CC-BY 4.0).
 
 ## Règle IA
 
@@ -43,17 +45,24 @@ Toute utilisation d’un outil d’IA générative pendant le défi constitue un
 
 Télécharger le fichier suivant:
 
-- [defi-technique-1-donnees.csv](defi-technique-1-donnees.csv)
+- [defi-technique-1-municipalites-quebec.csv](defi-technique-1-municipalites-quebec.csv)
 
-Le fichier contient volontairement plusieurs problèmes:
+Le fichier est un extrait de 49 municipalités, sélectionné à partir du fichier source réel le 2026-06-09. Il contient des colonnes à convertir et des champs à séparer.
 
-- types de colonnes à convertir;
-- valeurs manquantes codées de différentes façons;
-- date invalide;
-- valeur numérique impossible;
-- ligne dupliquée;
-- identifiant manquant;
-- modalité non reconnue.
+Colonnes principales:
+
+- `mcode`: code géographique;
+- `munnom`: nom de la municipalité;
+- `mdes`: désignation;
+- `regadm`: région administrative avec code entre parenthèses;
+- `mrc`: MRC avec code entre parenthèses;
+- `mdatcons`: date de constitution;
+- `msuperf`: superficie totale en km2;
+- `msupft`: superficie terrestre;
+- `mpopul`: population décrétée;
+- `datelec`: date des prochaines élections;
+- `electype`: type d’élection;
+- `divter`: division territoriale.
 
 ## Structure attendue
 
@@ -65,7 +74,7 @@ Structure minimale:
 defi-technique-1/
   data/
     raw/
-      defi-technique-1-donnees.csv
+      defi-technique-1-municipalites-quebec.csv
     processed/
   R/
     01-nettoyage.R
@@ -84,8 +93,8 @@ Le script doit:
 
 - charger explicitement les packages utilisés;
 - lire le fichier;
-- traiter les codes de valeurs manquantes;
-- inspecter ou contrôler les types.
+- inspecter les noms et types de colonnes;
+- garder la donnée brute intacte.
 
 ### 2. Nettoyer
 
@@ -93,36 +102,40 @@ Produire un objet `donnees_propres` ou un nom équivalent.
 
 Le nettoyage doit traiter au minimum:
 
-- les dates;
-- les colonnes numériques;
-- les valeurs manquantes importantes;
-- les doublons;
-- les valeurs impossibles;
-- les modalités de `etat_station`.
+- convertir `mdatcons` et `datelec` en dates;
+- convertir `msuperf`, `msupft` et `mpopul` en colonnes numériques;
+- extraire le nom et le code de la région administrative à partir de `regadm`;
+- extraire le nom et le code de la MRC à partir de `mrc`;
+- créer une variable `densite_pop_km2 = mpopul / msupft`;
+- calculer au moins un indicateur de validation, par exemple le nombre de dates manquantes;
+- conserver des noms de colonnes lisibles dans la donnée propre.
 
-Les décisions de nettoyage doivent être lisibles dans le code ou dans le README.
+Le résultat doit rester fidèle à la source. Ne pas inventer de population, de superficie ou de date. Si une date est absente dans la source, elle doit rester manquante et être documentée.
 
 ### 3. Valider
 
 Ajouter au moins quatre assertions.
 
-Les assertions doivent vérifier au minimum:
+Les assertions doivent vérifier au minimum quatre éléments parmi les suivants:
 
-- aucune ligne sans `station_id`;
-- aucune date manquante après nettoyage;
-- aucune valeur négative dans `nb_passages`;
-- aucune valeur négative dans `precip_mm`;
-- aucune modalité de `etat_station` en dehors des valeurs acceptées;
-- aucune duplication de la clé `station_id` + `date_observation`.
+- `mcode` n’est jamais manquant;
+- `mcode` est unique;
+- `munnom` n’est jamais manquant;
+- `mpopul` est numérique et supérieur ou égal à 0;
+- `msupft` est numérique et strictement positive;
+- les valeurs non manquantes de `mdatcons` sont des dates valides;
+- les valeurs non manquantes de `datelec` sont des dates valides;
+- le code de région contient deux chiffres;
+- `densite_pop_km2` est numérique et non négative.
 
-Il est acceptable de choisir quatre validations parmi cette liste, à condition que le choix soit cohérent avec le nettoyage effectué.
+Il est acceptable d’ajouter plus de quatre assertions.
 
 ### 4. Sauvegarder
 
 Sauvegarder la donnée propre dans:
 
 ```text
-defi-technique-1/data/processed/defi1_donnees_propres.csv
+defi-technique-1/data/processed/defi1_municipalites_propres.csv
 ```
 
 Le fichier brut ne doit pas être modifié.
@@ -132,9 +145,10 @@ Le fichier brut ne doit pas être modifié.
 Le fichier `README.md` doit contenir:
 
 - une courte description du défi;
+- la source des données;
 - la commande ou le script à exécuter;
-- deux problèmes trouvés dans les données;
-- deux décisions de nettoyage;
+- deux transformations effectuées;
+- deux assertions utilisées;
 - une limite restante;
 - la mention explicite que l’IA n’a pas été utilisée.
 
@@ -146,7 +160,7 @@ Exemples:
 
 ```text
 Ajouter la structure du defi technique 1
-Nettoyer et valider les donnees du defi 1
+Nettoyer les donnees municipales du defi 1
 ```
 
 ## Remise
@@ -170,24 +184,24 @@ Le défi est évalué sur 10 points.
 | Critère | Points | Attente |
 |---|---:|---|
 | Structure de projet et Git | 1.5 | Dossiers clairs, chemins relatifs, au moins deux commits lisibles |
-| Importation | 1.5 | Fichier lu correctement, valeurs manquantes et types inspectés ou contrôlés |
-| Nettoyage | 2.0 | Problèmes principaux traités de façon lisible et cohérente |
+| Importation | 1.5 | Fichier réel lu correctement, types inspectés ou contrôlés |
+| Nettoyage | 2.0 | Dates, colonnes numériques, régions, MRC et densité traitées correctement |
 | Validation | 2.0 | Au moins quatre assertions pertinentes et exécutées |
 | Reproductibilité et sauvegarde | 1.0 | Script relançable, donnée propre sauvegardée au bon endroit |
-| README | 1.0 | Procédure, décisions, limite et absence d’IA documentées |
+| README | 1.0 | Source, procédure, transformations, assertions, limite et absence d’IA documentées |
 | Qualité générale du code | 1.0 | Code lisible, organisé, sans chemins absolus ni manipulations manuelles opaques |
 | Total | 10.0 |  |
 
 ## Attentes STT-6230
 
-Les personnes inscrites à STT-6230 doivent ajouter dans le README une justification technique de 5 à 8 lignes sur une décision de nettoyage discutable.
+Les personnes inscrites à STT-6230 doivent ajouter dans le README une justification technique de 5 à 8 lignes sur une décision de nettoyage ou de dérivation.
 
 Exemples:
 
-- transformer une valeur impossible en `NA`;
-- exclure une ligne;
-- recoder une modalité inconnue;
-- conserver une ligne malgré une valeur manquante.
+- utiliser `msupft` plutôt que `msuperf` pour la densité;
+- séparer les codes de région et de MRC avec une expression régulière;
+- garder les désignations municipales comme variable catégorielle;
+- expliquer une limite d’un extrait de 49 municipalités.
 
 Cette attente est évaluée dans les mêmes 10 points, principalement dans les critères “Nettoyage”, “Validation” et “README”.
 
@@ -207,6 +221,7 @@ Après la remise, le reste de la séance sert à un atelier de consolidation sur
 - Le fichier brut est intact.
 - Le fichier propre est créé.
 - Les assertions passent.
+- Le README indique la source Données Québec.
 - Le README explique comment reproduire.
 - Les commits sont présents.
 - Aucun chemin absolu n’est utilisé.

@@ -1,0 +1,50 @@
+mcode,munnom,mdes,regadm,mrc,mdatcons,msuperf,msupft,mpopul,datelec,electype,divter
+88057,Amos,Ville,Abitibi-Témiscamingue (08),MRC Abitibi (880),2025-01-01,551.18,541.06,13849,2029-11-04,B,Sans division
+87050,Authier,Municipalité,Abitibi-Témiscamingue (08),MRC Abitibi-Ouest (870),1918-09-20,143.54,142.3,278,2029-11-04,B,Sans division
+87100,Authier-Nord,Municipalité,Abitibi-Témiscamingue (08),MRC Abitibi-Ouest (870),1983-01-01,285.69,277.97,282,2029-11-04,B,Sans division
+07025,Albertville,Municipalité,Bas-Saint-Laurent (01),MRC La Matapédia (070),1930-11-29,104.71,103.57,262,2029-11-04,B,Sans division
+07047,Amqui,Ville,Bas-Saint-Laurent (01),MRC La Matapédia (070),1991-01-16,128.27,122.41,6056,2029-11-04,B,District
+13045,Auclair,Municipalité,Bas-Saint-Laurent (01),MRC Témiscouata (130),1954-01-01,109.87,104.56,466,2029-11-04,B,Sans division
+16013,Baie-Saint-Paul,Ville,Capitale-Nationale (03),MRC Charlevoix (160),1996-01-03,564.36,546.08,7801,2029-11-04,B,District
+15065,Baie-Sainte-Catherine,Municipalité,Capitale-Nationale (03),MRC Charlevoix-Est (150),1903-11-04,419.74,232.39,165,2029-11-04,B,Sans division
+21025,Beaupré,Ville,Capitale-Nationale (03),MRC La Côte-de-Beaupré (210),1928-04-23,27,22.65,4307,2029-11-04,B,Sans division
+50013,Aston-Jonction,Municipalité,Centre-du-Québec (17),MRC Nicolet-Yamaska (500),1997-03-26,25.99,25.9,437,2029-11-04,B,Sans division
+50100,Baie-du-Febvre,Municipalité,Centre-du-Québec (17),MRC Nicolet-Yamaska (500),1983-03-26,173.36,96.88,1024,2029-11-04,B,Sans division
+38010,Bécancour,Ville,Centre-du-Québec (17),MRC Bécancour (380),1965-10-17,495.28,439.36,14788,2029-11-04,B,Sans division
+31056,Adstock,Municipalité,Chaudière-Appalaches (12),MRC Les Appalaches (310),2001-10-24,306.9,291.21,3198,2029-11-04,B,District
+19037,Armagh,Municipalité,Chaudière-Appalaches (12),MRC Bellechasse (190),1993-12-29,170.59,169.19,1434,2029-11-04,B,Sans division
+27028,Beauceville,Ville,Chaudière-Appalaches (12),MRC Beauce-Centre (270),1998-02-25,166.39,164.57,6255,2029-11-04,B,District
+98030,Aguanish,Municipalité,Côte-Nord (09),MRC Minganie (981),1957-01-01,680.62,548.4,213,2029-11-04,B,Sans division
+96020,Baie-Comeau,Ville,Côte-Nord (09),MRC Manicouagan (960),1982-06-23,434.54,334.64,20609,2029-11-04,B,District
+98035,Baie-Johan-Beetz,Municipalité,Côte-Nord (09),MRC Minganie (981),1966-01-01,532.05,337.21,75,2029-11-04,B,Sans division
+46005,Abercorn,Village,Estrie (05),MRC Brome-Missisquoi (460),1929-06-25,26.97,26.8,368,2029-11-04,B,Sans division
+41055,Ascot Corner,Municipalité,Estrie (05),MRC Le Haut-Saint-François (410),1901-03-28,85.45,84.08,3649,2029-11-04,B,Sans division
+30055,Audet,Municipalité,Estrie (05),MRC Le Granit (300),1903-11-26,133.75,133.3,707,2029-11-04,B,Sans division
+05045,Bonaventure,Ville,Gaspésie--Îles-de-la-Madeleine (11),MRC Bonaventure (050),1884-01-01,107.99,104.7,2716,2029-11-04,B,Sans division
+04047,Cap-Chat,Ville,Gaspésie--Îles-de-la-Madeleine (11),MRC La Haute-Gaspésie (040),2000-03-15,209.34,180.98,2525,2029-11-04,B,Sans division
+05060,Caplan,Municipalité,Gaspésie--Îles-de-la-Madeleine (11),MRC Bonaventure (050),1875-01-01,85.63,85.58,1958,2029-11-04,B,Sans division
+62920,Baie-Atibenne,Territoire non organisé,Lanaudière (14),MRC Matawinie (620),1986-01-01,642.54,532.08,0,NA,B,NA
+62918,Baie-Obaoca,Territoire non organisé,Lanaudière (14),MRC Matawinie (620),1986-01-01,1479.61,1260.9,0,NA,B,NA
+62906,Baie-de-la-Bouteille,Territoire non organisé,Lanaudière (14),MRC Matawinie (620),1986-01-01,2179.99,1937.89,10,NA,B,NA
+78070,Amherst,Canton,Laurentides (15),MRC Les Laurentides (780),1887-03-09,249.53,227.78,1707,2029-11-04,B,District
+78060,Arundel,Canton,Laurentides (15),MRC Les Laurentides (780),1878-01-01,67.94,63.83,601,2029-11-04,B,Sans division
+79920,Baie-des-Chaloupes,Territoire non organisé,Laurentides (15),MRC Antoine-Labelle (790),1986-01-01,956.82,885.68,0,NA,B,NA
+65005,Laval,Ville,Laval (13),NA,1965-08-06,266.95,246.14,459650,2029-11-04,B,District
+37210,Batiscan,Municipalité,Mauricie (04),MRC Des Chenaux (372),1855-07-01,58.83,43.31,1008,2029-11-04,B,Sans division
+37220,Champlain,Municipalité,Mauricie (04),MRC Des Chenaux (372),1982-12-11,78.8,57.55,1932,2029-11-04,B,Sans division
+51080,Charette,Municipalité,Mauricie (04),MRC Maskinongé (510),1918-02-09,42.26,42.01,1181,2029-11-04,B,Sans division
+66112,Baie-D'Urfé,Ville,Montréal (06),NA,2006-01-01,8.03,6.04,3713,2029-11-04,B,Sans division
+66107,Beaconsfield,Ville,Montréal (06),NA,2006-01-01,24.4,11,19423,2029-11-04,B,District
+66058,Côte-Saint-Luc,Ville,Montréal (06),NA,2006-01-01,6.81,6.81,37875,2029-11-04,B,District
+48028,Acton Vale,Ville,Montérégie (16),MRC Acton (480),2000-01-26,91.09,90.19,7996,2029-11-04,B,District
+69802,Akwesasne,Réserve indienne,Montérégie (16),NA,NA,11.18,10.65,2569,NA,B,NA
+55008,Ange-Gardien,Municipalité,Montérégie (16),MRC Rouville (550),1997-12-31,90.29,89.99,3068,2029-11-04,B,District
+99125,Akulivik,Village nordique,Nord-du-Québec (10),NA,1979-12-29,82.28,75.71,622,2027-11-03,B,NA
+99883,Akulivik,Terre de la catégorie I,Nord-du-Québec (10),NA,1995-05-02,468.96,429.49,0,NA,B,NA
+99105,Aupaluk,Village nordique,Nord-du-Québec (10),NA,1980-02-02,32.73,28.65,244,2027-11-03,B,NA
+84050,Alleyn-et-Cawood,Municipalité,Outaouais (07),MRC Pontiac (840),1877-01-01,326.05,309.32,254,2029-11-04,B,Sans division
+83090,Aumond,Canton,Outaouais (07),MRC La Vallée-de-la-Gatineau (830),1877-12-12,227.62,213.09,761,2029-11-04,B,Sans division
+83045,Blue Sea,Municipalité,Outaouais (07),MRC La Vallée-de-la-Gatineau (830),1921-01-31,87.51,72.36,715,2029-11-04,B,Sans division
+92030,Albanel,Municipalité,Saguenay--Lac-Saint-Jean (02),MRC Maria-Chapdelaine (920),1990-04-11,205,197.16,2190,2029-11-04,B,Sans division
+93042,Alma,Ville,Saguenay--Lac-Saint-Jean (02),MRC Lac-Saint-Jean-Est (930),2001-02-21,232.46,194.94,30734,2029-11-04,B,District
+93908,Belle-Rivière,Territoire non organisé,Saguenay--Lac-Saint-Jean (02),MRC Lac-Saint-Jean-Est (930),NA,651.42,613.8,10,NA,B,NA
