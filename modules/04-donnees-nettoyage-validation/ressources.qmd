@@ -128,7 +128,108 @@ donnees_api <- resp_body_json(resp)
 
 Ce squelette ne doit pas être exécuté tel quel: l’URL est fictive.
 
+## Traitement des valeurs manquantes et fusion de données
+
+Voici des exemples d'opérations courantes pour détecter et traiter les valeurs manquantes, ainsi que pour fusionner des tables.
+
+### 1. Détection des valeurs manquantes (`is.na`, `anyNA`)
+
+Il est important de détecter la présence et la quantité de valeurs manquantes (`NA`) avant de procéder aux analyses.
+
+```r
+# Vérifier si un objet contient des valeurs manquantes
+anyNA(airquality) # Retourne TRUE ou FALSE
+
+# Vérifier par colonne
+anyNA(airquality$Ozone)
+
+# Compter le nombre total de valeurs manquantes par variable
+colSums(is.na(airquality))
+
+# Identifier les lignes complètes (sans aucune valeur manquante)
+complete_cases <- complete.cases(airquality)
+airquality_complet <- airquality[complete_cases, ]
+```
+
+### 2. Traitement des valeurs manquantes (Imputation)
+
+Une méthode classique consiste à imputer (remplacer) les valeurs manquantes par une statistique (comme la moyenne du groupe).
+
+- **Approche Base R (Classique)** :
+  ```r
+  # Calcul des moyennes mensuelles
+  mean_per_month <- aggregate(
+    x = airquality[, c("Ozone", "Solar.R")],
+    by = list(Month = airquality$Month),
+    FUN = mean, 
+    na.rm = TRUE
+  )
+  
+  # Fusion par association
+  air_quality_temp <- merge(x = airquality, y = mean_per_month, by = "Month")
+  
+  # Imputation conditionnelle
+  airquality$Ozone <- ifelse(
+    test = is.na(air_quality_temp$Ozone.x),
+    yes = air_quality_temp$Ozone.y,
+    no = air_quality_temp$Ozone.x
+  )
+  ```
+
+- **Approche Tidyverse (Recommandée - Moderne)** :
+  ```r
+  library(dplyr)
+  
+  # Imputation groupée en une seule étape fluide
+  airquality_clean <- airquality |>
+    group_by(Month) |>
+    mutate(
+      Ozone = if_else(is.na(Ozone), mean(Ozone, na.rm = TRUE), Ozone),
+      Solar.R = if_else(is.na(Solar.R), mean(Solar.R, na.rm = TRUE), Solar.R)
+    ) |>
+    ungroup()
+  ```
+
+### 3. Fusion et jointure de tables (`merge` vs Tidyverse)
+
+Pour combiner deux jeux de données partageant des clés communes, on peut utiliser la fonction `merge()` ou les fonctions de jointure de `dplyr`.
+
+Soit un jeu de données de population :
+```r
+population_1960 <- data.frame(
+  An = 1960,
+  Territoire = c("N.Amer", "Europe", "Asia"),
+  Pop = c(204167, 605619, 1686698)
+)
+```
+
+- **Jointure interne (Base R vs Tidyverse)** :
+  ```r
+  # Base R
+  phone1960 <- merge(
+    x = phones_long, 
+    y = population_1960, 
+    by.x = c("Region", "Year"), 
+    by.y = c("Territoire", "An")
+  )
+  
+  # Tidyverse (dplyr)
+  library(dplyr)
+  phone1960_tidy <- inner_join(
+    x = phones_long, 
+    y = population_1960, 
+    by = c("Region" = "Territoire", "Year" = "An")
+  )
+  ```
+
+- **Types de jointures dans dplyr** :
+  - `left_join(x, y)` : Conserve toutes les lignes de `x`.
+  - `right_join(x, y)` : Conserve toutes les lignes de `y`.
+  - `inner_join(x, y)` : Conserve uniquement les lignes présentes dans les deux tables.
+  - `full_join(x, y)` : Conserve toutes les lignes des deux tables.
+
 ## Sources
+
 
 - Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). R for Data Science, 2e édition: <https://r4ds.hadley.nz/>.
 - Documentation officielle `readr`: <https://readr.tidyverse.org/>.

@@ -30,9 +30,9 @@ Pour chaque fichier migré, quatre actions de modernisation doivent être appliq
 | Semaine H2023 | Sujet original | Semaine Visée (2026) | Fichier Cible (2026) | Statut |
 | :--- | :--- | :--- | :--- | :--- |
 | **Semaine 1** | Présentation R & Git | **Semaine 1 & 2** | `modules/01-structuration-projets/` & `02-structure-git-github/` | Déjà structuré |
-| **Semaine 2** | Structures de données, lecture/écriture | **Semaine 2** | `modules/02-structure-git-github/ressources.qmd` | Déjà structuré |
+| **Semaine 2** | Structures de données, lecture/écriture | **Semaine 2** | `modules/02-structure-git-github/ressources.qmd` | **Fait (Enrichi)** |
 | **Semaine 3** | Calculs de base en R | **Semaine 2 & 10** | `modules/02-structure-git-github/` & `10-programmation-fonctionnelle/` | Déjà structuré |
-| **Semaine 4** | Prétraitement et nettoyage de données | **Semaine 4** | `modules/04-donnees-nettoyage-validation/laboratoire.qmd` | Déjà structuré |
+| **Semaine 4** | Prétraitement et nettoyage de données | **Semaine 4** | `modules/04-donnees-nettoyage-validation/laboratoire.qmd` | **Fait (Enrichi)** |
 | **Semaine 5** | Graphiques (Base R & `ggplot2`) | **Semaine 6** | `modules/06-visualisation/` | **Fait (Migré)** |
 | **Semaine 7** | R Markdown & Bonnes pratiques | **Semaine 7** | `modules/07-quarto-rapports/` | **Fait (Migré)** |
 | **Semaine 8** | Structures de contrôle & Fonctions | **Semaine 10** | `modules/10-programmation-fonctionnelle/index.qmd` | **Fait (Migré)** |
@@ -47,10 +47,10 @@ Pour chaque fichier migré, quatre actions de modernisation doivent être appliq
 
 ### 🟩 Bloc A : Semaines 1 à 4 (Déjà structurées, à affiner)
 Les modules 1 à 4 sont déjà écrits dans le nouveau site, mais ils peuvent être enrichis par l'ancien matériel :
-*   **Semaine 2 (Ancienne) ➔ Nouveau Module 2** :
+*   **[Fait] Semaine 2 (Ancienne) ➔ Nouveau Module 2** :
     *   *Fichier source* : `Semaine2/ContenuClasse/exemples_structures_donnees_lecture_ecriture_r.R`
     *   *Action* : Extraire les exemples d'écriture/lecture de fichiers (`.rds`, `.xlsx`, `.txt`) pour enrichir la page `ressources.qmd` du module 2.
-*   **Semaine 4 (Ancienne) ➔ Nouveau Module 4** :
+*   **[Fait] Semaine 4 (Anniene) ➔ Nouveau Module 4** :
     *   *Fichier source* : `Semaine4/ContenuClasse/exemples_pretraitement_donnees_r.Rmd`
     *   *Action* : Recycler les exemples de traitement des valeurs manquantes (`is.na()`, `anyNA()`) et de fusion de données pour alimenter `laboratoire.qmd` ou `ressources.qmd` du module 4.
 

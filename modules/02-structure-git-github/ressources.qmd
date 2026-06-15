@@ -64,3 +64,85 @@ git diff --staged
 ```
 
 Ne jamais committer une clé privée SSH, un jeton GitHub, un mot de passe, un fichier de données confidentielles ou une sortie contenant des renseignements personnels.
+
+## Importation et exportation de données en R
+
+Voici des exemples concrets de lecture et d'écriture de données dans différents formats en R, basés sur les meilleures pratiques (notamment en préférant l'importation relative).
+
+### 1. Fichiers texte délimités (.txt, .tsv, .csv)
+
+Pour lire un fichier texte avec séparateurs (par exemple, tabulations ou virgules), on utilise `read.delim()` ou les fonctions du package `readr` (Tidyverse).
+
+```r
+# R de base
+donnees <- read.delim(
+  file = "data/raw/GooglePlayAppRatings.txt",
+  skip = 2,                 # Sauter les premières lignes d'en-tête si nécessaire
+  encoding = "UTF-8",       # Spécifier l'encodage
+  na.strings = c(".")       # Définir les chaînes représentant des valeurs manquantes
+)
+
+# Alternative moderne avec le Tidyverse (readr)
+library(readr)
+donnees_tidy <- read_tsv(
+  file = "data/raw/GooglePlayAppRatings.txt",
+  skip = 2,
+  na = c(".")
+)
+```
+
+### 2. Fichiers Excel (.xlsx)
+
+Le package `openxlsx` est recommandé pour écrire des fichiers Excel sans dépendance à Java.
+
+```r
+library(openxlsx)
+
+# Écriture dans un fichier Excel
+write.xlsx(
+  women, 
+  file = "outputs/women.xlsx",
+  sheetName = "mesures_femmes",
+  startCol = 1,
+  startRow = 1
+)
+```
+
+### 3. Fichiers binaires R (.rds et .rda)
+
+Pour sauvegarder et recharger des objets R, deux formats principaux existent :
+
+- **Format RDS (Recommandé - sauvegarde un seul objet, plus sûr)** :
+  ```r
+  # Sauvegarder
+  saveRDS(women, file = "outputs/women.rds")
+  
+  # Charger (permet d'assigner à une variable de son choix)
+  donnees_rds <- readRDS("outputs/women.rds")
+  ```
+
+- **Format RData/RDA (Sauvegarde plusieurs objets avec leur nom d'origine)** :
+  ```r
+  # Sauvegarder
+  fc1 <- factor(c("S", "C", "D"))
+  save(fc1, file = "outputs/fc1.rda")
+  
+  # Charger (restaure l'objet directement sous son nom 'fc1', risquant d'écraser une variable existante)
+  load("outputs/fc1.rda")
+  ```
+
+### 4. Génération de tableaux LaTeX ou HTML
+
+Pour exporter un tableau ou un data frame sous format LaTeX/HTML dans vos rapports :
+
+```r
+library(xtable)
+
+jeu_test <- data.frame(
+  Variable1 = seq(0, 10, by = 2),
+  Variable2 = "A"
+)
+
+# Afficher le code LaTeX généré
+xtable(jeu_test)
+```
