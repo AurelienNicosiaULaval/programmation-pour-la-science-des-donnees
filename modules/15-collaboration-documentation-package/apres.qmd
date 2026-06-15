@@ -1,0 +1,31 @@
+---
+title: "Collaboration, documentation et packaging - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consolidation et livrables
+
+Après la séance de laboratoire, vous devez finaliser votre défi et mettre à jour votre portfolio d'apprentissage.
+
+### Activités de consolidation
+
+1.  **Vérification diagnostique (Zéro Warning/Error)** :
+    *   Exécutez `devtools::check()` dans votre console R.
+    *   Assurez-vous qu'aucun message d'erreur ou d'avertissement n'est affiché.
+2.  **Validation des tests** :
+    *   Vérifiez que tous les tests unitaires passent avec succès (`devtools::test()`).
+3.  **Mise à jour du portfolio** :
+    *   Ajoutez le dossier de votre package de défi dans votre dépôt de portfolio (ou commettez les sources proprement).
+    *   Rédigez la note technique d'explication et de réussite des vérifications dans votre journal de bord.
+
+---
+
+## Les pièges classiques de la création de package en R
+
+*   **Ne pas déclarer les dépendances externes** : Utiliser des fonctions comme `ggplot()` ou `filter()` sans ajouter les packages correspondants dans la rubrique `Imports` de DESCRIPTION (via `usethis::use_package()`).
+*   **Oublier le préfixe `package::fonction` dans le code** : Même après avoir configuré les dépendances et les imports Roxygen2, vous devez de préférence appeler les fonctions externes sous la forme `dplyr::filter()` dans le corps de vos fonctions pour éviter tout risque de masquage de nom.
+*   **Laisser des appels à `library()` ou `require()` dans vos fonctions** : Ces appels sont strictement interdits dans les fonctions d'un package R car ils forcent le chargement global et peuvent perturber la session de l'utilisateur.
+*   **Laisser des chemins absolus dans les exemples ou les tests** : Avoir du code comme `read.csv("/Users/monnom/Documents/data.csv")` fera planter `devtools::check()` immédiatement (car la machine de test ou de vos collègues n'a pas accès à ce dossier). Utilisez uniquement des chemins relatifs ou des objets générés à la volée.
+*   **Oublier d'exporter les méthodes S3** : Oublier de mettre le tag `#' @export` sur des fonctions d'affichage de classe comme `print.distman`. Si vous ne l'exportez pas, la méthode S3 ne sera pas reconnue par R lors de l'affichage de l'objet.

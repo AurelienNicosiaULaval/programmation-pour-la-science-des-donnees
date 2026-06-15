@@ -1,0 +1,73 @@
+---
+title: "Profilage, optimisation et performance - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Activités en classe
+
+### 1. Retour sur le mini-test (15 min)
+
+*   **Question 1 :** L'expression la plus rapide est **`sum(is.na(x)) / length(x)`** (Option C). Elle évite la surcharge de la fonction `mean()` (qui fait des vérifications internes de type supplémentaires) et évite de créer un vecteur de comparaison intermédiaire comme dans `is.na(x) == TRUE`. L'option `table` est de loin la plus lente car elle trie et groupe toutes les valeurs uniques du vecteur, ce qui est inutile.
+*   **Question 2 :** La bonne réponse est l'**Option B**. La moyenne est fortement influencée par des valeurs extrêmes, notamment les pics de latence induits par la désallocation de mémoire par le Garbage Collector (GC). La médiane représente le temps d'exécution typique "hors GC".
+*   **Question 3 :** C'est l'**Option D** (`resultats <- c(resultats, tirage)`). À chaque itération, R doit trouver un nouvel espace mémoire contigu de taille $N+1$, y copier le contenu existant de taille $N$, puis y ajouter le nouvel élément. Pour $N$ grand, cette opération devient extrêmement coûteuse.
+
+---
+
+### 2. Démonstration 1 : L'importance cruciale de la pré-allocation (20 min)
+
+Nous allons comparer trois approches pour remplir un vecteur de taille $N = 50\ 000$ avec des valeurs simulées.
+
+1.  **Méthode 1 : Sans pré-allocation** (le vecteur grandit dynamiquement).
+2.  **Méthode 2 : Avec pré-allocation** (le vecteur est créé à sa taille finale, puis rempli par index).
+3.  **Méthode 3 : Vectorisation** (aucune boucle, opération globale).
+
+Exécutons ensemble ce benchmark pour mesurer le temps et les allocations mémoire :
+
+```r
+library(bench)
+
+N <- 50000
+
+benchmark_allocation <- mark(
+  sans_preallocation = {
+    v <- c()
+    for (i in 1:N) {
+      v <- c(v, sqrt(i))
+    }
+    v
+  },
+  avec_preallocation = {
+    v <- vector(mode = "numeric", length = N)
+    for (i in 1:N) {
+      v[i] <- sqrt(i)
+    }
+    v
+  },
+  vectorise = {
+    sqrt(1:N)
+  },
+  check = TRUE
+)
+
+# Affichage des résultats
+print(benchmark_allocation)
+```
+
+#### Points clés à observer dans les résultats :
+*   **Temps médian** : La version vectorisée se compte en microsecondes, la pré-allocation en millisecondes, et la non-pré-allocation en secondes !
+*   **Memory Alloc** : La version sans pré-allocation alloue une quantité phénoménale de mémoire temporaire système (car elle recrée le vecteur à chaque étape de la boucle), déclenchant le Garbage Collector de nombreuses fois (`n_gc`).
+
+---
+
+### 3. Démonstration 2 : Décrypter une interface profvis (15 min)
+
+Nous allons analyser ensemble l'interface de profilage interactive.
+
+1.  **Flame Graph (Graphique en cascade)** :
+    *   L'axe horizontal représente le temps total d'exécution.
+    *   L'axe vertical représente la pile d'appels (call stack). Plus la pile est haute, plus les fonctions sont imbriquées.
+    *   Repérez la couleur jaune qui pointe vers l'allocation mémoire système.
+2.  **Code de départ** :
+    *   En cliquant sur l'onglet `Data`, vous pouvez voir ligne par ligne le coût en millisecondes et en mémoire allouée/désallouée.

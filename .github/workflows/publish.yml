@@ -47,6 +47,9 @@ jobs:
         with:
           cache-version: 1
 
+      - name: Validate internal links
+        run: Rscript scripts/valider_liens.R
+
       - name: Render site
         run: quarto render
 

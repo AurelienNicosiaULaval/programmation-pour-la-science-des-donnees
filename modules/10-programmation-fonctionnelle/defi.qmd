@@ -1,0 +1,44 @@
+---
+title: "Programmation fonctionnelle avec tidyverse - Défi"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consignes du défi de la semaine
+
+L'objectif de ce défi est d'appliquer les principes de la programmation fonctionnelle à votre propre code ou à un problème réaliste de traitement de données pour le portfolio.
+
+### Tâche principale : Refactorisation de code répétitif
+
+Identifiez dans vos travaux précédents (par exemple, le nettoyage des données du module 4 ou la production de graphiques du module 6) un bloc de code comportant de la duplication (copier-coller sur plusieurs variables ou fichiers). 
+
+Si vous n'avez pas de code répétitif sous la main, vous pouvez travailler sur le scénario suivant : *Lire et nettoyer 3 fichiers de données brutes similaires (simulez ou créez 3 petits fichiers CSV de ventes ou de température), extraire leurs statistiques descriptives, et combiner le tout dans un rapport final.*
+
+Vous devez :
+1.  **Créer une fonction générique** pour réaliser la tâche répétitive (ex: nettoyage d'une colonne spécifique, importation standardisée d'un fichier).
+2.  **Valider les arguments** d'entrée de votre fonction pour qu'elle lève des erreurs claires en cas d'appels incorrects.
+3.  **Écrire au moins 3 tests unitaires** avec `testthat` couvrant les cas standards et les cas limites (valeurs manquantes, mauvais types).
+4.  **Automatiser l'appel de la fonction** sur vos colonnes ou vos fichiers à l'aide de la famille `map()` du package `purrr`.
+
+---
+
+## Livrables attendus dans votre portfolio
+
+Votre soumission doit contenir :
+
+1.  **Le script de la fonction** : enregistré dans un fichier (ex: `R/fonctions_nettoyage.R`).
+2.  **Le script de tests** : enregistré dans un fichier de tests (ex: `tests/test_nettoyage.R`).
+3.  **Une note explicative (avant/après)** rédigée dans votre journal de bord ou sur votre page de défi du portfolio, montrant :
+    *   Le code initial dupliqué (avant refactorisation).
+    *   Le code final concis utilisant votre fonction et `purrr::map()`.
+    *   Une brève justification de vos choix de structure (ex: pourquoi avoir utilisé `map_dbl` ou `map_chr`).
+
+---
+
+## Grille d'évaluation simplifiée
+
+*   **Rigueur** : La fonction valide ses arguments (types et longueurs) et gère correctement les valeurs manquantes (`NA`).
+*   **Reproductibilité** : Les tests unitaires s'exécutent et passent avec succès sans intervention manuelle.
+*   **Modernité** : Utilisation adéquate des variantes typées de `map()` de `purrr` à la place de boucles manuelles `for` non optimisées ou de fonctions de base R obsolètes.
+*   **Documentation** : La note explicative montre clairement le gain en lisibilité et en maintenance apporté par la refactorisation.

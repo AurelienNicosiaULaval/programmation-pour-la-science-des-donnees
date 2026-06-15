@@ -1,0 +1,114 @@
+---
+title: "Programmation asynchrone et parallèle - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Se familiariser avec le concept de "futur" (promesse de calcul asynchrone), installer les packages `future` et `furrr`, et tester le fonctionnement d'une exécution parallèle locale.
+
+Temps de préparation estimé : 40 minutes.
+
+## À lire
+
+1.  **Vignette officielle du package `future`** :
+    *   [A Future for R: A System for Friendly Parallel Processing](https://future.futureverse.org/articles/future-1-overview.html) : Comprendre la philosophie des futurs (unification de la syntaxe parallèle en R).
+2.  **Vignette officielle du package `furrr`** :
+    *   [Introduction to furrr](https://furrr.futureverse.org/) : Comprendre comment combiner la puissance de `purrr` (itération) et de `future` (calcul parallèle).
+
+---
+
+## Exemples R à exécuter
+
+Veuillez ouvrir votre session Positron ou RStudio et exécuter les exemples suivants.
+
+### Exemple 1 : Créer et résoudre un futur (asynchrone)
+
+Un *futur* est une abstraction pour un calcul qui sera résolu plus tard, éventuellement sur un processus en arrière-plan.
+
+```r
+library(future)
+
+# 1. Configurer R pour travailler en parallèle (multisession locale)
+# Cela ouvre des sessions R esclaves en arrière-plan
+plan(multisession, workers = 2)
+
+cat("Lancement du calcul asynchrone...\n")
+temps_depart <- Sys.time()
+
+# 2. Création d'un futur : le code s'exécute en tâche de fond
+f <- future({
+  Sys.sleep(2) # Simule un calcul de 2 secondes
+  42
+})
+
+cat("La console est libérée immédiatement ! Temps écoulé :", 
+    round(Sys.time() - temps_depart, 2), "secondes.\n")
+
+# 3. Récupérer le résultat (bloquant si le calcul n'est pas terminé)
+valeur_finale <- value(f)
+
+cat("Résultat récupéré :", valeur_finale, ". Temps total écoulé :", 
+    round(Sys.time() - temps_depart, 2), "secondes.\n")
+
+# 4. Fermer les connexions et revenir au mode séquentiel
+plan(sequential)
+```
+
+### Exemple 2 : Itération parallèle avec `furrr`
+
+`furrr` fournit des équivalents parallèles de `purrr::map()`. Le préfixe `future_` permet de distribuer les itérations sur les processus ouverts.
+
+```r
+library(purrr)
+library(furrr)
+
+# 1. Vecteur d'étapes (simulant des requêtes API ou des calculs de 1s)
+taches <- rep(1, 4)
+
+# 2. Test Séquentiel (prend environ 4 secondes)
+temps_seq <- system.time({
+  res_seq <- map(taches, ~ { Sys.sleep(.x); .x * 2 })
+})
+cat("Temps séquentiel :", temps_seq["elapsed"], "secondes.\n")
+
+# 3. Test Parallèle avec 4 cœurs (prend environ 1 seconde !)
+plan(multisession, workers = 4)
+
+temps_par <- system.time({
+  res_par <- future_map(taches, ~ { Sys.sleep(.x); .x * 2 })
+})
+cat("Temps parallèle :", temps_par["elapsed"], "secondes.\n")
+
+plan(sequential)
+```
+
+---
+
+## Mini-test de préparation
+
+### Question 1 : Le concept de surcharge (Overhead)
+Pourquoi l'exécution d'une tâche simple (ex: faire la somme de 10 nombres) est-elle généralement **beaucoup plus lente** en parallèle qu'en séquentiel ?
+
+*   **Option A :** Les processeurs modernes ralentissent leur fréquence lorsqu'ils activent plusieurs cœurs.
+*   **Option B :** Le temps requis pour démarrer les processus esclaves et copier les données en mémoire vers ces processus est supérieur au temps du calcul lui-même.
+*   **Option C :** R limite volontairement la vitesse des cœurs secondaires pour éviter la surchauffe.
+*   **Option D :** Les futurs utilisent un algorithme de tri plus lent.
+
+### Question 2 : Reproductibilité et nombres aléatoires
+Pourquoi l'utilisation de `set.seed(123)` suivi d'une boucle parallèle classique (sans configuration spécifique) pose-t-elle un grave problème pour des simulations scientifiques ?
+
+*   **Option A :** Les cœurs génèrent exactement les mêmes nombres aléatoires en parallèle, ce qui rend les simulations identiques et corrélées.
+*   **Option B :** Les processus esclaves n'ont pas accès à l'horloge système.
+*   **Option C :** La génération parallèle modifie de façon permanente le système d'exploitation.
+*   **Option D :** `set.seed` ne fonctionne pas en dehors du Global Environment.
+
+### Question 3 : Choix du plan de calcul
+Quel plan de calcul `future` devez-vous utiliser en priorité si vous travaillez sur une machine Windows et souhaitez exécuter du code en parallèle sur vos cœurs locaux ?
+
+*   **Option A :** `plan(multicore)`
+*   **Option B :** `plan(cluster)`
+*   **Option C :** `plan(multisession)`
+*   **Option D :** `plan(sequential)`

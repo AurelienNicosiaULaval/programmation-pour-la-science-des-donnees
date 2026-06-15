@@ -1,0 +1,29 @@
+---
+title: "Quarto et rapports - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Déroulement de la séance
+
+La séance se concentre sur l'organisation logique d'un rapport professionnel et les bonnes pratiques pour masquer la plomberie technique (le code) au profit de la communication (les résultats).
+
+| Moment | Durée | Activité |
+|---|---:|---|
+| **Retour technique** | 30 min | Revenir sur les différences RMarkdown/Quarto et l'utilisation du YAML. |
+| **Démonstration Quarto** | 35 min | Configurer un en-tête YAML complet (table des matières, onglets, styles css personnalisés et options de blocs par défaut). |
+| **Atelier pratique** | 90 min | Rédiger et compiler le [laboratoire](laboratoire.qmd) (rapport d'analyse reproductible sur les données météo). |
+| **Synthèse et projet** | 25 min | Validation des livrables et point d'avancement sur la proposition de projet d'équipe. |
+
+---
+
+## Les 3 règles d'or d'un rapport professionnel
+
+1.  **La règle du public cible** :
+    *   Si le rapport s'adresse à un public d'affaires ou à un décideur, le code doit être masqué globalement (`echo: false` dans le YAML).
+    *   Si le rapport est un document technique destiné à des pairs, le code peut être affiché (`echo: true`) ou replié (`code-fold: true`).
+2.  **L'indépendance de la racine** :
+    *   Le fichier `.qmd` doit s'exécuter correctement depuis n'importe quel ordinateur. Tous les chemins de fichiers (importations de données, images) doivent être **relatifs** au fichier `.qmd`.
+3.  **L'autonomie du livrable** :
+    *   L'utilisation de `embed-resources: true` garantit que toutes les images et feuilles de style CSS sont encodées à l'intérieur du fichier HTML. Vous pouvez envoyer ce fichier unique par courriel sans craindre de casser les images ou les liens.

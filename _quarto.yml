@@ -27,14 +27,16 @@ website:
         - modules/02-structure-git-github/index.qmd
         - modules/03-dependances-reproductibilite/index.qmd
         - modules/04-donnees-nettoyage-validation/index.qmd
-        - modules/05-programmation-orientee-objet/index.qmd
-        - modules/06-programmation-fonctionnelle/index.qmd
-        - modules/07-profilage-optimisation-performance/index.qmd
-        - modules/08-programmation-parallele/index.qmd
-        - modules/09-modeles-apprentissage-automatique/index.qmd
-        - modules/10-deploiement-production/index.qmd
-        - modules/11-cycle-vie-modeles/index.qmd
-        - modules/12-collaboration-documentation-package/index.qmd
+        - modules/06-visualisation/index.qmd
+        - modules/07-quarto-rapports/index.qmd
+        - modules/10-programmation-fonctionnelle/index.qmd
+        - modules/11-programmation-orientee-objet/index.qmd
+        - modules/12-profilage-optimisation-performance/index.qmd
+        - modules/12-programmation-parallele/index.qmd
+        - modules/14-modeles-apprentissage-automatique/index.qmd
+        - modules/14-deploiement-production/index.qmd
+        - modules/14-cycle-vie-modeles/index.qmd
+        - modules/15-collaboration-documentation-package/index.qmd
       - text: "Évaluations"
         href: evaluations.qmd
       - text: "Portfolio"
@@ -58,14 +60,16 @@ website:
         - modules/02-structure-git-github/index.qmd
         - modules/03-dependances-reproductibilite/index.qmd
         - modules/04-donnees-nettoyage-validation/index.qmd
-        - modules/05-programmation-orientee-objet/index.qmd
-        - modules/06-programmation-fonctionnelle/index.qmd
-        - modules/07-profilage-optimisation-performance/index.qmd
-        - modules/08-programmation-parallele/index.qmd
-        - modules/09-modeles-apprentissage-automatique/index.qmd
-        - modules/10-deploiement-production/index.qmd
-        - modules/11-cycle-vie-modeles/index.qmd
-        - modules/12-collaboration-documentation-package/index.qmd
+        - modules/06-visualisation/index.qmd
+        - modules/07-quarto-rapports/index.qmd
+        - modules/10-programmation-fonctionnelle/index.qmd
+        - modules/11-programmation-orientee-objet/index.qmd
+        - modules/12-profilage-optimisation-performance/index.qmd
+        - modules/12-programmation-parallele/index.qmd
+        - modules/14-modeles-apprentissage-automatique/index.qmd
+        - modules/14-deploiement-production/index.qmd
+        - modules/14-cycle-vie-modeles/index.qmd
+        - modules/15-collaboration-documentation-package/index.qmd
     - id: evaluations
       title: "Évaluations"
       contents:

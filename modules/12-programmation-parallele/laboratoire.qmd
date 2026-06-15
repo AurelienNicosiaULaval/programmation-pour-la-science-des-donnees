@@ -1,0 +1,115 @@
+---
+title: "Programmation asynchrone et parallèle - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Mise en contexte
+
+Dans ce laboratoire, vous allez paralléliser une tâche statistique classique : le **Bootstrap**. Le bootstrap implique de ré-échantillonner un jeu de données des milliers de fois et de ré-ajuster un modèle statistique à chaque étape. C'est un cas d'usage parfait pour le calcul parallèle, car chaque simulation est totalement indépendante des autres (problème "embarrassingly parallel").
+
+## Objectifs du laboratoire
+
+1.  Mesurer les performances d'un bootstrap séquentiel.
+2.  Paralléliser le calcul à l'aide de `future` et `furrr`.
+3.  Mesurer le gain de temps (Speedup) selon le nombre de cœurs.
+4.  Assurer la reproductibilité stricte des coefficients bootstrappés.
+
+---
+
+## Exercice 1 : Le Bootstrap séquentiel (Ligne de base)
+
+Nous allons estimer la distribution des coefficients d'une régression linéaire modélisant la magnitude des séismes (`quakes`) en fonction de leur profondeur (`depth`) et du nombre de stations de détection (`stations`).
+
+### Script séquentiel :
+
+```r
+library(purrr)
+library(tibble)
+
+# Fonction effectuant une seule réplication bootstrap
+une_repli_bootstrap <- function(data) {
+  # Ré-échantillonnage avec remplacement
+  indices <- sample(1:nrow(data), replace = TRUE)
+  data_boot <- data[indices, ]
+  
+  # Ajustement du modèle linéaire
+  fit <- lm(mag ~ depth + stations, data = data_boot)
+  
+  # Extraction des coefficients
+  coef(fit)
+}
+
+# Lancer 2 000 réplications en séquentiel
+set.seed(123)
+temps_seq <- system.time({
+  coefs_seq <- map(1:2000, ~ une_repli_bootstrap(quakes))
+})
+cat("Temps séquentiel :", temps_seq["elapsed"], "secondes.\n")
+```
+
+---
+
+## Exercice 2 : Parallélisation avec `furrr`
+
+1.  Chargez le package `furrr`.
+2.  Configurez le plan de calcul parallèle local avec `plan(multisession, workers = 2)` (ou plus si votre machine possède plus de cœurs).
+3.  Modifiez la boucle séquentielle en utilisant `future_map()` au lieu de `map()`.
+4.  **Important** : Configurez l'argument `.options = furrr_options(seed = TRUE)` pour garantir que le bootstrap soit reproductible.
+5.  Mesurez le temps parallèle.
+
+```r
+library(furrr)
+
+# 1. Planification
+plan(multisession, workers = 2)
+
+# 2. Exécution parallèle
+set.seed(123)
+temps_par <- system.time({
+  coefs_par <- future_map(
+    1:2000, 
+    ~ une_repli_bootstrap(quakes), 
+    .options = furrr_options(seed = TRUE)
+  )
+})
+cat("Temps parallèle :", temps_par["elapsed"], "secondes.\n")
+
+# Revenir en mode séquentiel
+plan(sequential)
+```
+
+---
+
+## Exercice 3 : Mesure du Speedup théorique et réel
+
+Le **Speedup** est défini par le rapport du temps de calcul séquentiel sur le temps de calcul parallèle :
+$$\text{Speedup} = \frac{T_{\text{séquentiel}}}{T_{\text{parallèle}}}$$
+
+1.  Calculez le speedup obtenu sur votre machine.
+2.  Si vous avez configuré 2 cœurs (`workers = 2`), le speedup est-il exactement égal à 2 ? Expliquez pourquoi (surcharge système, threads système, etc.).
+3.  Augmentez le nombre de cœurs à 4 (si possible) et recalculez le speedup. Observe-t-on des rendements décroissants ?
+
+---
+
+## Exercice 4 : Validation de la reproductibilité
+
+Vérifiez que deux exécutions successives de votre bootstrap parallèle, précédées d'un même `set.seed(123)`, produisent **exactement** le même résultat final :
+
+```r
+# Lancement 1
+plan(multisession, workers = 2)
+set.seed(123)
+run1 <- future_map(1:500, ~ une_repli_bootstrap(quakes), .options = furrr_options(seed = TRUE))
+
+# Lancement 2
+set.seed(123)
+run2 <- future_map(1:500, ~ une_repli_bootstrap(quakes), .options = furrr_options(seed = TRUE))
+
+plan(sequential)
+
+# Vérification d'égalité stricte
+all.equal(run1, run2)
+```
+*Si le résultat est `TRUE`, votre simulation est reproductible et valide pour un rapport scientifique.*

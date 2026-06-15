@@ -1,0 +1,115 @@
+---
+title: "Programmation orientée objet - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Activités en classe
+
+### 1. Retour sur le mini-test (15 min)
+
+*   **Question 1 :** L'objet `WWWusage` a la classe `"ts"`. Lors de l'appel à `summary(WWWusage)`, le dispatch de R cherche d'abord la méthode `summary.ts()`. Si elle existe (ce qui est le cas dans le package base), R l'appelle. La bonne réponse est donc **Option B : `summary.ts`**.
+*   **Question 2 :** En S3, la règle de nommage d'une méthode est `<nom_generique>.<nom_classe>`. Pour surcharger `plot` pour la classe `matrix`, la syntaxe est `plot.matrix <- function(x, ...)`. La bonne réponse est **Option B**.
+*   **Question 3 :** Contrairement aux listes S3 et aux objets R6 qui utilisent `$`, les objets de classe S4 accèdent à leurs slots internes (attributs stricts) avec l'opérateur `@` (ou la fonction `slot()`). La bonne réponse est **Option C**.
+
+---
+
+### 2. Démonstration 1 : Écrire un système S3 personnalisé (20 min)
+
+Définissons ensemble une nouvelle fonction générique `rapporter()` et des méthodes pour différentes classes :
+
+```r
+# 1. Définition du générique
+rapporter <- function(x, ...) {
+  UseMethod("rapporter")
+}
+
+# 2. Méthode par défaut
+rapporter.default <- function(x, ...) {
+  cat("Rapport par défaut : L'objet est de type", typeof(x), "\n")
+  invisible(x)
+}
+
+# 3. Méthode pour la classe "modele_simple"
+rapporter.modele_simple <- function(x, ...) {
+  cat("=== RAPPORT DE MODÈLE SIMPLE ===\n")
+  cat("Nom du modèle :", x$nom, "\n")
+  cat("Coefficients :", paste(x$coefficients, collapse = ", "), "\n")
+  invisible(x)
+}
+
+# Tests de dispatch S3
+v <- c(1, 2, 3)
+rapporter(v) # Appelle rapporter.default
+
+m <- list(nom = "Régression linéaire", coefficients = c(1.2, 0.4))
+class(m) <- "modele_simple"
+rapporter(m) # Appelle rapporter.modele_simple
+```
+
+---
+
+### 3. Démonstration 2 : R6, encapsulation et mutabilité (25 min)
+
+La force de R6 réside dans l'encapsulation (le fait de cacher des variables internes) et les champs actifs (Active Bindings) servant de contrôles de validation (getters/setters).
+
+Découvrons ensemble comment implémenter un compte bancaire sécurisé en R6 :
+
+```r
+library(R6)
+
+CompteBancaire <- R6Class("CompteBancaire",
+  private = list(
+    # Le solde est privé : inaccessible directement de l'extérieur
+    ..solde = 0
+  ),
+  public = list(
+    titulaire = NULL,
+    
+    initialize = function(nom, solde_initial = 0) {
+      self$titulaire <- nom
+      private$..solde <- solde_initial
+    },
+    
+    # Méthode publique pour déposer de l'argent
+    deposer = function(montant) {
+      if (montant <= 0) stop("Le montant doit être positif.")
+      private$..solde <- private$..solde + montant
+      invisible(self)
+    }
+  ),
+  
+  active = list(
+    # Champ actif (Active Binding) en lecture seule pour consulter le solde
+    solde = function(value) {
+      if (!missing(value)) {
+        stop("Le solde est en lecture seule. Utilisez la méthode deposer().")
+      }
+      private$..solde
+    }
+  )
+)
+
+# Utilisation
+mon_compte <- CompteBancaire$new("Jean Dupont", solde_initial = 100)
+
+# 1. Lecture du solde (via le champ actif)
+mon_compte$solde # [1] 100
+
+# 2. Tentative de fraude (bloquée par le champ actif)
+# mon_compte$solde <- 1000000 
+# Erreur : Le solde est en lecture seule...
+
+# 3. Dépôt légitime
+mon_compte$deposer(50)
+mon_compte$solde # [1] 150
+
+# 4. Sémantique de référence et Clonage
+compte_copie <- mon_compte
+compte_copie$deposer(10) # Modifie AUSSI mon_compte !
+
+# Pour dupliquer réellement l'objet sans partager la référence :
+compte_independant <- mon_compte$clone()
+compte_independant$deposer(100) # N'affecte pas mon_compte
+```

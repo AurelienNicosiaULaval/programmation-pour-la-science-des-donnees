@@ -1,0 +1,41 @@
+---
+title: "Collaboration, documentation et packaging - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Lectures recommandées
+
+### Lecture principale
+*   **R Packages (2e édition)**, de Hadley Wickham et Jenny Bryan :
+    *   [Chapter 1: Introduction](https://r-pkgs.org/intro.html) : Comprendre les bénéfices de la création de packages.
+    *   [Chapter 2: The Whole Game](https://r-pkgs.org/whole-game.html) : Un guide pratique complet à suivre étape par étape.
+    *   [Chapter 16: Roxygen2](https://r-pkgs.org/man.html) : Guide de référence de toutes les balises de documentation supportées.
+    *   [Chapter 13: Testing](https://r-pkgs.org/testing.html) : Intégration de tests unitaires avec `testthat` à l'arborescence.
+
+### Lectures complémentaires
+*   **DESCRIPTION et NAMESPACE** :
+    *   [Chapter 9: The DESCRIPTION file](https://r-pkgs.org/description.html) : Rôles des métadonnées et des versions.
+    *   [Chapter 10: NAMESPACE](https://r-pkgs.org/namespace.html) : Comprendre comment R isole les variables et exporte/importe les fonctions.
+
+---
+
+## Geste R à reproduire chez vous : Inspecter le NAMESPACE généré
+
+Le fichier `NAMESPACE` gère les importations et exportations de fonctions du package. Il ne doit pas être modifié à la main. Il est mis à jour par `devtools::document()` à partir de vos balises `@export` et `@importFrom`.
+
+Faites ce test sur le package `manhattan` créé au cours :
+
+1.  Ouvrez le fichier `NAMESPACE` à la racine de votre package esclave.
+2.  Vérifiez que les lignes suivantes s'y trouvent :
+    ```r
+    export(dist_manhattan)
+    export(dist_manhattan_2)
+    export(print.distman)
+    importFrom(stats,dist)
+    ```
+
+### Questions à se poser :
+*   Pourquoi est-il crucial d'écrire `importFrom(stats,dist)` plutôt que d'importer tout le package `stats` ? (Raison de collision de fonctions dans les NAMESPACE de R).
+*   Que se passe-t-il si un utilisateur tente d'appeler une fonction qui n'est pas répertoriée dans le NAMESPACE sous `export` ?

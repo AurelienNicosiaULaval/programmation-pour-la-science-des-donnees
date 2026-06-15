@@ -1,0 +1,147 @@
+---
+title: "Programmation orientée objet - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Mise en contexte
+
+Dans ce laboratoire, vous allez pratiquer les deux principaux systèmes d'objets en R. Dans la première partie, vous implémenterez un système S3 pour encapsuler des résultats d'analyses statistiques et surcharger les comportements d'affichage. Dans la seconde partie, vous créerez une classe R6 pour simuler un jeu de société de type *Serpents et Échelles*, en utilisant la sémantique de référence pour faire évoluer l'état de la partie.
+
+---
+
+## Exercice 1 : Un système S3 pour les analyses statistiques
+
+Vous devez créer une structure S3 pour gérer des sorties d'analyses.
+
+1.  **Constructeur** : Écrivez un constructeur S3 nommé `nouvelle_analyse` qui prend un vecteur numérique `x` et une chaîne de caractères `titre`. Il retourne une liste avec les éléments `x` et `titre`, étiquetée avec la classe `"analyse_s3"`.
+2.  **Méthode print** : Définissez `print.analyse_s3` pour afficher le titre de l'étude souligné, suivi du nombre d'observations.
+3.  **Méthode summary** : Définissez `summary.analyse_s3` pour retourner une table nommée contenant la moyenne, la variance et le nombre de valeurs manquantes (`NA`).
+
+### Gabarit de départ à compléter :
+
+```r
+# Constructeur
+nouvelle_analyse <- function(x, titre = "Étude sans nom") {
+  if (!is.numeric(x)) stop("Le vecteur 'x' doit être numérique.")
+  
+  structure(
+    list(
+      valeurs = x,
+      titre = as.character(titre)
+    ),
+    class = "analyse_s3"
+  )
+}
+
+# Méthode print
+print.analyse_s3 <- function(x, ...) {
+  cat("=== ANALYSE :", x$titre, "===\n")
+  cat("Nombre d'observations :", length(x$valeurs), "\n")
+  invisible(x)
+}
+
+# Méthode summary
+summary.analyse_s3 <- function(object, ...) {
+  n_na <- sum(is.na(object$valeurs))
+  res <- c(
+    Moyenne = mean(object$valeurs, na.rm = TRUE),
+    Variance = var(object$valeurs, na.rm = TRUE),
+    N_NA = n_na
+  )
+  class(res) <- "summary_analyse_s3"
+  res
+}
+```
+
+---
+
+## Exercice 2 : Une classe R6 pour simuler un jeu (Serpents et Échelles)
+
+Recyclons le jeu historique *Serpents et Échelles* en l'encapsulant dans une classe R6 nommée `JeuSerpentEchelle`. Ce choix permet de conserver l'état du jeu (position des joueurs, historique des lancers) au sein de l'objet et de le faire muter à chaque tour.
+
+### Spécifications de la classe :
+*   **Champs privés** : `..planche` (vecteur représentant les décalages de cases des serpents et échelles).
+*   **Champs publics** :
+    *   `positions` : Un vecteur avec la position courante de chaque joueur (ex: `c(0, 0)`).
+    *   `tour` : Le nombre de tours joués.
+    *   `gagnant` : Le numéro du joueur gagnant (`NA` si la partie est en cours).
+*   **Méthodes** :
+    *   `initialize(n_joueurs = 2)` : Initialise les positions à 0, le tour à 0, le gagnant à `NA`. Configure la planche classique (longueur 50 cases).
+    *   `lancer_de()` : Retourne un chiffre aléatoire entre 1 et 6.
+    *   `jouer_tour()` : Fait avancer chaque joueur d'un lancer de dé, applique l'effet de la planche, et gère les limites de la planche (victoire à la case 50 exacte). Si un joueur gagne, met à jour le champ `gagnant`.
+
+### Code de départ de la classe R6 :
+
+```r
+library(R6)
+
+JeuSerpentEchelle <- R6Class("JeuSerpentEchelle",
+  private = list(
+    ..planche = NULL
+  ),
+  public = list(
+    positions = NULL,
+    tour = 0,
+    gagnant = NA,
+    
+    initialize = function(n_joueurs = 2) {
+      self$positions <- rep(0, n_joueurs)
+      self$tour <- 0
+      self$gagnant <- NA
+      # Définition simplifiée : 50 cases
+      # Valeurs positives = échelles, négatives = serpents, 0 = case normale
+      private$..planche <- c(
+        0,0,14,0,0,0,0,0,0,-9,0,0,0,14,0,0,0,0,0,-13,0,0,0,0,9,
+        0,0,0,0,0,13,0,0,0,0,0,-14,0,0,-5,0,5,0,0,0,0,0,-15,0,0
+      )
+    },
+    
+    lancer_de = function() {
+      sample(1:6, 1)
+    },
+    
+    jouer_tour = function() {
+      if (!is.na(self$gagnant)) {
+        message("La partie est déjà terminée ! Le gagnant est le joueur ", self$gagnant)
+        return(invisible(self))
+      }
+      
+      self$tour <- self$tour + 1
+      n_joueurs <- length(self$positions)
+      
+      for (j in 1:n_joueurs) {
+        de <- self$lancer_de()
+        nouvelle_pos <- self$positions[j] + de
+        
+        # Gestion du dépassement exact de la case 50
+        if (nouvelle_pos > 50) {
+          # Rebond (recule du surplus)
+          surplus <- nouvelle_pos - 50
+          nouvelle_pos <- 50 - surplus
+        }
+        
+        # Application de l'effet serpent ou échelle
+        decalage <- private$..planche[nouvelle_pos]
+        self$positions[j] <- nouvelle_pos + decalage
+        
+        # Vérification de victoire
+        if (self$positions[j] == 50) {
+          self$gagnant <- j
+          break # Arrêt immédiat du tour
+        }
+      }
+      invisible(self)
+    }
+  )
+)
+
+# Testez votre simulateur en exécutant une partie
+partie <- JeuSerpentEchelle$new(n_joueurs = 3)
+while (is.na(partie$gagnant) && partie$tour < 100) {
+  partie$jouer_tour()
+}
+cat("Partie terminée en", partie$tour, "tours. Gagnant : Joueur", partie$gagnant, "\n")
+print(partie$positions)
+```

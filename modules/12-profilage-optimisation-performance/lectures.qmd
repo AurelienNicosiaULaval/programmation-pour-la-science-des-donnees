@@ -1,0 +1,66 @@
+---
+title: "Profilage, optimisation et performance - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Lectures recommandées
+
+### Lecture principale
+*   **Advanced R**, de Hadley Wickham :
+    *   [Chapter 23: Measuring performance](https://adv-r.hadley.nz/perf-measure.html) : Outils de benchmarking (bench et microbenchmark) et fonctionnement du profilage avec `profvis`.
+    *   [Chapter 24: Improving performance](https://adv-r.hadley.nz/perf-improve.html) : Section sur la pré-allocation, l'optimisation des structures de contrôle et les compromis de réécriture.
+
+### Lectures complémentaires
+*   **R for Data Science (2e édition)** :
+    *   [Chapter 25: Functions - Vectorization](https://r4ds.hadley.nz/functions.html) : Comprendre comment les fonctions vectorisées de base de R permettent d'éviter les itérations explicites coûteuses.
+
+---
+
+## Geste R à reproduire chez vous : Compilation Byte-Code versus Vectorisation
+
+Depuis R 3.4.0, R compile automatiquement par défaut le code des packages et des fonctions utilisateur en Byte-Code (Byte-Code Compiler) pour accélérer les boucles. Nous allons comparer une boucle non compilée, compilée manuellement, et sa version vectorisée.
+
+Exécutez ce script pour comprendre l'impact du compilateur de R :
+
+```r
+library(bench)
+library(compiler)
+
+# 1. Fonction de somme de carrés avec une boucle
+somme_carres <- function(x) {
+  s <- 0
+  for (val in x) {
+    s <- s + val^2
+  }
+  s
+}
+
+# 2. Désactiver la compilation automatique pour notre test
+# Rcomp <- enableJIT(0) # Optionnel selon la session R
+
+# 3. Compiler manuellement la fonction en Byte-Code
+somme_carres_compilee <- cmpfun(somme_carres)
+
+# 4. Version vectorisée native
+somme_carres_vectorise <- function(x) {
+  sum(x^2)
+}
+
+# 5. Simulation et Benchmark
+v <- runif(10000)
+
+res_bench <- mark(
+  boucle_standard  = somme_carres(v),
+  boucle_compilee  = somme_carres_compilee(v),
+  vectorisation    = somme_carres_vectorise(v),
+  check = TRUE
+)
+
+print(res_bench)
+```
+
+### Questions à se poser :
+*   Le Byte-code compiler améliore-t-il la vitesse de la boucle ? Si oui, dans quelle proportion ?
+*   La boucle compilée arrive-t-elle à rivaliser avec la vectorisation native `sum(x^2)` écrite en C ?

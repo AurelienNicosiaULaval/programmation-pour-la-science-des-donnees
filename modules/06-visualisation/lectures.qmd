@@ -1,0 +1,23 @@
+---
+title: "Visualisation - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Lectures obligatoires
+
+Pour bien vous préparer au laboratoire, lisez les chapitres suivants :
+
+- **R for Data Science (2e édition)**, [Chapter 2: Data visualization](https://r4ds.hadley.nz/data-visualize) : Ce chapitre introduit les bases de `ggplot2`, comment associer des variables à des propriétés esthétiques et comment choisir des géométries simples (points, barres, boîtes).
+- **R for Data Science (2e édition)**, [Chapter 10: Exploratory data analysis](https://r4ds.hadley.nz/eda) : Ce chapitre explique comment utiliser la visualisation pour explorer les distributions des variables et les relations entre elles.
+- **Documentation officielle `ggplot2`** : Parcourez les fiches d'aide des fonctions clés :
+    - `help(geom_bar)`
+    - `help(after_stat)`
+
+## Lectures complémentaires (Optionnel)
+
+Pour aller plus loin dans la conception graphique et la typographie :
+
+- **The ggplot flipbook** : Un guide visuel pas-à-pas interactif de la construction de graphiques avec `ggplot2` : <https://evamaerey.github.io/ggplot_flipbook/ggplot_flipbook_xaringan.html>.
+- **Happy Git and GitHub for the useR** : Pour réviser la gestion des conflits Git avant le travail en équipe : <https://happygitwithr.com/>.

@@ -19,3 +19,5 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 .enseignant-prive/
+
+**/*.quarto_ipynb

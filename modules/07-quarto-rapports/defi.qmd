@@ -1,0 +1,44 @@
+---
+title: "Quarto et rapports - Défi de module"
+format:
+  html:
+    embed-resources: true
+---
+
+## Nature du défi
+
+Ce défi de module est une activité pratique pour votre portfolio. Il sert de préparation directe au jalon de projet filé en équipe de la semaine 12 (où vous devrez remettre un rapport d'analyse intermédiaire complet sous forme de document Quarto).
+
+## Objectif
+
+Enrichir le rapport météorologique créé au laboratoire en y intégrant du texte dynamique (code R en ligne) et des explications sur le nettoyage des données.
+
+## Consignes
+
+Dans le fichier `reports/07-rapport-meteo.qmd` de votre dépôt `portfolio-stt4230` :
+
+1.  **Ajouter du texte dynamique (Inline R code)** :
+    *   Dans l'introduction ou la conclusion de votre rapport, ne tapez pas les chiffres statistiques en dur. Utilisez du code R en ligne.
+    *   Affichez dynamiquement :
+        *   Le nombre total d'observations dans le fichier (ex: `` `r nrow(meteo_data)` ``).
+        *   La température maximale enregistrée dans tout le jeu de données (ex: `` `r max(meteo_data$temperature_c, na.rm = TRUE)` ``).
+        *   La date de la dernière observation.
+2.  **Documenter le processus de nettoyage (Semaine 4)** :
+    *   Ajoutez une sous-section décrivant brièvement les décisions de nettoyage prises lors du module 4 (ex: correction des virgules décimales, gestion des précipitations négatives).
+3.  **Vérifier la reproductibilité** :
+    *   Exécutez `quarto render` à nouveau.
+    *   Ouvrez le fichier HTML compilé et vérifiez que les valeurs dynamiques s'affichent correctement au milieu du texte.
+4.  **Déclaration IA** :
+    *   Si vous avez utilisé l'IA pour rédiger une partie du YAML ou structurer le texte, ajoutez une entrée correspondante dans `docs/ai-log.md`.
+
+## Livrables attendus
+
+| Élément | Attente minimale |
+|---|---|
+| Fichier `.qmd` | Fichier source avec du code R en ligne (inline) et la documentation du nettoyage. |
+| Rapport `.html` | Le rapport compilé contenant les résultats textuels dynamiques. |
+| Git | Commit unique avec un message décrivant l'ajout de l'analyse dynamique. |
+
+## Variante STT-6230
+
+Ajouter une section d'analyse d'erreur ou d'exception. Simulez l'absence d'une colonne attendue dans les données (ou introduisez un fichier vide) et écrivez un bloc de code défensif à l'aide de `tryCatch()` ou de conditions robustes pour que le rapport puisse tout de même compiler proprement en affichant un avertissement explicite dans le document HTML final au lieu de faire planter le rendu.

@@ -1,0 +1,72 @@
+---
+title: "Collaboration, documentation et packaging - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Activités en classe
+
+### 1. Retour sur le mini-test (15 min)
+
+*   **Question 1 :** La bonne réponse est l'**Option B**. `devtools::check()` est l'outil indispensable du développeur R. Il lance plus de 50 vérifications rigoureuses pour s'assurer que le package compile, s'installe, ne comporte pas de liens d'aide brisés, que le code R ne contient pas d'erreurs de syntaxe grossières, et lance tous les tests unitaires.
+*   **Question 2 :** La bonne réponse est l'**Option C**. La balise `#' @export` indique à `roxygen2` d'écrire le nom de la fonction dans le fichier `NAMESPACE`. Sans cela, la fonction reste interne au package (utilisable avec `monpackage:::ma_fonction` mais cachée par défaut).
+*   **Question 3 :** La bonne réponse est l'**Option B**. Utiliser `library()` dans un package est une mauvaise pratique majeure (cela pollue l'environnement de recherche globale de l'utilisateur). On doit utiliser `usethis::use_package()` pour déclarer la dépendance dans `DESCRIPTION` et appeler la fonction de façon qualifiée avec le préfixe `ggplot2::geom_point()`.
+
+---
+
+### 2. Démonstration 1 : Les fonctions phares de la construction (25 min)
+
+Nous allons passer en revue le cycle de vie typique du développement d'un package R sur un exemple.
+
+#### Étape 1 : Initialiser la structure
+On crée le dossier et l'arborescence standard :
+```r
+# Initialiser le package (crée DESCRIPTION, NAMESPACE, R/)
+usethis::create_package(path = "chemin/vers/monpackage")
+```
+
+#### Étape 2 : Ajouter une fonction
+On crée un fichier R dans le dossier `R/` :
+```r
+usethis::use_r(name = "ma_fonction")
+```
+*Copier-coller le code de notre fonction et ses commentaires `roxygen2` dans le fichier ouvert.*
+
+#### Étape 3 : Compiler la documentation
+On transforme les commentaires en fiches d'aide `.Rd` (dossier `man/`) et mettons à jour `NAMESPACE` :
+```r
+devtools::document()
+```
+
+#### Étape 4 : Charger et tester à la volée
+On charge le package temporairement en mémoire sans l'installer (très pratique pour tester notre code interactivement) :
+```r
+devtools::load_all()
+```
+
+#### Étape 5 : Lancer les vérifications diagnostiques
+On vérifie l'absence de bugs et d'oublis de déclarations :
+```r
+devtools::check()
+```
+
+---
+
+### 3. Démonstration 2 : Dissimuler une fonction d'aide (Interne) (15 min)
+
+Dans un package, on a souvent des fonctions utilitaires secondaires que l'on ne veut pas exposer publiquement à l'utilisateur. Pour les documenter pour nos collègues développeurs sans générer de fiche d'aide publique, on utilise la balise `@noRd`.
+
+```r
+#' Formater les étiquettes en majuscules
+#'
+#' Fonction interne d'aide pour standardiser les titres.
+#'
+#' @param txt Une chaîne de caractères.
+#' @return En majuscules.
+#' @noRd # Indique à roxygen2 de NE PAS générer de fichier .Rd et de ne pas exporter la fonction
+majuscules_interne <- function(txt) {
+  toupper(txt)
+}
+```
+*Après avoir roulé `devtools::document()`, la fonction `majuscules_interne` n'apparaît ni dans le `NAMESPACE` ni dans le dossier `man/`.*

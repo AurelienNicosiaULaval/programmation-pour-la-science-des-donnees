@@ -1,0 +1,129 @@
+---
+title: "Programmation fonctionnelle avec tidyverse - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Mise en contexte
+
+Dans ce laboratoire, vous allez concevoir une fonction robuste pour calculer des statistiques descriptives sur des variables numériques, écrire des tests unitaires pour valider son comportement, puis utiliser le package `purrr` pour appliquer cette fonction de façon itérative sur plusieurs colonnes d'un jeu de données.
+
+## Objectifs du laboratoire
+
+1.  Écrire une fonction propre munie de validations de type.
+2.  Mettre en place des tests unitaires avec `testthat`.
+3.  Remplacer des structures itératives manuelles par des fonctions `purrr::map()`.
+
+---
+
+## Exercice 1 : Écriture de la fonction et validation
+
+Vous devez écrire une fonction nommée `calculer_resume_numerique` qui prend en entrée :
+*   `v` : un vecteur numérique.
+*   `na.rm` : un argument logique (`TRUE` ou `FALSE`), avec comme valeur par défaut `FALSE`.
+
+La fonction doit :
+1.  Valider que l'argument `v` est bien un vecteur de type numérique (à l'aide de `is.numeric(v)`). Si ce n'est pas le cas, la fonction doit lever une erreur claire avec la fonction `stop()`.
+2.  Valider que l'argument `na.rm` est un booléen de longueur 1.
+3.  Retourner une liste nommée avec les statistiques suivantes : `moyenne`, `mediane`, `ecart_type`, `minimum`, `maximum` et `nb_observations` (nombre d'éléments non manquants si `na.rm = TRUE`, ou longueur totale sinon).
+
+### Gabarit de départ à compléter :
+
+```r
+calculer_resume_numerique <- function(v, na.rm = FALSE) {
+  # 1. Validations
+  if (!is.numeric(v)) {
+    stop("L'argument 'v' doit être un vecteur numérique.")
+  }
+  if (!is.logical(na.rm) || length(na.rm) != 1) {
+    stop("L'argument 'na.rm' doit être un booléen de longueur 1 (TRUE ou FALSE).")
+  }
+  
+  # 2. Calculs (à compléter en gérant na.rm)
+  # Remplacer les expressions de base R comme sd(), mean(), etc. en s'assurant de passer na.rm
+  n_obs <- if (na.rm) sum(!is.na(v)) else length(v)
+  
+  # Retourner la liste nommée
+  list(
+    moyenne     = mean(v, na.rm = na.rm),
+    mediane     = median(v, na.rm = na.rm),
+    ecart_type  = sd(v, na.rm = na.rm),
+    minimum     = min(v, na.rm = na.rm),
+    maximum     = max(v, na.rm = na.rm),
+    nb_obs      = n_obs
+  )
+}
+```
+
+---
+
+## Exercice 2 : Tests unitaires avec `testthat`
+
+Installez et chargez le package `testthat` (inclus dans l'environnement du cours). Écrivez un fichier de test contenant les vérifications suivantes pour votre fonction `calculer_resume_numerique` :
+
+1.  **Comportement standard** : vérifier que le calcul est exact sur un vecteur simple comme `c(1, 2, 3, 4, 5)`.
+2.  **Gestion des valeurs manquantes** : vérifier que la présence de `NA` retourne `NA` pour la moyenne si `na.rm = FALSE`, mais calcule la bonne valeur si `na.rm = TRUE`.
+3.  **Gestion des erreurs** : vérifier que passer un vecteur de chaînes de caractères (ex: `c("a", "b")`) lève bien une erreur avec la fonction `expect_error()`.
+
+```r
+library(testthat)
+
+test_that("calculer_resume_numerique calcule correctement sur un cas standard", {
+  res <- calculer_resume_numerique(c(1, 2, 3, 4, 5))
+  expect_equal(res$moyenne, 3)
+  expect_equal(res$minimum, 1)
+  expect_equal(res$maximum, 5)
+  expect_equal(res$nb_obs, 5)
+})
+
+test_that("calculer_resume_numerique gère correctement les NA", {
+  vec_na <- c(1, 2, NA, 4)
+  
+  # Avec na.rm = FALSE
+  res_na_false <- calculer_resume_numerique(vec_na, na.rm = FALSE)
+  expect_true(is.na(res_na_false$moyenne))
+  
+  # Avec na.rm = TRUE
+  res_na_true <- calculer_resume_numerique(vec_na, na.rm = TRUE)
+  expect_equal(res_na_true$moyenne, 7/3)
+  expect_equal(res_na_true$nb_obs, 3)
+})
+
+test_that("calculer_resume_numerique lève des erreurs sur des types invalides", {
+  expect_error(calculer_resume_numerique(c("a", "b", "c")), "L'argument 'v' doit être un vecteur numérique")
+  expect_error(calculer_resume_numerique(1:5, na.rm = "pas_un_logique"), "L'argument 'na.rm' doit être un booléen")
+})
+```
+
+---
+
+## Exercice 3 : Itération avec `purrr::map()`
+
+Nous voulons maintenant appliquer cette fonction à toutes les variables numériques du jeu de données `quakes` (séismes près de Fidji), sans écrire de boucle `for`.
+
+1.  Sélectionner uniquement les colonnes numériques de `quakes` avec `dplyr::select(where(is.numeric))`.
+2.  Utiliser `purrr::map()` pour appliquer `calculer_resume_numerique` sur chaque colonne sélectionnée.
+3.  Convertir la liste résultante en un tableau structuré (tibble ou data frame) où chaque ligne correspond à une variable et les colonnes contiennent les différentes statistiques calculées.
+
+### Code de départ :
+
+```r
+library(dplyr)
+library(purrr)
+library(tibble)
+
+# 1. Sélection et calcul
+res_liste <- quakes |> 
+  select(where(is.numeric)) |> 
+  map(\(colonne) calculer_resume_numerique(colonne, na.rm = TRUE))
+
+# 2. Conversion en data frame propre
+# Rappel : map_dfr() étant obsolète dans les versions récentes de purrr, 
+# la méthode moderne recommandée est de combiner map() et list_rbind() ou de convertir manuellement.
+res_table <- res_liste |> 
+  map(as_tibble) |> 
+  list_rbind(names_to = "variable")
+
+print(res_table)
+```

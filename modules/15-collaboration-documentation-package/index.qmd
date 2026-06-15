@@ -1,0 +1,63 @@
+---
+title: "Collaboration, documentation et packaging"
+description: "Comment structurer, documenter et tester son code pour en faire un outil réutilisable."
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment structurer, documenter et tester son code R pour qu'il devienne un outil réutilisable, fiable et partageable par d'autres ?
+
+## Rôle dans le cours
+
+Ce module est le point d'orgue du cours. Après avoir appris à écrire du code propre, des fonctions et des classes orientées objet (modules 10 et 11), vous apprendrez à encapsuler vos outils dans un **package R** standard. Le package est l'unité fondamentale de partage et de distribution du code en R. Nous utiliserons la suite d'outils modernes `devtools`, `usethis` et `roxygen2` pour automatiser la création de l'arborescence, la génération automatique des fiches d'aide (format `.Rd`), et les tests unitaires.
+
+Ces compétences vous permettront de collaborer efficacement et de livrer votre projet de session sous la forme d'une bibliothèque R testée et documentée.
+
+## Objectifs du module
+
+À la fin de la semaine, chaque personne devrait pouvoir :
+- Créer une structure de package R valide à l'aide de `usethis::create_package()`.
+- Documenter des fonctions publiques et des méthodes S3 à l'aide des balises `roxygen2` (ex: `@param`, `@return`, `@export`, `@examples`).
+- Gérer les dépendances logicielles d'un package dans le fichier `DESCRIPTION` (les rubriques `Imports` et `Depends`).
+- Intégrer et documenter des jeux de données internes (LazyData) à l'aide de `usethis::use_data()`.
+- Écrire et exécuter des tests unitaires intégrés à l'arborescence du package à l'aide de `testthat`.
+- Interpréter et résoudre les avertissements (Warnings) et notes de la commande de diagnostic `devtools::check()`.
+
+## Compétences visées
+
+- Initialiser l'arborescence complète d'un package R.
+- Générer automatiquement le fichier `NAMESPACE` et les fichiers d'aide dans `man/`.
+- Déclarer proprement l'importation de fonctions externes provenant de packages tiers (ex: `stats::dist`).
+- Ajouter des tests unitaires au package et vérifier qu'ils s'exécutent avec succès lors de la construction.
+- Exporter les fonctions destinées à l'utilisateur tout en dissimulant les fonctions internes d'aide (`@noRd`).
+
+## Déroulement
+
+| Moment | Page à utiliser | Résultat |
+|---|---|---|
+| Avant la classe | [Avant la classe](avant.qmd) | Vérifier l'environnement de construction et faire le mini-test de préparation |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos de création, de documentation Roxygen2 et d'importations |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Construire et installer le package local `manhattan` muni de tests et de documentation |
+| Après la classe | [Après la classe (Défi)](defi.qmd) | Packager les fonctions de votre projet de session sous forme de package local testé |
+
+## Place de l’IA
+
+Statut : **IA permise avec déclaration** (Niveau 2).
+
+L'IA peut vous aider à rédiger des descriptions de fonctions au format `roxygen2` ou à structurer vos fichiers de tests. Cependant, vous devez être capable de résoudre par vous-même les problèmes de dépendances (comme l'oubli de déclarer un package importé dans la section `Imports` de DESCRIPTION) signalés par `devtools::check()`. Tout usage significatif doit être déclaré dans `docs/ai-log.md`.
+
+## Variante STT-6230
+
+Discuter de l'intérêt et de la mise en place d'une politique de **Continuous Integration (CI)** (ex: avec GitHub Actions) pour lancer automatiquement la commande `R CMD check` lors de chaque commit sur un dépôt collaboratif.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Après la classe (Défi)](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)

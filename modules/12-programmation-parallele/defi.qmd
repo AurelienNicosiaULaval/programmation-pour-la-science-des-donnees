@@ -1,0 +1,38 @@
+---
+title: "Programmation asynchrone et parallèle - Défi"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consignes du défi de la semaine
+
+L'objectif de ce défi est d'adapter une tâche répétitive et lourde de votre projet de session ou de vos portfolios à une exécution parallèle, tout en garantissant sa reproductibilité et en mesurant objectivement ses performances.
+
+### Tâche : Parallélisation de votre calcul
+
+1.  **Sélection** : Identifiez une boucle d'itération (`map()`, `lapply()`, ou boucle `for`) dans votre projet ou dans vos exercices précédents qui prend **plus de 2 secondes** à s'exécuter en séquentiel.
+    *   *Si vous n'avez pas de tâche personnelle lente* : Vous pouvez paralléliser une simulation Monte Carlo de 5 000 parties du jeu *Serpents et Échelles* en utilisant la classe R6 développée au module 11.
+2.  **Mesure séquentielle** : Mesurez le temps d'exécution de référence avec `system.time()` ou `bench::mark()`.
+3.  **Parallélisation** : Configurez un plan `multisession` et réécrivez le traitement à l'aide de `future_map()` de `furrr`.
+4.  **Vérification de reproductibilité** : Utilisez `set.seed()` et `.options = furrr_options(seed = TRUE)` pour valider que le résultat est identique lors de deux lancements distincts.
+5.  **Calcul du Speedup** : Mesurez le temps parallèle et calculez le speedup empirique.
+
+---
+
+## Livrables attendus dans votre portfolio
+
+1.  **Le script R** : Un fichier (ex: `R/simulation_parallele.R`) contenant les implémentations séquentielle et parallèle, le plan de calcul et la validation de reproductibilité.
+2.  **Une note explicative** rédigée dans votre journal de bord décrivant :
+    *   Le cas d'usage parallélisé (pourquoi cette tâche s'y prête-t-elle ?).
+    *   Le tableau de comparaison des temps (séquentiel vs parallèle) et le speedup calculé.
+    *   La confirmation que les résultats sont reproductibles.
+    *   Une analyse critique : selon la Loi d'Amdahl (voir la variante STT-6230), le gain est-il limité par une portion séquentielle de votre code ? Est-ce que le gain justifie la complexité d'ouvrir des sessions R esclaves ?
+
+---
+
+## Grille d'évaluation simplifiée
+
+*   **Sécurité statistique** : Le code parallèle utilise correctement le contrôle des graines aléatoires (`seed = TRUE`) et garantit des tirages stochastiques reproductibles.
+*   **Pertinence** : Le choix de paralléliser est justifié (temps d'exécution initial suffisant pour absorber la surcharge de copie mémoire).
+*   **Bonnes pratiques** : Le plan de calcul est proprement configuré puis fermé en fin d'exécution (`plan(sequential)`).

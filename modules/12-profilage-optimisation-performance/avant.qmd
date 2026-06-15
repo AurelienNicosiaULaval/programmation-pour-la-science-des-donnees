@@ -1,0 +1,114 @@
+---
+title: "Profilage, optimisation et performance - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Comprendre la méthodologie scientifique de mesure de performance en R, installer les packages nécessaires (`bench` et `profvis`), et exécuter des benchmarks simples.
+
+Temps de préparation estimé : 40 minutes.
+
+## À lire
+
+1.  **Advanced R (Hadley Wickham)** :
+    *   [Chapter 23: Measuring performance](https://adv-r.hadley.nz/perf-measure.html) : Comprendre comment profiler avec `profvis` et faire des microbenchmarks.
+    *   [Chapter 24: Improving performance](https://adv-r.hadley.nz/perf-improve.html) : Lire l'introduction et la section **Organise your code** (identifier les allocations mémoires).
+
+---
+
+## Exemples R à exécuter
+
+Veuillez ouvrir votre session Positron ou RStudio et exécuter les exemples de code suivants.
+
+### Exemple 1 : Micro-benchmarking avec `bench::mark()`
+
+Le package `bench` mesure le temps d'exécution (avec une précision de l'ordre de la nanoseconde) ainsi que l'allocation mémoire de chaque expression, tout en comptabilisant le nombre de fois où le ramasse-miettes (garbage collector - `n_gc`) a dû intervenir.
+
+```r
+library(bench)
+
+# Simulation d'un vecteur d'entiers avec valeurs manquantes
+set.seed(42)
+x <- sample(c(1:10, NA), size = 100000, replace = TRUE)
+
+# Comparons trois méthodes pour calculer la proportion de NA
+resultats_bench <- mark(
+  comparaison_directe = mean(is.na(x) == TRUE),
+  moyenne_logique     = mean(is.na(x)),
+  somme_div_longueur  = sum(is.na(x)) / length(x),
+  check = TRUE # Valide que toutes les expressions retournent le même résultat
+)
+
+print(resultats_bench)
+```
+
+**À observer** :
+*   Quelle colonne indique le temps médian ?
+*   Quelle méthode alloue le moins de mémoire (`mem_alloc`) ?
+*   Pourquoi `mean(is.na(x) == TRUE)` est-il un peu plus lent que `mean(is.na(x))` ?
+
+### Exemple 2 : Profiler du code avec `profvis`
+
+Le profilage consiste à arrêter périodiquement R (toutes les millisecondes) pour enregistrer la pile d'appels active. Cela permet de dresser une carte visuelle du temps passé dans chaque fonction.
+
+```r
+library(profvis)
+
+# Lancer le visualiseur interactif de profvis
+profvis({
+  # Simulation d'un calcul itératif lourd avec croissance d'objet en mémoire
+  somme_de_vecteur_croissant <- function(somme_visee = 50000) {
+    somme <- 0
+    resultats <- integer(length = 0) # Débuter avec un vecteur vide
+    while (somme < somme_visee) {
+      tirage <- sample(1:6, size = 1)
+      somme <- somme + tirage
+      # ALERTE PERFORMANCE : Grossissement dynamique du vecteur à chaque itération
+      resultats <- c(resultats, tirage) 
+    }
+    resultats
+  }
+  
+  simulations <- somme_de_vecteur_croissant(100000)
+})
+```
+
+**À observer** : Dans l'onglet interactif qui s'ouvre, repérez la ligne qui affiche une barre jaune importante pour `Alloc` (allocation mémoire) et `Dealloc` (désallocation / garbage collection).
+
+---
+
+## Mini-test de préparation
+
+### Question 1 : Efficacité des expressions logiques
+Toutes les instructions R suivantes calculent exactement la même proportion de données manquantes dans un vecteur d'entiers `x`. Laquelle de ces expressions est la **plus rapide** en termes de temps de calcul médian ?
+
+```r
+opt_a <- mean(is.na(x) == TRUE)
+opt_b <- mean(is.na(x))
+opt_c <- sum(is.na(x)) / length(x)
+opt_d <- tail(proportions(table(x, useNA = "always")), n = 1)
+```
+
+*   **Option A :** `opt_a`
+*   **Option B :** `opt_b`
+*   **Option C :** `opt_c`
+*   **Option D :** `opt_d`
+
+### Question 2 : Choix de l'indicateur de centralité
+Pourquoi est-il fortement recommandé de s'appuyer sur la **médiane** des temps d'exécution plutôt que sur la **moyenne** lors de la comparaison de deux algorithmes R ?
+
+*   **Option A :** La moyenne est biaisée par le temps CPU des autres cœurs de la machine.
+*   **Option B :** La moyenne est sensible aux valeurs extrêmes causées par le déclenchement ponctuel du ramasse-miettes (Garbage Collector).
+*   **Option C :** R calcule la médiane plus rapidement que la moyenne.
+*   **Option D :** La médiane ignore les lancers de dés aléatoires.
+
+### Question 3 : Identification de la cause de lenteur dans les boucles
+Dans la fonction `somme_de_vecteur_croissant` exécutée dans l'Exemple 2, quelle ligne de code prend le plus de temps à s'exécuter à cause des réallocations successives de mémoire système ?
+
+*   **Option A :** `somme <- 0`
+*   **Option B :** `tirage <- sample(1:6, size = 1)`
+*   **Option C :** `somme <- somme + tirage`
+*   **Option D :** `resultats <- c(resultats, tirage)`

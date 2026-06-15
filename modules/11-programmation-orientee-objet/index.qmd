@@ -1,0 +1,59 @@
+---
+title: "Programmation orientée objet (POO)"
+description: "Savoir quand et comment utiliser les systèmes S3 et R6 pour structurer vos projets R."
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Quand et comment une classe ou un objet simplifie-t-il réellement un projet de science des données ou le développement d'outils en R ?
+
+## Rôle dans le cours
+
+Ce module aborde les paradigmes de programmation orientée objet (POO) en R. Après avoir appris à écrire des fonctions et à automatiser des calculs (module 10), vous découvrirez comment structurer vos données et vos comportements. R propose plusieurs systèmes de POO. Nous nous concentrerons sur le système natif le plus répandu, **S3** (orienté programmation fonctionnelle), et sur le système moderne **R6** (orienté encapsulation et sémantique de référence). Comprendre ces systèmes est essentiel pour concevoir des API propres, structurer des sorties d'analyse complexes ou développer des applications web interactives (comme avec Shiny).
+
+## Objectifs du module
+
+À la fin de la semaine, chaque personne devrait pouvoir :
+- Reconnaître les besoins qui motivent l'utilisation de la programmation orientée objet par rapport à une approche purement fonctionnelle.
+- Comprendre et implémenter le mécanisme de dispatch S3 (création de fonctions génériques et de méthodes spécifiques).
+- Définir et instancier des classes R6 en utilisant le masquage des données (public vs private).
+- Expliquer la différence fondamentale entre la sémantique de valeur (copie-sur-modification de S3) et la sémantique de référence (mutabilité de R6).
+- Concevoir une interface claire et documentée pour un objet de projet de science des données.
+
+## Compétences visées
+
+- Définir une classe S3 minimale en lui associant un constructeur et des attributs de classe.
+- Écrire des méthodes S3 courantes pour des fonctions génériques existantes (ex: `print()`, `summary()`, `plot()`).
+- Concevoir une classe R6 encapsulée avec des champs privés, des méthodes publiques et une méthode d'initialisation (`initialize()`).
+- Tester les invariants et le comportement mutuel des objets S3 et R6 à l'aide de `testthat`.
+
+## Déroulement
+
+| Moment | Page à utiliser | Résultat |
+|---|---|---|
+| Avant la classe | [Avant la classe](avant.qmd) | Lire les concepts de S3 et R6 et faire le mini-test de préparation |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démonstrations de dispatch S3 et de mutabilité avec R6 |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Créer un objet d'analyse S3 et encapsuler un simulateur de jeu ou d'état dans une classe R6 |
+| Après la classe | [Après la classe (Défi)](defi.qmd) | Implémenter et documenter une classe (S3 ou R6) répondant à un besoin du projet de session |
+
+## Place de l’IA
+
+Statut : **IA permise avec déclaration** (Niveau 2).
+
+L'IA peut vous aider à générer le squelette (boilerplate) d'une classe R6 ou à trouver la syntaxe d'une méthode S3. Toutefois, vous devez être capable de justifier par vous-même le choix entre S3 et R6 pour un problème donné et d'expliquer les conséquences de la mutabilité des objets R6 sur la gestion de la mémoire. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+
+## Variante STT-6230
+
+Comparer de manière formelle les performances en termes de vitesse et d'allocation mémoire (avec le package `bench`) lors de la création et de la modification répétée d'un grand nombre d'instances S3 (structures de listes) versus R6 (objets de référence), et analyser l'impact du ramasse-miettes (garbage collector) de R.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Après la classe (Défi)](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)

@@ -1,0 +1,33 @@
+---
+title: "Collaboration, documentation et packaging - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Documentations officielles et livres
+
+*   [Site officiel R Packages](https://r-pkgs.org/) : Le livre de référence complet en ligne pour tout savoir sur la construction de packages R.
+*   [Site officiel de devtools](https://devtools.r-lib.org/) : Fonctions utilitaires interactives d'aide au développement.
+*   [Site officiel de usethis](https://usethis.r-lib.org/) : Automatisation de la configuration de fichiers (tests, documentation, Git, licences).
+*   [Site officiel de roxygen2](https://roxygen2.r-lib.org/) : Syntaxes de balises et de fiches d'aide.
+
+---
+
+## Liste des fonctions clés du développeur de package
+
+Voici un mémo rapide des commandes à saisir dans votre console R pour piloter le développement :
+
+| Commande | Package | Action |
+|---|---|---|
+| `create_package("nom")` | `usethis` | Initialise l'arborescence physique d'un package R. |
+| `use_r("nom_fichier")` | `usethis` | Crée un fichier R vide dans le répertoire `R/`. |
+| `use_package("nom_pkg")` | `usethis` | Déclare la dépendance d'un package tiers dans DESCRIPTION. |
+| `use_data(objet)` | `usethis` | Sauvegarde un jeu de données de travail dans `data/`. |
+| `use_testthat()` | `usethis` | Initialise l'infrastructure de tests unitaires. |
+| `use_test("nom")` | `usethis` | Crée un script de test dans `tests/testthat/`. |
+| `document()` | `devtools` | Génère les fichiers `.Rd` d'aide et met à jour le `NAMESPACE`. |
+| `load_all()` | `devtools` | Charge toutes les fonctions du package en mémoire (mode interactif). |
+| `test()` | `devtools` | Exécute tous les scripts de tests unitaires avec `testthat`. |
+| `check()` | `devtools` | Lance la suite complète de diagnostics et de vérifications de structure. |
+| `install()` | `devtools` | Installe le package local sur votre machine R. |

@@ -1,0 +1,45 @@
+---
+title: "Visualisation - Défi de module"
+format:
+  html:
+    embed-resources: true
+---
+
+## Nature du défi
+
+Ce défi de module est une activité pratique pour votre portfolio. Il sert de préparation formative pour le Défi technique 2 de la semaine 8 et vous aide à structurer les premières figures de votre projet filé en équipe.
+
+## Objectif
+
+Créer un graphique de distribution ou de relation propre avec `ggplot2` sur un jeu de données réel ou simulé, et documenter vos choix de conception.
+
+## Consignes
+
+Dans votre dépôt `portfolio-stt4230` :
+
+1.  **Choisir un jeu de données** : Vous pouvez réutiliser `quakes`, `airquality` (avec les données imputées de la semaine 4), ou un extrait de données de votre choix.
+2.  **Programmer la figure** :
+    *   Le graphique doit représenter une relation ou une distribution (ex: un diagramme de dispersion avec courbe de tendance lissée `geom_smooth()`, ou un diagramme en boîte `geom_boxplot()` multi-groupes).
+    *   Vous devez modifier au moins trois éléments de thème par défaut (ex: couleurs avec `scale_color_*()`, position de la légende, quadrillages).
+    *   Toutes les légendes et titres d'axes doivent être traduits en français.
+3.  **Documenter vos choix** :
+    *   Créer une courte note `modules/semaine-06/note_conception.md` ou l'intégrer directement dans votre journal.
+    *   Expliquer brièvement (100 à 150 mots) :
+        *   Pourquoi ce type de graphique est adapté à vos données.
+        *   Quelle décision de conception vous avez prise pour améliorer la lisibilité (accessibilité, choix des couleurs, contraste).
+        *   Si l'IA a été utilisée, décrivez précisément son apport (ex: recherche d'un paramètre de thème ou d'une palette de couleur) dans votre journal ou `docs/ai-log.md`.
+4.  **Versionner** :
+    *   Faire au moins un commit clair contenant le script R de création du graphique et l'image de sortie enregistrée dans `outputs/`.
+
+## Livrables attendus
+
+| Élément | Attente minimale |
+|---|---|
+| Script R | Script executable depuis la racine du portfolio sans erreur. |
+| Image de sortie | Graphique sauvegardé au format PNG ou PDF dans `outputs/`. |
+| Note ou Journal | Une note expliquant l'intention de conception et les limites. |
+| Git | Historique clair montrant l'ajout du script et de l'image. |
+
+## Variante STT-6230
+
+Ajouter une comparaison entre le graphique final obtenu et une version alternative (ex: remplacer des facettes par des couleurs sur un même graphique, ou vice-versa). Discuter de l'efficacité visuelle de chaque choix en termes de charge cognitive pour le lecteur (150 à 250 mots).

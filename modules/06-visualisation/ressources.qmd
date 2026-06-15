@@ -1,0 +1,20 @@
+---
+title: "Visualisation - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Fiches d'aide et aide-mémoire
+
+- **Aide-mémoire ggplot2 (PDF officiel RStudio)** : Un document de référence indispensable à garder sous les yeux pour trouver rapidement les géométries et arguments de thèmes : <https://github.com/rstudio/cheatsheets/blob/main/data-visualization.pdf>.
+
+## Outils pour le choix des couleurs et l'accessibilité
+
+- **ColorBrewer 2.0** : Un excellent outil pour choisir des palettes de couleurs adaptées aux graphiques (différenciation pour daltoniens, palettes divergentes, séquentielles ou qualitatives) : <https://colorbrewer2.org/>.
+- **R Color Cheat Sheet** : Un aperçu visuel des couleurs prédéfinies disponibles par défaut dans R : <http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf>.
+
+## Livres et manuels de référence
+
+- **ggplot2: Elegant Graphics for Data Analysis** par Hadley Wickham : Le livre officiel complet détaillant toute la théorie de la grammaire des graphiques : <https://ggplot2-book.org/>.
+- **Fundamentals of Data Visualization** par Claus O. Wilke : Un livre magnifique sur les principes de la visualisation de données (ce qu'il faut faire et ne pas faire, la psychologie de la perception visuelle, le choix des échelles) : <https://clauswilke.com/dataviz/>.

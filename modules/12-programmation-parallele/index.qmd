@@ -1,0 +1,60 @@
+---
+title: "Programmation asynchrone et parallèle"
+description: "Quand le parallèle aide-t-il, et quand complique-t-il inutilement le projet?"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Quand le calcul parallèle ou asynchrone est-il réellement bénéfique en R, et quand introduit-il une complexité ou une surcharge inutiles ?
+
+## Rôle dans le cours
+
+Ce module fait suite au profilage de code. Après avoir appris à mesurer et optimiser votre code de manière séquentielle (module précédent), vous apprendrez à exploiter les architectures multi-cœurs de vos ordinateurs. R étant mono-threadé par défaut, l'utilisation de packages comme `future` et `furrr` permet de distribuer les calculs lourds (simulations Monte Carlo, Bootstraps, réglages d'hyperparamètres) sur plusieurs processus en parallèle. Vous étudierez les gains réels, mais aussi les pièges classiques (surcharge de communication, perte de reproductibilité, consommation mémoire).
+
+## Objectifs du module
+
+À la fin de la semaine, chaque personne devrait pouvoir :
+- Comprendre les concepts d'évaluation synchrone (bloquante) versus asynchrone (non bloquante) en R.
+- Configurer un plan de calcul parallèle adapté à sa machine avec le package `future`.
+- Remplacer les appels `purrr::map()` par leurs équivalents parallèles `furrr::future_map()`.
+- Garantir la reproductibilité des simulations en contrôlant les graines aléatoires en parallèle (générateur L'Ecuyer-CMRG).
+- Évaluer le coût de transfert des données (overhead) vers les processus esclaves.
+- Identifier les situations où le parallélisme ralentit l'exécution.
+
+## Compétences visées
+
+- Mettre en place un plan de calcul multisession ou multicœur propre en R.
+- Paralléliser une boucle d'itération fonctionnelle sans effets de bord.
+- Sécuriser la génération de nombres aléatoires parallèles avec `seed = TRUE`.
+- Quantifier la surcharge (overhead) et le gain d'accélération (Speedup) à l'aide de graphiques comparatifs.
+
+## Déroulement
+
+| Moment | Page à utiliser | Résultat |
+|---|---|---|
+| Avant la classe | [Avant la classe](avant.qmd) | Lire les concepts de futurs et d'itérations parallèles et faire le mini-test |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos de plans de calcul, de surcharge mémoire et de reproductibilité |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Paralléliser une simulation bootstrap lourde et valider sa reproductibilité |
+| Après la classe | [Après la classe (Défi)](defi.qmd) | Adapter une tâche de votre projet ou portfolio à une exécution parallèle documentée |
+
+## Place de l’IA
+
+Statut : **IA permise avec déclaration** (Niveau 2).
+
+L'IA peut vous aider à convertir une syntaxe d'itération complexe ou à comprendre un message d'erreur lié aux variables globales non exportées. Néanmoins, vous devez être capable de justifier la configuration de votre plan de calcul et de calculer le speedup théorique. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+
+## Variante STT-6230
+
+Analyser théoriquement et empiriquement les limites d'accélération de votre simulation en appliquant la **Loi d'Amdahl**, et estimer la proportion de code strictement séquentielle de votre algorithme.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Après la classe (Défi)](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)

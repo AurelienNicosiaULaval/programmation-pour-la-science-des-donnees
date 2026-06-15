@@ -1,0 +1,62 @@
+---
+title: "Visualisation"
+description: "Produire et améliorer des figures lisibles, utiles et reproductibles avec ggplot2"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment concevoir et programmer des figures claires, adaptées à l'audience et entièrement reproductibles avec R ?
+
+## Rôle dans le cours
+
+Ce module marque le début de la communication des résultats. Après avoir appris à structurer un projet, gérer les dépendances et nettoyer les données (semaines 1 à 4), la semaine 6 enseigne l'art de concevoir des représentations graphiques rigoureuses. La visualisation n'est pas qu'un art esthétique, c'est une compétence technique clé en science des données.
+
+Les concepts vus cette semaine seront appliqués immédiatement pour la **Proposition de projet filé en équipe** (jalon à remettre à la fin de cette semaine).
+
+## Objectifs du module
+
+À la fin de la semaine, chaque personne devrait pouvoir :
+- Comprendre la grammaire des graphiques de `ggplot2` (données, esthétiques, géométries, facettes, thèmes).
+- Choisir le type de graphique adapté à la nature des variables (continues, catégorielles, relations).
+- Remplacer l'ancien système graphique de base R par `ggplot2`.
+- Ajouter des annotations textuelles précises en calculant les coordonnées de façon dynamique.
+- Utiliser `after_stat()` pour afficher des statistiques calculées à la volée.
+- Structurer un code graphique propre et lisible en empilant les couches.
+
+## Compétences visées
+
+- Programmer un graphique `ggplot2` multicouche.
+- Personnaliser les axes, les légendes et les étiquettes.
+- Ajuster les couleurs et les thèmes pour assurer la lisibilité (accessibilité).
+- Gérer l'affichage des proportions conditionnelles sans boucle.
+
+## Déroulement
+
+| Moment | Page à utiliser | Résultat |
+|---|---|---|
+| Avant la classe | [Avant la classe](avant.qmd) | Lire les concepts de base et exécuter les exemples |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer une démonstration et clarifier les difficultés |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Produire un graphique sur les séismes avec des proportions calculées |
+| Après la classe | [Après la classe](defi.qmd) | Finaliser le défi et mettre à jour le portfolio |
+
+## Place de l’IA
+
+Statut : **IA permise, déclarée** (Niveau 2).
+
+L'IA peut vous aider à trouver le nom d'un argument de thème ou à comprendre une erreur de structure dans `ggplot2`. Cependant, vous devez comprendre l'empilement des couches et être capable d'expliquer pourquoi vous avez choisi un type de graphique plutôt qu'un autre. Tout usage significatif doit être documenté dans `docs/ai-log.md` ou dans le journal.
+
+## Variante STT-6230
+
+Comparer l'utilisation de `after_stat()` de `ggplot2` avec la méthode manuelle consistant à pré-calculer les fréquences avec `dplyr` (ex: `count()`), et justifier dans quelle situation l'une ou l'autre est préférable en production.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Après la classe (Défi)](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)

@@ -77,3 +77,4 @@ Consulter la page [Politique d’utilisation de l’IA](ia.qmd).
 - Ajouter les jeux de données autorisés.
 - Adapter le calendrier aux dates exactes de l’automne 2026.
 - Valider les règles institutionnelles sur l’IA et la protection des données.
+

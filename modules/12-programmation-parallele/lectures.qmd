@@ -1,0 +1,55 @@
+---
+title: "Programmation asynchrone et parallèle - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Lectures recommandées
+
+### Lecture principale
+*   **Documentation du Futureverse** :
+    *   [Futureverse Architecture](https://future.futureverse.org/) : Un portail complet sur le fonctionnement interne de la gestion des futurs en R.
+    *   [Vignette: Packages with Futures](https://future.futureverse.org/articles/future-4-issues.html) : Un guide essentiel pour comprendre les pièges courants (fuites mémoires, variables globales introuvables).
+
+### Lectures complémentaires
+*   **Loi d'Amdahl (STT-6230)** :
+    *   [Amdahl's law on Wikipedia](https://fr.wikipedia.org/wiki/Loi_d%27Amdahl) : Comprendre comment la portion séquentielle incompressible d'un programme limite l'accélération maximale théorique, quel que soit le nombre de cœurs ajoutés.
+
+---
+
+## Geste R à reproduire chez vous : Propagation des erreurs en parallèle
+
+Un aspect crucial du package `future` est que les erreurs survenues sur les cœurs esclaves sont interceptées et propagées fidèlement vers la session principale R lors de l'appel à `value()`.
+
+Exécutez ce script pour constater la propagation propre des exceptions :
+
+```r
+library(future)
+
+plan(multisession, workers = 2)
+
+# 1. Création d'un futur qui va planter
+f_erreur <- future({
+  Sys.sleep(1)
+  # Provoque volontairement une erreur de type incompatible
+  10 + "chaîne" 
+})
+
+cat("Le futur est lancé. Faisons autre chose pendant ce temps...\n")
+
+# 2. Récupération du résultat
+# Cet appel va lever l'erreur d'addition directement dans votre console principale !
+tryCatch({
+  value(f_erreur)
+}, error = function(e) {
+  cat("Erreur interceptée avec succès depuis le worker esclave :\n")
+  print(e$message)
+})
+
+plan(sequential)
+```
+
+### Questions à se poser :
+*   Pourquoi est-il rassurant de savoir que les exceptions sont propagées ?
+*   Comment gérer la robustesse de nos simulations parallèles si l'une des réplications du bootstrap échoue (ex: modèle non convergent) ? *Indice : voir la fonction `tryCatch()` ou le paramètre `future.errors`.*

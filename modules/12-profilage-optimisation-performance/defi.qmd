@@ -1,0 +1,38 @@
+---
+title: "Profilage, optimisation et performance - Défi"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consignes du défi de la semaine
+
+L'objectif de ce défi est de mettre en pratique la méthodologie de profilage et d'optimisation sur un code R réaliste, idéalement tiré de votre projet de session ou de vos portfolios.
+
+### Tâche : Optimisation mesurée de votre code
+
+1.  **Sélection** : Choisissez un script R ou une fonction de traitement que vous avez écrite dans un module précédent (par exemple, le nettoyage des données du module 4 ou les itérations fonctionnelles du module 10) qui effectue des calculs répétés.
+2.  **Profilage initial** : Utilisez `profvis` pour profiler l'exécution globale de votre script. Prenez une capture d'écran du graphe en cascade (Flame Graph) ou notez les lignes de code qui consomment le plus de CPU et de mémoire.
+3.  **Optimisation** : Proposez une version optimisée en appliquant l'une des astuces vues en classe (pré-allocation de listes/vecteurs, remplacement de boucles par de la vectorisation, ou simplification d'appels de fonctions de base redondants).
+4.  **Benchmarking** : Utilisez `bench::mark()` pour comparer de façon stricte la version initiale (lente) et la version optimisée (rapide).
+
+*Si vous n'avez pas de script personnel sous la main, vous pouvez optimiser une fonction de recherche et d'extraction de séquences de nombres identiques (Run Length Encoding manuel) sur un vecteur de taille $N = 100\ 000$ (en recréant manuellement le comportement de `rle()` avec des boucles).*
+
+---
+
+## Livrables attendus dans votre portfolio
+
+1.  **Le script de benchmark** : Un fichier R (ex: `R/benchmark_projet.R`) contenant le code initial, le code optimisé, et l'appel à `bench::mark()`.
+2.  **Une note technique d'optimisation** rédigée sur votre portfolio (ex: dans votre journal de bord) contenant :
+    *   La capture d'écran ou la description du flame graph initial.
+    *   Le tableau comparatif obtenu avec `bench::mark()` (copiez-collez les colonnes de temps médian et de mémoire allouée).
+    *   Une explication textuelle simple de la raison pour laquelle votre code optimisé est plus performant (ex: suppression des copies mémoires, réduction du nombre d'itérations).
+    *   Une réflexion sur la lisibilité : la version optimisée est-elle plus ou moins facile à relire que l'originale ? Est-ce que le gain de performance en valait la peine ?
+
+---
+
+## Grille d'évaluation simplifiée
+
+*   **Rigueur scientifique** : L'optimisation est validée par des données de benchmark objectives (médiane de temps d'exécution et allocations mémoire) et non sur une simple impression.
+*   **Correction technique** : Suppression des réallocations de mémoire dans les boucles (pré-allocation) ou utilisation appropriée de la vectorisation.
+*   **Recul critique** : Réflexion honnête sur le compromis entre performance et lisibilité du code (ne pas optimiser inutilement si le code original prend 10 ms).

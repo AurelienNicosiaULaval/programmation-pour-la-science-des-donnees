@@ -1,0 +1,20 @@
+---
+title: "Quarto et rapports - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Fiches d'aide et aide-mémoire
+
+- **Aide-mémoire Quarto (PDF officiel)** : Un excellent condensé de deux pages sur toute la syntaxe de base, les raccourcis et les principales options YAML de Quarto : <https://quarto.org/docs/blog/posts/2022-07-28-quarto-cheatsheet/quarto-cheatsheet.pdf>.
+
+## Outils d'aide à la mise en page
+
+- **Tables Generator (Markdown)** : Un générateur visuel en ligne de tableaux pour copier-coller du code de tableau Markdown propre : <https://www.tablesgenerator.com/markdown_tables>.
+- **Quarto Gallery** : Une galerie de documents, rapports, présentations et livres produits avec Quarto pour s'inspirer de designs existants : <https://quarto.org/docs/gallery/>.
+
+## Documentation thématique avancée
+
+- **HTML Themes (Bootstrap)** : Comment personnaliser l'apparence visuelle d'un document Quarto HTML en utilisant l'un des 25 thèmes Bootstrap intégrés (comme *cosmo*, *flatly*, *darkly*) ou en créant son propre style CSS : <https://quarto.org/docs/output-formats/html-themes.html>.
+- **Execution Options Reference** : La table complète de référence de toutes les options de blocs de code pour Knitr dans Quarto : <https://quarto.org/docs/reference/cells/cells-knitr.html>.

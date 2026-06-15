@@ -1,0 +1,21 @@
+---
+title: "Quarto et rapports - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Lectures obligatoires
+
+Pour bien vous préparer au laboratoire, lisez les ressources suivantes :
+
+- **R for Data Science (2e édition)**, [Chapter 29: Quarto](https://r4ds.hadley.nz/quarto) : Présentation générale de Quarto, de la syntaxe de base, et de l'en-tête YAML.
+- **Documentation officielle Quarto**, [HTML Documents Authoring](https://quarto.org/docs/output-formats/html-basics.html) : Explications détaillées sur les options de configuration HTML (table des matières, pliage de code, styles).
+- **Documentation officielle Quarto**, [Computations in Quarto](https://quarto.org/docs/computations/r.html) : Comprendre comment Quarto exécute le code R et gère les options de blocs (`#| echo`, `#| include`, etc.).
+
+## Lectures complémentaires (Optionnel)
+
+Pour approfondir vos connaissances sur la mise en page et l'automatisation :
+
+- **Quarto Markdown Basics** : Un guide de référence rapide de la syntaxe Markdown supportée par Quarto (listes, équations LaTeX, blocs d'onglets) : <https://quarto.org/docs/authoring/markdown-basics.html>.
+- **Quarto Cross-References** : Apprendre à insérer des renvois automatiques vers des figures, des tableaux et des équations dans le texte : <https://quarto.org/docs/authoring/cross-references.html>.

@@ -1,0 +1,31 @@
+---
+title: "Programmation fonctionnelle avec tidyverse - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Aide-mémoire officiels (Cheat Sheets)
+
+*   [Aide-mémoire Purrr (Itérations fonctionnelles)](https://raw.githubusercontent.com/rstudio/cheatsheets/main/purrr.pdf) : Indispensable pour visualiser le fonctionnement de `map()`, `modify()`, `keep()` et la manipulation de listes.
+*   [Aide-mémoire Testthat (Tests unitaires)](https://raw.githubusercontent.com/rstudio/cheatsheets/main/package-development.pdf) : Contient les assertions principales (`expect_equal`, `expect_error`, etc.) pour le développement de code testé.
+
+## Documentation et sites officiels
+
+*   [Site officiel de purrr](https://purrr.tidyverse.org/) : Exemples complets, tutoriels d'itération et détails des fonctions.
+*   [Site officiel de testthat](https://testthat.r-lib.org/) : Guide de démarrage rapide pour écrire des tests dans un package ou un projet standard.
+
+## Guide rapide : Utiliser `browser()` pour le débogage
+
+Lorsque votre code s'arrête sur une instruction `browser()` dans la console, vous entrez dans un environnement interactif spécial. Voici les actions clés :
+
+| Commande | Action | Description |
+|---|---|---|
+| `n` | Next | Exécute la ligne suivante de la fonction. |
+| `c` | Continue | Poursuit l'exécution normale (jusqu'au prochain arrêt). |
+| `f` | Finish | Termine l'exécution de la boucle ou du bloc courant. |
+| `Q` | Quit | Interrompt l'exécution de la fonction et retourne à la console globale. |
+| `where` | Stack trace | Affiche la pile d'appels de fonctions (d'où l'on vient). |
+
+> [!TIP]
+> Si vous voulez inspecter la valeur d'une variable locale nommée `n` ou `c` (ce qui rentre en conflit avec les commandes du débogueur), tapez explicitement `print(n)` ou `print(c)`.

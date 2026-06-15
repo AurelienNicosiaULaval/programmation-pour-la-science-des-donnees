@@ -1,0 +1,65 @@
+---
+title: "Visualisation - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Se familiariser avec la grammaire des graphiques de `ggplot2` et exécuter des exemples de visualisation simple pour préparer l'atelier pratique.
+
+Temps recommandé : 30 à 45 minutes.
+
+## À lire
+
+- **R for Data Science (2e édition)**, [Chapter 2: Data visualization](https://r4ds.hadley.nz/data-visualize) : Lire la philosophie générale de la grammaire des graphiques et les exemples de base.
+- **Happy Git and GitHub for the useR** (en préparation du jalon de projet filé).
+- **Lectures du module** : Consulter la page [Lectures](lectures.qmd) de cette semaine pour les détails.
+
+## Exemple R à exécuter
+
+Créez un fichier temporaire ou ouvrez votre session Positron/RStudio, chargez `ggplot2` (inclus dans le tidyverse) et exécutez le script suivant.
+
+Ce script illustre l'approche moderne avec `ggplot2` et l'utilisation de `after_stat()` pour calculer des proportions de manière dynamique.
+
+```r
+# Chargement du package
+library(ggplot2)
+
+# Nous utilisons le jeu de données "quakes" (séismes près de Fidji)
+# 1. Catégoriser la magnitude et la position
+quakes$mag_catego <- factor(floor(quakes$mag))
+quakes$region <- factor(
+  ifelse(quakes$long < 175, yes = "Ouest", no = "Est"), 
+  levels = c("Ouest", "Est")
+)
+
+# 2. Production d'un graphique de proportions avec after_stat()
+ggplot(
+  data = quakes,
+  mapping = aes(
+    x = mag_catego,
+    y = after_stat(prop), # Calcule la proportion de séismes pour chaque magnitude
+    group = region
+  )
+) + 
+  geom_bar(
+    mapping = aes(fill = region), 
+    position = "dodge"
+  ) +
+  labs(
+    title = "Proportions de séismes par classe de magnitude selon la région",
+    x = "Classe de magnitude du séisme",
+    y = "Proportion",
+    fill = "Région"
+  ) +
+  theme_minimal()
+```
+
+## À noter avant la classe
+
+- Quelle est la différence fondamentale entre `geom_bar()` et `geom_col()` dans `ggplot2` ?
+- Que fait l'argument `position = "dodge"` par rapport à `position = "stack"` ?
+- Avez-vous rencontré des difficultés pour exécuter le code de démonstration ci-dessus ?
+- Préparez une question sur l'empilement des couches de graphique à poser au début du laboratoire.

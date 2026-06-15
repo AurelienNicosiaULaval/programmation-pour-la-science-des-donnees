@@ -1,0 +1,36 @@
+---
+title: "Visualisation - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Déroulement de la séance
+
+La séance se concentre sur le passage du système graphique de base R vers `ggplot2` et l'ajustement fin de la communication visuelle.
+
+| Moment | Durée | Activité |
+|---|---:|---|
+| **Concepts et retours** | 30 min | Clarifier la différence entre base R et la grammaire de `ggplot2`, et revenir sur le mini-test. |
+| **Démonstration en direct** | 30 min | Observer le formateur assembler pas-à-pas un graphique complexe (esthétiques, géométries, coordonnées et thèmes). |
+| **Atelier pratique** | 90 min | Travailler sur le [laboratoire](laboratoire.qmd) (calcul de proportions conditionnelles et étiquetage textuel). |
+| **Restitution et projet** | 30 min | Revue par les pairs des graphiques produits et organisation du projet filé d'équipe. |
+
+## Concept clé : La grammaire des graphiques
+
+Dans `ggplot2`, un graphique n'est pas vu comme une simple figure dessinée d'un seul bloc, mais comme un empilement de **couches indépendantes** :
+
+1.  **Données (Data)** : Le jeu de données à utiliser (toujours sous forme de `data.frame` ou `tibble`).
+2.  **Esthétiques (Aesthetics - `aes`)** : L'association des variables de données aux propriétés visuelles du graphique (axe x, axe y, couleur, taille, forme).
+3.  **Géométries (Geoms)** : Les formes géométriques qui représenteront les points de données (ex: `geom_point()`, `geom_line()`, `geom_bar()`).
+4.  **Statistiques (Stats)** : Les transformations statistiques des données appliquées avant l'affichage (ex: compter les fréquences avec `stat = "count"`, ou utiliser `after_stat()`).
+5.  **Facettes (Facets)** : La division du graphique en plusieurs sous-graphiques selon les valeurs d'une variable catégorielle (`facet_wrap()`, `facet_grid()`).
+6.  **Thèmes (Themes)** : L'apparence générale non-donnée du graphique (couleur de fond, polices, quadrillages).
+
+## Les pièges fréquents à observer lors de la démo
+
+*   **Mettre des esthétiques en dehors de `aes()`** :
+    *   *Incorrect* : `ggplot(data) + geom_point(aes(x = x, y = y, col = "blue"))` (R va créer une fausse légende "blue").
+    *   *Correct* : `ggplot(data) + geom_point(aes(x = x, y = y), col = "blue")` (la couleur est constante et n'est pas associée à une variable).
+*   **Oublier d'ajouter des couches avec `+`** :
+    *   Rappelez-vous qu'on utilise `+` pour relier les couches dans `ggplot2`, et non le pipe `|>` (qui sert à manipuler les données).

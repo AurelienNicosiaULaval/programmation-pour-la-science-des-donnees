@@ -1,0 +1,50 @@
+---
+title: "Programmation fonctionnelle avec tidyverse - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Lectures recommandées
+
+### Lecture principale
+*   **R for Data Science (2e édition)**, de Hadley Wickham, Mine Çetinkaya-Rundel et Garrett Grolemund :
+    *   [Chapter 25: Functions](https://r4ds.hadley.nz/functions) : Concepts de base, réduction de duplication, arguments par défaut et écriture sécurisée.
+    *   [Chapter 26: Iteration](https://r4ds.hadley.nz/iteration) : Utilisation des fonctions de la famille `map()` pour remplacer les boucles.
+
+### Lectures avancées (facultatives mais fortement recommandées)
+*   **Advanced R**, de Hadley Wickham :
+    *   [Chapter 6: Functions](https://adv-r.hadley.nz/functions.html) : Portée lexicale, évaluation paresseuse (lazy evaluation) et l'argument `...`.
+    *   [Chapter 7: Environments](https://adv-r.hadley.nz/environments.html) : Liaison de noms à des valeurs, environnements englobants et de liaison.
+    *   [Chapter 9: Functionals](https://adv-r.hadley.nz/functionals.html) : Compréhension mathématique et pratique de l'itération fonctionnelle.
+
+---
+
+## Geste R à reproduire chez vous
+
+Exécutez ce court script pour tester votre compréhension de l'évaluation paresseuse (lazy evaluation) en R. En R, les arguments ne sont évalués que lorsqu'ils sont effectivement utilisés dans la fonction.
+
+```r
+# Définition de deux fonctions
+f1 <- function(x, y) {
+  # y n'est jamais utilisé !
+  x * 2
+}
+
+f2 <- function(x, y) {
+  # y est utilisé ici
+  x * 2 + y
+}
+
+# Appel de f1 avec un argument 'y' qui génère une erreur
+# Cet appel fonctionne sans erreur car 'y' n'est jamais évalué !
+f1(x = 10, y = stop("Cette erreur ne sera pas levée !"))
+
+# Appel de f2 avec le même argument
+# Cet appel va planter immédiatement car 'y' doit être évalué !
+f2(x = 10, y = stop("Cette erreur sera levée !"))
+```
+
+### Questions à se poser :
+*   Quels sont les avantages de l'évaluation paresseuse dans un pipeline ?
+*   Pourquoi est-il risqué de s'appuyer sur l'évaluation paresseuse si nos arguments ont des effets de bord ?

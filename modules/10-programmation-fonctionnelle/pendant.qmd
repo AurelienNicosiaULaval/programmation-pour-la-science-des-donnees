@@ -1,0 +1,87 @@
+---
+title: "Programmation fonctionnelle avec tidyverse - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Activités en classe
+
+### 1. Retour sur le mini-test et clarifications (15 min)
+*   **Question 1 :** Pourquoi la condition `cond_e <- c` échoue-t-elle ? R ne peut pas convertir un objet de type fonction (`closure`) en valeur logique de façon implicite. Les conditions numériques (ex: `1`) sont converties en `TRUE` (car tout nombre différent de 0 vaut `TRUE`), mais pour des fonctions, la conversion échoue avec l'erreur : `"un objet de type 'closure' ne peut être converti en type 'logical'"`.
+*   **Question 2 :** L'option D (`repeat`) n'est pas équivalente. Pour qu'une boucle `repeat` se comporte comme une boucle `while (i < length(letters))`, il faut que la condition d'arrêt (le `break`) soit le négatif strict de la condition du `while`, c'est-à-dire `i >= length(letters)` ou `!(i < length(letters))`, et non `i > length(letters)`.
+*   **Question 3 :** L'option C est la seule correcte. Elle passe l'argument `all = all` (qui récupère la valeur locale de l'argument de la fonction) et transmet les arguments supplémentaires via `...`.
+
+---
+
+### 2. Démonstration 1 : Diagnostics interactifs avec `browser()` (15 min)
+
+Le débogage interactif est un outil fondamental pour comprendre l'état interne de nos fonctions à une étape précise de leur exécution.
+
+Exécutons ensemble ce bloc de code en classe pour interrompre l'exécution et inspecter l'environnement local :
+
+```r
+# Fonction de comptage de nombres impairs avec bug potentiel
+compte_impair_debug <- function(x, na.rm = FALSE) {
+  # Lancer le débogueur interactif au début de l'exécution
+  browser()
+  
+  if (na.rm) {
+    x <- x[!is.na(x)]
+  }
+  
+  k <- 0
+  for (n in x) {
+    if (is.na(n)) {
+      k <- NA
+      break
+    }
+    
+    # Calcul du reste de division entière
+    if (n %% 2 == 1) {
+      k <- k + 1
+    }
+  }
+  return(k)
+}
+
+# Appel de la fonction : observez la console de R
+compte_impair_debug(c(1, 2, NA, 5), na.rm = TRUE)
+```
+
+**Commandes utiles dans le mode `browser` :**
+*   `n` (next) : Exécuter la ligne suivante.
+*   `c` (continue) : Continuer l'exécution normale sans s'arrêter (jusqu'au prochain `browser()` ou la fin).
+*   `Q` (quit) : Sortir immédiatement du débogueur.
+*   `ls()` : Lister les objets présents dans l'environnement local de la fonction.
+
+---
+
+### 3. Démonstration 2 : Des boucles à `purrr::map()` (20 min)
+
+Nous allons comparer la syntaxe d'une boucle classique pour compter le nombre de valeurs uniques par colonne dans le jeu de données `iris` avec la syntaxe moderne de `purrr`.
+
+#### Version boucle classique :
+```r
+resultats_boucle <- vector(mode = "integer", length = ncol(iris))
+names(resultats_boucle) <- colnames(iris)
+
+for (i in seq_along(iris)) {
+  resultats_boucle[i] <- length(unique(iris[[i]]))
+}
+print(resultats_boucle)
+```
+
+#### Version `purrr` moderne :
+```r
+library(purrr)
+
+# map_int garantit que le retour est un vecteur d'entiers
+resultats_purrr <- map_int(iris, ~ length(unique(.x)))
+print(resultats_purrr)
+```
+
+**Avantages de la version `purrr` :**
+1.  **Pas d'initialisation manuelle** d'un conteneur vide (évite le bug fréquent de l'initialisation trop courte ou de type incorrect).
+2.  **Sécurité des types** : si une colonne retournait autre chose qu'un entier unique, `map_int` générerait une erreur immédiate.
+3.  **Code concis et déclaratif** : on exprime *ce que l'on veut faire* plutôt que *comment itérer*.

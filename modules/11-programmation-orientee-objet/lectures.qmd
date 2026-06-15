@@ -1,0 +1,57 @@
+---
+title: "Programmation orientée objet - Lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+## Lectures recommandées
+
+### Lecture principale
+*   **Advanced R**, de Hadley Wickham :
+    *   [Chapter 12: S3](https://adv-r.hadley.nz/s3.html) : Comprendre comment fonctionne le système S3, l'évaluation des méthodes, l'héritage et l'utilisation de `NextMethod()`.
+    *   [Chapter 14: R6](https://adv-r.hadley.nz/r6.html) : Comprendre la structure R6, les méthodes publiques/privées, le clonage et la sémantique de référence.
+
+### Lectures complémentaires
+*   **Advanced R**, de Hadley Wickham :
+    *   [Chapter 13: S4](https://adv-r.hadley.nz/s4.html) : Pour comprendre la philosophie des classes strictes et formelles utilisées dans certains packages scientifiques majeurs (Bioconductor, Matrix).
+    *   [Chapter 15: Trade-offs](https://adv-r.hadley.nz/tradeoffs.html) : Une comparaison synthétique des différents systèmes de POO en R (S3, S4, RC, R6).
+
+---
+
+## Geste R à reproduire chez vous : Héritage S3 et NextMethod()
+
+Le système S3 gère l'héritage par simple adjonction d'éléments dans le vecteur de classes. La fonction `NextMethod()` permet d'appeler la méthode de la classe parente.
+
+Exécutez ce script pour voir comment une sous-classe hérite d'une méthode de sa classe parente :
+
+```r
+# 1. Définition du générique
+saluer <- function(x) {
+  UseMethod("saluer")
+}
+
+# 2. Méthode pour la classe parente "Humain"
+saluer.Humain <- function(x) {
+  cat("Bonjour, je suis un humain.\n")
+}
+
+# 3. Méthode pour la classe enfant "Etudiant" qui hérite de "Humain"
+saluer.Etudiant <- function(x) {
+  cat("Salut ! ")
+  # Appelle la méthode de la classe suivante dans le vecteur (ici Humain)
+  NextMethod("saluer")
+  cat("Et j'étudie à l'Université Laval.\n")
+}
+
+# 4. Création d'un objet étudiant avec un héritage (ordre : enfant, parent)
+mon_etudiant <- list(nom = "Alice")
+class(mon_etudiant) <- c("Etudiant", "Humain")
+
+# 5. Appel de la méthode
+saluer(mon_etudiant)
+
+# Résultat attendu :
+# Salut ! Bonjour, je suis un humain.
+# Et j'étudie à l'Université Laval.
+```

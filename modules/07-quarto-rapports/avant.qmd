@@ -1,0 +1,72 @@
+---
+title: "Quarto et rapports - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Comprendre l'architecture d'un fichier Quarto, la syntaxe Markdown de base et le fonctionnement du moteur de rendu (Knitr) pour préparer le laboratoire pratique.
+
+Temps recommandé : 30 à 45 minutes.
+
+## À lire
+
+- **Documentation officielle Quarto**, [Quarto Guide - HTML Projects](https://quarto.org/docs/output-formats/html-basics.html) : Comprendre comment configurer les documents HTML.
+- **R for Data Science (2e édition)**, [Chapter 29: Quarto](https://r4ds.hadley.nz/quarto) : Un excellent guide pratique sur l'organisation des fichiers Quarto et des blocs de code.
+- **Lectures du module** : Consulter la page [Lectures](lectures.qmd) de cette semaine pour les détails.
+
+---
+
+## Concept clé : Quarto vs R Markdown
+
+Quarto est la nouvelle génération d'outils de publication scientifique développée par Posit (anciennement RStudio). Il remplace R Markdown en offrant plusieurs améliorations :
+
+1.  **Indépendance du langage** : Quarto supporte nativement R, Python, Julia et Observable sans dépendre de l'écosystème de packages R (bien qu'il utilise le moteur Knitr en coulisse pour compiler le code R).
+2.  **Syntaxe unifiée** : Toutes les options de formatage et de rendu sont centralisées dans le YAML.
+3.  **Nouvelle syntaxe de blocs de code** : 
+    *   *R Markdown (obsolète)* : ````{r mon_bloc, echo=FALSE, warning=FALSE}```` (les options sont définies dans les accolades, ce qui devient vite illisible).
+    *   *Quarto (recommandé)* : Les options de bloc sont déclarées au début du bloc en utilisant le commentaire spécial `#|` (appelé "pipe comment") :
+        ```r
+        #| label: mon_bloc
+        #| echo: false
+        #| warning: false
+        
+        print("Ceci est du code propre !")
+        ```
+
+---
+
+## Exercice de syntaxe Markdown à tester
+
+Essayez de rédiger un fichier minimal nommé `test.qmd` et de le compiler localement en exécutant `quarto render test.qmd` ou en cliquant sur le bouton **Render** de votre éditeur.
+
+````markdown
+---
+title: "Mon premier document Quarto"
+format: 
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## Introduction
+
+Ceci est du texte en **gras** et en *italique*.
+
+## Bloc de R
+
+```{{r}}
+#| label: calcul-simple
+#| echo: true
+
+summary(cars)
+```
+````
+
+## À noter avant la classe
+
+- Quel package R est utilisé par Quarto pour exécuter les blocs de code R par défaut ?
+- Quelle est la fonction de l'option YAML `embed-resources: true` ?
+- Quelle option de bloc permet de masquer le code R tout en affichant ses résultats (graphiques, tables) ?

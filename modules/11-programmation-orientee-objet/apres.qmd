@@ -1,0 +1,29 @@
+---
+title: "Programmation orientée objet - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consolidation et livrables
+
+Après la séance de laboratoire, vous devez finaliser votre défi et mettre à jour votre portfolio d'apprentissage.
+
+### Activités de consolidation
+
+1.  **Vérification de la propreté du code** :
+    *   Assurez-vous que vos constructeurs S3 valident bien les types en entrée.
+    *   Vérifiez que vos classes R6 n'exposent pas en `public` des champs qui devraient rester cachés en `private` (principe d'encapsulation).
+2.  **Exécution des tests unitaires** :
+    *   Si vous avez choisi l'option R6 ou S3 avec validations, lancez vos tests unitaires `testthat` dans une console propre pour valider que les cas limites fonctionnent.
+3.  **Mise à jour du portfolio** :
+    *   Ajoutez le fichier contenant votre classe (S3 ou R6) et le script de démonstration dans votre portfolio.
+    *   Rédigez la note de conception expliquant votre choix de système.
+
+---
+
+## Erreurs fréquentes à éviter
+
+*   **Partage de référence involontaire en R6** : Écrire `obj2 <- obj1` puis modifier `obj2` en pensant que `obj1` reste intact. Rappel : R6 utilise la sémantique de référence. Pour dupliquer un objet R6, vous devez utiliser explicitement `obj1$clone()`.
+*   **Ne pas renvoyer `self` dans les méthodes R6** : Oublier d'ajouter `invisible(self)` à la fin des méthodes publiques de R6. Renvoyer `self` permet de chaîner les méthodes (ex: `compteur$incrementer()$incrementer()$valeur`).
+*   **Collision de points en S3** : Nommer une fonction ordinaire avec un point (ex: `calcul.moyenne`) alors que `calcul` n'est pas une fonction générique. R risquerait de l'interpréter à tort comme une méthode de la classe `moyenne` pour le générique `calcul`. Privilégiez les tirets du bas (`calcul_moyenne`) pour les fonctions normales et réservez les points aux méthodes S3.

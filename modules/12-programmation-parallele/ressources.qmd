@@ -1,0 +1,27 @@
+---
+title: "Programmation asynchrone et parallèle - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Documentations officielles et guides
+
+*   [Site officiel de furrr](https://furrr.futureverse.org/) : Référence des fonctions de type `future_map`, gestion des barres de progression et options avancées.
+*   [Cheat Sheet purrr + furrr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/purrr.pdf) : L'aide-mémoire purrr contient également les concepts fondamentaux d'itérations transposables en parallèle.
+
+---
+
+## Synthèse des plans de calcul principaux de `future`
+
+Voici les options de planification les plus courantes à passer à `plan()` :
+
+| Plan | Exécution | Mutabilité / Isolation | OS supportés | Recommandé pour |
+|---|---|---|---|---|
+| **`sequential`** | Synchrone (Mono-cœur) | Même session R | Tous | Le débogage et le développement initial. |
+| **`multisession`** | Parallèle (Processus fils) | Sessions R indépendantes | Tous (Windows, macOS, Linux) | **Par défaut sur Windows/macOS**. Sûr et isolé. |
+| **`multicore`** | Parallèle (Forking) | Partage de mémoire virtuelle | macOS, Linux (Non Windows) | Des calculs intensifs sur de grosses données sous Linux (évite de copier les variables globales en RAM). |
+| **`cluster`** | Parallèle (Distribué) | Réseau TCP/IP esclave | Tous | Exécuter des calculs sur des serveurs distants ou des grilles de calcul (HPC). |
+
+> [!WARNING]
+> N'utilisez pas `plan(multicore)` sous Windows ou au sein de RStudio/Positron sous macOS, car le forking de processus R peut rendre l'IDE instable. Préférez toujours `plan(multisession)` pour le développement local interactif.

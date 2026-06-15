@@ -1,0 +1,189 @@
+---
+title: "Visualisation - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif du laboratoire
+
+L'objectif de ce laboratoire est de passer de la théorie de la grammaire des graphiques à la pratique. Vous allez concevoir un graphique de qualité professionnelle en utilisant `ggplot2`, manipuler les données à la volée avec `after_stat()`, et personnaliser les éléments non-données pour rendre la figure publiable.
+
+## Résultat attendu
+
+Un script R `scripts/06-visualisation-seismes.R` (ou un fichier Quarto) qui produit une figure comparant les proportions conditionnelles de séismes par magnitude selon la région, accompagnée d'annotations textuelles propres et lisibles, sans aucune boucle et sans chemins absolus.
+
+---
+
+## Données de travail : Séismes près des îles Fidji
+
+Nous utilisons le jeu de données `quakes`, disponible par défaut dans R. Il comprend 1000 observations de séismes :
+*   `lat` : Latitude
+*   `long` : Longitude
+*   `depth` : Profondeur (km)
+*   `mag` : Magnitude sur l'échelle de Richter
+*   `stations` : Nombre de stations ayant détecté l'événement
+
+---
+
+## Étape 1 - Préparer le script et les données
+
+Créez le script `scripts/06-visualisation-seismes.R` dans votre portfolio. Commencez par charger le package `ggplot2` et le Tidyverse :
+
+```r
+library(tidyverse)
+
+# Préparation des variables catégorielles
+donnees_seismes <- quakes |>
+  mutate(
+    # Catégoriser la magnitude (tronquer à l'entier inférieur)
+    mag_catego = factor(floor(mag)),
+    # Séparer en deux régions géographiques (Est vs Ouest du méridien 175)
+    region = factor(
+      if_else(long < 175, "Ouest", "Est"),
+      levels = c("Ouest", "Est")
+    )
+  )
+```
+
+---
+
+## Étape 2 - Le contraste historique (Base R)
+
+Avant d'utiliser `ggplot2`, observez comment le système graphique de base R produit ce type de graphique. Essayez de comprendre pourquoi ce code est plus difficile à maintenir :
+
+```r
+# Diviser la fenêtre en 2 (mfrow) et ajuster les marges
+par_init <- par(mfrow = c(1, 2), mar = c(4, 4, 3, 1))
+
+# Sous-fenêtre 1 : Ouest
+seismes_ouest <- filter(donnees_seismes, region == "Ouest")
+counts_ouest <- table(seismes_ouest$mag_catego)
+barplot(counts_ouest / sum(counts_ouest), 
+        main = "Région Ouest", 
+        col = "skyblue", 
+        ylim = c(0, 0.6),
+        xlab = "Magnitude", ylab = "Proportion")
+
+# Sous-fenêtre 2 : Est
+seismes_est <- filter(donnees_seismes, region == "Est")
+counts_est <- table(seismes_est$mag_catego)
+barplot(counts_est / sum(counts_est), 
+        main = "Région Est", 
+        col = "salmon", 
+        ylim = c(0, 0.6),
+        xlab = "Magnitude", ylab = "Proportion")
+
+# Rétablir les paramètres par défaut
+par(par_init)
+```
+
+**Question de réflexion** : Si vous vouliez ajouter les chiffres de proportions au-dessus de chaque barre ou changer le positionnement des étiquettes, quelles étapes complexes devriez-vous coder en R de base ?
+
+---
+
+## Étape 3 - Construction pas-à-pas avec `ggplot2`
+
+Maintenant, nous allons construire la figure équivalente en utilisant la grammaire de `ggplot2`.
+
+### 3.1 Initialisation et géométrie de base
+Ajoutez le code suivant à votre script pour initialiser le graphique et empiler les barres côtes à côtes (`position = "dodge"`) :
+
+```r
+ggplot(
+  data = donnees_seismes,
+  mapping = aes(
+    x = mag_catego,
+    y = after_stat(prop), # Calcul de la proportion à la volée
+    group = region,       # Grouper par région pour que les proportions soient calculées par groupe
+    fill = region
+  )
+) +
+  geom_bar(position = "dodge")
+```
+
+---
+
+## Étape 4 - Ajout d'annotations avec `after_stat()`
+
+L'une des grandes forces de `ggplot2` est de pouvoir calculer et afficher des étiquettes sans pré-calculer les données dans un tableau externe. Nous allons ajouter du texte au-dessus de chaque barre pour afficher la proportion exacte.
+
+Ajoutez la couche `geom_text` suivante :
+
+```r
+graphique_final <- ggplot(
+  data = donnees_seismes,
+  mapping = aes(
+    x = mag_catego,
+    y = after_stat(prop),
+    group = region,
+    fill = region
+  )
+) +
+  geom_bar(position = "dodge") +
+  # Ajout des étiquettes de proportion arrondies à 2 décimales
+  geom_text(
+    mapping = aes(
+      label = sprintf("%.2f", after_stat(prop)),
+      y = after_stat(prop)
+    ),
+    stat = "count",
+    position = position_dodge(0.9),
+    vjust = -0.5,     # Décaler légèrement le texte vers le haut
+    size = 3.5        # Ajuster la taille de la police
+  )
+
+graphique_final
+```
+
+---
+
+## Étape 5 - Polissage et Accessibilité (Thèmes et Titres)
+
+Pour que ce graphique soit publiable, nous devons soigner la mise en page :
+- Utiliser un thème propre (`theme_minimal()`).
+- Ajouter des titres explicites et traduire les axes en français.
+- Ajuster les couleurs pour qu'elles soient lisibles (accessibles).
+- Modifier les limites de l'axe y pour laisser de la place aux textes.
+
+Complétez votre script avec la couche finale :
+
+```r
+graphique_pro <- graphique_final +
+  # Titres et étiquettes propres
+  labs(
+    title = "Répartition des magnitudes de séismes selon la région",
+    subtitle = "Proportions conditionnelles par région géographique (Est / Ouest)",
+    x = "Classe de magnitude Richter (tronquée)",
+    y = "Proportion au sein de la région",
+    fill = "Région géographique"
+  ) +
+  # Couleurs accessibles et lisibles
+  scale_fill_brewer(palette = "Set1") +
+  # Ajuster l'axe Y pour éviter que le texte ne soit coupé en haut
+  scale_y_continuous(limits = c(0, 0.65)) +
+  # Appliquer un thème minimaliste et soigné
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(color = "dimgray", size = 11),
+    legend.position = "bottom"
+  )
+
+# Afficher la figure finale
+print(graphique_pro)
+
+# Sauvegarder la figure dans le dossier des sorties
+ggsave("outputs/06-proportions-seismes.png", plot = graphique_pro, width = 8, height = 5, dpi = 300)
+cat("Graphique sauvegardé avec succès dans outputs/\n")
+```
+
+---
+
+## Vérification du travail
+
+Avant de finaliser le laboratoire :
+1.  Vérifiez que votre script s'exécute de bout en bout dans une session R propre.
+2.  Assurez-vous que l'image `outputs/06-proportions-seismes.png` est correctement générée.
+3.  Vérifiez que le code ne contient aucun chemin absolu.
+4.  Committez votre script et l'image de sortie dans votre dépôt de portfolio individuel.

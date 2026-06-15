@@ -1,0 +1,30 @@
+---
+title: "Programmation fonctionnelle avec tidyverse - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consolidation et livrables
+
+Après la séance de laboratoire, vous devez finaliser votre défi et mettre à jour votre portfolio d'apprentissage.
+
+### Activités de consolidation
+
+1.  **Vérification de la propreté du code** :
+    *   Assurez-vous qu'aucun appel à `browser()` n'est resté actif dans vos scripts finaux.
+    *   Vérifiez que vos fonctions respectent la syntaxe du tidyverse et ne contiennent aucun chemin absolu vers votre ordinateur local.
+2.  **Exécution des tests** :
+    *   Lancez vos scripts de tests `testthat` depuis une session R fraîche et propre pour confirmer qu'aucun effet de bord de votre environnement de travail actuel ne fausse le résultat.
+3.  **Mise à jour du portfolio** :
+    *   Ajoutez le fichier contenant vos fonctions et le fichier contenant vos tests unitaires dans vos dossiers de portfolio.
+    *   Documentez la refactorisation (avant/après) dans votre journal d'apprentissage.
+
+---
+
+## Erreurs fréquentes à éviter
+
+*   **Modifier des variables globales** : Utiliser l'opérateur d'assignation globale `<<-` dans une fonction est une mauvaise pratique. Les fonctions doivent être pures (ne pas modifier l'environnement externe directement).
+*   **Ne pas typer les fonctions `map`** : Utiliser `map()` par défaut au lieu de `map_dbl()`, `map_chr()`, `map_int()`. Typé l'appel permet de s'assurer de la cohérence de la structure finale.
+*   **Oublier de passer `na.rm` aux fonctions de base** : Écrire `mean(x)` sans propager `na.rm` rend la fonction fragile dès qu'il y a des valeurs manquantes.
+*   **Initialiser des listes ou vecteurs sans typage avant une boucle for** (si vous devez absolument utiliser une boucle).

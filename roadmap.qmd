@@ -150,12 +150,12 @@ Objectif: développer les compétences de programmation professionnelle en R.
 
 Modules à développer:
 
-- Visualisation, à créer pour la semaine 6
-- Rapports, applications web et tableaux de bord, à replacer dans la progression après la visualisation
-- [Programmation fonctionnelle](modules/06-programmation-fonctionnelle/index.qmd)
-- [Programmation orientée objet](modules/05-programmation-orientee-objet/index.qmd)
-- [Profilage, optimisation et performance](modules/07-profilage-optimisation-performance/index.qmd)
-- [Programmation asynchrone et parallèle](modules/08-programmation-parallele/index.qmd)
+- [Visualisation](modules/06-visualisation/index.qmd)
+- [Quarto et rapports](modules/07-quarto-rapports/index.qmd)
+- [Programmation fonctionnelle](modules/10-programmation-fonctionnelle/index.qmd)
+- [Programmation orientée objet](modules/11-programmation-orientee-objet/index.qmd)
+- [Profilage, optimisation et performance](modules/12-profilage-optimisation-performance/index.qmd)
+- [Programmation asynchrone et parallèle](modules/12-programmation-parallele/index.qmd)
 
 Livrables:
 
@@ -204,10 +204,10 @@ Objectif: compléter la fin de session autour du cycle de vie complet d’un pro
 
 Modules à développer:
 
-- [Modèles d’apprentissage automatique](modules/09-modeles-apprentissage-automatique/index.qmd)
-- [Déploiement et mise en production](modules/10-deploiement-production/index.qmd)
-- [Cycle de vie des modèles](modules/11-cycle-vie-modeles/index.qmd)
-- [Collaboration, documentation et package](modules/12-collaboration-documentation-package/index.qmd)
+- [Modèles d’apprentissage automatique](modules/14-modeles-apprentissage-automatique/index.qmd)
+- [Déploiement et mise en production](modules/14-deploiement-production/index.qmd)
+- [Cycle de vie des modèles](modules/14-cycle-vie-modeles/index.qmd)
+- [Collaboration, documentation et package](modules/15-collaboration-documentation-package/index.qmd)
 
 Livrables:
 

@@ -1,0 +1,25 @@
+---
+title: "Profilage, optimisation et performance - Ressources"
+format:
+  html:
+    embed-resources: true
+---
+
+## Documentations officielles et guides
+
+*   [Site officiel de profvis](https://rstudio.github.io/profvis/) : Guide complet pour comprendre l'interface de profilage, interpréter les visualisations et profiler des applications Shiny.
+*   [Site officiel de bench](https://bench.r-lib.org/) : Exemples d'utilisation avancée de `bench::mark()` et de tracés graphiques des temps avec `ggplot2`.
+*   [Guide RStudio sur le profilage](https://support.posit.co/hc/en-us/articles/218221837-Profiling-R-code-with-RStudio) : Étapes pour démarrer le profilage directement à partir de l'IDE RStudio ou Positron.
+
+---
+
+## Les 3 règles d'or de l'optimisation en R
+
+> "We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil."  
+> — *Donald Knuth*
+
+Pour optimiser votre code R sans perdre de temps, appliquez toujours ces trois étapes dans cet ordre :
+
+1.  **Ne pas optimiser prématurément** : Écrivez d'abord un code simple, lisible et correct. Si le code s'exécute en moins de 2 secondes et n'est lancé qu'une fois par mois, l'optimiser est une perte de temps.
+2.  **Mesurer d'abord** : N'optimisez jamais sur une impression ou une intuition. Utilisez toujours `profvis` pour localiser le vrai goulot d'étranglement de votre programme.
+3.  **Vectoriser et pré-allouer** : 90% des lenteurs en R proviennent de vecteurs ou de matrices qui grandissent dynamiquement dans des boucles (`c()`, `cbind()`, `rbind()`). La pré-allocation et la vectorisation corrigent la majorité des problèmes.

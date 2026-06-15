@@ -1,0 +1,28 @@
+---
+title: "Profilage, optimisation et performance - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consolidation et livrables
+
+Après la séance de laboratoire, vous devez finaliser votre défi et mettre à jour votre portfolio d'apprentissage.
+
+### Activités de consolidation
+
+1.  **Nettoyage du code** :
+    *   Assurez-vous qu'aucun appel à `profvis()` ou à `bench::mark()` n'est resté actif dans vos scripts de production.
+    *   Vérifiez que votre code optimisé retourne exactement le même résultat que votre code initial (utilisez `all.equal()` ou `expect_equal()`).
+2.  **Mise à jour du portfolio** :
+    *   Ajoutez votre note technique d'optimisation (contenant votre flame graph initial et votre table comparative `bench`).
+    *   Commettez le script R de benchmark dans votre dépôt de portfolio.
+
+---
+
+## Les pièges de performance classiques en R
+
+*   **Grossir des objets à la volée** : C'est le problème le plus fréquent. L'utilisation répétée de `c()`, `cbind()`, `rbind()` ou `+` sur des chaînes de caractères à l'intérieur d'une boucle force R à réallouer la mémoire système en boucle.
+*   **Imprimer dans la console dans une boucle** : L'utilisation de `print()`, `cat()` ou `message()` dans une boucle de grande taille (ex: $N = 10\ 000$) ralentit considérablement l'exécution à cause des appels d'affichage système.
+*   **Créer des data frames dans une boucle** : La création d'un data frame est une opération coûteuse car R doit vérifier la cohérence de chaque colonne. Préférez travailler avec des listes ou des matrices, puis convertissez en data frame à la toute fin.
+*   **Re-calculer des constantes** : Laisser des expressions constantes (comme `mean(x)`) à l'intérieur du corps d'une boucle. Calculez la constante une fois avant d'entrer dans la boucle.

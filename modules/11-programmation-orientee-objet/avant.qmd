@@ -1,0 +1,146 @@
+---
+title: "Programmation orientée objet - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Comprendre les différences conceptuelles entre la programmation fonctionnelle (S3) et la programmation encapsulée avec référence (R6) en R, puis exécuter des exemples de base.
+
+Temps de préparation estimé : 45 minutes.
+
+## À lire
+
+1.  **Advanced R (Hadley Wickham)** :
+    *   [Chapter 12: S3](https://adv-r.hadley.nz/s3.html) : Comprendre comment fonctionne le système S3, la création de génériques et l'implémentation de méthodes.
+    *   [Chapter 14: R6](https://adv-r.hadley.nz/r6.html) : Comprendre la structure de R6, la méthode d'initialisation et la sémantique de référence.
+
+---
+
+## Exemples R à exécuter
+
+Veuillez installer le package `R6` (si ce n'est pas déjà fait dans votre environnement local) puis exécutez les scripts suivants dans votre console.
+
+### Exemple 1 : Le système fonctionnel S3 (Copie par valeur)
+
+En S3, les méthodes appartiennent aux fonctions (fonctions génériques) et non aux objets. S3 utilise la sémantique habituelle de R : la copie par valeur (copy-on-write).
+
+```r
+# 1. Constructeur S3 simple pour créer un objet de classe "mon_analyse"
+mon_analyse <- function(valeurs, label) {
+  structure(
+    list(donnees = valeurs, titre = label),
+    class = "mon_analyse"
+  )
+}
+
+# 2. Définition d'une méthode S3 pour la fonction générique print()
+print.mon_analyse <- function(x, ...) {
+  cat("=== ANALYSE :", x$titre, "===\n")
+  cat("Moyenne :", mean(x$donnees), "\n")
+  cat("Écart-type :", sd(x$donnees), "\n")
+  invisible(x)
+}
+
+# 3. Test de l'objet S3 et de la copie par valeur
+obj_s3_1 <- mon_analyse(c(10, 12, 14, 16), "Série A")
+print(obj_s3_1)
+
+# Copie de l'objet
+obj_s3_2 <- obj_s3_1
+obj_s3_2$titre <- "Série B modifié"
+
+# Vérification : obj_s3_1 n'a PAS changé (copie-sur-modification)
+obj_s3_1$titre
+# [1] "Série A"
+```
+
+### Exemple 2 : Le système encapsulé R6 (Sémantique de référence)
+
+En R6 (via le package `R6`), les méthodes appartiennent aux objets. Modifier un objet R6 affecte toutes ses références en mémoire (pas de copie implicite).
+
+```r
+library(R6)
+
+# 1. Définition d'une classe R6 de compteur
+Compteur <- R6Class("Compteur",
+  public = list(
+    valeur = NULL,
+    initialize = function(depart = 0) {
+      self$valeur <- depart
+    },
+    incrementer = function(n = 1) {
+      self$valeur <- self$valeur + n
+      invisible(self) # Permet le chaînage de méthodes
+    }
+  )
+)
+
+# 2. Instanciation
+c1 <- Compteur$new(depart = 10)
+c1$incrementer(2)
+c1$valeur # [1] 12
+
+# 3. Test de la sémantique de référence (attention !)
+c2 <- c1 # c2 pointe vers la MÊME zone mémoire que c1
+c2$incrementer(5)
+
+# Vérification : c1 a AUSSI été modifié !
+c1$valeur
+# [1] 17
+```
+
+---
+
+## Mini-test de préparation
+
+### Question 1 : Résolution de dispatch S3
+Quelle méthode S3 est appelée par la fonction générique `summary()` si elle reçoit en entrée, comme premier argument, l'objet de série temporelle `WWWusage` (provenant du package `datasets`) ?
+
+*Aide : Regardez la classe de l'objet avec `class(WWWusage)` et listez les méthodes de `summary` avec `methods("summary")`.*
+
+*   **Option A :** `summary.default`
+*   **Option B :** `summary.ts`
+*   **Option C :** `summary.matrix`
+*   **Option D :** `ts.summary`
+
+### Question 2 : Syntaxe de création de méthode S3
+Lequel des blocs de code suivants crée correctement une méthode de la fonction générique `plot()` pour un objet de classe `"matrix"` ?
+
+**Option A :**
+```r
+plot_matrix <- function(x, ...) {
+  pairs(x = x, ...)
+}
+```
+
+**Option B :**
+```r
+plot.matrix <- function(x, ...) {
+  pairs(x = x, ...)
+}
+```
+
+**Option C :**
+```r
+matrix.plot <- function(x, ...) {
+  pairs(x = x, ...)
+}
+```
+
+**Option D :**
+```r
+plot.matrix(x, ...) {
+  pairs(x = x, ...)
+}
+```
+
+### Question 3 : Extraction d'éléments d'une classe formelle S4
+Si un package vous renvoie un objet de classe formelle S4 (par exemple, un modèle fitted de `stats4` ou un objet de `Matrix`), quel opérateur devez-vous privilégier pour extraire la valeur d'un slot nommé `vcov` sans passer par des fonctions de méthodes ?
+
+*   **Option A :** `$` (ex: `fit$vcov`)
+*   **Option B :** `[[` (ex: `fit[["vcov"]]`)
+*   **Option C :** `@` (ex: `fit@vcov`)
+*   **Option D :** `::` (ex: `fit::vcov`)

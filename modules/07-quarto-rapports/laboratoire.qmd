@@ -1,0 +1,158 @@
+---
+title: "Quarto et rapports - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif du laboratoire
+
+L'objectif de ce laboratoire est de rédiger un rapport d'analyse météorologique complet, structuré et dynamique avec Quarto. Le rapport combinera l'importation de données nettoyées, des analyses textuelles, un tableau de synthèse statistique et un graphique `ggplot2` finalisé. 
+
+Le document résultant devra être entièrement reproductible et autonome.
+
+## Résultat attendu
+
+Un fichier source Quarto `reports/07-rapport-meteo.qmd` qui compile sans erreur pour générer le rapport final autonome `reports/07-rapport-meteo.html`.
+
+---
+
+## Étape 1 - Créer le fichier Quarto
+
+Créez le dossier `reports/` à la racine de votre portfolio s'il n'existe pas déjà, puis créez le fichier `reports/07-rapport-meteo.qmd`. 
+
+Configurez l'en-tête YAML avec les options professionnelles suivantes :
+
+```yaml
+---
+title: "Rapport d'analyse météorologique du Québec"
+subtitle: "Étude descriptive des températures et précipitations"
+author: "Votre Nom (Étudiante / Étudiant STT-4230)"
+date: today
+lang: fr
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    embed-resources: true
+execute:
+  warning: false
+  message: false
+---
+```
+
+---
+
+## Étape 2 - Chargement des données (Chemins relatifs)
+
+Dans la première section de votre rapport, ajoutez un bloc de code R pour charger les packages et importer les données météorologiques nettoyées lors de la semaine 4.
+
+**Rappel très important** : Lors du rendu Quarto, le répertoire de travail par défaut est le dossier contenant le fichier `.qmd` (ici, le dossier `reports/`). Pour accéder aux données situées dans `data/`, vous devez remonter d'un niveau avec `../`.
+
+Ajoutez cette section :
+
+````markdown
+## Importation et préparation des données
+
+Les données utilisées pour ce rapport proviennent du fichier météorologique nettoyé lors du module 4.
+
+```{{r}}
+#| label: chargement-donnees
+#| echo: true
+
+library(tidyverse)
+
+# Importation avec chemin relatif remontant d'un niveau
+meteo_data <- read_csv("../data/processed/meteo_quebec_propre.csv")
+```
+````
+
+---
+
+## Étape 3 - Tableau descriptif dynamique
+
+Ajoutez une section présentant un tableau statistique résumé. Nous allons utiliser la fonction `knitr::kable()` pour afficher un tableau HTML propre.
+
+````markdown
+## Synthèse statistique par station
+
+Le tableau ci-dessous présente la température moyenne et les précipitations totales observées par station.
+
+```{{r}}
+#| label: tableau-synthese
+#| echo: true
+
+tableau_summary <- meteo_data |>
+  group_by(station_id) |>
+  summarise(
+    n_observations = n(),
+    temperature_moyenne = mean(temperature_c, na.rm = TRUE),
+    precipitation_totale = sum(precip_mm, na.rm = TRUE)
+  )
+
+# Affichage sous forme de tableau soigné
+knitr::kable(
+  tableau_summary,
+  col.names = c("Code Station", "Nb Observations", "Température Moyenne (°C)", "Précipitations Totales (mm)"),
+  digits = 2,
+  caption = "Tableau 1: Statistiques météorologiques descriptives"
+)
+```
+````
+
+---
+
+## Étape 4 - Intégration de la visualisation
+
+Ajoutez une section contenant un graphique de température utilisant `ggplot2`. Assurez-vous de configurer correctement les dimensions du graphique dans les options du bloc Quarto.
+
+````markdown
+## Analyse visuelle des températures
+
+La figure ci-dessous présente la distribution des températures observées.
+
+```{{r}}
+#| label: graphique-temperature
+#| echo: true
+#| fig-width: 7
+#| fig-height: 4
+#| fig-align: center
+#| fig-cap: "Figure 1: Températures observées par station météorologique"
+
+ggplot(meteo_data, aes(x = station_id, y = temperature_c, fill = station_id)) +
+  geom_boxplot(alpha = 0.7) +
+  geom_jitter(width = 0.1, alpha = 0.5, color = "darkgray") +
+  labs(
+    x = "Station météorologique",
+    y = "Température (°C)",
+    fill = "Code Station"
+  ) +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+````
+
+---
+
+## Étape 5 - Compiler et tester le rapport
+
+1.  Ouvrez votre terminal ou utilisez le bouton **Render** de votre éditeur.
+2.  Exécutez la commande de compilation depuis la racine de votre projet :
+    ```bash
+    quarto render reports/07-rapport-meteo.qmd
+    ```
+3.  Vérifiez que le fichier `reports/07-rapport-meteo.html` est correctement généré.
+4.  Ouvrez le fichier HTML dans votre navigateur. Testez le pliage du code (`code-fold: true`), vérifiez la table des matières flottante et assurez-vous que les images s'affichent correctement.
+
+---
+
+## Vérification finale
+
+Avant de valider le laboratoire :
+- [ ] Le fichier `.qmd` compile sans aucun message d'erreur.
+- [ ] Le répertoire `data/` est accédé avec un chemin relatif correct (`../data/`).
+- [ ] Le fichier HTML généré est bien configuré avec `embed-resources: true`.
+- [ ] Committez le fichier `.qmd` et le rapport compilé `.html` dans votre portfolio.

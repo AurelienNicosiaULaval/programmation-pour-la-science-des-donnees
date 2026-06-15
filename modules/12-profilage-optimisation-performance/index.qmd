@@ -1,0 +1,62 @@
+---
+title: "Profilage, optimisation et performance"
+description: "Mesurer avant d’optimiser et documenter les compromis de performance"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment améliorer l'efficacité d'un code R en s'appuyant sur des mesures objectives plutôt que sur des intuitions ?
+
+## Rôle dans le cours
+
+Ce module enseigne les techniques fondamentales de mesure de performance et d'optimisation de code en R. Après avoir maîtrisé les fonctions et la programmation orientée objet (modules 10 et 11), vous apprendrez à identifier scientifiquement les goulots d'étranglement (bottlenecks) dans vos scripts. Plutôt que d'optimiser au hasard (ce qui nuit souvent à la lisibilité et introduit des bugs), vous apprendrez à utiliser le **benchmarking** de précision (avec `bench`) et le **profilage** (avec `profvis`) pour guider vos choix techniques.
+
+Ce module pose les bases requises pour aborder la programmation parallèle et asynchrone (le module suivant de la semaine 12).
+
+## Objectifs du module
+
+À la fin de la semaine, chaque personne devrait pouvoir :
+- Distinguer la lenteur perçue (le ressenti de l'utilisateur) de la lenteur mesurée (les millisecondes et octets réels).
+- Utiliser le package `bench` pour comparer précisément le temps d'exécution et l'allocation mémoire de plusieurs expressions alternatives.
+- Lire et interpréter un rapport de profilage interactif généré par `profvis`.
+- Identifier les goulots d'étranglement courants en R (réallocations de mémoire répétées, absence de pré-allocation).
+- Appliquer des optimisations simples comme la vectorisation et la pré-allocation de vecteurs.
+- Documenter de façon rigoureuse un compromis de performance (vitesse vs lisibilité vs maintenance).
+
+## Compétences visées
+
+- Établir un benchmark comparatif valide (contrôle du ramasse-miettes, interprétation de la médiane).
+- Profiler un script R complet pour localiser les lignes de code consommatrices de CPU et de mémoire.
+- Corriger un problème d'allocation mémoire lié au grossissement dynamique d'objets dans une boucle.
+- Rédiger un court rapport technique illustrant le gain de performance avant/après.
+
+## Déroulement
+
+| Moment | Page à utiliser | Résultat |
+|---|---|---|
+| Avant la classe | [Avant la classe](avant.qmd) | Découvrir les outils `bench` et `profvis` et répondre au mini-test de préparation |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos de profilage de code réel et de réallocations mémoire |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Profiler et optimiser une fonction lente de simulation de marche aléatoire |
+| Après la classe | [Après la classe (Défi)](defi.qmd) | Choisir un script de votre projet ou d'un lab passé, le profiler et l'optimiser |
+
+## Place de l’IA
+
+Statut : **IA permise avec déclaration** (Niveau 2).
+
+L'IA peut vous aider à proposer des versions vectorisées de fonctions itératives complexes ou à expliquer une syntaxe `profvis`. Néanmoins, vous devez être capable de mener les mesures de benchmark vous-même et de justifier pourquoi la version optimisée est plus rapide (par exemple, en expliquant la réduction des allocations mémoire). Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+
+## Variante STT-6230
+
+Analyser l'impact de la compilation à la volée (Byte-Code Compiler, package `compiler`) en R sur les performances de boucles imbriquées non optimisables par rapport à une version vectorisée native.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Après la classe (Défi)](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)

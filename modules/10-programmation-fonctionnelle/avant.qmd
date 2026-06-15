@@ -1,0 +1,165 @@
+---
+title: "Programmation fonctionnelle avec tidyverse - Avant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de préparation
+
+Arriver au cours avec les notions théoriques de base sur la définition de fonctions en R, les règles de portée (scoping) et la structure d'itération du package `purrr`.
+
+Temps de préparation estimé : 45 minutes.
+
+## À lire
+
+1.  **R for Data Science (2e édition)** :
+    *   [Chapter 25: Functions](https://r4ds.hadley.nz/functions) : Les bases pour écrire une fonction claire, la règle de la règle des trois (lorsque l'on copie-colle trois fois, écrire une fonction).
+    *   [Chapter 26: Iteration](https://r4ds.hadley.nz/iteration) : Introduction à `purrr::map()` et ses variantes typées.
+2.  **Advanced R (Hadley Wickham)** (Recommandé pour approfondir) :
+    *   [Chapter 6: Functions](https://adv-r.hadley.nz/functions.html) : Comprendre la structure d'une fonction (arguments, corps, environnement).
+    *   [Chapter 7: Environments](https://adv-r.hadley.nz/environments.html) : Les concepts d'environnements d'exécution et englobants.
+
+---
+
+## Exemples R à exécuter
+
+Lancez votre session Positron ou RStudio et exécutez les deux exemples ci-dessous pour appréhender la portée lexicale (lexical scoping) et l'itération typée.
+
+### Exemple 1 : Portée lexicale (Lexical Scoping)
+
+En R, les variables libres (non définies dans le corps de la fonction ou passées en argument) sont recherchées dans l'environnement où la fonction a été *définie* (environnement englobant), et non là où elle est *appelée*.
+
+```r
+# 1. Définition des variables dans l'environnement global
+a <- 10
+b <- 20
+
+# 2. Définition de la fonction f
+f <- function(x) {
+  # 'a' est locale, 'b' est libre (sera recherchée dans le Global Environment)
+  a <- 2
+  x + a + b
+}
+
+# 3. Définition d'une fonction g qui appelle f
+g <- function(x) {
+  b <- 100 # Cette variable locale 'b' n'affectera PAS 'f'
+  f(x)
+}
+
+g(5)
+# Résultat attendu : 5 (x) + 2 (a local de f) + 20 (b global de f) = 27 (et non 107 !)
+```
+
+### Exemple 2 : Itération typée avec `purrr`
+
+La famille `map()` de `purrr` permet d'itérer sur un vecteur ou une liste de façon plus robuste que la famille `apply` de base R. En spécifiant le type de retour attendu (ex: `_dbl`, `_chr`), `purrr` valide le type de chaque élément retourné et lève une erreur immédiate si le type ne correspond pas.
+
+```r
+library(tidyverse)
+
+# Liste contenant plusieurs vecteurs numériques
+ma_liste <- list(
+  obs1 = c(12, 15, 18),
+  obs2 = c(10, 14),
+  obs3 = c(8, 9, 11, 15)
+)
+
+# Calculer la moyenne de chaque élément et retourner un vecteur numérique (double)
+moyennes <- map_dbl(ma_liste, mean)
+print(moyennes)
+
+# Tenter de forcer un retour de chaînes de caractères
+moyennes_texte <- map_chr(ma_liste, ~ paste("Moyenne :", round(mean(.x), 1)))
+print(moyennes_texte)
+```
+
+---
+
+## Mini-test de préparation
+
+Testez vos connaissances avant la séance. Les solutions seront discutées en classe.
+
+### Question 1 : Les conditions dans une alternative
+
+Lequel des objets suivants provoquera une **erreur de compilation ou d'exécution** s'il est inséré comme condition dans une structure `if (condition) { ... }` ?
+
+```r
+# Options de conditions :
+cond_a <- FALSE
+cond_b <- 1
+cond_c <- anyNA(airquality)
+cond_d <- 1:5 >= 2 && 1:5 <= 4
+cond_e <- c # Le symbole de la fonction de concaténation de base R
+```
+
+*Indice : Une condition de `if` doit pouvoir être convertie en valeur logique de longueur 1.*
+
+### Question 2 : Les équivalences de boucles
+
+Laquelle des boucles suivantes n'est **pas** équivalente aux autres pour remplir le vecteur `resultats` ?
+
+```r
+# Initialisation
+resultats <- vector(mode = "character", length = length(letters))
+
+# Option A :
+for (i in 1:length(letters)) {
+  resultats[i] <- paste0(resultats[i - 1], letters[i])
+}
+
+# Option B :
+for (i in seq_along(letters)) {
+  resultats[i] <- paste0(resultats[i - 1], letters[i])
+}
+
+# Option C :
+i <- 0
+for (lettre in letters) {
+  resultats[i + 1] <- paste0(resultats[i], lettre)
+  i <- i + 1
+}
+
+# Option D :
+i <- 0
+repeat {
+  resultats[i + 1] <- paste0(resultats[i], letters[i + 1])
+  i <- i + 1
+  if (i > length(letters)) break
+}
+```
+
+### Question 3 : Écriture de fonctions enveloppes (Wrappers)
+
+Nous voulons créer une fonction enveloppe de la fonction `merge()` nommée `fct_merge_complete` qui modifie la valeur par défaut de l'argument `all` par `TRUE` (au lieu de `FALSE`), tout en permettant à l'utilisateur de spécifier d'autres arguments pour `merge()` (y compris écraser `all = FALSE` si demandé).
+
+Quelle définition de fonction remplit correctement cette condition ?
+
+**Option A :**
+```r
+fct_merge_complete <- function(x, y, all = TRUE, ...) {
+  merge(x = x, y = y, all = TRUE, ...)
+}
+```
+
+**Option B :**
+```r
+fct_merge_complete <- function(x, y, all = TRUE, ...) {
+  merge(x = x, y = y, all = all)
+}
+```
+
+**Option C :**
+```r
+fct_merge_complete <- function(x, y, all = TRUE, ...) {
+  merge(x = x, y = y, all = all, ...)
+}
+```
+
+**Option D :**
+```r
+fct_merge_complete <- function(x, y, all, ...) {
+  merge(x = x, y = y, all = TRUE)
+}
+```

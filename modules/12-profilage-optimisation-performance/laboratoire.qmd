@@ -1,0 +1,97 @@
+---
+title: "Profilage, optimisation et performance - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Mise en contexte
+
+Dans ce laboratoire, vous allez diagnostiquer et optimiser une fonction lente simulant une **marche aléatoire** (random walk). La marche aléatoire est un concept probabiliste très courant en physique, en finance ou en biologie, mais sa simulation naïve dans R peut devenir extrêmement lente à cause d'une mauvaise gestion de la mémoire.
+
+## Objectifs du laboratoire
+
+1.  Profiler une fonction lente à l'aide de `profvis`.
+2.  Optimiser la gestion de la mémoire par la pré-allocation.
+3.  Vectoriser le calcul à l'aide de fonctions cumulatives natives.
+4.  Valider l'optimisation par un benchmark rigoureux avec `bench::mark()`.
+
+---
+
+## Exercice 1 : La simulation lente
+
+Voici une implémentation naïve d'une marche aléatoire unidimensionnelle où le pion se déplace vers le haut (+1) ou vers le bas (-1) avec une probabilité égale à chaque étape.
+
+```r
+simuler_marche_lente <- function(n_etapes) {
+  # Position de départ
+  positions <- 0
+  
+  for (i in 1:n_etapes) {
+    # Déplacement aléatoire : +1 ou -1
+    deplacement <- sample(c(-1, 1), size = 1)
+    
+    # Nouvelle position basée sur la dernière valeur
+    nouvelle_pos <- positions[length(positions)] + deplacement
+    
+    # ALERTE : Grossissement dynamique du vecteur à chaque étape
+    positions <- c(positions, nouvelle_pos)
+  }
+  return(positions)
+}
+```
+
+### Tâche 1 : Profiler la lenteur
+1.  Lancez le profilage sur cette fonction pour $N = 30\ 000$ étapes :
+    ```r
+    library(profvis)
+    profvis({
+      simuler_marche_lente(30000)
+    })
+    ```
+2.  Identifiez la ligne de code responsable de la majeure partie du temps d'exécution et de l'allocation mémoire. Quelle quantité de mémoire a été allouée au total ?
+
+---
+
+## Exercice 2 : Optimisation par pré-allocation
+
+Modifiez la fonction pour pré-allouer le vecteur `positions` à sa taille finale.
+
+1.  Créez un vecteur de zéros de longueur `n_etapes + 1` avec `vector(mode = "numeric", length = n_etapes + 1)`.
+2.  Remplissez-le étape par étape dans la boucle sans jamais concaténer avec `c()`.
+3.  Nommez cette nouvelle fonction `simuler_marche_preallocation`.
+
+---
+
+## Exercice 3 : Optimisation par vectorisation
+
+La marche aléatoire est une somme cumulée de déplacements aléatoires. En R, la fonction `cumsum()` permet de calculer la somme cumulée d'un vecteur de manière extrêmement rapide et entièrement vectorisée (en C sous le capot).
+
+1.  Écrivez une fonction `simuler_marche_vectorisee` qui :
+    *   Simule en une seule fois tous les déplacements à l'aide de `sample(c(-1, 1), size = n_etapes, replace = TRUE)`.
+    *   Calcule les positions en utilisant `cumsum()`.
+    *   Ajoute la position de départ `0` au début du vecteur.
+2.  *Remarque* : Cette version n'utilise **aucune boucle `for`**.
+
+---
+
+## Exercice 4 : Le Benchmark final
+
+Utilisez le package `bench` pour comparer vos trois fonctions pour $N = 20\ 000$ étapes :
+
+```r
+library(bench)
+
+comparaison_marches <- mark(
+  lente        = simuler_marche_lente(20000),
+  prealloc     = simuler_marche_preallocation(20000),
+  vectorisee   = simuler_marche_vectorisee(20000),
+  check = FALSE # Les résultats individuels diffèrent à cause du hasard de sample()
+)
+
+print(comparaison_marches)
+```
+
+### À analyser dans votre rapport de laboratoire :
+*   Combien de fois la version vectorisée est-elle plus rapide que la version lente ?
+*   Comparez la quantité de mémoire allouée par la version pré-allouée par rapport à la version vectorisée.

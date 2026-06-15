@@ -1,0 +1,34 @@
+---
+title: "Collaboration, documentation et packaging - Défi"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consignes du défi de la semaine
+
+L'objectif de ce défi est de transformer les scripts et fonctions de calcul que vous avez élaborés dans le cadre de votre projet de session (ou de vos portfolios) en un véritable **package R local, testé et documenté**.
+
+### Tâche : Construire votre package R de projet
+
+1.  **Sélection** : Identifiez au moins **deux fonctions clés** de votre projet de session (ex: une fonction d'importation et nettoyage de données spécifiques du module 4, ou une fonction de simulation/bootstrap de modèles).
+2.  **Création du package** : Initialisez un package R local portant le nom de votre projet ou un nom descriptif court (ex: `nettoyeurProjet`).
+3.  **Documentation Roxygen2** : Pour chaque fonction intégrée dans `R/` :
+    *   Documentez de façon rigoureuse tous les paramètres d'entrée (`@param`) et le format de l'objet retourné (`@return`).
+    *   Ajoutez des exemples d'utilisation complets et fonctionnels dans la section `@examples` (assurez-vous qu'ils s'exécutent sans erreur).
+    *   Exportez les fonctions publiques principales (`@export`) et conservez les éventuelles fonctions de calcul secondaires internes (`@noRd`).
+4.  **Dépendances** : Si vos fonctions font appel à d'autres bibliothèques (comme `dplyr`, `purrr` ou `ggplot2`), déclarez-les proprement dans le fichier `DESCRIPTION` à l'aide de `usethis::use_package()`.
+5.  **Tests unitaires** : Rédigez au moins **deux tests unitaires** avec `testthat` vérifiant les calculs de vos fonctions et la bonne capture d'erreurs logiques.
+6.  **Vérification** : Lancez la commande `devtools::check()` et corrigez le code ou la documentation jusqu'à ce que vous n'obteniez **aucun WARNING ni ERROR** (une NOTE sur le package non soumis sur CRAN est tolérée).
+
+---
+
+## Livrables attendus dans votre portfolio
+
+1.  **L'archive ou le dossier du package** : Le répertoire complet contenant votre code source (`R/`, `tests/`, `DESCRIPTION`, `NAMESPACE`).
+2.  **Un script d'essai** (ex: `demo_installation.R`) montrant comment installer votre package localement (ex: avec `devtools::install_local()`) et exécuter une démo.
+3.  **Une note explicative** rédigée sur votre journal de bord décrivant :
+    *   L'utilité globale de votre package.
+    *   La liste des fonctions publiques exportées.
+    *   Le rapport textuel ou visuel de la commande `devtools::check()` montrant la réussite des vérifications.
+    *   Les difficultés rencontrées pour gérer les dépendances (ex: imports de dplyr) ou documenter les objets complexes.

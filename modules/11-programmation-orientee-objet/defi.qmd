@@ -1,0 +1,46 @@
+---
+title: "Programmation orientée objet - Défi"
+format:
+  html:
+    embed-resources: true
+---
+
+## Consignes du défi de la semaine
+
+L'objectif de ce défi est de structurer un morceau de code ou de traitement issu de votre projet de session (ou d'un cas d'utilisation réel) en utilisant les principes de la programmation orientée objet en R.
+
+Vous devez choisir **l'une des deux options** suivantes :
+
+### Option A : Création d'une classe S3 de rapport
+Si votre projet génère des structures de données (listes imbriquées, statistiques par groupes, tables de modélisation) :
+1.  **Constructeur S3** : Créez une fonction constructeur propre qui valide les types de données entrants et retourne un objet avec une classe personnalisée (ex: `"validation_donnees"` ou `"analyse_comparative"`).
+2.  **Surcharge de méthodes** : Écrivez des méthodes personnalisées pour :
+    *   `print()` : affiche un résumé élégant et lisible directement dans la console R.
+    *   `summary()` : calcule et retourne des indicateurs globaux sous forme de tableau.
+    *   `plot()` (facultatif) : génère un graphique `ggplot2` standardisé représentant le contenu de votre objet.
+
+### Option B : Encapsulation d'une étape de pipeline en R6
+Si votre projet interagit avec des ressources externes ou nécessite de conserver un état interne (ex: une connexion à une base de données, un client d'API web, ou un gestionnaire de configuration locale) :
+1.  **Définition R6Class** : Créez une classe R6 encapsulant les paramètres (champs privés comme les clés d'accès ou configurations).
+2.  **Validation des paramètres** : Utilisez la méthode `initialize()` pour valider la validité des entrées.
+3.  **Méthodes d'action** : Implémentez des méthodes de mise à jour ou de récupération de données modifiant l'état de l'objet (sémantique de référence).
+4.  **Tests unitaires** : Rédigez au moins 3 tests unitaires avec `testthat` vérifiant que l'objet s'instancie correctement et que les validations privées bloquent les entrées erronées.
+
+---
+
+## Livrables attendus dans votre portfolio
+
+1.  **Le code source de la classe** : enregistré dans un fichier R séparé (ex: `R/classe_S3.R` ou `R/client_R6.R`).
+2.  **Un script de démonstration** : montrant comment créer l'objet, interagir avec ses méthodes, et le résultat affiché dans la console.
+3.  **Une note de conception** dans votre journal de bord décrivant :
+    *   Le choix entre le système S3 et R6 pour votre cas d'usage (pourquoi ce système est-il le plus adapté ?).
+    *   Les invariants (règles de validation) de votre classe.
+    *   Un exemple d'affichage console ou de fonctionnement.
+
+---
+
+## Grille d'évaluation simplifiée
+
+*   **Cohérence** : Le choix entre S3 et R6 est pertinent vis-à-vis du problème (S3 pour du dispatch fonctionnel sans état, R6 pour de l'encapsulation stricte et de la référence).
+*   **Validation** : Les données d'entrée sont validées dès l'initialisation et lèvent des exceptions compréhensibles en cas de problème.
+*   **Propreté** : Respect des standards de nommage S3 (`methode.classe`) ou structure R6 (`self$champ`, `private$..champ`).

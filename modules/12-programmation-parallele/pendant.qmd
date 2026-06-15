@@ -1,0 +1,79 @@
+---
+title: "Programmation asynchrone et parallèle - Pendant la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Activités en classe
+
+### 1. Retour sur le mini-test (15 min)
+
+*   **Question 1 :** La bonne réponse est l'**Option B**. Le parallélisme nécessite de sérialiser les données R, de les envoyer par sockets TCP locales aux sessions esclaves, puis de faire l'inverse pour le retour. Pour de petits calculs, cette surcharge (overhead) écrase complètement le temps de calcul.
+*   **Question 2 :** La bonne réponse est l'**Option A**. Sans générateur adapté, les processus esclaves peuvent recevoir le même état interne et générer les mêmes séquences pseudo-aléatoires, ou générer des flux dépendants. Il est indispensable d'utiliser le générateur L'Ecuyer-CMRG (intégré de façon transparente dans `furrr` avec `seed = TRUE`).
+*   **Question 3 :** La bonne réponse est l'**Option C**. Sous Windows (et par défaut avec `multisession`), chaque cœur tourne dans un processus R indépendant. Le plan de calcul doit donc copier toutes les variables globales utilisées dans la fonction vers chaque cœur, ce qui peut saturer la mémoire vive (RAM) si ces variables sont volumineuses.
+
+---
+
+### 2. Démonstration 1 : Reproductibilité des tirages en parallèle (20 min)
+
+Nous allons simuler des lancers de dés en parallèle et voir l'impact des options de graines aléatoires.
+
+```r
+library(future)
+library(furrr)
+
+plan(multisession, workers = 2)
+
+# Tentative 1 : Sans graine parallèle explicite (génère souvent un warning ou casse la reproductibilité)
+set.seed(42)
+tirage_sans_seed <- future_map(1:4, ~ sample(1:6, 1))
+
+# Tentative 2 : Avec contrôle de graine sûr (L'Ecuyer-CMRG sous le capot)
+set.seed(42)
+tirage_avec_seed_1 <- future_map(1:4, ~ sample(1:6, 1), .options = furrr_options(seed = TRUE))
+
+set.seed(42)
+tirage_avec_seed_2 <- future_map(1:4, ~ sample(1:6, 1), .options = furrr_options(seed = TRUE))
+
+# Validation
+all.equal(tirage_avec_seed_1, tirage_avec_seed_2) # TRUE !
+```
+
+**À retenir** : Pour toute simulation stochastique en parallèle, l'argument `.options = furrr_options(seed = TRUE)` (ou une graine numérique spécifique comme `seed = 123`) est **obligatoire** pour garantir la validité scientifique de vos résultats.
+
+---
+
+### 3. Démonstration 2 : L'impact de la taille des données sur la surcharge (20 min)
+
+Si vous exportez de gros objets vers les cœurs secondaires, la copie réseau locale ralentira le traitement.
+
+```r
+library(bench)
+library(future)
+library(furrr)
+
+# Création d'une grosse matrice de données (environ 80 Mo)
+grosse_matrice <- matrix(runif(1e7), nrow = 1000)
+
+plan(multisession, workers = 2)
+
+test_surcharge <- mark(
+  sequentiel = {
+    # Calcul de la somme des colonnes
+    colSums(grosse_matrice)
+  },
+  parallele = {
+    # Parallélisation inutile : force la copie des 80 Mo vers chaque cœur !
+    future_map(1:2, ~ colSums(grosse_matrice))
+  },
+  iterations = 5,
+  check = FALSE
+)
+
+print(test_surcharge)
+plan(sequential)
+```
+
+#### Constat :
+La version séquentielle sera **nettement plus rapide** car elle n'a pas à copier les 80 Mo de données à travers des sockets réseau locaux. Cet exemple montre qu'il faut paralléliser les *gros calculs sur de petites données* et non les *petits calculs sur de grosses données*.

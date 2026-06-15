@@ -1,0 +1,196 @@
+---
+title: "Collaboration, documentation et packaging - Laboratoire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Mise en contexte
+
+Dans ce laboratoire, vous allez assembler un package R complet et fonctionnel nommé `manhattan` sur votre ordinateur. Ce package contiendra deux fonctions de calcul de la distance de Manhattan (dont une faisant appel à un package externe), une méthode d'affichage S3 personnalisée, un jeu de données intégré, et une suite de tests unitaires automatiques.
+
+## Objectifs du laboratoire
+
+1.  Créer la structure physique d'un package R.
+2.  Écrire et documenter des fonctions publiques et des méthodes d'affichage avec `roxygen2`.
+3.  Déclarer une dépendance envers un package tiers (`stats`).
+4.  Intégrer et documenter un jeu de données au format `.rda`.
+5.  Écrire des tests unitaires `testthat` intégrés au package.
+6.  Vérifier (`check`) et installer (`install`) le package localement.
+
+---
+
+## Exercice 1 : Initialiser la structure du package
+
+1.  Dans votre console R principale, exécutez la commande suivante pour créer l'arborescence dans un répertoire temporaire ou dans vos documents de travail :
+    ```r
+    usethis::create_package(path = "manhattan")
+    ```
+2.  RStudio ou Positron ouvrira une nouvelle session de travail située à la racine du package.
+3.  Ouvrez le fichier `DESCRIPTION` généré automatiquement et mettez à jour les champs (Titre, Auteur, Description, Licence) sans utiliser d'accents.
+
+---
+
+## Exercice 2 : Ajouter et documenter les fonctions
+
+Nous allons créer deux fichiers R dans le répertoire `R/`.
+
+### 1. Fonction `dist_manhattan` et sa méthode S3
+Créez le fichier de code R :
+```r
+usethis::use_r(name = "dist_manhattan")
+```
+Copiez-y le code suivant contenant les blocs de documentation `roxygen2` :
+```r
+#' Distance de Manhattan
+#'
+#' Calcule la distance de Manhattan entre deux points.
+#'
+#' @param point1 Un vecteur numerique de coordonnées du premier point.
+#' @param point2 Un vecteur numerique de coordonnées du deuxieme point.
+#' @return Un objet de classe \code{"distman"} contenant la distance calculee.
+#' @author Votre Nom
+#' @export
+#' @examples
+#' dist_manhattan(point1 = c(0, -5, 3), point2 = c(2, -15, 4))
+dist_manhattan <- function(point1, point2) {
+  if (length(point1) != length(point2)) {
+    stop("Les points doivent avoir la meme longueur.")
+  }
+  sortie <- list(dist = sum(abs(point1 - point2)))
+  class(sortie) <- "distman"
+  return(sortie)
+}
+
+#' @describeIn dist_manhattan Affiche un objet de classe \code{"distman"}
+#' @param x Un objet produit par la fonction \code{dist_manhattan}, a afficher.
+#' @param \dots Arguments supplementaires passes a d'autres methodes.
+#' @export
+print.distman <- function(x, ...) {
+  cat("Manhattan distance between 'point1' and 'point2' :", x$dist, "\n", ...)
+  invisible(x)
+}
+```
+
+### 2. Fonction `dist_manhattan_2` (avec dépendance externe)
+Créez un deuxième fichier R :
+```r
+usethis::use_r(name = "dist_manhattan_2")
+```
+Copiez-y le code suivant qui importe la fonction `dist` du package `stats` :
+```r
+#' Distance de Manhattan via le package stats
+#'
+#' Calcule la distance de Manhattan entre deux points en exploitant la fonction
+#' \code{\link[stats]{dist}} de la bibliothèque standard \pkg{stats}.
+#'
+#' @param point1 Un vecteur numerique de coordonnées du premier point.
+#' @param point2 Un vecteur numerique de coordonnées du deuxieme point.
+#' @return Une liste contenant la distance et une copie de l'appel de la fonction.
+#' @export
+#' @importFrom stats dist
+dist_manhattan_2 <- function(point1, point2) {
+  call <- match.call()
+  d <- stats::dist(rbind(point1, point2), method = "manhattan")
+  sortie <- list(dist = as.vector(d), call = call)
+  class(sortie) <- "distman"
+  return(sortie)
+}
+```
+
+---
+
+## Exercice 3 : Déclarer la dépendance et compiler la documentation
+
+1.  Déclarez que le package `manhattan` a besoin de `stats` pour fonctionner en lançant dans la console :
+    ```r
+    usethis::use_package("stats")
+    ```
+    *Vérifiez que le fichier DESCRIPTION contient désormais une rubrique `Imports: stats`.*
+2.  Compilez la documentation Roxygen2 pour créer les fichiers `.Rd` et le `NAMESPACE` :
+    ```r
+    devtools::document()
+    ```
+    *Allez inspecter le dossier `man/` créé à la racine du projet.*
+
+---
+
+## Exercice 4 : Intégrer un jeu de données de test
+
+Nous allons intégrer une matrice de coordonnées nommée `points`.
+
+1.  Générez la matrice dans votre console R :
+    ```r
+    points <- matrix(sample(1:10, size = 20, replace = TRUE), nrow = 10, ncol = 2)
+    colnames(points) <- c("X", "Y")
+    ```
+2.  Enregistrez-la dans le package :
+    ```r
+    usethis::use_data(points)
+    ```
+    *Un fichier `data/points.rda` a été créé.*
+3.  **Documentez le jeu de données** : Lancez `usethis::use_r(name = "manhattan-package")` et collez-y les commentaires suivants :
+    ```r
+    #' Points aleatoires pour Manhattan
+    #'
+    #' Coordonnees en deux dimensions de 10 points generes aleatoirement.
+    #'
+    #' @format Une matrice de 10 lignes et 2 colonnes :
+    #' \describe{
+    #'   \item{X}{Coordonnee sur l'axe X}
+    #'   \item{Y}{Coordonnee sur l'axe Y}
+    #' }
+    "points"
+    ```
+4.  Ajoutez la ligne `LazyData: true` à la fin de votre fichier `DESCRIPTION`.
+
+---
+
+## Exercice 5 : Ajouter des tests unitaires intégrés
+
+1.  Initialisez la structure de test dans votre package :
+    ```r
+    usethis::use_testthat()
+    ```
+2.  Créez un script de test pour les distances :
+    ```r
+    usethis::use_test(name = "distances")
+    ```
+3.  Dans le fichier de test ouvert (dans `tests/testthat/test-distances.R`), écrivez les assertions suivantes :
+    ```r
+    test_that("dist_manhattan calcule la bonne distance", {
+      res <- dist_manhattan(c(0, 0), c(3, 4))
+      expect_equal(res$dist, 7)
+      expect_s3_class(res, "distman")
+    })
+    
+    test_that("dist_manhattan_2 retourne le meme resultat que dist_manhattan", {
+      p1 <- c(1, 2, 3)
+      p2 <- c(4, 0, -1)
+      expect_equal(dist_manhattan(p1, p2)$dist, dist_manhattan_2(p1, p2)$dist)
+    })
+    ```
+
+---
+
+## Exercice 6 : Valider, installer et tester
+
+Exécutez les fonctions clés de `devtools` pour finaliser votre package :
+
+1.  **Vérifier** le package :
+    ```r
+    devtools::check()
+    ```
+    *Assurez-vous qu'aucun ERROR ou WARNING n'est levé. Si des fiches d'aide manquent de paramètres, corrigez-les.*
+2.  **Tester** spécifiquement :
+    ```r
+    devtools::test()
+    ```
+3.  **Installer** le package sur votre machine :
+    ```r
+    devtools::install()
+    ```
+4.  **Essai en session propre** : Ouvrez une nouvelle session R, chargez votre bibliothèque `library(manhattan)`, et exécutez :
+    ```r
+    dist_manhattan(points[1, ], points[2, ])
+    ```

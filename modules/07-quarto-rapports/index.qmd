@@ -1,0 +1,61 @@
+---
+title: "Quarto et rapports"
+description: "Rédiger des rapports dynamiques, reproductibles et structurés avec Quarto"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question du module
+
+Comment structurer un rapport dynamique pour qu'il soit à la fois agréable à lire, facile à maintenir et reproductible par une autre personne ?
+
+## Rôle dans le cours
+
+Ce module consolide la communication scientifique. Après avoir appris à manipuler les données et à créer des graphiques (semaine 6), la semaine 7 montre comment regrouper le code R, le texte explicatif et les figures dans un seul document dynamique appelé **Quarto** (`.qmd`).
+
+C'est la compétence finale nécessaire pour structurer les livrables d'équipe et le projet filé.
+
+## Objectifs du module
+
+À la fin de la semaine, chaque personne devrait pouvoir :
+- Comprendre la structure d'un fichier Quarto (en-tête YAML, Markdown, blocs de code R).
+- Maîtriser la syntaxe Quarto pour configurer les blocs de code (`#| echo`, `#| warning`, `#| label`).
+- Intégrer et référencer des figures et des tableaux dynamiques dans le texte.
+- Utiliser les options d'accessibilité et d'organisation (table des matières, onglets, thèmes).
+- Générer un livrable autonome (`embed-resources: true`) sans dépendre d'étapes manuelles.
+
+## Compétences visées
+
+- Rédiger un document `.qmd` propre et lisible.
+- Configurer les options globales de compilation dans le YAML.
+- Masquer le code technique pour les rapports destinés aux décideurs (`echo: false`).
+- Documenter la reproductibilité et citer les sources.
+
+## Déroulement
+
+| Moment | Page à utiliser | Résultat |
+|---|---|---|
+| Avant la classe | [Avant la classe](avant.qmd) | Comprendre les bases de Quarto et installer les outils requis |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Retour d'expérience sur RMarkdown vs Quarto |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Compiler un rapport complet sur le nettoyage et la visualisation de données |
+| Après la classe | [Après la classe (Défi)](defi.qmd) | Finaliser le défi et mettre à jour le portfolio |
+
+## Place de l’IA
+
+Statut : **IA permise, déclarée** (Niveau 2).
+
+L'IA peut vous aider à trouver la syntaxe d'une option YAML (ex: comment ajouter une table des matières flottante) ou à structurer un tableau complexe en Markdown. La rédaction de l'interprétation des résultats et la structure générale du rapport doivent être le produit de votre réflexion.
+
+## Variante STT-6230
+
+Rédiger une note technique de 150 à 250 mots comparant l'exportation au format HTML autonome (avec ressources intégrées) et l'exportation au format PDF (via LaTeX ou Typst) en termes de portabilité, de mise en page et de limites de reproduction.
+
+## Pages du module
+
+- [Avant la classe](avant.qmd)
+- [Pendant la classe](pendant.qmd)
+- [Laboratoire](laboratoire.qmd)
+- [Après la classe (Défi)](defi.qmd)
+- [Lectures](lectures.qmd)
+- [Ressources](ressources.qmd)
