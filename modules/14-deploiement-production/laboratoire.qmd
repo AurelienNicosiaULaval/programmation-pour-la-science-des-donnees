@@ -1,5 +1,5 @@
 ---
-title: "Déploiement et mise en production - Laboratoire"
+title: "Deploiement et mise en production - Laboratoire"
 format:
   html:
     embed-resources: true
@@ -7,20 +7,168 @@ format:
 
 ## Objectif du laboratoire
 
-Transformer un prototype en livrable minimalement exécutable par une autre personne.
+Transformer un prototype R en livrable minimalement reproductible. Le livrable peut etre un script, un rapport Quarto, un tableau de bord ou une analyse du projet d'equipe.
 
-## Activité guidée
+## Resultat attendu
 
-1. Choisir un script ou rapport existant.
-2. Identifier les dépendances et fichiers requis.
-3. Écrire une procédure d’exécution.
-4. Tester depuis une session propre.
-5. Documenter les limites.
-6. Faire un commit ciblé.
+A la fin du laboratoire, votre depot contient:
 
-## Trace attendue
+- un README de reproduction;
+- une commande principale d'execution;
+- un script de verification minimal;
+- une liste de dependances;
+- une note de limites;
+- un commit cible.
 
-- README ou note de reproduction mis à jour;
-- commande d’exécution testée;
-- limite connue documentée;
-- commit avec message lisible.
+## Etape 1 - Choisir le livrable
+
+Choisir un seul livrable a stabiliser:
+
+- un rapport Quarto;
+- un script d'analyse;
+- un pipeline de donnees;
+- une application Shiny minimale;
+- un prototype du projet d'equipe.
+
+Noter dans le README:
+
+- le nom du livrable;
+- son objectif;
+- les fichiers necessaires;
+- la sortie attendue.
+
+## Etape 2 - Ecrire la procedure de reproduction
+
+Ajouter ou corriger une section `Reproduction` dans le README.
+
+```markdown
+## Reproduction
+
+1. Cloner le depot.
+2. Ouvrir R ou Positron a la racine du depot.
+3. Restaurer les dependances si `renv.lock` est present:
+
+```r
+renv::restore()
+```
+
+4. Executer la commande principale:
+
+```r
+source("scripts/verifier_reproduction.R")
+```
+
+5. Verifier que les sorties attendues sont creees.
+```
+
+Adapter les chemins au depot reel.
+
+## Etape 3 - Creer un script de verification
+
+Creer `scripts/verifier_reproduction.R`.
+
+```r
+# Verification minimale de reproduction
+
+fichiers_attendus <- c(
+  "README.md",
+  "scripts"
+)
+
+manquants <- fichiers_attendus[!file.exists(fichiers_attendus)]
+
+if (length(manquants) > 0) {
+  stop(
+    "Fichiers ou dossiers manquants: ",
+    paste(manquants, collapse = ", ")
+  )
+}
+
+message("Structure minimale presente.")
+
+if (file.exists("renv.lock")) {
+  message("renv.lock present.")
+} else {
+  warning("renv.lock absent: documenter les packages requis dans le README.")
+}
+```
+
+Si votre livrable produit une sortie, ajouter une verification de sortie:
+
+```r
+sorties_attendues <- c("outputs/resultats.csv")
+
+sorties_manquantes <- sorties_attendues[!file.exists(sorties_attendues)]
+
+if (length(sorties_manquantes) > 0) {
+  warning(
+    "Sorties non trouvees: ",
+    paste(sorties_manquantes, collapse = ", ")
+  )
+)
+```
+
+## Etape 4 - Documenter les dependances
+
+Dans le README, ajouter une section courte:
+
+```markdown
+## Dependances
+
+Ce projet utilise R version ...
+
+Packages principaux:
+
+- ...
+- ...
+
+Si `renv.lock` est present, executer `renv::restore()`.
+Sinon, installer les packages listes ci-dessus.
+```
+
+Ne pas inventer de packages. Lire le code existant et inscrire seulement les packages reellement utilises.
+
+## Etape 5 - Tester depuis une session propre
+
+Fermer la session R ou redemarrer R, puis executer uniquement les commandes documentees.
+
+Verifier:
+
+- aucun objet de la console n'est necessaire;
+- les chemins sont relatifs;
+- les erreurs sont comprehensibles;
+- les sorties attendues sont crees ou documentees.
+
+## Etape 6 - Documenter les limites
+
+Ajouter une section `Limites`:
+
+```markdown
+## Limites
+
+- Le livrable a ete teste localement seulement.
+- Les donnees confidentielles ne sont pas incluses dans le depot.
+- Les performances peuvent varier selon la machine.
+- Le deploiement public n'a pas encore ete teste.
+```
+
+Adapter ces limites au cas reel.
+
+## Etape 7 - Committer
+
+Faire un commit cible:
+
+```bash
+git add README.md scripts/verifier_reproduction.R
+git commit -m "Documenter la reproduction du livrable"
+```
+
+## Variante STT-6230
+
+Ajouter une courte note technique comparant deux options de deploiement ou de reproduction:
+
+- rendu HTML local et publication GitHub Pages;
+- application Shiny locale et publication sur serveur;
+- script manuel et pipeline automatise.
+
+La note doit expliquer le choix retenu, les risques et les limites.

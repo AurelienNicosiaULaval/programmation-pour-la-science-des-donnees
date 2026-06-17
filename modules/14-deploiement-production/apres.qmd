@@ -1,33 +1,47 @@
 ---
-title: "Déploiement et mise en production - Après la classe"
+title: "Deploiement et mise en production - Apres la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Consolidation
+## Objectif de consolidation
 
-Après le laboratoire, finaliser le travail amorcé et stabiliser le livrable.
+Verifier que la procedure de reproduction peut etre comprise et testee sans explication orale.
 
-## À faire
+## A faire
 
-- Finaliser le défi: Rédiger un plan de déploiement et publier un livrable simple selon les contraintes du cours.
-- Relancer le code depuis une session propre.
-- Mettre à jour le README ou la note technique.
-- Ajouter une trace au portfolio.
-- Déclarer l’usage de l’IA si nécessaire.
+- Relire le README du point de vue d'une personne externe.
+- Redemarrer R et executer uniquement les commandes documentees.
+- Corriger les chemins absolus, objets implicites ou dossiers manquants.
+- Verifier que les dependances sont nommees.
+- Ajouter une note de limites si elle manque.
+- Declarer l'usage significatif de l'IA si necessaire.
 
-## Réflexion courte
+## Verification finale
 
-Répondre dans le journal du portfolio:
+La procedure est prete si une autre personne peut repondre a ces questions:
 
-- Qu’est-ce que j’ai appris?
-- Qu’est-ce qui reste fragile?
-- Quelle erreur ou difficulté ai-je rencontrée?
-- Quelle vérification ai-je faite?
+- Quel livrable doit etre produit?
+- Quelle commande faut-il executer?
+- Quels packages ou fichiers sont necessaires?
+- Quelle sortie permet de savoir que l'execution a fonctionne?
+- Quelle limite empeche de parler d'une vraie mise en production?
 
-## TODO enseignant
+## Reflexion courte
 
-- Ajouter les exercices supplémentaires.
-- Ajouter une solution minimale après la séance.
-- Ajouter les erreurs fréquentes observées.
+Repondre dans le journal:
+
+- Quelle etape etait implicite avant ce laboratoire?
+- Quelle erreur serait la plus probable sur une autre machine?
+- Quelle verification ajouteriez-vous si le livrable devenait public?
+
+## Preparation de la remise finale
+
+Pour le projet d'equipe ou le portfolio final, conserver:
+
+- le README corrige;
+- le script de verification;
+- une sortie testee;
+- les limites;
+- le commit associe.

@@ -1,32 +1,53 @@
 ---
-title: "Modèles d’apprentissage automatique - Pendant la classe"
+title: "Modeles d'apprentissage automatique - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Déroulement prévu
+## Objectif de la seance
 
-1. Retour sur les lectures et le mini-test.
-2. Clarification des concepts difficiles.
-3. Démonstration courte.
-4. Travail guidé en laboratoire.
-5. Revue de code ou discussion ciblée.
-6. Synthèse et prochaines étapes.
+Construire un pipeline de modelisation minimal, puis verifier que la performance annoncee correspond a une evaluation defendable.
 
-## Points de contrôle
+## Deroulement propose
 
-- Le dépôt est à jour.
-- Le code de départ fonctionne.
-- Une première trace est commitée.
-- Les difficultés sont documentées.
+| Moment | Activite | Resultat attendu |
+|---:|---|---|
+| 0-15 min | Retour sur le mini-test | Distinguer cible, variables explicatives, entrainement et evaluation |
+| 15-35 min | Demonstration courte | Montrer une fuite de donnees simple et ses consequences |
+| 35-80 min | Laboratoire guide | Ajuster un modele, produire des predictions et calculer une mesure d'erreur |
+| 80-105 min | Revue en duo | Relire la strategie de validation et la note de limites |
+| 105-135 min | Amelioration ciblee | Comparer le modele a une reference simple |
+| 135-160 min | Trace portfolio | Committer le script et la note de modelisation |
+| 160-180 min | Synthese | Identifier ce qui manque pour rendre le modele reutilisable |
 
-## Accompagnement
+## Demonstration courte
 
-Utiliser le temps de laboratoire pour poser des questions précises, montrer un message d’erreur, demander une revue courte ou valider une décision de structure.
+Montrer deux versions d'une evaluation:
 
-## TODO enseignant
+1. ajuster et evaluer le modele sur toutes les donnees;
+2. separer les donnees avant l'ajustement et evaluer sur une partie tenue a l'ecart.
 
-- Ajouter le déroulement minute par minute si nécessaire.
-- Ajouter les extraits de code de démonstration.
-- Préparer les questions de synthèse.
+La discussion doit faire ressortir que la seconde version est moins confortable, mais plus honnete.
+
+## Points de controle
+
+- La variable cible est explicite.
+- Les donnees d'evaluation ne sont pas utilisees pour ajuster le modele.
+- La mesure de performance est calculee par code, pas estimee a l'oeil.
+- Une reference simple est fournie pour interpreter la performance.
+- Les limites sont ecrites dans le depot.
+- L'usage significatif de l'IA est declare si une aide a influence le code ou l'interpretation.
+
+## Questions de revue en duo
+
+- Le script peut-il etre relance depuis la racine du depot?
+- Une autre personne peut-elle trouver ou la separation des donnees est faite?
+- La note indique-t-elle ce que le modele ne permet pas de conclure?
+- Le README ou le journal indique-t-il les packages necessaires?
+
+## Synthese de fin de seance
+
+Chaque personne termine avec une phrase de ce type:
+
+> Le modele est utilisable pour ..., mais il reste fragile parce que ...

@@ -1,33 +1,48 @@
 ---
-title: "Modèles d’apprentissage automatique - Après la classe"
+title: "Modeles d'apprentissage automatique - Apres la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Consolidation
+## Objectif de consolidation
 
-Après le laboratoire, finaliser le travail amorcé et stabiliser le livrable.
+Stabiliser la trace de modelisation et verifier qu'elle reste comprehensible sans explication orale.
 
-## À faire
+## A faire
 
-- Finaliser le défi: Construire un pipeline de modélisation minimal avec validation et rapport court.
-- Relancer le code depuis une session propre.
-- Mettre à jour le README ou la note technique.
-- Ajouter une trace au portfolio.
-- Déclarer l’usage de l’IA si nécessaire.
+- Relancer le script de modelisation dans une session R propre.
+- Verifier que le script ne depend pas d'objets crees manuellement dans la console.
+- Ajouter ou corriger la note de modelisation.
+- Verifier que la comparaison avec la reference simple est presente.
+- Mettre a jour le README ou le journal du portfolio si le fichier ajoute une nouvelle dependance.
+- Declarer l'usage significatif de l'IA si necessaire.
 
-## Réflexion courte
+## Verification finale
 
-Répondre dans le journal du portfolio:
+La note doit permettre de repondre a ces questions:
 
-- Qu’est-ce que j’ai appris?
-- Qu’est-ce qui reste fragile?
-- Quelle erreur ou difficulté ai-je rencontrée?
-- Quelle vérification ai-je faite?
+- Quelle question le modele essaie-t-il de traiter?
+- Quelles donnees ont ete utilisees?
+- Comment la performance a-t-elle ete evaluee?
+- Le modele fait-il mieux qu'une reference simple?
+- Quelles conclusions seraient abusives?
 
-## TODO enseignant
+## Reflexion courte
 
-- Ajouter les exercices supplémentaires.
-- Ajouter une solution minimale après la séance.
-- Ajouter les erreurs fréquentes observées.
+Repondre dans le journal du portfolio:
+
+- Quelle etape de la modelisation est la plus fragile?
+- Quelle verification devrait etre refaite avec plus de donnees?
+- Quelle decision technique faut-il expliquer a une personne non specialiste?
+
+## Preparation du module suivant
+
+Pour le module sur le cycle de vie des modeles, conserver:
+
+- le script;
+- la note de limites;
+- la mesure de performance;
+- le commit associe.
+
+Ces elements serviront a creer une fiche de suivi de modele.
