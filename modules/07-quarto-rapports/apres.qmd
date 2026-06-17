@@ -1,0 +1,48 @@
+---
+title: "Quarto et rapports - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de consolidation
+
+Stabiliser le rapport Quarto et vérifier qu’il reste reproductible, lisible et compréhensible sans intervention manuelle.
+
+## À faire
+
+- Relancer `quarto render reports/07-rapport-meteo.qmd` depuis une session propre.
+- Ouvrir le rapport HTML produit et vérifier que les résultats dynamiques s’affichent correctement.
+- Vérifier que les chemins de fichiers sont relatifs à la racine du portfolio.
+- Ajouter une courte section ou note expliquant les décisions de nettoyage reprises du module 4.
+- Mettre à jour le journal du portfolio avec le fichier source, le fichier rendu et le commit associé.
+- Déclarer l’usage significatif de l’IA si nécessaire.
+
+## Vérification finale
+
+Le rapport doit permettre de répondre à ces questions:
+
+- Quel jeu de données est utilisé?
+- Quelles transformations ou décisions de nettoyage ont été appliquées?
+- Quels résultats sont calculés dynamiquement par R?
+- Le rapport peut-il être rendu sur une autre machine après installation des dépendances?
+- Quelles limites doivent être connues avant d’utiliser le rapport?
+
+## Réflexion courte
+
+Répondre dans le journal du portfolio:
+
+- Quelle partie du rapport est la plus fragile?
+- Quelle option Quarto a le plus amélioré la lisibilité ou la reproductibilité?
+- Quelle vérification automatisée pourrait être ajoutée dans un projet plus grand?
+
+## Préparation de la suite
+
+Conserver:
+
+- le fichier `.qmd`;
+- le fichier HTML rendu;
+- la note sur le nettoyage;
+- le commit associé.
+
+Ces éléments serviront de base pour les rapports intermédiaires du projet filé.

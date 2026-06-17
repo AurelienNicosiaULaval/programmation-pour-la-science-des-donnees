@@ -1,0 +1,48 @@
+---
+title: "Visualisation - Après la classe"
+format:
+  html:
+    embed-resources: true
+---
+
+## Objectif de consolidation
+
+Stabiliser la figure produite pendant le module et vérifier qu’elle peut être comprise sans explication orale.
+
+## À faire
+
+- Relancer le script de visualisation depuis la racine du portfolio.
+- Vérifier que la figure est enregistrée dans `outputs/` au format PNG ou PDF.
+- Vérifier que les titres, axes, unités et légendes sont explicites.
+- Ajouter une courte note de conception dans le journal du portfolio ou dans `modules/semaine-06/note_conception.md`.
+- Expliquer une limite de la figure: choix des variables, échelle, valeurs manquantes, lisibilité ou interprétation.
+- Déclarer l’usage significatif de l’IA si nécessaire.
+
+## Vérification finale
+
+La figure et la note doivent permettre de répondre à ces questions:
+
+- Quelle question la figure aide-t-elle à examiner?
+- Pourquoi ce type de graphique est-il adapté aux données?
+- Quelle décision améliore la lisibilité?
+- Quelle limite d’interprétation doit être signalée?
+- Le script peut-il être relancé sans objet créé manuellement dans la console?
+
+## Réflexion courte
+
+Répondre dans le journal du portfolio:
+
+- Quelle modification a le plus amélioré la figure?
+- Quelle information manque encore pour rendre la figure plus convaincante?
+- Quelle erreur de visualisation faudrait-il éviter dans le projet filé?
+
+## Préparation du module suivant
+
+Pour le module sur Quarto et les rapports, conserver:
+
+- le script de visualisation;
+- la figure finale;
+- la note de conception;
+- le commit associé.
+
+Ces éléments serviront à intégrer une figure reproductible dans un rapport dynamique.
