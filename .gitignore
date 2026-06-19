@@ -21,3 +21,4 @@ data/processed/*
 .enseignant-prive/
 
 **/*.quarto_ipynb
+*.html
