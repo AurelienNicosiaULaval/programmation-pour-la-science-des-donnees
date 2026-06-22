@@ -1,5 +1,5 @@
 ---
-title: "Modeles d'apprentissage automatique - Ressources"
+title: "Modèles d’apprentissage automatique - Ressources"
 format:
   html:
     embed-resources: true
@@ -7,46 +7,20 @@ format:
 
 ## Ressources internes
 
-- [Avant la classe](avant.qmd)
-- [Pendant la classe](pendant.qmd)
-- [Laboratoire](laboratoire.qmd)
-- [Defi](defi.qmd)
-- [Cycle de vie des modeles](../14-cycle-vie-modeles/index.qmd)
-- [Projet d'equipe](../../projets.qmd)
+- Notes du module.
+- Laboratoire.
+- Défi.
+- Solution minimale, à publier après la séance si pertinent.
 
-## Documentation officielle
+## Ressources externes
 
-- [tidymodels - Get Started](https://www.tidymodels.org/start/)
-- [tidymodels - Resampling](https://www.tidymodels.org/start/resampling/)
-- [recipes](https://recipes.tidymodels.org/)
-- [parsnip](https://parsnip.tidymodels.org/)
-- [workflows](https://workflows.tidymodels.org/)
-- [yardstick](https://yardstick.tidymodels.org/)
+Ajouter des liens vers documentation officielle, chapitres ou guides.
 
-## Questions de verification
+## Erreurs fréquentes
 
-- La variable cible est-elle definie avant de choisir le modele?
-- La separation entrainement/evaluation est-elle faite avant l'ajustement?
-- La mesure de performance correspond-elle au type de cible?
-- Une reference simple est-elle fournie?
-- Les limites des donnees sont-elles ecrites?
-- Le script peut-il etre relance dans une session propre?
+- Erreur fréquente 1 à documenter.
+- Erreur fréquente 2 à documenter.
 
-## Erreurs frequentes
+## Données
 
-- Evaluer le modele sur les donnees utilisees pour l'entrainer.
-- Choisir une mesure de performance sans lien avec la question.
-- Confondre correlation, prediction et causalite.
-- Oublier de documenter la variable cible.
-- Ne pas comparer le modele a une reference simple.
-- Presenter une performance comme definitive alors qu'elle depend d'une seule separation des donnees.
-
-## Donnees
-
-Prioriser des donnees publiques canadiennes ou quebecoises lorsque le contexte du projet le permet:
-
-- [Donnees Quebec](https://www.donneesquebec.ca/)
-- [Gouvernement ouvert du Canada](https://rechercher.ouvert.canada.ca/data/)
-- [Ville de Quebec - donnees ouvertes](https://www.ville.quebec.qc.ca/services/donnees-services-ouverts/index.aspx)
-
-Les donnees sensibles, nominatives ou dont les droits de diffusion ne sont pas clairs ne doivent pas etre publiees dans un depot public.
+Indiquer les jeux de données autorisés, leur source et les limites d’utilisation.

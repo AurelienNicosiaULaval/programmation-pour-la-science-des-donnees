@@ -1,58 +1,32 @@
 ---
-title: "Deploiement et mise en production - Pendant la classe"
+title: "Déploiement et mise en production - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de la seance
+## Déroulement prévu
 
-Transformer un livrable qui fonctionne sur votre machine en livrable relancable par une autre personne.
+1. Retour sur les lectures et le mini-test.
+2. Clarification des concepts difficiles.
+3. Démonstration courte.
+4. Travail guidé en laboratoire.
+5. Revue de code ou discussion ciblée.
+6. Synthèse et prochaines étapes.
 
-## Deroulement propose
+## Points de contrôle
 
-| Moment | Activite | Resultat attendu |
-|---:|---|---|
-| 0-15 min | Retour sur le mini-test | Identifier les conditions minimales de reproduction |
-| 15-35 min | Demonstration courte | Montrer une reproduction qui echoue a cause d'une dependance ou d'un chemin implicite |
-| 35-80 min | Audit du livrable | Lister fichiers, dependances, commandes et sorties attendues |
-| 80-115 min | Travail guide | Ecrire ou corriger la procedure de reproduction |
-| 115-140 min | Test croise | Faire relire la procedure par une autre personne |
-| 140-165 min | Correction | Corriger les etapes implicites et les limites |
-| 165-180 min | Commit final | Committer README, script de verification et note de limites |
+- Le dépôt est à jour.
+- Le code de départ fonctionne.
+- Une première trace est commitée.
+- Les difficultés sont documentées.
 
-## Demonstration courte
+## Accompagnement
 
-Partir d'un script qui fonctionne seulement parce que:
+Utiliser le temps de laboratoire pour poser des questions précises, montrer un message d’erreur, demander une revue courte ou valider une décision de structure.
 
-- le repertoire de travail est deja le bon;
-- un objet existe dans la console;
-- un package est installe localement mais non documente;
-- une sortie est ecrite dans un dossier absent.
+## TODO enseignant
 
-Corriger ensuite le script pour que l'erreur devienne informative.
-
-## Points de controle
-
-- Le README indique les commandes a executer.
-- Les dependances R sont indiquees.
-- Les fichiers d'entree et de sortie sont nommes.
-- Les chemins sont relatifs.
-- Une verification minimale existe.
-- Les limites du deploiement sont explicites.
-
-## Revue en duo
-
-Echanger les procedures de reproduction. La personne qui relit doit pouvoir repondre:
-
-- quelle commande executer en premier;
-- quels packages installer ou restaurer;
-- quelles sorties attendre;
-- quoi faire si une etape echoue;
-- quelles donnees ne doivent pas etre publiees.
-
-## Synthese de fin de seance
-
-Terminer avec une phrase de ce type:
-
-> Une autre personne peut relancer le livrable en executant ..., mais le deploiement reste limite par ...
+- Ajouter le déroulement minute par minute si nécessaire.
+- Ajouter les extraits de code de démonstration.
+- Préparer les questions de synthèse.

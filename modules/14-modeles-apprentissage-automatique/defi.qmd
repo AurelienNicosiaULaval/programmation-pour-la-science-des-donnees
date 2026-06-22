@@ -1,53 +1,49 @@
 ---
-title: "Modeles d'apprentissage automatique - Defi"
+title: "Modèles d’apprentissage automatique - Défi"
 format:
   html:
     embed-resources: true
 ---
 
-## Nature du defi
+## Contexte
 
-Ce defi de module sert a produire une trace de modelisation dans le portfolio. Il ne remplace pas les trois defis techniques notes du cours.
+Ce défi transforme le contenu du module en trace concrète dans le portfolio.
 
 ## Objectif
 
-Construire un pipeline de modelisation minimal avec une evaluation defendable et une note de limites.
+Construire un pipeline de modélisation minimal avec validation et rapport court.
 
 ## Consignes
 
-1. Choisir un jeu de donnees autorise ou un jeu de donnees simule.
-2. Formuler une question predictive.
-3. Identifier la variable cible et les variables explicatives.
-4. Separer les donnees avant l'ajustement du modele.
-5. Ajuster un modele simple.
-6. Calculer une mesure de performance.
-7. Comparer le modele a une reference simple.
-8. Rediger une note courte sur les limites.
+- Travailler dans le dépôt demandé.
+- Produire un livrable minimal mais reproductible.
+- Documenter les étapes nécessaires.
+- Faire des commits lisibles.
 
 ## Livrable attendu
 
-- un script reproductible;
-- une note Quarto ou Markdown;
-- une mesure de performance calculee par code;
-- une comparaison avec une reference simple;
-- une trace Git lisible.
+- pipeline de modèle
+- métriques d’évaluation
+- rapport Quarto court
+- note sur les limites
 
-## Place de l'IA
+## Place de l’IA
 
-Statut: permise, declaree.
+Niveau à préciser pour ce défi. Si le niveau 2 ou 3 est autorisé, ajouter une entrée dans `ai-log.md`.
 
-L'IA peut aider a comprendre une erreur, proposer une structure de note ou suggerer une verification. Elle ne doit pas remplacer l'evaluation du modele. Toute aide significative qui influence le code, le choix de mesure ou l'interpretation doit etre documentee dans `docs/ai-log.md` ou dans le journal du portfolio.
+## Critères
 
-## Criteres de reussite
+- Exactitude technique.
+- Reproductibilité.
+- Qualité du code.
+- Documentation.
+- Trace Git.
+- Transparence IA si applicable.
 
-- La question predictive est claire.
-- La variable cible est explicite.
-- Les donnees d'evaluation ne sont pas utilisees pour entrainer le modele.
-- La mesure de performance est appropriee au type de cible.
-- La comparaison avec une reference simple est presente.
-- Les limites sont formulees avec prudence.
-- Le script peut etre relance depuis une session propre.
+## Checklist de remise
 
-## Variante STT-6230
-
-Ajouter une comparaison entre deux modeles ou deux strategies d'evaluation, puis expliquer laquelle vous retiendriez et pourquoi.
+- Le code s’exécute.
+- Les fichiers attendus sont présents.
+- Le README ou la note explique comment reproduire.
+- Les données sensibles sont absentes.
+- L’usage de l’IA est déclaré si nécessaire.

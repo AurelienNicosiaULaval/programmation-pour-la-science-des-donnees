@@ -1,5 +1,5 @@
 ---
-title: "Deploiement et mise en production - Ressources"
+title: "Déploiement et mise en production - Ressources"
 format:
   html:
     embed-resources: true
@@ -7,56 +7,20 @@ format:
 
 ## Ressources internes
 
-- [Avant la classe](avant.qmd)
-- [Pendant la classe](pendant.qmd)
-- [Laboratoire](laboratoire.qmd)
-- [Defi](defi.qmd)
-- [Projet d'equipe](../../projets.qmd)
-- [Portfolio GitHub individuel](../../portfolio.qmd)
+- Notes du module.
+- Laboratoire.
+- Défi.
+- Solution minimale, à publier après la séance si pertinent.
 
-## Documentation officielle
+## Ressources externes
 
-- [Quarto - Publishing Basics](https://quarto.org/docs/publishing/)
-- [Quarto - GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
-- [renv](https://rstudio.github.io/renv/)
-- [shinyapps.io user guide](https://docs.posit.co/shinyapps.io/)
-- [Posit Connect user guide](https://docs.posit.co/connect/user/)
+Ajouter des liens vers documentation officielle, chapitres ou guides.
 
-## Checklist de reproduction
+## Erreurs fréquentes
 
-- Le README indique le but du livrable.
-- La commande principale est explicite.
-- Les dependances sont indiquees.
-- Les donnees requises sont citees ou decrites.
-- Les sorties attendues sont nommees.
-- Les chemins sont relatifs.
-- Les donnees privees restent hors du depot public.
-- Une limite de deploiement est ecrite.
+- Erreur fréquente 1 à documenter.
+- Erreur fréquente 2 à documenter.
 
-## Erreurs frequentes
+## Données
 
-- Oublier qu'un objet existe seulement dans la console locale.
-- Utiliser un chemin absolu.
-- Ne pas creer le dossier de sortie avant d'ecrire un fichier.
-- Oublier de nommer un package utilise dans le code.
-- Publier une donnee qui ne devrait pas etre publique.
-- Confondre "le rapport HTML existe" et "le projet peut etre reproduit".
-
-## Commandes utiles
-
-```r
-# Restaurer un environnement renv si le lockfile existe
-renv::restore()
-
-# Rendre un rapport Quarto depuis R
-quarto::quarto_render("reports/rapport.qmd")
-
-# Executer un script depuis la racine du depot
-source("scripts/verifier_reproduction.R")
-```
-
-Si le package `quarto` n'est pas installe dans R, le rendu peut aussi etre lance depuis le terminal:
-
-```bash
-quarto render reports/rapport.qmd
-```
+Indiquer les jeux de données autorisés, leur source et les limites d’utilisation.

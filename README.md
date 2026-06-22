@@ -4,7 +4,7 @@ Site Quarto du cours STT-4230 / STT-6230 à l’Université Laval.
 
 Ce dépôt contient la structure de base du site de cours: modules, laboratoires, défis, évaluations, portfolio, politique d’utilisation de l’IA, ressources et gabarits.
 
-La source de cohérence pédagogique est la page `cadrage.qmd`, appuyée sur le PDF `stt4230_document_cadrage_unique.pdf`.
+La source de cohérence pédagogique est la page `cadrage.qmd`, appuyée sur le PDF `stt4230_document_cadrage_unique_codex.pdf`.
 
 ## Cloner le dépôt
 

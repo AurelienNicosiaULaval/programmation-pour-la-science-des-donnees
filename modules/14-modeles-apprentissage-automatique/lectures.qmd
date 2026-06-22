@@ -1,96 +1,32 @@
 ---
-title: "Modeles d'apprentissage automatique - Lectures"
+title: "Modèles d’apprentissage automatique - Lectures"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif des lectures
-
-Preparer la seance en distinguant clairement quatre gestes: formuler une question predictive, separer les donnees d'entrainement et d'evaluation, ajuster un modele, puis interpreter les resultats avec prudence.
-
 ## Lecture principale
 
-Lire la documentation officielle de tidymodels sur la structure generale d'un flux de modelisation:
+Ajouter ici les notes maison ou l’extrait principal.
 
-- [Get Started - tidymodels](https://www.tidymodels.org/start/)
-- [Resampling - tidymodels](https://www.tidymodels.org/start/resampling/)
-- [yardstick: Tidy Characterizations of Model Performance](https://yardstick.tidymodels.org/)
+## Lecture complémentaire
 
-Pendant la lecture, noter la difference entre:
+Ajouter une documentation officielle ou une référence stable.
 
-- la variable cible et les variables explicatives;
-- l'entrainement et l'evaluation;
-- une performance apparente et une performance estimee sur des donnees non vues;
-- une mesure d'erreur et une interpretation substantielle.
+## Geste R à reproduire
 
-## Lecture complementaire
-
-Pour relier le modele au projet d'equipe, consulter:
-
-- [recipes](https://recipes.tidymodels.org/), pour documenter les transformations appliquees aux donnees;
-- [parsnip](https://parsnip.tidymodels.org/), pour separer la specification du modele de son moteur;
-- [workflows](https://workflows.tidymodels.org/), pour assembler pretraitement et modele.
-
-Ces liens servent de references. Le laboratoire utilise volontairement un exemple minimal pour faire apparaitre les principes sans imposer toute la syntaxe tidymodels.
-
-## Geste R a reproduire
-
-Executer le script suivant dans un fichier `scripts/modele_minimal.R`. Il cree un jeu de donnees fictif de stations, separe les donnees, ajuste un modele lineaire et compare l'erreur du modele a une reference simple.
-
-```r
-# Modele predictif minimal et reproductible
-set.seed(4230)
-
-donnees_station <- data.frame(
-  station = paste0("station_", sprintf("%02d", 1:120)),
-  temperature = rnorm(120, mean = 12, sd = 8),
-  humidite = runif(120, min = 35, max = 95),
-  vent = rgamma(120, shape = 2, rate = 0.35)
-)
-
-donnees_station$consommation <- 85 +
-  2.4 * donnees_station$temperature -
-  0.3 * donnees_station$humidite +
-  1.8 * donnees_station$vent +
-  rnorm(120, mean = 0, sd = 8)
-
-indices_entrainement <- sample(seq_len(nrow(donnees_station)), size = 0.75 * nrow(donnees_station))
-
-entrainement <- donnees_station[indices_entrainement, ]
-evaluation <- donnees_station[-indices_entrainement, ]
-
-modele <- lm(consommation ~ temperature + humidite + vent, data = entrainement)
-
-predictions <- predict(modele, newdata = evaluation)
-reference <- mean(entrainement$consommation)
-
-rmse_modele <- sqrt(mean((evaluation$consommation - predictions)^2))
-rmse_reference <- sqrt(mean((evaluation$consommation - reference)^2))
-
-data.frame(
-  approche = c("modele_lineaire", "reference_moyenne"),
-  rmse = c(rmse_modele, rmse_reference)
-)
-```
+- Exemple 1 à exécuter.
+- Exemple 2 à exécuter.
 
 ## Trace attendue
 
-Ajouter au portfolio une courte note contenant:
+Indiquer la trace à ajouter au portfolio ou au dépôt.
 
-- la question predictive;
-- la variable cible;
-- les variables explicatives retenues;
-- la strategie de separation des donnees;
-- la mesure de performance utilisee;
-- une limite ou un risque d'interpretation.
+## Mini-test
 
-## Mini-test de preparation
+Prévoir des questions courtes liées à la préparation.
 
-Repondre brievement aux questions suivantes:
+## TODO
 
-1. Pourquoi ne faut-il pas evaluer uniquement le modele sur les donnees utilisees pour l'entrainer?
-2. Dans l'exemple ci-dessus, quelle est la variable cible?
-3. Que mesure la RMSE?
-4. Pourquoi comparer le modele a une reference simple comme la moyenne?
-5. Quelle information manque encore pour savoir si ce modele serait acceptable dans un contexte reel?
+- Ajouter les liens précis.
+- Vérifier que la charge reste raisonnable.

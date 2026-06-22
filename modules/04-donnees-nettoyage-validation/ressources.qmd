@@ -194,16 +194,8 @@ Une méthode classique consiste à imputer (remplacer) les valeurs manquantes pa
 
 Pour combiner deux jeux de données partageant des clés communes, on peut utiliser la fonction `merge()` ou les fonctions de jointure de `dplyr`.
 
-Soit un jeu de données de téléphones et un de population :
+Soit un jeu de données de population :
 ```r
-# Données des téléphones
-phones_long <- data.frame(
-  Region = c("N.Amer", "Europe", "Asia", "S.Amer"),
-  Year = c(1960, 1960, 1960, 1960),
-  Phones = c(79900, 29000, 8300, 540)
-)
-
-# Données de population
 population_1960 <- data.frame(
   An = 1960,
   Territoire = c("N.Amer", "Europe", "Asia"),

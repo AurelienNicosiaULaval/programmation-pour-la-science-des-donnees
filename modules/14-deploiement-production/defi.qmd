@@ -1,53 +1,26 @@
 ---
-title: "Deploiement et mise en production - Defi"
+title: "Déploiement et mise en production - Défi"
 format:
   html:
     embed-resources: true
 ---
 
-## Nature du defi
-
-Ce defi de module sert a stabiliser un livrable avant la fin de session. Il ne remplace pas les trois defis techniques notes.
-
 ## Objectif
 
-Produire une procedure de reproduction minimale pour un livrable R existant.
+Produire une procédure de reproduction minimale pour un livrable R.
 
 ## Consignes
 
-1. Choisir un livrable du portfolio ou du projet d'equipe.
-2. Identifier les fichiers d'entree et les sorties attendues.
-3. Documenter les dependances.
-4. Ecrire une commande principale d'execution.
-5. Ajouter un script de verification minimal.
-6. Tester depuis une session propre.
-7. Documenter les limites connues.
-8. Faire un commit cible.
+- Choisir un livrable existant.
+- Documenter les étapes d’exécution.
+- Vérifier la procédure depuis une session propre.
+- Décrire les limites connues.
+- Déclarer l’usage significatif de l’IA si pertinent.
 
 ## Livrable attendu
 
-- README mis a jour;
-- script ou commande de verification;
-- liste de dependances;
-- description des sorties attendues;
-- note sur les limites;
-- trace Git.
-
-## Place de l'IA
-
-Statut: permise, declaree.
-
-L'IA peut aider a relire le README, suggerer une checklist ou expliquer une erreur. Elle ne doit pas inventer une procedure non testee. Toute aide significative doit etre declaree dans `docs/ai-log.md` ou dans le journal du portfolio.
-
-## Criteres de reussite
-
-- La procedure commence a la racine du depot.
-- Les commandes sont copiables et adaptees au depot reel.
-- Les dependances sont identifiables.
-- Les donnees sensibles ou privees ne sont pas publiees.
-- Le livrable a ete teste dans une session propre.
-- Les limites du deploiement sont explicites.
-
-## Variante STT-6230
-
-Ajouter une comparaison argumentee entre la reproduction locale et une option de publication ou d'automatisation.
+- procédure de reproduction;
+- code ou rapport associé;
+- note sur les dépendances;
+- trace Git;
+- court bilan des limites.

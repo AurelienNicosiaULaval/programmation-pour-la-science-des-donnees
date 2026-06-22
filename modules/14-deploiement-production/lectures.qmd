@@ -1,93 +1,32 @@
 ---
-title: "Deploiement et mise en production - Lectures"
+title: "Déploiement et mise en production - Lectures"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif des lectures
-
-Preparer une question pratique: qu'est-ce qui manque pour qu'une autre personne puisse executer votre livrable R sans votre aide?
-
-Le module ne demande pas de deployer un service complexe. Il vise une mise en production minimale: procedure claire, dependances explicites, fichiers attendus, sorties verifiables et limites documentees.
-
 ## Lecture principale
 
-Lire les references suivantes:
+Ajouter ici les notes maison ou l’extrait principal.
 
-- [Quarto - Publishing Basics](https://quarto.org/docs/publishing/)
-- [Quarto - GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
-- [renv - Introduction](https://rstudio.github.io/renv/articles/renv.html)
+## Lecture complémentaire
 
-Pendant la lecture, noter:
+Ajouter une documentation officielle ou une référence stable.
 
-- ce qui est necessaire pour rendre un rapport consultable;
-- ce qui est necessaire pour relancer un projet localement;
-- ce qui doit etre versionne ou non;
-- ce qui devrait apparaitre dans un README de reproduction.
+## Geste R à reproduire
 
-## Lecture complementaire
-
-Selon le type de livrable:
-
-- rapport ou site Quarto: [Quarto publishing](https://quarto.org/docs/publishing/);
-- application Shiny: [shinyapps.io user guide](https://docs.posit.co/shinyapps.io/);
-- environnement R: [renv documentation](https://rstudio.github.io/renv/);
-- deploiement institutionnel ou serveur: [Posit Connect user guide](https://docs.posit.co/connect/user/).
-
-Ces ressources servent a comprendre les options. Le travail attendu dans le cours reste une procedure de reproduction minimale.
-
-## Geste R a reproduire
-
-Dans un depot de travail, creer un fichier `scripts/verifier_reproduction.R` contenant:
-
-```r
-# Verification minimale de reproduction
-
-fichiers_attendus <- c(
-  "README.md",
-  "scripts",
-  "reports"
-)
-
-manquants <- fichiers_attendus[!file.exists(fichiers_attendus)]
-
-if (length(manquants) > 0) {
-  stop(
-    "Fichiers ou dossiers manquants: ",
-    paste(manquants, collapse = ", ")
-  )
-}
-
-message("Structure minimale presente.")
-
-if (file.exists("renv.lock")) {
-  message("renv.lock present: documenter la commande renv::restore().")
-} else {
-  message("renv.lock absent: expliquer comment installer les packages.")
-}
-```
-
-Executer ensuite:
-
-```r
-source("scripts/verifier_reproduction.R")
-```
+- Exemple 1 à exécuter.
+- Exemple 2 à exécuter.
 
 ## Trace attendue
 
-Ajouter au portfolio ou au depot d'equipe:
+Indiquer la trace à ajouter au portfolio ou au dépôt.
 
-- une procedure de reproduction dans le README;
-- un script de verification minimal;
-- une liste de dependances;
-- une description des sorties attendues;
-- une limite connue du livrable.
+## Mini-test
 
-## Mini-test de preparation
+Prévoir des questions courtes liées à la préparation.
 
-1. Pourquoi un fichier `README.md` ne suffit-il pas si les dependances ne sont pas documentees?
-2. Quelle difference y a-t-il entre publier un rapport HTML et rendre un pipeline R reproductible?
-3. Pourquoi faut-il decrire les sorties attendues?
-4. Quelle information devrait etre fournie si `renv.lock` est absent?
-5. Quelle limite de votre livrable devrait etre visible avant la remise finale?
+## TODO
+
+- Ajouter les liens précis.
+- Vérifier que la charge reste raisonnable.
