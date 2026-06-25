@@ -5,6 +5,7 @@
 .Rproj.user/
 .quarto/
 _site/
+site_libs/
 *_files/
 /.quarto/
 /renv/library/
@@ -21,3 +22,6 @@ data/processed/*
 .enseignant-prive/
 
 **/*.quarto_ipynb
+*.html
+Rplots.pdf
+git_diff_real.txt

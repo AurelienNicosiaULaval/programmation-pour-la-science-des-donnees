@@ -68,7 +68,7 @@ La structure suivante est retenue comme plan final d’évaluation.
 
 Les critères détaillés, les consignes et les différences entre STT-4230 et STT-6230 sont regroupés dans la page [Évaluations](evaluations.qmd).
 
-## À compléter
+## Éléments à finaliser pour la version institutionnelle
 
 - Modalités institutionnelles.
 - Règles de retard.

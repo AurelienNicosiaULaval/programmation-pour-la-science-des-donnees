@@ -5,7 +5,7 @@ format:
     embed-resources: true
 ---
 
-Cette page est la synthèse opérationnelle du document `stt4230_document_cadrage_unique_codex.pdf`. Elle sert de source de cohérence pour le site Quarto du cours.
+Cette page est la synthèse opérationnelle du document `stt4230_document_cadrage_unique.pdf`. Elle sert de source de cohérence pour le site Quarto du cours.
 
 ## Décision centrale
 

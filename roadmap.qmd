@@ -10,7 +10,7 @@ Cette page sert de tableau de bord pour organiser le travail de conception du co
 
 ## Source de cohérence
 
-Le dépôt doit maintenant fonctionner avec une seule source de cadrage pédagogique: `stt4230_document_cadrage_unique_codex.pdf`.
+Le dépôt doit maintenant fonctionner avec une seule source de cadrage pédagogique: `stt4230_document_cadrage_unique.pdf`.
 
 La page [Cadrage pédagogique](cadrage.qmd) traduit ce PDF en décisions opérationnelles. Les anciennes fiches PDF qui introduisaient des pondérations ou des composantes contradictoires ne doivent plus guider le développement.
 
@@ -43,14 +43,22 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Gabarits de projet | Fait | Proposition de projet, contributions individuelles et journal IA. |
 | Gabarits hebdomadaires | Fait | Mini-test et journal de portfolio. |
 | Calendrier relatif | Fait | La structure hebdomadaire est alignée sur les jalons; les dates exactes restent à ajouter. |
-| Contenu pédagogique détaillé | En cours | Les modules 1 à 4 sont maintenant prêts à tester; les autres modules restent à développer. |
+| Contenu pédagogique détaillé | Avancé | Les modules 1 à 4, 6, 7, 10, 11, 12, 14 et 15 sont structurés et prêts à tester avec préparation, séance, laboratoire, défi, consolidation, lectures et ressources. |
 | Module 1 | Fait | Mise en route, diagnostic technique, dépôt portfolio et ressources de dépannage. |
 | Module 2 | Fait | Structure de projet, Git, GitHub, chemins relatifs, mini-test et conventions. |
 | Module 3 | Fait | Dépendances, `.gitignore`, `renv`, reproductibilité et jalon portfolio 1. |
 | Module 4 | Fait | Données, nettoyage, validation, fichiers volumineux en aperçu, SQL/API en aperçu et assertions simples. |
+| Module 6 | Fait | Visualisation avec `ggplot2`, laboratoire, défi, consolidation, lectures et ressources. |
+| Module 7 | Fait | Quarto, rapports reproductibles, laboratoire, défi, consolidation, lectures et ressources. |
+| Module 10 | Fait | Fonctions, `purrr`, débogage avec `browser()` et tests `testthat`. |
+| Module 11 | Fait | Programmation orientée objet S3/R6, conception d’API et tests d’invariants. |
+| Module 12, performance | Fait | Profilage, benchmarking, optimisation et documentation des compromis. |
+| Module 12, parallèle | Fait | Calcul parallèle, choix de plan d’exécution et limites de performance. |
+| Modules 14 | Fait | Modélisation, déploiement et cycle de vie des modèles maintenant finalisés. |
+| Module 15 | Fait | Collaboration, documentation, package R local, tests et vérification. |
 | Défi technique 1 | Fait | Directives publiques de préparation sur le site; consigne exacte et fichier évalué à conserver hors site jusqu’au moment du défi. |
 | Semaines 1 à 5 | Fait | Parcours public simulé, checklist enseignante ajoutée, ressources de rattrapage prêtes et matériel exact du défi conservé hors site public. |
-| Couverture du contenu | À surveiller | SQL/API, fichiers volumineux, débogage, assertions et `testthat` doivent apparaître explicitement dans les semaines 4, 5, 10 et 15. |
+| Couverture du contenu | À relire | SQL/API, fichiers volumineux, débogage, assertions et `testthat` apparaissent maintenant dans les pages publiques; une relecture pédagogique transversale reste nécessaire. |
 
 ## Vue d’ensemble
 
@@ -148,7 +156,7 @@ Les cinq premières semaines peuvent être données sans improviser les consigne
 
 Objectif: développer les compétences de programmation professionnelle en R.
 
-Modules à développer:
+Modules prêts à tester:
 
 - [Visualisation](modules/06-visualisation/index.qmd)
 - [Quarto et rapports](modules/07-quarto-rapports/index.qmd)
@@ -202,7 +210,7 @@ Les consignes d’évaluation permettent de comprendre quoi remettre, comment le
 
 Objectif: compléter la fin de session autour du cycle de vie complet d’un projet.
 
-Modules à développer:
+Modules prêts à tester:
 
 - [Modèles d’apprentissage automatique](modules/14-modeles-apprentissage-automatique/index.qmd)
 - [Déploiement et mise en production](modules/14-deploiement-production/index.qmd)
@@ -271,10 +279,10 @@ Le site peut être utilisé comme version officielle de départ du cours.
 
 ## Prochaine action recommandée
 
-La prochaine étape logique est de construire le module de visualisation de la semaine 6:
+La prochaine étape logique est une relecture transversale des modules déjà produits:
 
-1. fixer les objectifs de visualisation avec `ggplot2`;
-2. préparer un laboratoire sur une figure reproductible et améliorable;
-3. relier la visualisation à la proposition du projet d’équipe;
-4. définir la trace portfolio attendue;
-5. prévoir les critères du mini-test de la semaine 6.
+1. relire les modules 6, 7, 10, 11, 12, 14 et 15 du point de vue étudiant;
+2. vérifier que chaque module a une trace portfolio, un statut d’IA et un lien explicite avec le projet filé;
+3. harmoniser les formulations entre laboratoires, défis, pages après la classe et ressources;
+4. décider quelles solutions minimales doivent rester privées jusqu’après les séances;
+5. relancer `Rscript scripts/valider_liens.R` et `quarto render` après la relecture.

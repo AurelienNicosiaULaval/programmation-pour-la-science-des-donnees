@@ -71,10 +71,8 @@ L’IA générative est encadrée plutôt qu’interdite par défaut. Elle peut 
 
 Consulter la page [Politique d’utilisation de l’IA](ia.qmd).
 
-## À compléter
+## Éléments à finaliser avant l’ouverture
 
-- Ajouter les contenus détaillés des semaines et modules.
-- Ajouter les jeux de données autorisés.
 - Adapter le calendrier aux dates exactes de l’automne 2026.
+- Confirmer les jeux de données autorisés pour les défis et les projets.
 - Valider les règles institutionnelles sur l’IA et la protection des données.
-

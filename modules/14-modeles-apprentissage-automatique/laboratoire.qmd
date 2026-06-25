@@ -1,5 +1,5 @@
 ---
-title: "Modèles d’apprentissage automatique - Laboratoire"
+title: "Modeles d'apprentissage automatique - Laboratoire"
 format:
   html:
     embed-resources: true
@@ -7,33 +7,177 @@ format:
 
 ## Mise en contexte
 
-Présenter un problème réaliste lié au module.
+Vous devez produire un premier pipeline de modelisation pour une question predictive simple. Le but n'est pas d'obtenir le meilleur modele possible. Le but est de rendre visible une demarche reproductible: question, donnees, separation, ajustement, evaluation, limites.
 
-## Préparation
+## Resultat attendu
 
-- Ouvrir le dépôt.
-- Vérifier l’environnement R.
-- Lire les consignes.
+A la fin du laboratoire, votre depot contient:
 
-## Activité guidée
+- `scripts/modele_minimal.R`;
+- `reports/note-modelisation.qmd` ou une note equivalente dans le portfolio;
+- une mesure de performance calculee par code;
+- une comparaison avec une reference simple;
+- un commit lisible.
 
-1. Examiner la structure de départ.
-2. Exécuter le code fourni.
-3. Modifier une partie ciblée.
-4. Vérifier le résultat.
-5. Committer une trace claire.
+## Etape 1 - Creer les donnees de travail
 
-## Exercices
+Creer le fichier `scripts/modele_minimal.R`, puis y copier le code suivant.
 
-- Exercice individuel à ajouter.
-- Exercice en duo à ajouter.
-- Question de revue de code à ajouter.
+```r
+# Modele predictif minimal et reproductible
+set.seed(4230)
 
-## Défis supplémentaires
+donnees_station <- data.frame(
+  station = paste0("station_", sprintf("%02d", 1:120)),
+  region = sample(c("Capitale-Nationale", "Chaudiere-Appalaches", "Mauricie"), 120, replace = TRUE),
+  temperature = rnorm(120, mean = 12, sd = 8),
+  humidite = runif(120, min = 35, max = 95),
+  vent = rgamma(120, shape = 2, rate = 0.35)
+)
 
-- Extension pour approfondissement.
-- Variante STT-6230 si pertinente.
+donnees_station$consommation <- 85 +
+  2.4 * donnees_station$temperature -
+  0.3 * donnees_station$humidite +
+  1.8 * donnees_station$vent +
+  rnorm(120, mean = 0, sd = 8)
 
-## Retour réflexif
+str(donnees_station)
+summary(donnees_station$consommation)
+```
 
-Noter une décision technique, une difficulté et une vérification effectuée.
+Dans une vraie analyse, les donnees devraient etre citees et documentees. Ici, elles sont simulees pour isoler la logique de modelisation.
+
+## Etape 2 - Formuler la question predictive
+
+Ajouter un commentaire au debut du script:
+
+```r
+# Question:
+# Peut-on predire la consommation a partir de la temperature,
+# de l'humidite et du vent?
+```
+
+Dans votre note de laboratoire, indiquer:
+
+- la variable cible;
+- les variables explicatives;
+- l'unite d'observation;
+- une limite du jeu de donnees simule.
+
+## Etape 3 - Separer les donnees
+
+Ajouter au script:
+
+```r
+set.seed(4230)
+indices_entrainement <- sample(seq_len(nrow(donnees_station)), size = 0.75 * nrow(donnees_station))
+
+entrainement <- donnees_station[indices_entrainement, ]
+evaluation <- donnees_station[-indices_entrainement, ]
+
+nrow(entrainement)
+nrow(evaluation)
+```
+
+Verifier que les deux objets existent et que les lignes d'evaluation ne sont pas utilisees dans l'ajustement du modele.
+
+## Etape 4 - Ajuster un modele et produire des predictions
+
+```r
+modele <- lm(consommation ~ temperature + humidite + vent, data = entrainement)
+
+predictions <- predict(modele, newdata = evaluation)
+
+resultats <- data.frame(
+  station = evaluation$station,
+  observe = evaluation$consommation,
+  predit = predictions,
+  residu = evaluation$consommation - predictions
+)
+
+head(resultats)
+```
+
+Question a traiter dans la note: pourquoi la variable `region` n'est-elle pas utilisee dans ce premier modele?
+
+## Etape 5 - Evaluer le modele
+
+Comparer le modele a une reference simple qui predit toujours la moyenne observee dans les donnees d'entrainement.
+
+```r
+rmse <- function(observe, predit) {
+  sqrt(mean((observe - predit)^2))
+}
+
+prediction_reference <- mean(entrainement$consommation)
+
+comparaison <- data.frame(
+  approche = c("modele_lineaire", "reference_moyenne"),
+  rmse = c(
+    rmse(evaluation$consommation, predictions),
+    rmse(evaluation$consommation, prediction_reference)
+  )
+)
+
+comparaison
+```
+
+Dans votre note, expliquer si le modele apporte quelque chose par rapport a la reference.
+
+## Etape 6 - Verifier la reproductibilite minimale
+
+Relancer le script dans une nouvelle session R. Corriger toute erreur liee:
+
+- au repertoire de travail;
+- a une variable creee manuellement dans la console;
+- a un package non charge;
+- a une etape non documentee.
+
+## Etape 7 - Rediger la note de modelisation
+
+Creer `reports/note-modelisation.qmd` ou une note equivalente:
+
+```markdown
+---
+title: "Note de modelisation"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question
+
+## Donnees
+
+## Strategie d'evaluation
+
+## Resultats
+
+## Limites
+
+## Prochaine verification
+```
+
+La section `Limites` doit indiquer au moins:
+
+- que les donnees sont simulees;
+- que la performance depend d'une seule separation entrainement/evaluation;
+- qu'une evaluation plus robuste demanderait du reechantillonnage.
+
+## Etape 8 - Committer
+
+Faire un commit cible, par exemple:
+
+```bash
+git add scripts/modele_minimal.R reports/note-modelisation.qmd
+git commit -m "Ajouter une note de modelisation minimale"
+```
+
+## Variante STT-6230
+
+Ajouter une comparaison courte entre deux strategies:
+
+- modele lineaire avec `temperature`, `humidite`, `vent`;
+- modele lineaire ajoutant `region`.
+
+Comparer les RMSE et expliquer pourquoi un modele plus complexe n'est pas automatiquement meilleur.

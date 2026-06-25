@@ -1,32 +1,87 @@
 ---
-title: "Cycle de vie des modèles - Pendant la classe"
+title: "Cycle de vie des modeles - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Déroulement prévu
+## Objectif de la seance
 
-1. Retour sur les lectures et le mini-test.
-2. Clarification des concepts difficiles.
-3. Démonstration courte.
-4. Travail guidé en laboratoire.
-5. Revue de code ou discussion ciblée.
-6. Synthèse et prochaines étapes.
+Transformer une analyse de modelisation en fiche de suivi: contexte, donnees, version du code, validation, limites, risques et prochaine verification.
 
-## Points de contrôle
+## Deroulement propose
 
-- Le dépôt est à jour.
-- Le code de départ fonctionne.
-- Une première trace est commitée.
-- Les difficultés sont documentées.
+| Moment | Activite | Resultat attendu |
+|---:|---|---|
+| 0-15 min | Retour sur la preparation | Identifier les informations minimales a suivre |
+| 15-35 min | Demonstration courte | Montrer une fiche incomplete et la corriger |
+| 35-75 min | Travail individuel | Remplir une premiere fiche de suivi |
+| 75-105 min | Revue en duo | Verifier donnees, version du code, validation et limites |
+| 105-135 min | Discussion de risques | Repérer derive, usage hors contexte et donnees manquantes |
+| 135-165 min | Correction | Ajouter une verification future et une responsabilite de maintenance |
+| 165-180 min | Synthese | Committer la fiche et noter la prochaine action |
 
-## Accompagnement
+## Demonstration courte
 
-Utiliser le temps de laboratoire pour poser des questions précises, montrer un message d’erreur, demander une revue courte ou valider une décision de structure.
+Presenter une fiche de suivi volontairement incomplete:
 
-## TODO enseignant
+- modele sans version du code;
+- donnees de depart non identifiees;
+- performance indiquee sans contexte d'evaluation;
+- aucune limite d'utilisation;
+- aucune verification future.
 
-- Ajouter le déroulement minute par minute si nécessaire.
-- Ajouter les extraits de code de démonstration.
-- Préparer les questions de synthèse.
+Corriger la fiche en direct pour montrer que la documentation fait partie du modele, pas seulement du rapport final.
+
+## Structure minimale de la fiche
+
+La fiche peut tenir dans `docs/fiche-suivi-modele.md`.
+
+```markdown
+# Fiche de suivi du modele
+
+## Objectif
+
+## Donnees utilisees
+
+## Version du code
+
+## Methode et parametres principaux
+
+## Validation effectuee
+
+## Performance observee
+
+## Limites d'utilisation
+
+## Risques de derive ou de mauvaise utilisation
+
+## Verification future
+
+## Responsable ou prochaine action
+```
+
+## Points de controle
+
+- La fiche renvoie a un commit, une version ou une date.
+- Les donnees utilisees sont identifiables.
+- La validation est decrite, pas seulement chiffree.
+- Les limites sont concretes.
+- Une verification future est prevue.
+- L'usage significatif de l'IA est declare si l'IA a aide a documenter, corriger ou interpreter le modele.
+
+## Revue en duo
+
+La personne qui relit doit pouvoir repondre:
+
+- Est-ce que je sais quelles donnees ont produit ce modele?
+- Est-ce que je sais quelle version du code a ete utilisee?
+- Est-ce que je comprends la performance annoncee?
+- Est-ce que je vois un usage qui serait risque?
+- Est-ce que je sais quoi reverifier plus tard?
+
+## Synthese de fin de seance
+
+Terminer avec une phrase de ce type:
+
+> Le modele peut etre reutilise seulement si ..., et il devrait etre reverifie lorsque ...

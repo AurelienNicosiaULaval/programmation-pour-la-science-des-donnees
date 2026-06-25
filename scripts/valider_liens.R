@@ -3,14 +3,27 @@
 
 cat("=== Validation des liens relatifs ===\n")
 
-# Lister les fichiers à analyser (.qmd et .md)
-all_files <- list.files(path = ".", pattern = "\\.(qmd|md)$", recursive = TRUE, full.names = TRUE)
+# Lister les fichiers à analyser sans parcourir les répertoires générés.
+excluded_dir_names <- c(".git", "_site", ".quarto", "tmp", "renv", "site_libs")
 
-# Ignorer les répertoires système et de sortie
-excluded_dirs <- c("^\\./_site/", "^\\./\\.quarto/", "^\\./tmp/", "^\\./renv/")
-for (dir in excluded_dirs) {
-  all_files <- all_files[!grepl(dir, all_files)]
+collect_source_files <- function(path = ".") {
+  entries <- list.files(path, all.files = TRUE, no.. = TRUE, full.names = TRUE)
+  if (length(entries) == 0) {
+    return(character())
+  }
+
+  info <- file.info(entries)
+  files <- entries[!info$isdir & grepl("\\.(qmd|md)$", entries)]
+  dirs <- entries[info$isdir]
+  dirs <- dirs[
+    !basename(dirs) %in% excluded_dir_names &
+      !grepl("_files$", basename(dirs))
+  ]
+
+  c(files, unlist(lapply(dirs, collect_source_files), use.names = FALSE))
 }
+
+all_files <- sort(collect_source_files())
 
 errors <- list()
 files_checked <- 0

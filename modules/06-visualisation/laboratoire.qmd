@@ -62,7 +62,7 @@ counts_ouest <- table(seismes_ouest$mag_catego)
 barplot(counts_ouest / sum(counts_ouest), 
         main = "Région Ouest", 
         col = "skyblue", 
-        ylim = c(0, 0.6),
+        ylim = c(0, 0.9),
         xlab = "Magnitude", ylab = "Proportion")
 
 # Sous-fenêtre 2 : Est
@@ -71,7 +71,7 @@ counts_est <- table(seismes_est$mag_catego)
 barplot(counts_est / sum(counts_est), 
         main = "Région Est", 
         col = "salmon", 
-        ylim = c(0, 0.6),
+        ylim = c(0, 0.9),
         xlab = "Magnitude", ylab = "Proportion")
 
 # Rétablir les paramètres par défaut
@@ -161,7 +161,7 @@ graphique_pro <- graphique_final +
   # Couleurs accessibles et lisibles
   scale_fill_brewer(palette = "Set1") +
   # Ajuster l'axe Y pour éviter que le texte ne soit coupé en haut
-  scale_y_continuous(limits = c(0, 0.65)) +
+  scale_y_continuous(limits = c(0, 0.90)) +
   # Appliquer un thème minimaliste et soigné
   theme_minimal() +
   theme(
