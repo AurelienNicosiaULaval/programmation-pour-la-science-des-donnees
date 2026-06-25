@@ -39,7 +39,7 @@ Cette page regroupe les ressources utiles pour le cours.
 
 Un seul PDF de cadrage est conservé à la racine du dépôt afin d’éviter les contradictions entre documents de conception:
 
-- `stt4230_document_cadrage_unique.pdf`
+- [`stt4230_document_cadrage_unique.pdf`](stt4230_document_cadrage_unique.pdf)
 
 La page [Cadrage pédagogique](cadrage.qmd) traduit ce document en décisions opérationnelles pour le site.
 

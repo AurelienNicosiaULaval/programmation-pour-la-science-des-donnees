@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - stt4230_document_cadrage_unique.pdf
 
 lang: fr
 

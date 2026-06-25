@@ -10,7 +10,7 @@ Cette page sert de tableau de bord pour organiser le travail de conception du co
 
 ## Source de cohérence
 
-Le dépôt doit maintenant fonctionner avec une seule source de cadrage pédagogique: `stt4230_document_cadrage_unique.pdf`.
+Le dépôt doit maintenant fonctionner avec une seule source de cadrage pédagogique: [`stt4230_document_cadrage_unique.pdf`](stt4230_document_cadrage_unique.pdf).
 
 La page [Cadrage pédagogique](cadrage.qmd) traduit ce PDF en décisions opérationnelles. Les anciennes fiches PDF qui introduisaient des pondérations ou des composantes contradictoires ne doivent plus guider le développement.
 
