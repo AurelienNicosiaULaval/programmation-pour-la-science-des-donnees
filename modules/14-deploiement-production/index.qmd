@@ -20,7 +20,17 @@ Comment préparer un projet R pour qu’une autre personne puisse l’exécuter,
 
 ## Place dans le cours
 
-Ce module relie les apprentissages sur Git, Quarto, fonctions, performance et modélisation. Il prépare la finalisation du projet d’équipe.
+Ce module est le bloc de reproduction et de livraison de la semaine 14. Il ne demande pas de créer un produit plus gros en fin de session. Il sert à vérifier que le produit déjà développé peut être relancé, compris et discuté sans explication orale.
+
+La semaine 14 regroupe trois blocs complémentaires:
+
+| Bloc | Page | Rôle |
+|---|---|---|
+| 1 | Modèles d’apprentissage automatique | Construire ou analyser un pipeline de modélisation minimal |
+| 2 | Déploiement et mise en production | Vérifier que le livrable final peut être relancé par une autre personne |
+| 3 | Cycle de vie des modèles | Documenter les limites, le suivi et la maintenance après la remise |
+
+Ce bloc soutient directement la remise finale du projet d’équipe et le jalon portfolio 3.
 
 ## Trace attendue
 

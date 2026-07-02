@@ -54,8 +54,8 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Module 11 | Fait | Programmation orientée objet S3/R6, conception d’API et tests d’invariants. |
 | Module 12, performance | Fait | Profilage, benchmarking, optimisation et documentation des compromis. |
 | Module 12, parallèle | Fait | Calcul parallèle, choix de plan d’exécution et limites de performance. |
-| Modules 14 | Fait | Modélisation, déploiement et cycle de vie des modèles finalisés et relus pour la v1. |
-| Module 15 | Fait | Collaboration, documentation, package R local, tests et vérification. |
+| Modules 14 | Fait | Trois blocs de synthèse clarifiés: modélisation, reproduction du livrable et cycle de vie. |
+| Module 15 | Fait | Présentation, revue de code, bilan final et documentation finale clarifiés; le package R local reste une option de consolidation. |
 | Défi technique 1 | Fait | Directives publiques de préparation sur le site; consigne exacte et fichier évalué à conserver hors site jusqu’au moment du défi. |
 | Semaines 1 à 5 | Fait | Parcours public simulé, checklist enseignante ajoutée, ressources de rattrapage prêtes et matériel exact du défi conservé hors site public. |
 | Couverture du contenu | Relue v1 | Les modules 6, 7, 10, 11, 12, 14 et 15 ont été harmonisés pour les traces portfolio, les statuts IA et les liens avec le projet filé. |
@@ -209,7 +209,7 @@ Les consignes d’évaluation permettent de comprendre quoi remettre, comment le
 
 ## Phase 6 - Finaliser les modules avancés
 
-Objectif: compléter la fin de session autour du cycle de vie complet d’un projet.
+Objectif: compléter la fin de session autour du cycle de vie complet d’un projet, sans créer trois semaines 14 distinctes.
 
 Modules prêts à tester:
 
@@ -222,13 +222,14 @@ Livrables:
 
 - pipeline de modèle reproductible;
 - fiche de suivi de modèle;
-- plan de déploiement;
+- reproduction du livrable final;
+- plan de maintenance;
 - activité de revue de code;
 - mini-package ou composant R documenté.
 
 Critère de fin de phase:
 
-La fin du cours relie modélisation, livraison, maintenance, documentation et collaboration dans un même fil conducteur.
+La fin du cours relie modélisation, reproduction, maintenance, documentation, présentation et collaboration dans un même fil conducteur.
 
 ## Phase 7 - Préparer l’expérience étudiante
 

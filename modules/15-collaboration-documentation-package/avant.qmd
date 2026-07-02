@@ -7,7 +7,9 @@ format:
 
 ## Objectif de préparation
 
-Vérifier que votre système d'exploitation possède les outils de compilation nécessaires à la création de packages R, installer les packages de développement indispensables (`devtools`, `usethis`, `roxygen2`), et comprendre la structure d'un package R.
+Vérifier d'abord les éléments nécessaires à la séance finale: dépôt final, README, support bref, issue ou pull request de revue, contributions, bilan individuel et déclaration IA.
+
+Si votre projet contient des fonctions réutilisables, préparer aussi l'option package R local: outils de compilation, packages de développement (`devtools`, `usethis`, `roxygen2`) et structure minimale d'un package. Cette partie est une consolidation technique, pas une nouvelle remise majeure imposée à toute l'équipe.
 
 Temps de préparation estimé : 40 minutes.
 

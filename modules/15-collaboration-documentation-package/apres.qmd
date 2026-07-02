@@ -7,7 +7,9 @@ format:
 
 ## Consolidation et livrables
 
-Après la séance de laboratoire, vous devez finaliser votre défi et mettre à jour votre portfolio d'apprentissage.
+Après la séance finale, vous devez vérifier que les traces évaluées sont bien déposées: dépôt final, support bref, revue de code, `docs/contributions.md`, déclaration IA lorsque pertinente et bilan individuel.
+
+Si vous avez réalisé l'option package R local, ajoutez aussi les traces techniques correspondantes dans votre portfolio ou dans le dépôt de projet.
 
 ### Activités de consolidation
 

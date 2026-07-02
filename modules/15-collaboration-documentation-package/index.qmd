@@ -12,19 +12,19 @@ Comment structurer, documenter et tester son code R pour qu'il devienne un outil
 
 ## Rôle dans le cours
 
-Ce module est le point d'orgue du cours. Après avoir appris à écrire du code propre, des fonctions et des classes orientées objet (modules 10 et 11), vous apprendrez à encapsuler vos outils dans un **package R** standard. Le package est l'unité fondamentale de partage et de distribution du code en R. Nous utiliserons la suite d'outils modernes `devtools`, `usethis` et `roxygen2` pour automatiser la création de l'arborescence, la génération automatique des fiches d'aide (format `.Rd`), et les tests unitaires.
+La semaine 15 n'ajoute pas une nouvelle remise technique majeure après le projet final. Elle sert d'abord à présenter, défendre et relire le travail remis: démonstration, revue de code, bilan individuel et discussion des limites.
 
-Ces compétences vous permettront de collaborer efficacement et de livrer votre projet de session sous la forme d'une bibliothèque R testée et documentée.
+Cette page fournit une boîte à outils pour renforcer la documentation et les tests du code. Le format package R local est une extension utile lorsque le projet contient des fonctions réutilisables, mais il ne remplace pas les exigences centrales de la semaine 15: dépôt final propre, README, reproduction, revue de code, contributions vérifiables et bilan final.
 
 ## Objectifs du module
 
 À la fin de la semaine, chaque personne devrait pouvoir :
-- Créer une structure de package R valide à l'aide de `usethis::create_package()`.
-- Documenter des fonctions publiques et des méthodes S3 à l'aide des balises `roxygen2` (ex: `@param`, `@return`, `@export`, `@examples`).
-- Gérer les dépendances logicielles d'un package dans le fichier `DESCRIPTION` (les rubriques `Imports` et `Depends`).
-- Intégrer et documenter des jeux de données internes (LazyData) à l'aide de `usethis::use_data()`.
-- Écrire et exécuter des tests unitaires intégrés à l'arborescence du package à l'aide de `testthat`.
-- Interpréter et résoudre les avertissements (Warnings) et notes de la commande de diagnostic `devtools::check()`.
+- vérifier qu'un dépôt final peut être compris sans explication orale;
+- choisir un extrait de code pertinent pour une revue;
+- expliquer les entrées, sorties, dépendances et limites d'une fonction ou d'un pipeline;
+- documenter les contributions individuelles;
+- produire un bilan final bref et défendable;
+- identifier quand un package R local est pertinent pour structurer du code réutilisable.
 
 ## Compétences visées
 
@@ -38,11 +38,11 @@ Ces compétences vous permettront de collaborer efficacement et de livrer votre 
 
 | Moment | Page à utiliser | Résultat |
 |---|---|---|
-| Avant la classe | [Avant la classe](avant.qmd) | Vérifier l'environnement de construction et faire le mini-test de préparation |
-| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos de création, de documentation Roxygen2 et d'importations |
-| Laboratoire | [Laboratoire](laboratoire.qmd) | Construire et installer le package local `manhattan` muni de tests et de documentation |
-| Défi de module | [Défi de module](defi.qmd) | Packager une fonction de projet sous forme de package local testé |
-| Après la classe | [Après la classe](apres.qmd) | Déposer la trace finale: README, tests, documentation, bilan et commit |
+| Avant la classe | [Avant la classe](avant.qmd) | Vérifier le dépôt final, le README, les tests et les contributions |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Présenter le projet, faire une revue de code et répondre aux questions |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Utiliser le format package R local comme référence technique lorsque pertinent |
+| Défi de module | [Défi de module](defi.qmd) | Option de consolidation: packager une fonction de projet sous forme de package local testé |
+| Après la classe | [Après la classe](apres.qmd) | Déposer la trace finale: bilan, revue, documentation et dernier commit |
 
 ## Place de l’IA
 
@@ -52,7 +52,7 @@ L'IA peut vous aider à rédiger des descriptions de fonctions au format `roxyge
 
 ## Variante STT-6230
 
-Discuter de l'intérêt et de la mise en place d'une politique de **Continuous Integration (CI)** (ex: avec GitHub Actions) pour lancer automatiquement la commande `R CMD check` lors de chaque commit sur un dépôt collaboratif.
+Préparer une justification technique courte liée au dépôt final: comparaison d'approches, validation supplémentaire, analyse de performance, automatisation du pipeline ou plan de maintenance. Une politique de Continuous Integration avec GitHub Actions est un exemple possible si elle est réaliste pour le projet.
 
 ## Pages du module
 

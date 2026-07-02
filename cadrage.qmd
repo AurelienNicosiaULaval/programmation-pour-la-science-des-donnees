@@ -68,8 +68,8 @@ Une lecture ne doit jamais être seulement un texte. Elle doit contenir un geste
 | 11 | POO et architecture | S3 ou R6 selon le choix final |
 | 12 | Optimisation et parallélisation | Mesurer, profiler, comparer, paralléliser avec `future` et `furrr` |
 | 13 | Défi 3 | Diagnostic technique avec IA intégrée et vérification obligatoire |
-| 14 | Modèle, pipeline, cycle de vie | `tidymodels`, `targets`, validation, suivi et reproduction du modèle |
-| 15 | Package, documentation, démonstration finale | README final, tests, présentation, bilan et livraison |
+| 14 | Synthèse finale: modèle, reproduction, cycle de vie | Modélisation minimale, reproduction du livrable, limites, suivi et maintenance |
+| 15 | Présentation, revue de code et bilan final | Démonstration, défense du projet, revue, contributions et bilan |
 
 ## Architecture des évaluations
 

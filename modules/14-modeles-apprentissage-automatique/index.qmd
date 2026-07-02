@@ -20,7 +20,17 @@ Comment intégrer un modèle prédictif dans un projet R sans perdre la reproduc
 
 ## Place dans le cours
 
-Ce module sera développé après les bases de programmation, de visualisation, de reproductibilité et d’optimisation. Il prépare les modules sur le cycle de vie des modèles et le déploiement.
+Ce module est le bloc technique principal de la semaine 14. Il sert à montrer comment ajouter une composante de modélisation à un projet sans perdre les exigences déjà travaillées: structure de dépôt, validation, documentation, reproductibilité et interprétation prudente.
+
+La semaine 14 regroupe trois blocs complémentaires:
+
+| Bloc | Page | Rôle |
+|---|---|---|
+| 1 | Modèles d’apprentissage automatique | Construire ou analyser un pipeline de modélisation minimal |
+| 2 | Déploiement et mise en production | Vérifier que le livrable final peut être relancé par une autre personne |
+| 3 | Cycle de vie des modèles | Documenter les limites, le suivi et la maintenance après la remise |
+
+Les trois blocs ne sont pas trois nouvelles semaines. Ils forment une synthèse finale à mobiliser dans le projet, le portfolio et la présentation.
 
 ## Trace attendue
 

@@ -68,8 +68,8 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 | 11 | POO et architecture | S3 ou R6 selon le choix final, structurer les objets du projet |
 | 12 | Optimisation et parallélisation | Mesurer, profiler, comparer, paralléliser avec `future` et `furrr` |
 | 13 | Défi 3 et consolidation | Défi individuel 1 h avec IA intégrée, puis post-mortem technique sur tests, limites et validation |
-| 14 | Modèle, pipeline, cycle de vie | `tidymodels`, `targets`, validation, suivi et reproduction du modèle |
-| 15 | Package, documentation, démonstration finale | README final, tests, présentation, bilan, revue et livraison |
+| 14 | Synthèse finale: modèle, reproduction, cycle de vie | Modélisation minimale, reproduction du livrable, limites, suivi et maintenance |
+| 15 | Présentation, revue de code et bilan final | Démonstration, défense du projet, revue, contributions et bilan |
 
 ## Évaluations
 

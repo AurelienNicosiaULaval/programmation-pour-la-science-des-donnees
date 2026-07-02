@@ -50,8 +50,8 @@ Le cours est structuré en 15 semaines:
 11. POO et architecture
 12. Optimisation et parallélisation
 13. Défi technique 3
-14. Modèle, pipeline, cycle de vie
-15. Package, documentation, démonstration finale
+14. Synthèse finale: modèle, reproduction, cycle de vie
+15. Présentation, revue de code et bilan final
 
 ## Évaluations
 

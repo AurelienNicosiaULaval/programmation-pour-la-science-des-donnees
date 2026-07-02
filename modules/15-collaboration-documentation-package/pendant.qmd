@@ -7,6 +7,10 @@ format:
 
 ## Activités en classe
 
+La séance finale est d'abord consacrée à la présentation, à la revue de code et au bilan final décrits dans la page [Revue de code, présentation et bilan final](../../presentation.qmd).
+
+Le déroulement ci-dessous sert de bloc technique complémentaire si un temps de consolidation est réservé au packaging, ou si une équipe veut transformer une partie de son projet en composant R documenté.
+
 ### 1. Retour sur le mini-test (15 min)
 
 *   **Question 1 :** La bonne réponse est l'**Option B**. `devtools::check()` est l'outil indispensable du développeur R. Il lance plus de 50 vérifications rigoureuses pour s'assurer que le package compile, s'installe, ne comporte pas de liens d'aide brisés, que le code R ne contient pas d'erreurs de syntaxe grossières, et lance tous les tests unitaires.

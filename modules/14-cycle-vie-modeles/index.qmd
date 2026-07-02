@@ -20,7 +20,17 @@ Comment documenter et maintenir un modèle après sa première mise au point?
 
 ## Place dans le cours
 
-Ce module se situe en fin de session. Il relie modélisation, reproductibilité, documentation, maintenance et communication des limites.
+Ce module est le bloc de recul professionnel de la semaine 14. Il sert à transformer un résultat technique en livrable défendable: hypothèses, limites, surveillance, maintenance et usages à éviter.
+
+La semaine 14 regroupe trois blocs complémentaires:
+
+| Bloc | Page | Rôle |
+|---|---|---|
+| 1 | Modèles d’apprentissage automatique | Construire ou analyser un pipeline de modélisation minimal |
+| 2 | Déploiement et mise en production | Vérifier que le livrable final peut être relancé par une autre personne |
+| 3 | Cycle de vie des modèles | Documenter les limites, le suivi et la maintenance après la remise |
+
+Ce bloc prépare la discussion finale de la semaine 15: présentation, revue de code, bilan individuel et questions sur les limites du projet.
 
 ## Trace attendue
 

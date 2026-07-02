@@ -5,6 +5,10 @@ format:
     embed-resources: true
 ---
 
+## Nature du défi
+
+Ce défi de module est une option de consolidation pour le portfolio ou le projet. Il ne remplace pas la composante évaluée de semaine 15, qui porte sur la présentation, la revue de code et le bilan final.
+
 ## Consignes du défi de la semaine
 
 L'objectif de ce défi est de transformer les scripts et fonctions de calcul que vous avez élaborés dans le cadre de votre projet de session (ou de vos portfolios) en un véritable **package R local, testé et documenté**.

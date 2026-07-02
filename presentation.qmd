@@ -48,6 +48,20 @@ Avant la présentation, chaque équipe doit avoir stabilisé:
 - une issue ou pull request utilisée pour la revue de code;
 - un bilan individuel final.
 
+## Remise avant la séance
+
+Le dépôt final doit permettre de retrouver sans ambiguïté:
+
+- le lien vers le produit présenté;
+- la commande ou procédure minimale de reproduction;
+- l'issue ou la pull request choisie pour la revue de code;
+- le fichier `docs/contributions.md`;
+- le fichier `docs/ai-log.md` si l’IA a été utilisée de façon significative;
+- le bilan individuel final ou le lien vers le bilan dans le portfolio;
+- la note technique STT-6230 lorsque pertinente.
+
+La séance ne sert pas à corriger un dépôt incomplet. Elle sert à défendre le travail remis, expliquer les choix et discuter les limites.
+
 ## Présentation du projet
 
 La présentation doit être courte et centrée sur le produit livré.
