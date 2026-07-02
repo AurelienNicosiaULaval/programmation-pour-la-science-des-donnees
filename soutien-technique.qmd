@@ -31,14 +31,53 @@ Inclure:
 - ce qui était attendu;
 - ce qui a été obtenu.
 
-## Erreurs fréquentes à documenter
+## Erreurs fréquentes
 
-- Problème d’authentification GitHub.
-- Mauvais répertoire de travail.
-- Package non installé.
-- Chemin absolu local.
-- Fichier de données manquant.
-- Conflit Git.
+| Symptôme | Diagnostic rapide | Correction habituelle |
+|---|---|---|
+| GitHub refuse `git push` | Tester `ssh -T git@github.com` | Configurer ou corriger la clé SSH GitHub |
+| Le fichier est introuvable | Vérifier `pwd` et `list.files()` | Revenir au bon projet et utiliser des chemins relatifs |
+| Un package manque | Lire le message `there is no package called` | Installer le package ou relancer `renv::restore()` |
+| Le rendu Quarto échoue | Relire le premier message d’erreur utile | Exécuter le bloc R fautif dans la console, puis relancer `quarto render` |
+| Le code fonctionne seulement sur un ordinateur | Chercher des chemins comme `/Users/...` ou `C:\\...` | Remplacer par des chemins relatifs et documenter les données |
+| Un fichier de données manque | Vérifier `data/raw/` et la fiche de provenance | Ajouter la source, le script de téléchargement ou l’instruction de récupération |
+| Conflit Git | Chercher les marqueurs `<<<<<<<`, `=======`, `>>>>>>>` | Résoudre manuellement, tester, puis créer un commit de résolution |
+| `renv` bloque une installation | Lire le message de paquet ou de version R | Restaurer l’environnement ou documenter la dépendance manquante |
+
+## Procédures utiles
+
+Tester l’authentification GitHub par SSH:
+
+```bash
+ssh -T git@github.com
+```
+
+Vérifier que le dépôt courant est le bon:
+
+```bash
+pwd
+git status
+git remote -v
+```
+
+Relancer un projet avec `renv`:
+
+```r
+renv::restore()
+```
+
+Rendre un document Quarto:
+
+```bash
+quarto render rapport.qmd
+```
+
+Chercher un conflit Git:
+
+```bash
+git status
+grep -R "<<<<<<<" .
+```
 
 ## IA et dépannage
 

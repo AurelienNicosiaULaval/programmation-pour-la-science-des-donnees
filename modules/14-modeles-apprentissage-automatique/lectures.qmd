@@ -1,5 +1,5 @@
 ---
-title: "Modeles d'apprentissage automatique - Lectures"
+title: "Modèles d'apprentissage automatique - Lectures"
 format:
   html:
     embed-resources: true
@@ -7,36 +7,36 @@ format:
 
 ## Objectif des lectures
 
-Preparer la seance en distinguant clairement quatre gestes: formuler une question predictive, separer les donnees d'entrainement et d'evaluation, ajuster un modele, puis interpreter les resultats avec prudence.
+Préparer la séance en distinguant clairement quatre gestes: formuler une question prédictive, séparer les données d'entraînement et d'évaluation, ajuster un modèle, puis interpréter les résultats avec prudence.
 
 ## Lecture principale
 
-Lire la documentation officielle de tidymodels sur la structure generale d'un flux de modelisation:
+Lire la documentation officielle de tidymodels sur la structure générale d'un flux de modélisation:
 
 - [Get Started - tidymodels](https://www.tidymodels.org/start/)
 - [Resampling - tidymodels](https://www.tidymodels.org/start/resampling/)
 - [yardstick: Tidy Characterizations of Model Performance](https://yardstick.tidymodels.org/)
 
-Pendant la lecture, noter la difference entre:
+Pendant la lecture, noter la différence entre:
 
 - la variable cible et les variables explicatives;
-- l'entrainement et l'evaluation;
-- une performance apparente et une performance estimee sur des donnees non vues;
-- une mesure d'erreur et une interpretation substantielle.
+- l'entraînement et l'évaluation;
+- une performance apparente et une performance estimée sur des données non vues;
+- une mesure d'erreur et une interprétation substantielle.
 
-## Lecture complementaire
+## Lecture complémentaire
 
-Pour relier le modele au projet d'equipe, consulter:
+Pour relier le modèle au projet d'équipe, consulter:
 
-- [recipes](https://recipes.tidymodels.org/), pour documenter les transformations appliquees aux donnees;
-- [parsnip](https://parsnip.tidymodels.org/), pour separer la specification du modele de son moteur;
-- [workflows](https://workflows.tidymodels.org/), pour assembler pretraitement et modele.
+- [recipes](https://recipes.tidymodels.org/), pour documenter les transformations appliquées aux données;
+- [parsnip](https://parsnip.tidymodels.org/), pour séparer la spécification du modèle de son moteur;
+- [workflows](https://workflows.tidymodels.org/), pour assembler prétraitement et modèle.
 
-Ces liens servent de references. Le laboratoire utilise volontairement un exemple minimal pour faire apparaitre les principes sans imposer toute la syntaxe tidymodels.
+Ces liens servent de références. Le laboratoire utilise volontairement un exemple minimal pour faire apparaître les principes sans imposer toute la syntaxe tidymodels.
 
-## Geste R a reproduire
+## Geste R à reproduire
 
-Executer le script suivant dans un fichier `scripts/modele_minimal.R`. Il cree un jeu de donnees fictif de stations, separe les donnees, ajuste un modele lineaire et compare l'erreur du modele a une reference simple.
+Exécuter le script suivant dans un fichier `scripts/modele_minimal.R`. Il crée un jeu de données fictif de stations, sépare les données, ajuste un modèle linéaire et compare l'erreur du modèle à une référence simple.
 
 ```r
 # Modele predictif minimal et reproductible
@@ -78,19 +78,19 @@ data.frame(
 
 Ajouter au portfolio une courte note contenant:
 
-- la question predictive;
+- la question prédictive;
 - la variable cible;
 - les variables explicatives retenues;
-- la strategie de separation des donnees;
-- la mesure de performance utilisee;
+- la stratégie de séparation des données;
+- la mesure de performance utilisée;
 - une limite ou un risque d'interpretation.
 
-## Mini-test de preparation
+## Mini-test de préparation
 
-Repondre brievement aux questions suivantes:
+Répondre brièvement aux questions suivantes:
 
-1. Pourquoi ne faut-il pas evaluer uniquement le modele sur les donnees utilisees pour l'entrainer?
+1. Pourquoi ne faut-il pas évaluer uniquement le modèle sur les données utilisées pour l'entraîner?
 2. Dans l'exemple ci-dessus, quelle est la variable cible?
 3. Que mesure la RMSE?
-4. Pourquoi comparer le modele a une reference simple comme la moyenne?
-5. Quelle information manque encore pour savoir si ce modele serait acceptable dans un contexte reel?
+4. Pourquoi comparer le modèle à une référence simple comme la moyenne?
+5. Quelle information manque encore pour savoir si ce modèle serait acceptable dans un contexte réel?

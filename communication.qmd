@@ -5,13 +5,15 @@ format:
     embed-resources: true
 ---
 
-Cette page doit préciser les canaux de communication et les rôles de l’équipe enseignante.
+Cette page précise les canaux de communication et les rôles de l’équipe enseignante pour la version v1 du site. Les noms, coordonnées et disponibilités exactes seront ceux du plan institutionnel final.
 
 ## Canaux
 
-- Plateforme institutionnelle pour les annonces officielles.
-- Forum ou canal structuré pour les questions techniques.
-- GitHub pour les issues liées aux projets lorsque demandé.
+- Plateforme institutionnelle: annonces officielles, consignes finales, remises et messages à toute la classe.
+- Forum ou canal structuré: questions techniques, erreurs reproductibles, clarification de laboratoire.
+- GitHub: issues liées aux projets lorsque demandé, traces de bogue, revue de code ou suivi de livrable.
+
+Les décisions officielles du cours passent par la plateforme institutionnelle ou par une annonce explicite de l’équipe enseignante. Une discussion GitHub ou un message technique ne remplace pas une consigne officielle.
 
 ## Demander de l’aide efficacement
 
@@ -38,8 +40,8 @@ Une bonne demande d’aide contient:
 - Contribuer à la FAQ.
 - Orienter vers les ressources de rattrapage.
 
-## Informations à confirmer
+## Disponibilités et délais
 
-Les noms, coordonnées, disponibilités et délais de réponse seront ajoutés lorsque l’équipe enseignante et les modalités institutionnelles seront confirmées.
+Les noms, coordonnées, disponibilités et délais de réponse exacts sont à confirmer dans le plan de cours institutionnel final.
 
 En attendant, les demandes techniques doivent inclure les éléments listés ci-dessus afin de permettre un diagnostic reproductible.

@@ -1,53 +1,53 @@
 ---
-title: "Deploiement et mise en production - Defi"
+title: "Déploiement et mise en production - Défi"
 format:
   html:
     embed-resources: true
 ---
 
-## Nature du defi
+## Nature du défi
 
-Ce defi de module sert a stabiliser un livrable avant la fin de session. Il ne remplace pas les trois defis techniques notes.
+Ce défi de module sert à stabiliser un livrable avant la fin de session. Il ne remplace pas les trois défis techniques notés.
 
 ## Objectif
 
-Produire une procedure de reproduction minimale pour un livrable R existant.
+Produire une procédure de reproduction minimale pour un livrable R existant.
 
 ## Consignes
 
-1. Choisir un livrable du portfolio ou du projet d'equipe.
-2. Identifier les fichiers d'entree et les sorties attendues.
-3. Documenter les dependances.
-4. Ecrire une commande principale d'execution.
-5. Ajouter un script de verification minimal.
+1. Choisir un livrable du portfolio ou du projet d'équipe.
+2. Identifier les fichiers d'entrée et les sorties attendues.
+3. Documenter les dépendances.
+4. Écrire une commande principale d'exécution.
+5. Ajouter un script de vérification minimal.
 6. Tester depuis une session propre.
 7. Documenter les limites connues.
-8. Faire un commit cible.
+8. Faire un commit ciblé.
 
 ## Livrable attendu
 
-- README mis a jour;
-- script ou commande de verification;
-- liste de dependances;
+- README mis à jour;
+- script ou commande de vérification;
+- liste de dépendances;
 - description des sorties attendues;
 - note sur les limites;
 - trace Git.
 
 ## Place de l'IA
 
-Statut: permise, declaree.
+Statut: permise, déclarée.
 
-L'IA peut aider a relire le README, suggerer une checklist ou expliquer une erreur. Elle ne doit pas inventer une procedure non testee. Toute aide significative doit etre declaree dans `docs/ai-log.md` ou dans le journal du portfolio.
+L'IA peut aider à relire le README, suggérer une checklist ou expliquer une erreur. Elle ne doit pas inventer une procédure non testée. Toute aide significative doit être déclarée dans `docs/ai-log.md` ou dans le journal du portfolio.
 
-## Criteres de reussite
+## Critères de réussite
 
-- La procedure commence a la racine du depot.
-- Les commandes sont copiables et adaptees au depot reel.
-- Les dependances sont identifiables.
-- Les donnees sensibles ou privees ne sont pas publiees.
-- Le livrable a ete teste dans une session propre.
-- Les limites du deploiement sont explicites.
+- La procédure commence à la racine du dépôt.
+- Les commandes sont copiables et adaptées au dépôt réel.
+- Les dépendances sont identifiables.
+- Les données sensibles ou privées ne sont pas publiées.
+- Le livrable a été testé dans une session propre.
+- Les limites du déploiement sont explicites.
 
 ## Variante STT-6230
 
-Ajouter une comparaison argumentee entre la reproduction locale et une option de publication ou d'automatisation.
+Ajouter une comparaison argumentée entre la reproduction locale et une option de publication ou d'automatisation.

@@ -37,11 +37,12 @@ Ce module aborde les paradigmes de programmation orientée objet (POO) en R. Apr
 | Avant la classe | [Avant la classe](avant.qmd) | Lire les concepts de S3 et R6 et faire le mini-test de préparation |
 | Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démonstrations de dispatch S3 et de mutabilité avec R6 |
 | Laboratoire | [Laboratoire](laboratoire.qmd) | Créer un objet d'analyse S3 et encapsuler un simulateur de jeu ou d'état dans une classe R6 |
-| Après la classe | [Après la classe (Défi)](defi.qmd) | Implémenter et documenter une classe (S3 ou R6) répondant à un besoin du projet de session |
+| Défi de module | [Défi de module](defi.qmd) | Implémenter et documenter une classe S3 ou R6 répondant à un besoin du projet |
+| Après la classe | [Après la classe](apres.qmd) | Déposer la trace portfolio: classe, exemple d’usage, test d’invariant et commit |
 
 ## Place de l’IA
 
-Statut : **IA permise avec déclaration** (Niveau 2).
+Statut : **IA permise, déclarée** (Niveau 2).
 
 L'IA peut vous aider à générer le squelette (boilerplate) d'une classe R6 ou à trouver la syntaxe d'une méthode S3. Toutefois, vous devez être capable de justifier par vous-même le choix entre S3 et R6 pour un problème donné et d'expliquer les conséquences de la mutabilité des objets R6 sur la gestion de la mémoire. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
@@ -54,6 +55,7 @@ Comparer de manière formelle les performances en termes de vitesse et d'allocat
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
-- [Après la classe (Défi)](defi.qmd)
+- [Défi de module](defi.qmd)
+- [Après la classe](apres.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)

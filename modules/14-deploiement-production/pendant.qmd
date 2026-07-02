@@ -1,58 +1,58 @@
 ---
-title: "Deploiement et mise en production - Pendant la classe"
+title: "Déploiement et mise en production - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de la seance
+## Objectif de la séance
 
-Transformer un livrable qui fonctionne sur votre machine en livrable relancable par une autre personne.
+Transformer un livrable qui fonctionne sur votre machine en livrable relançable par une autre personne.
 
-## Deroulement propose
+## Déroulement proposé
 
-| Moment | Activite | Resultat attendu |
+| Moment | Activité | Résultat attendu |
 |---:|---|---|
 | 0-15 min | Retour sur le mini-test | Identifier les conditions minimales de reproduction |
-| 15-35 min | Demonstration courte | Montrer une reproduction qui echoue a cause d'une dependance ou d'un chemin implicite |
-| 35-80 min | Audit du livrable | Lister fichiers, dependances, commandes et sorties attendues |
-| 80-115 min | Travail guide | Ecrire ou corriger la procedure de reproduction |
-| 115-140 min | Test croise | Faire relire la procedure par une autre personne |
-| 140-165 min | Correction | Corriger les etapes implicites et les limites |
-| 165-180 min | Commit final | Committer README, script de verification et note de limites |
+| 15-35 min | Démonstration courte | Montrer une reproduction qui échoue à cause d'une dépendance ou d'un chemin implicite |
+| 35-80 min | Audit du livrable | Lister fichiers, dépendances, commandes et sorties attendues |
+| 80-115 min | Travail guidé | Écrire ou corriger la procédure de reproduction |
+| 115-140 min | Test croisé | Faire relire la procédure par une autre personne |
+| 140-165 min | Correction | Corriger les étapes implicites et les limites |
+| 165-180 min | Commit final | Committer README, script de vérification et note de limites |
 
-## Demonstration courte
+## Démonstration courte
 
 Partir d'un script qui fonctionne seulement parce que:
 
-- le repertoire de travail est deja le bon;
+- le répertoire de travail est déjà le bon;
 - un objet existe dans la console;
-- un package est installe localement mais non documente;
-- une sortie est ecrite dans un dossier absent.
+- un package est installé localement mais non documenté;
+- une sortie est écrite dans un dossier absent.
 
 Corriger ensuite le script pour que l'erreur devienne informative.
 
-## Points de controle
+## Points de contrôle
 
-- Le README indique les commandes a executer.
-- Les dependances R sont indiquees.
-- Les fichiers d'entree et de sortie sont nommes.
+- Le README indique les commandes à exécuter.
+- Les dépendances R sont indiquées.
+- Les fichiers d'entrée et de sortie sont nommés.
 - Les chemins sont relatifs.
-- Une verification minimale existe.
-- Les limites du deploiement sont explicites.
+- Une vérification minimale existe.
+- Les limites du déploiement sont explicites.
 
 ## Revue en duo
 
-Echanger les procedures de reproduction. La personne qui relit doit pouvoir repondre:
+Échanger les procédures de reproduction. La personne qui relit doit pouvoir répondre:
 
-- quelle commande executer en premier;
+- quelle commande exécuter en premier;
 - quels packages installer ou restaurer;
 - quelles sorties attendre;
-- quoi faire si une etape echoue;
-- quelles donnees ne doivent pas etre publiees.
+- quoi faire si une étape échoue;
+- quelles données ne doivent pas être publiées.
 
-## Synthese de fin de seance
+## Synthèse de fin de séance
 
 Terminer avec une phrase de ce type:
 
-> Une autre personne peut relancer le livrable en executant ..., mais le deploiement reste limite par ...
+> Une autre personne peut relancer le livrable en exécutant ..., mais le déploiement reste limité par ...

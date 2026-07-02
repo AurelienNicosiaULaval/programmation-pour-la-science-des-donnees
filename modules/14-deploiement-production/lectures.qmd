@@ -1,5 +1,5 @@
 ---
-title: "Deploiement et mise en production - Lectures"
+title: "Déploiement et mise en production - Lectures"
 format:
   html:
     embed-resources: true
@@ -7,13 +7,13 @@ format:
 
 ## Objectif des lectures
 
-Preparer une question pratique: qu'est-ce qui manque pour qu'une autre personne puisse executer votre livrable R sans votre aide?
+Préparer une question pratique: qu'est-ce qui manque pour qu'une autre personne puisse exécuter votre livrable R sans votre aide?
 
-Le module ne demande pas de deployer un service complexe. Il vise une mise en production minimale: procedure claire, dependances explicites, fichiers attendus, sorties verifiables et limites documentees.
+Le module ne demande pas de déployer un service complexe. Il vise une mise en production minimale: procédure claire, dépendances explicites, fichiers attendus, sorties vérifiables et limites documentées.
 
 ## Lecture principale
 
-Lire les references suivantes:
+Lire les références suivantes:
 
 - [Quarto - Publishing Basics](https://quarto.org/docs/publishing/)
 - [Quarto - GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
@@ -21,25 +21,25 @@ Lire les references suivantes:
 
 Pendant la lecture, noter:
 
-- ce qui est necessaire pour rendre un rapport consultable;
-- ce qui est necessaire pour relancer un projet localement;
-- ce qui doit etre versionne ou non;
-- ce qui devrait apparaitre dans un README de reproduction.
+- ce qui est nécessaire pour rendre un rapport consultable;
+- ce qui est nécessaire pour relancer un projet localement;
+- ce qui doit être versionné ou non;
+- ce qui devrait apparaître dans un README de reproduction.
 
-## Lecture complementaire
+## Lecture complémentaire
 
 Selon le type de livrable:
 
 - rapport ou site Quarto: [Quarto publishing](https://quarto.org/docs/publishing/);
 - application Shiny: [shinyapps.io user guide](https://docs.posit.co/shinyapps.io/);
 - environnement R: [renv documentation](https://rstudio.github.io/renv/);
-- deploiement institutionnel ou serveur: [Posit Connect user guide](https://docs.posit.co/connect/user/).
+- déploiement institutionnel ou serveur: [Posit Connect user guide](https://docs.posit.co/connect/user/).
 
-Ces ressources servent a comprendre les options. Le travail attendu dans le cours reste une procedure de reproduction minimale.
+Ces ressources servent à comprendre les options. Le travail attendu dans le cours reste une procédure de reproduction minimale.
 
-## Geste R a reproduire
+## Geste R à reproduire
 
-Dans un depot de travail, creer un fichier `scripts/verifier_reproduction.R` contenant:
+Dans un dépôt de travail, créer un fichier `scripts/verifier_reproduction.R` contenant:
 
 ```r
 # Verification minimale de reproduction
@@ -68,7 +68,7 @@ if (file.exists("renv.lock")) {
 }
 ```
 
-Executer ensuite:
+Exécuter ensuite:
 
 ```r
 source("scripts/verifier_reproduction.R")
@@ -76,18 +76,18 @@ source("scripts/verifier_reproduction.R")
 
 ## Trace attendue
 
-Ajouter au portfolio ou au depot d'equipe:
+Ajouter au portfolio ou au dépôt d'équipe:
 
-- une procedure de reproduction dans le README;
-- un script de verification minimal;
-- une liste de dependances;
+- une procédure de reproduction dans le README;
+- un script de vérification minimal;
+- une liste de dépendances;
 - une description des sorties attendues;
 - une limite connue du livrable.
 
-## Mini-test de preparation
+## Mini-test de préparation
 
-1. Pourquoi un fichier `README.md` ne suffit-il pas si les dependances ne sont pas documentees?
-2. Quelle difference y a-t-il entre publier un rapport HTML et rendre un pipeline R reproductible?
-3. Pourquoi faut-il decrire les sorties attendues?
-4. Quelle information devrait etre fournie si `renv.lock` est absent?
-5. Quelle limite de votre livrable devrait etre visible avant la remise finale?
+1. Pourquoi un fichier `README.md` ne suffit-il pas si les dépendances ne sont pas documentées?
+2. Quelle différence y a-t-il entre publier un rapport HTML et rendre un pipeline R reproductible?
+3. Pourquoi faut-il décrire les sorties attendues?
+4. Quelle information devrait être fournie si `renv.lock` est absent?
+5. Quelle limite de votre livrable devrait être visible avant la remise finale?

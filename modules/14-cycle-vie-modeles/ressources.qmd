@@ -1,5 +1,5 @@
 ---
-title: "Cycle de vie des modeles - Ressources"
+title: "Cycle de vie des modèles - Ressources"
 format:
   html:
     embed-resources: true
@@ -7,48 +7,48 @@ format:
 
 ## Ressources internes
 
-- [Modeles d'apprentissage automatique](../14-modeles-apprentissage-automatique/index.qmd)
+- [Modèles d'apprentissage automatique](../14-modeles-apprentissage-automatique/index.qmd)
 - [Portfolio GitHub individuel](../../portfolio.qmd)
 - [Projets](../../projets.qmd)
 - [Politique IA](../../ia.qmd)
 - [Laboratoire](laboratoire.qmd)
-- [Defi](defi.qmd)
+- [Défi de module](defi.qmd)
 
-## References externes
+## Références externes
 
 - Mitchell et al. (2019), [Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993)
 - Gebru et al. (2021), [Datasheets for Datasets](https://doi.org/10.1145/3458723)
 - NIST (2023), [AI Risk Management Framework 1.0](https://www.nist.gov/itl/ai-risk-management-framework)
 - rOpenSci, [The targets R package user manual](https://books.ropensci.org/targets/)
 
-Ces references servent a structurer la documentation, les limites et le suivi. Le cours demande une fiche de suivi courte, pas un dossier de conformite complet.
+Ces références servent à structurer la documentation, les limites et le suivi. Le cours demande une fiche de suivi courte, pas un dossier de conformité complet.
 
-## Questions de verification
+## Questions de vérification
 
-- Le modele peut-il etre relie a une version du code?
-- Les donnees d'entree sont-elles identifiables?
-- La validation est-elle documentee?
+- Le modèle peut-il être relié à une version du code?
+- Les données d'entrée sont-elles identifiables?
+- La validation est-elle documentée?
 - Les limites sont-elles explicites?
-- Une verification future est-elle prevue?
+- Une vérification future est-elle prévue?
 - La personne responsable de la prochaine action est-elle identifiable?
 
-## Erreurs frequentes
+## Erreurs fréquentes
 
-- Conserver seulement le score final du modele.
-- Oublier la version du code ou des donnees.
-- Documenter la performance sans preciser comment elle a ete obtenue.
-- Confondre un modele teste localement et un modele maintenu.
-- Ne pas decrire les usages hors contexte.
-- Oublier de noter quand le modele devrait etre reverifie.
+- Conserver seulement le score final du modèle.
+- Oublier la version du code ou des données.
+- Documenter la performance sans préciser comment elle a été obtenue.
+- Confondre un modèle testé localement et un modèle maintenu.
+- Ne pas décrire les usages hors contexte.
+- Oublier de noter quand le modèle devrait être revérifié.
 
 ## Gabarit court
 
 ```markdown
-# Fiche de suivi du modele
+# Fiche de suivi du modèle
 
 ## Objectif
 
-## Donnees
+## Données
 
 ## Version du code
 
@@ -60,5 +60,5 @@ Ces references servent a structurer la documentation, les limites et le suivi. L
 
 ## Risques
 
-## Verification future
+## Vérification future
 ```

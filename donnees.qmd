@@ -1,0 +1,62 @@
+---
+title: "Données autorisées et sources recommandées"
+embed-resources: true
+---
+
+Cette page précise les règles de choix, d'usage et de documentation des données pour les laboratoires, le portfolio, les défis et le projet filé.
+
+## Principe général
+
+Les données utilisées dans le cours doivent être publiques, stables, documentées et adaptées à un usage pédagogique. Les données québécoises ou canadiennes sont priorisées lorsque le contexte statistique s'y prête.
+
+Les fichiers exacts des défis techniques évalués ne sont pas publiés sur le site avant les séances. Les consignes publiques décrivent les compétences travaillées; les fichiers d'évaluation et les jeux de données sensibles restent dans les canaux de cours prévus.
+
+## Usages permis
+
+| Usage | Données attendues | Publication sur le site | Trace attendue |
+|---|---|---:|---|
+| Laboratoires | Jeux publics ou extraits pédagogiques reproductibles | Oui, si les droits le permettent | Script, notes et court diagnostic |
+| Défis de module | Jeu fourni en séance ou source publique encadrée | Non pour les fichiers évalués avant la séance | Solution, tests et justification |
+| Défis techniques | Jeu contrôlé, stable et adapté au temps de classe | Non avant l'évaluation | Dépôt ou remise indiquée |
+| Portfolio | Sources publiques choisies par l'étudiante ou l'étudiant | Oui, sous forme de source et de méthode | Fiche de provenance et analyse reproductible |
+| Projet filé | Source publique approuvée, idéalement Québec ou Canada | Oui, si les droits d'usage sont compatibles | Fiche de données, code et limites |
+
+## Fiche minimale de provenance
+
+Chaque jeu de données utilisé dans un travail doit être accompagné des informations suivantes:
+
+| Élément | Contenu attendu |
+|---|---|
+| Source | Nom de l'organisme, titre du jeu de données et lien |
+| Date d'accès | Date à laquelle les données ont été téléchargées ou consultées |
+| Droit d'usage | Licence, conditions d'utilisation ou mention explicite si l'information est absente |
+| Variables utiles | Variables mobilisées dans l'analyse et unités si disponibles |
+| Limites | Données manquantes, biais possibles, granularité, période couverte |
+| Confidentialité | Confirmation qu'aucune donnée personnelle non autorisée n'est publiée |
+
+## Sources recommandées
+
+Ces portails sont recommandés parce qu'ils donnent accès à des jeux de données publics et documentés. La licence doit tout de même être vérifiée pour chaque jeu de données.
+
+| Source | Usage pédagogique typique | Lien |
+|---|---|---|
+| Données Québec | Données municipales, provinciales et administratives québécoises | <https://www.donneesquebec.ca/> |
+| Ville de Québec, données ouvertes | Données urbaines locales, transport, environnement, infrastructures | <https://www.ville.quebec.qc.ca/apropos/portrait/donnees_ouvertes/> |
+| Gouvernement ouvert Canada | Données fédérales et catalogues pancanadiens | <https://open.canada.ca/fr/open-data> |
+| Statistique Canada | Données socioéconomiques, démographiques et enquêtes publiques | <https://www.statcan.gc.ca/> |
+
+## Données non autorisées sans validation
+
+Les données suivantes ne doivent pas être utilisées dans les remises sans validation préalable:
+
+- données personnelles, nominatives ou sensibles;
+- données obtenues par extraction automatisée lorsque les conditions d'utilisation l'interdisent;
+- données nécessitant une clé privée, un compte personnel ou une autorisation non transférable;
+- fichiers soumis par une organisation externe sans droit de republication clair;
+- jeux de données dont la licence, la source ou la date d'accès ne peuvent pas être documentées.
+
+## Attendu dans les remises
+
+Pour un laboratoire ou un défi, la trace minimale est courte: source, date d'accès, script reproductible et limite principale.
+
+Pour le portfolio et le projet, la fiche de provenance doit être complète. Elle doit permettre à une autre personne de retrouver la source, de comprendre les transformations effectuées et de juger si l'usage est compatible avec les droits déclarés.

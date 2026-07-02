@@ -1,5 +1,5 @@
 ---
-title: "Deploiement et mise en production - Ressources"
+title: "Déploiement et mise en production - Ressources"
 format:
   html:
     embed-resources: true
@@ -10,8 +10,8 @@ format:
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
-- [Defi](defi.qmd)
-- [Projet d'equipe](../../projets.qmd)
+- [Défi de module](defi.qmd)
+- [Projet d'équipe](../../projets.qmd)
 - [Portfolio GitHub individuel](../../portfolio.qmd)
 
 ## Documentation officielle
@@ -26,21 +26,21 @@ format:
 
 - Le README indique le but du livrable.
 - La commande principale est explicite.
-- Les dependances sont indiquees.
-- Les donnees requises sont citees ou decrites.
-- Les sorties attendues sont nommees.
+- Les dépendances sont indiquées.
+- Les données requises sont citées ou décrites.
+- Les sorties attendues sont nommées.
 - Les chemins sont relatifs.
-- Les donnees privees restent hors du depot public.
-- Une limite de deploiement est ecrite.
+- Les données privées restent hors du dépôt public.
+- Une limite de déploiement est écrite.
 
-## Erreurs frequentes
+## Erreurs fréquentes
 
 - Oublier qu'un objet existe seulement dans la console locale.
 - Utiliser un chemin absolu.
-- Ne pas creer le dossier de sortie avant d'ecrire un fichier.
-- Oublier de nommer un package utilise dans le code.
-- Publier une donnee qui ne devrait pas etre publique.
-- Confondre "le rapport HTML existe" et "le projet peut etre reproduit".
+- Ne pas créer le dossier de sortie avant d'écrire un fichier.
+- Oublier de nommer un package utilisé dans le code.
+- Publier une donnée qui ne devrait pas être publique.
+- Confondre "le rapport HTML existe" et "le projet peut être reproduit".
 
 ## Commandes utiles
 
@@ -51,11 +51,11 @@ renv::restore()
 # Rendre un rapport Quarto depuis R
 quarto::quarto_render("reports/rapport.qmd")
 
-# Executer un script depuis la racine du depot
+# Exécuter un script depuis la racine du dépôt
 source("scripts/verifier_reproduction.R")
 ```
 
-Si le package `quarto` n'est pas installe dans R, le rendu peut aussi etre lance depuis le terminal:
+Si le package `quarto` n'est pas installé dans R, le rendu peut aussi être lancé depuis le terminal:
 
 ```bash
 quarto render reports/rapport.qmd

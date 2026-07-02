@@ -101,6 +101,15 @@ Un gabarit est disponible dans [gabarits/declaration-ia.qmd](gabarits/declaratio
 
 La personne qui remet un travail est responsable du code, des choix statistiques, des résultats, de la documentation et des limites. L’usage de l’IA ne transfère pas cette responsabilité.
 
-## À valider institutionnellement
+## Alignement institutionnel vérifié
 
-- Vérifier la politique institutionnelle applicable à l’automne 2026.
+Cette politique de cours est alignée avec les repères institutionnels publics disponibles au moment de la préparation de la version v1.
+
+La page institutionnelle de l’Université Laval sur l’IA dans les études indique que l’usage de l’IA doit être autorisé explicitement par la personne responsable du cours, que l’usage doit être transparent, que les contenus confidentiels ou soumis au droit d’auteur ne doivent pas être transmis à un outil d’IA, et que la personne étudiante demeure responsable de vérifier les résultats obtenus.
+
+Le document institutionnel _Principes directeurs concernant l’intelligence artificielle à l’Université Laval_ précise que ces principes guident la réflexion et ne remplacent pas les règlements applicables. Il met l’accent sur la prudence, l’intégrité, la transparence, la protection des renseignements confidentiels, le respect du droit d’auteur et la clarification des attentes dans les plans de cours et les consignes d’évaluation.
+
+Sources:
+
+- [Université Laval, IA dans les études](https://www.ulaval.ca/technologies-de-linformation/systemes-dintelligence-artificielle/ia-etudes)
+- [Université Laval, Principes directeurs concernant l’intelligence artificielle à l’Université Laval, 2025](https://www.enseigner.ulaval.ca/system/files/public/numerique/intelligence-articielle/principes-directeurs.pdf)

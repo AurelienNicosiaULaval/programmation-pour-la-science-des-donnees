@@ -1,5 +1,5 @@
 ---
-title: "Modeles d'apprentissage automatique - Apres la classe"
+title: "Modèles d'apprentissage automatique - Après la classe"
 format:
   html:
     embed-resources: true
@@ -7,42 +7,42 @@ format:
 
 ## Objectif de consolidation
 
-Stabiliser la trace de modelisation et verifier qu'elle reste comprehensible sans explication orale.
+Stabiliser la trace de modélisation et vérifier qu'elle reste compréhensible sans explication orale.
 
-## A faire
+## À faire
 
-- Relancer le script de modelisation dans une session R propre.
-- Verifier que le script ne depend pas d'objets crees manuellement dans la console.
-- Ajouter ou corriger la note de modelisation.
-- Verifier que la comparaison avec la reference simple est presente.
-- Mettre a jour le README ou le journal du portfolio si le fichier ajoute une nouvelle dependance.
-- Declarer l'usage significatif de l'IA si necessaire.
+- Relancer le script de modélisation dans une session R propre.
+- Vérifier que le script ne dépend pas d'objets créés manuellement dans la console.
+- Ajouter ou corriger la note de modélisation.
+- Vérifier que la comparaison avec la référence simple est présente.
+- Mettre à jour le README ou le journal du portfolio si le fichier ajoute une nouvelle dépendance.
+- Déclarer l'usage significatif de l'IA si nécessaire.
 
-## Verification finale
+## Vérification finale
 
-La note doit permettre de repondre a ces questions:
+La note doit permettre de répondre à ces questions:
 
-- Quelle question le modele essaie-t-il de traiter?
-- Quelles donnees ont ete utilisees?
-- Comment la performance a-t-elle ete evaluee?
-- Le modele fait-il mieux qu'une reference simple?
+- Quelle question le modèle essaie-t-il de traiter?
+- Quelles données ont été utilisées?
+- Comment la performance a-t-elle été évaluée?
+- Le modèle fait-il mieux qu'une référence simple?
 - Quelles conclusions seraient abusives?
 
-## Reflexion courte
+## Réflexion courte
 
-Repondre dans le journal du portfolio:
+Répondre dans le journal du portfolio:
 
-- Quelle etape de la modelisation est la plus fragile?
-- Quelle verification devrait etre refaite avec plus de donnees?
-- Quelle decision technique faut-il expliquer a une personne non specialiste?
+- Quelle étape de la modélisation est la plus fragile?
+- Quelle vérification devrait être refaite avec plus de données?
+- Quelle décision technique faut-il expliquer à une personne non spécialiste?
 
-## Preparation du module suivant
+## Préparation du module suivant
 
-Pour le module sur le cycle de vie des modeles, conserver:
+Pour le module sur le cycle de vie des modèles, conserver:
 
 - le script;
 - la note de limites;
 - la mesure de performance;
-- le commit associe.
+- le commit associé.
 
-Ces elements serviront a creer une fiche de suivi de modele.
+Ces éléments serviront à créer une fiche de suivi de modèle.

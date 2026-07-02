@@ -7,6 +7,21 @@ format:
 
 Cette page explique comment utiliser le site et se préparer au cours.
 
+## Avant la première séance
+
+Préparer l’environnement suivant avant ou pendant le premier laboratoire:
+
+| Outil | Attendu minimal | Vérification |
+|---|---|---|
+| R | Version récente installée localement | `R --version` ou ouverture dans l’interface choisie |
+| Quarto | Installation fonctionnelle pour rendre un document | `quarto --version` |
+| Git | Commandes de base disponibles | `git --version` |
+| GitHub | Compte actif et accès au dépôt demandé | connexion au site GitHub |
+| SSH GitHub | Clé SSH configurée lorsque possible | `ssh -T git@github.com` |
+| Interface R | Positron ou RStudio | ouverture d’un projet R |
+
+Si une étape bloque, noter le message exact et consulter [Soutien technique](soutien-technique.qmd).
+
 ## Utiliser le site
 
 Commencer par lire la page du module de la semaine. Chaque module indique quoi faire avant, pendant et après la séance.
@@ -25,6 +40,39 @@ Avant la séance:
 
 Chaque personne doit travailler dans son dépôt personnel lorsque demandé. Les commits doivent être fréquents et lisibles.
 
+Exemple de dépôt cloné avec SSH:
+
+```bash
+git clone git@github.com:utilisateur/portfolio-stt4230.git
+cd portfolio-stt4230
+git status
+```
+
+La configuration SSH évite de manipuler des mots de passe ou jetons dans les scripts. Elle doit être testée avant les remises.
+
+## Vérification locale minimale
+
+Dans le dépôt de travail, vérifier que les commandes suivantes fonctionnent:
+
+```bash
+pwd
+git status
+R --version
+quarto --version
+```
+
+Dans R, vérifier aussi que les bibliothèques nécessaires peuvent être installées ou chargées:
+
+```r
+library(tidyverse)
+```
+
+Si un projet contient un fichier `renv.lock`, relancer l’environnement avec:
+
+```r
+renv::restore()
+```
+
 ## Remises
 
 Les consignes préciseront le format exact: lien GitHub, fichier rendu, pull request, issue, rapport Quarto ou autre livrable.
@@ -32,6 +80,13 @@ Les consignes préciseront le format exact: lien GitHub, fichier rendu, pull req
 ## Portfolio
 
 Le portfolio est mis à jour chaque semaine. Il doit contenir les traces du travail, pas seulement les résultats finaux.
+
+Une entrée hebdomadaire minimale contient généralement:
+
+- un fichier de code, rapport ou note technique;
+- une courte explication de ce qui a été tenté et vérifié;
+- des commits lisibles;
+- une déclaration IA lorsque le statut de l’activité le demande.
 
 ## IA
 

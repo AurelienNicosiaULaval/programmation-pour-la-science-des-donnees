@@ -31,7 +31,9 @@ Ce module se situe en fin de session. Il relie modélisation, reproductibilité,
 
 ## Place de l’IA
 
-Statut prévu: permise, déclarée lorsque l’IA influence le diagnostic, la documentation, la vérification ou l’interprétation.
+Statut : **IA permise, déclarée** (Niveau 2).
+
+Tout usage significatif qui influence le diagnostic, la documentation, la vérification ou l’interprétation doit être documenté dans `docs/ai-log.md`.
 
 ## Pages du module
 
@@ -39,6 +41,6 @@ Statut prévu: permise, déclarée lorsque l’IA influence le diagnostic, la do
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
 - [Après la classe](apres.qmd)
-- [Défi](defi.qmd)
+- [Défi de module](defi.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)

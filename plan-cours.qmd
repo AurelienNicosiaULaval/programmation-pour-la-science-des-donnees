@@ -7,7 +7,7 @@ format:
 
 Cette page sert de point d’ancrage pour le plan de cours officiel. Elle doit être synchronisée avec la version déposée dans les systèmes institutionnels.
 
-Statut provisoire: pour l’instant, cette page stabilise seulement les modules et les évaluations. Les éléments institutionnels, les dates officielles et les modalités détaillées seront complétés à la fin du développement du cours.
+Statut v1: le scénario pédagogique, les évaluations et les repères calendaires de l’automne 2026 sont stabilisés. Les éléments propres à la version institutionnelle finale qui ne sont pas encore confirmés demeurent indiqués explicitement à confirmer.
 
 ## Description officielle
 
@@ -16,6 +16,26 @@ Bonnes pratiques de codage et gestion du versionnage du code. Manipulation et ge
 ## Préalable
 
 STT-1100 ou IFT-4902.
+
+## Repères institutionnels vérifiés
+
+Les dates suivantes proviennent du calendrier universitaire 2026-2027 de l’Université Laval.
+
+| Repère | Date |
+|---|---|
+| Début de la session d’automne 2026 | 31 août 2026 |
+| Début des cours | 31 août 2026 |
+| Congé de la fête du Travail | 7 septembre 2026 |
+| Date limite de modification du choix de cours | 8 septembre 2026 |
+| Date limite d’abandon avec remboursement | 14 septembre 2026 |
+| Congé de l’Action de grâce | 12 octobre 2026 |
+| Semaine de lecture | 26 au 30 octobre 2026 |
+| Date limite d’abandon sans échec et sans remboursement | 9 novembre 2026 |
+| Fête de l’Université | 8 décembre 2026 |
+| Fin de la session | 11 décembre 2026 |
+| Période réservée aux examens | 14 au 20 décembre 2026 |
+
+Source: [Calendrier universitaire 2026-2027, Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf).
 
 ## Objectif général
 
@@ -68,10 +88,16 @@ La structure suivante est retenue comme plan final d’évaluation.
 
 Les critères détaillés, les consignes et les différences entre STT-4230 et STT-6230 sont regroupés dans la page [Évaluations](evaluations.qmd).
 
-## Éléments à finaliser pour la version institutionnelle
+## Modalités de remise
 
-- Modalités institutionnelles.
-- Règles de retard.
-- Disponibilités de l’équipe enseignante.
-- Dates officielles.
-- Version finale du plan de cours.
+Les remises mobilisent les traces suivantes selon l’évaluation: lien vers un dépôt GitHub, identifiant de commit, fichier Quarto rendu, rapport, note de conception, test ou entrée de portfolio. La page [Évaluations](evaluations.qmd) précise les traces attendues pour chaque composante.
+
+Les exemples de dépôts GitHub du cours utilisent des URL SSH. Les remises publiques ne doivent pas contenir de données confidentielles, nominatives ou non autorisées.
+
+## Éléments à confirmer pour la version institutionnelle finale
+
+- plateforme exacte de remise dans l’environnement institutionnel;
+- règles de retard et pénalités applicables;
+- noms, coordonnées et disponibilités de l’équipe enseignante;
+- date et plage horaire exacte de la présentation finale si elle est placée dans la période réservée aux examens;
+- version finale déposée dans les systèmes institutionnels.

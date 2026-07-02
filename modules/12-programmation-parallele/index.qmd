@@ -38,11 +38,12 @@ Ce module fait suite au profilage de code. Après avoir appris à mesurer et opt
 | Avant la classe | [Avant la classe](avant.qmd) | Lire les concepts de futurs et d'itérations parallèles et faire le mini-test |
 | Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos de plans de calcul, de surcharge mémoire et de reproductibilité |
 | Laboratoire | [Laboratoire](laboratoire.qmd) | Paralléliser une simulation bootstrap lourde et valider sa reproductibilité |
-| Après la classe | [Après la classe (Défi)](defi.qmd) | Adapter une tâche de votre projet ou portfolio à une exécution parallèle documentée |
+| Défi de module | [Défi de module](defi.qmd) | Adapter une tâche à une exécution parallèle documentée |
+| Après la classe | [Après la classe](apres.qmd) | Déposer la trace portfolio: plan `future`, comparaison, reproductibilité et commit |
 
 ## Place de l’IA
 
-Statut : **IA permise avec déclaration** (Niveau 2).
+Statut : **IA permise, déclarée** (Niveau 2).
 
 L'IA peut vous aider à convertir une syntaxe d'itération complexe ou à comprendre un message d'erreur lié aux variables globales non exportées. Néanmoins, vous devez être capable de justifier la configuration de votre plan de calcul et de calculer le speedup théorique. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
@@ -55,6 +56,7 @@ Analyser théoriquement et empiriquement les limites d'accélération de votre s
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
-- [Après la classe (Défi)](defi.qmd)
+- [Défi de module](defi.qmd)
+- [Après la classe](apres.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)

@@ -41,11 +41,12 @@ Ces compétences vous permettront de collaborer efficacement et de livrer votre 
 | Avant la classe | [Avant la classe](avant.qmd) | Vérifier l'environnement de construction et faire le mini-test de préparation |
 | Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos de création, de documentation Roxygen2 et d'importations |
 | Laboratoire | [Laboratoire](laboratoire.qmd) | Construire et installer le package local `manhattan` muni de tests et de documentation |
-| Après la classe | [Après la classe (Défi)](defi.qmd) | Packager les fonctions de votre projet de session sous forme de package local testé |
+| Défi de module | [Défi de module](defi.qmd) | Packager une fonction de projet sous forme de package local testé |
+| Après la classe | [Après la classe](apres.qmd) | Déposer la trace finale: README, tests, documentation, bilan et commit |
 
 ## Place de l’IA
 
-Statut : **IA permise avec déclaration** (Niveau 2).
+Statut : **IA permise, déclarée** (Niveau 2).
 
 L'IA peut vous aider à rédiger des descriptions de fonctions au format `roxygen2` ou à structurer vos fichiers de tests. Cependant, vous devez être capable de résoudre par vous-même les problèmes de dépendances (comme l'oubli de déclarer un package importé dans la section `Imports` de DESCRIPTION) signalés par `devtools::check()`. Tout usage significatif doit être déclaré dans `docs/ai-log.md`.
 
@@ -58,6 +59,7 @@ Discuter de l'intérêt et de la mise en place d'une politique de **Continuous I
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
-- [Après la classe (Défi)](defi.qmd)
+- [Défi de module](defi.qmd)
+- [Après la classe](apres.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)

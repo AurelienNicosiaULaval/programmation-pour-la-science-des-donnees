@@ -39,7 +39,7 @@ C'est la compétence finale nécessaire pour structurer les livrables d'équipe 
 | Avant la classe | [Avant la classe](avant.qmd) | Comprendre les bases de Quarto et installer les outils requis |
 | Pendant la classe | [Pendant la classe](pendant.qmd) | Retour d'expérience sur RMarkdown vs Quarto |
 | Laboratoire | [Laboratoire](laboratoire.qmd) | Compiler un rapport complet sur le nettoyage et la visualisation de données |
-| Défi de module | [Défi](defi.qmd) | Enrichir le rapport avec du texte dynamique et la documentation du nettoyage |
+| Défi de module | [Défi de module](defi.qmd) | Enrichir le rapport avec du texte dynamique et la documentation du nettoyage |
 | Après la classe | [Après la classe](apres.qmd) | Vérifier le rendu, la reproductibilité et la trace portfolio |
 
 ## Place de l’IA
@@ -58,6 +58,6 @@ Rédiger une note technique de 150 à 250 mots comparant l'exportation au format
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
 - [Après la classe](apres.qmd)
-- [Défi](defi.qmd)
+- [Défi de module](defi.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)

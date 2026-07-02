@@ -29,6 +29,7 @@ Cette page regroupe les ressources utiles pour le cours.
 
 - [Cadrage pédagogique](cadrage.qmd)
 - [Démarrage](demarrage.qmd)
+- [Données autorisées](donnees.qmd)
 - [Dépendances R](dependances.qmd)
 - [Soutien technique](soutien-technique.qmd)
 - [Politique IA](ia.qmd)

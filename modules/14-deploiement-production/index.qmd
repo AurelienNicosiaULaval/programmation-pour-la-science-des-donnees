@@ -31,7 +31,9 @@ Ce module relie les apprentissages sur Git, Quarto, fonctions, performance et mo
 
 ## Place de l’IA
 
-Statut prévu: permise, déclarée lorsque l’IA influence la documentation, le code ou l’analyse des risques.
+Statut : **IA permise, déclarée** (Niveau 2).
+
+Tout usage significatif qui influence la documentation, le code ou l’analyse des risques doit être documenté dans `docs/ai-log.md`.
 
 ## Pages du module
 
@@ -39,6 +41,6 @@ Statut prévu: permise, déclarée lorsque l’IA influence la documentation, le
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
 - [Après la classe](apres.qmd)
-- [Défi](defi.qmd)
+- [Défi de module](defi.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)

@@ -1,0 +1,17 @@
+---
+title: "Grille d’évaluation du portfolio"
+embed-resources: true
+---
+
+Cette grille stabilise les critères du portfolio GitHub individuel. Le portfolio compte pour 20 points.
+
+| Critère | Points | Indicateurs |
+|---|---:|---|
+| Régularité et progression | 4 | traces réparties dans le temps, commits significatifs, reprises visibles |
+| Organisation du dépôt | 4 | README clair, dossiers cohérents, fichiers nommés de façon compréhensible |
+| Reproductibilité | 4 | chemins relatifs, dépendances documentées, scripts relançables, usage pertinent de `renv` |
+| Qualité du code et validation | 4 | code lisible, fonctions lorsque pertinent, tests, diagnostics ou contrôles de cohérence |
+| Réflexion et transparence IA | 4 | notes sur les difficultés, décisions, limites, bilan final et `ai-log.md` lorsque nécessaire |
+| Total | 20 |  |
+
+Pour STT-6230, au moins une trace avancée est attendue: note technique courte, comparaison d’approches, validation plus formelle, analyse de performance ou discussion approfondie des limites.

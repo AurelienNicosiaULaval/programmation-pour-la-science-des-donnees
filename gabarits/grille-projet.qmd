@@ -1,0 +1,19 @@
+---
+title: "Grille d’évaluation du projet"
+embed-resources: true
+---
+
+Cette grille stabilise les critères du projet filé en équipe. Le projet compte pour 30 points.
+
+| Critère | Points | Indicateurs |
+|---|---:|---|
+| Proposition de la semaine 6 | 4 | sujet, question, source de données, portée, risques et dépôt initial |
+| Version intermédiaire de la semaine 12 | 6 | pipeline partiel, rapport ou tableau de bord partiel, validations initiales, contributions visibles |
+| Pipeline de données et reproductibilité | 6 | importation, nettoyage, dépendances, chemins relatifs, relance documentée |
+| Produit final | 7 | analyse, visualisations, rapport Quarto, tableau de bord ou application légère |
+| Validation, limites et jugement | 3 | tests, contrôles de cohérence, interprétation prudente, limites nommées |
+| Collaboration et traces individuelles | 3 | issues, commits, pull requests, `docs/contributions.md`, contribution vérifiable |
+| Transparence IA et documentation finale | 1 | `docs/ai-log.md`, README et documentation de reproduction |
+| Total | 30 |  |
+
+Pour STT-6230, `docs/note-technique-stt6230.md` est obligatoire. Son absence limite l’accès aux points liés à la validation, aux limites, au jugement et à la documentation finale.

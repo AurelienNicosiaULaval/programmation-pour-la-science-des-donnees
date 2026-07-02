@@ -37,11 +37,12 @@ Ce module marque le passage de l'analyse exploratoire interactive à la programm
 | Avant la classe | [Avant la classe](avant.qmd) | Réviser la portée lexicale, les fonctions de base R et faire le mini-test |
 | Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos d'environnements, de scoping et de débogage avec `browser()` |
 | Laboratoire | [Laboratoire](laboratoire.qmd) | Écrire une fonction robuste, y ajouter des tests unitaires, et automatiser des calculs avec `purrr::map()` |
-| Après la classe | [Après la classe (Défi)](defi.qmd) | Finaliser la refactorisation de votre code répétitif dans le portfolio |
+| Défi de module | [Défi de module](defi.qmd) | Refactoriser un code répétitif en fonctions testées |
+| Après la classe | [Après la classe](apres.qmd) | Déposer la trace portfolio: fonction, test minimal, note de vérification et commit |
 
 ## Place de l’IA
 
-Statut : **IA permise avec déclaration** (Niveau 2).
+Statut : **IA permise, déclarée** (Niveau 2).
 
 L'IA peut vous aider à générer des cas de tests unitaires ou à comprendre une erreur de syntaxe avec `purrr`. Néanmoins, vous devez être capable de tracer l'environnement englobant de vos fonctions et de justifier le choix de la variante de `map()` utilisée (ex: `map_dbl` vs `map`). Tout usage significatif de l'IA doit être documenté dans `docs/ai-log.md` ou dans le journal de bord.
 
@@ -54,6 +55,7 @@ Comparer l'utilisation de `purrr::map()` avec le calcul parallèle via le packag
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
-- [Après la classe (Défi)](defi.qmd)
+- [Défi de module](defi.qmd)
+- [Après la classe](apres.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)

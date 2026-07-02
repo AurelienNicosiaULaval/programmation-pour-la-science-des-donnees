@@ -19,6 +19,8 @@ Le portfolio GitHub individuel est construit progressivement pendant la session.
 
 Le portfolio n’est pas un dossier assemblé à la fin de la session. Il doit montrer une progression réelle dans le temps.
 
+Grille détaillée: [Grille d’évaluation du portfolio](gabarits/grille-portfolio.qmd).
+
 ## Rôle du portfolio
 
 - Conserver les traces hebdomadaires du cours.
@@ -90,6 +92,8 @@ La courte note explicative peut indiquer:
 | `data/` | Séparer données brutes et données traitées lorsque des données sont utilisées |
 
 `renv.lock` est attendu lorsque le portfolio contient du code R dont les dépendances doivent être relancées de façon fiable. Si le fichier n’est pas encore pertinent à un jalon donné, le README doit expliquer comment les dépendances sont gérées.
+
+Les données utilisées dans le portfolio doivent respecter les règles de provenance et de droit d’usage indiquées dans [Données autorisées](donnees.qmd).
 
 ## README
 

@@ -70,6 +70,15 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 | Défi 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
 | Revue de code, présentation et bilan final | Pull request ou issue, commentaire de revue, support de présentation, démonstration, bilan individuel, contributions vérifiables |
 
+## Grilles détaillées
+
+Les grilles suivantes stabilisent les critères utilisés pour la version v1:
+
+- [Grille du portfolio](gabarits/grille-portfolio.qmd)
+- [Grille du projet](gabarits/grille-projet.qmd)
+- [Grille des défis techniques](gabarits/grille-defis-techniques.qmd)
+- [Grille de la présentation et du bilan final](gabarits/grille-presentation-bilan.qmd)
+
 ## Trace hebdomadaire du portfolio
 
 Chaque semaine, l’étudiante ou l’étudiant ajoute au minimum:
@@ -137,4 +146,4 @@ Cette composante combine une revue de code, une présentation du produit et un b
 
 STT-4230 exige des livrables fonctionnels, reproductibles, bien structurés et documentés. STT-6230 ajoute une justification technique, une comparaison d’approches, des tests supplémentaires, une analyse de performance ou une note méthodologique courte selon le livrable.
 
-Consulter aussi les pages [Portfolio individuel](portfolio.qmd), [Projets](projets.qmd), [Défis techniques](defis.qmd), [Politique IA](ia.qmd) et [Revue de code, présentation et bilan final](presentation.qmd).
+Consulter aussi les pages [Portfolio individuel](portfolio.qmd), [Projets](projets.qmd), [Défis techniques](defis.qmd), [Données autorisées](donnees.qmd), [Politique IA](ia.qmd) et [Revue de code, présentation et bilan final](presentation.qmd).

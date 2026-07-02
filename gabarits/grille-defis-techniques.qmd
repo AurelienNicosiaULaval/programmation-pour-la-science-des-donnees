@@ -1,0 +1,18 @@
+---
+title: "Grille d’évaluation des défis techniques"
+embed-resources: true
+---
+
+Chaque défi technique compte pour 10 points. La grille commune ci-dessous est ajustée selon le statut IA du défi.
+
+| Critère | Points | Indicateurs |
+|---|---:|---|
+| Exactitude technique | 3 | résultat fonctionnel, consigne respectée, erreurs principales traitées |
+| Reproductibilité | 2 | fichiers présents, chemins relatifs, exécution possible dans le temps prévu |
+| Qualité du code | 2 | code lisible, structure minimale, choix proportionnés à la tâche |
+| Documentation et remise | 1 | README court, note de reproduction ou mini-rapport selon le défi |
+| Validation et explication | 1 | vérifications, tests simples, capacité à expliquer les décisions |
+| Respect du statut IA | 1 | aucune IA pour le défi 1, déclaration pour le défi 2, usage vérifié et documenté pour le défi 3 |
+| Total | 10 |  |
+
+Les fichiers exacts des défis évalués sont fournis au moment de l’évaluation. Ils ne sont pas publiés sur le site avant la séance.

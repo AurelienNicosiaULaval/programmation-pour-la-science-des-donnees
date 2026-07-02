@@ -7,6 +7,8 @@ format:
 
 Cette composante compte pour 10 % de la note finale. Elle combine une part d’équipe et une part individuelle. L’IA est permise et déclarée.
 
+Grille détaillée: [Grille d’évaluation de la présentation et du bilan final](gabarits/grille-presentation-bilan.qmd).
+
 ## Objectif
 
 Vérifier que l’équipe peut expliquer le produit livré, les choix techniques, les limites, les validations effectuées et les contributions individuelles.

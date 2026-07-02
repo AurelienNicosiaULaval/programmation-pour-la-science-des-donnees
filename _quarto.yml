@@ -23,6 +23,8 @@ website:
         href: plan-cours.qmd
       - text: "Calendrier"
         href: calendrier.qmd
+      - text: "Données"
+        href: donnees.qmd
       - text: "Modules"
         menu:
         - modules/01-structuration-projets/index.qmd
@@ -81,6 +83,10 @@ website:
         - defis.qmd
         - defis/preparation-defi-technique-1.qmd
         - presentation.qmd
+        - gabarits/grille-portfolio.qmd
+        - gabarits/grille-projet.qmd
+        - gabarits/grille-defis-techniques.qmd
+        - gabarits/grille-presentation-bilan.qmd
         - ia.qmd
     - id: ressources
       title: "Ressources"
@@ -88,6 +94,7 @@ website:
         - cadrage.qmd
         - roadmap.qmd
         - demarrage.qmd
+        - donnees.qmd
         - lectures.qmd
         - ressources.qmd
         - ressources/rattrapage-r-git-defi-1.qmd

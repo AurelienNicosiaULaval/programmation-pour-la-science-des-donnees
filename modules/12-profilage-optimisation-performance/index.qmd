@@ -40,11 +40,12 @@ Ce module pose les bases requises pour aborder la programmation parallèle et as
 | Avant la classe | [Avant la classe](avant.qmd) | Découvrir les outils `bench` et `profvis` et répondre au mini-test de préparation |
 | Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos de profilage de code réel et de réallocations mémoire |
 | Laboratoire | [Laboratoire](laboratoire.qmd) | Profiler et optimiser une fonction lente de simulation de marche aléatoire |
-| Après la classe | [Après la classe (Défi)](defi.qmd) | Choisir un script de votre projet ou d'un lab passé, le profiler et l'optimiser |
+| Défi de module | [Défi de module](defi.qmd) | Profiler un script et justifier une optimisation mesurée |
+| Après la classe | [Après la classe](apres.qmd) | Déposer la trace portfolio: benchmark, comparaison avant/après, limite et commit |
 
 ## Place de l’IA
 
-Statut : **IA permise avec déclaration** (Niveau 2).
+Statut : **IA permise, déclarée** (Niveau 2).
 
 L'IA peut vous aider à proposer des versions vectorisées de fonctions itératives complexes ou à expliquer une syntaxe `profvis`. Néanmoins, vous devez être capable de mener les mesures de benchmark vous-même et de justifier pourquoi la version optimisée est plus rapide (par exemple, en expliquant la réduction des allocations mémoire). Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
@@ -57,6 +58,7 @@ Analyser l'impact de la compilation à la volée (Byte-Code Compiler, package `c
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
-- [Après la classe (Défi)](defi.qmd)
+- [Défi de module](defi.qmd)
+- [Après la classe](apres.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)

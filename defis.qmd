@@ -9,6 +9,8 @@ Les défis techniques sont des évaluations individuelles réalisées en laborat
 
 Chaque défi technique dure environ une heure. Le reste de la séance demeure un atelier d’apprentissage, de consolidation ou de transfert vers le portfolio et le projet. Une fois le défi remis, le livrable évalué n’est plus modifié.
 
+Grille détaillée: [Grille d’évaluation des défis techniques](gabarits/grille-defis-techniques.qmd).
+
 ## Vue d’ensemble
 
 | Défi | Semaine | Poids | Rôle | IA |
@@ -94,3 +96,5 @@ Après la remise, le reste de la séance sert à faire un post-mortem technique:
 - Documentation minimale.
 - Respect du statut d’IA.
 - Capacité à expliquer les décisions.
+
+Les données et fichiers exacts des défis évalués sont fournis au moment prévu par l’équipe enseignante. Les jeux de données publics utilisés pour l’entraînement doivent respecter les règles de [Données autorisées](donnees.qmd).

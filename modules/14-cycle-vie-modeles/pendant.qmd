@@ -1,87 +1,87 @@
 ---
-title: "Cycle de vie des modeles - Pendant la classe"
+title: "Cycle de vie des modèles - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de la seance
+## Objectif de la séance
 
-Transformer une analyse de modelisation en fiche de suivi: contexte, donnees, version du code, validation, limites, risques et prochaine verification.
+Transformer une analyse de modélisation en fiche de suivi: contexte, données, version du code, validation, limites, risques et prochaine vérification.
 
-## Deroulement propose
+## Déroulement proposé
 
-| Moment | Activite | Resultat attendu |
+| Moment | Activité | Résultat attendu |
 |---:|---|---|
-| 0-15 min | Retour sur la preparation | Identifier les informations minimales a suivre |
-| 15-35 min | Demonstration courte | Montrer une fiche incomplete et la corriger |
-| 35-75 min | Travail individuel | Remplir une premiere fiche de suivi |
-| 75-105 min | Revue en duo | Verifier donnees, version du code, validation et limites |
-| 105-135 min | Discussion de risques | Repérer derive, usage hors contexte et donnees manquantes |
-| 135-165 min | Correction | Ajouter une verification future et une responsabilite de maintenance |
-| 165-180 min | Synthese | Committer la fiche et noter la prochaine action |
+| 0-15 min | Retour sur la préparation | Identifier les informations minimales à suivre |
+| 15-35 min | Démonstration courte | Montrer une fiche incomplète et la corriger |
+| 35-75 min | Travail individuel | Remplir une première fiche de suivi |
+| 75-105 min | Revue en duo | Vérifier données, version du code, validation et limites |
+| 105-135 min | Discussion de risques | Repérer dérive, usage hors contexte et données manquantes |
+| 135-165 min | Correction | Ajouter une vérification future et une responsabilité de maintenance |
+| 165-180 min | Synthèse | Committer la fiche et noter la prochaine action |
 
-## Demonstration courte
+## Démonstration courte
 
-Presenter une fiche de suivi volontairement incomplete:
+Présenter une fiche de suivi volontairement incomplète:
 
-- modele sans version du code;
-- donnees de depart non identifiees;
-- performance indiquee sans contexte d'evaluation;
+- modèle sans version du code;
+- données de départ non identifiées;
+- performance indiquée sans contexte d'évaluation;
 - aucune limite d'utilisation;
-- aucune verification future.
+- aucune vérification future.
 
-Corriger la fiche en direct pour montrer que la documentation fait partie du modele, pas seulement du rapport final.
+Corriger la fiche en direct pour montrer que la documentation fait partie du modèle, pas seulement du rapport final.
 
 ## Structure minimale de la fiche
 
 La fiche peut tenir dans `docs/fiche-suivi-modele.md`.
 
 ```markdown
-# Fiche de suivi du modele
+# Fiche de suivi du modèle
 
 ## Objectif
 
-## Donnees utilisees
+## Données utilisées
 
 ## Version du code
 
-## Methode et parametres principaux
+## Méthode et paramètres principaux
 
-## Validation effectuee
+## Validation effectuée
 
-## Performance observee
+## Performance observée
 
 ## Limites d'utilisation
 
-## Risques de derive ou de mauvaise utilisation
+## Risques de dérive ou de mauvaise utilisation
 
-## Verification future
+## Vérification future
 
 ## Responsable ou prochaine action
 ```
 
-## Points de controle
+## Points de contrôle
 
-- La fiche renvoie a un commit, une version ou une date.
-- Les donnees utilisees sont identifiables.
-- La validation est decrite, pas seulement chiffree.
-- Les limites sont concretes.
-- Une verification future est prevue.
-- L'usage significatif de l'IA est declare si l'IA a aide a documenter, corriger ou interpreter le modele.
+- La fiche renvoie à un commit, une version ou une date.
+- Les données utilisées sont identifiables.
+- La validation est décrite, pas seulement chiffrée.
+- Les limites sont concrètes.
+- Une vérification future est prévue.
+- L'usage significatif de l'IA est déclaré si l'IA a aidé à documenter, corriger ou interpréter le modèle.
 
 ## Revue en duo
 
-La personne qui relit doit pouvoir repondre:
+La personne qui relit doit pouvoir répondre:
 
-- Est-ce que je sais quelles donnees ont produit ce modele?
-- Est-ce que je sais quelle version du code a ete utilisee?
-- Est-ce que je comprends la performance annoncee?
-- Est-ce que je vois un usage qui serait risque?
-- Est-ce que je sais quoi reverifier plus tard?
+- Est-ce que je sais quelles données ont produit ce modèle?
+- Est-ce que je sais quelle version du code a été utilisée?
+- Est-ce que je comprends la performance annoncée?
+- Est-ce que je vois un usage qui serait risqué?
+- Est-ce que je sais quoi revérifier plus tard?
 
-## Synthese de fin de seance
+## Synthèse de fin de séance
 
 Terminer avec une phrase de ce type:
 
-> Le modele peut etre reutilise seulement si ..., et il devrait etre reverifie lorsque ...
+> Le modèle peut être réutilisé seulement si ..., et il devrait être revérifié lorsque ...

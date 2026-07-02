@@ -1,53 +1,53 @@
 ---
-title: "Modeles d'apprentissage automatique - Pendant la classe"
+title: "Modèles d'apprentissage automatique - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de la seance
+## Objectif de la séance
 
-Construire un pipeline de modelisation minimal, puis verifier que la performance annoncee correspond a une evaluation defendable.
+Construire un pipeline de modélisation minimal, puis vérifier que la performance annoncée correspond à une évaluation défendable.
 
-## Deroulement propose
+## Déroulement proposé
 
-| Moment | Activite | Resultat attendu |
+| Moment | Activité | Résultat attendu |
 |---:|---|---|
-| 0-15 min | Retour sur le mini-test | Distinguer cible, variables explicatives, entrainement et evaluation |
-| 15-35 min | Demonstration courte | Montrer une fuite de donnees simple et ses consequences |
-| 35-80 min | Laboratoire guide | Ajuster un modele, produire des predictions et calculer une mesure d'erreur |
-| 80-105 min | Revue en duo | Relire la strategie de validation et la note de limites |
-| 105-135 min | Amelioration ciblee | Comparer le modele a une reference simple |
-| 135-160 min | Trace portfolio | Committer le script et la note de modelisation |
-| 160-180 min | Synthese | Identifier ce qui manque pour rendre le modele reutilisable |
+| 0-15 min | Retour sur le mini-test | Distinguer cible, variables explicatives, entraînement et évaluation |
+| 15-35 min | Démonstration courte | Montrer une fuite de données simple et ses conséquences |
+| 35-80 min | Laboratoire guidé | Ajuster un modèle, produire des prédictions et calculer une mesure d'erreur |
+| 80-105 min | Revue en duo | Relire la stratégie de validation et la note de limites |
+| 105-135 min | Amélioration ciblée | Comparer le modèle à une référence simple |
+| 135-160 min | Trace portfolio | Committer le script et la note de modélisation |
+| 160-180 min | Synthèse | Identifier ce qui manque pour rendre le modèle réutilisable |
 
-## Demonstration courte
+## Démonstration courte
 
-Montrer deux versions d'une evaluation:
+Montrer deux versions d'une évaluation:
 
-1. ajuster et evaluer le modele sur toutes les donnees;
-2. separer les donnees avant l'ajustement et evaluer sur une partie tenue a l'ecart.
+1. ajuster et évaluer le modèle sur toutes les données;
+2. séparer les données avant l'ajustement et évaluer sur une partie tenue à l'écart.
 
-La discussion doit faire ressortir que la seconde version est moins confortable, mais plus honnete.
+La discussion doit faire ressortir que la seconde version est moins confortable, mais plus honnête.
 
-## Points de controle
+## Points de contrôle
 
 - La variable cible est explicite.
-- Les donnees d'evaluation ne sont pas utilisees pour ajuster le modele.
-- La mesure de performance est calculee par code, pas estimee a l'oeil.
-- Une reference simple est fournie pour interpreter la performance.
-- Les limites sont ecrites dans le depot.
-- L'usage significatif de l'IA est declare si une aide a influence le code ou l'interpretation.
+- Les données d'évaluation ne sont pas utilisées pour ajuster le modèle.
+- La mesure de performance est calculée par code, pas estimée à l'oeil.
+- Une référence simple est fournie pour interpréter la performance.
+- Les limites sont écrites dans le dépôt.
+- L'usage significatif de l'IA est déclaré si une aide a influencé le code ou l'interprétation.
 
 ## Questions de revue en duo
 
-- Le script peut-il etre relance depuis la racine du depot?
-- Une autre personne peut-elle trouver ou la separation des donnees est faite?
-- La note indique-t-elle ce que le modele ne permet pas de conclure?
-- Le README ou le journal indique-t-il les packages necessaires?
+- Le script peut-il être relancé depuis la racine du dépôt?
+- Une autre personne peut-elle trouver où la séparation des données est faite?
+- La note indique-t-elle ce que le modèle ne permet pas de conclure?
+- Le README ou le journal indique-t-il les packages nécessaires?
 
-## Synthese de fin de seance
+## Synthèse de fin de séance
 
 Chaque personne termine avec une phrase de ce type:
 
-> Le modele est utilisable pour ..., mais il reste fragile parce que ...
+> Le modèle est utilisable pour ..., mais il reste fragile parce que ...

@@ -40,7 +40,7 @@ Les concepts vus cette semaine seront appliqués immédiatement pour la **Propos
 | Avant la classe | [Avant la classe](avant.qmd) | Lire les concepts de base et exécuter les exemples |
 | Pendant la classe | [Pendant la classe](pendant.qmd) | Observer une démonstration et clarifier les difficultés |
 | Laboratoire | [Laboratoire](laboratoire.qmd) | Produire un graphique sur les séismes avec des proportions calculées |
-| Défi de module | [Défi](defi.qmd) | Créer une figure propre et documenter les choix de conception |
+| Défi de module | [Défi de module](defi.qmd) | Créer une figure propre et documenter les choix de conception |
 | Après la classe | [Après la classe](apres.qmd) | Vérifier la figure, la note de conception et la trace portfolio |
 
 ## Place de l’IA
@@ -59,6 +59,6 @@ Comparer l'utilisation de `after_stat()` de `ggplot2` avec la méthode manuelle 
 - [Pendant la classe](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
 - [Après la classe](apres.qmd)
-- [Défi](defi.qmd)
+- [Défi de module](defi.qmd)
 - [Lectures](lectures.qmd)
 - [Ressources](ressources.qmd)

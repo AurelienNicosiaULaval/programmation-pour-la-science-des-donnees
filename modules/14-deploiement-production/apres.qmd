@@ -1,5 +1,5 @@
 ---
-title: "Deploiement et mise en production - Apres la classe"
+title: "Déploiement et mise en production - Après la classe"
 format:
   html:
     embed-resources: true
@@ -7,41 +7,41 @@ format:
 
 ## Objectif de consolidation
 
-Verifier que la procedure de reproduction peut etre comprise et testee sans explication orale.
+Vérifier que la procédure de reproduction peut être comprise et testée sans explication orale.
 
-## A faire
+## À faire
 
 - Relire le README du point de vue d'une personne externe.
-- Redemarrer R et executer uniquement les commandes documentees.
+- Redémarrer R et exécuter uniquement les commandes documentées.
 - Corriger les chemins absolus, objets implicites ou dossiers manquants.
-- Verifier que les dependances sont nommees.
+- Vérifier que les dépendances sont nommées.
 - Ajouter une note de limites si elle manque.
-- Declarer l'usage significatif de l'IA si necessaire.
+- Déclarer l'usage significatif de l'IA si nécessaire.
 
-## Verification finale
+## Vérification finale
 
-La procedure est prete si une autre personne peut repondre a ces questions:
+La procédure est prête si une autre personne peut répondre à ces questions:
 
-- Quel livrable doit etre produit?
-- Quelle commande faut-il executer?
-- Quels packages ou fichiers sont necessaires?
-- Quelle sortie permet de savoir que l'execution a fonctionne?
-- Quelle limite empeche de parler d'une vraie mise en production?
+- Quel livrable doit être produit?
+- Quelle commande faut-il exécuter?
+- Quels packages ou fichiers sont nécessaires?
+- Quelle sortie permet de savoir que l'exécution a fonctionné?
+- Quelle limite empêche de parler d'une vraie mise en production?
 
-## Reflexion courte
+## Réflexion courte
 
-Repondre dans le journal:
+Répondre dans le journal:
 
-- Quelle etape etait implicite avant ce laboratoire?
+- Quelle étape était implicite avant ce laboratoire?
 - Quelle erreur serait la plus probable sur une autre machine?
-- Quelle verification ajouteriez-vous si le livrable devenait public?
+- Quelle vérification ajouteriez-vous si le livrable devenait public?
 
-## Preparation de la remise finale
+## Préparation de la remise finale
 
-Pour le projet d'equipe ou le portfolio final, conserver:
+Pour le projet d'équipe ou le portfolio final, conserver:
 
-- le README corrige;
-- le script de verification;
-- une sortie testee;
+- le README corrigé;
+- le script de vérification;
+- une sortie testée;
 - les limites;
-- le commit associe.
+- le commit associé.

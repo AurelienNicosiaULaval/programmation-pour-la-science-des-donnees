@@ -5,31 +5,47 @@ format:
     embed-resources: true
 ---
 
-Ce calendrier est une structure de travail. Les dates exactes doivent être ajustées lorsque le calendrier universitaire de l’automne 2026 sera confirmé.
+Ce calendrier v1 associe la progression du cours aux mercredis de l’automne 2026. Les repères institutionnels proviennent du [calendrier universitaire 2026-2027 de l’Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf).
 
-Les semaines sont indiquées de façon relative. Les mini-tests de préparation sont prévus les semaines sans défi technique, sauf ajustement selon le rythme réel du groupe.
+Les mini-tests de préparation sont prévus les semaines sans défi technique, sauf ajustement selon le rythme réel du groupe.
 
 Les défis techniques individuels occupent environ une heure de la séance. Le reste de la séance demeure un temps d’apprentissage: retour technique, consolidation, portfolio, projet ou atelier de transfert. Le travail fait après la remise du défi ne modifie pas le livrable évalué.
 
+La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance régulière n’est prévue cette semaine.
+
+## Autres repères institutionnels
+
+| Repère | Date |
+|---|---|
+| Date limite de modification du choix de cours | 8 septembre 2026 |
+| Date limite d’abandon avec remboursement | 14 septembre 2026 |
+| Congé lié aux élections provinciales | 5 octobre 2026 |
+| Congé de l’Action de grâce | 12 octobre 2026 |
+| Date limite d’abandon sans échec et sans remboursement | 9 novembre 2026 |
+| Fête de l’Université | 8 décembre 2026 |
+| Fin de la session | 11 décembre 2026 |
+| Période réservée aux examens | 14 au 20 décembre 2026 |
+
 ## Vue synthèse
 
-| Semaine | Thème | Préparation | Travail en laboratoire | Échéances et traces |
-|---:|---|---|---|---|
-| 1 | Mise en route | Fonctionnement du cours, environnement R, GitHub, portfolio | Diagnostic initial, installation, premiers repères | README initial et journal de départ |
-| 2 | Structure de projet, Git, GitHub | Workflow Git, chemins relatifs, conventions | Créer ou nettoyer un dépôt | Mini-test, structure et conventions |
-| 3 | Dépendances et reproductibilité | `renv`, `.gitignore`, chemins relatifs | Relancer un projet sur une autre machine ou session propre | Mini-test, jalon portfolio 1 |
-| 4 | Données et nettoyage | Importation, validation, tidy data, transformation, fichiers volumineux, SQL/API en aperçu | Construire un premier pipeline de données avec vérifications et assertions simples | Mini-test, pipeline de données et revue courte |
-| 5 | Défi technique 1 et consolidation | Révision projet, Git, importation, nettoyage simple | Défi individuel 1 h sans IA, puis atelier de consolidation Git, données et portfolio | Défi 1, aucune IA; atelier non évalué |
-| 6 | Visualisation | `ggplot2`, choix graphiques, communication visuelle | Produire et améliorer une figure | Mini-test, proposition du projet d’équipe |
-| 7 | Quarto et communication | Rapports reproductibles, narration et résultats | Compiler un rapport Quarto court | Mini-test, rapport Quarto et revue courte |
-| 8 | Défi technique 2 et consolidation | Fonctions, pipeline, visualisation, IA déclarée | Défi individuel 1 h, puis atelier sur validation et usage déclaré de l’IA | Défi 2, trace dans `ai-log.md`; atelier non évalué |
-| 9 | Consolidation | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test, jalon portfolio 2, point de suivi projet formatif |
-| 10 | Fonctions, `purrr` et tests | Fonctions, itérations, réduction du copier-coller, assertions, `testthat` | Transformer du code exploratoire en fonctions testables | Mini-test, fonction dans `R/`, test minimal |
-| 11 | POO et architecture | S3 ou R6 selon le choix final | Structurer des objets ou composants du projet | Mini-test, note POO ou architecture |
-| 12 | Optimisation et parallèle | Profilage, `future`, `furrr` | Mesurer, comparer, améliorer ou paralléliser | Mini-test, version intermédiaire du projet |
-| 13 | Défi technique 3 et consolidation | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis post-mortem technique sur tests, validation et limites | Défi 3, rapport technique et trace IA; atelier non évalué |
-| 14 | Modèle, pipeline, cycle de vie | `tidymodels`, `targets`, validation, suivi | Stabiliser le livrable final et la reproduction | Mini-test, remise finale projet, jalon portfolio 3 |
-| 15 | Package, documentation, démonstration finale | README final, tests, présentation, revue | Présentations, revue de code, discussion finale, vérification des tests | Présentation, revue de code, bilan final |
+| Semaine | Date | Thème | Préparation | Travail en laboratoire | Échéances et traces |
+|---:|---|---|---|---|---|
+| 1 | 2 septembre 2026 | Mise en route | Fonctionnement du cours, environnement R, GitHub, portfolio | Diagnostic initial, installation, premiers repères | README initial et journal de départ |
+| 2 | 9 septembre 2026 | Structure de projet, Git, GitHub | Workflow Git, chemins relatifs, conventions | Créer ou nettoyer un dépôt | Mini-test, structure et conventions |
+| 3 | 16 septembre 2026 | Dépendances et reproductibilité | `renv`, `.gitignore`, chemins relatifs | Relancer un projet sur une autre machine ou session propre | Mini-test, jalon portfolio 1 |
+| 4 | 23 septembre 2026 | Données et nettoyage | Importation, validation, tidy data, transformation, fichiers volumineux, SQL/API en aperçu | Construire un premier pipeline de données avec vérifications et assertions simples | Mini-test, pipeline de données et revue courte |
+| 5 | 30 septembre 2026 | Défi technique 1 et consolidation | Révision projet, Git, importation, nettoyage simple | Défi individuel 1 h sans IA, puis atelier de consolidation Git, données et portfolio | Défi 1, aucune IA; atelier non évalué |
+| 6 | 7 octobre 2026 | Visualisation | `ggplot2`, choix graphiques, communication visuelle | Produire et améliorer une figure | Mini-test, proposition du projet d’équipe |
+| 7 | 14 octobre 2026 | Quarto et communication | Rapports reproductibles, narration et résultats | Compiler un rapport Quarto court | Mini-test, rapport Quarto et revue courte |
+| 8 | 21 octobre 2026 | Défi technique 2 et consolidation | Fonctions, pipeline, visualisation, IA déclarée | Défi individuel 1 h, puis atelier sur validation et usage déclaré de l’IA | Défi 2, trace dans `ai-log.md`; atelier non évalué |
+| Relâche | 28 octobre 2026 | Semaine de lecture | Aucun mini-test régulier | Aucune séance régulière | Travail autonome et rattrapage |
+| 9 | 4 novembre 2026 | Consolidation | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test, jalon portfolio 2, point de suivi projet formatif |
+| 10 | 11 novembre 2026 | Fonctions, `purrr` et tests | Fonctions, itérations, réduction du copier-coller, assertions, `testthat` | Transformer du code exploratoire en fonctions testables | Mini-test, fonction dans `R/`, test minimal |
+| 11 | 18 novembre 2026 | POO et architecture | S3 ou R6 selon le choix final | Structurer des objets ou composants du projet | Mini-test, note POO ou architecture |
+| 12 | 25 novembre 2026 | Optimisation et parallèle | Profilage, `future`, `furrr` | Mesurer, comparer, améliorer ou paralléliser | Mini-test, version intermédiaire du projet |
+| 13 | 2 décembre 2026 | Défi technique 3 et consolidation | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis post-mortem technique sur tests, validation et limites | Défi 3, rapport technique et trace IA; atelier non évalué |
+| 14 | 9 décembre 2026 | Modèle, pipeline, cycle de vie | `tidymodels`, `targets`, validation, suivi | Stabiliser le livrable final et la reproduction | Mini-test, remise finale projet, jalon portfolio 3 |
+| 15 | À confirmer | Package, documentation, démonstration finale | README final, tests, présentation, revue | Présentations, revue de code, discussion finale, vérification des tests | Présentation, revue de code, bilan final |
 
 ## Jalons d’évaluation
 
@@ -45,13 +61,13 @@ Les défis techniques individuels occupent environ une heure de la séance. Le r
 | 13 | Défi technique 3 | Défi individuel | Jugement professionnel avec IA intégrée |
 | 14 | Remise finale du projet | Projet d’équipe | Produit final, reproduction, limites, contributions |
 | 14 | Jalon portfolio 3 | Portfolio individuel | Portfolio complet et bilan final |
-| 15 | Présentation, revue de code et bilan | Équipe + individuel | Démonstration, revue, défense, contribution |
+| À confirmer | Présentation, revue de code et bilan | Équipe + individuel | Démonstration, revue, défense, contribution |
 
 ## Mini-tests
 
 Les mini-tests servent à soutenir la préparation hebdomadaire. Ils sont courts et liés aux lectures ou gestes R à reproduire avant le laboratoire.
 
-| Semaines | Statut prévu |
+| Semaines | Statut v1 |
 |---|---|
 | 2, 3, 4 | Mini-tests réguliers |
 | 5 | Pas de mini-test prévu quand un défi technique est prévu |
@@ -71,7 +87,7 @@ Les mini-tests servent à soutenir la préparation hebdomadaire. Ils sont courts
 
 Les ateliers qui suivent les défis servent à apprendre à partir de tâches analogues, à consolider le portfolio ou à avancer le projet. Ils ne servent pas à modifier le livrable évalué.
 
-## Dates à confirmer
+## Dates et modalités à confirmer
 
-- Associer chaque semaine à une date.
-- Confirmer les semaines de revue de code selon le calendrier institutionnel.
+- La plage horaire exacte de la séance finale de présentation et de revue de code reste à confirmer avec l’horaire officiel.
+- Les règles de retard et la plateforme finale de remise seront celles du plan de cours institutionnel.

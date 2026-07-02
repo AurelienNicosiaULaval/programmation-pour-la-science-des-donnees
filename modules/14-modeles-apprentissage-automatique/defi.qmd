@@ -1,53 +1,53 @@
 ---
-title: "Modeles d'apprentissage automatique - Defi"
+title: "Modèles d'apprentissage automatique - Défi"
 format:
   html:
     embed-resources: true
 ---
 
-## Nature du defi
+## Nature du défi
 
-Ce defi de module sert a produire une trace de modelisation dans le portfolio. Il ne remplace pas les trois defis techniques notes du cours.
+Ce défi de module sert à produire une trace de modélisation dans le portfolio. Il ne remplace pas les trois défis techniques notés du cours.
 
 ## Objectif
 
-Construire un pipeline de modelisation minimal avec une evaluation defendable et une note de limites.
+Construire un pipeline de modélisation minimal avec une évaluation défendable et une note de limites.
 
 ## Consignes
 
-1. Choisir un jeu de donnees autorise ou un jeu de donnees simule.
-2. Formuler une question predictive.
+1. Choisir un jeu de données autorisé ou un jeu de données simulé.
+2. Formuler une question prédictive.
 3. Identifier la variable cible et les variables explicatives.
-4. Separer les donnees avant l'ajustement du modele.
-5. Ajuster un modele simple.
+4. Séparer les données avant l'ajustement du modèle.
+5. Ajuster un modèle simple.
 6. Calculer une mesure de performance.
-7. Comparer le modele a une reference simple.
-8. Rediger une note courte sur les limites.
+7. Comparer le modèle à une référence simple.
+8. Rédiger une note courte sur les limites.
 
 ## Livrable attendu
 
 - un script reproductible;
 - une note Quarto ou Markdown;
-- une mesure de performance calculee par code;
-- une comparaison avec une reference simple;
+- une mesure de performance calculée par code;
+- une comparaison avec une référence simple;
 - une trace Git lisible.
 
 ## Place de l'IA
 
-Statut: permise, declaree.
+Statut: permise, déclarée.
 
-L'IA peut aider a comprendre une erreur, proposer une structure de note ou suggerer une verification. Elle ne doit pas remplacer l'evaluation du modele. Toute aide significative qui influence le code, le choix de mesure ou l'interpretation doit etre documentee dans `docs/ai-log.md` ou dans le journal du portfolio.
+L'IA peut aider à comprendre une erreur, proposer une structure de note ou suggérer une vérification. Elle ne doit pas remplacer l'évaluation du modèle. Toute aide significative qui influence le code, le choix de mesure ou l'interprétation doit être documentée dans `docs/ai-log.md` ou dans le journal du portfolio.
 
-## Criteres de reussite
+## Critères de réussite
 
-- La question predictive est claire.
+- La question prédictive est claire.
 - La variable cible est explicite.
-- Les donnees d'evaluation ne sont pas utilisees pour entrainer le modele.
-- La mesure de performance est appropriee au type de cible.
-- La comparaison avec une reference simple est presente.
-- Les limites sont formulees avec prudence.
-- Le script peut etre relance depuis une session propre.
+- Les données d'évaluation ne sont pas utilisées pour entraîner le modèle.
+- La mesure de performance est appropriée au type de cible.
+- La comparaison avec une référence simple est présente.
+- Les limites sont formulées avec prudence.
+- Le script peut être relancé depuis une session propre.
 
 ## Variante STT-6230
 
-Ajouter une comparaison entre deux modeles ou deux strategies d'evaluation, puis expliquer laquelle vous retiendriez et pourquoi.
+Ajouter une comparaison entre deux modèles ou deux stratégies d'évaluation, puis expliquer laquelle vous retiendriez et pourquoi.
