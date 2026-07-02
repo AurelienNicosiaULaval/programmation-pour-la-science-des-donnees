@@ -4363,12 +4363,12 @@ code {
 </section>
 <section id="rôle-dans-le-cours" class="level2">
 <h2 class="anchored" data-anchor-id="rôle-dans-le-cours">Rôle dans le cours</h2>
-<p>Ce module est le point d’orgue du cours. Après avoir appris à écrire du code propre, des fonctions et des classes orientées objet (modules 10 et 11), vous apprendrez à encapsuler vos outils dans un <strong>package R</strong> standard. Le package est l’unité fondamentale de partage et de distribution du code en R. Nous utiliserons la suite d’outils modernes <code>devtools</code>, <code>usethis</code> et <code>roxygen2</code> pour automatiser la création de l’arborescence, la génération automatique des fiches d’aide (format <code>.Rd</code>), et les tests unitaires.</p>
-<p>Ces compétences vous permettront de collaborer efficacement et de livrer votre projet de session sous la forme d’une bibliothèque R testée et documentée.</p>
+<p>La semaine 15 n’ajoute pas une nouvelle remise technique majeure après le projet final. Elle sert d’abord à présenter, défendre et relire le travail remis: démonstration, revue de code, bilan individuel et discussion des limites.</p>
+<p>Cette page fournit une boîte à outils pour renforcer la documentation et les tests du code. Le format package R local est une extension utile lorsque le projet contient des fonctions réutilisables, mais il ne remplace pas les exigences centrales de la semaine 15: dépôt final propre, README, reproduction, revue de code, contributions vérifiables et bilan final.</p>
 </section>
 <section id="objectifs-du-module" class="level2">
 <h2 class="anchored" data-anchor-id="objectifs-du-module">Objectifs du module</h2>
-<p>À la fin de la semaine, chaque personne devrait pouvoir : - Créer une structure de package R valide à l’aide de <code>usethis::create_package()</code>. - Documenter des fonctions publiques et des méthodes S3 à l’aide des balises <code>roxygen2</code> (ex: <code>@param</code>, <code>@return</code>, <code>@export</code>, <code>@examples</code>). - Gérer les dépendances logicielles d’un package dans le fichier <code>DESCRIPTION</code> (les rubriques <code>Imports</code> et <code>Depends</code>). - Intégrer et documenter des jeux de données internes (LazyData) à l’aide de <code>usethis::use_data()</code>. - Écrire et exécuter des tests unitaires intégrés à l’arborescence du package à l’aide de <code>testthat</code>. - Interpréter et résoudre les avertissements (Warnings) et notes de la commande de diagnostic <code>devtools::check()</code>.</p>
+<p>À la fin de la semaine, chaque personne devrait pouvoir : - vérifier qu’un dépôt final peut être compris sans explication orale; - choisir un extrait de code pertinent pour une revue; - expliquer les entrées, sorties, dépendances et limites d’une fonction ou d’un pipeline; - documenter les contributions individuelles; - produire un bilan final bref et défendable; - identifier quand un package R local est pertinent pour structurer du code réutilisable.</p>
 </section>
 <section id="compétences-visées" class="level2">
 <h2 class="anchored" data-anchor-id="compétences-visées">Compétences visées</h2>
@@ -4394,27 +4394,27 @@ code {
 <tr class="odd">
 <td>Avant la classe</td>
 <td><a href="../../modules/15-collaboration-documentation-package/avant.html">Avant la classe</a></td>
-<td>Vérifier l’environnement de construction et faire le mini-test de préparation</td>
+<td>Vérifier le dépôt final, le README, les tests et les contributions</td>
 </tr>
 <tr class="even">
 <td>Pendant la classe</td>
 <td><a href="../../modules/15-collaboration-documentation-package/pendant.html">Pendant la classe</a></td>
-<td>Observer les démos de création, de documentation Roxygen2 et d’importations</td>
+<td>Présenter le projet, faire une revue de code et répondre aux questions</td>
 </tr>
 <tr class="odd">
 <td>Laboratoire</td>
 <td><a href="../../modules/15-collaboration-documentation-package/laboratoire.html">Laboratoire</a></td>
-<td>Construire et installer le package local <code>manhattan</code> muni de tests et de documentation</td>
+<td>Utiliser le format package R local comme référence technique lorsque pertinent</td>
 </tr>
 <tr class="even">
 <td>Défi de module</td>
 <td><a href="../../modules/15-collaboration-documentation-package/defi.html">Défi de module</a></td>
-<td>Packager une fonction de projet sous forme de package local testé</td>
+<td>Option de consolidation: packager une fonction de projet sous forme de package local testé</td>
 </tr>
 <tr class="odd">
 <td>Après la classe</td>
 <td><a href="../../modules/15-collaboration-documentation-package/apres.html">Après la classe</a></td>
-<td>Déposer la trace finale: README, tests, documentation, bilan et commit</td>
+<td>Déposer la trace finale: bilan, revue, documentation et dernier commit</td>
 </tr>
 </tbody>
 </table>
@@ -4426,7 +4426,7 @@ code {
 </section>
 <section id="variante-stt-6230" class="level2">
 <h2 class="anchored" data-anchor-id="variante-stt-6230">Variante STT-6230</h2>
-<p>Discuter de l’intérêt et de la mise en place d’une politique de <strong>Continuous Integration (CI)</strong> (ex: avec GitHub Actions) pour lancer automatiquement la commande <code>R CMD check</code> lors de chaque commit sur un dépôt collaboratif.</p>
+<p>Préparer une justification technique courte liée au dépôt final: comparaison d’approches, validation supplémentaire, analyse de performance, automatisation du pipeline ou plan de maintenance. Une politique de Continuous Integration avec GitHub Actions est un exemple possible si elle est réaliste pour le projet.</p>
 </section>
 <section id="pages-du-module" class="level2">
 <h2 class="anchored" data-anchor-id="pages-du-module">Pages du module</h2>
