@@ -21,7 +21,7 @@ Voici les options de planification les plus courantes à passer à `plan()` :
 | **`sequential`** | Synchrone (Mono-cœur) | Même session R | Tous | Le débogage et le développement initial. |
 | **`multisession`** | Parallèle (Processus fils) | Sessions R indépendantes | Tous (Windows, macOS, Linux) | **Par défaut sur Windows/macOS**. Sûr et isolé. |
 | **`multicore`** | Parallèle (Forking) | Partage de mémoire virtuelle | macOS, Linux (Non Windows) | Des calculs intensifs sur de grosses données sous Linux (évite de copier les variables globales en RAM). |
-| **`cluster`** | Parallèle (Distribué) | Réseau TCP/IP esclave | Tous | Exécuter des calculs sur des serveurs distants ou des grilles de calcul (HPC). |
+| **`cluster`** | Parallèle (Distribué) | Réseau TCP/IP entre machines | Tous | Exécuter des calculs sur des serveurs distants ou des grilles de calcul (HPC). |
 
 > [!WARNING]
 > N'utilisez pas `plan(multicore)` sous Windows ou au sein de RStudio/Positron sous macOS, car le forking de processus R peut rendre l'IDE instable. Préférez toujours `plan(multisession)` pour le développement local interactif.

@@ -35,4 +35,16 @@ L'objectif de ce défi est de mettre en pratique la méthodologie de profilage e
 
 *   **Rigueur scientifique** : L'optimisation est validée par des données de benchmark objectives (médiane de temps d'exécution et allocations mémoire) et non sur une simple impression.
 *   **Correction technique** : Suppression des réallocations de mémoire dans les boucles (pré-allocation) ou utilisation appropriée de la vectorisation.
-*   **Recul critique** : Réflexion honnête sur le compromis entre performance et lisibilité du code (ne pas optimiser inutilement si le code original prend 10 ms).
+*   **Recul critique** : Réflexion sur le compromis entre performance et lisibilité du code (ne pas optimiser inutilement si le code original prend 10 ms).
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut proposer une version vectorisée ou expliquer un résultat de profilage. Les mesures doivent être exécutées et interprétées par la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le code optimisé ou la note technique.
+
+Ce défi de module est aussi une répétition utile pour le défi technique 3 de la semaine 13, qui demandera le même cycle: mesurer, améliorer, vérifier et documenter.
+
+## Variante STT-6230
+
+Réaliser l'analyse supplémentaire décrite dans la page du module: une optimisation additionnelle, un benchmark reproductible, une comparaison avant/après et une note sur le compromis entre performance, lisibilité et maintenance.

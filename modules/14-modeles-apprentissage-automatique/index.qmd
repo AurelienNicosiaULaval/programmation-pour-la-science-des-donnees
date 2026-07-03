@@ -41,7 +41,7 @@ Les trois blocs ne sont pas trois nouvelles semaines. Ils forment une synthèse 
 
 ## Place de l’IA
 
-Statut : **IA permise, déclarée** (Niveau 2).
+Statut: permise, déclarée.
 
 Tout usage significatif qui influence le choix du modèle, le code, l’interprétation ou la rédaction doit être documenté dans `docs/ai-log.md`.
 

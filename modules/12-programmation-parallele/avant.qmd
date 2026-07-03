@@ -32,7 +32,7 @@ Un *futur* est une abstraction pour un calcul qui sera résolu plus tard, évent
 library(future)
 
 # 1. Configurer R pour travailler en parallèle (multisession locale)
-# Cela ouvre des sessions R esclaves en arrière-plan
+# Cela ouvre des sessions R de travail en arrière-plan
 plan(multisession, workers = 2)
 
 cat("Lancement du calcul asynchrone...\n")
@@ -93,7 +93,7 @@ plan(sequential)
 Pourquoi l'exécution d'une tâche simple (ex: faire la somme de 10 nombres) est-elle généralement **beaucoup plus lente** en parallèle qu'en séquentiel ?
 
 *   **Option A :** Les processeurs modernes ralentissent leur fréquence lorsqu'ils activent plusieurs cœurs.
-*   **Option B :** Le temps requis pour démarrer les processus esclaves et copier les données en mémoire vers ces processus est supérieur au temps du calcul lui-même.
+*   **Option B :** Le temps requis pour démarrer les processus de travail et copier les données en mémoire vers ces processus est supérieur au temps du calcul lui-même.
 *   **Option C :** R limite volontairement la vitesse des cœurs secondaires pour éviter la surchauffe.
 *   **Option D :** Les futurs utilisent un algorithme de tri plus lent.
 
@@ -101,7 +101,7 @@ Pourquoi l'exécution d'une tâche simple (ex: faire la somme de 10 nombres) est
 Pourquoi l'utilisation de `set.seed(123)` suivi d'une boucle parallèle classique (sans configuration spécifique) pose-t-elle un grave problème pour des simulations scientifiques ?
 
 *   **Option A :** Les cœurs génèrent exactement les mêmes nombres aléatoires en parallèle, ce qui rend les simulations identiques et corrélées.
-*   **Option B :** Les processus esclaves n'ont pas accès à l'horloge système.
+*   **Option B :** Les processus de travail n'ont pas accès à l'horloge système.
 *   **Option C :** La génération parallèle modifie de façon permanente le système d'exploitation.
 *   **Option D :** `set.seed` ne fonctionne pas en dehors du Global Environment.
 

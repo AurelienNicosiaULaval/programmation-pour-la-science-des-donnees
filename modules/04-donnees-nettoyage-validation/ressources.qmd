@@ -70,17 +70,17 @@ Si un fichier est trop lourd:
 Structure minimale d’une extraction:
 
 ```r
-# Load libraries
+# Charger les packages
 library(DBI)
 library(duckdb)
 
-# Connect to an in-memory database
+# Se connecter à une base en mémoire
 con <- dbConnect(duckdb(), dbdir = ":memory:")
 
-# Copy an R data frame to the database
+# Copier un data frame R dans la base
 dbWriteTable(con, "meteo", donnees_nettoyees)
 
-# Query only the summary needed
+# Interroger seulement le résumé nécessaire
 resume <- dbGetQuery(
   con,
   "
@@ -109,20 +109,20 @@ Une requête API doit être documentée:
 Exemple de squelette:
 
 ```r
-# Load libraries
+# Charger les packages
 library(httr2)
 
-# Build request
-req <- request("URL_API_A_COMPLETER") |>
+# Construire la requête
+req <- request("URL_API_FICTIVE") |>
   req_url_query(region = "QC", format = "json")
 
-# Perform request
+# Exécuter la requête
 resp <- req_perform(req)
 
-# Check response
+# Vérifier la réponse
 resp_check_status(resp)
 
-# Parse JSON content
+# Extraire le contenu JSON
 donnees_api <- resp_body_json(resp)
 ```
 
@@ -236,8 +236,92 @@ population_1960 <- data.frame(
   - `inner_join(x, y)` : Conserve uniquement les lignes présentes dans les deux tables.
   - `full_join(x, y)` : Conserve toutes les lignes des deux tables.
 
-## Sources
+## Exportation et formats de fichiers en R
 
+Ces exemples complètent l’importation vue en laboratoire. Ils montrent comment écrire des données dans des formats courants avec des chemins relatifs.
+
+### Fichiers texte délimités (.txt, .tsv, .csv)
+
+Pour lire un fichier texte avec séparateurs, on utilise `read.delim()` en R de base ou les fonctions du package `readr`.
+
+```r
+# R de base
+donnees <- read.delim(
+  file = "data/raw/exemple.txt",
+  skip = 2,                 # Sauter des lignes d'en-tête si nécessaire
+  encoding = "UTF-8",       # Spécifier l'encodage
+  na.strings = c(".")       # Déclarer les codes de valeurs manquantes
+)
+
+# Alternative avec readr
+library(readr)
+donnees_tidy <- read_tsv(
+  file = "data/raw/exemple.txt",
+  skip = 2,
+  na = c(".")
+)
+```
+
+### Fichiers Excel (.xlsx)
+
+Le package `openxlsx` permet d’écrire des fichiers Excel sans dépendance à Java.
+
+```r
+library(openxlsx)
+
+# Écrire un data frame dans un fichier Excel
+write.xlsx(
+  women,
+  file = "outputs/women.xlsx",
+  sheetName = "mesures_femmes",
+  startCol = 1,
+  startRow = 1
+)
+```
+
+### Fichiers binaires R (.rds et .rda)
+
+Deux formats existent pour sauvegarder des objets R.
+
+Format RDS, recommandé, qui sauvegarde un seul objet:
+
+```r
+# Sauvegarder
+saveRDS(women, file = "outputs/women.rds")
+
+# Charger en assignant le nom de son choix
+donnees_rds <- readRDS("outputs/women.rds")
+```
+
+Format RData ou RDA, qui sauvegarde plusieurs objets avec leur nom d’origine:
+
+```r
+# Sauvegarder
+fc1 <- factor(c("S", "C", "D"))
+save(fc1, file = "outputs/fc1.rda")
+
+# Charger: l'objet est restauré sous son nom d'origine,
+# au risque d'écraser une variable existante
+load("outputs/fc1.rda")
+```
+
+### Tableaux LaTeX ou HTML
+
+Pour exporter un tableau dans un rapport:
+
+```r
+library(xtable)
+
+jeu_test <- data.frame(
+  Variable1 = seq(0, 10, by = 2),
+  Variable2 = "A"
+)
+
+# Afficher le code LaTeX généré
+xtable(jeu_test)
+```
+
+## Sources
 
 - Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). R for Data Science, 2e édition: <https://r4ds.hadley.nz/>.
 - Documentation officielle `readr`: <https://readr.tidyverse.org/>.

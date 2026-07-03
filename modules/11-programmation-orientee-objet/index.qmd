@@ -8,7 +8,7 @@ format:
 
 ## Question du module
 
-Quand et comment une classe ou un objet simplifie-t-il réellement un projet de science des données ou le développement d'outils en R ?
+Quand et comment une classe ou un objet simplifie-t-il réellement un projet de science des données ou le développement d'outils en R?
 
 ## Rôle dans le cours
 
@@ -42,9 +42,9 @@ Ce module aborde les paradigmes de programmation orientée objet (POO) en R. Apr
 
 ## Place de l’IA
 
-Statut : **IA permise, déclarée** (Niveau 2).
+Statut: permise, déclarée.
 
-L'IA peut vous aider à générer le squelette (boilerplate) d'une classe R6 ou à trouver la syntaxe d'une méthode S3. Toutefois, vous devez être capable de justifier par vous-même le choix entre S3 et R6 pour un problème donné et d'expliquer les conséquences de la mutabilité des objets R6 sur la gestion de la mémoire. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+L'IA peut aider à générer le squelette d'une classe R6 ou à trouver la syntaxe d'une méthode S3. La personne étudiante doit toutefois être capable de justifier le choix entre S3 et R6 pour un problème donné et d'expliquer les conséquences de la mutabilité des objets R6. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 

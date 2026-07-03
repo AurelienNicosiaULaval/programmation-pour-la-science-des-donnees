@@ -12,7 +12,7 @@ La séance se concentre sur le passage du système graphique de base R vers `ggp
 | Moment | Durée | Activité |
 |---|---:|---|
 | **Concepts et retours** | 30 min | Clarifier la différence entre base R et la grammaire de `ggplot2`, et revenir sur le mini-test. |
-| **Démonstration en direct** | 30 min | Observer le formateur assembler pas-à-pas un graphique complexe (esthétiques, géométries, coordonnées et thèmes). |
+| **Démonstration en direct** | 30 min | Observer la personne enseignante assembler pas-à-pas un graphique complexe (esthétiques, géométries, coordonnées et thèmes). |
 | **Atelier pratique** | 90 min | Travailler sur le [laboratoire](laboratoire.qmd) (calcul de proportions conditionnelles et étiquetage textuel). |
 | **Restitution et projet** | 30 min | Revue par les pairs des graphiques produits et organisation du projet filé d'équipe. |
 

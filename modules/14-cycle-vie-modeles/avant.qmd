@@ -18,9 +18,9 @@ Réfléchir aux informations nécessaires pour suivre un modèle après sa créa
 - Noter un usage qui serait risqué ou hors contexte.
 - Noter un changement de données qui pourrait invalider le résultat.
 
-## Mini-test prévu
+## Questions d'autovérification
 
-Questions courtes sur:
+Il n'y a pas de mini-test prévu à la semaine 14 dans la version v1. Vérifier plutôt sa préparation avec des questions courtes sur:
 
 - versionnement;
 - validation;

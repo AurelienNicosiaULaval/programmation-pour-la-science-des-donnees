@@ -27,7 +27,7 @@ L'objectif de ce défi est d'adapter une tâche répétitive et lourde de votre 
     *   Le cas d'usage parallélisé (pourquoi cette tâche s'y prête-t-elle ?).
     *   Le tableau de comparaison des temps (séquentiel vs parallèle) et le speedup calculé.
     *   La confirmation que les résultats sont reproductibles.
-    *   Une analyse critique : selon la Loi d'Amdahl (voir la variante STT-6230), le gain est-il limité par une portion séquentielle de votre code ? Est-ce que le gain justifie la complexité d'ouvrir des sessions R esclaves ?
+    *   Une analyse critique : selon la Loi d'Amdahl (voir la variante STT-6230), le gain est-il limité par une portion séquentielle de votre code ? Est-ce que le gain justifie la complexité d'ouvrir des sessions R de travail supplémentaires?
 
 ---
 
@@ -36,3 +36,13 @@ L'objectif de ce défi est d'adapter une tâche répétitive et lourde de votre 
 *   **Sécurité statistique** : Le code parallèle utilise correctement le contrôle des graines aléatoires (`seed = TRUE`) et garantit des tirages stochastiques reproductibles.
 *   **Pertinence** : Le choix de paralléliser est justifié (temps d'exécution initial suffisant pour absorber la surcharge de copie mémoire).
 *   **Bonnes pratiques** : Le plan de calcul est proprement configuré puis fermé en fin d'exécution (`plan(sequential)`).
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider à convertir la syntaxe d'itération ou à diagnostiquer une erreur d'exportation de variables globales. Les mesures et la validation de reproductibilité doivent être exécutées par la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le script ou la note explicative.
+
+## Variante STT-6230
+
+Réaliser l'analyse décrite dans la page du module: appliquer la Loi d'Amdahl au cas parallélisé, estimer la portion séquentielle, calculer le speedup théorique et formuler une recommandation sur l'intérêt réel de paralléliser.

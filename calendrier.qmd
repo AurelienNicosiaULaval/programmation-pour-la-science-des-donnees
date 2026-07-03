@@ -41,7 +41,7 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance r�
 | Relâche | 28 octobre 2026 | Semaine de lecture | Aucun mini-test régulier | Aucune séance régulière | Travail autonome et rattrapage |
 | 9 | 4 novembre 2026 | Consolidation | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test, jalon portfolio 2, point de suivi projet formatif |
 | 10 | 11 novembre 2026 | Fonctions, `purrr` et tests | Fonctions, itérations, réduction du copier-coller, assertions, `testthat` | Transformer du code exploratoire en fonctions testables | Mini-test, fonction dans `R/`, test minimal |
-| 11 | 18 novembre 2026 | POO et architecture | S3 ou R6 selon le choix final | Structurer des objets ou composants du projet | Mini-test, note POO ou architecture |
+| 11 | 18 novembre 2026 | POO et architecture | S3 et R6, différences et cas d’usage | Structurer des objets ou composants du projet | Mini-test, note POO ou architecture |
 | 12 | 25 novembre 2026 | Optimisation et parallèle | Profilage, `future`, `furrr` | Mesurer, comparer, améliorer ou paralléliser | Mini-test, version intermédiaire du projet |
 | 13 | 2 décembre 2026 | Défi technique 3 et consolidation | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis post-mortem technique sur tests, validation et limites | Défi 3, rapport technique et trace IA; atelier non évalué |
 | 14 | 9 décembre 2026 | Synthèse finale: modèle, reproduction, cycle de vie | Modèle minimal, reproduction, limites, suivi | Stabiliser le livrable final, le README, les tests et la reproduction | Préparation finale, remise finale projet, jalon portfolio 3 |

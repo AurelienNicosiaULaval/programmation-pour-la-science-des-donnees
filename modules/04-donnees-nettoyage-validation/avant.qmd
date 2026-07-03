@@ -17,10 +17,10 @@ Arriver en classe avec les gestes de base prêts: lire un fichier, inspecter les
 4. Tester les commandes suivantes dans la console:
 
 ```r
-# Load libraries
+# Charger les packages
 library(tidyverse)
 
-# Check project folders
+# Vérifier les dossiers du projet
 dir.exists(c("data/raw", "data/processed", "R", "docs"))
 ```
 

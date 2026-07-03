@@ -16,9 +16,9 @@ Préparer un exemple de question prédictive simple et identifier les données n
 - Noter les variables explicatives candidates.
 - Décrire une stratégie minimale de validation.
 
-## Mini-test prévu
+## Questions d'autovérification
 
-Questions courtes sur:
+Il n'y a pas de mini-test prévu à la semaine 14 dans la version v1. Vérifier plutôt sa préparation avec des questions courtes sur:
 
 - la distinction entre entraînement et validation;
 - les fuites de données;

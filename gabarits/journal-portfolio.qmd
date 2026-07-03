@@ -5,6 +5,8 @@ format:
     embed-resources: true
 ---
 
+Ce gabarit est à copier dans le portfolio individuel. Les mentions "À compléter" sont des champs à remplir par la personne étudiante chaque semaine.
+
 Cours: STT-4230 / STT-6230
 
 Semaine:

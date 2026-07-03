@@ -75,7 +75,7 @@ Une lecture ne doit jamais être seulement un texte. Elle doit contenir un geste
 
 | Évaluation | Poids | Type | Moment | IA |
 |---|---:|---|---|---|
-| Mini-tests de préparation | 10 % | Individuel | Semaines 2 à 14, sauf semaines de défi si souhaité | Permise |
+| Mini-tests de préparation | 10 % | Individuel | Semaines 2, 3, 4, 6, 7, 9, 10, 11 et 12 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
 | Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14 | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire | Semaine 5 | Non permise |

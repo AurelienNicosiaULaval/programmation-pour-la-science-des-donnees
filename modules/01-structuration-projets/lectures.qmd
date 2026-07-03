@@ -16,7 +16,7 @@ Lire les pages suivantes:
 - [Démarrage étudiant](../../demarrage.qmd)
 - [Portfolio GitHub individuel](../../portfolio.qmd)
 - [Soutien technique](../../soutien-technique.qmd)
-- [Politique d’utilisation de l’IA générative](../../ia.qmd), sections "Statuts d’IA dans les évaluations" et "Règles générales"
+- [Politique d’utilisation de l’IA générative](../../ia.qmd), sections "Règle simple" et "Statuts d’IA dans les évaluations"
 
 ## Documentation officielle utile
 

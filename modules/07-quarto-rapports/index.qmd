@@ -8,11 +8,11 @@ format:
 
 ## Question du module
 
-Comment structurer un rapport dynamique pour qu'il soit à la fois agréable à lire, facile à maintenir et reproductible par une autre personne ?
+Comment structurer un rapport dynamique pour qu'il soit à la fois agréable à lire, facile à maintenir et reproductible par une autre personne?
 
 ## Rôle dans le cours
 
-Ce module consolide la communication scientifique. Après avoir appris à manipuler les données et à créer des graphiques (semaine 6), la semaine 7 montre comment regrouper le code R, le texte explicatif et les figures dans un seul document dynamique appelé **Quarto** (`.qmd`).
+Ce module consolide la communication scientifique. Après avoir appris à manipuler les données et à créer des graphiques (semaine 6), la semaine 7 montre comment regrouper le code R, le texte explicatif et les figures dans un seul document dynamique Quarto (`.qmd`).
 
 C'est la compétence finale nécessaire pour structurer les livrables d'équipe et le projet filé.
 
@@ -32,6 +32,15 @@ C'est la compétence finale nécessaire pour structurer les livrables d'équipe 
 - Masquer le code technique pour les rapports destinés aux décideurs (`echo: false`).
 - Documenter la reproductibilité et citer les sources.
 
+## Livrables de la semaine
+
+| Élément | Trace attendue |
+|---|---|
+| Mini-test | Questions courtes sur le YAML, les options de blocs et le rendu |
+| Laboratoire | Rapport Quarto court compilé sans erreur depuis une session propre |
+| Portfolio | Fichier `.qmd` et rendu conservés dans `reports/` ou `modules/semaine-07/` |
+| Git | Commits séparant le rapport, les corrections et la documentation |
+
 ## Déroulement
 
 | Moment | Page à utiliser | Résultat |
@@ -44,9 +53,9 @@ C'est la compétence finale nécessaire pour structurer les livrables d'équipe 
 
 ## Place de l’IA
 
-Statut : **IA permise, déclarée** (Niveau 2).
+Statut: permise, déclarée.
 
-L'IA peut vous aider à trouver la syntaxe d'une option YAML (ex: comment ajouter une table des matières flottante) ou à structurer un tableau complexe en Markdown. La rédaction de l'interprétation des résultats et la structure générale du rapport doivent être le produit de votre réflexion.
+L'IA peut aider à trouver la syntaxe d'une option YAML, par exemple une table des matières flottante, ou à structurer un tableau complexe en Markdown. La rédaction de l'interprétation des résultats et la structure générale du rapport doivent rester le produit de la réflexion de la personne étudiante. Tout usage significatif doit être documenté dans `docs/ai-log.md` ou dans le journal.
 
 ## Variante STT-6230
 

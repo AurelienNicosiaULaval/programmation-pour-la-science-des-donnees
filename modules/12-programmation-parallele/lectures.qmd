@@ -20,7 +20,7 @@ format:
 
 ## Geste R à reproduire chez vous : Propagation des erreurs en parallèle
 
-Un aspect crucial du package `future` est que les erreurs survenues sur les cœurs esclaves sont interceptées et propagées fidèlement vers la session principale R lors de l'appel à `value()`.
+Un aspect crucial du package `future` est que les erreurs survenues sur les processus de travail sont interceptées et propagées fidèlement vers la session principale R lors de l'appel à `value()`.
 
 Exécutez ce script pour constater la propagation propre des exceptions :
 
@@ -43,7 +43,7 @@ cat("Le futur est lancé. Faisons autre chose pendant ce temps...\n")
 tryCatch({
   value(f_erreur)
 }, error = function(e) {
-  cat("Erreur interceptée avec succès depuis le worker esclave :\n")
+  cat("Erreur interceptée avec succès depuis le processus de travail :\n")
   print(e$message)
 })
 

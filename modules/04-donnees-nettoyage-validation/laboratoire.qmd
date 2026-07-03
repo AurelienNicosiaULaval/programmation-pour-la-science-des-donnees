@@ -25,15 +25,15 @@ Le jeu de données est fictif. Il sert à pratiquer le pipeline, pas à tirer de
 Créer un fichier `scripts/04-nettoyage-meteo.R` ou `R/04-nettoyage-meteo.R`, puis y placer le code suivant.
 
 ```r
-# Load libraries
+# Charger les packages
 library(tidyverse)
 
-# Create project folders
+# Créer les dossiers du projet
 dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
 dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
 dir.create("docs", recursive = TRUE, showWarnings = FALSE)
 
-# Create a small raw data file for the exercise
+# Créer un petit fichier de données brutes pour l'exercice
 meteo_brut <- tribble(
   ~station_id, ~date_obs, ~temperature_c, ~precip_mm, ~qualite,
   "QC-001", "2026-01-03", "-8,2", "0", "ok",
@@ -46,19 +46,19 @@ meteo_brut <- tribble(
 
 write_csv2(meteo_brut, "data/raw/meteo_quebec_brut.csv", na = "")
 
-# Import raw data
+# Importer les données brutes
 donnees_brutes <- read_csv2(
   "data/raw/meteo_quebec_brut.csv",
   col_types = cols(.default = col_character()),
   na = c("", "NA", "N/D")
 )
 
-# Inspect raw data
+# Inspecter les données brutes
 glimpse(donnees_brutes)
 summary(donnees_brutes)
 count(donnees_brutes, station_id)
 
-# Clean data
+# Nettoyer les données
 donnees_nettoyees <- donnees_brutes |>
   mutate(
     date_obs = lubridate::ymd(date_obs),
@@ -83,7 +83,7 @@ stopifnot(all(!is.na(donnees_nettoyees$date_obs)))
 stopifnot(all(donnees_nettoyees$precip_mm >= 0 | is.na(donnees_nettoyees$precip_mm)))
 stopifnot(all(donnees_nettoyees$qualite %in% c("ok", "a_verifier", "erreur")))
 
-# Summarize missingness after cleaning
+# Résumer les valeurs manquantes après nettoyage
 resume_validation <- donnees_nettoyees |>
   summarise(
     n_lignes = n(),
@@ -94,11 +94,11 @@ resume_validation <- donnees_nettoyees |>
 
 print(resume_validation)
 
-# Save processed data
+# Sauvegarder les données traitées
 write_csv(donnees_nettoyees, "data/processed/meteo_quebec_propre.csv")
 write_csv(resume_validation, "data/processed/resume_validation.csv")
 
-# Optional SQL preview with DuckDB if installed
+# Aperçu SQL optionnel avec DuckDB si le package est installé
 if (requireNamespace("duckdb", quietly = TRUE) &&
     requireNamespace("DBI", quietly = TRUE)) {
   con <- DBI::dbConnect(duckdb::duckdb(), dbdir = ":memory:")

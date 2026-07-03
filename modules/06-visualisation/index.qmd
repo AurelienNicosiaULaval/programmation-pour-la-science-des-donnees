@@ -8,13 +8,13 @@ format:
 
 ## Question du module
 
-Comment concevoir et programmer des figures claires, adaptées à l'audience et entièrement reproductibles avec R ?
+Comment concevoir et programmer des figures claires, adaptées au public visé et entièrement reproductibles avec R?
 
 ## Rôle dans le cours
 
 Ce module marque le début de la communication des résultats. Après avoir appris à structurer un projet, gérer les dépendances et nettoyer les données (semaines 1 à 4), la semaine 6 enseigne l'art de concevoir des représentations graphiques rigoureuses. La visualisation n'est pas qu'un art esthétique, c'est une compétence technique clé en science des données.
 
-Les concepts vus cette semaine seront appliqués immédiatement pour la **Proposition de projet filé en équipe** (jalon à remettre à la fin de cette semaine).
+Les concepts vus cette semaine seront appliqués immédiatement pour la proposition du projet filé en équipe, à remettre à la fin de cette semaine.
 
 ## Objectifs du module
 
@@ -33,6 +33,16 @@ Les concepts vus cette semaine seront appliqués immédiatement pour la **Propos
 - Ajuster les couleurs et les thèmes pour assurer la lisibilité (accessibilité).
 - Gérer l'affichage des proportions conditionnelles sans boucle.
 
+## Livrables de la semaine
+
+| Élément | Trace attendue |
+|---|---|
+| Mini-test | Questions courtes sur la grammaire des graphiques et le choix des géométries |
+| Laboratoire | Script de visualisation et figure sauvegardée dans `outputs/` |
+| Portfolio | Note de conception courte dans `modules/semaine-06/` ou dans le journal |
+| Projet | Proposition du projet d'équipe remise à la fin de la semaine |
+| Git | Commit contenant le script et la figure de sortie |
+
 ## Déroulement
 
 | Moment | Page à utiliser | Résultat |
@@ -45,9 +55,9 @@ Les concepts vus cette semaine seront appliqués immédiatement pour la **Propos
 
 ## Place de l’IA
 
-Statut : **IA permise, déclarée** (Niveau 2).
+Statut: permise, déclarée.
 
-L'IA peut vous aider à trouver le nom d'un argument de thème ou à comprendre une erreur de structure dans `ggplot2`. Cependant, vous devez comprendre l'empilement des couches et être capable d'expliquer pourquoi vous avez choisi un type de graphique plutôt qu'un autre. Tout usage significatif doit être documenté dans `docs/ai-log.md` ou dans le journal.
+L'IA peut aider à trouver le nom d'un argument de thème ou à comprendre une erreur de structure dans `ggplot2`. La personne étudiante doit toutefois comprendre l'empilement des couches et être capable d'expliquer pourquoi un type de graphique a été choisi plutôt qu'un autre. Tout usage significatif doit être documenté dans `docs/ai-log.md` ou dans le journal.
 
 ## Variante STT-6230
 

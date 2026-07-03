@@ -36,3 +36,13 @@ L'objectif de ce défi est de transformer les scripts et fonctions de calcul que
     *   La liste des fonctions publiques exportées.
     *   Le rapport textuel ou visuel de la commande `devtools::check()` montrant la réussite des vérifications.
     *   Les difficultés rencontrées pour gérer les dépendances (ex: imports de dplyr) ou documenter les objets complexes.
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider à rédiger la documentation `roxygen2` ou à structurer les tests. Les corrections signalées par `devtools::check()` doivent être comprises et résolues par la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le package, les tests ou la note explicative.
+
+## Variante STT-6230
+
+Ajouter une justification technique courte liée au package ou au dépôt final: comparaison de deux structures possibles, validation supplémentaire, automatisation des tests, analyse d'une dépendance fragile ou plan de maintenance. La note doit rester reliée au code réellement produit.

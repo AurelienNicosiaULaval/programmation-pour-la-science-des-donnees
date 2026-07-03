@@ -55,7 +55,7 @@ Le but n’est pas d’écrire un dossier de conformité. Le but est de rendre l
 
 ## Place de l’IA
 
-Statut : **IA permise, déclarée** (Niveau 2).
+Statut: permise, déclarée.
 
 Tout usage significatif qui influence le diagnostic, la documentation, la vérification ou l’interprétation doit être documenté dans `docs/ai-log.md`.
 

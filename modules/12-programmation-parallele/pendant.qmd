@@ -9,8 +9,8 @@ format:
 
 ### 1. Retour sur le mini-test (15 min)
 
-*   **Question 1 :** La bonne réponse est l'**Option B**. Le parallélisme nécessite de sérialiser les données R, de les envoyer par sockets TCP locales aux sessions esclaves, puis de faire l'inverse pour le retour. Pour de petits calculs, cette surcharge (overhead) écrase complètement le temps de calcul.
-*   **Question 2 :** La bonne réponse est l'**Option A**. Sans générateur adapté, les processus esclaves peuvent recevoir le même état interne et générer les mêmes séquences pseudo-aléatoires, ou générer des flux dépendants. Il est indispensable d'utiliser le générateur L'Ecuyer-CMRG (intégré de façon transparente dans `furrr` avec `seed = TRUE`).
+*   **Question 1 :** La bonne réponse est l'**Option B**. Le parallélisme nécessite de sérialiser les données R, de les envoyer par sockets TCP locales aux sessions de travail, puis de faire l'inverse pour le retour. Pour de petits calculs, cette surcharge (overhead) écrase complètement le temps de calcul.
+*   **Question 2 :** La bonne réponse est l'**Option A**. Sans générateur adapté, les processus de travail peuvent recevoir le même état interne et générer les mêmes séquences pseudo-aléatoires, ou générer des flux dépendants. Il est indispensable d'utiliser le générateur L'Ecuyer-CMRG (intégré de façon transparente dans `furrr` avec `seed = TRUE`).
 *   **Question 3 :** La bonne réponse est l'**Option C**. Sous Windows (et par défaut avec `multisession`), chaque cœur tourne dans un processus R indépendant. Le plan de calcul doit donc copier toutes les variables globales utilisées dans la fonction vers chaque cœur, ce qui peut saturer la mémoire vive (RAM) si ces variables sont volumineuses.
 
 ---

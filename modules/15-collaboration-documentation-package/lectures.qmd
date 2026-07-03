@@ -27,7 +27,7 @@ Le fichier `NAMESPACE` gère les importations et exportations de fonctions du pa
 
 Faites ce test sur le package `manhattan` créé au cours :
 
-1.  Ouvrez le fichier `NAMESPACE` à la racine de votre package esclave.
+1.  Ouvrez le fichier `NAMESPACE` à la racine de votre package.
 2.  Vérifiez que les lignes suivantes s'y trouvent :
     ```r
     export(dist_manhattan)

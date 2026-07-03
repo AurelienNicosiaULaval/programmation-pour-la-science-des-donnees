@@ -35,10 +35,16 @@ Dans votre dépôt `portfolio-stt4230` :
 
 | Élément | Attente minimale |
 |---|---|
-| Script R | Script executable depuis la racine du portfolio sans erreur. |
+| Script R | Script exécutable depuis la racine du portfolio sans erreur. |
 | Image de sortie | Graphique sauvegardé au format PNG ou PDF dans `outputs/`. |
 | Note ou Journal | Une note expliquant l'intention de conception et les limites. |
 | Git | Historique clair montrant l'ajout du script et de l'image. |
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider à trouver un argument de thème, une palette ou une explication d'erreur. Le graphique final doit être compris et défendable. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le code, la conception ou la note.
 
 ## Variante STT-6230
 

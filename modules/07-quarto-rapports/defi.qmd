@@ -7,7 +7,7 @@ format:
 
 ## Nature du défi
 
-Ce défi de module est une activité pratique pour votre portfolio. Il sert de préparation directe au jalon de projet filé en équipe de la semaine 12 (où vous devrez remettre un rapport d'analyse intermédiaire complet sous forme de document Quarto).
+Ce défi de module est une activité pratique pour votre portfolio. Il prépare le défi technique 2 de la semaine 8, qui demandera un rapport Quarto court, et le jalon de projet filé de la semaine 12, où un rapport d'analyse intermédiaire complet sera remis sous forme de document Quarto.
 
 ## Objectif
 
@@ -38,6 +38,12 @@ Dans le fichier `reports/07-rapport-meteo.qmd` de votre dépôt `portfolio-stt42
 | Fichier `.qmd` | Fichier source avec du code R en ligne (inline) et la documentation du nettoyage. |
 | Rapport `.html` | Le rapport compilé contenant les résultats textuels dynamiques. |
 | Git | Commit unique avec un message décrivant l'ajout de l'analyse dynamique. |
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider pour la syntaxe YAML, le Markdown ou la structure d'un tableau. L'interprétation des résultats doit rester celle de la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le rapport.
 
 ## Variante STT-6230
 

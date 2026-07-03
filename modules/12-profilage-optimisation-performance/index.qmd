@@ -8,7 +8,7 @@ format:
 
 ## Question du module
 
-Comment améliorer l'efficacité d'un code R en s'appuyant sur des mesures objectives plutôt que sur des intuitions ?
+Comment améliorer l'efficacité d'un code R en s'appuyant sur des mesures objectives plutôt que sur des intuitions?
 
 ## Rôle dans le cours
 
@@ -45,9 +45,11 @@ Ce module pose les bases requises pour aborder la programmation parallèle et as
 
 ## Place de l’IA
 
-Statut : **IA permise, déclarée** (Niveau 2).
+Statut: permise, déclarée.
 
-L'IA peut vous aider à proposer des versions vectorisées de fonctions itératives complexes ou à expliquer une syntaxe `profvis`. Néanmoins, vous devez être capable de mener les mesures de benchmark vous-même et de justifier pourquoi la version optimisée est plus rapide (par exemple, en expliquant la réduction des allocations mémoire). Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+L'IA peut aider à proposer des versions vectorisées de fonctions itératives complexes ou à expliquer une syntaxe `profvis`. La personne étudiante doit néanmoins mener les mesures de benchmark elle-même et justifier pourquoi la version optimisée est plus rapide, par exemple en expliquant la réduction des allocations mémoire. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+
+Le défi technique 3 de la semaine 13 s'appuiera directement sur ces compétences: diagnostiquer, mesurer, améliorer et vérifier avec une IA intégrée à la tâche.
 
 ## Variante STT-6230
 

@@ -5,6 +5,10 @@ format:
     embed-resources: true
 ---
 
+## Nature du défi
+
+Ce défi de module sert à produire la trace de recul professionnel de la semaine 14. Il ne remplace pas les trois défis techniques notés et ne demande pas un nouveau développement après la remise finale.
+
 ## Objectif
 
 Documenter le suivi minimal d’un modèle ou d’un pipeline de modélisation.
@@ -25,6 +29,12 @@ Documenter le suivi minimal d’un modèle ou d’un pipeline de modélisation.
 - note sur les risques;
 - trace Git;
 - déclaration IA si pertinente.
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider à structurer la fiche de suivi ou à formuler un risque. Le diagnostic et la recommandation doivent rester ceux de la personne étudiante. Toute aide significative doit être déclarée dans `docs/ai-log.md` ou dans le journal du portfolio.
 
 ## Critères de réussite
 

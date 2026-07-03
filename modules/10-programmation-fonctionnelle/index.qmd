@@ -8,7 +8,7 @@ format:
 
 ## Question du module
 
-Comment remplacer le copier-coller par des fonctions et des itérations fiables ?
+Comment remplacer le copier-coller par des fonctions et des itérations fiables?
 
 ## Rôle dans le cours
 
@@ -42,9 +42,9 @@ Ce module marque le passage de l'analyse exploratoire interactive à la programm
 
 ## Place de l’IA
 
-Statut : **IA permise, déclarée** (Niveau 2).
+Statut: permise, déclarée.
 
-L'IA peut vous aider à générer des cas de tests unitaires ou à comprendre une erreur de syntaxe avec `purrr`. Néanmoins, vous devez être capable de tracer l'environnement englobant de vos fonctions et de justifier le choix de la variante de `map()` utilisée (ex: `map_dbl` vs `map`). Tout usage significatif de l'IA doit être documenté dans `docs/ai-log.md` ou dans le journal de bord.
+L'IA peut aider à générer des cas de tests unitaires ou à comprendre une erreur de syntaxe avec `purrr`. La personne étudiante doit néanmoins être capable de tracer l'environnement englobant de ses fonctions et de justifier le choix de la variante de `map()` utilisée, par exemple `map_dbl()` plutôt que `map()`. Tout usage significatif de l'IA doit être documenté dans `docs/ai-log.md` ou dans le journal.
 
 ## Variante STT-6230
 

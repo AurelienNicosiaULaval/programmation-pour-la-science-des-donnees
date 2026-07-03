@@ -16,9 +16,9 @@ Identifier ce qui empêcherait une autre personne d’exécuter un projet R sur 
 - Noter les dépendances importantes.
 - Repérer une étape implicite qui devrait être documentée.
 
-## Mini-test prévu
+## Questions d'autovérification
 
-Questions courtes sur:
+Il n'y a pas de mini-test prévu à la semaine 14 dans la version v1. Vérifier plutôt sa préparation avec des questions courtes sur:
 
 - la reproduction d’un livrable;
 - les dépendances;

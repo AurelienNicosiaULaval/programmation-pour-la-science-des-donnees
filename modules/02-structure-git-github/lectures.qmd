@@ -15,7 +15,7 @@ Lire les pages suivantes:
 
 - [Portfolio GitHub individuel](../../portfolio.qmd)
 - [Soutien technique](../../soutien-technique.qmd)
-- [Politique d’utilisation de l’IA générative](../../ia.qmd), sections "IA permise, déclarée" et "Ne jamais faire"
+- [Politique d’utilisation de l’IA générative](../../ia.qmd), sections "IA permise, déclarée" et "Usages interdits"
 
 ## Documentation officielle utile
 

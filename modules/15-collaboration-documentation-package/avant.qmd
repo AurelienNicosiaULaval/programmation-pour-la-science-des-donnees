@@ -73,7 +73,9 @@ dist_manhattan <- function(point1, point2) {
 
 ---
 
-## Mini-test de préparation
+## Questions d'autovérification
+
+Il n'y a pas de mini-test noté à la semaine 15. Les questions suivantes servent à vérifier sa préparation; les réponses sont discutées en classe.
 
 ### Question 1 : Le rôle de devtools::check()
 Que fait précisément la commande `devtools::check()` (ou `R CMD check` sous le capot) ?

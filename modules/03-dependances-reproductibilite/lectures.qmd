@@ -16,7 +16,7 @@ Lire les pages suivantes:
 - [Dépendances R et reproductibilité](../../dependances.qmd)
 - [Portfolio GitHub individuel](../../portfolio.qmd)
 - [Soutien technique](../../soutien-technique.qmd)
-- [Politique d’utilisation de l’IA générative](../../ia.qmd), sections "IA permise, déclarée" et "Données sensibles, code et confidentialité"
+- [Politique d’utilisation de l’IA générative](../../ia.qmd), sections "IA permise, déclarée", "Usages interdits" et "Déclaration obligatoire"
 
 ## Documentation officielle utile
 

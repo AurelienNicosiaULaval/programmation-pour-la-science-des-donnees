@@ -65,7 +65,7 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 | 8 | Défi 2 et consolidation | Défi individuel 1 h, puis atelier sur validation et usage déclaré de l’IA |
 | 9 | Consolidation | Nettoyer portfolio et projet, rattrapage, revue intermédiaire |
 | 10 | Fonctions, `purrr`, pipelines et tests | Transformer du copier-coller en fonctions testables avec assertions et `testthat` |
-| 11 | POO et architecture | S3 ou R6 selon le choix final, structurer les objets du projet |
+| 11 | POO et architecture | S3 et R6, structurer les objets du projet |
 | 12 | Optimisation et parallélisation | Mesurer, profiler, comparer, paralléliser avec `future` et `furrr` |
 | 13 | Défi 3 et consolidation | Défi individuel 1 h avec IA intégrée, puis post-mortem technique sur tests, limites et validation |
 | 14 | Synthèse finale: modèle, reproduction, cycle de vie | Modélisation minimale, reproduction du livrable, limites, suivi et maintenance |
@@ -77,7 +77,7 @@ La structure suivante est retenue comme plan final d’évaluation.
 
 | Évaluation | Pondération | Type | Moment | IA |
 |---|---:|---|---|---|
-| Mini-tests de préparation | 10 % | Individuel | Semaines 2 à 14, sauf semaines de défi si souhaité | Permise |
+| Mini-tests de préparation | 10 % | Individuel | Semaines 2, 3, 4, 6, 7, 9, 10, 11 et 12 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
 | Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14 | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |

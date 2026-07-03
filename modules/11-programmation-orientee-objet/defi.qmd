@@ -44,3 +44,13 @@ Si votre projet interagit avec des ressources externes ou nécessite de conserve
 *   **Cohérence** : Le choix entre S3 et R6 est pertinent vis-à-vis du problème (S3 pour du dispatch fonctionnel sans état, R6 pour de l'encapsulation stricte et de la référence).
 *   **Validation** : Les données d'entrée sont validées dès l'initialisation et lèvent des exceptions compréhensibles en cas de problème.
 *   **Propreté** : Respect des standards de nommage S3 (`methode.classe`) ou structure R6 (`self$champ`, `private$..champ`).
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider à produire le squelette d'une classe ou à comprendre un message d'erreur de dispatch. Le choix du système, les invariants et la note de conception doivent rester ceux de la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative la classe, les tests ou la note.
+
+## Variante STT-6230
+
+Réaliser la comparaison décrite dans la page du module: un exemple minimal S3 et un exemple minimal R6 pour le même besoin, un test d'invariant et une note courte sur le compromis entre simplicité, mutabilité, performance et maintenance.

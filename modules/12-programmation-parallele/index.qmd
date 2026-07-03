@@ -8,7 +8,7 @@ format:
 
 ## Question du module
 
-Quand le calcul parallèle ou asynchrone est-il réellement bénéfique en R, et quand introduit-il une complexité ou une surcharge inutiles ?
+Quand le calcul parallèle ou asynchrone est-il réellement bénéfique en R, et quand introduit-il une complexité ou une surcharge inutiles?
 
 ## Rôle dans le cours
 
@@ -21,7 +21,7 @@ Ce module fait suite au profilage de code. Après avoir appris à mesurer et opt
 - Configurer un plan de calcul parallèle adapté à sa machine avec le package `future`.
 - Remplacer les appels `purrr::map()` par leurs équivalents parallèles `furrr::future_map()`.
 - Garantir la reproductibilité des simulations en contrôlant les graines aléatoires en parallèle (générateur L'Ecuyer-CMRG).
-- Évaluer le coût de transfert des données (overhead) vers les processus esclaves.
+- Évaluer le coût de transfert des données (overhead) vers les processus de travail.
 - Identifier les situations où le parallélisme ralentit l'exécution.
 
 ## Compétences visées
@@ -43,9 +43,11 @@ Ce module fait suite au profilage de code. Après avoir appris à mesurer et opt
 
 ## Place de l’IA
 
-Statut : **IA permise, déclarée** (Niveau 2).
+Statut: permise, déclarée.
 
-L'IA peut vous aider à convertir une syntaxe d'itération complexe ou à comprendre un message d'erreur lié aux variables globales non exportées. Néanmoins, vous devez être capable de justifier la configuration de votre plan de calcul et de calculer le speedup théorique. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+L'IA peut aider à convertir une syntaxe d'itération complexe ou à comprendre un message d'erreur lié aux variables globales non exportées. La personne étudiante doit néanmoins être capable de justifier la configuration de son plan de calcul et d'interpréter le gain mesuré. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+
+Le défi technique 3 de la semaine 13 pourra mobiliser ces compétences: le diagnostic, l'amélioration mesurée et la validation y seront évalués avec une IA intégrée à la tâche.
 
 ## Variante STT-6230
 

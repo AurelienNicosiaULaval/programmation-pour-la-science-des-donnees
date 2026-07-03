@@ -13,7 +13,7 @@ Stabiliser le rapport Quarto et vérifier qu’il reste reproductible, lisible e
 
 - Relancer `quarto render reports/07-rapport-meteo.qmd` depuis une session propre.
 - Ouvrir le rapport HTML produit et vérifier que les résultats dynamiques s’affichent correctement.
-- Vérifier que les chemins de fichiers sont relatifs à la racine du portfolio.
+- Vérifier que les chemins de fichiers sont relatifs, en se rappelant que le rendu Quarto s’exécute depuis le dossier du fichier `.qmd`, d’où l’usage de `../data/`.
 - Ajouter une courte section ou note expliquant les décisions de nettoyage reprises du module 4.
 - Mettre à jour le journal du portfolio avec le fichier source, le fichier rendu et le commit associé.
 - Déclarer l’usage significatif de l’IA si nécessaire.

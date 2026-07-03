@@ -42,3 +42,13 @@ Votre soumission doit contenir :
 *   **Reproductibilité** : Les tests unitaires s'exécutent et passent avec succès sans intervention manuelle.
 *   **Modernité** : Utilisation adéquate des variantes typées de `map()` de `purrr` à la place de boucles manuelles `for` non optimisées ou de fonctions de base R obsolètes.
 *   **Documentation** : La note explicative montre clairement le gain en lisibilité et en maintenance apporté par la refactorisation.
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider à proposer des cas de tests ou à diagnostiquer une erreur `purrr`. Les tests conservés doivent correspondre au comportement réellement attendu et être compris. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative la fonction, les tests ou la note explicative.
+
+## Variante STT-6230
+
+Ajouter au portfolio la comparaison décrite dans la page du module: la même tâche réalisée avec `purrr::map()` et avec une stratégie alternative, accompagnée d'un court tableau de comparaison et d'une justification du choix retenu.

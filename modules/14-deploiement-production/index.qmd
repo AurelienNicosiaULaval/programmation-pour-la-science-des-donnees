@@ -41,7 +41,7 @@ Ce bloc soutient directement la remise finale du projet d’équipe et le jalon 
 
 ## Place de l’IA
 
-Statut : **IA permise, déclarée** (Niveau 2).
+Statut: permise, déclarée.
 
 Tout usage significatif qui influence la documentation, le code ou l’analyse des risques doit être documenté dans `docs/ai-log.md`.
 
