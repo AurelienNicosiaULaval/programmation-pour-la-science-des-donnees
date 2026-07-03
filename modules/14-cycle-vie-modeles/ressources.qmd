@@ -18,6 +18,7 @@ format:
 
 - Mitchell et al. (2019), [Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993)
 - Gebru et al. (2021), [Datasheets for Datasets](https://arxiv.org/abs/1803.09010)
+- Sculley et al. (2015), [Hidden Technical Debt in Machine Learning Systems](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems)
 - NIST (2023), [AI Risk Management Framework 1.0](https://www.nist.gov/itl/ai-risk-management-framework)
 - rOpenSci, [The targets R package user manual](https://books.ropensci.org/targets/)
 
@@ -29,6 +30,7 @@ Ces références servent à structurer la documentation, les limites et le suivi
 - Les données d'entrée sont-elles identifiables?
 - La validation est-elle documentée?
 - Les limites sont-elles explicites?
+- Les risques liés aux données, au code, aux usages et à l’interprétation sont-ils nommés?
 - Une vérification future est-elle prévue?
 - La personne responsable de la prochaine action est-elle identifiable?
 
@@ -58,7 +60,13 @@ Ces références servent à structurer la documentation, les limites et le suivi
 
 ## Limites
 
-## Risques
+## Risques liés aux données
+
+## Risques liés au code
+
+## Risques liés aux usages
+
+## Risques liés à l’interprétation
 
 ## Vérification future
 ```

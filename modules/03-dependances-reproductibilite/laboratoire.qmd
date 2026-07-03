@@ -76,11 +76,11 @@ Créer `docs/dependances.md`.
 
 ## Version de R
 
-À compléter avec `R.version.string`.
+Champ à compléter par la personne étudiante avec `R.version.string`.
 
 ## Packages utilisés
 
-- À compléter selon les scripts présents.
+- Champ à compléter par la personne étudiante selon les scripts présents.
 
 ## Gestion des dépendances
 

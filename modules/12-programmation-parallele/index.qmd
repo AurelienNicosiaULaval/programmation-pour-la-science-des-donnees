@@ -49,7 +49,7 @@ L'IA peut vous aider à convertir une syntaxe d'itération complexe ou à compre
 
 ## Variante STT-6230
 
-Analyser théoriquement et empiriquement les limites d'accélération de votre simulation en appliquant la **Loi d'Amdahl**, et estimer la proportion de code strictement séquentielle de votre algorithme.
+Analyser théoriquement et empiriquement les limites d'accélération d'une simulation ou d'un traitement du projet en appliquant la **Loi d'Amdahl**. La trace attendue est un calcul de speedup, une estimation de la portion séquentielle et une recommandation sur l’intérêt réel de paralléliser.
 
 ## Pages du module
 

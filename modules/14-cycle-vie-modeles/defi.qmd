@@ -15,6 +15,7 @@ Documenter le suivi minimal d’un modèle ou d’un pipeline de modélisation.
 - Identifier les données et la version du code.
 - Résumer la validation effectuée.
 - Décrire les limites.
+- Nommer au moins un risque lié aux données, au code, à l’usage ou à l’interprétation.
 - Proposer une vérification future.
 
 ## Livrable attendu
@@ -24,3 +25,15 @@ Documenter le suivi minimal d’un modèle ou d’un pipeline de modélisation.
 - note sur les risques;
 - trace Git;
 - déclaration IA si pertinente.
+
+## Critères de réussite
+
+- La fiche renvoie à un fichier, un rapport ou un commit précis.
+- Les données sont identifiables sans être republiées si elles ne doivent pas l’être.
+- La validation est décrite en mots, pas seulement par un score.
+- Les limites indiquent ce que le modèle ne permet pas de conclure.
+- La vérification future est suffisamment concrète pour être exécutée.
+
+## Variante STT-6230
+
+Ajouter une courte note qui compare deux choix de suivi et explique le compromis retenu. Exemples: refaire une validation complète à chaque nouvelle donnée, surveiller seulement quelques indicateurs, comparer le modèle à une référence simple, ou déclencher une révision seulement si un seuil d’alerte est dépassé.

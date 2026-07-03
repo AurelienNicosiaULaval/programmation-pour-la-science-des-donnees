@@ -45,6 +45,10 @@ Statut : **IA permise, déclarée** (Niveau 2).
 
 Tout usage significatif qui influence le choix du modèle, le code, l’interprétation ou la rédaction doit être documenté dans `docs/ai-log.md`.
 
+## Variante STT-6230
+
+Ajouter une validation supplémentaire reliée au projet: comparaison avec une référence simple, validation croisée courte, analyse de sensibilité ou discussion d’un risque méthodologique. La trace attendue est une note technique qui explique ce qui change dans l’interprétation du résultat.
+
 ## Pages du module
 
 - [Avant la classe](avant.qmd)

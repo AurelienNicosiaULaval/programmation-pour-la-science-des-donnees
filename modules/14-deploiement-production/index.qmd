@@ -45,6 +45,10 @@ Statut : **IA permise, déclarée** (Niveau 2).
 
 Tout usage significatif qui influence la documentation, le code ou l’analyse des risques doit être documenté dans `docs/ai-log.md`.
 
+## Variante STT-6230
+
+Comparer deux stratégies de reproduction ou de livraison du projet: rapport autonome, script de relance, environnement `renv`, automatisation simple ou vérification par GitHub Actions. La trace attendue est une note technique qui recommande une option réaliste et nomme ses limites.
+
 ## Pages du module
 
 - [Avant la classe](avant.qmd)

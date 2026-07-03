@@ -14,6 +14,8 @@ Stabiliser la fiche de suivi et vérifier qu’elle serait compréhensible sans 
 - Relire la fiche de suivi.
 - Vérifier que les données et la version du code sont identifiables.
 - Ajouter une limite si elle manque.
+- Ajouter un risque de dérive ou de mauvais usage si la fiche ne contient que des scores.
+- Vérifier que la prochaine action est assez concrète pour être refaite.
 - Faire un commit si le document a été corrigé.
 
 ## Réflexion courte
@@ -23,3 +25,13 @@ Répondre dans le journal:
 - Quelle vérification devrait être refaite plus tard?
 - Quelle utilisation du modèle serait risquée?
 - Quelle information manque encore?
+
+## Trace portfolio finale
+
+Conserver:
+
+- le chemin de la fiche de suivi;
+- le commit associé;
+- la donnée ou source utilisée;
+- la vérification future prévue;
+- la déclaration IA si l’IA a influencé la documentation, le diagnostic ou l’interprétation.

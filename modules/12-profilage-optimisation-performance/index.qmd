@@ -51,7 +51,7 @@ L'IA peut vous aider à proposer des versions vectorisées de fonctions itérati
 
 ## Variante STT-6230
 
-Analyser l'impact de la compilation à la volée (Byte-Code Compiler, package `compiler`) en R sur les performances de boucles imbriquées non optimisables par rapport à une version vectorisée native.
+Analyser une optimisation supplémentaire sur un code du portfolio ou du projet: compilation avec `compiler`, vectorisation, pré-allocation ou simplification d’un algorithme. La trace attendue est un benchmark reproductible, une comparaison avant/après et une note expliquant le compromis entre performance, lisibilité et maintenance.
 
 ## Pages du module
 

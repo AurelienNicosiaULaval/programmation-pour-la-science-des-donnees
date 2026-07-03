@@ -13,6 +13,10 @@ Préparer les notions de suivi, validation, limites et maintenance d’un modèl
 
 Relire les pages du portfolio, du projet et de la politique IA en portant attention aux traces de validation.
 
+## Lecture externe courte
+
+Lire rapidement la structure des *model cards* de Mitchell et al. (2019), puis repérer trois éléments utiles pour votre propre fiche: usage prévu, limites, performance ou données d’évaluation.
+
 ## Geste à reproduire
 
 Choisir un modèle ou pipeline existant et noter:
@@ -26,3 +30,10 @@ Choisir un modèle ou pipeline existant et noter:
 ## Trace attendue
 
 Ajouter une courte note de préparation dans le portfolio.
+
+## Questions de préparation
+
+- Quelle information serait difficile à retrouver dans trois mois?
+- Quelle donnée pourrait changer avant une réutilisation?
+- Quel score ou indicateur devrait être comparé à une référence simple?
+- Quelle phrase empêcherait une mauvaise interprétation du résultat?

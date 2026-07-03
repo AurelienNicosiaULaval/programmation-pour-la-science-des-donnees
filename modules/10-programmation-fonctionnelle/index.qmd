@@ -48,7 +48,7 @@ L'IA peut vous aider à générer des cas de tests unitaires ou à comprendre un
 
 ## Variante STT-6230
 
-Comparer l'utilisation de `purrr::map()` avec le calcul parallèle via le package `furrr` (ex: `future_map()`) en termes de surcharge (overhead) et de gain de performance pour des tâches simulées à forte intensité de calcul.
+Comparer l'utilisation de `purrr::map()` avec une stratégie alternative pour la même tâche: boucle explicite, fonction vectorisée ou `furrr::future_map()`. La trace attendue est un script reproductible, un tableau de comparaison et une note courte justifiant le choix retenu pour le portfolio ou le projet.
 
 ## Pages du module
 

@@ -15,6 +15,7 @@ Comment documenter et maintenir un modèle après sa première mise au point?
 - décrire les étapes du cycle de vie d’un modèle;
 - documenter les données, la version du code et les résultats;
 - repérer les risques de dérive ou de mauvaise utilisation;
+- distinguer les risques liés aux données, au code, aux usages et à l’interprétation;
 - proposer une stratégie de suivi;
 - relier validation technique et responsabilité professionnelle.
 
@@ -35,15 +36,32 @@ Ce bloc prépare la discussion finale de la semaine 15: présentation, revue de 
 ## Trace attendue
 
 - une fiche de suivi de modèle;
-- une note sur les hypothèses et limites;
-- une procédure de vérification;
-- une réflexion sur la maintenance.
+- une note sur les hypothèses, limites et usages à éviter;
+- une procédure de vérification future;
+- une trace portfolio indiquant le fichier, le commit, la validation et la prochaine action.
+
+## Risques à documenter
+
+La fiche de suivi doit nommer au moins trois familles de risques:
+
+| Famille | Exemple de question |
+|---|---|
+| Données | Les données futures auront-elles la même définition, la même source et la même qualité? |
+| Code | Le résultat dépend-il d’une version précise du script, d’un package ou d’un paramètre? |
+| Usage | Le modèle pourrait-il être utilisé pour une population, une période ou une décision non prévue? |
+| Interprétation | Le score de performance risque-t-il d’être lu comme une preuve plus forte qu’il ne l’est? |
+
+Le but n’est pas d’écrire un dossier de conformité. Le but est de rendre le modèle défendable dans la présentation finale.
 
 ## Place de l’IA
 
 Statut : **IA permise, déclarée** (Niveau 2).
 
 Tout usage significatif qui influence le diagnostic, la documentation, la vérification ou l’interprétation doit être documenté dans `docs/ai-log.md`.
+
+## Variante STT-6230
+
+Ajouter une note technique courte qui compare deux stratégies de suivi. Exemples: seuil fixe de performance versus comparaison à une référence, validation périodique versus validation déclenchée par un changement de données, ou fiche de suivi minimale versus fiche de type *model card*. La note doit conclure par une recommandation reliée au projet.
 
 ## Pages du module
 

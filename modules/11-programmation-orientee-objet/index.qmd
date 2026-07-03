@@ -48,7 +48,7 @@ L'IA peut vous aider à générer le squelette (boilerplate) d'une classe R6 ou 
 
 ## Variante STT-6230
 
-Comparer de manière formelle les performances en termes de vitesse et d'allocation mémoire (avec le package `bench`) lors de la création et de la modification répétée d'un grand nombre d'instances S3 (structures de listes) versus R6 (objets de référence), et analyser l'impact du ramasse-miettes (garbage collector) de R.
+Comparer une solution S3 et une solution R6 pour un besoin réel ou réaliste du projet. La trace attendue est un exemple minimal de chaque approche, un test d’invariant et une note courte sur le compromis entre simplicité, mutabilité, performance et maintenance.
 
 ## Pages du module
 

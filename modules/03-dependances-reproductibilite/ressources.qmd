@@ -62,7 +62,7 @@ format:
 
 ## Version de R
 
-À compléter.
+Champ à compléter par la personne étudiante dans son portfolio avec `R.version.string`.
 
 ## Packages
 

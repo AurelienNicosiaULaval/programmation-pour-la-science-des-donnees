@@ -9,7 +9,11 @@ format:
 
 Créer une fiche de suivi pour un modèle ou un pipeline analytique.
 
-## Activité guidée
+## Résultat attendu
+
+Produire `docs/fiche-suivi-modele.md` ou une section équivalente dans le journal du portfolio. La fiche doit permettre à une autre personne de comprendre ce qui a été entraîné ou validé, avec quelles données, dans quelle version du code, et dans quelles limites.
+
+## Activité guidée, 35 à 45 minutes
 
 1. Identifier le modèle ou pipeline.
 2. Décrire les données utilisées.
@@ -18,9 +22,69 @@ Créer une fiche de suivi pour un modèle ou un pipeline analytique.
 5. Ajouter les limites d’utilisation.
 6. Proposer une vérification future.
 
+## Exemple minimal de fiche
+
+```markdown
+# Fiche de suivi du modèle
+
+## Objectif
+
+Prédire ou résumer ...
+
+## Données utilisées
+
+Source:
+Période:
+Variables principales:
+Limites connues:
+
+## Version du code
+
+Commit:
+Script ou rapport:
+Packages importants:
+
+## Validation effectuée
+
+Méthode:
+Mesure:
+Résultat:
+Référence ou baseline:
+
+## Risques
+
+- Données: ...
+- Code: ...
+- Usage: ...
+- Interprétation: ...
+
+## Vérification future
+
+À refaire lorsque ...
+Critère d’alerte:
+Prochaine action:
+```
+
+## Activité de repérage de dérive
+
+À partir de votre projet ou d’un exemple simple, remplir le tableau suivant:
+
+| Élément surveillé | Valeur actuelle | Changement qui inquiéterait | Vérification possible |
+|---|---|---|---|
+| Nombre de lignes |  |  |  |
+| Variable cible ou résultat principal |  |  |  |
+| Proportion de valeurs manquantes |  |  |  |
+| Score ou indicateur de validation |  |  |  |
+
+La vérification peut être simple: comparer une distribution, refaire un score sur un échantillon récent, relancer un test ou inspecter une sortie.
+
 ## Trace attendue
 
 - fiche de suivi;
-- note sur les limites;
-- vérification future;
-- commit ciblé.
+- note sur les limites et usages à éviter;
+- vérification future avec critère d’alerte;
+- entrée de portfolio indiquant le fichier, le commit et la prochaine action.
+
+## Variante STT-6230
+
+Ajouter une comparaison de deux stratégies de suivi et recommander celle qui convient au projet. La comparaison doit tenir compte de la fréquence réaliste de mise à jour, du coût de validation et du risque d’interprétation.
