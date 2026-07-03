@@ -1,5 +1,5 @@
 ---
-title: "Collaboration, documentation et packaging - Avant la classe"
+title: "Site personnel, collaboration et documentation finale - Avant la classe"
 format:
   html:
     embed-resources: true
@@ -7,7 +7,7 @@ format:
 
 ## Objectif de préparation
 
-Vérifier d'abord les éléments nécessaires à la séance finale: dépôt final, README, support bref, issue ou pull request de revue, contributions, bilan individuel et déclaration IA.
+Vérifier d'abord les éléments nécessaires à la séance finale: site Quarto personnel publié, dépôt source du site, dépôt final du projet, README, support bref, issue ou pull request de revue, contributions, bilan individuel et déclaration IA.
 
 Si votre projet contient des fonctions réutilisables, préparer aussi l'option package R local: outils de compilation, packages de développement (`devtools`, `usethis`, `roxygen2`) et structure minimale d'un package. Cette partie est une consolidation technique, pas une nouvelle remise majeure imposée à toute l'équipe.
 
@@ -42,6 +42,17 @@ pkgbuild::has_build_tools()
 ```
 
 *Si la fonction retourne `TRUE`, vous êtes prêt ! Sinon, R vous invitera à installer les outils manquants.*
+
+### Étape 1 bis : Vérifier le site Quarto personnel
+
+Dans le dossier du site personnel, lancez:
+
+```bash
+quarto render
+git status
+```
+
+Le site doit aussi être consultable sur GitHub Pages avant la remise.
 
 ### Étape 2 : Modèle de commentaire `roxygen2`
 

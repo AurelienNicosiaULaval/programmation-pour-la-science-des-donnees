@@ -69,7 +69,7 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 | 12 | Optimisation et parallélisation | Mesurer, profiler, comparer, paralléliser avec `future` et `furrr` |
 | 13 | Défi 3 et consolidation | Défi individuel 1 h avec IA intégrée, puis post-mortem technique sur tests, limites et validation |
 | 14 | Synthèse finale: modèle, reproduction, cycle de vie | Modélisation minimale, reproduction du livrable, limites, suivi et maintenance |
-| 15 | Présentation, revue de code et bilan final | Démonstration, défense du projet, revue, contributions et bilan |
+| 15 | Site personnel, présentation et revue du projet | Site Quarto personnel, démonstration, défense du projet, revue et contributions |
 
 ## Évaluations
 
@@ -79,18 +79,18 @@ La structure suivante est retenue comme plan final d’évaluation.
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Semaines 2, 3, 4, 6, 7, 9, 10, 11 et 12 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
-| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14 | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
-| Revue de code, présentation et bilan final | 10 % | Équipe + individuel | Semaine 15 | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15 | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
 Les critères détaillés, les consignes et les différences entre STT-4230 et STT-6230 sont regroupés dans la page [Évaluations](evaluations.qmd).
 
 ## Modalités de remise
 
-Les remises mobilisent les traces suivantes selon l’évaluation: lien vers un dépôt GitHub, identifiant de commit, fichier Quarto rendu, rapport, note de conception, test ou entrée de portfolio. La page [Évaluations](evaluations.qmd) précise les traces attendues pour chaque composante.
+Les remises mobilisent les traces suivantes selon l’évaluation: lien vers un dépôt GitHub, lien GitHub Pages, identifiant de commit, fichier Quarto rendu, rapport, note de conception, test ou entrée de portfolio. La page [Évaluations](evaluations.qmd) précise les traces attendues pour chaque composante.
 
 Les exemples de dépôts GitHub du cours utilisent des URL SSH. Les remises publiques ne doivent pas contenir de données confidentielles, nominatives ou non autorisées.
 
@@ -99,5 +99,5 @@ Les exemples de dépôts GitHub du cours utilisent des URL SSH. Les remises publ
 - plateforme exacte de remise dans l’environnement institutionnel;
 - règles de retard et pénalités applicables;
 - noms, coordonnées et disponibilités de l’équipe enseignante;
-- date et plage horaire exacte de la présentation finale si elle est placée dans la période réservée aux examens;
+- date et plage horaire exacte de la séance finale si elle est placée dans la période réservée aux examens;
 - version finale déposée dans les systèmes institutionnels.

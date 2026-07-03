@@ -1,0 +1,18 @@
+---
+title: "Grille d’évaluation du site Quarto personnel"
+embed-resources: true
+---
+
+Cette grille stabilise la composante individuelle du site Quarto personnel. Elle compte pour 10 points.
+
+| Critère | Points | Indicateurs |
+|---|---:|---|
+| Publication et fonctionnement technique | 2 | site GitHub Pages accessible, navigation fonctionnelle, rendu Quarto sans erreur, chemins relatifs, dépôt source disponible |
+| Profil, parcours ou compétences | 1.5 | présentation claire, informations publiques choisies avec prudence, CV complet ou alternative synthétique acceptable |
+| Deux réalisations commentées | 3 | au moins une réalisation liée au portfolio et une liée au projet ou à un module avancé, contexte clair, outils nommés, résultat expliqué |
+| Qualité de communication | 1 | structure lisible, texte concis, liens utiles, captures ou images pertinentes seulement lorsque publiables |
+| Réflexion, confidentialité et IA | 1.5 | apprentissages nommés, limites ou améliorations indiquées, absence de données sensibles, déclaration IA lorsque pertinente |
+| Justification technique ou attente STT-6230 | 1 | choix technique expliqué; pour STT-6230, comparaison, validation supplémentaire, analyse de performance, limite méthodologique ou justification d’architecture intégrée à une réalisation |
+| Total | 10 |  |
+
+Pour STT-4230, le dernier point évalue une justification technique raisonnable d’une réalisation. Pour STT-6230, la justification attendue doit être plus approfondie.

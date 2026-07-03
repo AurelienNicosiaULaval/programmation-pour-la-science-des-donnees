@@ -12,7 +12,7 @@ Cette page est la synthèse opérationnelle du document [`stt4230_document_cadra
 | Dimension | Formulation retenue |
 |---|---|
 | Nature du cours | Cours de laboratoire informatique de 3 h par semaine, le mercredi après-midi. |
-| Méthodologie | Projet filé, studio de programmation, portfolio GitHub, défis techniques et revue de code. |
+| Méthodologie | Projet filé, studio de programmation, portfolio GitHub, défis techniques, site Quarto personnel et revue de code. |
 | Technologie | R, Positron recommandé, RStudio en repli, GitHub, Quarto, `renv`, Shiny ou Quarto dashboard, `targets`, `tidymodels`. |
 | IA générative | Autorisée de façon encadrée, transparente et vérifiable. Elle devient une compétence, pas une zone grise. |
 | Finalité | Former des personnes capables de développer, documenter, tester, collaborer et livrer un projet de science des données en R. |
@@ -29,6 +29,7 @@ Phrase directrice: à la fin du cours, l’étudiante ou l’étudiant ne sait p
 |---|---|---|
 | Projet filé | Donner une cohérence à tous les modules | Dépôt d’équipe, rapport, application ou dashboard, pipeline, documentation |
 | Portfolio individuel | Documenter la progression personnelle | Dépôt individuel avec modules, scripts, rapports, `ai-log`, bilan |
+| Site Quarto personnel | Valoriser les meilleures traces individuelles dans une vitrine publique | Site GitHub Pages, profil public, deux réalisations commentées |
 | Studio de programmation | Utiliser le laboratoire pour produire, corriger et discuter | Commits, corrections, revue de code, livrable court |
 | Sprints | Structurer la progression en blocs de 2 ou 3 semaines | Jalons du projet, rétroactions régulières |
 | Revue de code | Développer la lecture critique et la collaboration | Issues, pull requests, commentaires, refactorisations |
@@ -69,7 +70,7 @@ Une lecture ne doit jamais être seulement un texte. Elle doit contenir un geste
 | 12 | Optimisation et parallélisation | Mesurer, profiler, comparer, paralléliser avec `future` et `furrr` |
 | 13 | Défi 3 | Diagnostic technique avec IA intégrée et vérification obligatoire |
 | 14 | Synthèse finale: modèle, reproduction, cycle de vie | Modélisation minimale, reproduction du livrable, limites, suivi et maintenance |
-| 15 | Présentation, revue de code et bilan final | Démonstration, défense du projet, revue, contributions et bilan |
+| 15 | Site personnel, présentation et revue du projet | Site Quarto personnel, démonstration, défense du projet, revue et contributions |
 
 ## Architecture des évaluations
 
@@ -77,11 +78,11 @@ Une lecture ne doit jamais être seulement un texte. Elle doit contenir un geste
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Semaines 2, 3, 4, 6, 7, 9, 10, 11 et 12 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
-| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14 | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire | Semaine 13 | Intégrée |
-| Revue de code, présentation et bilan final | 10 % | Équipe + individuel | Semaine 15 | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15 | Permise, déclarée |
 
 ## Jalons d’évaluation
 
@@ -92,11 +93,11 @@ Une lecture ne doit jamais être seulement un texte. Elle doit contenir un geste
 | 5 | Défi technique 1 |
 | 6 | Jalon projet 1: proposition, dépôt, données, plan |
 | 8 | Défi technique 2 |
-| 10 | Jalon portfolio: fonctions, scripts, documentation |
+| 9 | Jalon portfolio: fonctions, scripts, documentation |
 | 12 | Jalon projet 2: pipeline, visualisations, rapport ou application partielle |
 | 13 | Défi technique 3 |
 | 14 | Remise finale du projet et du portfolio |
-| 15 | Présentations, revue de code et bilan final |
+| 15 | Site Quarto personnel, présentations et revue du projet |
 
 ## Portfolio individuel
 

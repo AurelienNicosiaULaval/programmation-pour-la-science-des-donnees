@@ -1,0 +1,173 @@
+---
+title: "Template minimal de site Quarto personnel"
+embed-resources: true
+---
+
+Ce template donne une structure minimale pour créer le site Quarto personnel. Il peut être adapté librement, à condition de conserver un site public clair, vérifiable et sans information sensible.
+
+## Structure minimale
+
+```text
+site-personnel/
+  _quarto.yml
+  index.qmd
+  cv.qmd
+  realisations.qmd
+  styles.css
+  README.md
+```
+
+## `_quarto.yml`
+
+```yaml
+project:
+  type: website
+  output-dir: _site
+
+lang: fr
+
+website:
+  title: "Prénom Nom"
+  navbar:
+    left:
+      - text: "Accueil"
+        href: index.qmd
+      - text: "Parcours"
+        href: cv.qmd
+      - text: "Réalisations"
+        href: realisations.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    embed-resources: true
+```
+
+## `index.qmd`
+
+```markdown
+---
+title: "Prénom Nom"
+---
+
+## Présentation
+
+Court paragraphe de présentation académique ou professionnelle.
+
+## Intérêts
+
+- Science des données
+- Programmation R
+- Visualisation
+
+## Liens
+
+- GitHub: <https://github.com/identifiant>
+- Portfolio ou projet public: <lien>
+```
+
+## `cv.qmd`
+
+```markdown
+---
+title: "Parcours et compétences"
+---
+
+## Parcours
+
+Décrire brièvement le parcours ou les intérêts professionnels.
+
+## Compétences
+
+- R et tidyverse
+- Quarto
+- Git et GitHub
+- Visualisation de données
+
+## Expériences ou formations
+
+Ajouter uniquement les éléments que vous acceptez de rendre publics.
+```
+
+## `realisations.qmd`
+
+```markdown
+---
+title: "Réalisations"
+---
+
+## Réalisation 1: trace du portfolio
+
+Contexte:
+
+Production:
+
+Outils:
+
+Validation ou vérification:
+
+Ce que cette réalisation démontre:
+
+Limite ou amélioration possible:
+
+Lien public, si pertinent:
+
+## Réalisation 2: projet ou module avancé
+
+Contexte:
+
+Production:
+
+Outils:
+
+Validation ou vérification:
+
+Ce que cette réalisation démontre:
+
+Limite ou amélioration possible:
+
+Lien public, si pertinent:
+```
+
+## `styles.css`
+
+```css
+body {
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0;
+}
+```
+
+## `README.md`
+
+````markdown
+# Site personnel
+
+Site Quarto personnel réalisé dans le cadre du cours STT-4230 / STT-6230.
+
+## Rendu local
+
+```bash
+quarto render
+```
+
+## Publication
+
+La publication se fait avec GitHub Pages.
+````
+
+## Vérifications avant remise
+
+```bash
+quarto render
+git status
+```
+
+Le site publié doit être consulté dans le navigateur avant la remise finale.

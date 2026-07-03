@@ -1,5 +1,5 @@
 ---
-title: "Collaboration, documentation et packaging - Défi"
+title: "Site personnel, collaboration et documentation finale - Défi"
 format:
   html:
     embed-resources: true
@@ -7,7 +7,7 @@ format:
 
 ## Nature du défi
 
-Ce défi de module est une option de consolidation pour le portfolio ou le projet. Il ne remplace pas la composante évaluée de semaine 15, qui porte sur la présentation, la revue de code et le bilan final.
+Ce défi de module est une option de consolidation pour le portfolio, le projet ou le site personnel. Il ne remplace pas la composante évaluée de semaine 15, qui porte sur le site Quarto personnel individuel, ni la défense finale du projet d’équipe.
 
 ## Consignes du défi de la semaine
 

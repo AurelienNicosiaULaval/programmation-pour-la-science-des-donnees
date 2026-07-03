@@ -38,8 +38,8 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Page évaluations | Fait | Le tableau global, les rôles des défis, les traces attendues et les règles IA sont stabilisés. |
 | Politique IA | Fait | Les statuts IA et leurs formulations officielles sont stabilisés. |
 | Portfolio GitHub individuel | Fait | Jalons 3, 9 et 14, `renv.lock` lorsque pertinent, remise GitHub. |
-| Projet filé en équipe | Fait | Projet semi-dirigé, jalons 6, 9, 12, 14 et grille quantitative sur 30 points. |
-| Revue de code, présentation et bilan final | Fait | Consigne stabilisée avec grille quantitative sur 10 points. |
+| Projet filé en équipe | Fait | Projet semi-dirigé, jalons 6, 9, 12, 14, défense finale en semaine 15 et grille quantitative sur 30 points. |
+| Site Quarto personnel | Fait | Nouvelle composante individuelle de 10 %, remise à la dernière semaine, avec grille et template minimal. |
 | Gabarits de projet | Fait | Proposition de projet, contributions individuelles et journal IA. |
 | Gabarits hebdomadaires | Fait | Mini-test et journal de portfolio. |
 | Calendrier daté | Fait | Les mercredis de l’automne 2026, la semaine de lecture et les jalons principaux sont intégrés. La plage finale de présentation reste à confirmer. |
@@ -55,7 +55,7 @@ Chaque phase doit produire quelque chose de directement utilisable: une page sta
 | Module 12, performance | Fait | Profilage, benchmarking, optimisation et documentation des compromis. |
 | Module 12, parallèle | Fait | Calcul parallèle, choix de plan d’exécution et limites de performance. |
 | Modules 14 | Fait | Trois blocs de synthèse clarifiés: modélisation, reproduction du livrable et cycle de vie. |
-| Module 15 | Fait | Présentation, revue de code, bilan final et documentation finale clarifiés; le package R local reste une option de consolidation. |
+| Module 15 | Fait | Site personnel, présentation du projet, revue de code et documentation finale clarifiés; le package R local reste une option de consolidation. |
 | Défi technique 1 | Fait | Directives publiques de préparation sur le site; consigne exacte et fichier évalué à conserver hors site jusqu’au moment du défi. |
 | Semaines 1 à 5 | Fait | Parcours public simulé, checklist enseignante ajoutée, ressources de rattrapage prêtes et matériel exact du défi conservé hors site public. |
 | Couverture du contenu | Relue v1 | Les modules 6, 7, 10, 11, 12, 14 et 15 ont été harmonisés pour les traces portfolio, les statuts IA et les liens avec le projet filé. |
@@ -189,8 +189,9 @@ Livrables:
 - consigne du portfolio GitHub individuel;
 - consigne du projet filé en équipe;
 - page [Défis techniques](defis.qmd);
-- page [Revue de code, présentation et bilan final](presentation.qmd);
-- consigne de revue de code, présentation et bilan final;
+- page [Site Quarto personnel](site-personnel.qmd);
+- page [Présentation et revue du projet](presentation.qmd);
+- consigne du site Quarto personnel;
 - grilles d’évaluation;
 - modèle de contribution individuelle;
 - page de données autorisées;

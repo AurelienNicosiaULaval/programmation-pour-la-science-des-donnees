@@ -51,19 +51,19 @@ Le cours est structuré en 15 semaines:
 12. Optimisation et parallélisation
 13. Défi technique 3
 14. Synthèse finale: modèle, reproduction, cycle de vie
-15. Présentation, revue de code et bilan final
+15. Site personnel, présentation et revue du projet
 
 ## Évaluations
 
 Les évaluations valorisent le produit final, mais aussi le processus de développement: structure du dépôt, historique Git, tests, documentation, reproductibilité, revue de code et capacité à expliquer les choix.
 
-Les composantes prévues sont les mini-tests de préparation, le portfolio GitHub individuel, trois défis techniques, le projet filé en équipe, puis la présentation, la revue de code et le bilan final.
+Les composantes prévues sont les mini-tests de préparation, le portfolio GitHub individuel, trois défis techniques, le projet filé en équipe et le site Quarto personnel.
 
 ## Portfolio et GitHub
 
 Le portfolio individuel est construit progressivement. Il doit contenir des traces concrètes du travail: code, visualisations, rapports, applications ou prototypes, documentation, réflexions et déclarations d’usage de l’IA lorsque nécessaire.
 
-GitHub est utilisé pour versionner le travail, documenter les contributions, soutenir la revue de code et rendre la progression visible.
+GitHub est utilisé pour versionner le travail, documenter les contributions, soutenir la revue de code, publier le site personnel et rendre la progression visible.
 
 ## IA générative
 
@@ -77,4 +77,4 @@ La version v1 du site est organisée pour l’automne 2026. Les dates de session
 
 Les consignes exactes des défis techniques évalués et les fichiers de données associés ne sont pas publiés avant les séances prévues. Les règles de choix et de provenance des données sont regroupées dans [Données autorisées](donnees.qmd).
 
-Les éléments suivants restent à confirmer dans le plan institutionnel final: plateforme exacte de remise, règles de retard, disponibilités de l’équipe enseignante, noms et coordonnées, et plage horaire exacte de la séance finale de présentation si elle est placée dans la période réservée aux examens.
+Les éléments suivants restent à confirmer dans le plan institutionnel final: plateforme exacte de remise, règles de retard, disponibilités de l’équipe enseignante, noms et coordonnées, et plage horaire exacte de la séance finale si elle est placée dans la période réservée aux examens.

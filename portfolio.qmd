@@ -30,6 +30,7 @@ Grille détaillée: [Grille d’évaluation du portfolio](gabarits/grille-portfo
 - Relier les lectures, laboratoires, défis et projets.
 - Déclarer l’usage significatif de l’IA.
 - Préparer le bilan final individuel.
+- Sélectionner des réalisations qui pourront être valorisées dans le site Quarto personnel.
 
 ## Structure minimale
 
@@ -137,6 +138,8 @@ Les commits doivent rendre la progression visible. Un bon historique Git contien
 | Semaine 3 | Dépôt créé, README initial, structure de dossiers, conventions de base, premières traces hebdomadaires |
 | Semaine 9 | Progression visible, plusieurs modules documentés, fonctions ou scripts réutilisables, premières validations, `ai-log` si pertinent |
 | Semaine 14 | Portfolio complet, README à jour, traces hebdomadaires organisées, bilan final, usages IA déclarés |
+
+Le site Quarto personnel remis en semaine 15 utilise au moins une réalisation issue du portfolio, mais il constitue une composante évaluée distincte.
 
 ## Traces professionnelles à accumuler
 

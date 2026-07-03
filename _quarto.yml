@@ -80,13 +80,16 @@ website:
         - evaluations.qmd
         - portfolio.qmd
         - projets.qmd
+        - site-personnel.qmd
         - defis.qmd
         - defis/preparation-defi-technique-1.qmd
         - presentation.qmd
         - gabarits/grille-portfolio.qmd
         - gabarits/grille-projet.qmd
+        - gabarits/grille-site-personnel.qmd
         - gabarits/grille-defis-techniques.qmd
         - gabarits/grille-presentation-bilan.qmd
+        - gabarits/template-site-personnel.qmd
         - ia.qmd
     - id: ressources
       title: "Ressources"
@@ -110,11 +113,13 @@ website:
 format:
   html:
     theme:
-      light: cosmo
-    css: assets/css/styles.scss
+      light:
+        - cosmo
+        - assets/css/styles.scss
     toc: true
     toc-depth: 3
     number-sections: false
+    html-math-method: mathml
     embed-resources: true
 
 execute:

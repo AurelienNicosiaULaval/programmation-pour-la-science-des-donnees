@@ -1,16 +1,15 @@
 ---
-title: "Grille d’évaluation de la présentation et du bilan final"
+title: "Grille de présentation et revue du projet"
 embed-resources: true
 ---
 
-Cette grille stabilise la composante finale: revue de code, présentation et bilan. Elle compte pour 10 points.
+Cette grille sert de repère pour la défense du projet en semaine 15. La présentation, la revue de code et le bilan final sont intégrés au projet filé en équipe; ils ne constituent pas une composante séparée de 10 %.
 
-| Critère | Type | Points | Indicateurs |
-|---|---|---:|---|
-| Présentation et démonstration | Équipe | 2 | question claire, produit montré, résultat compréhensible |
-| Revue de code | Équipe | 2 | extrait pertinent, rôle du code expliqué, limites nommées |
-| Validations, limites et compromis | Équipe | 2 | tests ou contrôles présentés, choix justifiés, améliorations réalistes |
-| Contributions individuelles | Individuel | 2 | traces GitHub, `docs/contributions.md`, bilan individuel cohérent |
-| Réponses aux questions | Équipe + individuel | 1 | capacité à défendre les choix et à reconnaître les limites |
-| Transparence IA et attentes STT-6230 | Équipe + individuel | 1 | `ai-log.md` cohérent, note STT-6230 expliquée lorsque pertinente |
-| Total |  | 10 |  |
+| Critère | Type | Indicateurs |
+|---|---|---|
+| Présentation et démonstration | Équipe | question claire, produit montré, résultat compréhensible |
+| Revue de code | Équipe | extrait pertinent, rôle du code expliqué, limites nommées |
+| Validations, limites et compromis | Équipe | tests ou contrôles présentés, choix justifiés, améliorations réalistes |
+| Contributions individuelles | Individuel | traces GitHub, `docs/contributions.md`, bilan individuel cohérent |
+| Réponses aux questions | Équipe + individuel | capacité à défendre les choix et à reconnaître les limites |
+| Transparence IA et attentes STT-6230 | Équipe + individuel | `ai-log.md` cohérent, note STT-6230 expliquée lorsque pertinente |

@@ -1,0 +1,104 @@
+---
+title: "Site Quarto personnel"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette composante compte pour 10 % de la note finale. Elle est individuelle et remise à la dernière semaine du cours. L’objectif est de transformer une partie du portfolio et du projet en vitrine publique, professionnelle et techniquement correcte.
+
+Grille détaillée: [Grille du site Quarto personnel](gabarits/grille-site-personnel.qmd).
+
+Template minimal: [Template minimal de site Quarto personnel](gabarits/template-site-personnel.qmd).
+
+## Objectif
+
+Créer un petit site web avec Quarto et GitHub Pages pour présenter:
+
+- un profil académique ou professionnel;
+- un CV public, une fiche de compétences ou un parcours synthétique;
+- au moins deux réalisations commentées issues du cours;
+- une réflexion courte sur les apprentissages et les choix techniques.
+
+Le site doit être assez simple pour être maintenu après le cours. Il n’est pas évalué comme un exercice de design graphique, mais comme un livrable de communication technique: clair, publiable, vérifiable et professionnel.
+
+## Modalités
+
+| Élément | Modalité |
+|---|---|
+| Pondération | 10 % |
+| Type | Individuel |
+| Moment | Semaine 15 |
+| Support | Site Quarto publié sur GitHub Pages et dépôt GitHub source |
+| IA | Permise, déclarée |
+
+## Contenu minimal
+
+Le site doit contenir au minimum:
+
+- une page d’accueil ou une page `À propos`;
+- une page `CV`, `Parcours` ou `Compétences`;
+- une page `Réalisations`;
+- au moins deux réalisations commentées;
+- une déclaration d’usage de l’IA si l’IA a influencé de façon significative le texte, la structure, le code ou le design du site.
+
+Les deux réalisations doivent inclure:
+
+- une trace issue du portfolio individuel;
+- une trace issue du projet d’équipe ou d’un module avancé.
+
+Chaque réalisation doit expliquer brièvement:
+
+- le contexte;
+- ce qui a été produit;
+- les outils ou méthodes utilisés;
+- ce qui a été vérifié ou validé;
+- ce que la réalisation démontre;
+- une limite ou une piste d’amélioration.
+
+## Confidentialité et publication
+
+Le site est public. Chaque personne choisit donc ce qu’elle rend visible.
+
+Ne pas publier:
+
+- adresse personnelle;
+- numéro de téléphone personnel;
+- information confidentielle;
+- données non autorisées;
+- clés, jetons, mots de passe ou secrets;
+- fichiers de données dont la redistribution n’est pas permise.
+
+Le CV complet n’est pas obligatoire. Une page de compétences, de parcours ou de profil professionnel est suffisante si la personne ne souhaite pas publier un CV détaillé.
+
+## Remise
+
+La remise doit permettre de retrouver:
+
+- l’adresse du site publié;
+- l’adresse du dépôt GitHub source;
+- le dernier commit évalué;
+- les deux réalisations commentées;
+- la déclaration IA lorsque pertinente.
+
+Le site doit être rendu et vérifié avant la remise. Un lien GitHub Pages qui ne fonctionne pas au moment de la correction ne permet pas de vérifier l’objectif de publication.
+
+## Attentes pour STT-6230
+
+Pour STT-6230, au moins une réalisation doit inclure une dimension technique supplémentaire, par exemple:
+
+- comparaison de deux approches;
+- validation plus formelle;
+- analyse de performance;
+- limite méthodologique discutée;
+- automatisation de publication ou de vérification;
+- justification d’architecture.
+
+Cette attente ne demande pas un site plus volumineux. Elle demande une réalisation mieux justifiée.
+
+## Références utiles
+
+- [Quarto: Creating a Website](https://quarto.org/docs/websites/)
+- [Quarto: Publishing to GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+- [GitHub Pages](https://pages.github.com/)
+- [GitHub Docs: Creating a GitHub Pages site](https://docs.github.com/articles/creating-project-pages-manually)

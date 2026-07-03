@@ -1,5 +1,5 @@
 ---
-title: "Collaboration, documentation et packaging - Après la classe"
+title: "Site personnel, collaboration et documentation finale - Après la classe"
 format:
   html:
     embed-resources: true
@@ -7,7 +7,7 @@ format:
 
 ## Consolidation et livrables
 
-Après la séance finale, vous devez vérifier que les traces évaluées sont bien déposées: dépôt final, support bref, revue de code, `docs/contributions.md`, déclaration IA lorsque pertinente et bilan individuel.
+Après la séance finale, vous devez vérifier que les traces évaluées sont bien déposées: site Quarto personnel publié, dépôt source du site, dépôt final du projet, support bref, revue de code, `docs/contributions.md`, déclaration IA lorsque pertinente et bilan individuel.
 
 Si vous avez réalisé l'option package R local, ajoutez aussi les traces techniques correspondantes dans votre portfolio ou dans le dépôt de projet.
 

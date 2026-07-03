@@ -25,11 +25,11 @@ Les évaluations reconnaissent la qualité du produit final et la qualité du pr
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Semaines 2, 3, 4, 6, 7, 9, 10, 11 et 12 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
-| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14 | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
-| Revue de code, présentation et bilan final | 10 % | Équipe + individuel | Semaine 15 | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15 | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
 Cette table remplace les formulations provisoires précédentes.
@@ -64,11 +64,11 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 |---|---|
 | Mini-tests de préparation | Résultat du quiz, micro-réponse personnelle liée au module, question ou difficulté à apporter au laboratoire |
 | Portfolio GitHub individuel | Dépôt individuel, dossiers hebdomadaires, scripts, fonctions, rapports, README, conventions, `ai-log`, bilan final, commits réguliers |
-| Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, pipeline de modèle, documentation, issues, contributions, `ai-log` |
+| Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, pipeline de modèle, documentation, issues, contributions, `ai-log`, présentation et revue de code |
 | Défi 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
 | Défi 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `ai-log` ou fichier de réflexion IA |
 | Défi 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
-| Revue de code, présentation et bilan final | Pull request ou issue, commentaire de revue, support de présentation, démonstration, bilan individuel, contributions vérifiables |
+| Site Quarto personnel | Site publié sur GitHub Pages, dépôt source, page de présentation ou compétences, au moins deux réalisations commentées, déclaration IA si pertinente |
 
 ## Grilles détaillées
 
@@ -76,8 +76,9 @@ Les grilles suivantes stabilisent les critères utilisés pour la version v1:
 
 - [Grille du portfolio](gabarits/grille-portfolio.qmd)
 - [Grille du projet](gabarits/grille-projet.qmd)
+- [Grille du site Quarto personnel](gabarits/grille-site-personnel.qmd)
 - [Grille des défis techniques](gabarits/grille-defis-techniques.qmd)
-- [Grille de la présentation et du bilan final](gabarits/grille-presentation-bilan.qmd)
+- [Grille de présentation et revue du projet](gabarits/grille-presentation-bilan.qmd)
 
 ## Trace hebdomadaire du portfolio
 
@@ -98,7 +99,7 @@ L’utilisation d’outils d’IA générative n’est pas permise pour cette é
 
 ### IA permise, déclarée
 
-Cette règle s’applique au portfolio GitHub individuel, au projet filé en équipe, au défi technique 2 et à la revue de code, présentation et bilan final.
+Cette règle s’applique au portfolio GitHub individuel, au projet filé en équipe, au défi technique 2 et au site Quarto personnel.
 
 L’utilisation d’outils d’IA générative est permise, à condition d’être déclarée lorsque l’aide obtenue influence de manière significative le code, la documentation, l’analyse ou le livrable remis. L’étudiante ou l’étudiant doit documenter l’usage dans le fichier `ai-log.md` ou dans la section prévue à cet effet. Le travail remis doit être compris, vérifié, adapté au contexte du projet et défendable. Le fait de remettre du code ou du texte non compris, non vérifié ou non déclaré peut être pénalisé.
 
@@ -128,9 +129,15 @@ Le projet filé en équipe intègre plusieurs compétences du cours dans un dép
 
 La contribution individuelle doit être vérifiable par Git, issues, pull requests, fichier de contributions, bilan individuel et questions orales si nécessaire.
 
-### Revue de code, présentation et bilan final
+La présentation, la revue de code et le bilan final de la semaine 15 font partie de la défense du projet. Ils ne constituent plus une composante séparée de 10 %. Ils servent à vérifier que le dépôt remis peut être expliqué, relu, défendu et discuté.
 
-Cette composante combine une revue de code, une présentation du produit et un bilan final. Elle comporte une part d’équipe et une part individuelle. Elle permet de vérifier les décisions de conception, les limites, les validations effectuées, la contribution individuelle et les apprentissages.
+### Site Quarto personnel
+
+Le site Quarto personnel est une composante individuelle de synthèse. Chaque personne publie un court site avec Quarto et GitHub Pages pour présenter son profil académique ou professionnel, son parcours ou ses compétences, et au moins deux réalisations issues du cours.
+
+Le site doit inclure au moins une réalisation liée au portfolio individuel et au moins une réalisation liée au projet d’équipe ou à un module avancé. Les liens vers dépôts, rapports, captures ou applications ne doivent être utilisés que si leur publication est autorisée.
+
+Le CV complet, la photo, l’adresse, le numéro de téléphone et les renseignements personnels ne sont pas obligatoires. Une page de compétences ou de parcours synthétique est acceptée si la personne ne souhaite pas publier un CV complet.
 
 ## Grille commune de qualité
 
@@ -146,4 +153,4 @@ Cette composante combine une revue de code, une présentation du produit et un b
 
 STT-4230 exige des livrables fonctionnels, reproductibles, bien structurés et documentés. STT-6230 ajoute une justification technique, une comparaison d’approches, des tests supplémentaires, une analyse de performance ou une note méthodologique courte selon le livrable.
 
-Consulter aussi les pages [Portfolio individuel](portfolio.qmd), [Projets](projets.qmd), [Défis techniques](defis.qmd), [Données autorisées](donnees.qmd), [Politique IA](ia.qmd) et [Revue de code, présentation et bilan final](presentation.qmd).
+Consulter aussi les pages [Portfolio individuel](portfolio.qmd), [Projets](projets.qmd), [Site Quarto personnel](site-personnel.qmd), [Défis techniques](defis.qmd), [Données autorisées](donnees.qmd), [Politique IA](ia.qmd) et [Présentation et revue du projet](presentation.qmd).

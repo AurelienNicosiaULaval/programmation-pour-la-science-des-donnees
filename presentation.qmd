@@ -1,27 +1,29 @@
 ---
-title: "Revue de code, présentation et bilan final"
+title: "Présentation et revue du projet"
 format:
   html:
     embed-resources: true
 ---
 
-Cette composante compte pour 10 % de la note finale. Elle combine une part d’équipe et une part individuelle. L’IA est permise et déclarée.
+Cette page décrit la défense finale du projet filé en équipe. La présentation, la revue de code et le bilan final sont intégrés au projet d’équipe de 30 %. Ils ne constituent pas une composante séparée de 10 %.
 
-Grille détaillée: [Grille d’évaluation de la présentation et du bilan final](gabarits/grille-presentation-bilan.qmd).
+Le 10 % individuel de fin de session correspond maintenant au [site Quarto personnel](site-personnel.qmd).
+
+Repère de correction: [Grille de présentation et revue du projet](gabarits/grille-presentation-bilan.qmd).
 
 ## Objectif
 
 Vérifier que l’équipe peut expliquer le produit livré, les choix techniques, les limites, les validations effectuées et les contributions individuelles.
 
-Cette composante n’est pas une deuxième correction complète du projet. Elle sert à vérifier que le dépôt remis peut être défendu, relu, expliqué et discuté.
+Cette séance n’est pas une deuxième correction complète du projet. Elle sert à vérifier que le dépôt remis peut être défendu, relu, expliqué et discuté.
 
 ## Modalités
 
 | Élément | Modalité |
 |---|---|
-| Pondération | 10 % |
+| Composante | Projet filé en équipe |
 | Moment | Semaine 15 |
-| Type | Équipe + individuel |
+| Type | Équipe, avec questions individuelles possibles |
 | Support | Dépôt GitHub final, démonstration et bref support de présentation |
 | IA | Permise, déclarée |
 
@@ -46,7 +48,7 @@ Avant la présentation, chaque équipe doit avoir stabilisé:
 - `docs/ai-log.md` lorsque l’IA a été utilisée de façon significative;
 - `docs/note-technique-stt6230.md` pour les personnes inscrites à STT-6230;
 - une issue ou pull request utilisée pour la revue de code;
-- un bilan individuel final.
+- un bilan individuel final ou une section équivalente dans le portfolio.
 
 ## Remise avant la séance
 
@@ -103,7 +105,7 @@ Pendant la revue, l’équipe doit expliquer:
 
 ## Bilan individuel
 
-Chaque personne remet un court bilan individuel. Ce bilan peut être intégré au portfolio ou remis dans le dépôt d’équipe, selon la consigne finale.
+Chaque personne doit pouvoir expliquer sa contribution. Le bilan individuel peut être intégré au portfolio ou remis dans le dépôt d’équipe, selon la consigne finale.
 
 Le bilan doit indiquer:
 
@@ -125,25 +127,9 @@ Le bilan ne remplace pas les traces GitHub. Il sert à les expliquer.
 - Démonstration.
 - Dépôt final propre.
 - `docs/contributions.md`.
-- Bilan final individuel.
+- Bilan final individuel ou lien vers le portfolio.
 - Contributions vérifiables.
 - Déclaration IA si l’IA a été utilisée de façon significative.
-
-## Répartition quantitative
-
-La composante compte pour 10 points.
-
-| Élément évalué | Type | Points |
-|---|---|---:|
-| Présentation et démonstration du produit final | Équipe | 2 |
-| Revue de code: choix d’un extrait pertinent, explication et recul critique | Équipe | 2 |
-| Discussion des validations, limites, compromis et prochaines améliorations | Équipe | 2 |
-| Contributions individuelles: traces GitHub, `docs/contributions.md`, bilan individuel | Individuel | 2 |
-| Réponses aux questions et capacité à défendre le travail | Équipe + individuel | 1 |
-| Transparence IA et attentes STT-6230 lorsque pertinent | Équipe + individuel | 1 |
-| Total |  | 10 |
-
-La partie individuelle peut être ajustée lorsque les traces GitHub, le bilan individuel ou les réponses aux questions montrent une contribution nettement différente de celle déclarée.
 
 ## Points à vérifier
 

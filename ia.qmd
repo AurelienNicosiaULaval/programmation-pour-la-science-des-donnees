@@ -30,7 +30,7 @@ Tu peux utiliser l’IA si tu peux ensuite expliquer, vérifier, modifier et dé
 | Défi technique 2 | Permise, déclarée |
 | Défi technique 3 | Intégrée |
 | Projet filé en équipe | Permise, déclarée |
-| Revue de code, présentation et bilan final | Permise, déclarée |
+| Site Quarto personnel | Permise, déclarée |
 
 ## Formulations officielles
 
@@ -73,7 +73,7 @@ Les mini-tests de préparation sont réalisés à livre ouvert. L’utilisation 
 
 ## Déclaration obligatoire
 
-Chaque projet, portfolio ou défi qui utilise le statut “permise, déclarée” ou “intégrée” doit contenir un fichier `ai-log.md` ou une déclaration équivalente.
+Chaque projet, portfolio, site personnel ou défi qui utilise le statut “permise, déclarée” ou “intégrée” doit contenir un fichier `ai-log.md` ou une déclaration équivalente.
 
 La déclaration doit indiquer:
 

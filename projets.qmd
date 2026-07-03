@@ -122,7 +122,7 @@ projet-stt4230/
 | Semaine 9 | Point de suivi | Importation, nettoyage initial, premières visualisations, problèmes rencontrés |
 | Semaine 12 | Version intermédiaire | Pipeline partiel, rapport ou tableau de bord partiel, validations initiales, contributions visibles |
 | Semaine 14 | Remise finale | Produit complet, documentation de reproduction, limites, contribution individuelle, `ai-log` si pertinent |
-| Semaine 15 | Présentation et revue | Démonstration, revue de code, bilan final individuel |
+| Semaine 15 | Défense du projet | Démonstration, revue de code, questions, bilan final individuel |
 
 Le point de suivi de la semaine 9 est formatif. Il sert à éviter les projets trop tardifs, trop larges ou techniquement bloqués.
 
@@ -223,11 +223,11 @@ Chaque entrée importante doit indiquer:
 - ce qui a été modifié ou rejeté;
 - la vérification effectuée.
 
-## Revue de code, présentation et bilan final
+## Présentation et revue du projet
 
-La revue de code, la présentation et le bilan final comptent ensemble pour 10 % de la note finale. Cette composante est évaluée séparément du projet, mais elle s’appuie sur le même dépôt.
+La présentation, la revue de code et le bilan final de la semaine 15 font partie du projet filé en équipe. Cette activité ne constitue plus une composante séparée de 10 %. Elle sert à vérifier que le dépôt remis peut être défendu, relu, expliqué et discuté.
 
-Consulter la page [Revue de code, présentation et bilan final](presentation.qmd).
+Consulter la page [Présentation et revue du projet](presentation.qmd).
 
 ## Différenciation STT-6230
 

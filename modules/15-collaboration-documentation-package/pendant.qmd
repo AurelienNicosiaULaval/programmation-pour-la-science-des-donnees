@@ -1,5 +1,5 @@
 ---
-title: "Collaboration, documentation et packaging - Pendant la classe"
+title: "Site personnel, collaboration et documentation finale - Pendant la classe"
 format:
   html:
     embed-resources: true
@@ -7,7 +7,7 @@ format:
 
 ## Activités en classe
 
-La séance finale est d'abord consacrée à la présentation, à la revue de code et au bilan final décrits dans la page [Revue de code, présentation et bilan final](../../presentation.qmd).
+La séance finale est consacrée à trois objets: le [site Quarto personnel](../../site-personnel.qmd), la [présentation et revue du projet](../../presentation.qmd), puis le retour technique final.
 
 Le déroulement ci-dessous sert de bloc technique complémentaire si un temps de consolidation est réservé au packaging, ou si une équipe veut transformer une partie de son projet en composant R documenté.
 
