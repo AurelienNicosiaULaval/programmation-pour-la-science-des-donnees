@@ -9,10 +9,10 @@ format:
 
 ### Lecture principale
 *   **R Packages (2e édition)**, de Hadley Wickham et Jenny Bryan :
-    *   [Chapter 1: Introduction](https://r-pkgs.org/intro.html) : Comprendre les bénéfices de la création de packages.
+    *   [Chapter 1: Introduction](https://r-pkgs.org/introduction.html) : Comprendre les bénéfices de la création de packages.
     *   [Chapter 2: The Whole Game](https://r-pkgs.org/whole-game.html) : Un guide pratique complet à suivre étape par étape.
     *   [Chapter 16: Roxygen2](https://r-pkgs.org/man.html) : Guide de référence de toutes les balises de documentation supportées.
-    *   [Chapter 13: Testing](https://r-pkgs.org/testing.html) : Intégration de tests unitaires avec `testthat` à l'arborescence.
+    *   [Chapter 13: Testing basics](https://r-pkgs.org/testing-basics.html) : Intégration de tests unitaires avec `testthat` à l'arborescence.
 
 ### Lectures complémentaires
 *   **DESCRIPTION et NAMESPACE** :

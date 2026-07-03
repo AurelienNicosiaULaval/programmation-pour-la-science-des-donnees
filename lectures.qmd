@@ -33,7 +33,7 @@ La préparation avant la séance doit rester raisonnable, environ 45 à 60 minut
 
 - Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). R for Data Science, 2e édition: <https://r4ds.hadley.nz/>.
 - Bryan, J. et Hester, J. Happy Git and GitHub for the useR: <https://happygitwithr.com/>.
-- Documentation officielle Quarto: <https://quarto.org/docs/>.
+- Documentation officielle Quarto: <https://quarto.org/docs/guide/>.
 - Wickham, H. (2019). Advanced R, 2e édition: <https://adv-r.hadley.nz/>.
 - Wickham, H. et Bryan, J. (2023). R Packages, 2e édition: <https://r-pkgs.org/>.
 - Wickham, H. (2021). Mastering Shiny: <https://mastering-shiny.org/>.

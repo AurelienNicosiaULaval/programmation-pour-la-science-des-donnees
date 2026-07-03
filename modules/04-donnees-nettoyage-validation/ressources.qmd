@@ -113,7 +113,7 @@ Exemple de squelette:
 library(httr2)
 
 # Build request
-req <- request("https://exemple.org/api/donnees") |>
+req <- request("URL_API_A_COMPLETER") |>
   req_url_query(region = "QC", format = "json")
 
 # Perform request

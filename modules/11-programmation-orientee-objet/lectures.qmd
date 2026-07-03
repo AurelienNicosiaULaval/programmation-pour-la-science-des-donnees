@@ -15,7 +15,7 @@ format:
 ### Lectures complémentaires
 *   **Advanced R**, de Hadley Wickham :
     *   [Chapter 13: S4](https://adv-r.hadley.nz/s4.html) : Pour comprendre la philosophie des classes strictes et formelles utilisées dans certains packages scientifiques majeurs (Bioconductor, Matrix).
-    *   [Chapter 15: Trade-offs](https://adv-r.hadley.nz/tradeoffs.html) : Une comparaison synthétique des différents systèmes de POO en R (S3, S4, RC, R6).
+    *   [Chapter 16: Trade-offs](https://adv-r.hadley.nz/oo-tradeoffs.html) : Une comparaison synthétique des différents systèmes de POO en R (S3, S4, RC, R6).
 
 ---
 

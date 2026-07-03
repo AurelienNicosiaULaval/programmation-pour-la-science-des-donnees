@@ -7,16 +7,16 @@ format:
 
 ## Documentations officielles et guides
 
-*   [Site officiel de profvis](https://rstudio.github.io/profvis/) : Guide complet pour comprendre l'interface de profilage, interpréter les visualisations et profiler des applications Shiny.
+*   [Site officiel de profvis](https://profvis.r-lib.org/) : Guide complet pour comprendre l'interface de profilage, interpréter les visualisations et profiler des applications Shiny.
 *   [Site officiel de bench](https://bench.r-lib.org/) : Exemples d'utilisation avancée de `bench::mark()` et de tracés graphiques des temps avec `ggplot2`.
-*   [Guide RStudio sur le profilage](https://support.posit.co/hc/en-us/articles/218221837-Profiling-R-code-with-RStudio) : Étapes pour démarrer le profilage directement à partir de l'IDE RStudio ou Positron.
+*   [Guide profvis pour RStudio](https://profvis.r-lib.org/articles/rstudio.html) : Étapes pour démarrer le profilage directement à partir de l'IDE RStudio.
 
 ---
 
 ## Les 3 règles d'or de l'optimisation en R
 
 > "We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil."  
-> — *Donald Knuth*
+> Attribution: *Donald Knuth*
 
 Pour optimiser votre code R sans perdre de temps, appliquez toujours ces trois étapes dans cet ordre :
 

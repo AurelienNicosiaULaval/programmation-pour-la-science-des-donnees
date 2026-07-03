@@ -12,7 +12,7 @@ format:
 ## Outils pour le choix des couleurs et l'accessibilité
 
 - **ColorBrewer 2.0** : Un excellent outil pour choisir des palettes de couleurs adaptées aux graphiques (différenciation pour daltoniens, palettes divergentes, séquentielles ou qualitatives) : <https://colorbrewer2.org/>.
-- **R Color Cheat Sheet** : Un aperçu visuel des couleurs prédéfinies disponibles par défaut dans R : <http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf>.
+- **Documentation R `colors()`** : La liste officielle des couleurs nommées disponibles dans R : <https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/colors.html>.
 
 ## Livres et manuels de référence
 

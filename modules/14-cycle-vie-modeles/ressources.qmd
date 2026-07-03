@@ -17,7 +17,7 @@ format:
 ## Références externes
 
 - Mitchell et al. (2019), [Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993)
-- Gebru et al. (2021), [Datasheets for Datasets](https://doi.org/10.1145/3458723)
+- Gebru et al. (2021), [Datasheets for Datasets](https://arxiv.org/abs/1803.09010)
 - NIST (2023), [AI Risk Management Framework 1.0](https://www.nist.gov/itl/ai-risk-management-framework)
 - rOpenSci, [The targets R package user manual](https://books.ropensci.org/targets/)
 

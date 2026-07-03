@@ -41,7 +41,7 @@ Ces portails sont recommandés parce qu'ils donnent accès à des jeux de donné
 | Source | Usage pédagogique typique | Lien |
 |---|---|---|
 | Données Québec | Données municipales, provinciales et administratives québécoises | <https://www.donneesquebec.ca/> |
-| Ville de Québec, données ouvertes | Données urbaines locales, transport, environnement, infrastructures | <https://www.ville.quebec.qc.ca/apropos/portrait/donnees_ouvertes/> |
+| Ville de Québec, données ouvertes | Données urbaines locales, transport, environnement, infrastructures | <https://www.ville.quebec.qc.ca/services/donnees-services-ouverts/> |
 | Gouvernement ouvert Canada | Données fédérales et catalogues pancanadiens | <https://open.canada.ca/fr/open-data> |
 | Statistique Canada | Données socioéconomiques, démographiques et enquêtes publiques | <https://www.statcan.gc.ca/> |
 

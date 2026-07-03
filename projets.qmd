@@ -60,8 +60,8 @@ Les sources de données suivantes sont recommandées comme points de départ:
 |---|---|
 | [Données Québec](https://www.donneesquebec.ca/) | Données publiques québécoises, municipales ou gouvernementales |
 | [Gouvernement ouvert du Canada](https://rechercher.ouvert.canada.ca/data/) | Données publiques fédérales |
-| [Données ouvertes, statistiques et archives - Canada.ca](https://www.canada.ca/fr/services/science/donnees-ouvertes.html) | Données ouvertes, tableaux statistiques et ressources fédérales |
-| [Données ouvertes - Ville de Québec](https://www.ville.quebec.qc.ca/services/donnees-services-ouverts/index.aspx) | Données municipales et services urbains |
+| [Statistique Canada](https://www.statcan.gc.ca/) | Données socioéconomiques, démographiques et enquêtes publiques |
+| [Données ouvertes - Ville de Québec](https://www.ville.quebec.qc.ca/services/donnees-services-ouverts/) | Données municipales et services urbains |
 
 Une autre source peut être utilisée si elle est documentée, stable, accessible et appropriée pour un usage pédagogique.
 

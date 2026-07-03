@@ -16,7 +16,7 @@ Temps de préparation estimé : 40 minutes.
 ## À lire
 
 1.  **R Packages (2e édition)**, de Hadley Wickham et Jenny Bryan :
-    *   [Chapter 1: Introduction](https://r-pkgs.org/intro.html) : Pourquoi créer des packages R, la philosophie du développement.
+    *   [Chapter 1: Introduction](https://r-pkgs.org/introduction.html) : Pourquoi créer des packages R, la philosophie du développement.
     *   [Chapter 2: The Whole Game](https://r-pkgs.org/whole-game.html) : Un aperçu de toutes les étapes de développement en créant un premier package jouet.
     *   [Chapter 7: R Code](https://r-pkgs.org/code.html) : Où mettre vos fonctions et comment gérer les imports/exports.
     *   [Chapter 16: Roxygen2](https://r-pkgs.org/man.html) : La syntaxe des commentaires pour générer automatiquement la documentation.

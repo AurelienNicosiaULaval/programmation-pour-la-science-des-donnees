@@ -7,7 +7,7 @@ format:
 
 ## Fiches d'aide et aide-mémoire
 
-- **Aide-mémoire Quarto (PDF officiel)** : Un excellent condensé de deux pages sur toute la syntaxe de base, les raccourcis et les principales options YAML de Quarto : <https://quarto.org/docs/blog/posts/2022-07-28-quarto-cheatsheet/quarto-cheatsheet.pdf>.
+- **Aide-mémoire Quarto (PDF officiel)** : Un excellent condensé de deux pages sur toute la syntaxe de base, les raccourcis et les principales options YAML de Quarto : <https://rstudio.github.io/cheatsheets/quarto.pdf>.
 
 ## Outils d'aide à la mise en page
 
