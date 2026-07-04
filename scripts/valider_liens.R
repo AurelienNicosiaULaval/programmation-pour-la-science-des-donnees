@@ -4,7 +4,16 @@
 cat("=== Validation des liens relatifs ===\n")
 
 # Lister les fichiers à analyser sans parcourir les répertoires générés.
-excluded_dir_names <- c(".git", "_site", ".quarto", "tmp", "renv", "site_libs")
+excluded_dir_names <- c(
+  ".git",
+  "_site",
+  ".quarto",
+  ".enseignant-prive",
+  ".local-prompts",
+  "tmp",
+  "renv",
+  "site_libs"
+)
 
 collect_source_files <- function(path = ".") {
   entries <- list.files(path, all.files = TRUE, no.. = TRUE, full.names = TRUE)

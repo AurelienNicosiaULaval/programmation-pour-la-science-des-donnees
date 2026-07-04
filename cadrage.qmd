@@ -5,7 +5,7 @@ format:
     embed-resources: true
 ---
 
-Cette page est la synthèse opérationnelle du document [`stt4230_document_cadrage_unique.pdf`](stt4230_document_cadrage_unique.pdf). Elle sert de source de cohérence pour le site Quarto du cours.
+Cette page présente la synthèse opérationnelle du cours. Elle sert de source de cohérence pour le site Quarto public.
 
 ## Décision centrale
 
@@ -149,16 +149,15 @@ Interdictions:
 
 ## Architecture GitHub
 
-Une organisation GitHub du cours est recommandée.
+GitHub est utilisé pour versionner les travaux, soutenir la collaboration et publier les livrables web lorsque demandé.
 
 | Type de dépôt | Responsable | Utilité |
 |---|---|---|
-| Dépôts enseignants | Enseignante ou enseignant | Notes, ateliers, solutions, gabarits, données, grilles |
 | Portfolio individuel | Étudiante ou étudiant | Progression personnelle, traces hebdomadaires, traces de code et documentation |
 | Projet d’équipe | Équipe | Produit final de science des données, collaboration, livrables majeurs |
-| Défis techniques | Enseignante ou enseignant, puis étudiante ou étudiant | Épreuves pratiques distribuées comme dépôts de départ |
+| Défis techniques | Étudiante ou étudiant | Épreuves pratiques réalisées à partir du matériel fourni au moment prévu |
 
-GitHub Classroom peut être utilisé. Si l’intégration est trop lourde, utiliser des dépôts modèles et une remise MonPortail contenant le lien GitHub.
+Les modalités exactes de remise sont précisées dans les consignes de chaque évaluation.
 
 ## Gabarit de module
 
@@ -174,8 +173,6 @@ Un module complet contient:
 - checklist;
 - livrable;
 - grille;
-- solution minimale;
-- solution professionnelle;
 - extension maîtrise.
 
 ## Dimensions professionnelles

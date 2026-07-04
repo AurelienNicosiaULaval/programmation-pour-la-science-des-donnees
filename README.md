@@ -2,9 +2,9 @@
 
 Site Quarto du cours STT-4230 / STT-6230 à l’Université Laval.
 
-Ce dépôt contient la structure de base du site de cours: modules, laboratoires, défis, évaluations, portfolio, politique d’utilisation de l’IA, ressources et gabarits.
+Ce dépôt contient la structure publique du site de cours: modules, laboratoires, défis publics, évaluations, portfolio, politique d’utilisation de l’IA, ressources et gabarits étudiants.
 
-La source de cohérence pédagogique est la page `cadrage.qmd`, appuyée sur le PDF [`stt4230_document_cadrage_unique.pdf`](stt4230_document_cadrage_unique.pdf).
+La source de cohérence pédagogique publique est la page `cadrage.qmd`.
 
 ## Cloner le dépôt
 
@@ -15,9 +15,9 @@ git clone git@github.com:AurelienNicosiaULaval/programmation-pour-la-science-des
 cd programmation-pour-la-science-des-donnees
 ```
 
-## Roadmap
+## Notes de développement
 
-La page `roadmap.qmd` sert de tableau de bord pour organiser le développement du matériel pédagogique.
+Les notes de pilotage, documents sources, corrigés et consignes enseignantes sont conservés hors site public. Localement, ces fichiers peuvent être placés dans `.enseignant-prive/`, qui est ignoré par Git et n’est pas publié par Quarto.
 
 ## Prévisualiser le site
 
@@ -57,25 +57,26 @@ renv::snapshot()
 
 ## Ajouter un module
 
-1. Copier le gabarit `gabarits/fiche-module.qmd`.
-2. Créer un dossier dans `modules/`.
-3. Ajouter au minimum `index.qmd`, une lecture courte, des exemples R, un atelier, une checklist, un livrable, une grille, une solution minimale, une solution professionnelle et une extension STT-6230.
+1. Créer un dossier dans `modules/`.
+2. Ajouter au minimum `index.qmd`, `avant.qmd`, `pendant.qmd`, `laboratoire.qmd`, `defi.qmd`, `apres.qmd`, `lectures.qmd` et `ressources.qmd`.
+3. Vérifier que le module précise la préparation, la production attendue, le statut IA, la trace portfolio et l’attente STT-6230 lorsque pertinente.
 4. Ajouter l’entrée correspondante dans `_quarto.yml`.
-5. Exécuter `quarto render`.
+5. Placer les notes enseignantes, corrigés et fichiers sensibles dans le dépôt enseignant privé ou dans `.enseignant-prive/`.
+6. Exécuter `quarto render`.
 
 ## Ajouter un défi
 
-1. Copier `gabarits/fiche-defi.qmd`.
-2. Placer la consigne dans `defis/` ou dans le dossier du module.
-3. Indiquer le statut d’IA.
-4. Ajouter les critères d’évaluation.
+1. Placer uniquement la préparation ou la consigne publique dans `defis/` ou dans le dossier du module.
+2. Indiquer le statut d’IA.
+3. Ajouter les critères publics d’évaluation.
+4. Conserver la consigne évaluée exacte, les données, les corrigés et les notes de correction hors site public.
 5. Vérifier le rendu.
 
 ## Ajouter un laboratoire
 
-1. Copier `gabarits/fiche-laboratoire.qmd`.
-2. Placer la fiche dans `labs/` ou dans le dossier du module.
-3. Ajouter les fichiers de départ si nécessaire.
+1. Placer la fiche dans le dossier du module.
+2. Ajouter les fichiers de départ seulement si leurs droits de diffusion sont confirmés.
+3. Garder les solutions et notes enseignantes hors site public.
 4. Tester l’activité dans une session propre.
 
 ## Publier avec GitHub Pages Actions

@@ -25,7 +25,7 @@ Cette page regroupe les ressources utiles pour le cours.
 - testthat.
 - renv.
 
-## Ressources internes
+## Ressources du cours
 
 - [Cadrage pédagogique](cadrage.qmd)
 - [Démarrage](demarrage.qmd)
@@ -34,15 +34,6 @@ Cette page regroupe les ressources utiles pour le cours.
 - [Soutien technique](soutien-technique.qmd)
 - [Politique IA](ia.qmd)
 - [Rattrapage R/Git pour le défi technique 1](ressources/rattrapage-r-git-defi-1.qmd)
-- [Checklist enseignante semaines 1 à 5](ressources/checklist-enseignante-semaines-1-5.qmd)
-
-## Documents sources du projet
-
-Un seul PDF de cadrage est conservé à la racine du dépôt afin d’éviter les contradictions entre documents de conception:
-
-- [`stt4230_document_cadrage_unique.pdf`](stt4230_document_cadrage_unique.pdf)
-
-La page [Cadrage pédagogique](cadrage.qmd) traduit ce document en décisions opérationnelles pour le site.
 
 ## Liens de référence
 

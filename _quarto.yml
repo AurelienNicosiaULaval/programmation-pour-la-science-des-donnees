@@ -1,8 +1,6 @@
 project:
   type: website
   output-dir: _site
-  resources:
-    - stt4230_document_cadrage_unique.pdf
 
 lang: fr
 
@@ -17,8 +15,6 @@ website:
         href: index.qmd
       - text: "Cadrage"
         href: cadrage.qmd
-      - text: "Roadmap"
-        href: roadmap.qmd
       - text: "Plan"
         href: plan-cours.qmd
       - text: "Calendrier"
@@ -95,16 +91,13 @@ website:
       title: "Ressources"
       contents:
         - cadrage.qmd
-        - roadmap.qmd
         - demarrage.qmd
         - donnees.qmd
         - lectures.qmd
         - ressources.qmd
         - ressources/rattrapage-r-git-defi-1.qmd
-        - ressources/checklist-enseignante-semaines-1-5.qmd
         - dependances.qmd
         - soutien-technique.qmd
-        - contribution.qmd
         - communication.qmd
   page-footer:
     left: "STT-4230 / STT-6230 - Université Laval"
