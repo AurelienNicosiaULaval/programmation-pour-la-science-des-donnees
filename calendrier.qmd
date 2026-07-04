@@ -45,7 +45,7 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance r�
 | 12 | 25 novembre 2026 | Optimisation et parallèle | Profilage, `future`, `furrr` | Mesurer, comparer, améliorer ou paralléliser | Mini-test, version intermédiaire du projet |
 | 13 | 2 décembre 2026 | Défi technique 3 et consolidation | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis post-mortem technique sur tests, validation et limites | Défi 3, rapport technique et trace IA; atelier non évalué |
 | 14 | 9 décembre 2026 | Synthèse finale: modèle, reproduction, cycle de vie | Modèle minimal, reproduction, limites, suivi | Stabiliser le livrable final, le README, les tests et la reproduction | Préparation finale, remise finale projet, jalon portfolio 3 |
-| 15 | À confirmer | Site personnel, présentation et revue du projet | Site Quarto personnel, dépôt final, support bref, issue ou pull request, bilan individuel | Présentations, revue de code, questions, vérification des contributions, vérification des sites publiés | Site Quarto personnel, défense du projet |
+| 15 | 16 décembre 2026 | Site personnel, présentation et revue du projet | Site Quarto personnel, dépôt final, support bref, issue ou pull request, bilan individuel | Présentations, revue de code, questions, vérification des contributions, vérification des sites publiés | Site Quarto personnel, défense du projet |
 
 ## Jalons d’évaluation
 
@@ -61,8 +61,8 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance r�
 | 13 | Défi technique 3 | Défi individuel | Jugement professionnel avec IA intégrée |
 | 14 | Remise finale du projet | Projet d’équipe | Produit final, reproduction, limites, contributions |
 | 14 | Jalon portfolio 3 | Portfolio individuel | Portfolio complet et bilan final |
-| Semaine 15 ou plage à confirmer | Site Quarto personnel | Individuel | Site publié sur GitHub Pages, dépôt source, deux réalisations commentées |
-| Semaine 15 ou plage à confirmer | Présentation et revue du projet | Projet d’équipe | Démonstration, revue, défense, contribution |
+| 15, 16 décembre 2026 | Site Quarto personnel | Individuel | Site publié sur GitHub Pages, dépôt source, deux réalisations commentées |
+| 15, 16 décembre 2026 | Présentation et revue du projet | Projet d’équipe | Démonstration, revue, défense, contribution |
 
 ## Mini-tests
 

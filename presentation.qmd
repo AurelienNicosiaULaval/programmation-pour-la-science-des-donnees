@@ -22,7 +22,7 @@ Cette séance n’est pas une deuxième correction complète du projet. Elle ser
 | Élément | Modalité |
 |---|---|
 | Composante | Projet filé en équipe |
-| Moment | Semaine 15 |
+| Moment | Semaine 15 (16 décembre 2026) |
 | Type | Équipe, avec questions individuelles possibles |
 | Support | Dépôt GitHub final, démonstration et bref support de présentation |
 | IA | Permise, déclarée |

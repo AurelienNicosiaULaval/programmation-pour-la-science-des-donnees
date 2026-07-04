@@ -25,11 +25,11 @@ Les évaluations reconnaissent la qualité du produit final et la qualité du pr
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Semaines 2, 3, 4, 6, 7, 9, 10, 11 et 12 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
-| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 (16 décembre 2026) | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
-| Site Quarto personnel | 10 % | Individuel | Semaine 15 | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15 (16 décembre 2026) | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
 Cette table remplace les formulations provisoires précédentes.
