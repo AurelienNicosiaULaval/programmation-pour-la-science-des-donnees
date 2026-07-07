@@ -18,7 +18,8 @@ Le site Quarto personnel constitue la composante individuelle de 10 % remise à 
 
 ## Objectifs du module
 
-À la fin de la semaine, chaque personne devrait pouvoir :
+À la fin de la semaine, chaque personne devrait pouvoir:
+
 - publier un site Quarto personnel minimal avec GitHub Pages;
 - sélectionner deux réalisations pertinentes et les commenter;
 - vérifier qu'un dépôt final peut être compris sans explication orale;

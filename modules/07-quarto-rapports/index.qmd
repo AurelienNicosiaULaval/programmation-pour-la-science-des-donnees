@@ -18,12 +18,13 @@ C'est la compétence finale nécessaire pour structurer les livrables d'équipe 
 
 ## Objectifs du module
 
-À la fin de la semaine, chaque personne devrait pouvoir :
-- Comprendre la structure d'un fichier Quarto (en-tête YAML, Markdown, blocs de code R).
-- Maîtriser la syntaxe Quarto pour configurer les blocs de code (`#| echo`, `#| warning`, `#| label`).
-- Intégrer et référencer des figures et des tableaux dynamiques dans le texte.
-- Utiliser les options d'accessibilité et d'organisation (table des matières, onglets, thèmes).
-- Générer un livrable autonome (`embed-resources: true`) sans dépendre d'étapes manuelles.
+À la fin de la semaine, chaque personne devrait pouvoir:
+
+- comprendre la structure d'un fichier Quarto (en-tête YAML, Markdown, blocs de code R);
+- maîtriser la syntaxe Quarto pour configurer les blocs de code (`#| echo`, `#| warning`, `#| label`);
+- intégrer et référencer des figures et des tableaux dynamiques dans le texte;
+- utiliser les options d'accessibilité et d'organisation (table des matières, onglets, thèmes);
+- générer un livrable autonome (`embed-resources: true`) sans dépendre d'étapes manuelles.
 
 ## Compétences visées
 

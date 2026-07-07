@@ -16,12 +16,13 @@ Ce module marque le passage de l'analyse exploratoire interactive à la programm
 
 ## Objectifs du module
 
-À la fin de la semaine, chaque personne devrait pouvoir :
-- Écrire des fonctions R claires, documentées et munies de mécanismes de validation des arguments (ex: `match.arg()`, gestion des valeurs manquantes).
-- Comprendre les notions d'environnement d'évaluation, d'environnement englobant et de portée lexicale (lexical scoping) en R.
-- Utiliser le débogueur interactif `browser()` pour diagnostiquer les erreurs à l'intérieur d'une fonction.
-- Remplacer les boucles complexes (`for`, `while`) par des appels purrr (`map()`, `map_dbl()`, etc.) pour des itérations plus fiables et lisibles.
-- Mettre en place des tests unitaires minimaux à l'aide du package `testthat`.
+À la fin de la semaine, chaque personne devrait pouvoir:
+
+- écrire des fonctions R claires, documentées et munies de mécanismes de validation des arguments (ex: `match.arg()`, gestion des valeurs manquantes);
+- comprendre les notions d'environnement d'évaluation, d'environnement englobant et de portée lexicale (lexical scoping) en R;
+- utiliser le débogueur interactif `browser()` pour diagnostiquer les erreurs à l'intérieur d'une fonction;
+- remplacer les boucles complexes (`for`, `while`) par des appels purrr (`map()`, `map_dbl()`, etc.) pour des itérations plus fiables et lisibles;
+- mettre en place des tests unitaires minimaux à l'aide du package `testthat`.
 
 ## Compétences visées
 

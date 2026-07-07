@@ -16,13 +16,14 @@ Ce module fait suite au profilage de code. Après avoir appris à mesurer et opt
 
 ## Objectifs du module
 
-À la fin de la semaine, chaque personne devrait pouvoir :
-- Comprendre les concepts d'évaluation synchrone (bloquante) versus asynchrone (non bloquante) en R.
-- Configurer un plan de calcul parallèle adapté à sa machine avec le package `future`.
-- Remplacer les appels `purrr::map()` par leurs équivalents parallèles `furrr::future_map()`.
-- Garantir la reproductibilité des simulations en contrôlant les graines aléatoires en parallèle (générateur L'Ecuyer-CMRG).
-- Évaluer le coût de transfert des données (overhead) vers les processus de travail.
-- Identifier les situations où le parallélisme ralentit l'exécution.
+À la fin de la semaine, chaque personne devrait pouvoir:
+
+- comprendre les concepts d'évaluation synchrone (bloquante) versus asynchrone (non bloquante) en R;
+- configurer un plan de calcul parallèle adapté à sa machine avec le package `future`;
+- remplacer les appels `purrr::map()` par leurs équivalents parallèles `furrr::future_map()`;
+- garantir la reproductibilité des simulations en contrôlant les graines aléatoires en parallèle (générateur L'Ecuyer-CMRG);
+- évaluer le coût de transfert des données (overhead) vers les processus de travail;
+- identifier les situations où le parallélisme ralentit l'exécution.
 
 ## Compétences visées
 

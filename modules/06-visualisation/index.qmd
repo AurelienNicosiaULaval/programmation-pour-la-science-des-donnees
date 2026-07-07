@@ -18,13 +18,14 @@ Les concepts vus cette semaine seront appliqués immédiatement pour la proposit
 
 ## Objectifs du module
 
-À la fin de la semaine, chaque personne devrait pouvoir :
-- Comprendre la grammaire des graphiques de `ggplot2` (données, esthétiques, géométries, facettes, thèmes).
-- Choisir le type de graphique adapté à la nature des variables (continues, catégorielles, relations).
-- Remplacer l'ancien système graphique de base R par `ggplot2`.
-- Ajouter des annotations textuelles précises en calculant les coordonnées de façon dynamique.
-- Utiliser `after_stat()` pour afficher des statistiques calculées à la volée.
-- Structurer un code graphique propre et lisible en empilant les couches.
+À la fin de la semaine, chaque personne devrait pouvoir:
+
+- comprendre la grammaire des graphiques de `ggplot2` (données, esthétiques, géométries, facettes, thèmes);
+- choisir le type de graphique adapté à la nature des variables (continues, catégorielles, relations);
+- remplacer l'ancien système graphique de base R par `ggplot2`;
+- ajouter des annotations textuelles précises en calculant les coordonnées de façon dynamique;
+- utiliser `after_stat()` pour afficher des statistiques calculées à la volée;
+- structurer un code graphique propre et lisible en empilant les couches.
 
 ## Compétences visées
 

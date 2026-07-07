@@ -16,12 +16,13 @@ Ce module aborde les paradigmes de programmation orientée objet (POO) en R. Apr
 
 ## Objectifs du module
 
-À la fin de la semaine, chaque personne devrait pouvoir :
-- Reconnaître les besoins qui motivent l'utilisation de la programmation orientée objet par rapport à une approche purement fonctionnelle.
-- Comprendre et implémenter le mécanisme de dispatch S3 (création de fonctions génériques et de méthodes spécifiques).
-- Définir et instancier des classes R6 en utilisant le masquage des données (public vs private).
-- Expliquer la différence fondamentale entre la sémantique de valeur (copie-sur-modification de S3) et la sémantique de référence (mutabilité de R6).
-- Concevoir une interface claire et documentée pour un objet de projet de science des données.
+À la fin de la semaine, chaque personne devrait pouvoir:
+
+- reconnaître les besoins qui motivent l'utilisation de la programmation orientée objet par rapport à une approche purement fonctionnelle;
+- comprendre et implémenter le mécanisme de dispatch S3 (création de fonctions génériques et de méthodes spécifiques);
+- définir et instancier des classes R6 en utilisant le masquage des données (public vs private);
+- expliquer la différence fondamentale entre la sémantique de valeur (copie-sur-modification de S3) et la sémantique de référence (mutabilité de R6);
+- concevoir une interface claire et documentée pour un objet de projet de science des données.
 
 ## Compétences visées
 

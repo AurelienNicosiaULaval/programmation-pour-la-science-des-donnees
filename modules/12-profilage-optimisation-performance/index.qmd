@@ -18,13 +18,14 @@ Ce module pose les bases requises pour aborder la programmation parallèle et as
 
 ## Objectifs du module
 
-À la fin de la semaine, chaque personne devrait pouvoir :
-- Distinguer la lenteur perçue (le ressenti de l'utilisateur) de la lenteur mesurée (les millisecondes et octets réels).
-- Utiliser le package `bench` pour comparer précisément le temps d'exécution et l'allocation mémoire de plusieurs expressions alternatives.
-- Lire et interpréter un rapport de profilage interactif généré par `profvis`.
-- Identifier les goulots d'étranglement courants en R (réallocations de mémoire répétées, absence de pré-allocation).
-- Appliquer des optimisations simples comme la vectorisation et la pré-allocation de vecteurs.
-- Documenter de façon rigoureuse un compromis de performance (vitesse vs lisibilité vs maintenance).
+À la fin de la semaine, chaque personne devrait pouvoir:
+
+- distinguer la lenteur perçue (le ressenti de l'utilisateur) de la lenteur mesurée (les millisecondes et octets réels);
+- utiliser le package `bench` pour comparer précisément le temps d'exécution et l'allocation mémoire de plusieurs expressions alternatives;
+- lire et interpréter un rapport de profilage interactif généré par `profvis`;
+- identifier les goulots d'étranglement courants en R (réallocations de mémoire répétées, absence de pré-allocation);
+- appliquer des optimisations simples comme la vectorisation et la pré-allocation de vecteurs;
+- documenter de façon rigoureuse un compromis de performance (vitesse vs lisibilité vs maintenance).
 
 ## Compétences visées
 
