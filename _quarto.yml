@@ -13,14 +13,10 @@ website:
     left:
       - text: "Accueil"
         href: index.qmd
-      - text: "Cadrage"
-        href: cadrage.qmd
-      - text: "Plan"
-        href: plan-cours.qmd
+      - text: "Démarrer"
+        href: demarrage.qmd
       - text: "Calendrier"
         href: calendrier.qmd
-      - text: "Données"
-        href: donnees.qmd
       - text: "Modules"
         menu:
         - text: "1 - Mise en route"
@@ -31,10 +27,14 @@ website:
           href: modules/03-dependances-reproductibilite/index.qmd
         - text: "4 - Données et validation"
           href: modules/04-donnees-nettoyage-validation/index.qmd
+        - text: "5 - Défi technique 1"
+          href: defis.qmd#defi-technique-1
         - text: "6 - Visualisation"
           href: modules/06-visualisation/index.qmd
         - text: "7 - Quarto et rapports"
           href: modules/07-quarto-rapports/index.qmd
+        - text: "8 - Défi technique 2"
+          href: defis.qmd#defi-technique-2
         - text: "9 - Consolidation"
           href: modules/09-consolidation/index.qmd
         - text: "10 - Fonctions et tests"
@@ -43,21 +43,41 @@ website:
           href: modules/11-programmation-orientee-objet/index.qmd
         - text: "12 - Performance et parallèle"
           href: modules/12-synthese-performance-parallele/index.qmd
+        - text: "13 - Défi technique 3"
+          href: defis.qmd#defi-technique-3
         - text: "14 - Synthèse finale"
           href: modules/14-synthese-finale/index.qmd
         - text: "15 - Publication et défense"
           href: modules/15-collaboration-documentation-package/index.qmd
       - text: "Évaluations"
         href: evaluations.qmd
-      - text: "Portfolio"
-        href: portfolio.qmd
+      - text: "Projet et portfolio"
+        menu:
+        - text: "Projet d’équipe"
+          href: projets.qmd
+        - text: "Portfolio individuel"
+          href: portfolio.qmd
+        - text: "Site Quarto personnel"
+          href: site-personnel.qmd
+        - text: "Présentation et revue"
+          href: presentation.qmd
+      - text: "Ressources"
+        menu:
+        - text: "Données autorisées"
+          href: donnees.qmd
+        - text: "Lectures"
+          href: lectures.qmd
+        - text: "Ressources techniques"
+          href: ressources.qmd
+        - text: "Dépendances"
+          href: dependances.qmd
+        - text: "Soutien technique"
+          href: soutien-technique.qmd
+    right:
+      - text: "Plan de cours"
+        href: plan-cours.qmd
       - text: "IA"
         href: ia.qmd
-      - text: "Ressources"
-        href: ressources.qmd
-    right:
-      - text: "Démarrage"
-        href: demarrage.qmd
       - text: "Communication"
         href: communication.qmd
   sidebar:
@@ -74,10 +94,14 @@ website:
           href: modules/03-dependances-reproductibilite/index.qmd
         - text: "4 - Données et validation"
           href: modules/04-donnees-nettoyage-validation/index.qmd
+        - text: "5 - Défi technique 1"
+          href: defis.qmd#defi-technique-1
         - text: "6 - Visualisation"
           href: modules/06-visualisation/index.qmd
         - text: "7 - Quarto et rapports"
           href: modules/07-quarto-rapports/index.qmd
+        - text: "8 - Défi technique 2"
+          href: defis.qmd#defi-technique-2
         - text: "9 - Consolidation"
           href: modules/09-consolidation/index.qmd
         - text: "10 - Fonctions et tests"
@@ -86,6 +110,8 @@ website:
           href: modules/11-programmation-orientee-objet/index.qmd
         - text: "12 - Performance et parallèle"
           href: modules/12-synthese-performance-parallele/index.qmd
+        - text: "13 - Défi technique 3"
+          href: defis.qmd#defi-technique-3
         - text: "14 - Synthèse finale"
           href: modules/14-synthese-finale/index.qmd
         - text: "15 - Publication et défense"
@@ -94,24 +120,29 @@ website:
       title: "Évaluations"
       contents:
         - evaluations.qmd
-        - portfolio.qmd
-        - projets.qmd
-        - site-personnel.qmd
-        - defis.qmd
-        - defis/preparation-defi-technique-1.qmd
-        - presentation.qmd
-        - gabarits/grille-portfolio.qmd
-        - gabarits/grille-projet.qmd
-        - gabarits/grille-site-personnel.qmd
-        - gabarits/grille-defis-techniques.qmd
-        - gabarits/grille-presentation-bilan.qmd
-        - gabarits/gabarit-mini-test-preparation.qmd
-        - gabarits/template-site-personnel.qmd
-        - ia.qmd
+        - section: "Productions et consignes"
+          contents:
+            - portfolio.qmd
+            - projets.qmd
+            - site-personnel.qmd
+            - defis.qmd
+            - defis/preparation-defi-technique-1.qmd
+            - presentation.qmd
+            - ia.qmd
+        - section: "Grilles d’évaluation"
+          contents:
+            - gabarits/grille-portfolio.qmd
+            - gabarits/grille-projet.qmd
+            - gabarits/grille-site-personnel.qmd
+            - gabarits/grille-defis-techniques.qmd
+            - gabarits/grille-presentation-bilan.qmd
+        - section: "Gabarits"
+          contents:
+            - gabarits/gabarit-mini-test-preparation.qmd
+            - gabarits/template-site-personnel.qmd
     - id: ressources
       title: "Ressources"
       contents:
-        - cadrage.qmd
         - demarrage.qmd
         - donnees.qmd
         - lectures.qmd

@@ -2,9 +2,9 @@
 
 Site Quarto du cours STT-4230 / STT-6230 à l’Université Laval.
 
-Ce dépôt contient la structure publique du site de cours: modules, laboratoires, défis publics, évaluations, portfolio, politique d’utilisation de l’IA, ressources et gabarits étudiants.
+Ce dépôt contient uniquement le matériel destiné aux étudiantes et étudiants: modules, laboratoires, préparation publique aux défis, évaluations, portfolio, politique d’utilisation de l’IA, ressources et gabarits.
 
-La source de cohérence pédagogique publique est la page `cadrage.qmd`.
+Les décisions de conception pédagogique, les documents de pilotage, les corrigés, les consignes évaluées exactes et les données sensibles sont conservés dans le dépôt enseignant privé.
 
 ## Cloner le dépôt
 

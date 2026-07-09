@@ -5,21 +5,9 @@ format:
     embed-resources: true
 ---
 
-Cette page précise le plan final d’évaluation du cours STT-4230 / STT-6230.
+Cette page présente les pondérations, les échéances, les traces attendues et les règles d’utilisation de l’IA pour chaque évaluation.
 
-Les évaluations reconnaissent la qualité du produit final et la qualité du processus: structure du dépôt, historique Git, tests, documentation, reproductibilité, collaboration et capacité à expliquer le code.
-
-## Principes
-
-- Évaluer des productions concrètes réalisées en R.
-- Vérifier la reproductibilité des analyses, rapports, applications ou pipelines.
-- Tenir compte du processus de développement: commits, issues, pull requests, corrections et documentation.
-- Distinguer clairement les responsabilités individuelles et les responsabilités d’équipe.
-- Rendre l’usage de l’IA explicite lorsque l’IA est autorisée.
-- Éviter une structure trop lourde: les traces hebdomadaires sont intégrées au portfolio plutôt qu’évaluées séparément.
-- Prévoir des attentes supplémentaires raisonnables pour STT-6230.
-
-## Tableau global
+## Composantes et échéances
 
 | Composante | Pondération | Type | Moment | Règle IA |
 |---|---:|---|---|---|
@@ -31,8 +19,6 @@ Les évaluations reconnaissent la qualité du produit final et la qualité du pr
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
 | Site Quarto personnel | 10 % | Individuel | Semaine 15 (16 décembre 2026) | Permise, déclarée |
 | Total | 100 % |  |  |  |
-
-Cette table remplace les formulations provisoires précédentes.
 
 ## Rôle des trois défis techniques
 
@@ -84,7 +70,7 @@ Le site personnel ne remplace ni le portfolio ni le projet. Il sélectionne des 
 
 ## Grilles détaillées
 
-Les grilles suivantes stabilisent les critères utilisés pour la version v1:
+Les grilles suivantes détaillent les critères appliqués aux productions:
 
 - [Grille du portfolio](gabarits/grille-portfolio.qmd)
 - [Grille du projet](gabarits/grille-projet.qmd)

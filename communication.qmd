@@ -5,7 +5,7 @@ format:
     embed-resources: true
 ---
 
-Cette page précise les canaux de communication et les rôles de l’équipe enseignante pour la version v1 du site. Les noms, coordonnées et disponibilités exactes seront ceux du plan institutionnel final.
+Cette page précise les canaux de communication et les rôles de l’équipe enseignante.
 
 ## Canaux
 
@@ -42,6 +42,4 @@ Une bonne demande d’aide contient:
 
 ## Disponibilités et délais
 
-Les noms, coordonnées, disponibilités et délais de réponse exacts sont à confirmer dans le plan de cours institutionnel final.
-
-En attendant, les demandes techniques doivent inclure les éléments listés ci-dessus afin de permettre un diagnostic reproductible.
+Les coordonnées, disponibilités et délais de réponse de l’équipe enseignante sont communiqués dans l’espace institutionnel du cours. Les demandes techniques doivent inclure les éléments listés ci-dessus afin de permettre un diagnostic reproductible.

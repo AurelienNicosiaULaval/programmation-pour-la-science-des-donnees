@@ -5,9 +5,7 @@ format:
     embed-resources: true
 ---
 
-Cette page sert de point d’ancrage pour le plan de cours officiel. Elle doit être synchronisée avec la version déposée dans les systèmes institutionnels.
-
-Statut v1: le scénario pédagogique, les évaluations et les repères calendaires de l’automne 2026 sont stabilisés. Les éléments propres à la version institutionnelle finale qui ne sont pas encore confirmés demeurent indiqués explicitement à confirmer.
+Cette page présente les objectifs, la progression, les repères de calendrier et les modalités d’évaluation du cours.
 
 ## Description officielle
 
@@ -17,7 +15,7 @@ Bonnes pratiques de codage et gestion du versionnage du code. Manipulation et ge
 
 STT-1100 ou IFT-4902.
 
-## Repères institutionnels vérifiés
+## Repères de calendrier
 
 Les dates suivantes proviennent du calendrier universitaire 2026-2027 de l’Université Laval.
 
@@ -51,7 +49,7 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 - Utiliser GitHub pour collaborer, réviser et documenter.
 - Encadrer l’usage de l’IA générative de façon transparente et vérifiable.
 
-## Progression proposée
+## Progression
 
 | Semaine | Thème | Production visée |
 |---:|---|---|
@@ -73,7 +71,7 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 
 ## Évaluations
 
-La structure suivante est retenue comme plan final d’évaluation.
+Le tableau suivant présente les composantes évaluées du cours.
 
 | Évaluation | Pondération | Type | Moment | IA |
 |---|---:|---|---|---|
@@ -93,11 +91,3 @@ Les critères détaillés, les consignes et les différences entre STT-4230 et S
 Les remises mobilisent les traces suivantes selon l’évaluation: lien vers un dépôt GitHub, lien GitHub Pages, identifiant de commit, fichier Quarto rendu, rapport, note de conception, test ou entrée de portfolio. La page [Évaluations](evaluations.qmd) précise les traces attendues pour chaque composante.
 
 Les exemples de dépôts GitHub du cours utilisent des URL SSH. Les remises publiques ne doivent pas contenir de données confidentielles, nominatives ou non autorisées.
-
-## Éléments à confirmer pour la version institutionnelle finale
-
-- plateforme exacte de remise dans l’environnement institutionnel;
-- règles de retard et pénalités applicables;
-- noms, coordonnées et disponibilités de l’équipe enseignante;
-- plage horaire exacte de la séance finale si elle est placée dans la période réservée aux examens;
-- version finale déposée dans les systèmes institutionnels.
