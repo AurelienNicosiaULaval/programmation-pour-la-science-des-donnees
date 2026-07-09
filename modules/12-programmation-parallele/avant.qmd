@@ -1,5 +1,5 @@
 ---
-title: "Programmation asynchrone et parallèle - Avant la classe"
+title: "12B - Programmation asynchrone et parallèle - Orientation facultative"
 format:
   html:
     embed-resources: true
@@ -7,9 +7,15 @@ format:
 
 ## Objectif de préparation
 
-Se familiariser avec le concept de "futur" (promesse de calcul asynchrone), installer les packages `future` et `furrr`, et tester le fonctionnement d'une exécution parallèle locale.
+Décider si une tâche déjà profilée mérite un essai parallèle et connaître les garde-fous avant d'ouvrir des processus locaux.
 
-Temps de préparation estimé : 40 minutes.
+Cette orientation représente environ 10 minutes de la [préparation unique de 50 minutes](../12-synthese-performance-parallele/index.qmd). L'installation et l'exécution des exemples peuvent se faire en classe seulement si cette voie est choisie.
+
+Il n'y a aucun mini-test propre au bloc 12B. Le seul mini-test de la semaine se trouve dans la page [12A - Avant la classe](../12-profilage-optimisation-performance/avant.qmd).
+
+## Décider avant de paralléliser
+
+Choisissez cette voie seulement si le profilage suggère une tâche répétée, indépendante, sans écriture concurrente et suffisamment coûteuse relativement au transfert des données. Sinon, poursuivez l'optimisation séquentielle.
 
 ## À lire
 
@@ -31,11 +37,19 @@ Un *futur* est une abstraction pour un calcul qui sera résolu plus tard, évent
 ```r
 library(future)
 
-# 1. Configurer R pour travailler en parallèle (multisession locale)
-# Cela ouvre des sessions R de travail en arrière-plan
-plan(multisession, workers = 2)
+# 1. Calculer un nombre prudent de workers
+coeurs_disponibles <- as.integer(availableCores())
+workers <- max(1L, min(2L, coeurs_disponibles - 1L))
 
-cat("Lancement du calcul asynchrone...\n")
+if (workers >= 2L) {
+  plan(multisession, workers = workers)
+} else {
+  message("Un seul coeur est disponible: repli séquentiel.")
+  plan(sequential)
+}
+
+mode_execution <- if (workers >= 2L) "multisession" else "séquentiel"
+cat("Lancement du calcul avec le plan", mode_execution, "...\n")
 temps_depart <- Sys.time()
 
 # 2. Création d'un futur : le code s'exécute en tâche de fond
@@ -44,7 +58,7 @@ f <- future({
   42
 })
 
-cat("La console est libérée immédiatement ! Temps écoulé :", 
+cat("Temps consacré à la création ou à l'exécution du futur :",
     round(Sys.time() - temps_depart, 2), "secondes.\n")
 
 # 3. Récupérer le résultat (bloquant si le calcul n'est pas terminé)
@@ -53,7 +67,7 @@ valeur_finale <- value(f)
 cat("Résultat récupéré :", valeur_finale, ". Temps total écoulé :", 
     round(Sys.time() - temps_depart, 2), "secondes.\n")
 
-# 4. Fermer les connexions et revenir au mode séquentiel
+# 4. Toujours revenir au mode séquentiel
 plan(sequential)
 ```
 
@@ -65,29 +79,39 @@ plan(sequential)
 library(purrr)
 library(furrr)
 
-# 1. Vecteur d'étapes (simulant des requêtes API ou des calculs de 1s)
-taches <- rep(1, 4)
+# 1. Vecteur d'étapes simulant des calculs indépendants
+taches <- rep(0.25, 4)
 
-# 2. Test Séquentiel (prend environ 4 secondes)
+# 2. Mesure séquentielle de référence
 temps_seq <- system.time({
   res_seq <- map(taches, ~ { Sys.sleep(.x); .x * 2 })
 })
 cat("Temps séquentiel :", temps_seq["elapsed"], "secondes.\n")
 
-# 3. Test Parallèle avec 4 cœurs (prend environ 1 seconde !)
-plan(multisession, workers = 4)
+# 3. Essai parallèle prudent ou repli séquentiel
+coeurs_disponibles <- as.integer(future::availableCores())
+workers <- max(1L, min(2L, coeurs_disponibles - 1L))
+
+if (workers >= 2L) {
+  future::plan(future::multisession, workers = workers)
+} else {
+  message("Un seul coeur est disponible: future_map() utilisera le plan séquentiel.")
+  future::plan(future::sequential)
+}
 
 temps_par <- system.time({
   res_par <- future_map(taches, ~ { Sys.sleep(.x); .x * 2 })
 })
 cat("Temps parallèle :", temps_par["elapsed"], "secondes.\n")
 
-plan(sequential)
+future::plan(future::sequential)
 ```
 
 ---
 
-## Mini-test de préparation
+## Auto-vérification facultative et non remise
+
+Ces questions servent uniquement à vérifier votre compréhension si vous choisissez la voie 12B. Elles ne constituent pas un second mini-test et aucune réponse n'est remise.
 
 ### Question 1 : Le concept de surcharge (Overhead)
 Pourquoi l'exécution d'une tâche simple (ex: faire la somme de 10 nombres) est-elle généralement **beaucoup plus lente** en parallèle qu'en séquentiel ?
@@ -100,7 +124,7 @@ Pourquoi l'exécution d'une tâche simple (ex: faire la somme de 10 nombres) est
 ### Question 2 : Reproductibilité et nombres aléatoires
 Pourquoi l'utilisation de `set.seed(123)` suivi d'une boucle parallèle classique (sans configuration spécifique) pose-t-elle un grave problème pour des simulations scientifiques ?
 
-*   **Option A :** Les cœurs génèrent exactement les mêmes nombres aléatoires en parallèle, ce qui rend les simulations identiques et corrélées.
+*   **Option A :** Les processus peuvent utiliser des flux aléatoires dupliqués ou dépendants, ce qui invalide l'indépendance attendue.
 *   **Option B :** Les processus de travail n'ont pas accès à l'horloge système.
 *   **Option C :** La génération parallèle modifie de façon permanente le système d'exploitation.
 *   **Option D :** `set.seed` ne fonctionne pas en dehors du Global Environment.

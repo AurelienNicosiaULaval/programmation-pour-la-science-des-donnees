@@ -51,6 +51,18 @@ git init
 
 Remplacer `VOTRE-COMPTE` par le nom du compte GitHub. Si l’authentification SSH n’est pas prête, travailler localement et documenter le blocage.
 
+### Voie de rattrapage SSH ou GitHub
+
+Un problème de compte GitHub, de clé SSH ou d’authentification ne doit pas bloquer le travail local. Dans ce cas:
+
+1. choisir l’option B et initialiser le dépôt avec `git init`;
+2. réaliser la structure, le README, le diagnostic et les commits localement;
+3. copier dans `modules/semaine-01/journal.qmd` la commande tentée et le message d’erreur complet, sans jamais copier une clé privée ou un jeton;
+4. indiquer comme prochaine action la configuration de l’accès GitHub;
+5. demander du soutien à partir de cette trace, puis associer le dépôt distant lorsque l’accès fonctionne.
+
+Il n’est pas nécessaire de recréer le dépôt local après la résolution du problème. La synchronisation peut être régularisée sans perdre les commits déjà faits.
+
 ## Étape 2 - Créer la structure minimale
 
 ```bash
@@ -206,12 +218,30 @@ git push -u origin main
 
 Si `git push` échoue, ne pas effacer le dépôt local. Noter le message d’erreur complet et consulter [Ressources](ressources.qmd).
 
+## Ce qui doit être terminé, et ce qui peut être régularisé
+
+Avant de quitter le laboratoire, chaque personne doit avoir:
+
+- un dépôt Git local ouvert depuis sa racine;
+- la structure minimale, un README et le journal de semaine 1;
+- un diagnostic exécuté, ou une erreur précise consignée;
+- au moins un commit local lisible;
+- une trace du blocage si GitHub ou SSH ne fonctionne pas.
+
+Peuvent être régularisés après la séance:
+
+- le second commit si le dépannage a occupé une partie importante du laboratoire;
+- la configuration SSH;
+- l’association du dépôt local à GitHub et le premier `git push`.
+
+Ces éléments de rattrapage doivent être repris avant le début du laboratoire de la semaine 2. La synchronisation GitHub demeure distincte de la réussite du travail local.
+
 ## Vérification finale
 
 Avant de quitter:
 
 - `git status` ne contient pas de surprise;
-- le dépôt contient au moins un commit;
+- le dépôt contient au moins un commit local;
 - le README explique la structure;
 - le journal semaine 1 mentionne les blocages réels;
 - aucun secret, jeton d’accès ou fichier confidentiel n’a été ajouté.

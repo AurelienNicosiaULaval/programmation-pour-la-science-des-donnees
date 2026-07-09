@@ -20,5 +20,5 @@ Voici une table récapitative des cas d'utilisation typiques pour chaque systèm
 | Système | Paradigme | Mutabilité | Cas d'utilisation recommandé |
 |---|---|---|---|
 | **S3** | Fonctionnel | Non (copie par valeur) | **Par défaut**. Idéal pour des modèles statistiques (comme `lm`), des analyses exploratoires simples, ou pour personnaliser l'affichage de fonctions de base (méthodes `print`, `summary`, `plot`). |
-| **S4** | Formel / Strict | Non (copie par valeur) | Pour des applications scientifiques complexes (comme en génomique avec Bioconductor) où la structure des données doit être vérifiée de manière extrêmement rigide. |
-| **R6** | Encapsulé | **Oui (référence)** | Pour modéliser des objets ayant un **état changeant** au cours du temps (ex: connexions de bases de données, requêtes API web avec cache, états d'applications Shiny, ou simulateurs de jeux). |
+| **S4** | Formel / Strict | Non (copie par valeur) | Système facultatif cette semaine, à reconnaître lorsque certains packages scientifiques le rendent nécessaire. |
+| **R6** | Encapsulé | **Oui (référence)** | À choisir seulement pour un état changeant partagé, par exemple le suivi d'un pipeline, une connexion, un cache ou l'état d'une application. |

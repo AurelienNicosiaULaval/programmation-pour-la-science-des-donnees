@@ -16,6 +16,8 @@ La semaine 4 prépare directement le défi technique 1. Les semaines 1 à 3 ont 
 
 Le but n’est pas de couvrir toutes les sources de données possibles. Le but est que chaque personne sache quoi vérifier lorsqu’un fichier ne se lit pas comme prévu, lorsqu’une colonne a le mauvais type, lorsqu’une valeur impossible apparaît ou lorsqu’un fichier devient trop lourd pour une manipulation naïve.
 
+Le noyau obligatoire de la semaine est le pipeline local `raw -> processed`: importation, diagnostic, nettoyage, validation, sauvegarde et documentation. SQL, API, Arrow et les stratégies pour fichiers volumineux sont présentés comme repères pour aller plus loin; leur maîtrise n’est pas attendue avant le défi technique 1.
+
 ## Objectifs du module
 
 À la fin de la semaine, chaque personne devrait pouvoir:

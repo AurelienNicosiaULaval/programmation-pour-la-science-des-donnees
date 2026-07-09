@@ -1,48 +1,47 @@
 ---
-title: "Site personnel, collaboration et documentation finale - Défi"
+title: "Semaine 15 - Exercice formatif de vérification croisée"
 format:
   html:
     embed-resources: true
 ---
 
-## Nature du défi
+## Nature de l'exercice
 
-Ce défi de module est une option de consolidation pour le portfolio, le projet ou le site personnel. Il ne remplace pas la composante évaluée de semaine 15, qui porte sur le site Quarto personnel individuel, ni la défense finale du projet d’équipe.
+Cet exercice est formatif et non noté. Il ne remplace aucun des trois défis techniques évalués. La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) sert uniquement de repère pour la reproductibilité, la justification et la clarté.
 
-## Consignes du défi de la semaine
+## Objectif
 
-L'objectif de ce défi est de transformer les scripts et fonctions de calcul que vous avez élaborés dans le cadre de votre projet de session (ou de vos portfolios) en un véritable **package R local, testé et documenté**.
+Faire vérifier par une autre personne les éléments essentiels de la remise finale avant la défense.
 
-### Tâche : Construire votre package R de projet
+## Consignes
 
-1.  **Sélection** : Identifiez au moins **deux fonctions clés** de votre projet de session (ex: une fonction d'importation et nettoyage de données spécifiques du module 4, ou une fonction de simulation/bootstrap de modèles).
-2.  **Création du package** : Initialisez un package R local portant le nom de votre projet ou un nom descriptif court (ex: `nettoyeurProjet`).
-3.  **Documentation Roxygen2** : Pour chaque fonction intégrée dans `R/` :
-    *   Documentez de façon rigoureuse tous les paramètres d'entrée (`@param`) et le format de l'objet retourné (`@return`).
-    *   Ajoutez des exemples d'utilisation complets et fonctionnels dans la section `@examples` (assurez-vous qu'ils s'exécutent sans erreur).
-    *   Exportez les fonctions publiques principales (`@export`) et conservez les éventuelles fonctions de calcul secondaires internes (`@noRd`).
-4.  **Dépendances** : Si vos fonctions font appel à d'autres bibliothèques (comme `dplyr`, `purrr` ou `ggplot2`), déclarez-les proprement dans le fichier `DESCRIPTION` à l'aide de `usethis::use_package()`.
-5.  **Tests unitaires** : Rédigez au moins **deux tests unitaires** avec `testthat` vérifiant les calculs de vos fonctions et la bonne capture d'erreurs logiques.
-6.  **Vérification** : Lancez la commande `devtools::check()` et corrigez le code ou la documentation jusqu'à ce que vous n'obteniez **aucun WARNING ni ERROR** (une NOTE sur le package non soumis sur CRAN est tolérée).
+Échanger avec une autre personne ou une autre équipe et vérifier:
 
----
+1. l'ouverture du site publié;
+2. les deux réalisations et le lien au portfolio;
+3. le dépôt source et le commit remis;
+4. la commande de reproduction du projet;
+5. l'extrait de code choisi pour la revue;
+6. les contributions individuelles;
+7. le bilan et les limites;
+8. `docs/ai-log.md` lorsque pertinent.
 
-## Livrables attendus dans votre portfolio
+La personne qui relit fournit:
 
-1.  **L'archive ou le dossier du package** : Le répertoire complet contenant votre code source (`R/`, `tests/`, `DESCRIPTION`, `NAMESPACE`).
-2.  **Un script d'essai** (ex: `demo_installation.R`) montrant comment installer votre package localement (ex: avec `devtools::install_local()`) et exécuter une démo.
-3.  **Une note explicative** rédigée sur votre journal de bord décrivant :
-    *   L'utilité globale de votre package.
-    *   La liste des fonctions publiques exportées.
-    *   Le rapport textuel ou visuel de la commande `devtools::check()` montrant la réussite des vérifications.
-    *   Les difficultés rencontrées pour gérer les dépendances (ex: imports de dplyr) ou documenter les objets complexes.
+- un problème bloquant, ou la mention explicite qu'aucun problème bloquant n'a été trouvé;
+- une question de défense;
+- une amélioration non bloquante.
+
+## Trace formative
+
+Conserver la revue dans une issue, une pull request ou une note du dépôt, puis corriger le problème bloquant avant la remise. Cette trace n'est pas remise séparément.
 
 ## Place de l'IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à rédiger la documentation `roxygen2` ou à structurer les tests. Les corrections signalées par `devtools::check()` doivent être comprises et résolues par la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le package, les tests ou la note explicative.
+L'IA peut aider à construire une checklist, mais elle ne remplace pas l'ouverture réelle du site, l'exécution du projet ni la revue humaine. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
-## Variante STT-6230
+## Option avancée
 
-Ajouter une justification technique courte liée au package ou au dépôt final: comparaison de deux structures possibles, validation supplémentaire, automatisation des tests, analyse d'une dépendance fragile ou plan de maintenance. La note doit rester reliée au code réellement produit.
+Le [package R local](annexe-package-r.qmd) est un approfondissement facultatif après la vérification de toutes les productions obligatoires.

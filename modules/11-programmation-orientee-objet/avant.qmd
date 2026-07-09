@@ -7,21 +7,23 @@ format:
 
 ## Objectif de préparation
 
-Comprendre les différences conceptuelles entre la programmation fonctionnelle (S3) et la programmation encapsulée avec référence (R6) en R, puis exécuter des exemples de base.
+Comprendre le mécanisme minimal de S3 et disposer de critères simples pour décider si un état mutable justifie R6. S4 n'appartient pas à la préparation obligatoire.
 
-Temps de préparation estimé : 45 minutes.
+Temps de préparation estimé: 45 minutes, soit environ 30 minutes sur S3 et 15 minutes sur la décision S3 ou R6.
 
 ## À lire
 
-1.  **Advanced R (Hadley Wickham)** :
-    *   [Chapter 12: S3](https://adv-r.hadley.nz/s3.html) : Comprendre comment fonctionne le système S3, la création de génériques et l'implémentation de méthodes.
-    *   [Chapter 14: R6](https://adv-r.hadley.nz/r6.html) : Comprendre la structure de R6, la méthode d'initialisation et la sémantique de référence.
+1.  **Noyau obligatoire, Advanced R**:
+    *   [Chapter 12: S3](https://adv-r.hadley.nz/s3.html): lire l'introduction, les sections sur les classes, les constructeurs et les méthodes.
+    *   [Chapter 14: R6](https://adv-r.hadley.nz/r6.html): lire l'introduction et la section sur la sémantique de référence afin de pouvoir décider si R6 convient au problème.
+2.  **Approfondissement facultatif**:
+    *   [Chapter 13: S4](https://adv-r.hadley.nz/s4.html): consulter seulement si un package utilisé dans votre projet retourne des objets S4.
 
 ---
 
 ## Exemples R à exécuter
 
-Veuillez installer le package `R6` (si ce n'est pas déjà fait dans votre environnement local) puis exécutez les scripts suivants dans votre console.
+Exécutez l'exemple S3, qui appartient au noyau obligatoire. Installez le package `R6` et exécutez le second exemple seulement si vous choisissez cette voie ou souhaitez observer la sémantique de référence.
 
 ### Exemple 1 : Le système fonctionnel S3 (Copie par valeur)
 
@@ -57,9 +59,9 @@ obj_s3_1$titre
 # [1] "Série A"
 ```
 
-### Exemple 2 : Le système encapsulé R6 (Sémantique de référence)
+### Exemple 2 : R6 pour éclairer une décision architecturale
 
-En R6 (via le package `R6`), les méthodes appartiennent aux objets. Modifier un objet R6 affecte toutes ses références en mémoire (pas de copie implicite).
+En R6 (via le package `R6`), les méthodes appartiennent aux objets. Modifier un objet R6 affecte toutes ses références en mémoire. Exécutez cet exemple pour observer cette conséquence, sans chercher à maîtriser toute la syntaxe de création d'une classe.
 
 ```r
 library(R6)
@@ -95,6 +97,16 @@ c1$valeur
 ---
 
 ## Mini-test de préparation
+
+Ce mini-test fait partie de la composante « Mini-tests de préparation » décrite dans la page [Évaluations](../../evaluations.qmd) et suit le [gabarit commun](../../gabarits/gabarit-mini-test-preparation.qmd).
+
+- Durée cible: 5 à 10 minutes, comprise dans les 45 minutes de préparation.
+- Questions: répondre aux trois questions ci-dessous dans l'ordre.
+- Format de remise: trois réponses numérotées dans le canal officiel indiqué par l'équipe enseignante.
+- Échéance: remettre avant le début du laboratoire.
+- Règle IA: l'IA est permise pour clarifier une notion. Les réponses doivent être comprises et vérifiées. Une clarification mineure n'exige pas d'entrée détaillée; si l'aide influence du code, une décision ou une trace conservée, la consigner dans `docs/ai-log.md`.
+- Trace: conserver le résultat dans le canal de remise et apporter en classe la difficulté relevée.
+- Complétion minimale: les trois réponses sont présentes et la décision personnelle de la question 3 est justifiée.
 
 ### Question 1 : Résolution de dispatch S3
 Quelle méthode S3 est appelée par la fonction générique `summary()` si elle reçoit en entrée, comme premier argument, l'objet de série temporelle `WWWusage` (provenant du package `datasets`) ?
@@ -137,10 +149,6 @@ plot.matrix(x, ...) {
 }
 ```
 
-### Question 3 : Extraction d'éléments d'une classe formelle S4
-Si un package vous renvoie un objet de classe formelle S4 (par exemple, un modèle fitted de `stats4` ou un objet de `Matrix`), quel opérateur devez-vous privilégier pour extraire la valeur d'un slot nommé `vcov` sans passer par des fonctions de méthodes ?
+### Question 3 : Décision personnelle S3 ou R6
 
-*   **Option A :** `$` (ex: `fit$vcov`)
-*   **Option B :** `[[` (ex: `fit[["vcov"]]`)
-*   **Option C :** `@` (ex: `fit@vcov`)
-*   **Option D :** `::` (ex: `fit::vcov`)
+Identifiez un résultat ou un composant de votre projet. Indiquez si vous retiendriez `S3`, si vous évalueriez `R6`, ou si aucune classe n'est nécessaire. Justifiez avec un critère observable: besoin d'affichage ou de dispatch, état mutable partagé, ressource persistante, ou suffisance de fonctions et listes simples. Notez aussi une difficulté à reprendre en classe.

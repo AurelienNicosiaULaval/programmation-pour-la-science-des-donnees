@@ -107,9 +107,9 @@ Le README doit permettre à une autre personne de comprendre le portfolio sans e
 - une note sur les dépendances R;
 - une indication sur la déclaration IA.
 
-## `ai-log.md`
+## `docs/ai-log.md`
 
-L’IA est permise et déclarée pour le portfolio. Le fichier `ai-log.md` doit être proportionné: il n’a pas besoin d’être long, mais il doit permettre de comprendre les usages significatifs de l’IA.
+L’IA est permise et déclarée pour le portfolio. Le fichier `docs/ai-log.md` doit être proportionné: il n’a pas besoin d’être long, mais il doit permettre de comprendre les usages significatifs de l’IA.
 
 Chaque entrée importante devrait indiquer:
 
@@ -136,10 +136,25 @@ Les commits doivent rendre la progression visible. Un bon historique Git contien
 | Moment | Attentes principales |
 |---|---|
 | Semaine 3 | Dépôt créé, README initial, structure de dossiers, conventions de base, premières traces hebdomadaires |
-| Semaine 9 | Progression visible, plusieurs modules documentés, fonctions ou scripts réutilisables, premières validations, `ai-log` si pertinent |
+| Semaine 9 | Progression visible, plusieurs modules documentés, fonctions ou scripts réutilisables, premières validations, `docs/ai-log.md` si pertinent |
 | Semaine 14 | Portfolio complet, README à jour, traces hebdomadaires organisées, bilan final, usages IA déclarés |
 
 Le site Quarto personnel remis en semaine 15 utilise au moins une réalisation issue du portfolio, mais il constitue une composante évaluée distincte.
+
+## Lien avec le site Quarto personnel
+
+Le portfolio est la source de progression. Le site Quarto personnel est la vitrine publique. La relation entre les deux doit être explicite.
+
+À la fin de la session, le portfolio doit contenir dans le `README.md` ou dans `docs/bilan-final.md`:
+
+- l’adresse du site Quarto personnel publié;
+- l’adresse du dépôt source du site;
+- la trace du portfolio sélectionnée pour le site;
+- le lien vers le fichier, dossier, rapport ou commit correspondant, si ce lien peut être publié.
+
+La trace reprise dans le site peut être un script, un rapport Quarto, une visualisation, une fonction, un diagnostic, une validation ou une note technique. Elle doit être commentée dans le site personnel avec son contexte, sa production, les outils utilisés, les vérifications effectuées, une limite et une piste d’amélioration.
+
+Il n’est pas nécessaire de rendre tout le portfolio public dans le site personnel. Si une trace contient des données, informations ou brouillons qui ne doivent pas être publiés, le site doit présenter une version publique résumée.
 
 ## Traces professionnelles à accumuler
 
@@ -161,7 +176,7 @@ Le site Quarto personnel remis en semaine 15 utilise au moins une réalisation i
 | Qualité du code | Lisibilité, modularité, fonctions lorsque pertinent, absence de duplication excessive |
 | Validation | Tests, vérifications, diagnostics ou contrôles de cohérence |
 | Réflexion | Notes sur les difficultés, reprises, décisions et apprentissages |
-| Transparence IA | `ai-log.md` présent et proportionné lorsque l’IA influence le travail |
+| Transparence IA | `docs/ai-log.md` présent et proportionné lorsque l’IA influence le travail |
 
 ## Différenciation STT-4230 / STT-6230
 

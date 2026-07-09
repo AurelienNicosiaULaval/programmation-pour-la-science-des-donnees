@@ -7,7 +7,9 @@ format:
 
 ## Nature du défi
 
-Ce défi de module est une activité de préparation au jalon portfolio de la semaine 3. Il n’est pas le défi technique 1, qui aura lieu à la semaine 5.
+Ce défi de module est une activité formative et non notée de préparation au jalon portfolio de la semaine 3. Il n’est pas le défi technique 1, qui aura lieu à la semaine 5.
+
+La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère transférable pour relire la qualité du travail. Son utilisation ne transforme pas ce défi de module en évaluation notée.
 
 ## Objectif
 
@@ -36,11 +38,11 @@ Dans le dépôt `portfolio-stt4230`, produire:
 
 ## Place de l’IA
 
-Statut: permise pour comprendre et diagnostiquer; déclarée si elle influence le livrable.
+Statut: permise, déclarée.
 
 L’IA peut expliquer une commande Git, aider à comprendre une erreur ou proposer une formulation de convention. Toute proposition doit être adaptée au dépôt réel.
 
-Ajouter une entrée dans `docs/ai-log.md` si l’IA influence de manière significative la documentation, le script ou une décision de structure.
+Règle commune: le travail doit être compris, vérifié, adapté au contexte et défendable. Si l’IA influence de manière significative le code, la documentation, une décision ou le livrable, documenter cet usage dans `docs/ai-log.md`.
 
 ## Critères de réussite
 

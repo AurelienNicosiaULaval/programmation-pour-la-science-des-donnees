@@ -12,40 +12,47 @@ Comment remplacer le copier-coller par des fonctions et des itérations fiables?
 
 ## Rôle dans le cours
 
-Ce module marque le passage de l'analyse exploratoire interactive à la programmation robuste. Après avoir nettoyé des données (module 4) et produit des rapports reproductibles (module 7), vous apprendrez à modulariser votre code. Écrire des fonctions claires, comprendre les règles de portée (scoping) et d'environnements, automatiser les calculs avec le package `purrr` (famille `map()`) et tester rigoureusement vos fonctions avec `testthat` sont des compétences indispensables pour bâtir des pipelines de science des données maintenables.
+Ce module marque le passage de l'analyse exploratoire interactive à la programmation robuste. Après avoir nettoyé des données (module 4) et produit des rapports reproductibles (module 7), vous apprendrez à modulariser un fragment réel de votre portfolio ou de votre projet. Le noyau de la semaine est volontairement resserré: écrire une fonction, vérifier son comportement avec au moins un test pertinent et l'appliquer dans une itération. La portée lexicale, les environnements, les promesses et `browser()` servent d'approfondissement ou de démonstration.
+
+## Noyau et approfondissement
+
+| Niveau | Attente de la semaine |
+|---|---|
+| Noyau obligatoire | Une fonction documentée et validée, au moins un test automatisé qui passe et une itération sur plusieurs entrées avec une variante appropriée de `map()` |
+| Approfondissement facultatif | Portée lexicale, environnements d'évaluation, promesses et diagnostic interactif avec `browser()` |
 
 ## Objectifs du module
 
 À la fin de la semaine, chaque personne devrait pouvoir:
 
-- écrire des fonctions R claires, documentées et munies de mécanismes de validation des arguments (ex: `match.arg()`, gestion des valeurs manquantes);
-- comprendre les notions d'environnement d'évaluation, d'environnement englobant et de portée lexicale (lexical scoping) en R;
-- utiliser le débogueur interactif `browser()` pour diagnostiquer les erreurs à l'intérieur d'une fonction;
-- remplacer les boucles complexes (`for`, `while`) par des appels purrr (`map()`, `map_dbl()`, etc.) pour des itérations plus fiables et lisibles;
-- mettre en place des tests unitaires minimaux à l'aide du package `testthat`.
+- écrire une fonction R claire, documentée et munie de validations d'arguments;
+- vérifier au moins un comportement attendu et un cas problématique avec `testthat`;
+- appliquer la fonction à plusieurs entrées avec `purrr::map()` ou une variante typée;
+- expliquer, en approfondissement, comment la portée lexicale ou un environnement peut influencer l'exécution d'une fonction;
+- utiliser, en approfondissement, `browser()` pour observer l'état local d'une fonction.
 
 ## Compétences visées
 
 - Définir clairement les entrées (arguments avec valeurs par défaut) et les sorties d'une fonction.
 - Utiliser la famille de fonctions `map()` de `purrr` pour itérer sur des vecteurs ou des listes.
-- Débâtir une structure de données imbriquée (nested tables).
-- Rédiger des scripts de tests unitaires pour valider les comportements attendus et la levée d'exceptions.
+- Déplier une structure de données imbriquée lorsque la tâche l'exige.
+- Rédiger un test unitaire minimal pour valider un comportement attendu ou la levée d'une exception.
 
 ## Déroulement
 
 | Moment | Page à utiliser | Résultat |
 |---|---|---|
-| Avant la classe | [Avant la classe](avant.qmd) | Réviser la portée lexicale, les fonctions de base R et faire le mini-test |
-| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos d'environnements, de scoping et de débogage avec `browser()` |
-| Laboratoire | [Laboratoire](laboratoire.qmd) | Écrire une fonction robuste, y ajouter des tests unitaires, et automatiser des calculs avec `purrr::map()` |
-| Défi de module | [Défi de module](defi.qmd) | Refactoriser un code répétitif en fonctions testées |
+| Avant la classe | [Avant la classe](avant.qmd) | Réviser les fonctions et l'itération, puis faire le mini-test; le scoping est un approfondissement |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Consolider fonction, test et itération; observer au besoin une démo de `browser()` |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Produire le noyau obligatoire: une fonction testée et une itération avec `purrr::map()` |
+| Défi de module | [Défi de module](defi.qmd) | Refactoriser un fragment réel du portfolio ou du projet |
 | Après la classe | [Après la classe](apres.qmd) | Déposer la trace portfolio: fonction, test minimal, note de vérification et commit |
 
 ## Place de l’IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à générer des cas de tests unitaires ou à comprendre une erreur de syntaxe avec `purrr`. La personne étudiante doit néanmoins être capable de tracer l'environnement englobant de ses fonctions et de justifier le choix de la variante de `map()` utilisée, par exemple `map_dbl()` plutôt que `map()`. Tout usage significatif de l'IA doit être documenté dans `docs/ai-log.md` ou dans le journal.
+L'IA peut aider à proposer des cas de test ou à comprendre une erreur de syntaxe avec `purrr`. Toute contribution significative de l'IA doit être consignée dans `docs/ai-log.md` en indiquant l'outil, le but de l'utilisation, l'élément retenu et la vérification effectuée. Le code et le texte conservés doivent être compris, vérifiés, adaptés au contexte et défendables par la personne étudiante.
 
 ## Variante STT-6230
 

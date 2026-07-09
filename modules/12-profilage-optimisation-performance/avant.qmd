@@ -1,5 +1,5 @@
 ---
-title: "Profilage, optimisation et performance - Avant la classe"
+title: "12A - Profilage, optimisation et performance - Avant la classe"
 format:
   html:
     embed-resources: true
@@ -7,9 +7,9 @@ format:
 
 ## Objectif de préparation
 
-Comprendre la méthodologie scientifique de mesure de performance en R, installer les packages nécessaires (`bench` et `profvis`), et exécuter des benchmarks simples.
+Comprendre la méthodologie scientifique de mesure de performance en R, installer les packages nécessaires (`bench` et `profvis`) et exécuter un benchmark simple.
 
-Temps de préparation estimé : 40 minutes.
+Cette page représente environ 35 minutes de la [préparation unique de 50 minutes](../12-synthese-performance-parallele/index.qmd): 25 minutes de lecture et d'exécution, puis 10 minutes pour le seul mini-test de la semaine.
 
 ## À lire
 
@@ -82,8 +82,18 @@ profvis({
 
 ## Mini-test de préparation
 
-### Question 1 : Efficacité des expressions logiques
-Toutes les instructions R suivantes calculent exactement la même proportion de données manquantes dans un vecteur d'entiers `x`. Laquelle de ces expressions est la **plus rapide** en termes de temps de calcul médian ?
+Ce mini-test fait partie de la composante « Mini-tests de préparation » décrite dans la page [Évaluations](../../evaluations.qmd) et suit le [gabarit commun](../../gabarits/gabarit-mini-test-preparation.qmd).
+
+- Durée cible: 5 à 10 minutes, comprise dans la préparation unique de la semaine 12.
+- Questions: répondre aux trois questions ci-dessous dans l'ordre.
+- Format de remise: trois réponses numérotées dans le canal officiel indiqué par l'équipe enseignante.
+- Échéance: remettre avant le début du laboratoire.
+- Règle IA: l'IA est permise pour clarifier une notion. Les réponses doivent être comprises et vérifiées. Une clarification mineure n'exige pas d'entrée détaillée; si l'aide influence du code, une décision ou une trace conservée, la consigner dans `docs/ai-log.md`.
+- Trace: conserver le résultat dans le canal de remise et apporter en classe la difficulté relevée.
+- Complétion minimale: les trois réponses sont présentes, l'exemple `bench::mark()` a été exécuté et l'observation de la question 3 est rapportée sans cible de vitesse.
+
+### Question 1 : Conclusion défendable avant la mesure
+Les instructions suivantes visent la même proportion de données manquantes dans un vecteur d'entiers `x`. Quelle conclusion est méthodologiquement défendable avant d'avoir exécuté un benchmark sur la machine utilisée?
 
 ```r
 opt_a <- mean(is.na(x) == TRUE)
@@ -92,10 +102,10 @@ opt_c <- sum(is.na(x)) / length(x)
 opt_d <- tail(proportions(table(x, useNA = "always")), n = 1)
 ```
 
-*   **Option A :** `opt_a`
-*   **Option B :** `opt_b`
-*   **Option C :** `opt_c`
-*   **Option D :** `opt_d`
+*   **Option A:** `opt_a` sera toujours la plus rapide.
+*   **Option B:** `opt_b` sera toujours la plus rapide.
+*   **Option C:** `opt_c` sera toujours la plus rapide.
+*   **Option D:** aucune vitesse absolue ne peut être affirmée sans mesure; il faut aussi vérifier que les résultats comparés sont équivalents.
 
 ### Question 2 : Choix de l'indicateur de centralité
 Pourquoi est-il fortement recommandé de s'appuyer sur la **médiane** des temps d'exécution plutôt que sur la **moyenne** lors de la comparaison de deux algorithmes R ?
@@ -105,10 +115,6 @@ Pourquoi est-il fortement recommandé de s'appuyer sur la **médiane** des temps
 *   **Option C :** R calcule la médiane plus rapidement que la moyenne.
 *   **Option D :** La médiane ignore les lancers de dés aléatoires.
 
-### Question 3 : Identification de la cause de lenteur dans les boucles
-Dans la fonction `somme_de_vecteur_croissant` exécutée dans l'Exemple 2, quelle ligne de code prend le plus de temps à s'exécuter à cause des réallocations successives de mémoire système ?
+### Question 3 : Observation personnelle et vérifiable
 
-*   **Option A :** `somme <- 0`
-*   **Option B :** `tirage <- sample(1:6, size = 1)`
-*   **Option C :** `somme <- somme + tirage`
-*   **Option D :** `resultats <- c(resultats, tirage)`
+Après avoir exécuté l'exemple `bench::mark()`, indiquez l'ordre des trois expressions selon leur temps médian sur votre machine, puis notez un facteur qui limite la comparaison, par exemple la charge de fond, le nombre d'itérations ou la version de R. Signalez toute erreur d'installation ou d'exécution à reprendre en classe.

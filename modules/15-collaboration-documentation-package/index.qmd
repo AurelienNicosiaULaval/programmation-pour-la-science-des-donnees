@@ -1,68 +1,95 @@
 ---
-title: "Site personnel, collaboration et documentation finale"
-description: "Comment présenter, documenter, publier et défendre son travail final."
+title: "Semaine 15 - Publication, défense et bilan final"
+description: "Publier le site personnel, défendre le projet et rendre les contributions vérifiables"
 format:
   html:
     embed-resources: true
 ---
 
-## Question du module
+## Question de la semaine
 
-Comment présenter, documenter, publier et défendre un travail de science des données de façon professionnelle?
+Comment rendre le travail final accessible, vérifiable et défendable par une personne qui n'a pas suivi son développement?
 
-## Rôle dans le cours
+## Noyau obligatoire
 
-La semaine 15 sert à fermer proprement le cours: publier le site Quarto personnel, présenter le projet, relire un extrait de code, défendre les choix techniques et vérifier les contributions.
+La dernière semaine porte sur les productions réellement évaluées:
 
-Le site Quarto personnel constitue la composante individuelle de 10 % remise à la dernière semaine. La présentation et la revue de code font partie du projet d’équipe. Le format package R local reste une extension utile lorsque le projet contient des fonctions réutilisables, mais il ne remplace pas les exigences centrales: site publié, dépôt final propre, README, reproduction, revue de code, contributions vérifiables et bilan final.
+- le site Quarto personnel publié et son dépôt source;
+- les deux réalisations commentées et la liaison au portfolio;
+- le dépôt final du projet et son commit évalué;
+- la défense du projet;
+- la revue d'un extrait de code;
+- les contributions individuelles vérifiables;
+- le bilan individuel;
+- `docs/ai-log.md` lorsqu'un usage significatif de l'IA doit être déclaré.
 
-## Objectifs du module
+La création d'un package R n'est pas une production obligatoire. Elle est déplacée dans une [annexe facultative](annexe-package-r.qmd) destinée aux projets qui contiennent des fonctions réutilisables et qui ont déjà terminé les exigences ci-dessus.
 
-À la fin de la semaine, chaque personne devrait pouvoir:
+## Objectifs de la semaine
 
-- publier un site Quarto personnel minimal avec GitHub Pages;
-- sélectionner deux réalisations pertinentes et les commenter;
-- vérifier qu'un dépôt final peut être compris sans explication orale;
-- choisir un extrait de code pertinent pour une revue;
-- expliquer les entrées, sorties, dépendances et limites d'une fonction ou d'un pipeline;
-- documenter les contributions individuelles;
-- produire un bilan final bref et défendable;
-- identifier quand un package R local est pertinent pour structurer du code réutilisable.
+À la fin de la séance, chaque personne doit pouvoir:
 
-## Compétences visées
+- ouvrir le site publié à partir de son URL;
+- retrouver le dépôt source et le commit remis;
+- expliquer le choix des deux réalisations;
+- présenter la question, la démarche, le résultat et les limites du projet;
+- expliquer un extrait de code, ses entrées, ses sorties et ses dépendances;
+- répondre à une question de reproduction ou de validation;
+- situer sa contribution dans le travail d'équipe;
+- formuler un bilan bref et une prochaine étape réaliste.
 
-- Initialiser l'arborescence complète d'un package R.
-- Générer automatiquement le fichier `NAMESPACE` et les fichiers d'aide dans `man/`.
-- Déclarer proprement l'importation de fonctions externes provenant de packages tiers (ex: `stats::dist`).
-- Ajouter des tests unitaires au package et vérifier qu'ils s'exécutent avec succès lors de la construction.
-- Exporter les fonctions destinées à l'utilisateur tout en dissimulant les fonctions internes d'aide (`@noRd`).
+## Déroulement réaliste de trois heures
 
-## Déroulement
+| Moment | Activité | Résultat attendu |
+|---:|---|---|
+| 0-15 min | Ouverture et vérification des liens | URL, dépôt et commit accessibles |
+| 15-45 min | Vérification croisée des sites personnels | Site publié, deux réalisations, portfolio et déclaration vérifiés |
+| 45-105 min | Défenses, bloc 1 | Présentations, revue de code et questions |
+| 105-115 min | Pause |  |
+| 115-165 min | Défenses, bloc 2 | Présentations, revue de code et questions |
+| 165-175 min | Contributions et bilans | `docs/contributions.md` et bilan retrouvables |
+| 175-180 min | Clôture | Prochaine action et trace finale confirmées |
 
-| Moment | Page à utiliser | Résultat |
-|---|---|---|
-| Avant la classe | [Avant la classe](avant.qmd) | Vérifier le site personnel, le dépôt final, le README, les tests et les contributions |
-| Pendant la classe | [Pendant la classe](pendant.qmd) | Présenter le projet, faire une revue de code, répondre aux questions et vérifier les sites publiés |
-| Laboratoire | [Laboratoire](laboratoire.qmd) | Utiliser le format package R local comme référence technique lorsque pertinent |
-| Défi de module | [Défi de module](defi.qmd) | Option de consolidation: packager une fonction de projet sous forme de package local testé |
-| Après la classe | [Après la classe](apres.qmd) | Déposer la trace finale: bilan, revue, documentation et dernier commit |
+Les deux blocs de défense réservent 110 minutes au total. La durée exacte par équipe est annoncée selon le nombre d'équipes. Chaque créneau comprend obligatoirement une présentation, une revue de code et des questions de défense; aucune de ces trois parties ne doit être supprimée pour ajouter une nouvelle démonstration technique.
 
-## Place de l’IA
+## Productions à avoir sous la main
+
+### Site personnel
+
+- URL GitHub Pages fonctionnelle;
+- URL du dépôt source;
+- identifiant du commit remis;
+- deux réalisations commentées;
+- lien explicite vers le portfolio;
+- déclaration IA conforme, lorsque pertinente.
+
+### Projet d'équipe
+
+- dépôt final et README;
+- commande principale de reproduction;
+- support bref;
+- extrait de code choisi pour la revue;
+- preuve de validation et limites;
+- `docs/contributions.md`;
+- bilan individuel.
+
+## Place de l'IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à rédiger des descriptions de fonctions au format `roxygen2`, à structurer des fichiers de tests ou à relire le site Quarto personnel. La personne étudiante doit toutefois être capable de résoudre elle-même les problèmes de dépendances signalés par `devtools::check()`, comme l'oubli de déclarer un package importé dans la section `Imports` de DESCRIPTION. Tout usage significatif doit être déclaré dans `docs/ai-log.md` ou dans la déclaration du site personnel.
+Tout usage significatif qui influence le code, le site, la validation, les visuels, la documentation ou la préparation de la défense doit être documenté dans `docs/ai-log.md`. La personne étudiante doit pouvoir expliquer et défendre le contenu produit.
 
 ## Variante STT-6230
 
-Préparer une justification technique courte liée au dépôt final ou au site personnel: comparaison d'approches, validation supplémentaire, analyse de performance, automatisation du pipeline, publication GitHub Pages ou plan de maintenance. Une politique de Continuous Integration avec GitHub Actions est un exemple possible si elle est réaliste pour le projet.
+Ajouter à la défense une justification technique courte reliée au projet réel: comparaison d'approches, validation supplémentaire, analyse de performance, automatisation, publication ou plan de maintenance. L'[annexe package R](annexe-package-r.qmd) est une option possible, jamais une obligation.
 
-## Pages du module
+## Pages de la semaine
 
-- [Avant la classe](avant.qmd)
-- [Pendant la classe](pendant.qmd)
-- [Laboratoire](laboratoire.qmd)
-- [Défi de module](defi.qmd)
-- [Après la classe](apres.qmd)
-- [Lectures](lectures.qmd)
-- [Ressources](ressources.qmd)
+- [Préparation](avant.qmd)
+- [Déroulement de la séance](pendant.qmd)
+- [Clinique finale](laboratoire.qmd)
+- [Consolidation après la séance](apres.qmd)
+- [Exercice formatif non noté](defi.qmd)
+- [Lectures essentielles](lectures.qmd)
+- [Ressources et checklists](ressources.qmd)
+- [Annexe facultative: package R local](annexe-package-r.qmd)

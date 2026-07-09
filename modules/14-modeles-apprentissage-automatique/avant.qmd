@@ -1,31 +1,29 @@
 ---
-title: "Modèles d’apprentissage automatique - Avant la classe"
+title: "14A - Validation adaptée au projet - Avant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de préparation
+## Place dans la préparation unique
 
-Préparer un exemple de question prédictive simple et identifier les données nécessaires pour y répondre.
+La préparation obligatoire de semaine 14 est décrite sur la [page de synthèse](../14-synthese-finale/index.qmd) et dure 45 minutes au total. Il n'y a aucun mini-test noté.
 
-## À préparer
+Cette page concerne seulement les personnes qui choisissent la voie prédictive ou qui veulent en revoir les principes. Prévoir au plus 10 minutes à l'intérieur des 45 minutes de préparation totale.
 
-- Choisir un jeu de données utilisable dans le cours.
-- Identifier une variable cible.
-- Noter les variables explicatives candidates.
-- Décrire une stratégie minimale de validation.
+## Préparer la voie prédictive
 
-## Questions d'autovérification
+- Formuler une question prédictive simple reliée au projet.
+- Identifier la variable cible et les variables explicatives candidates.
+- Décrire une séparation minimale entre construction et évaluation.
+- Choisir une mesure de performance et une référence simple.
+- Noter un risque de fuite de données ou d'interprétation abusive.
 
-Il n'y a pas de mini-test prévu à la semaine 14 dans la version v1. Vérifier plutôt sa préparation avec des questions courtes sur:
+## Questions d'autovérification formative
 
-- la distinction entre entraînement et validation;
-- les fuites de données;
-- les variables cibles;
-- les mesures de performance;
-- les limites d’un modèle prédictif.
+- Les données d'évaluation interviennent-elles dans la construction du modèle?
+- La mesure choisie répond-elle réellement à la question?
+- La référence simple permet-elle d'interpréter la performance?
+- Quelle conclusion demeurerait injustifiée même si le score est bon?
 
-## Trace à apporter
-
-Une note courte indiquant la question prédictive, la variable cible, les variables candidates et un risque méthodologique.
+Ces réponses ne sont ni remises ni notées. La trace à apporter est la preuve de validation choisie sur la page intégratrice, qu'elle soit prédictive ou non.

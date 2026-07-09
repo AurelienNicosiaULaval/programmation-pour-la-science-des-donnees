@@ -1,5 +1,5 @@
 ---
-title: "Cycle de vie des modèles - Laboratoire"
+title: "14C - Limites, suivi et maintenance - Laboratoire"
 format:
   html:
     embed-resources: true
@@ -7,84 +7,98 @@ format:
 
 ## Objectif du laboratoire
 
-Créer une fiche de suivi pour un modèle ou un pipeline analytique.
+Créer une fiche de suivi courte pour un modèle, un pipeline, un tableau de bord, une application, un rapport ou un composant logiciel.
 
 ## Résultat attendu
 
-Produire `docs/fiche-suivi-modele.md` ou une section équivalente dans le journal du portfolio. La fiche doit permettre à une autre personne de comprendre ce qui a été entraîné ou validé, avec quelles données, dans quelle version du code, et dans quelles limites.
+Produire `docs/fiche-suivi.md` ou une section équivalente. La fiche doit permettre à une autre personne de retrouver la version, comprendre la validation, reconnaître les limites et savoir quoi revérifier.
 
-## Activité guidée, 35 à 45 minutes
+## Activité guidée, 30 minutes
 
-1. Identifier le modèle ou pipeline.
-2. Décrire les données utilisées.
-3. Noter la version du code.
-4. Décrire les mesures de validation.
-5. Ajouter les limites d’utilisation.
-6. Proposer une vérification future.
+1. Identifier le type de livrable et son objectif.
+2. Décrire les données, entrées ou paramètres importants.
+3. Noter le fichier principal et le commit.
+4. Résumer la validation ou le contrôle de qualité.
+5. Ajouter une limite et un usage hors contexte.
+6. Nommer trois risques pertinents.
+7. Proposer une vérification future et une prochaine action.
 
-## Exemple minimal de fiche
+## Gabarit
 
 ```markdown
-# Fiche de suivi du modèle
+# Fiche de suivi
 
-## Objectif
+## Livrable et objectif
 
-Prédire ou résumer ...
+Type:
+Objectif:
+Public ou personne utilisatrice:
 
-## Données utilisées
+## Données, entrées ou paramètres
 
-Source:
-Période:
-Variables principales:
+Sources ou fichiers:
+Période ou version:
+Paramètres importants:
 Limites connues:
 
 ## Version du code
 
 Commit:
-Script ou rapport:
-Packages importants:
+Point d'entrée:
+Dépendances importantes:
 
-## Validation effectuée
+## Validation ou contrôle effectué
 
-Méthode:
-Mesure:
+Méthode ou scénario:
 Résultat:
-Référence ou baseline:
+Référence ou comportement attendu:
+Éléments non vérifiés:
+
+## Limites et usages hors contexte
+
+- ...
 
 ## Risques
 
-- Données: ...
-- Code: ...
+- Données ou entrées: ...
+- Code ou dépendances: ...
 - Usage: ...
 - Interprétation: ...
 
-## Vérification future
+## Vérification future et prochaine action
 
-À refaire lorsque ...
-Critère d’alerte:
-Prochaine action:
+À refaire lorsque:
+Procédure:
+Critère d'alerte:
+Personne responsable ou prochaine action:
 ```
 
-## Activité de repérage de dérive
+## Tableau de suivi adapté
 
-À partir de votre projet ou d’un exemple simple, remplir le tableau suivant:
+Compléter seulement les lignes pertinentes:
 
-| Élément surveillé | Valeur actuelle | Changement qui inquiéterait | Vérification possible |
+| Élément surveillé | État actuel | Changement préoccupant | Vérification possible |
 |---|---|---|---|
-| Nombre de lignes |  |  |  |
-| Variable cible ou résultat principal |  |  |  |
-| Proportion de valeurs manquantes |  |  |  |
-| Score ou indicateur de validation |  |  |  |
-
-La vérification peut être simple: comparer une distribution, refaire un score sur un échantillon récent, relancer un test ou inspecter une sortie.
+| Source ou schéma des données |  |  |  |
+| Résultat, score ou indicateur principal |  |  |  |
+| Valeurs manquantes ou entrées invalides |  |  |  |
+| Dépendance, paramètre ou service |  |  |  |
+| Lisibilité, accessibilité ou rendu |  |  |  |
 
 ## Trace attendue
 
 - fiche de suivi;
-- note sur les limites et usages à éviter;
-- vérification future avec critère d’alerte;
-- entrée de portfolio indiquant le fichier, le commit et la prochaine action.
+- trois risques documentés;
+- une limite ou un usage hors contexte;
+- une vérification future exécutable;
+- fichier et commit associés.
 
 ## Variante STT-6230
 
-Ajouter une comparaison de deux stratégies de suivi et recommander celle qui convient au projet. La comparaison doit tenir compte de la fréquence réaliste de mise à jour, du coût de validation et du risque d’interprétation.
+Comparer deux stratégies de suivi et recommander celle qui convient au projet. Tenir compte de la fréquence de mise à jour, du coût de validation et du risque d'interprétation.
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider à structurer la fiche ou à suggérer un risque. Le diagnostic et la prochaine action doivent rester vérifiés et défendables. Tout usage significatif doit être documenté dans `docs/ai-log.md`.

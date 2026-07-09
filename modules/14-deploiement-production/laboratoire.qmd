@@ -1,5 +1,5 @@
 ---
-title: "Déploiement et mise en production - Laboratoire"
+title: "14B - Reproduction et livraison - Laboratoire"
 format:
   html:
     embed-resources: true
@@ -7,168 +7,188 @@ format:
 
 ## Objectif du laboratoire
 
-Transformer un prototype R en livrable minimalement reproductible. Le livrable peut être un script, un rapport Quarto, un tableau de bord ou une analyse du projet d'équipe.
+Exécuter réellement le point d'entrée d'un projet simple, vérifier sa sortie et produire des erreurs compréhensibles. Le livrable peut rester local: aucun déploiement public n'est obligatoire.
 
 ## Résultat attendu
 
-À la fin du laboratoire, votre dépôt contient:
+Le dépôt contient:
 
-- un README de reproduction;
-- une commande principale d'exécution;
-- un script de vérification minimal;
-- une liste de dépendances;
-- une note de limites;
+- une section `Reproduction` dans le README;
+- un point d'entrée documenté;
+- `scripts/verifier_reproduction.R` adapté au projet;
+- au moins une sortie vérifiée;
+- une limite explicite;
 - un commit ciblé.
 
-## Étape 1 - Choisir le livrable
+## Étape 1 - Nommer le point d'entrée réel
 
-Choisir un seul livrable à stabiliser:
+Choisir une seule commande principale, par exemple:
 
-- un rapport Quarto;
-- un script d'analyse;
-- un pipeline de données;
-- une application Shiny minimale;
-- un prototype du projet d'équipe.
-
-Noter dans le README:
-
-- le nom du livrable;
-- son objectif;
-- les fichiers nécessaires;
-- la sortie attendue.
-
-## Étape 2 - Écrire la procédure de reproduction
-
-Ajouter ou corriger une section `Reproduction` dans le README.
-
-```markdown
-## Reproduction
-
-1. Cloner le dépôt.
-2. Ouvrir R ou Positron à la racine du dépôt.
-3. Restaurer les dépendances si `renv.lock` est présent:
-
-```r
-renv::restore()
+```bash
+Rscript scripts/executer_projet.R
 ```
 
-4. Exécuter la commande principale:
+Pour tester le gabarit avant de l'adapter, créer `scripts/executer_projet.R`:
 
 ```r
-source("scripts/verifier_reproduction.R")
-```
+# Point d'entree minimal pour tester la reproduction
+dir.create("outputs", recursive = TRUE, showWarnings = FALSE)
 
-5. Vérifier que les sorties attendues sont créées.
-```
-
-Adapter les chemins au dépôt réel.
-
-## Étape 3 - Créer un script de vérification
-
-Créer `scripts/verifier_reproduction.R`.
-
-```r
-# Verification minimale de reproduction
-
-fichiers_attendus <- c(
-  "README.md",
-  "scripts"
+resultats <- data.frame(
+  indicateur = c("lignes", "moyenne"),
+  valeur = c(5, mean(1:5))
 )
 
-manquants <- fichiers_attendus[!file.exists(fichiers_attendus)]
-
-if (length(manquants) > 0) {
-  stop(
-    "Fichiers ou dossiers manquants: ",
-    paste(manquants, collapse = ", ")
-  )
-}
-
-message("Structure minimale presente.")
-
-if (file.exists("renv.lock")) {
-  message("renv.lock present.")
-} else {
-  warning("renv.lock absent: documenter les packages requis dans le README.")
-}
+utils::write.csv(
+  resultats,
+  "outputs/resultats.csv",
+  row.names = FALSE
+)
 ```
 
-Si votre livrable produit une sortie, ajouter une vérification de sortie:
+Dans le projet réel, remplacer ce fichier par le script, le rapport ou la commande qui produit vraiment le livrable.
+
+## Étape 2 - Ajouter le vérificateur exécutable
+
+Créer `scripts/verifier_reproduction.R`:
 
 ```r
+# Verification d'un point d'entree R simple
+point_entree <- "scripts/executer_projet.R"
 sorties_attendues <- c("outputs/resultats.csv")
 
-sorties_manquantes <- sorties_attendues[!file.exists(sorties_attendues)]
-
-if (length(sorties_manquantes) > 0) {
-  warning(
-    "Sorties non trouvees: ",
-    paste(sorties_manquantes, collapse = ", ")
-  )
+arreter <- function(message) {
+  stop(paste0("VERIFICATION ECHOUEE: ", message), call. = FALSE)
 }
+
+if (!file.exists(point_entree)) {
+  arreter(paste0(
+    "point d'entree introuvable: '", point_entree,
+    "'. Corriger le chemin dans scripts/verifier_reproduction.R."
+  ))
+}
+
+message("Execution du point d'entree: ", point_entree)
+
+tryCatch(
+  {
+    sys.source(
+      point_entree,
+      envir = new.env(parent = globalenv())
+    )
+  },
+  error = function(e) {
+    arreter(paste0(
+      "le point d'entree '", point_entree,
+      "' a produit l'erreur suivante: ", conditionMessage(e)
+    ))
+  }
+)
+
+sorties_absentes <- sorties_attendues[!file.exists(sorties_attendues)]
+
+if (length(sorties_absentes) > 0) {
+  arreter(paste0(
+    "sortie attendue absente apres execution: ",
+    paste(sorties_absentes, collapse = ", ")
+  ))
+}
+
+tailles <- file.info(sorties_attendues)$size
+sorties_vides <- sorties_attendues[is.na(tailles) | tailles == 0]
+
+if (length(sorties_vides) > 0) {
+  arreter(paste0(
+    "sortie vide ou illisible: ",
+    paste(sorties_vides, collapse = ", ")
+  ))
+}
+
+message(
+  "VERIFICATION REUSSIE: point d'entree execute et sorties presentes: ",
+  paste(sorties_attendues, collapse = ", ")
+)
 ```
 
-## Étape 4 - Documenter les dépendances
+Ce gabarit échoue pour quatre causes distinctes: point d'entrée absent, erreur pendant l'exécution, sortie absente et sortie vide.
 
-Dans le README, ajouter une section courte:
+## Étape 3 - Lancer dans un processus propre
 
-```markdown
-## Dépendances
+Depuis la racine du dépôt:
 
-Ce projet utilise R version ...
-
-Packages principaux:
-
-- ...
-- ...
-
-Si `renv.lock` est présent, exécuter `renv::restore()`.
-Sinon, installer les packages listés ci-dessus.
+```bash
+Rscript scripts/verifier_reproduction.R
 ```
 
-Ne pas inventer de packages. Lire le code existant et inscrire seulement les packages réellement utilisés.
+Un processus `Rscript` neuf évite de dépendre d'objets créés auparavant dans la console. Corriger le point d'entrée avant d'ajouter d'autres contrôles.
 
-## Étape 5 - Tester depuis une session propre
+## Étape 4 - Adapter le gabarit au projet
 
-Fermer la session R ou redémarrer R, puis exécuter uniquement les commandes documentées.
+### Script ou pipeline R
 
-Vérifier:
+Remplacer `point_entree` et `sorties_attendues` par les chemins réels. Le script principal doit créer les dossiers de sortie dont il a besoin.
 
-- aucun objet de la console n'est nécessaire;
-- les chemins sont relatifs;
-- les erreurs sont compréhensibles;
-- les sorties attendues sont créées ou documentées.
+### Rapport Quarto
 
-## Étape 6 - Documenter les limites
+Documenter la commande terminal:
 
-Ajouter une section `Limites`:
+```bash
+quarto render reports/rapport.qmd
+```
 
-```markdown
+Puis vérifier le fichier HTML ou PDF attendu. Si le vérificateur R doit exécuter Quarto, utiliser `system2()` et contrôler son statut de sortie.
+
+### Application ou tableau de bord
+
+Documenter d'abord une exécution locale. Vérifier au minimum le chargement des données et un scénario d'utilisation. La publication sur un serveur demeure facultative.
+
+## Étape 5 - Documenter les dépendances
+
+Dans le README, nommer la version de R, les packages réellement utilisés et la commande `renv::restore()` seulement si `renv.lock` existe.
+
+Ne pas inventer de dépendances et ne pas publier de données confidentielles pour simplifier la reproduction.
+
+## Étape 6 - Rédiger la procédure
+
+Ajouter au README:
+
+````markdown
+## Reproduction
+
+1. Ouvrir un terminal à la racine du dépôt.
+2. Restaurer les dépendances selon la procédure ci-dessus.
+3. Exécuter:
+
+```bash
+Rscript scripts/verifier_reproduction.R
+```
+
+4. Vérifier la présence de `outputs/resultats.csv`.
+
 ## Limites
 
-- Le livrable a été testé localement seulement.
-- Les données confidentielles ne sont pas incluses dans le dépôt.
-- Les performances peuvent varier selon la machine.
-- Le déploiement public n'a pas encore été testé.
-```
+- Le livrable a été testé localement sur ...
+- Les données confidentielles ne sont pas incluses.
+- Aucun déploiement public n'est requis ni garanti.
+````
 
-Adapter ces limites au cas réel.
+## Étape 7 - Provoquer une erreur utile
 
-## Étape 7 - Committer
+Tester temporairement un faux chemin de point d'entrée, puis un faux chemin de sortie. Vérifier que les deux messages sont différents et indiquent quoi corriger. Rétablir ensuite les chemins réels.
 
-Faire un commit ciblé:
+## Étape 8 - Committer
 
 ```bash
 git add README.md scripts/verifier_reproduction.R
-git commit -m "Documenter la reproduction du livrable"
+git commit -m "Verifier la reproduction du livrable"
 ```
 
 ## Variante STT-6230
 
-Ajouter une courte note technique comparant deux options de déploiement ou de reproduction:
+Ajouter une vérification automatisée supplémentaire, par exemple le schéma d'un tableau de sortie, le statut d'un rendu Quarto ou un test exécuté dans l'intégration continue. Expliquer pourquoi ce contrôle est utile et ce qu'il ne couvre pas.
 
-- rendu HTML local et publication GitHub Pages;
-- application Shiny locale et publication sur serveur;
-- script manuel et pipeline automatisé.
+## Place de l'IA
 
-La note doit expliquer le choix retenu, les risques et les limites.
+Statut: permise, déclarée.
+
+L'IA peut aider à expliquer une erreur ou à proposer un contrôle. Chaque commande et chaque message doivent être testés sur le dépôt réel. Tout usage significatif doit être documenté dans `docs/ai-log.md`.

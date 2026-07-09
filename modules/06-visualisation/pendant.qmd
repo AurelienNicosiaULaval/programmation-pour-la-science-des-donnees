@@ -7,7 +7,7 @@ format:
 
 ## Déroulement de la séance
 
-La séance se concentre sur le passage du système graphique de base R vers `ggplot2` et l'ajustement fin de la communication visuelle.
+La séance compare les graphiques de base R et la grammaire de `ggplot2`, puis travaille l'ajustement fin de la communication visuelle. Le choix de l’outil dépend de la tâche; l’objectif n’est pas de déclarer un système universellement supérieur.
 
 | Moment | Durée | Activité |
 |---|---:|---|
@@ -34,3 +34,55 @@ Dans `ggplot2`, un graphique n'est pas vu comme une simple figure dessinée d'un
     *   *Correct* : `ggplot(data) + geom_point(aes(x = x, y = y), col = "blue")` (la couleur est constante et n'est pas associée à une variable).
 *   **Oublier d'ajouter des couches avec `+`** :
     *   Rappelez-vous qu'on utilise `+` pour relier les couches dans `ggplot2`, et non le pipe `|>` (qui sert à manipuler les données).
+
+## Exemple de revue critique d’une figure existante
+
+Commencer par produire cette figure volontairement incomplète:
+
+```r
+library(ggplot2)
+
+figure_a_revoir <- ggplot(
+  quakes,
+  aes(x = long, y = lat, color = mag)
+) +
+  geom_point() +
+  labs(title = "Séismes")
+
+figure_a_revoir
+```
+
+Une revue critique ne consiste pas seulement à ajouter des couches. Elle relie une question, un public, les données et les choix visuels. Exemple de diagnostic:
+
+| Point à examiner | Constat vérifiable | Décision proposée |
+|---|---|---|
+| Question et public | Le titre « Séismes » ne dit ni ce qui est comparé ni à qui la figure s’adresse | Formuler un titre qui annonce la répartition spatiale et la magnitude |
+| Encodage | La magnitude dépend uniquement de la couleur | Ajouter une taille redondante et conserver une légende explicite |
+| Lisibilité | Les points se chevauchent et les axes n’ont pas de libellé | Ajouter de la transparence, nommer les coordonnées et préserver leur rapport |
+| Provenance et portée | La figure ne nomme pas `quakes` ni sa portée géographique | Ajouter une légende de provenance et une limite d’interprétation |
+
+Une révision possible est la suivante:
+
+```r
+figure_revisee <- ggplot(
+  quakes,
+  aes(x = long, y = lat, color = mag, size = mag)
+) +
+  geom_point(alpha = 0.55) +
+  scale_color_viridis_c(option = "C") +
+  coord_quickmap() +
+  labs(
+    title = "Répartition spatiale et magnitude des séismes observés",
+    subtitle = "Zone des îles Fidji représentée dans le jeu quakes",
+    x = "Longitude",
+    y = "Latitude",
+    color = "Magnitude",
+    size = "Magnitude",
+    caption = "Source de l’exercice: jeu quakes fourni avec R"
+  ) +
+  theme_minimal()
+
+figure_revisee
+```
+
+La revue en duo doit ensuite identifier une amélioration réelle, une décision discutable et une limite qui subsiste. Le but est d’expliquer les choix, pas de compter le nombre de couches ajoutées.

@@ -1,0 +1,309 @@
+---
+title: "Annexe facultative - Construire un package R local"
+description: "Approfondissement pour les projets qui contiennent des fonctions R réutilisables"
+format:
+  html:
+    embed-resources: true
+---
+
+## Statut de l'annexe
+
+Cette annexe est facultative. Elle convient à une équipe dont le projet contient plusieurs fonctions R réutilisables et qui choisit explicitement de les structurer en package local.
+
+Elle ne fait pas partie du noyau obligatoire de semaine 15. Un package R n'est ni une production évaluée imposée, ni un préalable au site personnel, à la défense, à la revue de code, au bilan ou au dépôt final.
+
+Avant de commencer, terminer les éléments de la [semaine 15](index.qmd). La création du package ne doit pas mettre en danger les livrables finaux.
+
+## Objectifs facultatifs
+
+- créer la structure d'un package R local;
+- documenter des fonctions avec `roxygen2`;
+- déclarer une dépendance;
+- générer `NAMESPACE` et les fiches d'aide;
+- ajouter des tests avec `testthat`;
+- vérifier et installer le package localement.
+
+## Préparation facultative
+
+Consulter seulement les sections utiles de *R Packages*, deuxième édition, de Hadley Wickham et Jenny Bryan:
+
+- [Introduction](https://r-pkgs.org/introduction.html);
+- [The Whole Game](https://r-pkgs.org/whole-game.html);
+- [R Code](https://r-pkgs.org/code.html);
+- [Roxygen2](https://r-pkgs.org/man.html);
+- [Testing basics](https://r-pkgs.org/testing-basics.html);
+- [DESCRIPTION](https://r-pkgs.org/description.html);
+- [NAMESPACE](https://r-pkgs.org/namespace.html).
+
+Installer les outils R nécessaires:
+
+```r
+install.packages(c("devtools", "usethis", "roxygen2", "testthat"))
+```
+
+Pour un package qui contient seulement du code R, commencer l'activité sans bloquer la remise sur l'installation tardive d'outils système. Si `devtools::check()` signale un besoin de compilation, vérifier alors l'environnement avec:
+
+```r
+if (!requireNamespace("pkgbuild", quietly = TRUE)) {
+  install.packages("pkgbuild")
+}
+
+pkgbuild::has_build_tools(debug = TRUE)
+```
+
+## Laboratoire facultatif: package `manhattan`
+
+L'exemple contient deux fonctions de distance de Manhattan, une méthode S3, un petit jeu de données et des tests unitaires.
+
+### 1. Initialiser la structure
+
+Dans un répertoire de travail distinct du dépôt final si nécessaire:
+
+```r
+usethis::create_package(path = "manhattan")
+```
+
+Mettre à jour les champs du fichier `DESCRIPTION`: titre, auteur, description et licence.
+
+### 2. Ajouter la première fonction et sa méthode S3
+
+Créer `R/dist_manhattan.R`:
+
+```r
+usethis::use_r(name = "dist_manhattan")
+```
+
+Ajouter:
+
+```r
+#' Distance de Manhattan
+#'
+#' Calcule la distance de Manhattan entre deux points.
+#'
+#' @param point1 Un vecteur numérique représentant le premier point.
+#' @param point2 Un vecteur numérique représentant le deuxième point.
+#' @return Un objet de classe \code{"distman"} contenant la distance.
+#' @export
+#' @examples
+#' dist_manhattan(c(0, -5, 3), c(2, -15, 4))
+dist_manhattan <- function(point1, point2) {
+  if (length(point1) != length(point2)) {
+    stop("Les points doivent avoir la même longueur.", call. = FALSE)
+  }
+
+  if (!is.numeric(point1) || !is.numeric(point2)) {
+    stop("Les deux points doivent être numériques.", call. = FALSE)
+  }
+
+  sortie <- list(dist = sum(abs(point1 - point2)))
+  class(sortie) <- "distman"
+  sortie
+}
+
+#' @describeIn dist_manhattan Afficher un objet de classe \code{"distman"}
+#' @param x Un objet produit par \code{dist_manhattan}.
+#' @param ... Arguments supplémentaires transmis à la méthode.
+#' @export
+print.distman <- function(x, ...) {
+  cat("Distance de Manhattan:", x$dist, "\n")
+  invisible(x)
+}
+```
+
+### 3. Ajouter une fonction qui utilise `stats`
+
+Créer `R/dist_manhattan_2.R`:
+
+```r
+usethis::use_r(name = "dist_manhattan_2")
+```
+
+Ajouter:
+
+```r
+#' Distance de Manhattan avec stats::dist
+#'
+#' @param point1 Un vecteur numérique représentant le premier point.
+#' @param point2 Un vecteur numérique représentant le deuxième point.
+#' @return Un objet de classe \code{"distman"} contenant la distance.
+#' @importFrom stats dist
+#' @export
+dist_manhattan_2 <- function(point1, point2) {
+  if (length(point1) != length(point2)) {
+    stop("Les points doivent avoir la même longueur.", call. = FALSE)
+  }
+
+  distance <- stats::dist(
+    rbind(point1, point2),
+    method = "manhattan"
+  )
+
+  sortie <- list(dist = as.vector(distance))
+  class(sortie) <- "distman"
+  sortie
+}
+```
+
+Déclarer la dépendance et générer la documentation:
+
+```r
+usethis::use_package("stats")
+devtools::document()
+```
+
+Vérifier que `DESCRIPTION`, `NAMESPACE` et `man/` ont été mis à jour. Ne pas modifier `NAMESPACE` à la main.
+
+### 4. Ajouter un jeu de données
+
+```r
+set.seed(4230)
+points <- matrix(
+  sample(1:10, size = 20, replace = TRUE),
+  nrow = 10,
+  ncol = 2,
+  dimnames = list(NULL, c("X", "Y"))
+)
+
+usethis::use_data(points)
+```
+
+Créer `R/manhattan-package.R` et documenter l'objet:
+
+```r
+#' Points simulés pour les exemples du package
+#'
+#' Coordonnées en deux dimensions de dix points simulés.
+#'
+#' @format Une matrice de dix lignes et deux colonnes:
+#' \describe{
+#'   \item{X}{Coordonnée sur l'axe X}
+#'   \item{Y}{Coordonnée sur l'axe Y}
+#' }
+"points"
+```
+
+Exécuter à nouveau:
+
+```r
+devtools::document()
+```
+
+### 5. Ajouter des tests unitaires
+
+```r
+usethis::use_testthat()
+usethis::use_test(name = "distances")
+```
+
+Dans `tests/testthat/test-distances.R`:
+
+```r
+test_that("dist_manhattan calcule la bonne distance", {
+  resultat <- dist_manhattan(c(0, 0), c(3, 4))
+  expect_equal(resultat$dist, 7)
+  expect_s3_class(resultat, "distman")
+})
+
+test_that("les deux fonctions donnent le même résultat", {
+  point1 <- c(1, 2, 3)
+  point2 <- c(4, 0, -1)
+
+  expect_equal(
+    dist_manhattan(point1, point2)$dist,
+    dist_manhattan_2(point1, point2)$dist
+  )
+})
+
+test_that("des longueurs différentes produisent une erreur", {
+  expect_error(
+    dist_manhattan(c(1, 2), c(1, 2, 3)),
+    "même longueur"
+  )
+})
+```
+
+### 6. Documenter une fonction interne
+
+Une fonction d'aide qui ne doit pas être exportée peut utiliser `@noRd`:
+
+```r
+#' Mettre des étiquettes en majuscules
+#'
+#' @param texte Un vecteur de caractères.
+#' @return Le vecteur en majuscules.
+#' @noRd
+majuscules_interne <- function(texte) {
+  toupper(texte)
+}
+```
+
+Après `devtools::document()`, cette fonction ne doit pas apparaître parmi les fonctions exportées.
+
+### 7. Tester, vérifier et installer
+
+```r
+devtools::document()
+devtools::test()
+devtools::check()
+devtools::install()
+```
+
+Corriger les erreurs et avertissements compris. Une note doit être interprétée dans son contexte plutôt que masquée.
+
+Dans une nouvelle session R:
+
+```r
+library(manhattan)
+dist_manhattan(points[1, ], points[2, ])
+```
+
+## Inspecter `NAMESPACE`
+
+Le fichier généré devrait contenir des lignes comparables à:
+
+```r
+export(dist_manhattan)
+export(dist_manhattan_2)
+S3method(print,distman)
+importFrom(stats,dist)
+```
+
+La forme exacte dépend de la version des outils et des balises utilisées. La source de vérité reste la documentation `roxygen2`, puis `devtools::document()`.
+
+## Option: transformer des fonctions du projet
+
+Si l'équipe choisit cette voie:
+
+1. sélectionner une ou deux fonctions réutilisables;
+2. documenter leurs entrées, sorties, exemples et erreurs;
+3. déclarer les dépendances dans `DESCRIPTION`;
+4. écrire au moins un test nominal et un cas limite;
+5. exécuter `devtools::test()` et `devtools::check()`;
+6. ajouter un petit script d'utilisation;
+7. expliquer le choix dans le portfolio ou le dépôt.
+
+Cette production reste facultative et ne remplace aucune exigence de semaine 15.
+
+## Pièges fréquents
+
+- appeler `library()` ou `require()` à l'intérieur des fonctions du package;
+- utiliser une dépendance sans la déclarer;
+- modifier `NAMESPACE` à la main;
+- conserver des chemins absolus dans les exemples ou les tests;
+- oublier d'exporter une méthode S3;
+- écrire des exemples qui dépendent de données privées;
+- viser une conformité CRAN alors que le besoin réel est seulement un package local clair et testé.
+
+## Ressources
+
+- [R Packages](https://r-pkgs.org/)
+- [devtools](https://devtools.r-lib.org/)
+- [usethis](https://usethis.r-lib.org/)
+- [roxygen2](https://roxygen2.r-lib.org/)
+- [testthat](https://testthat.r-lib.org/)
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider à structurer la documentation ou les tests. Les commandes, dépendances, erreurs et résultats doivent être compris et vérifiés. Tout usage significatif doit être documenté dans `docs/ai-log.md`.

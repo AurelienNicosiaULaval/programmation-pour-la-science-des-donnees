@@ -9,7 +9,7 @@ format:
 
 Le laboratoire part d’un petit fichier météorologique volontairement imparfait. La tâche consiste à produire une version propre, à documenter les décisions et à ajouter des vérifications minimales.
 
-Le jeu de données est fictif. Il sert à pratiquer le pipeline, pas à tirer des conclusions météorologiques. Le défi technique 1 utilisera plutôt un jeu de données québécois réel ou un extrait pédagogique dérivé d’une source ouverte québécoise, fourni seulement au moment de l’évaluation.
+Le jeu de données est fictif. Il sert à pratiquer le pipeline, pas à tirer des conclusions météorologiques. Les identifiants `QC-001`, `QC-002` et `QC-003`, le mot « Québec » dans le nom du fichier et les noms de stations utilisés dans les modules suivants ne constituent pas une provenance réelle. Le défi technique 1 utilisera plutôt un jeu de données québécois réel ou un extrait pédagogique dérivé d’une source ouverte québécoise, fourni seulement au moment de l’évaluation.
 
 ## Objectifs
 
@@ -23,6 +23,8 @@ Le jeu de données est fictif. Il sert à pratiquer le pipeline, pas à tirer de
 ## Script de départ complet
 
 Créer un fichier `scripts/04-nettoyage-meteo.R` ou `R/04-nettoyage-meteo.R`, puis y placer le code suivant.
+
+Le code allant de la création des dossiers jusqu’aux deux appels à `write_csv()` constitue le noyau obligatoire. Le bloc DuckDB placé à la fin est un aperçu optionnel: il peut être lu ou exécuté si le temps et l’environnement le permettent, mais il n’est pas requis pour terminer le laboratoire.
 
 ```r
 # Charger les packages

@@ -7,7 +7,9 @@ format:
 
 ## Nature du défi
 
-Ce défi de module est une activité pratique pour votre portfolio. Il prépare le défi technique 2 de la semaine 8, qui demandera un rapport Quarto court, et le jalon de projet filé de la semaine 12, où un rapport d'analyse intermédiaire complet sera remis sous forme de document Quarto.
+Ce défi de module est une activité formative et non notée pour votre portfolio. Il prépare le défi technique 2 de la semaine 8, qui demandera un rapport Quarto court, et le jalon de projet filé de la semaine 12, où un rapport d'analyse intermédiaire complet sera remis sous forme de document Quarto.
+
+La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère transférable pour relire la qualité du travail. Son utilisation ne transforme pas ce défi de module en évaluation notée.
 
 ## Objectif
 
@@ -28,7 +30,10 @@ Dans le fichier `reports/07-rapport-meteo.qmd` de votre dépôt `portfolio-stt42
 3.  **Vérifier la reproductibilité** :
     *   Exécutez `quarto render` à nouveau.
     *   Ouvrez le fichier HTML compilé et vérifiez que les valeurs dynamiques s'affichent correctement au milieu du texte.
-4.  **Déclaration IA** :
+4.  **Vérifier l’accessibilité et le suivi du HTML** :
+    *   Vérifiez la légende, le texte alternatif, les unités et la compréhension de la figure sans dépendre uniquement de la couleur.
+    *   Appliquez la décision documentée dans `README.md` ou `docs/conventions.md`: le HTML est toujours généré et vérifié, mais il est suivi dans Git seulement si la politique du dépôt le prévoit.
+5.  **Déclaration IA** :
     *   Si vous avez utilisé l'IA pour rédiger une partie du YAML ou structurer le texte, ajoutez une entrée correspondante dans `docs/ai-log.md`.
 
 ## Livrables attendus
@@ -36,14 +41,16 @@ Dans le fichier `reports/07-rapport-meteo.qmd` de votre dépôt `portfolio-stt42
 | Élément | Attente minimale |
 |---|---|
 | Fichier `.qmd` | Fichier source avec du code R en ligne (inline) et la documentation du nettoyage. |
-| Rapport `.html` | Le rapport compilé contenant les résultats textuels dynamiques. |
-| Git | Commit unique avec un message décrivant l'ajout de l'analyse dynamique. |
+| Rapport `.html` | Rapport compilé et vérifié localement; suivi dans Git seulement si la politique documentée le prévoit. |
+| Git | Commit avec le fichier `.qmd`, la politique de suivi du HTML et, selon cette politique, le fichier `.html`. |
 
 ## Place de l'IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider pour la syntaxe YAML, le Markdown ou la structure d'un tableau. L'interprétation des résultats doit rester celle de la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le rapport.
+L'IA peut aider pour la syntaxe YAML, le Markdown ou la structure d'un tableau. L'interprétation des résultats doit rester celle de la personne étudiante.
+
+Règle commune: le travail doit être compris, vérifié, adapté au contexte et défendable. Si l’IA influence de manière significative le code, la documentation, une décision ou le livrable, documenter cet usage dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 

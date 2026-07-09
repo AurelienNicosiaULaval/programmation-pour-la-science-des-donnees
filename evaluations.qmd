@@ -63,12 +63,24 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 | Composante | Traces attendues |
 |---|---|
 | Mini-tests de préparation | Résultat du quiz, micro-réponse personnelle liée au module, question ou difficulté à apporter au laboratoire |
-| Portfolio GitHub individuel | Dépôt individuel, dossiers hebdomadaires, scripts, fonctions, rapports, README, conventions, `ai-log`, bilan final, commits réguliers |
-| Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, pipeline de modèle, documentation, issues, contributions, `ai-log`, présentation et revue de code |
+| Portfolio GitHub individuel | Dépôt individuel, dossiers hebdomadaires, scripts, fonctions, rapports, README, conventions, `docs/ai-log.md`, bilan final, commits réguliers |
+| Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
 | Défi 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
-| Défi 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `ai-log` ou fichier de réflexion IA |
+| Défi 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `docs/ai-log.md` ou fichier de réflexion IA |
 | Défi 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
-| Site Quarto personnel | Site publié sur GitHub Pages, dépôt source, page de présentation ou compétences, au moins deux réalisations commentées, déclaration IA si pertinente |
+| Site Quarto personnel | Adresse GitHub Pages publique, dépôt source du site, dernier commit évalué, page de présentation ou compétences, au moins deux réalisations commentées, lien ou référence vers une trace du portfolio, déclaration IA si pertinente |
+
+## Repère de semaine 15
+
+En semaine 15, trois objets sont à distinguer.
+
+| Objet | Rôle | Trace attendue |
+|---|---|---|
+| Site Quarto personnel | Composante individuelle de 10 % | URL GitHub Pages, dépôt source, dernier commit, deux réalisations commentées |
+| Défense du projet | Partie du projet d’équipe de 30 % | dépôt final, démonstration, support bref, issue ou pull request de revue, contributions |
+| Portfolio individuel | Source des traces et du bilan individuel | dépôt individuel à jour, bilan final, lien vers le site personnel, trace reprise dans le site |
+
+Le site personnel ne remplace ni le portfolio ni le projet. Il sélectionne des éléments publiables et les présente dans une forme courte, publique et vérifiable.
 
 ## Grilles détaillées
 
@@ -101,7 +113,7 @@ L’utilisation d’outils d’IA générative n’est pas permise pour cette é
 
 Cette règle s’applique au portfolio GitHub individuel, au projet filé en équipe, au défi technique 2 et au site Quarto personnel.
 
-L’utilisation d’outils d’IA générative est permise, à condition d’être déclarée lorsque l’aide obtenue influence de manière significative le code, la documentation, l’analyse ou le livrable remis. L’étudiante ou l’étudiant doit documenter l’usage dans le fichier `ai-log.md` ou dans la section prévue à cet effet. Le travail remis doit être compris, vérifié, adapté au contexte du projet et défendable. Le fait de remettre du code ou du texte non compris, non vérifié ou non déclaré peut être pénalisé.
+L’utilisation d’outils d’IA générative est permise, à condition d’être déclarée lorsque l’aide obtenue influence de manière significative le code, la documentation, l’analyse ou le livrable remis. L’étudiante ou l’étudiant doit documenter l’usage dans `docs/ai-log.md` ou dans la section prévue à cet effet. Le travail remis doit être compris, vérifié, adapté au contexte du projet et défendable. Le fait de remettre du code ou du texte non compris, non vérifié ou non déclaré peut être pénalisé.
 
 ### IA intégrée
 
@@ -118,6 +130,16 @@ Les mini-tests de préparation sont réalisés à livre ouvert. L’utilisation 
 ### Mini-tests de préparation
 
 Les mini-tests sont courts et liés à la préparation hebdomadaire. Ils visent la préparation au laboratoire et la vérification des lectures. Ils peuvent inclure une micro-réponse personnelle liée au module, ainsi qu’une question ou une difficulté à apporter au laboratoire.
+
+Chaque mini-test suit le même fonctionnement:
+
+- durée cible de 5 à 10 minutes dans la préparation annoncée;
+- trois questions portant sur un concept, un geste ou une décision, puis une difficulté personnelle;
+- remise dans le canal officiel avant le début du laboratoire;
+- IA permise pour clarifier, avec responsabilité de comprendre et de vérifier;
+- résultat enregistré dans le canal de remise et difficulté apportée en classe.
+
+La semaine 12 contient un seul mini-test commun au profilage et à la décision éventuelle de paralléliser. Le [gabarit des mini-tests](gabarits/gabarit-mini-test-preparation.qmd) précise les éléments qui doivent apparaître dans chaque page de préparation.
 
 ### Portfolio GitHub individuel
 
@@ -138,6 +160,8 @@ Le site Quarto personnel est une composante individuelle de synthèse. Chaque pe
 Le site doit inclure au moins une réalisation liée au portfolio individuel et au moins une réalisation liée au projet d’équipe ou à un module avancé. Les liens vers dépôts, rapports, captures ou applications ne doivent être utilisés que si leur publication est autorisée.
 
 Le CV complet, la photo, l’adresse, le numéro de téléphone et les renseignements personnels ne sont pas obligatoires. Une page de compétences ou de parcours synthétique est acceptée si la personne ne souhaite pas publier un CV complet.
+
+La remise du site personnel doit inclure l’adresse GitHub Pages, l’adresse du dépôt source, l’identifiant du dernier commit à évaluer et l’emplacement des deux réalisations commentées. Le portfolio doit indiquer quelle trace est reprise dans le site personnel.
 
 ## Grille commune de qualité
 

@@ -1,93 +1,36 @@
 ---
-title: "Déploiement et mise en production - Lectures"
+title: "14B - Reproduction et livraison - Lectures"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif des lectures
+## Lecture essentielle, 10 minutes au plus
 
-Préparer une question pratique: qu'est-ce qui manque pour qu'une autre personne puisse exécuter votre livrable R sans votre aide?
+Lire la section qui correspond au livrable:
 
-Le module ne demande pas de déployer un service complexe. Il vise une mise en production minimale: procédure claire, dépendances explicites, fichiers attendus, sorties vérifiables et limites documentées.
+- environnement R: [renv - Introduction](https://rstudio.github.io/renv/articles/renv.html);
+- rapport ou site Quarto: [Quarto - Publishing Basics](https://quarto.org/docs/publishing/);
+- application Shiny locale: [Shiny - Deploy](https://shiny.posit.co/r/articles/share/deployment-web/).
 
-## Lecture principale
+Chercher uniquement les informations nécessaires pour nommer la commande principale, les dépendances et la sortie attendue.
 
-Lire les références suivantes:
+La publication externe présentée dans ces références est une possibilité, pas une obligation du cours. La reproduction locale testée est le noyau attendu.
 
-- [Quarto - Publishing Basics](https://quarto.org/docs/publishing/)
-- [Quarto - GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
-- [renv - Introduction](https://rstudio.github.io/renv/articles/renv.html)
+## Lecture du gabarit
 
-Pendant la lecture, noter:
+Consulter le [laboratoire](laboratoire.qmd), en particulier:
 
-- ce qui est nécessaire pour rendre un rapport consultable;
-- ce qui est nécessaire pour relancer un projet localement;
-- ce qui doit être versionné ou non;
-- ce qui devrait apparaître dans un README de reproduction.
+- le point d'entrée simple `scripts/executer_projet.R`;
+- le vérificateur `scripts/verifier_reproduction.R`;
+- les messages distincts pour un point d'entrée absent, une erreur d'exécution, une sortie absente et une sortie vide.
 
-## Lecture complémentaire
+## Questions d'autovérification formative
 
-Selon le type de livrable:
+1. Pourquoi vérifier seulement la structure du dépôt ne prouve-t-il pas que le projet s'exécute?
+2. Quelle commande doit être lancée depuis une session propre?
+3. Quelle sortie permet de confirmer le succès?
+4. Quel message aiderait une personne qui ne connaît pas le projet?
+5. Quelle limite doit être visible avant la remise?
 
-- rapport ou site Quarto: [Quarto publishing](https://quarto.org/docs/publishing/);
-- application Shiny: [shinyapps.io user guide](https://docs.posit.co/shinyapps.io/);
-- environnement R: [renv documentation](https://rstudio.github.io/renv/);
-- déploiement institutionnel ou serveur: [Posit Connect user guide](https://docs.posit.co/connect/user/).
-
-Ces ressources servent à comprendre les options. Le travail attendu dans le cours reste une procédure de reproduction minimale.
-
-## Geste R à reproduire
-
-Dans un dépôt de travail, créer un fichier `scripts/verifier_reproduction.R` contenant:
-
-```r
-# Verification minimale de reproduction
-
-fichiers_attendus <- c(
-  "README.md",
-  "scripts",
-  "reports"
-)
-
-manquants <- fichiers_attendus[!file.exists(fichiers_attendus)]
-
-if (length(manquants) > 0) {
-  stop(
-    "Fichiers ou dossiers manquants: ",
-    paste(manquants, collapse = ", ")
-  )
-}
-
-message("Structure minimale presente.")
-
-if (file.exists("renv.lock")) {
-  message("renv.lock present: documenter la commande renv::restore().")
-} else {
-  message("renv.lock absent: expliquer comment installer les packages.")
-}
-```
-
-Exécuter ensuite:
-
-```r
-source("scripts/verifier_reproduction.R")
-```
-
-## Trace attendue
-
-Ajouter au portfolio ou au dépôt d'équipe:
-
-- une procédure de reproduction dans le README;
-- un script de vérification minimal;
-- une liste de dépendances;
-- une description des sorties attendues;
-- une limite connue du livrable.
-
-## Mini-test de préparation
-
-1. Pourquoi un fichier `README.md` ne suffit-il pas si les dépendances ne sont pas documentées?
-2. Quelle différence y a-t-il entre publier un rapport HTML et rendre un pipeline R reproductible?
-3. Pourquoi faut-il décrire les sorties attendues?
-4. Quelle information devrait être fournie si `renv.lock` est absent?
-5. Quelle limite de votre livrable devrait être visible avant la remise finale?
+Ces questions ne sont ni remises ni notées.

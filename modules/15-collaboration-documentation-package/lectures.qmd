@@ -1,41 +1,37 @@
 ---
-title: "Collaboration, documentation et packaging - Lectures"
+title: "Semaine 15 - Lectures essentielles"
 format:
   html:
     embed-resources: true
 ---
 
-## Lectures recommandées
+## Lecture essentielle, 20 minutes
 
-### Lecture principale
-*   **R Packages (2e édition)**, de Hadley Wickham et Jenny Bryan :
-    *   [Chapter 1: Introduction](https://r-pkgs.org/introduction.html) : Comprendre les bénéfices de la création de packages.
-    *   [Chapter 2: The Whole Game](https://r-pkgs.org/whole-game.html) : Un guide pratique complet à suivre étape par étape.
-    *   [Chapter 16: Roxygen2](https://r-pkgs.org/man.html) : Guide de référence de toutes les balises de documentation supportées.
-    *   [Chapter 13: Testing basics](https://r-pkgs.org/testing-basics.html) : Intégration de tests unitaires avec `testthat` à l'arborescence.
+Relire seulement les sections directement liées aux remises finales:
 
-### Lectures complémentaires
-*   **DESCRIPTION et NAMESPACE** :
-    *   [Chapter 9: The DESCRIPTION file](https://r-pkgs.org/description.html) : Rôles des métadonnées et des versions.
-    *   [Chapter 10: NAMESPACE](https://r-pkgs.org/namespace.html) : Comprendre comment R isole les variables et exporte/importe les fonctions.
+1. [Site Quarto personnel](../../site-personnel.qmd): livrables, publication, confidentialité et checklist de remise.
+2. [Présentation et revue du projet](../../presentation.qmd): structure de la défense, rôle de la revue de code et questions.
+3. [Portfolio](../../portfolio.qmd): traces, bilan et liaison au site personnel.
+4. [Évaluations](../../evaluations.qmd): distinction entre le site individuel, la défense du projet et le portfolio.
 
----
+## Références techniques au besoin
 
-## Geste R à reproduire chez vous : Inspecter le NAMESPACE généré
+- [Quarto - GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+- [GitHub Docs - About pull request reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
 
-Le fichier `NAMESPACE` gère les importations et exportations de fonctions du package. Il ne doit pas être modifié à la main. Il est mis à jour par `devtools::document()` à partir de vos balises `@export` et `@importFrom`.
+Utiliser ces références pour résoudre une question précise de publication ou de revue. Elles ne créent aucune nouvelle production.
 
-Faites ce test sur le package `manhattan` créé au cours :
+## Questions d'autovérification formative
 
-1.  Ouvrez le fichier `NAMESPACE` à la racine de votre package.
-2.  Vérifiez que les lignes suivantes s'y trouvent :
-    ```r
-    export(dist_manhattan)
-    export(dist_manhattan_2)
-    export(print.distman)
-    importFrom(stats,dist)
-    ```
+- L'URL publique s'ouvre-t-elle sans session locale?
+- Le dépôt source et le commit évalué sont-ils identifiables?
+- Les deux réalisations sont-elles expliquées, pas seulement affichées?
+- L'extrait de code peut-il être expliqué en quelques minutes?
+- Les contributions individuelles sont-elles reliées à des preuves?
+- Le bilan distingue-t-il apprentissages, limites et prochaine étape?
 
-### Questions à se poser :
-*   Pourquoi est-il crucial d'écrire `importFrom(stats,dist)` plutôt que d'importer tout le package `stats` ? (Raison de collision de fonctions dans les NAMESPACE de R).
-*   Que se passe-t-il si un utilisateur tente d'appeler une fonction qui n'est pas répertoriée dans le NAMESPACE sous `export` ?
+Ces questions ne sont ni remises ni notées.
+
+## Lecture facultative
+
+La construction d'un package R est conservée dans l'[annexe facultative](annexe-package-r.qmd). Elle ne fait pas partie des lectures essentielles de semaine 15.

@@ -1,31 +1,30 @@
 ---
-title: "Déploiement et mise en production - Avant la classe"
+title: "14B - Reproduction et livraison - Avant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de préparation
+## Place dans la préparation unique
 
-Identifier ce qui empêcherait une autre personne d’exécuter un projet R sur sa machine.
+Cette activité fait partie des 45 minutes de préparation décrites sur la [page de semaine 14](../14-synthese-finale/index.qmd). Elle n'ajoute aucune préparation et aucun mini-test noté.
 
-## À préparer
+## À faire
 
-- Choisir un livrable du portfolio ou du projet d’équipe.
-- Vérifier les commandes nécessaires pour l’exécuter.
-- Noter les dépendances importantes.
-- Repérer une étape implicite qui devrait être documentée.
+1. Choisir un livrable actuel du projet.
+2. Retrouver la commande qui devrait le produire depuis la racine du dépôt.
+3. Redémarrer R ou ouvrir un terminal neuf, puis exécuter cette commande.
+4. Noter la sortie obtenue ou copier le premier message d'erreur.
+5. Repérer une dépendance ou une étape encore implicite.
 
-## Questions d'autovérification
+Le livrable peut être local. Il n'est pas nécessaire de publier une application, un rapport ou des données sur Internet.
 
-Il n'y a pas de mini-test prévu à la semaine 14 dans la version v1. Vérifier plutôt sa préparation avec des questions courtes sur:
+## Questions d'autovérification formative
 
-- la reproduction d’un livrable;
-- les dépendances;
-- les paramètres d’exécution;
-- les sorties attendues;
-- les limites d’un déploiement minimal.
+- Le README nomme-t-il une seule commande de départ?
+- Les fichiers d'entrée et les dépendances sont-ils identifiables?
+- Une erreur indique-t-elle l'étape qui a échoué?
+- La sortie attendue peut-elle être reconnue sans inspection manuelle complète?
+- Une donnée privée ou protégée risque-t-elle d'être publiée?
 
-## Trace à apporter
-
-Une liste courte des étapes nécessaires pour exécuter le livrable choisi.
+Ces questions ne sont ni remises ni notées. Apporter la commande testée, la sortie ou l'erreur, et le commit courant.

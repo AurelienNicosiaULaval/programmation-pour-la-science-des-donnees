@@ -1,49 +1,44 @@
 ---
-title: "Cycle de vie des modèles - Défi"
+title: "14C - Limites, suivi et maintenance - Exercice formatif"
 format:
   html:
     embed-resources: true
 ---
 
-## Nature du défi
+## Nature de l'exercice
 
-Ce défi de module sert à produire la trace de recul professionnel de la semaine 14. Il ne remplace pas les trois défis techniques notés et ne demande pas un nouveau développement après la remise finale.
+Cet exercice est formatif et non noté. Il ne remplace aucun des trois défis techniques évalués. La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) sert uniquement de repère de qualité.
 
 ## Objectif
 
-Documenter le suivi minimal d’un modèle ou d’un pipeline de modélisation.
+Documenter le suivi minimal d'un modèle, d'un pipeline, d'un tableau de bord, d'une application, d'un rapport ou d'un composant logiciel.
 
 ## Consignes
 
-- Décrire le contexte du modèle.
-- Identifier les données et la version du code.
-- Résumer la validation effectuée.
-- Décrire les limites.
-- Nommer au moins un risque lié aux données, au code, à l’usage ou à l’interprétation.
-- Proposer une vérification future.
+- Décrire le livrable, son objectif et son public prévu.
+- Identifier les entrées ou données et la version du code.
+- Résumer la validation ou le contrôle effectué.
+- Distinguer les éléments non vérifiés.
+- Nommer au moins trois risques pertinents.
+- Décrire une limite ou un usage hors contexte.
+- Proposer une vérification future et une prochaine action.
 
-## Livrable attendu
+## Trace formative
 
 - fiche de suivi;
-- code ou rapport associé;
-- note sur les risques;
-- trace Git;
-- déclaration IA si pertinente.
+- fichier et commit associés;
+- trois risques;
+- limite documentée;
+- vérification future.
+
+Cette trace peut satisfaire le noyau 14C de la checklist commune. Elle n'est pas remise séparément.
 
 ## Place de l'IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à structurer la fiche de suivi ou à formuler un risque. Le diagnostic et la recommandation doivent rester ceux de la personne étudiante. Toute aide significative doit être déclarée dans `docs/ai-log.md` ou dans le journal du portfolio.
-
-## Critères de réussite
-
-- La fiche renvoie à un fichier, un rapport ou un commit précis.
-- Les données sont identifiables sans être republiées si elles ne doivent pas l’être.
-- La validation est décrite en mots, pas seulement par un score.
-- Les limites indiquent ce que le modèle ne permet pas de conclure.
-- La vérification future est suffisamment concrète pour être exécutée.
+L'IA peut aider à structurer la fiche ou à formuler un risque. La personne étudiante doit vérifier le diagnostic et défendre la recommandation. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 
-Ajouter une courte note qui compare deux choix de suivi et explique le compromis retenu. Exemples: refaire une validation complète à chaque nouvelle donnée, surveiller seulement quelques indicateurs, comparer le modèle à une référence simple, ou déclencher une révision seulement si un seuil d’alerte est dépassé.
+Comparer deux stratégies de suivi et justifier le compromis retenu.

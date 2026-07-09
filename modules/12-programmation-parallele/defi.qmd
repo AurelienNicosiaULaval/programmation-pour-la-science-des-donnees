@@ -1,5 +1,5 @@
 ---
-title: "Programmation asynchrone et parallèle - Défi"
+title: "12B - Programmation asynchrone et parallèle - Défi facultatif"
 format:
   html:
     embed-resources: true
@@ -7,41 +7,47 @@ format:
 
 ## Consignes du défi de la semaine
 
-L'objectif de ce défi est d'adapter une tâche répétitive et lourde de votre projet de session ou de vos portfolios à une exécution parallèle, tout en garantissant sa reproductibilité et en mesurant objectivement ses performances.
+L'objectif de ce défi facultatif est de tester, après profilage, si une tâche indépendante du projet ou du portfolio mérite une exécution parallèle.
+
+Ce défi de module est formatif et non noté. Il prépare les défis techniques notés. La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère de qualité, mais elle ne transforme pas cette activité en remise notée.
+
+Ne réalisez pas ce défi si l'optimisation séquentielle suffit ou si la mémoire de la machine est limitée. Cette décision satisfait pleinement la semaine 12.
 
 ### Tâche : Parallélisation de votre calcul
 
-1.  **Sélection** : Identifiez une boucle d'itération (`map()`, `lapply()`, ou boucle `for`) dans votre projet ou dans vos exercices précédents qui prend **plus de 2 secondes** à s'exécuter en séquentiel.
-    *   *Si vous n'avez pas de tâche personnelle lente* : Vous pouvez paralléliser une simulation Monte Carlo de 5 000 parties du jeu *Serpents et Échelles* en utilisant la classe R6 développée au module 11.
+1.  **Sélection** : Identifiez une boucle d'itération (`map()`, `lapply()`, ou boucle `for`) dont les tâches sont indépendantes et dont le profilage montre que le calcul, plutôt que les entrées-sorties, domine l'exécution.
+    *   Si vous n'avez pas de cas personnel approprié, utilisez le bootstrap prudent du [laboratoire](laboratoire.qmd). Ne créez pas une tâche artificiellement énorme pour obtenir une accélération.
 2.  **Mesure séquentielle** : Mesurez le temps d'exécution de référence avec `system.time()` ou `bench::mark()`.
-3.  **Parallélisation** : Configurez un plan `multisession` et réécrivez le traitement à l'aide de `future_map()` de `furrr`.
-4.  **Vérification de reproductibilité** : Utilisez `set.seed()` et `.options = furrr_options(seed = TRUE)` pour valider que le résultat est identique lors de deux lancements distincts.
-5.  **Calcul du Speedup** : Mesurez le temps parallèle et calculez le speedup empirique.
+3.  **Parallélisation** : Utilisez au maximum deux workers déterminés avec `availableCores()`. Prévoyez un repli `sequential` et rétablissez toujours `plan(sequential)`.
+4.  **Vérification** : Pour une tâche stochastique, utilisez `set.seed()` et `.options = furrr_options(seed = TRUE)` pour vérifier deux lancements. Pour une tâche déterministe, comparez directement les résultats séquentiel et parallèle.
+5.  **Comparaison** : Mesurez le temps parallèle avec le même protocole. Calculez le rapport si cela aide l'interprétation, sans valeur cible.
 
 ---
 
-## Livrables attendus dans votre portfolio
+## Contribution facultative à l'unique fiche de semaine 12
 
-1.  **Le script R** : Un fichier (ex: `R/simulation_parallele.R`) contenant les implémentations séquentielle et parallèle, le plan de calcul et la validation de reproductibilité.
-2.  **Une note explicative** rédigée dans votre journal de bord décrivant :
+Ajoutez les éléments suivants à `docs/semaine-12-performance.md`. Aucun fichier de rapport supplémentaire n'est demandé.
+
+1.  **Le script visé**: indiquez le chemin des implémentations séquentielle et parallèle, du repli et de la validation de reproductibilité.
+2.  **La décision** décrit:
     *   Le cas d'usage parallélisé (pourquoi cette tâche s'y prête-t-elle ?).
-    *   Le tableau de comparaison des temps (séquentiel vs parallèle) et le speedup calculé.
+    *   Le tableau de comparaison des temps et le contexte de la machine, sans cible de vitesse.
     *   La confirmation que les résultats sont reproductibles.
     *   Une analyse critique : selon la Loi d'Amdahl (voir la variante STT-6230), le gain est-il limité par une portion séquentielle de votre code ? Est-ce que le gain justifie la complexité d'ouvrir des sessions R de travail supplémentaires?
 
 ---
 
-## Grille d'évaluation simplifiée
+## Repères de rétroaction formative
 
 *   **Sécurité statistique** : Le code parallèle utilise correctement le contrôle des graines aléatoires (`seed = TRUE`) et garantit des tirages stochastiques reproductibles.
-*   **Pertinence** : Le choix de paralléliser est justifié (temps d'exécution initial suffisant pour absorber la surcharge de copie mémoire).
+*   **Pertinence** : Le profil et la structure indépendante des tâches justifient l'essai, ou la conclusion recommande de rester en séquentiel.
 *   **Bonnes pratiques** : Le plan de calcul est proprement configuré puis fermé en fin d'exécution (`plan(sequential)`).
 
 ## Place de l'IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à convertir la syntaxe d'itération ou à diagnostiquer une erreur d'exportation de variables globales. Les mesures et la validation de reproductibilité doivent être exécutées par la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le script ou la note explicative.
+L'IA peut aider à expliquer un message de `future` ou à convertir une itération. Toute contribution significative de l'IA doit être consignée dans `docs/ai-log.md` en indiquant l'outil, le but de l'utilisation, l'élément retenu et la vérification effectuée. Le code et le texte conservés doivent être compris, vérifiés, adaptés au contexte et défendables par la personne étudiante.
 
 ## Variante STT-6230
 

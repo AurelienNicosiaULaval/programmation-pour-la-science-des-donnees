@@ -1,5 +1,5 @@
 ---
-title: "Profilage, optimisation et performance - Pendant la classe"
+title: "12A - Profilage, optimisation et performance - Pendant la classe"
 format:
   html:
     embed-resources: true
@@ -9,9 +9,9 @@ format:
 
 ### 1. Retour sur le mini-test (15 min)
 
-*   **Question 1 :** L'expression la plus rapide est **`sum(is.na(x)) / length(x)`** (Option C). Elle évite la surcharge de la fonction `mean()` (qui fait des vérifications internes de type supplémentaires) et évite de créer un vecteur de comparaison intermédiaire comme dans `is.na(x) == TRUE`. L'option `table` est de loin la plus lente car elle trie et groupe toutes les valeurs uniques du vecteur, ce qui est inutile.
+*   **Question 1:** La bonne réponse est **Option D**. Certaines expressions créent davantage d'objets intermédiaires, mais la vitesse observée dépend de la version de R, du matériel et de la charge de la machine. Une conclusion doit venir d'un benchmark qui vérifie aussi l'équivalence des résultats.
 *   **Question 2 :** La bonne réponse est l'**Option B**. La moyenne est fortement influencée par des valeurs extrêmes, notamment les pics de latence induits par la désallocation de mémoire par le Garbage Collector (GC). La médiane représente le temps d'exécution typique "hors GC".
-*   **Question 3 :** C'est l'**Option D** (`resultats <- c(resultats, tirage)`). À chaque itération, R doit trouver un nouvel espace mémoire contigu de taille $N+1$, y copier le contenu existant de taille $N$, puis y ajouter le nouvel élément. Pour $N$ grand, cette opération devient extrêmement coûteuse.
+*   **Question 3:** Les ordres peuvent varier. Vérifiez que chaque réponse rapporte une observation réellement exécutée et un facteur de contexte. Le mini-test n'attribue aucun mérite à une machine plus rapide ni à un ordre particulier lorsque le protocole est correctement décrit.
 
 ---
 
@@ -55,9 +55,9 @@ benchmark_allocation <- mark(
 print(benchmark_allocation)
 ```
 
-#### Points clés à observer dans les résultats :
-*   **Temps médian** : La version vectorisée se compte en microsecondes, la pré-allocation en millisecondes, et la non-pré-allocation en secondes !
-*   **Memory Alloc** : La version sans pré-allocation alloue une quantité phénoménale de mémoire temporaire système (car elle recrée le vecteur à chaque étape de la boucle), déclenchant le Garbage Collector de nombreuses fois (`n_gc`).
+#### Points clés à observer dans les résultats:
+*   **Temps médian**: comparez l'ordre observé sur votre machine, sans attendre un nombre de secondes ni un facteur d'accélération précis.
+*   **Memory Alloc**: vérifiez si la version sans pré-allocation alloue davantage de mémoire temporaire parce qu'elle recrée le vecteur à chaque étape.
 
 ---
 

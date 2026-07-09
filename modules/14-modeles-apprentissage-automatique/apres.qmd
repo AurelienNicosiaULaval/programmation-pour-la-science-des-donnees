@@ -1,48 +1,24 @@
 ---
-title: "Modèles d'apprentissage automatique - Après la classe"
+title: "14A - Validation adaptée au projet - Après la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de consolidation
+## Consolidation commune
 
-Stabiliser la trace de modélisation et vérifier qu'elle reste compréhensible sans explication orale.
+Stabiliser la preuve de validation choisie pendant la semaine 14. Aucune équipe n'a à ajouter un modèle prédictif si cette composante ne correspond pas à son projet.
 
-## À faire
+## À vérifier
 
-- Relancer le script de modélisation dans une session R propre.
-- Vérifier que le script ne dépend pas d'objets créés manuellement dans la console.
-- Ajouter ou corriger la note de modélisation.
-- Vérifier que la comparaison avec la référence simple est présente.
-- Mettre à jour le README ou le journal du portfolio si le fichier ajoute une nouvelle dépendance.
-- Déclarer l'usage significatif de l'IA si nécessaire.
+- Le fichier de validation peut être relancé depuis la racine du dépôt.
+- Le résultat principal est produit par code ou par une procédure documentée.
+- La référence, le contrôle ou le comportement attendu est explicite.
+- Une phrase indique ce que la validation permet de conclure.
+- Une phrase indique ce qu'elle ne permet pas de conclure.
+- Le README ou le journal pointe vers le fichier et le commit.
+- Tout usage significatif de l'IA est documenté dans `docs/ai-log.md`.
 
-## Vérification finale
+## Passage vers 14B et 14C
 
-La note doit permettre de répondre à ces questions:
-
-- Quelle question le modèle essaie-t-il de traiter?
-- Quelles données ont été utilisées?
-- Comment la performance a-t-elle été évaluée?
-- Le modèle fait-il mieux qu'une référence simple?
-- Quelles conclusions seraient abusives?
-
-## Réflexion courte
-
-Répondre dans le journal du portfolio:
-
-- Quelle étape de la modélisation est la plus fragile?
-- Quelle vérification devrait être refaite avec plus de données?
-- Quelle décision technique faut-il expliquer à une personne non spécialiste?
-
-## Préparation du module suivant
-
-Pour le module sur le cycle de vie des modèles, conserver:
-
-- le script;
-- la note de limites;
-- la mesure de performance;
-- le commit associé.
-
-Ces éléments serviront à créer une fiche de suivi de modèle.
+Conserver la commande qui produit la preuve, la sortie obtenue et la limite la plus importante. Ces éléments alimentent le [test de reproduction](../14-deploiement-production/index.qmd) et la [fiche de suivi](../14-cycle-vie-modeles/index.qmd).

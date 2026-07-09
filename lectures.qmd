@@ -13,9 +13,11 @@ Chaque préparation doit contenir:
 
 1. une lecture courte;
 2. deux ou trois exemples R à exécuter;
-3. un mini-test;
+3. un mini-test lorsqu'il est prévu, sinon une courte autovérification formative;
 4. une trace dans le portfolio;
 5. une question ou difficulté à apporter en classe.
+
+Lorsqu'un mini-test est prévu, il suit le [gabarit commun des mini-tests de préparation](gabarits/gabarit-mini-test-preparation.qmd): trois questions, 5 à 10 minutes et remise avant le début du laboratoire.
 
 | Étape | Charge indicative | Fonction |
 |---|---:|---|

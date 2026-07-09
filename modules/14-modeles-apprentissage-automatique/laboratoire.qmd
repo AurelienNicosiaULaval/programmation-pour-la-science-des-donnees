@@ -1,17 +1,21 @@
 ---
-title: "Modèles d'apprentissage automatique - Laboratoire"
+title: "14A - Laboratoire facultatif de modélisation prédictive"
 format:
   html:
     embed-resources: true
 ---
 
-## Mise en contexte
+## Statut du laboratoire
 
-Vous devez produire un premier pipeline de modélisation pour une question prédictive simple. Le but n'est pas d'obtenir le meilleur modèle possible. Le but est de rendre visible une démarche reproductible: question, données, séparation, ajustement, évaluation, limites.
+Ce laboratoire est une voie facultative de la [semaine 14 intégrée](../14-synthese-finale/index.qmd). Le choisir seulement si une question prédictive correspond à la finalité du projet ou si vous souhaitez pratiquer cette méthode sur l'exemple simulé.
+
+Les projets descriptifs, de visualisation, d'application ou de génie logiciel utilisent plutôt l'[atelier de validation adaptée](pendant.qmd). Ils n'ont pas à produire de modèle.
+
+Le but n'est pas d'obtenir le meilleur modèle possible. Le but est de rendre visible une démarche reproductible: question, données, séparation, ajustement, évaluation et limites.
 
 ## Résultat attendu
 
-À la fin du laboratoire, votre dépôt contient:
+Si vous choisissez cette voie, votre dépôt contient:
 
 - `scripts/modele_minimal.R`;
 - `reports/note-modelisation.qmd` ou une note équivalente dans le portfolio;
@@ -181,3 +185,9 @@ Ajouter une comparaison courte entre deux strategies:
 - modèle linéaire ajoutant `region`.
 
 Comparer les RMSE et expliquer pourquoi un modèle plus complexe n'est pas automatiquement meilleur.
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+Tout usage significatif qui influence le code, la stratégie d'évaluation ou l'interprétation doit être documenté dans `docs/ai-log.md`.

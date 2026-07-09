@@ -12,40 +12,49 @@ Quand et comment une classe ou un objet simplifie-t-il réellement un projet de 
 
 ## Rôle dans le cours
 
-Ce module aborde les paradigmes de programmation orientée objet (POO) en R. Après avoir appris à écrire des fonctions et à automatiser des calculs (module 10), vous découvrirez comment structurer vos données et vos comportements. R propose plusieurs systèmes de POO. Nous nous concentrerons sur le système natif le plus répandu, **S3** (orienté programmation fonctionnelle), et sur le système moderne **R6** (orienté encapsulation et sémantique de référence). Comprendre ces systèmes est essentiel pour concevoir des API propres, structurer des sorties d'analyse complexes ou développer des applications web interactives (comme avec Shiny).
+Ce module aborde la programmation orientée objet à partir d'une décision concrète: une classe simplifie-t-elle réellement le projet? Le noyau obligatoire porte sur **S3**, le système le plus courant pour structurer et afficher des résultats d'analyse. Pour **R6**, l'attente obligatoire est de savoir décider si un état mutable et partagé est nécessaire. L'implémentation complète d'une classe R6 est une voie choisie. **S4** est seulement signalé comme système rencontré dans certains packages et demeure facultatif.
+
+## Noyau et voies d'approfondissement
+
+| Niveau | Attente de la semaine |
+|---|---|
+| Noyau obligatoire | Construire un objet S3 minimal, écrire une méthode et tester un invariant |
+| Décision obligatoire | Justifier si un besoin précis relève de S3, de R6 ou d'une simple liste de fonctions |
+| Voie choisie | Prototyper une classe R6 seulement si le problème exige un état mutable ou une ressource persistante |
+| Approfondissement facultatif | Reconnaître un objet S4 et consulter sa documentation sans devoir créer une classe S4 |
 
 ## Objectifs du module
 
 À la fin de la semaine, chaque personne devrait pouvoir:
 
-- reconnaître les besoins qui motivent l'utilisation de la programmation orientée objet par rapport à une approche purement fonctionnelle;
-- comprendre et implémenter le mécanisme de dispatch S3 (création de fonctions génériques et de méthodes spécifiques);
-- définir et instancier des classes R6 en utilisant le masquage des données (public vs private);
-- expliquer la différence fondamentale entre la sémantique de valeur (copie-sur-modification de S3) et la sémantique de référence (mutabilité de R6);
-- concevoir une interface claire et documentée pour un objet de projet de science des données.
+- reconnaître les besoins qui motivent l'utilisation d'un objet plutôt qu'une simple fonction ou une liste;
+- implémenter le mécanisme de dispatch S3 avec un constructeur et une méthode;
+- expliquer la différence entre la copie-sur-modification de S3 et la sémantique de référence de R6;
+- décider si R6 est justifié par un état mutable, une connexion, un cache ou le suivi d'un pipeline;
+- concevoir une interface claire et documentée pour un résultat d'analyse ou un composant du projet.
 
 ## Compétences visées
 
 - Définir une classe S3 minimale en lui associant un constructeur et des attributs de classe.
 - Écrire des méthodes S3 courantes pour des fonctions génériques existantes (ex: `print()`, `summary()`, `plot()`).
-- Concevoir une classe R6 encapsulée avec des champs privés, des méthodes publiques et une méthode d'initialisation (`initialize()`).
-- Tester les invariants et le comportement mutuel des objets S3 et R6 à l'aide de `testthat`.
+- Formuler une décision argumentée sur l'emploi éventuel de R6.
+- Tester un invariant d'un objet S3 et, dans la voie choisie, d'un objet R6 à l'aide de `testthat`.
 
 ## Déroulement
 
 | Moment | Page à utiliser | Résultat |
 |---|---|---|
-| Avant la classe | [Avant la classe](avant.qmd) | Lire les concepts de S3 et R6 et faire le mini-test de préparation |
-| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démonstrations de dispatch S3 et de mutabilité avec R6 |
-| Laboratoire | [Laboratoire](laboratoire.qmd) | Créer un objet d'analyse S3 et encapsuler un simulateur de jeu ou d'état dans une classe R6 |
-| Défi de module | [Défi de module](defi.qmd) | Implémenter et documenter une classe S3 ou R6 répondant à un besoin du projet |
-| Après la classe | [Après la classe](apres.qmd) | Déposer la trace portfolio: classe, exemple d’usage, test d’invariant et commit |
+| Avant la classe | [Avant la classe](avant.qmd) | Préparer S3, observer la différence de référence avec R6 et faire le mini-test |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Pratiquer le dispatch S3 et discuter des critères de décision pour R6 |
+| Laboratoire | [Laboratoire](laboratoire.qmd) | Créer un objet d'analyse S3, tester un invariant et documenter la décision R6 |
+| Défi de module | [Défi de module](defi.qmd) | Structurer un résultat réel en S3 et décider si R6 apporterait un bénéfice |
+| Après la classe | [Après la classe](apres.qmd) | Déposer une seule trace: objet S3, exemple, test d'invariant, décision R6 et commit |
 
 ## Place de l’IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à générer le squelette d'une classe R6 ou à trouver la syntaxe d'une méthode S3. La personne étudiante doit toutefois être capable de justifier le choix entre S3 et R6 pour un problème donné et d'expliquer les conséquences de la mutabilité des objets R6. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+L'IA peut aider à retrouver la syntaxe d'une méthode S3 ou à esquisser une interface R6. Toute contribution significative de l'IA doit être consignée dans `docs/ai-log.md` en indiquant l'outil, le but de l'utilisation, l'élément retenu et la vérification effectuée. Le code et le texte conservés doivent être compris, vérifiés, adaptés au contexte et défendables par la personne étudiante.
 
 ## Variante STT-6230
 

@@ -1,0 +1,96 @@
+---
+title: "Semaine 12 - Performance et parallélisation raisonnée"
+description: "Une seule semaine pour mesurer, améliorer et décider si le parallèle est justifié"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question de la semaine
+
+Comment mesurer un problème de performance, préserver la correction du résultat et décider si une optimisation séquentielle suffit ou si une extension parallèle est justifiée?
+
+## Une semaine, deux blocs complémentaires
+
+| Bloc | Statut | Résultat attendu |
+|---|---|---|
+| [12A - Profilage, optimisation et performance](../12-profilage-optimisation-performance/index.qmd) | Noyau obligatoire pour tout le monde | Localiser un goulot, comparer une version initiale et une modification, vérifier le résultat et documenter la décision |
+| [12B - Programmation asynchrone et parallèle](../12-programmation-parallele/index.qmd) | Voie choisie ou extension | Tester le parallèle seulement pour une tâche indépendante dont le profilage justifie cette piste |
+
+Le bloc 12B ne constitue pas un deuxième module à terminer. Une personne peut satisfaire toutes les attentes de la semaine avec une optimisation séquentielle correctement mesurée et justifiée.
+
+## Préparation unique
+
+Temps total estimé: 50 minutes maximum.
+
+1. 25 minutes: lire les sections principales de la page [12A - Avant la classe](../12-profilage-optimisation-performance/avant.qmd) et exécuter l'exemple `bench::mark()`;
+2. 10 minutes: répondre au seul mini-test de la semaine, situé dans cette même page 12A;
+3. 10 minutes: lire la section de décision de la page [12B - Avant la classe](../12-programmation-parallele/avant.qmd), sans devoir lancer un plan parallèle;
+4. 5 minutes: choisir un script ou une fonction du portfolio ou du projet qui pourra être mesuré en classe.
+
+Il n'y a pas de second mini-test dans le bloc 12B. Son auto-vérification est facultative et n'est pas remise.
+
+## Déroulement des trois heures
+
+| Temps indicatif | Activité | Statut |
+|---|---|---|
+| 0 à 20 min | Retour sur le mini-test unique et critères d'une comparaison valide | Obligatoire |
+| 20 à 65 min | Profilage d'un script ou de la marche aléatoire | Obligatoire |
+| 65 à 110 min | Modification ciblée, benchmark et vérification de correction | Obligatoire |
+| 110 à 125 min | Pause et choix argumenté de la suite | Obligatoire |
+| 125 à 165 min | Voie A: approfondir l'optimisation séquentielle; voie B: tester une extension `future` ou `furrr` | Une voie au choix |
+| 165 à 180 min | Compléter la fiche unique, revenir à `plan(sequential)` et faire le commit | Obligatoire |
+
+## Un seul livrable de semaine
+
+Créez une seule fiche `docs/semaine-12-performance.md`. Elle peut renvoyer vers un script existant du projet, mais aucun second rapport ni défi séparé n'est demandé.
+
+### Checklist unique
+
+- [ ] La tâche mesurée et le contexte d'exécution sont identifiés.
+- [ ] Une mesure initiale reproductible ou un profil localise le problème.
+- [ ] Une modification ciblée est décrite.
+- [ ] La correction du résultat est vérifiée avec une assertion, un test ou une comparaison appropriée.
+- [ ] La comparaison présente la méthode, la variabilité pertinente et le résultat observé sur la machine utilisée.
+- [ ] La décision finale est formulée: conserver la version initiale, retenir l'optimisation séquentielle ou expérimenter le parallèle.
+- [ ] Si la voie parallèle est choisie, le nombre de workers est limité, un repli séquentiel est prévu, `plan(sequential)` est rétabli et les graines sont contrôlées si le calcul est aléatoire.
+- [ ] Si l'IA a influencé le travail, l'entrée correspondante se trouve dans `docs/ai-log.md`.
+- [ ] La fiche et le code visé sont inclus dans un commit identifiable.
+
+## Ce qui est évalué
+
+La vitesse absolue et le fait d'obtenir une accélération ne sont pas évalués. Les machines, la mémoire disponible, le système d'exploitation et la charge de fond diffèrent. La rétroaction porte sur la qualité du protocole, la correction du résultat, l'interprétation des mesures, les garde-fous et la décision technique. Conclure que le parallèle ralentit la tâche ou ne vaut pas sa complexité est une conclusion valide.
+
+## Garde-fous pour la voie parallèle
+
+Pour les exercices locaux, utilisez au maximum deux workers et laissez si possible un coeur disponible pour le système. La configuration recommandée est:
+
+```r
+library(future)
+
+coeurs_disponibles <- as.integer(availableCores())
+workers <- max(1L, min(2L, coeurs_disponibles - 1L))
+
+if (workers >= 2L) {
+  plan(multisession, workers = workers)
+} else {
+  message("Un seul coeur est disponible: repli séquentiel.")
+  plan(sequential)
+}
+
+# Exécuter ici le calcul future ou furrr.
+
+plan(sequential)
+```
+
+N'augmentez pas ce plafond sur une machine partagée ou limitée en mémoire. Si le plan parallèle échoue, si la machine devient instable ou si les données doivent être fortement copiées, revenez à `plan(sequential)` et documentez cette décision.
+
+## Place de l'IA
+
+Statut: permise, déclarée.
+
+L'IA peut aider à expliquer un profil, proposer une transformation ou comprendre un message de `future`. Toute contribution significative de l'IA doit être consignée dans `docs/ai-log.md` en indiquant l'outil, le but de l'utilisation, l'élément retenu et la vérification effectuée. Le code et le texte conservés doivent être compris, vérifiés, adaptés au contexte et défendables par la personne étudiante.
+
+## Variante STT-6230
+
+Après avoir complété la fiche commune, ajouter une analyse de sensibilité du protocole ou une discussion de la loi d'Amdahl. Cette extension ne crée pas un deuxième livrable: elle s'ajoute à `docs/semaine-12-performance.md`.

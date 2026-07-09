@@ -1,5 +1,5 @@
 ---
-title: "Profilage, optimisation et performance - Laboratoire"
+title: "12A - Profilage, optimisation et performance - Laboratoire"
 format:
   html:
     embed-resources: true
@@ -93,5 +93,8 @@ print(comparaison_marches)
 ```
 
 ### À analyser dans votre rapport de laboratoire :
-*   Combien de fois la version vectorisée est-elle plus rapide que la version lente ?
+*   Quel rapport de temps observez-vous entre les versions sur votre machine? Aucun facteur minimal n'est attendu.
 *   Comparez la quantité de mémoire allouée par la version pré-allouée par rapport à la version vectorisée.
+*   Vérifiez un invariant commun aux trois sorties, par exemple la longueur du résultat et le fait que chaque déplacement vaut `-1` ou `1`. Comme les tirages aléatoires diffèrent, `check = FALSE` ne prouve pas à lui seul l'équivalence des fonctions.
+
+La vitesse absolue n'est pas évaluée. Une modification qui n'améliore pas le temps, mais dont le protocole et l'interprétation sont corrects, constitue un résultat valable.

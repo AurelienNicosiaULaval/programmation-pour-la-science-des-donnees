@@ -1,47 +1,30 @@
 ---
-title: "Déploiement et mise en production - Après la classe"
+title: "14B - Reproduction et livraison - Après la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de consolidation
+## Consolidation
 
-Vérifier que la procédure de reproduction peut être comprise et testée sans explication orale.
+Vérifier que la reproduction peut être réalisée sans explication orale et sans publication obligatoire sur Internet.
 
 ## À faire
 
-- Relire le README du point de vue d'une personne externe.
-- Redémarrer R et exécuter uniquement les commandes documentées.
-- Corriger les chemins absolus, objets implicites ou dossiers manquants.
-- Vérifier que les dépendances sont nommées.
-- Ajouter une note de limites si elle manque.
-- Déclarer l'usage significatif de l'IA si nécessaire.
+- Exécuter `Rscript scripts/verifier_reproduction.R` depuis un terminal neuf.
+- Confirmer que le vérificateur lance réellement le point d'entrée.
+- Provoquer une erreur simple et vérifier que le message indique quoi corriger.
+- Nommer les dépendances, entrées et sorties dans le README.
+- Retirer les chemins absolus et les données qui ne doivent pas être publiées.
+- Écrire la limite entre ce qui a été testé localement et ce qui ne l'a pas été.
+- Documenter tout usage significatif de l'IA dans `docs/ai-log.md`.
 
-## Vérification finale
+## Trace à conserver
 
-La procédure est prête si une autre personne peut répondre à ces questions:
+- commande testée;
+- sortie ou message de succès;
+- point d'entrée et sortie attendue;
+- limite connue;
+- commit associé.
 
-- Quel livrable doit être produit?
-- Quelle commande faut-il exécuter?
-- Quels packages ou fichiers sont nécessaires?
-- Quelle sortie permet de savoir que l'exécution a fonctionné?
-- Quelle limite empêche de parler d'une vraie mise en production?
-
-## Réflexion courte
-
-Répondre dans le journal:
-
-- Quelle étape était implicite avant ce laboratoire?
-- Quelle erreur serait la plus probable sur une autre machine?
-- Quelle vérification ajouteriez-vous si le livrable devenait public?
-
-## Préparation de la remise finale
-
-Pour le projet d'équipe ou le portfolio final, conserver:
-
-- le README corrigé;
-- le script de vérification;
-- une sortie testée;
-- les limites;
-- le commit associé.
+Ces éléments alimentent la checklist commune de semaine 14 et la défense finale.

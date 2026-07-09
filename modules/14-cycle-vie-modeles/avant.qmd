@@ -1,39 +1,31 @@
 ---
-title: "Cycle de vie des modèles - Avant la classe"
+title: "14C - Limites, suivi et maintenance - Avant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de préparation
+## Place dans la préparation unique
 
-Réfléchir aux informations nécessaires pour suivre un modèle après sa création.
+Cette activité fait partie des 45 minutes de préparation décrites sur la [page de semaine 14](../14-synthese-finale/index.qmd). Elle n'ajoute aucune préparation et aucun mini-test noté.
 
 ## À préparer
 
-- Choisir un modèle ou pipeline de modélisation.
-- Identifier les données utilisées.
-- Noter la version du code ou du dépôt.
-- Décrire une vérification à refaire plus tard.
-- Noter un usage qui serait risqué ou hors contexte.
-- Noter un changement de données qui pourrait invalider le résultat.
+Choisir un livrable du projet, avec ou sans modèle, puis noter:
 
-## Questions d'autovérification
+- son type et son objectif;
+- les données, entrées ou paramètres qui le produisent;
+- le fichier principal et le commit courant;
+- une validation ou un contrôle déjà effectué;
+- une limite ou un usage hors contexte;
+- un changement futur qui obligerait à le revérifier.
 
-Il n'y a pas de mini-test prévu à la semaine 14 dans la version v1. Vérifier plutôt sa préparation avec des questions courtes sur:
+## Questions d'autovérification formative
 
-- versionnement;
-- validation;
-- suivi des performances;
-- limites d’utilisation;
-- documentation des décisions.
+- Une autre personne peut-elle retrouver la version exacte?
+- Sait-elle ce qui a été validé et ce qui ne l'a pas été?
+- Une donnée, une dépendance ou un paramètre peut-il changer?
+- Quelle utilisation serait risquée ou trompeuse?
+- Quelle vérification future est réellement exécutable?
 
-## Trace à apporter
-
-Une note indiquant:
-
-- le modèle ou pipeline choisi;
-- la donnée utilisée;
-- la version ou le commit disponible;
-- un risque de dérive ou de mauvais usage;
-- une vérification future réaliste.
+Ces questions ne sont ni remises ni notées. Apporter les notes à l'atelier 14C.

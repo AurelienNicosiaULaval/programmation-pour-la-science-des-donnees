@@ -3,6 +3,8 @@ title: "Quarto et rapports - Laboratoire"
 format:
   html:
     embed-resources: true
+execute:
+  eval: false
 ---
 
 ## Objectif du laboratoire
@@ -58,7 +60,7 @@ Ajoutez cette section :
 
 Les données utilisées pour ce rapport proviennent du fichier météorologique nettoyé lors du module 4.
 
-```{{r}}
+```{r}
 #| label: chargement-donnees
 #| echo: true
 
@@ -80,7 +82,7 @@ Ajoutez une section présentant un tableau statistique résumé. Nous allons uti
 
 Le tableau ci-dessous présente la température moyenne et les précipitations totales observées par station.
 
-```{{r}}
+```{r}
 #| label: tableau-synthese
 #| echo: true
 
@@ -113,13 +115,14 @@ Ajoutez une section contenant un graphique de température utilisant `ggplot2`. 
 
 La figure ci-dessous présente la distribution des températures observées.
 
-```{{r}}
+```{r}
 #| label: graphique-temperature
 #| echo: true
 #| fig-width: 7
 #| fig-height: 4
 #| fig-align: center
 #| fig-cap: "Figure 1: Températures observées par station météorologique"
+#| fig-alt: "Boîtes à moustaches et points montrant les températures en degrés Celsius pour chacune des trois stations fictives"
 
 ggplot(meteo_data, aes(x = station_id, y = temperature_c, fill = station_id)) +
   geom_boxplot(alpha = 0.7) +
@@ -135,6 +138,15 @@ ggplot(meteo_data, aes(x = station_id, y = temperature_c, fill = station_id)) +
 ```
 ````
 
+### Vérification minimale d’accessibilité de la figure
+
+Avant le rendu final, vérifier les quatre points suivants:
+
+1. la légende de figure explique ce qui est représenté sans obliger à lire le code;
+2. le texte alternatif décrit le type de figure, les variables et les groupes, sans répéter mot pour mot la légende;
+3. les axes indiquent les variables et les unités, et les libellés restent lisibles avec un zoom du navigateur;
+4. l’information reste compréhensible sans dépendre uniquement de la couleur. Ici, les stations sont aussi identifiées sur l’axe des x et les observations sont montrées par leur position.
+
 ---
 
 ## Étape 5 - Compiler et tester le rapport
@@ -149,10 +161,29 @@ ggplot(meteo_data, aes(x = station_id, y = temperature_c, fill = station_id)) +
 
 ---
 
+## Étape 6 - Décider si le HTML est suivi dans Git
+
+Le fichier source `.qmd` doit toujours être versionné. Le fichier `.html` doit toujours être généré et vérifié localement, mais son suivi dans Git dépend de la fonction du dépôt.
+
+| Décision | Quand la retenir | Action cohérente |
+|---|---|---|
+| Suivre le HTML | Le dépôt sert à remettre ou publier directement le document autonome, ou une personne doit pouvoir ouvrir le résultat sans rendre le projet | Retirer ou préciser la règle `*.html` de `.gitignore`, puis versionner le `.qmd` et le `.html` |
+| Ne pas suivre le HTML | Le HTML est une sortie générée, le dépôt fournit les dépendances et la commande de rendu, et aucune remise du fichier compilé n’est demandée | Conserver ou ajouter `reports/*.html` dans `.gitignore`, puis versionner le `.qmd` et la procédure de rendu |
+
+Inscrire la décision et sa justification dans `README.md` ou `docs/conventions.md`. Ne pas alterner d’une semaine à l’autre sans documenter le changement. Dans les deux cas, conserver la commande vérifiée:
+
+```bash
+quarto render reports/07-rapport-meteo.qmd
+```
+
+---
+
 ## Vérification finale
 
 Avant de valider le laboratoire :
 - [ ] Le fichier `.qmd` compile sans aucun message d'erreur.
 - [ ] Le répertoire `data/` est accédé avec un chemin relatif correct (`../data/`).
 - [ ] Le fichier HTML généré est bien configuré avec `embed-resources: true`.
-- [ ] Committez le fichier `.qmd` et le rapport compilé `.html` dans votre portfolio.
+- [ ] La figure possède une légende, un texte alternatif, des axes avec unités et un encodage qui ne dépend pas uniquement de la couleur.
+- [ ] La décision de suivre ou non le HTML est justifiée dans `README.md` ou `docs/conventions.md`.
+- [ ] Le fichier `.qmd` est committé; le fichier `.html` l’est seulement si la politique documentée prévoit son suivi.

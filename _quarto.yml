@@ -23,20 +23,30 @@ website:
         href: donnees.qmd
       - text: "Modules"
         menu:
-        - modules/01-structuration-projets/index.qmd
-        - modules/02-structure-git-github/index.qmd
-        - modules/03-dependances-reproductibilite/index.qmd
-        - modules/04-donnees-nettoyage-validation/index.qmd
-        - modules/06-visualisation/index.qmd
-        - modules/07-quarto-rapports/index.qmd
-        - modules/10-programmation-fonctionnelle/index.qmd
-        - modules/11-programmation-orientee-objet/index.qmd
-        - modules/12-profilage-optimisation-performance/index.qmd
-        - modules/12-programmation-parallele/index.qmd
-        - modules/14-modeles-apprentissage-automatique/index.qmd
-        - modules/14-deploiement-production/index.qmd
-        - modules/14-cycle-vie-modeles/index.qmd
-        - modules/15-collaboration-documentation-package/index.qmd
+        - text: "1 - Mise en route"
+          href: modules/01-structuration-projets/index.qmd
+        - text: "2 - Structure, Git et GitHub"
+          href: modules/02-structure-git-github/index.qmd
+        - text: "3 - Dépendances et reproductibilité"
+          href: modules/03-dependances-reproductibilite/index.qmd
+        - text: "4 - Données et validation"
+          href: modules/04-donnees-nettoyage-validation/index.qmd
+        - text: "6 - Visualisation"
+          href: modules/06-visualisation/index.qmd
+        - text: "7 - Quarto et rapports"
+          href: modules/07-quarto-rapports/index.qmd
+        - text: "9 - Consolidation"
+          href: modules/09-consolidation/index.qmd
+        - text: "10 - Fonctions et tests"
+          href: modules/10-programmation-fonctionnelle/index.qmd
+        - text: "11 - POO et architecture"
+          href: modules/11-programmation-orientee-objet/index.qmd
+        - text: "12 - Performance et parallèle"
+          href: modules/12-synthese-performance-parallele/index.qmd
+        - text: "14 - Synthèse finale"
+          href: modules/14-synthese-finale/index.qmd
+        - text: "15 - Publication et défense"
+          href: modules/15-collaboration-documentation-package/index.qmd
       - text: "Évaluations"
         href: evaluations.qmd
       - text: "Portfolio"
@@ -56,20 +66,30 @@ website:
       style: "floating"
       collapse-level: 1
       contents:
-        - modules/01-structuration-projets/index.qmd
-        - modules/02-structure-git-github/index.qmd
-        - modules/03-dependances-reproductibilite/index.qmd
-        - modules/04-donnees-nettoyage-validation/index.qmd
-        - modules/06-visualisation/index.qmd
-        - modules/07-quarto-rapports/index.qmd
-        - modules/10-programmation-fonctionnelle/index.qmd
-        - modules/11-programmation-orientee-objet/index.qmd
-        - modules/12-profilage-optimisation-performance/index.qmd
-        - modules/12-programmation-parallele/index.qmd
-        - modules/14-modeles-apprentissage-automatique/index.qmd
-        - modules/14-deploiement-production/index.qmd
-        - modules/14-cycle-vie-modeles/index.qmd
-        - modules/15-collaboration-documentation-package/index.qmd
+        - text: "1 - Mise en route"
+          href: modules/01-structuration-projets/index.qmd
+        - text: "2 - Structure, Git et GitHub"
+          href: modules/02-structure-git-github/index.qmd
+        - text: "3 - Dépendances et reproductibilité"
+          href: modules/03-dependances-reproductibilite/index.qmd
+        - text: "4 - Données et validation"
+          href: modules/04-donnees-nettoyage-validation/index.qmd
+        - text: "6 - Visualisation"
+          href: modules/06-visualisation/index.qmd
+        - text: "7 - Quarto et rapports"
+          href: modules/07-quarto-rapports/index.qmd
+        - text: "9 - Consolidation"
+          href: modules/09-consolidation/index.qmd
+        - text: "10 - Fonctions et tests"
+          href: modules/10-programmation-fonctionnelle/index.qmd
+        - text: "11 - POO et architecture"
+          href: modules/11-programmation-orientee-objet/index.qmd
+        - text: "12 - Performance et parallèle"
+          href: modules/12-synthese-performance-parallele/index.qmd
+        - text: "14 - Synthèse finale"
+          href: modules/14-synthese-finale/index.qmd
+        - text: "15 - Publication et défense"
+          href: modules/15-collaboration-documentation-package/index.qmd
     - id: evaluations
       title: "Évaluations"
       contents:
@@ -85,6 +105,7 @@ website:
         - gabarits/grille-site-personnel.qmd
         - gabarits/grille-defis-techniques.qmd
         - gabarits/grille-presentation-bilan.qmd
+        - gabarits/gabarit-mini-test-preparation.qmd
         - gabarits/template-site-personnel.qmd
         - ia.qmd
     - id: ressources

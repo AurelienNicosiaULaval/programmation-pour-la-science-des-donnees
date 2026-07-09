@@ -31,7 +31,7 @@ portfolio-stt4230/
     verifier_dependances.R
 ```
 
-`renv.lock` est attendu si le portfolio contient déjà du code R dépendant de packages externes. Si le fichier n’est pas encore pertinent, le README doit expliquer comment les dépendances sont gérées pour l’instant.
+Appliquer la règle guidée du cours: `renv.lock` est attendu dès qu’un livrable versionné et destiné à être relancé dépend d’au moins un package externe à R de base. Avant ce moment, son absence doit être justifiée dans `docs/dependances.md`.
 
 ## Étape 1 - Vérifier l’état du dépôt
 
@@ -153,18 +153,28 @@ Adapter `required_packages` selon les scripts réels du portfolio. Ne pas ajoute
 
 ## Étape 5 - Décider si `renv` est pertinent maintenant
 
-Si le portfolio contient déjà du code qui dépend de packages externes, initialiser `renv` depuis la racine du dépôt:
+Utiliser les trois cas suivants, dans cet ordre:
+
+| Situation observée | Action dans le laboratoire |
+|---|---|
+| Les fichiers à relancer utilisent seulement R de base | Ne pas initialiser `renv`; inscrire cette observation dans `docs/dependances.md` |
+| Des packages sont seulement explorés et aucun livrable stable n’en dépend encore | Reporter l’initialisation, documenter les packages testés et réévaluer au prochain jalon du portfolio |
+| Un script, un rapport ou une autre trace versionnée à relancer utilise un package externe | Initialiser `renv`, produire `renv.lock`, vérifier le fichier puis le versionner |
+
+Dans le troisième cas, initialiser `renv` depuis la racine du dépôt:
 
 ```r
 renv::init()
 renv::snapshot()
 ```
 
-Si `renv` n’est pas encore pertinent, écrire dans le README:
+Dans le premier ou le deuxième cas, écrire dans le README:
 
 ```md
-Le fichier `renv.lock` sera ajouté lorsque le portfolio contiendra des dépendances R à restaurer de façon fiable. Pour l’instant, les packages utilisés sont documentés dans `docs/dependances.md`.
+Le fichier `renv.lock` sera ajouté dès qu’un livrable versionné à relancer dépendra d’un package externe à R de base. Pour l’instant, l’état des dépendances et la justification de cette décision sont documentés dans `docs/dependances.md`.
 ```
+
+Si l’initialisation échoue alors que le troisième cas s’applique, consigner le message d’erreur, les packages utilisés et la prochaine action dans `docs/dependances.md`. Ce report est temporaire et doit être réévalué au prochain jalon du portfolio.
 
 ## Étape 6 - Rédiger le journal de semaine 3
 

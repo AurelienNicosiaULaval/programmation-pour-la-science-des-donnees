@@ -19,6 +19,19 @@ Grille détaillée: [Grille d’évaluation des défis techniques](gabarits/gril
 | Défi technique 2 | 8 | 10 % | Vérifier la programmation avec aide encadrée | Permise, déclarée |
 | Défi technique 3 | 13 | 10 % | Vérifier le jugement professionnel avec IA | Intégrée |
 
+## Ce qui est connu avant la séance
+
+| Élément | Publié avant la séance | Fourni au début du défi |
+|---|---|---|
+| Compétences évaluées | Oui, dans cette page et les modules de préparation | Rappel ciblé dans la consigne |
+| Règle IA | Oui | Confirmée avant le départ du temps évalué |
+| Famille de livrables | Oui: code, documentation et vérification selon le défi | Noms exacts des fichiers et structure de départ |
+| Critères | Oui, dans la grille commune | Adaptation des indicateurs à la tâche précise |
+| Données et mini-projet | Source et contraintes générales seulement | Fichiers exacts, valeurs et cas particuliers |
+| Canal de remise | Indiqué par l'équipe enseignante avant la séance | Vérifié pendant la mise en place |
+
+La remise est figée à la fin de l'heure évaluée. Elle doit permettre de retrouver les fichiers demandés et, lorsque Git est exigé, l'identifiant du dernier commit remis.
+
 ## Défi technique 1
 
 Préparation et directives publiques: [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd).
@@ -47,11 +60,17 @@ Le deuxième défi autorise l’IA avec déclaration. Il vise:
 - visualisation;
 - rapport Quarto court;
 - adaptation et vérification de toute aide reçue;
-- entrée obligatoire dans `ai-log.md` ou dans un fichier de réflexion IA.
+- entrée obligatoire dans `docs/ai-log.md` ou dans le fichier de réflexion IA fourni.
 
 Question centrale: est-ce que l’étudiante ou l’étudiant peut produire un livrable technique en utilisant l’IA de façon transparente et contrôlée?
 
+### Repère de remise publié
+
+La remise contient au minimum le code adapté, un rapport Quarto court ou une note de vérification selon la tâche, et `docs/ai-log.md` ou le fichier de réflexion IA fourni. Les noms exacts, le squelette et le mini-projet sont communiqués au début du défi. À la fermeture, remettre les fichiers dans le canal annoncé et, si Git est demandé, vérifier que le dernier commit remis est identifiable.
+
 Après la remise, le reste de la séance sert à comparer des stratégies de validation, à discuter des usages déclarés de l’IA et à améliorer un exemple non évalué. Le défi remis n’est pas corrigé pendant cet atelier.
+
+Avant la séance, les étudiantes et étudiants connaissent donc les compétences, la règle IA, la famille de livrables et la grille. Le mini-projet, les fichiers de départ et les cas exacts à traiter sont fournis au début du défi.
 
 ## Défi technique 3
 
@@ -67,7 +86,13 @@ Le troisième défi intègre l’IA à la tâche. Il évalue:
 
 Question centrale: est-ce que l’étudiante ou l’étudiant sait utiliser l’IA comme assistant technique sans perdre son jugement professionnel?
 
+### Repère de remise publié
+
+La remise contient au minimum le code diagnostiqué ou amélioré, une comparaison avant/après, les vérifications exécutées, un mini-rapport technique et la trace détaillée de l'usage de l'IA. Le code de départ, les anomalies et les contraintes exactes sont communiqués au début du défi. À la fermeture, remettre les fichiers dans le canal annoncé et, si Git est demandé, vérifier que le dernier commit remis est identifiable.
+
 Après la remise, le reste de la séance sert à faire un post-mortem technique: tests, vérifications, limites des propositions de l’IA, justification des choix et transfert vers le projet final.
+
+Avant la séance, les étudiantes et étudiants connaissent les dimensions du diagnostic, la trace IA attendue et la grille. Le code à diagnostiquer, les contraintes de performance et les anomalies précises sont fournis au début du défi.
 
 ## Déroulement type d’une séance de défi
 
@@ -85,7 +110,7 @@ Après la remise, le reste de la séance sert à faire un post-mortem technique:
 | Défi | Traces |
 |---|---|
 | Défi technique 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
-| Défi technique 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `ai-log` ou fichier de réflexion IA |
+| Défi technique 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `docs/ai-log.md` ou fichier de réflexion IA |
 | Défi technique 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
 
 ## Critères communs

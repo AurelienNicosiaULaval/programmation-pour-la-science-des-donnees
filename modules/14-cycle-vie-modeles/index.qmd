@@ -1,74 +1,76 @@
 ---
-title: "Cycle de vie des modèles"
-description: "Suivre, vérifier et maintenir un modèle au-delà de sa première version"
+title: "14C - Limites, suivi et maintenance"
+description: "Documenter un modèle, un pipeline, un tableau de bord ou un rapport après sa première version"
 format:
   html:
     embed-resources: true
 ---
 
-## Question du module
+## Question du bloc
 
-Comment documenter et maintenir un modèle après sa première mise au point?
+Que faut-il conserver pour réutiliser, vérifier et expliquer le livrable après la remise?
 
-## Objectifs du module
+## Statut dans la semaine 14
 
-- décrire les étapes du cycle de vie d’un modèle;
-- documenter les données, la version du code et les résultats;
-- repérer les risques de dérive ou de mauvaise utilisation;
-- distinguer les risques liés aux données, au code, aux usages et à l’interprétation;
-- proposer une stratégie de suivi;
-- relier validation technique et responsabilité professionnelle.
+Ce bloc est le second noyau obligatoire de la [semaine 14 intégrée](../14-synthese-finale/index.qmd). Il s'applique à tout projet, avec ou sans modèle prédictif.
 
-## Place dans le cours
+La fiche de suivi peut porter sur:
 
-Ce module est le bloc de recul professionnel de la semaine 14. Il sert à transformer un résultat technique en livrable défendable: hypothèses, limites, surveillance, maintenance et usages à éviter.
+- un modèle prédictif;
+- un pipeline de données ou d'analyse;
+- une visualisation ou un tableau de bord;
+- une application;
+- un rapport reproductible;
+- un composant logiciel.
 
-La semaine 14 regroupe trois blocs complémentaires:
+## Objectifs du bloc
 
-| Bloc | Page | Rôle |
-|---|---|---|
-| 1 | Modèles d’apprentissage automatique | Construire ou analyser un pipeline de modélisation minimal |
-| 2 | Déploiement et mise en production | Vérifier que le livrable final peut être relancé par une autre personne |
-| 3 | Cycle de vie des modèles | Documenter les limites, le suivi et la maintenance après la remise |
-
-Ce bloc prépare la discussion finale de la semaine 15: présentation, revue de code, bilan individuel et questions sur les limites du projet.
+- identifier le livrable, ses données ou entrées et sa version;
+- résumer la validation déjà effectuée;
+- documenter les limites et les usages hors contexte;
+- repérer des risques liés aux données, au code, à l'usage et à l'interprétation;
+- proposer une vérification future réaliste;
+- relier la fiche à un fichier et à un commit précis.
 
 ## Trace attendue
 
-- une fiche de suivi de modèle;
-- une note sur les hypothèses, limites et usages à éviter;
-- une procédure de vérification future;
-- une trace portfolio indiquant le fichier, le commit, la validation et la prochaine action.
+Produire `docs/fiche-suivi.md` ou une section équivalente contenant:
 
-## Risques à documenter
+- le type et l'objectif du livrable;
+- les entrées, données ou paramètres importants;
+- le fichier principal et le commit;
+- la validation ou le contrôle de qualité effectué;
+- au moins trois risques pertinents;
+- une limite d'utilisation ou d'interprétation;
+- une vérification future et une prochaine action.
 
-La fiche de suivi doit nommer au moins trois familles de risques:
+Cette fiche appartient à la checklist commune de semaine 14 et n'est pas une remise séparée.
 
-| Famille | Exemple de question |
+## Familles de risques
+
+| Famille | Question applicable à tout livrable |
 |---|---|
-| Données | Les données futures auront-elles la même définition, la même source et la même qualité? |
-| Code | Le résultat dépend-il d’une version précise du script, d’un package ou d’un paramètre? |
-| Usage | Le modèle pourrait-il être utilisé pour une population, une période ou une décision non prévue? |
-| Interprétation | Le score de performance risque-t-il d’être lu comme une preuve plus forte qu’il ne l’est? |
+| Données ou entrées | La source, la définition, le format ou la qualité peuvent-ils changer? |
+| Code ou dépendances | Le résultat dépend-il d'une version, d'un paramètre, d'un service ou d'un chemin implicite? |
+| Usage | Une autre personne pourrait-elle utiliser le livrable pour une population, une décision ou un contexte non prévu? |
+| Interprétation | Une figure, un score, un tableau ou une sortie pourrait-il être lu comme une preuve plus forte qu'il ne l'est? |
 
-Le but n’est pas d’écrire un dossier de conformité. Le but est de rendre le modèle défendable dans la présentation finale.
-
-## Place de l’IA
+## Place de l'IA
 
 Statut: permise, déclarée.
 
-Tout usage significatif qui influence le diagnostic, la documentation, la vérification ou l’interprétation doit être documenté dans `docs/ai-log.md`.
+Tout usage significatif qui influence le diagnostic, la documentation, la vérification ou l'interprétation doit être documenté dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 
-Ajouter une note technique courte qui compare deux stratégies de suivi. Exemples: seuil fixe de performance versus comparaison à une référence, validation périodique versus validation déclenchée par un changement de données, ou fiche de suivi minimale versus fiche de type *model card*. La note doit conclure par une recommandation reliée au projet.
+Comparer deux stratégies de suivi, puis recommander celle qui convient au projet compte tenu du coût de vérification, de la fréquence de mise à jour et du risque d'erreur ou de mauvaise interprétation.
 
-## Pages du module
+## Pages du bloc
 
-- [Avant la classe](avant.qmd)
-- [Pendant la classe](pendant.qmd)
+- [Préparation commune](avant.qmd)
+- [Atelier de fiche de suivi](pendant.qmd)
 - [Laboratoire](laboratoire.qmd)
-- [Après la classe](apres.qmd)
-- [Défi de module](defi.qmd)
-- [Lectures](lectures.qmd)
-- [Ressources](ressources.qmd)
+- [Consolidation](apres.qmd)
+- [Exercice formatif non noté](defi.qmd)
+- [Lecture primaire](lectures.qmd)
+- [Ressources et gabarit](ressources.qmd)

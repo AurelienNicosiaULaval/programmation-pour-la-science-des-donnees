@@ -1,39 +1,43 @@
 ---
-title: "Cycle de vie des modèles - Lectures"
+title: "14C - Limites, suivi et maintenance - Lectures"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif des lectures
+## Lecture primaire
 
-Préparer les notions de suivi, validation, limites et maintenance d’un modèle.
+Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D. et Gebru, T. (2019). [Model Cards for Model Reporting](https://doi.org/10.1145/3287560.3287596). *Proceedings of the Conference on Fairness, Accountability, and Transparency*, 220-229. Association for Computing Machinery. <https://doi.org/10.1145/3287560.3287596>
+
+Lire le résumé, la figure 1 et la section 4, « Model Card Sections ». Se concentrer sur quatre éléments transférables au projet:
+
+- l'usage prévu et les usages hors contexte;
+- les données ou entrées utilisées pour l'évaluation;
+- la validation ou les résultats quantitatifs;
+- les limites, réserves et recommandations.
+
+L'article porte sur les modèles. Dans ce cours, la structure documentaire est adaptée à un pipeline, un tableau de bord, une application ou un rapport lorsque le projet ne contient pas de modèle prédictif.
 
 ## Lecture interne
 
-Relire les pages du portfolio, du projet et de la politique IA en portant attention aux traces de validation.
-
-## Lecture externe courte
-
-Lire rapidement la structure des *model cards* de Mitchell et al. (2019), puis repérer trois éléments utiles pour votre propre fiche: usage prévu, limites, performance ou données d’évaluation.
+Relire la [checklist de semaine 14](../14-synthese-finale/index.qmd) et la preuve de validation produite dans la voie 14A.
 
 ## Geste à reproduire
 
-Choisir un modèle ou pipeline existant et noter:
+Pour un seul livrable, noter:
 
-- les données utilisées;
-- la version du code;
-- la validation disponible;
-- une limite importante;
-- une vérification future.
+- objectif et public prévu;
+- données ou entrées;
+- version du code;
+- validation disponible;
+- usage hors contexte;
+- vérification future.
 
-## Trace attendue
-
-Ajouter une courte note de préparation dans le portfolio.
-
-## Questions de préparation
+## Questions de préparation formative
 
 - Quelle information serait difficile à retrouver dans trois mois?
-- Quelle donnée pourrait changer avant une réutilisation?
-- Quel score ou indicateur devrait être comparé à une référence simple?
-- Quelle phrase empêcherait une mauvaise interprétation du résultat?
+- Quel changement de données, d'entrée ou de dépendance pourrait invalider le livrable?
+- Quelle phrase empêcherait une mauvaise interprétation?
+- Qui devrait faire la prochaine vérification et dans quelle situation?
+
+Ces questions ne sont ni remises ni notées.

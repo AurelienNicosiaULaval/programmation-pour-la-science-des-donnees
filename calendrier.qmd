@@ -37,14 +37,14 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance r�
 | 5 | 30 septembre 2026 | Défi technique 1 et consolidation | Révision projet, Git, importation, nettoyage simple | Défi individuel 1 h sans IA, puis atelier de consolidation Git, données et portfolio | Défi 1, aucune IA; atelier non évalué |
 | 6 | 7 octobre 2026 | Visualisation | `ggplot2`, choix graphiques, communication visuelle | Produire et améliorer une figure | Mini-test, proposition du projet d’équipe |
 | 7 | 14 octobre 2026 | Quarto et communication | Rapports reproductibles, narration et résultats | Compiler un rapport Quarto court | Mini-test, rapport Quarto et revue courte |
-| 8 | 21 octobre 2026 | Défi technique 2 et consolidation | Fonctions, pipeline, visualisation, IA déclarée | Défi individuel 1 h, puis atelier sur validation et usage déclaré de l’IA | Défi 2, trace dans `ai-log.md`; atelier non évalué |
+| 8 | 21 octobre 2026 | Défi technique 2 et consolidation | Fonctions, pipeline, visualisation, IA déclarée | Défi individuel 1 h, puis atelier sur validation et usage déclaré de l’IA | Défi 2, trace dans `docs/ai-log.md`; atelier non évalué |
 | Relâche | 28 octobre 2026 | Semaine de lecture | Aucun mini-test régulier | Aucune séance régulière | Travail autonome et rattrapage |
-| 9 | 4 novembre 2026 | Consolidation | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test, jalon portfolio 2, point de suivi projet formatif |
+| 9 | 4 novembre 2026 | [Consolidation](modules/09-consolidation/index.qmd) | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test, jalon portfolio 2, point de suivi projet formatif |
 | 10 | 11 novembre 2026 | Fonctions, `purrr` et tests | Fonctions, itérations, réduction du copier-coller, assertions, `testthat` | Transformer du code exploratoire en fonctions testables | Mini-test, fonction dans `R/`, test minimal |
 | 11 | 18 novembre 2026 | POO et architecture | S3 et R6, différences et cas d’usage | Structurer des objets ou composants du projet | Mini-test, note POO ou architecture |
-| 12 | 25 novembre 2026 | Optimisation et parallèle | Profilage, `future`, `furrr` | Mesurer, comparer, améliorer ou paralléliser | Mini-test, version intermédiaire du projet |
+| 12 | 25 novembre 2026 | [Performance et parallèle](modules/12-synthese-performance-parallele/index.qmd) | Mesure et profilage; parallèle selon la tâche et la machine | Mesurer un goulot, améliorer le code, puis décider si le parallèle est pertinent | Un seul mini-test, une trace avant/après, version intermédiaire du projet |
 | 13 | 2 décembre 2026 | Défi technique 3 et consolidation | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis post-mortem technique sur tests, validation et limites | Défi 3, rapport technique et trace IA; atelier non évalué |
-| 14 | 9 décembre 2026 | Synthèse finale: modèle, reproduction, cycle de vie | Modèle minimal, reproduction, limites, suivi | Stabiliser le livrable final, le README, les tests et la reproduction | Préparation finale, remise finale projet, jalon portfolio 3 |
+| 14 | 9 décembre 2026 | [Synthèse finale](modules/14-synthese-finale/index.qmd) | Reproduction et limites; modélisation ou autre validation selon le projet | Stabiliser le livrable final, vérifier son point d'entrée et préparer sa défense | Préparation finale, remise finale projet, jalon portfolio 3 |
 | 15 | 16 décembre 2026 | Site personnel, présentation et revue du projet | Site Quarto personnel, dépôt final, support bref, issue ou pull request, bilan individuel | Présentations, revue de code, questions, vérification des contributions, vérification des sites publiés | Site Quarto personnel, défense du projet |
 
 ## Jalons d’évaluation
@@ -78,15 +78,28 @@ Les mini-tests servent à soutenir la préparation hebdomadaire. Ils sont courts
 | 13 | Pas de mini-test prévu quand un défi technique est prévu |
 | 14 | Pas de mini-test prévu dans la v1; préparation finale du projet et du portfolio |
 
+Le format commun, la trace et la règle IA des mini-tests sont décrits dans le [gabarit des mini-tests de préparation](gabarits/gabarit-mini-test-preparation.qmd). La semaine 12 comporte un seul mini-test, même si elle contient un noyau de profilage et une voie de parallélisation.
+
+## Rôle des blocs de semaine 12
+
+La [page intégratrice de semaine 12](modules/12-synthese-performance-parallele/index.qmd) constitue le point d'entrée étudiant.
+
+| Bloc | Statut | Fonction |
+|---|---|---|
+| 12A - Profilage et optimisation | Noyau obligatoire | Mesurer un goulot, comparer avant/après et documenter un compromis |
+| 12B - Programmation parallèle | Voie choisie ou approfondissement | Tester le parallèle seulement si la tâche et la machine le justifient |
+
+Il n'y a qu'une préparation totale, un mini-test et une trace principale pour la semaine.
+
 ## Rôle des blocs de semaine 14
 
-La semaine 14 regroupe trois blocs de synthèse. Ils ne correspondent pas à trois semaines différentes.
+La [page intégratrice de semaine 14](modules/14-synthese-finale/index.qmd) constitue le point d'entrée étudiant. Les trois blocs ne correspondent pas à trois semaines différentes et ne créent pas trois livrables indépendants.
 
 | Bloc | Page | Fonction |
 |---|---|---|
-| Modèles d’apprentissage automatique | [Module 14: modèles](modules/14-modeles-apprentissage-automatique/index.qmd) | Vérifier la logique de modélisation, la séparation entraînement-évaluation et les limites |
-| Déploiement et mise en production | [Module 14: déploiement](modules/14-deploiement-production/index.qmd) | Tester la reproduction du livrable final et corriger les dépendances implicites |
-| Cycle de vie des modèles | [Module 14: cycle de vie](modules/14-cycle-vie-modeles/index.qmd) | Préparer les limites, le suivi, la maintenance et la défense orale |
+| 14A - Modèles d’apprentissage automatique | [Modèles](modules/14-modeles-apprentissage-automatique/index.qmd) | Voie optionnelle pour un projet prédictif; comparer à une référence et documenter les limites |
+| 14B - Reproduction du livrable | [Reproduction](modules/14-deploiement-production/index.qmd) | Noyau obligatoire; tester le point d'entrée et corriger les dépendances implicites |
+| 14C - Cycle de vie | [Cycle de vie](modules/14-cycle-vie-modeles/index.qmd) | Noyau obligatoire adapté au produit; préparer limites, suivi, maintenance et défense |
 
 ## Déroulement des semaines de défi
 

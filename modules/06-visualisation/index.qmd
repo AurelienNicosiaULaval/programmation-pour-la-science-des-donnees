@@ -22,7 +22,7 @@ Les concepts vus cette semaine seront appliqués immédiatement pour la proposit
 
 - comprendre la grammaire des graphiques de `ggplot2` (données, esthétiques, géométries, facettes, thèmes);
 - choisir le type de graphique adapté à la nature des variables (continues, catégorielles, relations);
-- remplacer l'ancien système graphique de base R par `ggplot2`;
+- choisir entre les graphiques de base R et `ggplot2`, puis traduire une figure vers `ggplot2` lorsque la grammaire par couches facilite les annotations, les groupes ou la maintenance;
 - ajouter des annotations textuelles précises en calculant les coordonnées de façon dynamique;
 - utiliser `after_stat()` pour afficher des statistiques calculées à la volée;
 - structurer un code graphique propre et lisible en empilant les couches.
@@ -58,7 +58,7 @@ Les concepts vus cette semaine seront appliqués immédiatement pour la proposit
 
 Statut: permise, déclarée.
 
-L'IA peut aider à trouver le nom d'un argument de thème ou à comprendre une erreur de structure dans `ggplot2`. La personne étudiante doit toutefois comprendre l'empilement des couches et être capable d'expliquer pourquoi un type de graphique a été choisi plutôt qu'un autre. Tout usage significatif doit être documenté dans `docs/ai-log.md` ou dans le journal.
+L'IA peut aider à trouver le nom d'un argument de thème ou à comprendre une erreur de structure dans `ggplot2`. La personne étudiante doit toutefois comprendre l'empilement des couches et être capable d'expliquer pourquoi un type de graphique a été choisi plutôt qu'un autre. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 

@@ -5,11 +5,23 @@ format:
     embed-resources: true
 ---
 
-Cette composante compte pour 10 % de la note finale. Elle est individuelle et remise à la dernière semaine du cours. L’objectif est de transformer une partie du portfolio et du projet en vitrine publique, professionnelle et techniquement correcte.
+Cette composante compte pour 10 % de la note finale. Elle est individuelle et remise en semaine 15. L’objectif est de transformer une petite sélection du portfolio et du projet en vitrine publique, professionnelle et techniquement correcte.
 
 Grille détaillée: [Grille du site Quarto personnel](gabarits/grille-site-personnel.qmd).
 
 Template minimal: [Template minimal de site Quarto personnel](gabarits/template-site-personnel.qmd).
+
+## Résumé attendu
+
+À la fin de la session, chaque personne remet:
+
+- l’adresse du site Quarto publié sur GitHub Pages;
+- l’adresse du dépôt GitHub qui contient les sources du site;
+- l’identifiant du dernier commit à évaluer;
+- deux réalisations commentées, dont une liée au portfolio individuel;
+- une déclaration IA lorsque l’IA a influencé de façon significative le texte, la structure, le code ou le design du site.
+
+Le portfolio reste le dépôt de travail et de progression. Le site personnel est une vitrine publique courte. Il ne doit pas republier tout le portfolio.
 
 ## Objectif
 
@@ -31,6 +43,39 @@ Le site doit être assez simple pour être maintenu après le cours. Il n’est 
 | Moment | Semaine 15 (16 décembre 2026) |
 | Support | Site Quarto publié sur GitHub Pages et dépôt GitHub source |
 | IA | Permise, déclarée |
+
+## Ce qui doit être publié sur GitHub Pages
+
+Le site publié doit être un site Quarto consultable publiquement dans le navigateur. La méthode minimale recommandée pour le cours est:
+
+- créer un dépôt GitHub distinct pour le site personnel;
+- configurer Quarto pour rendre le site dans le dossier `docs/`;
+- publier le dossier `docs/` avec GitHub Pages;
+- vérifier l’adresse publique du site après publication.
+
+Le site publié doit contenir au minimum:
+
+- une page d’accueil ou une page `À propos`;
+- une page `Parcours`, `CV` ou `Compétences`;
+- une page `Réalisations`;
+- une page ou section de déclaration IA lorsque pertinente.
+
+Le dépôt source doit contenir les fichiers Quarto du site, par exemple:
+
+```text
+site-personnel/
+  _quarto.yml
+  .nojekyll
+  index.qmd
+  parcours.qmd
+  realisations.qmd
+  declaration-ia.qmd
+  styles.css
+  README.md
+  docs/
+```
+
+Le dossier `docs/` contient le site rendu. Le fichier `.nojekyll` indique à GitHub Pages de publier les fichiers déjà rendus sans traitement Jekyll supplémentaire. Les fichiers sources `.qmd` restent nécessaires pour évaluer la structure et la reproductibilité du site.
 
 ## Contenu minimal
 
@@ -56,6 +101,21 @@ Chaque réalisation doit expliquer brièvement:
 - ce que la réalisation démontre;
 - une limite ou une piste d’amélioration.
 
+## Ce qui doit être relié au portfolio
+
+Le portfolio doit montrer d’où vient au moins une réalisation présentée dans le site personnel.
+
+Dans le portfolio, ajouter dans le `README.md` ou dans `docs/bilan-final.md` une courte section intitulée par exemple `Site Quarto personnel`. Cette section doit indiquer:
+
+- l’adresse du site publié;
+- l’adresse du dépôt source du site;
+- la trace du portfolio reprise dans le site;
+- le lien vers le fichier, dossier, rapport ou commit correspondant, si ce lien peut être rendu public.
+
+Dans le site personnel, la réalisation issue du portfolio doit indiquer clairement la trace utilisée. Le lien vers le portfolio est recommandé seulement si le dépôt ou le fichier lié ne contient aucune information sensible, aucune donnée non autorisée et aucun élément que la personne ne souhaite pas publier.
+
+Si le portfolio n’est pas public ou si une trace ne doit pas être exposée, il faut présenter une version publique résumée dans le site personnel au lieu de publier le fichier original.
+
 ## Confidentialité et publication
 
 Le site est public. Chaque personne choisit donc ce qu’elle rend visible.
@@ -73,15 +133,30 @@ Le CV complet n’est pas obligatoire. Une page de compétences, de parcours ou 
 
 ## Remise
 
-La remise doit permettre de retrouver:
+La remise de semaine 15 doit permettre de retrouver sans ambiguïté:
 
 - l’adresse du site publié;
 - l’adresse du dépôt GitHub source;
 - le dernier commit évalué;
-- les deux réalisations commentées;
-- la déclaration IA lorsque pertinente.
+- la page contenant la réalisation issue du portfolio;
+- la page contenant la réalisation issue du projet d’équipe ou d’un module avancé;
+- la déclaration IA lorsque pertinente;
+- pour STT-6230, la réalisation qui contient la justification technique supplémentaire.
 
 Le site doit être rendu et vérifié avant la remise. Un lien GitHub Pages qui ne fonctionne pas au moment de la correction ne permet pas de vérifier l’objectif de publication.
+
+## Vérifications avant remise
+
+Avant de remettre, vérifier:
+
+- `quarto render` fonctionne sans erreur dans le dossier du site;
+- l’adresse GitHub Pages ouvre bien la page d’accueil publique;
+- la navigation interne fonctionne;
+- les liens vers le portfolio, le projet ou les rapports publics fonctionnent;
+- aucun fichier sensible, secret, jeton, mot de passe, donnée non autorisée ou information personnelle non souhaitée n’est publié;
+- le dépôt source contient les fichiers `.qmd`, `_quarto.yml`, `.nojekyll`, `README.md` et le dossier `docs/`;
+- le dernier commit à évaluer est bien poussé sur GitHub;
+- la déclaration IA est présente si elle est nécessaire.
 
 ## Attentes pour STT-6230
 
@@ -96,7 +171,7 @@ Pour STT-6230, au moins une réalisation doit inclure une dimension technique su
 
 Cette attente ne demande pas un site plus volumineux. Elle demande une réalisation mieux justifiée.
 
-## Références utiles
+## Sources techniques
 
 - [Quarto: Creating a Website](https://quarto.org/docs/websites/)
 - [Quarto: Publishing to GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)

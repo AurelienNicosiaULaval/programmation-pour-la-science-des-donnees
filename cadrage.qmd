@@ -28,12 +28,12 @@ Phrase directrice: à la fin du cours, l’étudiante ou l’étudiant ne sait p
 | Composante | Rôle | Trace attendue |
 |---|---|---|
 | Projet filé | Donner une cohérence à tous les modules | Dépôt d’équipe, rapport, application ou dashboard, pipeline, documentation |
-| Portfolio individuel | Documenter la progression personnelle | Dépôt individuel avec modules, scripts, rapports, `ai-log`, bilan |
+| Portfolio individuel | Documenter la progression personnelle | Dépôt individuel avec modules, scripts, rapports, `docs/ai-log.md`, bilan |
 | Site Quarto personnel | Valoriser les meilleures traces individuelles dans une vitrine publique | Site GitHub Pages, profil public, deux réalisations commentées |
 | Studio de programmation | Utiliser le laboratoire pour produire, corriger et discuter | Commits, corrections, revue de code, livrable court |
 | Sprints | Structurer la progression en blocs de 2 ou 3 semaines | Jalons du projet, rétroactions régulières |
 | Revue de code | Développer la lecture critique et la collaboration | Issues, pull requests, commentaires, refactorisations |
-| IA encadrée | Former au jugement technique avec IA | `ai-log`, vérifications, explication du code |
+| IA encadrée | Former au jugement technique avec IA | `docs/ai-log.md`, vérifications, explication du code |
 
 Narration du cours: on part de projets imparfaits, puis chaque semaine ajoute une pratique professionnelle.
 
@@ -43,7 +43,7 @@ Transformation cible: dossier désordonné -> projet R structuré -> pipeline de
 
 | Moment | Durée cible | Travail | Trace |
 |---|---:|---|---|
-| Avant mercredi | 45 à 60 min | Lecture courte, exemples R, mini-test, préparation du dépôt | Quiz, question, commit initial ou note courte |
+| Avant mercredi | 45 à 60 min | Lecture courte, exemples R, mini-test lorsqu'il est prévu, préparation du dépôt | Quiz, question, commit initial ou note courte |
 | Début du labo | 25 à 35 min | Retour sur mini-test, erreurs fréquentes, concepts difficiles | Questions traitées, points de vigilance |
 | Démonstration | 25 à 40 min | Observer un geste technique complet dans Positron/R | Code de référence ou exemple minimal |
 | Atelier | 75 à 95 min | Produire dans le dépôt individuel ou d’équipe | Script, rapport, fonction, test, graphique, issue ou PR |
@@ -69,7 +69,7 @@ Une lecture ne doit jamais être seulement un texte. Elle doit contenir un geste
 | 11 | POO et architecture | S3 ou R6 selon le choix final |
 | 12 | Optimisation et parallélisation | Mesurer, profiler, comparer, paralléliser avec `future` et `furrr` |
 | 13 | Défi 3 | Diagnostic technique avec IA intégrée et vérification obligatoire |
-| 14 | Synthèse finale: modèle, reproduction, cycle de vie | Modélisation minimale, reproduction du livrable, limites, suivi et maintenance |
+| 14 | Synthèse finale adaptée au projet | Reproduction et limites obligatoires; modélisation ou autre validation selon le produit; suivi et maintenance |
 | 15 | Site personnel, présentation et revue du projet | Site Quarto personnel, démonstration, défense du projet, revue et contributions |
 
 ## Architecture des évaluations
@@ -126,7 +126,7 @@ portfolio-stt4230/
     processed/
 ```
 
-Exigence minimale hebdomadaire: un fichier de code ou de rapport, une courte note explicative, 2 à 3 commits significatifs et une mise à jour du README, des conventions ou du `ai-log` lorsque pertinent.
+Exigence minimale hebdomadaire: un fichier de code ou de rapport, une courte note explicative, 2 à 3 commits significatifs et une mise à jour du README, des conventions ou de `docs/ai-log.md` lorsque pertinent.
 
 ## IA générative
 
@@ -134,7 +134,7 @@ Exigence minimale hebdomadaire: un fichier de code ou de rapport, une courte not
 |---:|---|---|
 | 0 | Aucune IA | Défi 1 ou tâche de vérification de base |
 | 1 | IA permise pour comprendre, mais pas produire le livrable | Clarifier une erreur ou un concept |
-| 2 | IA permise avec `ai-log` obligatoire | Refactorisation, aide au rapport, suggestion de code |
+| 2 | IA permise avec `docs/ai-log.md` obligatoire | Refactorisation, aide au rapport, suggestion de code |
 | 3 | IA attendue comme outil de comparaison, de tests ou de revue | Défi 3, optimisation, vérification critique |
 
 Règle simple: l’IA est permise si la personne peut ensuite expliquer, vérifier, modifier et défendre ce qu’elle a aidé à produire.
@@ -231,7 +231,7 @@ Trace supplémentaire recommandée pour STT-6230: `docs/note-technique.md`.
 | 3 | Module 1 complet | Diagnostic, installation, portfolio, GitHub, structure de projet |
 | 4 | Énoncés d’évaluation | Portfolio, projet filé, défis techniques, présentation |
 | 5 | Gabarits GitHub | Portfolio-template, projet-template, défi-template |
-| 6 | Politique IA | Niveaux 0 à 3, `ai-log`, exemples |
+| 6 | Politique IA | Niveaux 0 à 3, `docs/ai-log.md`, exemples |
 | 7 | Grilles de correction | Rubriques stables et courtes |
 | 8 | FAQ technique | Installation, Git, SSH, Quarto, erreurs fréquentes |
 

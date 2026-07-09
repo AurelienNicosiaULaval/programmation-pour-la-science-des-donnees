@@ -68,7 +68,7 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 | 11 | POO et architecture | S3 et R6, structurer les objets du projet |
 | 12 | Optimisation et parallélisation | Mesurer, profiler, comparer, paralléliser avec `future` et `furrr` |
 | 13 | Défi 3 et consolidation | Défi individuel 1 h avec IA intégrée, puis post-mortem technique sur tests, limites et validation |
-| 14 | Synthèse finale: modèle, reproduction, cycle de vie | Modélisation minimale, reproduction du livrable, limites, suivi et maintenance |
+| 14 | Synthèse finale adaptée au projet | Reproduction et limites obligatoires; modélisation ou autre validation selon le produit; suivi et maintenance |
 | 15 | Site personnel, présentation et revue du projet | Site Quarto personnel, démonstration, défense du projet, revue et contributions |
 
 ## Évaluations

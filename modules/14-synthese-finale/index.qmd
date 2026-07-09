@@ -1,0 +1,76 @@
+---
+title: "Semaine 14 - Synthèse finale du projet"
+description: "Reproduire le livrable, documenter ses limites et préparer sa maintenance"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question de la semaine
+
+Comment rendre le projet final reproductible, défendable et maintenable sans ajouter une nouvelle composante qui ne correspond pas à sa finalité?
+
+## Une seule semaine, trois blocs complémentaires
+
+La semaine 14 est une séance intégrée de trois heures. Les pages 14A, 14B et 14C sont des sous-blocs techniques, pas trois modules à réaliser au complet.
+
+| Bloc | Statut | Rôle |
+|---|---|---|
+| [14A - Validation adaptée au projet](../14-modeles-apprentissage-automatique/index.qmd) | Une voie au choix | Valider un modèle, un pipeline, une analyse descriptive, une visualisation, une application ou un composant logiciel |
+| [14B - Reproduction et livraison](../14-deploiement-production/index.qmd) | Noyau obligatoire | Faire exécuter le point d'entrée documenté et vérifier la sortie attendue |
+| [14C - Limites et suivi](../14-cycle-vie-modeles/index.qmd) | Noyau obligatoire | Documenter les limites, les risques et une vérification future |
+
+Un modèle prédictif n'est jamais exigé si le projet est descriptif, visuel, applicatif ou orienté vers le génie logiciel. Aucun déploiement public n'est obligatoire. Le livrable doit toutefois pouvoir être relancé localement selon une procédure documentée.
+
+## Préparation unique, 45 minutes au total
+
+Il n'y a aucun mini-test noté cette semaine.
+
+1. Choisir un livrable actuel du projet et retrouver son point d'entrée documenté, 10 minutes.
+2. Relancer ce point d'entrée depuis une session propre et noter l'erreur éventuelle ou la sortie obtenue, 15 minutes.
+3. Noter deux limites et une vérification à refaire dans le futur, 10 minutes.
+4. Choisir une voie de validation ci-dessous et consulter seulement la lecture qui lui correspond, 10 minutes.
+
+Apporter la commande testée, le chemin de la sortie, le commit courant et les trois notes. Les pages `avant.qmd` des sous-blocs donnent des repères supplémentaires facultatifs.
+
+## Choisir une voie de validation
+
+Chaque équipe choisit la voie qui correspond à son projet. Toutes les voies conduisent à une preuve courte et vérifiable.
+
+| Type de projet | Preuve de validation possible |
+|---|---|
+| Prédictif | Séparation entraînement-évaluation, mesure de performance, référence simple et limites |
+| Descriptif ou analytique | Validation des données, test de sensibilité, comparaison de sous-groupes ou contrôle d'un résultat clé |
+| Visualisation ou tableau de bord | Vérification des encodages, accessibilité, filtres, valeurs extrêmes et cohérence avec les données sources |
+| Application | Scénario d'utilisation, test d'une entrée valide, test d'une erreur attendue et vérification de la sortie |
+| Génie logiciel | Tests d'une fonction ou d'un module, cas limite, dépendances et comportement en cas d'échec |
+
+## Déroulement des trois heures
+
+| Moment | Activité | Résultat attendu |
+|---:|---|---|
+| 0-15 min | Cadrage commun et choix de la voie | Livrable, point d'entrée et preuve de validation identifiés |
+| 15-55 min | Noyau 14B: test de reproduction | Commande exécutée et erreur ou sortie vérifiée |
+| 55-95 min | Atelier selon la voie choisie | Une preuve de validation liée au projet |
+| 95-105 min | Pause |  |
+| 105-135 min | Noyau 14C: limites et suivi | Deux limites, trois familles de risques et une vérification future |
+| 135-165 min | Test croisé et revue en duo | Une autre personne relance ou relit la procédure et signale les ambiguïtés |
+| 165-180 min | Correction et commit | Checklist commune complétée et trace Git lisible |
+
+## Checklist unique de la semaine
+
+À la fin de la séance, le dépôt doit contenir ou référencer:
+
+- un README qui nomme le livrable et sa commande principale;
+- un point d'entrée effectivement exécuté depuis la racine du dépôt;
+- une sortie ou un résultat dont la présence et la validité minimale ont été vérifiées;
+- une preuve de validation adaptée au type de projet;
+- une note sur les limites, les risques et une vérification future;
+- un commit qui permet de retrouver ces éléments;
+- `docs/ai-log.md` si un usage significatif de l'IA a influencé le code, la validation, la documentation ou l'interprétation.
+
+Les défis des sous-blocs sont des exercices formatifs non notés. Ils peuvent aider à compléter cette checklist, mais ils ne créent aucun livrable supplémentaire.
+
+## Extension STT-6230
+
+Ajouter une comparaison brève entre deux stratégies de validation, de reproduction ou de suivi. La note doit recommander une option réaliste pour le projet, justifier le compromis et préciser ce qui demeure non vérifié.

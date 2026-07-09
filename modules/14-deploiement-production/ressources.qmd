@@ -1,5 +1,5 @@
 ---
-title: "Déploiement et mise en production - Ressources"
+title: "14B - Reproduction et livraison - Ressources"
 format:
   html:
     embed-resources: true
@@ -7,56 +7,36 @@ format:
 
 ## Ressources internes
 
-- [Avant la classe](avant.qmd)
-- [Pendant la classe](pendant.qmd)
-- [Laboratoire](laboratoire.qmd)
-- [Défi de module](defi.qmd)
+- [Semaine 14 intégrée](../14-synthese-finale/index.qmd)
+- [Laboratoire et gabarit exécutable](laboratoire.qmd)
+- [Exercice formatif non noté](defi.qmd)
 - [Projet d'équipe](../../projets.qmd)
-- [Portfolio GitHub individuel](../../portfolio.qmd)
+- [Portfolio individuel](../../portfolio.qmd)
 
 ## Documentation officielle
 
-- [Quarto - Publishing Basics](https://quarto.org/docs/publishing/)
-- [Quarto - GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+- [Rscript](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html)
 - [renv](https://rstudio.github.io/renv/)
-- [shinyapps.io user guide](https://docs.posit.co/shinyapps.io/)
-- [Posit Connect user guide](https://docs.posit.co/connect/user/)
+- [Quarto - Publishing Basics](https://quarto.org/docs/publishing/)
+- [Shiny - Deploy](https://shiny.posit.co/r/articles/share/deployment-web/)
+
+Les pages de publication présentent des options. Aucun déploiement public n'est obligatoire dans le cours.
 
 ## Checklist de reproduction
 
-- Le README indique le but du livrable.
-- La commande principale est explicite.
-- Les dépendances sont indiquées.
-- Les données requises sont citées ou décrites.
-- Les sorties attendues sont nommées.
+- Le README nomme une commande principale.
+- Le vérificateur exécute effectivement le point d'entrée.
+- Les dépendances, entrées et sorties sont indiquées.
 - Les chemins sont relatifs.
+- Une sortie absente ou vide provoque une erreur informative.
 - Les données privées restent hors du dépôt public.
-- Une limite de déploiement est écrite.
+- La portée des tests locaux est distinguée d'un déploiement public.
 
 ## Erreurs fréquentes
 
-- Oublier qu'un objet existe seulement dans la console locale.
+- Vérifier seulement l'arborescence sans exécuter le projet.
+- Dépendre d'un objet déjà présent dans la console.
 - Utiliser un chemin absolu.
-- Ne pas créer le dossier de sortie avant d'écrire un fichier.
-- Oublier de nommer un package utilisé dans le code.
-- Publier une donnée qui ne devrait pas être publique.
-- Confondre "le rapport HTML existe" et "le projet peut être reproduit".
-
-## Commandes utiles
-
-```r
-# Restaurer un environnement renv si le lockfile existe
-renv::restore()
-
-# Rendre un rapport Quarto depuis R
-quarto::quarto_render("reports/rapport.qmd")
-
-# Exécuter un script depuis la racine du dépôt
-source("scripts/verifier_reproduction.R")
-```
-
-Si le package `quarto` n'est pas installé dans R, le rendu peut aussi être lancé depuis le terminal:
-
-```bash
-quarto render reports/rapport.qmd
-```
+- Produire une sortie dans un dossier qui n'existe pas.
+- Masquer le message original lorsqu'une étape échoue.
+- Confondre un rendu local réussi avec un service maintenu en production.

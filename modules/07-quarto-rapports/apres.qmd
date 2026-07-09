@@ -15,6 +15,8 @@ Stabiliser le rapport Quarto et vérifier qu’il reste reproductible, lisible e
 - Ouvrir le rapport HTML produit et vérifier que les résultats dynamiques s’affichent correctement.
 - Vérifier que les chemins de fichiers sont relatifs, en se rappelant que le rendu Quarto s’exécute depuis le dossier du fichier `.qmd`, d’où l’usage de `../data/`.
 - Ajouter une courte section ou note expliquant les décisions de nettoyage reprises du module 4.
+- Vérifier la légende, le texte alternatif, les unités et la lisibilité de la figure sans dépendre uniquement de la couleur.
+- Vérifier que le suivi ou l’exclusion de `reports/07-rapport-meteo.html` correspond à la décision inscrite dans `README.md` ou `docs/conventions.md`.
 - Mettre à jour le journal du portfolio avec le fichier source, le fichier rendu et le commit associé.
 - Déclarer l’usage significatif de l’IA si nécessaire.
 
@@ -41,7 +43,7 @@ Répondre dans le journal du portfolio:
 Conserver:
 
 - le fichier `.qmd`;
-- le fichier HTML rendu;
+- le fichier HTML rendu localement et, selon la politique documentée, suivi ou non dans Git;
 - la note sur le nettoyage;
 - le commit associé.
 

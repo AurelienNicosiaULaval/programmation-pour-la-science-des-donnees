@@ -48,9 +48,9 @@ donnees_seismes <- quakes |>
 
 ---
 
-## Étape 2 - Le contraste historique (Base R)
+## Étape 2 - Comparer deux systèmes graphiques
 
-Avant d'utiliser `ggplot2`, observez comment le système graphique de base R produit ce type de graphique. Essayez de comprendre pourquoi ce code est plus difficile à maintenir :
+Avant d'utiliser `ggplot2`, observez comment le système graphique de base R produit ce type de graphique. Les graphiques de base R restent pertinents, notamment pour une vérification rapide ou une figure simple. Dans cet exercice précis, comparez les deux systèmes pour déterminer comment la grammaire par couches facilite la répétition des groupes, l’ajout d’étiquettes et les changements de thème.
 
 ```r
 # Diviser la fenêtre en 2 (mfrow) et ajuster les marges
@@ -78,7 +78,7 @@ barplot(counts_est / sum(counts_est),
 par(par_init)
 ```
 
-**Question de réflexion** : Si vous vouliez ajouter les chiffres de proportions au-dessus de chaque barre ou changer le positionnement des étiquettes, quelles étapes complexes devriez-vous coder en R de base ?
+Question de réflexion: pour cette figure précise, quelles étapes supplémentaires seraient nécessaires en R de base pour ajouter les proportions et repositionner les étiquettes? Nommer aussi un cas simple où vous préféreriez conserver un graphique de base R.
 
 ---
 
@@ -177,6 +177,38 @@ print(graphique_pro)
 ggsave("outputs/06-proportions-seismes.png", plot = graphique_pro, width = 8, height = 5, dpi = 300)
 cat("Graphique sauvegardé avec succès dans outputs/\n")
 ```
+
+---
+
+## Variante Canada ou données de projet, sans téléchargement
+
+Pour transférer les choix graphiques à un autre contexte sans dépendre d’un téléchargement externe, choisir une des deux voies suivantes.
+
+Voie Canada prête à l’emploi: utiliser `datasets::lynx`, un objet inclus avec R. La documentation locale est accessible avec `help("lynx", package = "datasets")`.
+
+```r
+donnees_lynx <- tibble(
+  annee = as.integer(time(datasets::lynx)),
+  nombre_pieges = as.numeric(datasets::lynx)
+)
+
+graphique_lynx <- ggplot(donnees_lynx, aes(x = annee, y = nombre_pieges)) +
+  geom_line(linewidth = 0.6, color = "#0072B2") +
+  labs(
+    title = "Nombre annuel de lynx piégés au Canada",
+    subtitle = "Série historique incluse dans R; il ne s’agit pas de données contemporaines",
+    x = "Année",
+    y = "Nombre de lynx piégés",
+    caption = "Source de l’exercice: jeu datasets::lynx fourni avec R"
+  ) +
+  theme_minimal()
+
+graphique_lynx
+```
+
+Voie projet: utiliser un petit extrait autorisé déjà présent dans `data/processed/`. Ne pas télécharger une nouvelle source pour cette activité. Identifier la question, choisir une géométrie adaptée, expliciter les unités et ajouter une note de provenance ou signaler que les données sont simulées.
+
+Dans les deux voies, vérifier que le message principal reste compréhensible sans dépendre uniquement de la couleur et noter une limite d’interprétation.
 
 ---
 

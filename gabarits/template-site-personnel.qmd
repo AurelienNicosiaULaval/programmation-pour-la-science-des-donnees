@@ -1,28 +1,37 @@
 ---
 title: "Template minimal de site Quarto personnel"
-embed-resources: true
+format:
+  html:
+    embed-resources: true
 ---
 
 Ce template donne une structure minimale pour créer le site Quarto personnel. Il peut être adapté librement, à condition de conserver un site public clair, vérifiable et sans information sensible.
+
+La méthode minimale proposée ici publie le site rendu dans `docs/` avec GitHub Pages.
 
 ## Structure minimale
 
 ```text
 site-personnel/
   _quarto.yml
+  .nojekyll
   index.qmd
-  cv.qmd
+  parcours.qmd
   realisations.qmd
+  declaration-ia.qmd
   styles.css
   README.md
+  docs/
 ```
+
+Le dossier `docs/` est créé ou mis à jour par `quarto render`. Il contient les fichiers HTML publiés par GitHub Pages. Le fichier `.nojekyll` se place à la racine du dépôt.
 
 ## `_quarto.yml`
 
 ```yaml
 project:
   type: website
-  output-dir: _site
+  output-dir: docs
 
 lang: fr
 
@@ -33,9 +42,11 @@ website:
       - text: "Accueil"
         href: index.qmd
       - text: "Parcours"
-        href: cv.qmd
+        href: parcours.qmd
       - text: "Réalisations"
         href: realisations.qmd
+      - text: "IA"
+        href: declaration-ia.qmd
 
 format:
   html:
@@ -65,10 +76,11 @@ Court paragraphe de présentation académique ou professionnelle.
 ## Liens
 
 - GitHub: <https://github.com/identifiant>
-- Portfolio ou projet public: <lien>
+- Site publié: <https://identifiant.github.io/nom-du-depot/>
+- Portfolio public ou trace publique, si autorisé: <lien>
 ```
 
-## `cv.qmd`
+## `parcours.qmd`
 
 ```markdown
 ---
@@ -112,7 +124,9 @@ Ce que cette réalisation démontre:
 
 Limite ou amélioration possible:
 
-Lien public, si pertinent:
+Trace source dans le portfolio:
+
+Lien public, seulement si autorisé:
 
 ## Réalisation 2: projet ou module avancé
 
@@ -128,7 +142,37 @@ Ce que cette réalisation démontre:
 
 Limite ou amélioration possible:
 
-Lien public, si pertinent:
+Trace source dans le projet ou le module:
+
+Lien public, seulement si autorisé:
+
+## Justification technique courte
+
+Expliquer un choix technique important: structure du dépôt, validation, dépendances, rendu Quarto, visualisation, fonction, test ou publication GitHub Pages.
+
+Pour STT-6230, ajouter une dimension plus avancée: comparaison d’approches, validation supplémentaire, analyse de performance, limite méthodologique ou justification d’architecture.
+```
+
+## `declaration-ia.qmd`
+
+```markdown
+---
+title: "Déclaration IA"
+---
+
+Indiquer ici les usages significatifs de l’IA générative qui ont influencé le texte, la structure, le code ou le design du site.
+
+Pour chaque usage significatif:
+
+- outil utilisé;
+- tâche demandée;
+- éléments conservés;
+- vérifications effectuées;
+- modifications apportées.
+
+Si aucun usage significatif n’a influencé le site, écrire:
+
+> Aucun usage significatif de l’IA générative n’a influencé le site remis.
 ```
 
 ## `styles.css`
@@ -160,7 +204,25 @@ quarto render
 
 ## Publication
 
-La publication se fait avec GitHub Pages.
+La publication se fait avec GitHub Pages à partir du dossier `docs/`.
+
+Méthode minimale:
+
+1. Lancer `quarto render`.
+2. Vérifier le site local dans `docs/index.html`.
+3. Créer un fichier vide `.nojekyll` à la racine du dépôt si le fichier n’existe pas déjà.
+4. Commiter les fichiers sources, `.nojekyll` et le dossier `docs/`.
+5. Pousser le dépôt sur GitHub.
+6. Dans GitHub, configurer Pages pour publier la branche principale à partir du dossier `/docs`.
+
+## Liens de remise
+
+- Site publié: <https://identifiant.github.io/nom-du-depot/>
+- Dépôt source: <https://github.com/identifiant/nom-du-depot>
+- Dernier commit évalué: `coller-identifiant-du-commit`
+- Réalisation issue du portfolio: `realisations.qmd`, section `Réalisation 1`
+- Réalisation issue du projet ou d’un module avancé: `realisations.qmd`, section `Réalisation 2`
+- Déclaration IA: `declaration-ia.qmd`
 ````
 
 ## Vérifications avant remise
@@ -170,4 +232,11 @@ quarto render
 git status
 ```
 
-Le site publié doit être consulté dans le navigateur avant la remise finale.
+Le site publié doit être consulté dans le navigateur avant la remise finale. Vérifier aussi que les liens vers le portfolio, le projet ou les rapports publics ne donnent pas accès à des données non autorisées ou à des informations sensibles.
+
+## Sources techniques
+
+- [Quarto: Creating a Website](https://quarto.org/docs/websites/)
+- [Quarto: Publishing to GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+- [GitHub Pages](https://pages.github.com/)
+- [GitHub Docs: Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)

@@ -1,53 +1,43 @@
 ---
-title: "Modèles d'apprentissage automatique - Défi"
+title: "14A - Validation adaptée au projet - Exercice formatif"
 format:
   html:
     embed-resources: true
 ---
 
-## Nature du défi
+## Nature de l'exercice
 
-Ce défi de module sert à produire une trace de modélisation dans le portfolio. Il ne remplace pas les trois défis techniques notés du cours.
+Cet exercice est formatif et non noté. Il ne remplace aucun des trois défis techniques évalués. La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) est fournie seulement comme repère de qualité pour la reproductibilité, la justification et la clarté.
 
 ## Objectif
 
-Construire un pipeline de modélisation minimal avec une évaluation défendable et une note de limites.
+Produire une preuve de validation adaptée au résultat principal du projet.
 
-## Consignes
+## Choisir une seule voie
 
-1. Choisir un jeu de données autorisé ou un jeu de données simulé.
-2. Formuler une question prédictive.
-3. Identifier la variable cible et les variables explicatives.
-4. Séparer les données avant l'ajustement du modèle.
-5. Ajuster un modèle simple.
-6. Calculer une mesure de performance.
-7. Comparer le modèle à une référence simple.
-8. Rédiger une note courte sur les limites.
+- Prédiction: évaluer un modèle sur des données tenues à l'écart et le comparer à une référence simple.
+- Description: valider un résultat clé par un contrôle de données ou un test de sensibilité.
+- Visualisation: vérifier les encodages, les filtres, les valeurs extrêmes et l'accessibilité.
+- Application: tester un scénario nominal, une entrée invalide et la sortie correspondante.
+- Génie logiciel: tester un comportement nominal, un cas limite et une erreur informative.
 
-## Livrable attendu
+## Trace formative
 
-- un script reproductible;
-- une note Quarto ou Markdown;
-- une mesure de performance calculée par code;
-- une comparaison avec une référence simple;
-- une trace Git lisible.
+- fichier ou procédure de validation;
+- résultat obtenu;
+- référence ou comportement attendu;
+- une conclusion prudente;
+- une limite;
+- commit associé.
+
+Cette trace peut satisfaire la partie « validation adaptée au projet » de la checklist commune de semaine 14. Elle n'est pas remise séparément.
 
 ## Place de l'IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à comprendre une erreur, proposer une structure de note ou suggérer une vérification. Elle ne doit pas remplacer l'évaluation du modèle. Toute aide significative qui influence le code, le choix de mesure ou l'interprétation doit être documentée dans `docs/ai-log.md` ou dans le journal du portfolio.
-
-## Critères de réussite
-
-- La question prédictive est claire.
-- La variable cible est explicite.
-- Les données d'évaluation ne sont pas utilisées pour entraîner le modèle.
-- La mesure de performance est appropriée au type de cible.
-- La comparaison avec une référence simple est présente.
-- Les limites sont formulées avec prudence.
-- Le script peut être relancé depuis une session propre.
+L'IA peut aider à expliquer une erreur ou à suggérer un cas de vérification. La personne étudiante doit exécuter la validation, contrôler le résultat et défendre son interprétation. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 
-Ajouter une comparaison entre deux modèles ou deux stratégies d'évaluation, puis expliquer laquelle vous retiendriez et pourquoi.
+Comparer deux stratégies de validation et justifier celle qui fournit la preuve la plus utile pour le projet.

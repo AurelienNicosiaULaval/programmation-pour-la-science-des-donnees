@@ -1,5 +1,5 @@
 ---
-title: "Programmation asynchrone et parallèle - Lectures"
+title: "12B - Programmation asynchrone et parallèle - Lectures facultatives"
 format:
   html:
     embed-resources: true
@@ -27,7 +27,13 @@ Exécutez ce script pour constater la propagation propre des exceptions :
 ```r
 library(future)
 
-plan(multisession, workers = 2)
+coeurs_disponibles <- as.integer(availableCores())
+workers <- max(1L, min(2L, coeurs_disponibles - 1L))
+if (workers >= 2L) {
+  plan(multisession, workers = workers)
+} else {
+  plan(sequential)
+}
 
 # 1. Création d'un futur qui va planter
 f_erreur <- future({

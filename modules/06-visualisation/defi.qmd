@@ -7,7 +7,9 @@ format:
 
 ## Nature du défi
 
-Ce défi de module est une activité pratique pour votre portfolio. Il sert de préparation formative pour le Défi technique 2 de la semaine 8 et vous aide à structurer les premières figures de votre projet filé en équipe.
+Ce défi de module est une activité formative et non notée pour votre portfolio. Il prépare le défi technique 2 de la semaine 8 et vous aide à structurer les premières figures de votre projet filé en équipe.
+
+La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère transférable pour relire la qualité du travail. Son utilisation ne transforme pas ce défi de module en évaluation notée.
 
 ## Objectif
 
@@ -17,7 +19,7 @@ Créer un graphique de distribution ou de relation propre avec `ggplot2` sur un 
 
 Dans votre dépôt `portfolio-stt4230` :
 
-1.  **Choisir un jeu de données** : Vous pouvez réutiliser `quakes`, `airquality` (avec les données imputées de la semaine 4), ou un extrait de données de votre choix.
+1.  **Choisir un jeu de données** : Vous pouvez réutiliser `quakes`, employer la série canadienne `datasets::lynx` incluse avec R, reprendre les données météorologiques fictives du module 4, ou utiliser un extrait autorisé déjà présent dans les données de votre projet. Aucune de ces voies ne requiert un nouveau téléchargement.
 2.  **Programmer la figure** :
     *   Le graphique doit représenter une relation ou une distribution (ex: un diagramme de dispersion avec courbe de tendance lissée `geom_smooth()`, ou un diagramme en boîte `geom_boxplot()` multi-groupes).
     *   Vous devez modifier au moins trois éléments de thème par défaut (ex: couleurs avec `scale_color_*()`, position de la légende, quadrillages).
@@ -44,7 +46,9 @@ Dans votre dépôt `portfolio-stt4230` :
 
 Statut: permise, déclarée.
 
-L'IA peut aider à trouver un argument de thème, une palette ou une explication d'erreur. Le graphique final doit être compris et défendable. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le code, la conception ou la note.
+L'IA peut aider à trouver un argument de thème, une palette ou une explication d'erreur. Le graphique final doit être compris, vérifié et adapté aux données réelles.
+
+Règle commune: le travail doit être compris, vérifié, adapté au contexte et défendable. Si l’IA influence de manière significative le code, la documentation, une décision ou le livrable, documenter cet usage dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 

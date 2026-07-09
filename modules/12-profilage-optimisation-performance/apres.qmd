@@ -1,13 +1,13 @@
 ---
-title: "Profilage, optimisation et performance - Après la classe"
+title: "12A - Profilage, optimisation et performance - Après la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Consolidation et livrables
+## Consolidation de la trace unique
 
-Après la séance de laboratoire, vous devez finaliser votre défi et mettre à jour votre portfolio d'apprentissage.
+Après le laboratoire, complétez uniquement `docs/semaine-12-performance.md` avec la [checklist commune de la semaine 12](../12-synthese-performance-parallele/index.qmd). Il n'y a pas de second rapport propre au bloc 12A.
 
 ### Activités de consolidation
 
@@ -15,8 +15,8 @@ Après la séance de laboratoire, vous devez finaliser votre défi et mettre à 
     *   Assurez-vous qu'aucun appel à `profvis()` ou à `bench::mark()` n'est resté actif dans vos scripts de production.
     *   Vérifiez que votre code optimisé retourne exactement le même résultat que votre code initial (utilisez `all.equal()` ou `expect_equal()`).
 2.  **Mise à jour du portfolio** :
-    *   Ajoutez votre note technique d'optimisation (contenant votre flame graph initial et votre table comparative `bench`).
-    *   Commettez le script R de benchmark dans votre dépôt de portfolio.
+    *   Ajoutez à la fiche unique la preuve de profilage, la comparaison, la vérification de correction et votre décision.
+    *   Commettez ensemble la fiche et le script visé par la mesure.
 
 ---
 

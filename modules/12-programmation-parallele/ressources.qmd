@@ -1,5 +1,5 @@
 ---
-title: "Programmation asynchrone et parallèle - Ressources"
+title: "12B - Programmation asynchrone et parallèle - Ressources"
 format:
   html:
     embed-resources: true
@@ -9,6 +9,27 @@ format:
 
 *   [Site officiel de furrr](https://furrr.futureverse.org/) : Référence des fonctions de type `future_map`, gestion des barres de progression et options avancées.
 *   [Cheat Sheet purrr + furrr](https://raw.githubusercontent.com/rstudio/cheatsheets/main/purrr.pdf) : L'aide-mémoire purrr contient également les concepts fondamentaux d'itérations transposables en parallèle.
+
+## Configuration sûre pour les exercices
+
+```r
+library(future)
+
+coeurs_disponibles <- as.integer(availableCores())
+workers <- max(1L, min(2L, coeurs_disponibles - 1L))
+
+if (workers >= 2L) {
+  plan(multisession, workers = workers)
+} else {
+  message("Un seul coeur est disponible: repli séquentiel.")
+  plan(sequential)
+}
+
+# Exécuter le calcul choisi, puis libérer les processus.
+plan(sequential)
+```
+
+Le plafond de deux workers protège la réactivité de la machine et limite les copies en mémoire. Sur une machine partagée, limitée ou instable, utilisez directement `plan(sequential)`.
 
 ---
 
@@ -20,7 +41,7 @@ Voici les options de planification les plus courantes à passer à `plan()` :
 |---|---|---|---|---|
 | **`sequential`** | Synchrone (Mono-cœur) | Même session R | Tous | Le débogage et le développement initial. |
 | **`multisession`** | Parallèle (Processus fils) | Sessions R indépendantes | Tous (Windows, macOS, Linux) | **Par défaut sur Windows/macOS**. Sûr et isolé. |
-| **`multicore`** | Parallèle (Forking) | Partage de mémoire virtuelle | macOS, Linux (Non Windows) | Des calculs intensifs sur de grosses données sous Linux (évite de copier les variables globales en RAM). |
+| **`multicore`** | Parallèle (Forking) | Partage de mémoire virtuelle | macOS, Linux (Non Windows) | Usage avancé hors des exercices locaux; ne pas sélectionner dans un IDE sans consigne explicite. |
 | **`cluster`** | Parallèle (Distribué) | Réseau TCP/IP entre machines | Tous | Exécuter des calculs sur des serveurs distants ou des grilles de calcul (HPC). |
 
 > [!WARNING]

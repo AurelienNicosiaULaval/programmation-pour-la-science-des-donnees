@@ -1,0 +1,75 @@
+---
+title: "Semaine 9 - Consolidation et revue intermédiaire"
+description: "Nettoyer le portfolio et le projet, traiter les blocages et préparer la programmation modulaire"
+format:
+  html:
+    embed-resources: true
+---
+
+## Question de la semaine
+
+Quelles traces faut-il corriger, relancer et documenter avant de passer aux fonctions, aux tests et à l'architecture du code?
+
+## Rôle dans le cours
+
+La semaine 9 n'ajoute pas un nouveau bloc technique. Elle consolide les semaines 1 à 7 après la semaine de lecture. Elle comprend le deuxième jalon du portfolio et un point de suivi formatif du projet d'équipe.
+
+## Préparation
+
+Temps recommandé: 45 à 60 minutes, mini-test compris.
+
+Avant le laboratoire:
+
+1. relancer un script ou rapport important depuis une session propre;
+2. lire les rétroactions reçues depuis le premier jalon;
+3. vérifier `git status`, le README, les dépendances et les chemins;
+4. choisir un blocage prioritaire dans le portfolio et un dans le projet;
+5. répondre au mini-test ci-dessous.
+
+## Mini-test de préparation
+
+Durée cible: 5 à 10 minutes.
+
+1. Quel fichier ou livrable as-tu relancé, et quel résultat permet de confirmer que la relance a réussi?
+2. Quelle correction est prioritaire avant la semaine 10: duplication de code, chemin fragile, dépendance implicite, validation absente ou documentation incomplète? Justifie en une phrase.
+3. Quelle difficulté précise veux-tu traiter pendant le laboratoire?
+
+Remise: dans le canal officiel indiqué par l'équipe enseignante, avant le début du laboratoire.
+
+IA: permise pour clarifier une notion. Les vérifications et la réponse personnelle doivent correspondre au dépôt réel. Si l'aide influence une correction conservée, la documenter dans `docs/ai-log.md`.
+
+Trace et complétion: les trois réponses sont soumises, le livrable annoncé a été relancé et la difficulté est assez précise pour guider le travail en classe. Le fonctionnement commun est décrit dans le [gabarit des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd).
+
+## Travail pendant le laboratoire
+
+| Bloc | Durée cible | Production |
+|---|---:|---|
+| Revue du mini-test et triage | 20 min | Priorité personnelle et priorité d'équipe |
+| Correction du portfolio | 55 min | Une trace relancée, corrigée et documentée |
+| Revue intermédiaire du projet | 55 min | État du pipeline, blocages, responsabilités et prochaine issue |
+| Revue en duo | 30 min | Vérification par une autre personne |
+| Stabilisation et sortie | 20 min | Commits, README et prochaines actions |
+
+## Productions attendues
+
+- portfolio prêt pour le jalon 2;
+- note courte indiquant une correction, sa vérification et ce qui reste à faire;
+- au moins un commit ciblé dans le portfolio;
+- point de suivi formatif du projet: données, première visualisation, problèmes et répartition des prochaines tâches;
+- une issue ou une tâche clairement assignée pour la suite du projet.
+
+## Critères de réussite
+
+- la correction répond à un problème observé, pas à une amélioration vague;
+- le livrable principal se relance depuis une session propre;
+- le README ou la note hebdomadaire explique la vérification;
+- les responsabilités d'équipe sont visibles;
+- la semaine 10 peut commencer sur un dépôt stabilisé.
+
+## Après la classe
+
+Finaliser uniquement les corrections identifiées pendant la séance. Ne pas reconstruire le portfolio à la fin de la semaine: conserver l'historique des reprises et des rétroactions.
+
+## Variante STT-6230
+
+Ajouter une note de 200 à 300 mots qui compare deux corrections possibles pour le même problème et justifie celle qui a été retenue selon la robustesse, la lisibilité et le coût de maintenance.

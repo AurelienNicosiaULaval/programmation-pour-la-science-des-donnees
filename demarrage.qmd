@@ -32,7 +32,7 @@ Avant la séance:
 
 - lire les notes courtes;
 - exécuter les exemples R;
-- répondre au mini-test;
+- répondre au mini-test lorsqu'il est prévu;
 - préparer le dépôt GitHub;
 - noter une question ou une erreur à discuter.
 
@@ -90,7 +90,7 @@ Une entrée hebdomadaire minimale contient généralement:
 
 ## IA
 
-Vérifier le statut d’IA pour chaque tâche. Si l’IA est utilisée de façon significative, documenter l’usage dans `ai-log.md`.
+Vérifier le statut d’IA pour chaque tâche. Si l’IA est utilisée de façon significative, documenter l’usage dans `docs/ai-log.md`.
 
 ## Où trouver de l’aide
 

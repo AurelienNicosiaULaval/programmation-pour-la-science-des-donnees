@@ -7,7 +7,9 @@ format:
 
 ## Nature du défi
 
-Ce défi de module sert à finaliser le jalon portfolio 1. Il n’est pas le défi technique 1, qui aura lieu à la semaine 5.
+Ce défi de module est une activité formative et non notée qui sert à finaliser le jalon portfolio 1. Il n’est pas le défi technique 1, qui aura lieu à la semaine 5.
+
+La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère transférable pour relire la qualité du travail. Son utilisation ne transforme pas ce défi de module en évaluation notée.
 
 ## Objectif
 
@@ -22,8 +24,9 @@ Dans le dépôt `portfolio-stt4230`, produire:
 - un fichier `docs/dependances.md`;
 - un journal dans `modules/semaine-03/`;
 - un script `scripts/verifier_dependances.R`, si pertinent;
-- `renv.lock`, si le portfolio contient déjà des dépendances R à restaurer;
-- une justification courte si `renv.lock` n’est pas encore pertinent.
+- `renv.lock` dès qu’un livrable versionné à relancer dépend d’un package externe à R de base;
+- une justification courte dans `docs/dependances.md` si le portfolio utilise seulement R de base ou si aucun livrable stable ne dépend encore des packages explorés;
+- la trace du blocage et la prochaine action si `renv` devrait être initialisé, mais que l’opération échoue.
 
 ## Livrable attendu
 
@@ -37,11 +40,11 @@ Dans le dépôt `portfolio-stt4230`, produire:
 
 ## Place de l’IA
 
-Statut: permise pour comprendre et diagnostiquer; déclarée si elle influence le livrable.
+Statut: permise, déclarée.
 
 L’IA peut aider à comprendre une erreur d’installation, une règle `.gitignore` ou une sortie de `renv`. Toute proposition doit être vérifiée localement.
 
-Ajouter une entrée dans `docs/ai-log.md` si l’IA influence de manière significative la documentation, le script de vérification ou une décision de reproductibilité.
+Règle commune: le travail doit être compris, vérifié, adapté au contexte et défendable. Si l’IA influence de manière significative le code, la documentation, une décision ou le livrable, documenter cet usage dans `docs/ai-log.md`.
 
 ## Critères de réussite
 
@@ -49,7 +52,7 @@ Ajouter une entrée dans `docs/ai-log.md` si l’IA influence de manière signif
 - Les dépendances sont identifiables.
 - Les fichiers à ignorer sont exclus de Git.
 - Le README correspond à la structure réelle.
-- `renv.lock` existe ou son absence est justifiée.
+- `renv.lock` respecte la règle guidée: il existe lorsqu’un livrable versionné à relancer dépend d’un package externe, ou son absence temporaire est justifiée par le cas observé.
 - Les usages significatifs de l’IA sont déclarés lorsque pertinent.
 
 ## Variante STT-6230
