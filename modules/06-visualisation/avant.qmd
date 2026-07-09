@@ -21,7 +21,7 @@ Temps recommandé : 30 à 45 minutes.
 
 Créez un fichier temporaire ou ouvrez votre session Positron/RStudio, chargez `ggplot2` (inclus dans le tidyverse) et exécutez le script suivant.
 
-Ce script illustre l'approche moderne avec `ggplot2` et l'utilisation de `after_stat()` pour calculer des proportions de manière dynamique.
+Ce script illustre une approche par couches avec `ggplot2` et l'utilisation de `after_stat()` pour calculer des proportions de manière dynamique.
 
 ```r
 # Chargement du package
@@ -57,9 +57,22 @@ ggplot(
   theme_minimal()
 ```
 
-## À noter avant la classe
+## Mini-test de préparation
 
-- Quelle est la différence fondamentale entre `geom_bar()` et `geom_col()` dans `ggplot2` ?
-- Que fait l'argument `position = "dodge"` par rapport à `position = "stack"` ?
-- Avez-vous rencontré des difficultés pour exécuter le code de démonstration ci-dessus ?
-- Préparez une question sur l'empilement des couches de graphique à poser au début du laboratoire.
+Ce mini-test fait partie de la composante « Mini-tests de préparation » décrite dans la page [Évaluations](../../evaluations.qmd).
+
+Le [gabarit commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd) précise le fonctionnement stable utilisé pendant la session.
+
+- Durée cible: 5 à 10 minutes.
+- Questions: répondre aux trois questions ci-dessous, dans l’ordre.
+- Format de remise: trois réponses numérotées et courtes dans le canal officiel indiqué par l’équipe enseignante.
+- Échéance: remettre les réponses avant le début du laboratoire.
+- Règle IA: l’IA est permise pour clarifier une notion. Elle ne remplace pas l’exécution locale du code ni la compréhension des réponses.
+- Trace: le résultat reste enregistré dans le canal de remise et une difficulté est notée pour le laboratoire. Une clarification mineure n’exige pas d’entrée IA; si l’aide influence une trace de portfolio, du code, de la documentation ou une décision conservée, la consigner dans `docs/ai-log.md`.
+- Complétion minimale: les trois réponses sont soumises et le code de visualisation a été exécuté.
+
+Questions:
+
+1. Quelle est la différence entre `geom_bar()` et `geom_col()` dans `ggplot2`?
+2. Que change `position = "dodge"` par rapport à `position = "stack"`, et dans quel cas ce choix aide-t-il la comparaison?
+3. À partir du graphique produit ci-dessus, relever un choix qui facilite l’interprétation et un élément qui devrait être vérifié ou amélioré, par exemple les étiquettes, l’échelle, le contraste, l’encodage par couleur ou l’accessibilité. Justifier brièvement.

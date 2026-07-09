@@ -12,4 +12,4 @@ Cette grille sert de repère pour la défense du projet en semaine 15. La prése
 | Validations, limites et compromis | Équipe | tests ou contrôles présentés, choix justifiés, améliorations réalistes |
 | Contributions individuelles | Individuel | traces GitHub, `docs/contributions.md`, bilan individuel cohérent |
 | Réponses aux questions | Équipe + individuel | capacité à défendre les choix et à reconnaître les limites |
-| Transparence IA et attentes STT-6230 | Équipe + individuel | `ai-log.md` cohérent, note STT-6230 expliquée lorsque pertinente |
+| Transparence IA et attentes STT-6230 | Équipe + individuel | `docs/ai-log.md` cohérent, note STT-6230 expliquée lorsque pertinente |

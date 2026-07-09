@@ -1,60 +1,67 @@
 ---
-title: "Modèles d’apprentissage automatique"
-description: "Construire un pipeline de modélisation reproductible et interprétable"
+title: "14A - Validation adaptée au projet"
+description: "Choisir une preuve de validation cohérente avec la finalité du projet"
 format:
   html:
     embed-resources: true
 ---
 
-## Question du module
+## Question du bloc
 
-Comment intégrer un modèle prédictif dans un projet R sans perdre la reproductibilité, la validation et la documentation?
+Quelle preuve permet de montrer que le résultat principal du projet est valide, reproductible et interprété avec prudence?
 
-## Objectifs du module
+## Statut dans la semaine 14
 
-- distinguer exploration, entraînement, validation et communication;
-- structurer un pipeline de modélisation;
-- documenter les données d’entrée et la variable cible;
-- séparer performance apparente et performance évaluée;
-- relier les résultats du modèle aux limites des données.
+Ce bloc est une voie au choix de la [semaine 14 intégrée](../14-synthese-finale/index.qmd). Il ne demande pas à toutes les équipes de construire un modèle prédictif.
 
-## Place dans le cours
+Choisir la voie qui correspond au projet:
 
-Ce module est le bloc technique principal de la semaine 14. Il sert à montrer comment ajouter une composante de modélisation à un projet sans perdre les exigences déjà travaillées: structure de dépôt, validation, documentation, reproductibilité et interprétation prudente.
+| Projet | Validation attendue |
+|---|---|
+| Prédictif | Séparation entraînement-évaluation, mesure de performance, référence simple et limites |
+| Descriptif ou analytique | Contrôle d'un résultat clé, validation des données ou test de sensibilité |
+| Visualisation ou tableau de bord | Vérification des encodages, filtres, valeurs extrêmes, accessibilité et cohérence avec les données |
+| Application | Scénario d'utilisation, entrée valide, erreur attendue et sortie vérifiée |
+| Génie logiciel | Tests d'une fonction ou d'un module, cas limite, dépendances et erreur informative |
 
-La semaine 14 regroupe trois blocs complémentaires:
+Le laboratoire détaillé de modélisation prédictive reste disponible comme exemple technique. Il est facultatif pour les projets auxquels cette voie ne convient pas.
 
-| Bloc | Page | Rôle |
-|---|---|---|
-| 1 | Modèles d’apprentissage automatique | Construire ou analyser un pipeline de modélisation minimal |
-| 2 | Déploiement et mise en production | Vérifier que le livrable final peut être relancé par une autre personne |
-| 3 | Cycle de vie des modèles | Documenter les limites, le suivi et la maintenance après la remise |
+## Objectifs du bloc
 
-Les trois blocs ne sont pas trois nouvelles semaines. Ils forment une synthèse finale à mobiliser dans le projet, le portfolio et la présentation.
+- choisir une validation adaptée à la question du projet;
+- séparer la construction du résultat de son évaluation lorsque cette séparation est pertinente;
+- comparer le résultat à une référence ou à un contrôle simple;
+- documenter une limite et un risque d'interprétation;
+- produire une preuve courte que l'équipe peut expliquer pendant la défense.
 
 ## Trace attendue
 
-- un script ou rapport de modélisation;
-- une séparation claire entre préparation et évaluation;
-- une mesure de performance justifiée;
-- une note sur les limites et les risques d’interprétation.
+Une seule trace liée à la voie choisie:
 
-## Place de l’IA
+- le fichier ou rapport qui exécute la validation;
+- le résultat du contrôle, du test ou de la mesure;
+- une phrase sur ce que cette preuve permet de conclure;
+- une phrase sur ce qu'elle ne permet pas de conclure;
+- le commit associé.
+
+Cette trace fait partie de la checklist commune de semaine 14 et ne constitue pas une remise séparée.
+
+## Place de l'IA
 
 Statut: permise, déclarée.
 
-Tout usage significatif qui influence le choix du modèle, le code, l’interprétation ou la rédaction doit être documenté dans `docs/ai-log.md`.
+Tout usage significatif qui influence le code, le choix de validation, l'interprétation ou la rédaction doit être documenté dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 
-Ajouter une validation supplémentaire reliée au projet: comparaison avec une référence simple, validation croisée courte, analyse de sensibilité ou discussion d’un risque méthodologique. La trace attendue est une note technique qui explique ce qui change dans l’interprétation du résultat.
+Comparer deux stratégies de validation adaptées au projet, puis expliquer laquelle fournit la preuve la plus utile compte tenu des données, du temps disponible et des limites méthodologiques.
 
-## Pages du module
+## Pages du bloc
 
-- [Avant la classe](avant.qmd)
-- [Pendant la classe](pendant.qmd)
-- [Laboratoire](laboratoire.qmd)
-- [Après la classe](apres.qmd)
-- [Défi de module](defi.qmd)
-- [Lectures](lectures.qmd)
+- [Préparation facultative de la voie prédictive](avant.qmd)
+- [Atelier de validation](pendant.qmd)
+- [Laboratoire facultatif de modélisation](laboratoire.qmd)
+- [Consolidation](apres.qmd)
+- [Exercice formatif non noté](defi.qmd)
+- [Lectures selon la voie](lectures.qmd)
 - [Ressources](ressources.qmd)

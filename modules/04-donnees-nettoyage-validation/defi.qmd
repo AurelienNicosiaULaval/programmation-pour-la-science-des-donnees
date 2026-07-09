@@ -7,7 +7,9 @@ format:
 
 ## Rôle du défi de module
 
-Ce défi de module est une trace formative. Il prépare le défi technique 1 de la semaine 5, mais il ne le remplace pas.
+Ce défi de module est une activité formative et non notée. Il prépare le défi technique 1 de la semaine 5, mais il ne le remplace pas.
+
+La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère transférable pour relire la qualité du travail. Son utilisation ne transforme pas ce défi de module en évaluation notée.
 
 ## Objectif
 
@@ -42,7 +44,9 @@ Nettoyer un second petit fichier de données et produire une note de validation 
 
 ## Place de l’IA
 
-Statut: permise pour comprendre et diagnostiquer; déclarée si elle influence le livrable.
+Statut: permise, déclarée.
+
+Règle commune: le travail doit être compris, vérifié, adapté au contexte et défendable. Si l’IA influence de manière significative le code, la documentation, une décision ou le livrable, documenter cet usage dans `docs/ai-log.md`.
 
 Pour préparer le défi technique 1, refaire au moins une partie du défi de module sans IA: importation, inspection, nettoyage minimal, assertion et commit.
 

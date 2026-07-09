@@ -1,53 +1,47 @@
 ---
-title: "Déploiement et mise en production - Défi"
+title: "14B - Reproduction et livraison - Exercice formatif"
 format:
   html:
     embed-resources: true
 ---
 
-## Nature du défi
+## Nature de l'exercice
 
-Ce défi de module sert à stabiliser un livrable avant la fin de session. Il ne remplace pas les trois défis techniques notés.
+Cet exercice est formatif et non noté. Il ne remplace aucun des trois défis techniques évalués. La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) sert uniquement de repère de qualité.
 
 ## Objectif
 
-Produire une procédure de reproduction minimale pour un livrable R existant.
+Faire exécuter un livrable existant par une autre personne à partir du README.
 
 ## Consignes
 
-1. Choisir un livrable du portfolio ou du projet d'équipe.
-2. Identifier les fichiers d'entrée et les sorties attendues.
-3. Documenter les dépendances.
-4. Écrire une commande principale d'exécution.
-5. Ajouter un script de vérification minimal.
-6. Tester depuis une session propre.
-7. Documenter les limites connues.
-8. Faire un commit ciblé.
+1. Nommer le point d'entrée et la sortie attendue.
+2. Exécuter le point d'entrée depuis une session propre.
+3. Adapter le [gabarit de vérification](laboratoire.qmd) au projet.
+4. Provoquer une erreur simple et vérifier que le message est informatif.
+5. Faire tester la procédure par une autre personne.
+6. Corriger les dépendances, chemins et étapes implicites.
+7. Écrire une limite de reproduction ou de publication.
 
-## Livrable attendu
+La publication d'une application, d'un site ou de données sur Internet n'est pas requise.
+
+## Trace formative
 
 - README mis à jour;
-- script ou commande de vérification;
-- liste de dépendances;
-- description des sorties attendues;
-- note sur les limites;
-- trace Git.
+- point d'entrée exécuté;
+- sortie vérifiée;
+- erreur informative testée;
+- limite documentée;
+- commit associé.
+
+Cette trace peut satisfaire le noyau 14B de la checklist commune. Elle n'est pas remise séparément.
 
 ## Place de l'IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à relire le README, suggérer une checklist ou expliquer une erreur. Elle ne doit pas inventer une procédure non testée. Toute aide significative doit être déclarée dans `docs/ai-log.md` ou dans le journal du portfolio.
-
-## Critères de réussite
-
-- La procédure commence à la racine du dépôt.
-- Les commandes sont copiables et adaptées au dépôt réel.
-- Les dépendances sont identifiables.
-- Les données sensibles ou privées ne sont pas publiées.
-- Le livrable a été testé dans une session propre.
-- Les limites du déploiement sont explicites.
+L'IA peut aider à relire une procédure ou à expliquer une erreur. Elle ne doit pas inventer une commande non testée. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 
-Ajouter une comparaison argumentée entre la reproduction locale et une option de publication ou d'automatisation.
+Comparer la reproduction locale à une automatisation réaliste et justifier laquelle convient au projet.

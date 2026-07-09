@@ -1,13 +1,13 @@
 ---
-title: "Programmation asynchrone et parallèle - Après la classe"
+title: "12B - Programmation asynchrone et parallèle - Après la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Consolidation et livrables
+## Consolidation de la trace unique
 
-Après la séance de laboratoire, vous devez finaliser votre défi et mettre à jour votre portfolio d'apprentissage.
+Après cette voie choisie, complétez uniquement `docs/semaine-12-performance.md` avec la [checklist commune de la semaine 12](../12-synthese-performance-parallele/index.qmd). Il n'y a ni rapport parallèle séparé ni deuxième défi à remettre.
 
 ### Activités de consolidation
 
@@ -15,14 +15,16 @@ Après la séance de laboratoire, vous devez finaliser votre défi et mettre à 
     *   Vérifiez que votre code parallèle se termine toujours par un appel à `plan(sequential)` pour fermer proprement les processus de travail en arrière-plan et libérer la RAM.
     *   Assurez-vous d'avoir testé votre script avec l'option de graine aléatoire (`seed = TRUE`) active et d'avoir validé sa reproductibilité.
 2.  **Mise à jour du portfolio** :
-    *   Commettez votre script de simulation parallèle.
-    *   Rédigez la note technique sur votre journal de bord décrivant votre gain de performance (Speedup) et discutant la Loi d'Amdahl.
+    *   Ajoutez à la fiche unique la comparaison séquentiel-parallèle, les garde-fous et la décision de conserver ou non le parallèle.
+    *   Commettez la fiche avec le script concerné. La loi d'Amdahl est une extension STT-6230 dans cette même fiche.
+3.  **Interprétation** :
+    *   Ne comparez pas votre temps absolu à celui d'une autre personne ou à une valeur cible. La qualité du protocole, la reproductibilité et la décision sont les éléments importants.
 
 ---
 
 ## Les pièges classiques de la parallélisation en R
 
 *   **Oublier de fermer les processus de travail** : Laisser un plan `multisession` actif garde des sessions R en tâche de fond qui consomment des ressources système. Utilisez toujours `plan(sequential)` en fin de traitement.
-*   **Paralléliser des tâches trop courtes** : Lancer `future_map` sur des calculs prenant moins de 0.1s. La surcharge réseau TCP locale va en réalité ralentir votre script de façon dramatique par rapport au séquentiel.
-*   **Saturer la mémoire vive (RAM)** : Si vous exportez un très gros jeu de données (ex: 2 Go) vers 8 processus de travail, R va copier ce jeu de données 8 fois en RAM, ce qui peut saturer la mémoire et faire planter votre système.
+*   **Paralléliser des tâches trop petites par rapport à la surcharge** : Le démarrage des processus et le transfert des données peuvent coûter davantage que le calcul. Mesurez avant de conserver `future_map()`.
+*   **Saturer la mémoire vive (RAM)** : Un objet exporté vers deux processus peut être copié plusieurs fois. Si la mémoire devient sous pression, réduisez la tâche et revenez à `plan(sequential)`.
 *   **Effets de bord non supportés** : Tenter d'effectuer des écritures de fichiers concurrentes ou des affichages de tracés graphiques à l'intérieur de workers parallèles. Ces opérations d'entrées/sorties (I/O) ne sont pas thread-safe et peuvent corrompre vos fichiers.

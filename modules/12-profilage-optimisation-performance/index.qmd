@@ -1,5 +1,5 @@
 ---
-title: "Profilage, optimisation et performance"
+title: "12A - Profilage, optimisation et performance"
 description: "Mesurer avant d’optimiser et documenter les compromis de performance"
 format:
   html:
@@ -10,11 +10,14 @@ format:
 
 Comment améliorer l'efficacité d'un code R en s'appuyant sur des mesures objectives plutôt que sur des intuitions?
 
+> [!IMPORTANT]
+> Cette page est le noyau obligatoire de la [semaine 12 intégrée](../12-synthese-performance-parallele/index.qmd). Le bloc parallèle 12B est une voie choisie, pas un second module à terminer.
+
 ## Rôle dans le cours
 
 Ce module enseigne les techniques fondamentales de mesure de performance et d'optimisation de code en R. Après avoir maîtrisé les fonctions et la programmation orientée objet (modules 10 et 11), vous apprendrez à identifier scientifiquement les goulots d'étranglement (bottlenecks) dans vos scripts. Plutôt que d'optimiser au hasard (ce qui nuit souvent à la lisibilité et introduit des bugs), vous apprendrez à utiliser le **benchmarking** de précision (avec `bench`) et le **profilage** (avec `profvis`) pour guider vos choix techniques.
 
-Ce module pose les bases requises pour aborder la programmation parallèle et asynchrone (le module suivant de la semaine 12).
+Ce bloc suffit pour satisfaire les attentes de la semaine 12. Il pose aussi les bases nécessaires pour décider, après mesure, si la voie parallèle 12B mérite d'être essayée.
 
 ## Objectifs du module
 
@@ -32,7 +35,7 @@ Ce module pose les bases requises pour aborder la programmation parallèle et as
 - Établir un benchmark comparatif valide (contrôle du ramasse-miettes, interprétation de la médiane).
 - Profiler un script R complet pour localiser les lignes de code consommatrices de CPU et de mémoire.
 - Corriger un problème d'allocation mémoire lié au grossissement dynamique d'objets dans une boucle.
-- Rédiger un court rapport technique illustrant le gain de performance avant/après.
+- Rédiger une courte fiche technique décrivant le résultat observé, y compris lorsqu'aucun gain n'est obtenu.
 
 ## Déroulement
 
@@ -42,13 +45,13 @@ Ce module pose les bases requises pour aborder la programmation parallèle et as
 | Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos de profilage de code réel et de réallocations mémoire |
 | Laboratoire | [Laboratoire](laboratoire.qmd) | Profiler et optimiser une fonction lente de simulation de marche aléatoire |
 | Défi de module | [Défi de module](defi.qmd) | Profiler un script et justifier une optimisation mesurée |
-| Après la classe | [Après la classe](apres.qmd) | Déposer la trace portfolio: benchmark, comparaison avant/après, limite et commit |
+| Après la classe | [Après la classe](apres.qmd) | Compléter l'unique fiche de semaine 12 et faire le commit |
 
 ## Place de l’IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à proposer des versions vectorisées de fonctions itératives complexes ou à expliquer une syntaxe `profvis`. La personne étudiante doit néanmoins mener les mesures de benchmark elle-même et justifier pourquoi la version optimisée est plus rapide, par exemple en expliquant la réduction des allocations mémoire. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+L'IA peut aider à proposer une transformation ou à expliquer une syntaxe `profvis`. Toute contribution significative de l'IA doit être consignée dans `docs/ai-log.md` en indiquant l'outil, le but de l'utilisation, l'élément retenu et la vérification effectuée. Le code et le texte conservés doivent être compris, vérifiés, adaptés au contexte et défendables par la personne étudiante.
 
 Le défi technique 3 de la semaine 13 s'appuiera directement sur ces compétences: diagnostiquer, mesurer, améliorer et vérifier avec une IA intégrée à la tâche.
 
@@ -57,6 +60,8 @@ Le défi technique 3 de la semaine 13 s'appuiera directement sur ces compétence
 Analyser une optimisation supplémentaire sur un code du portfolio ou du projet: compilation avec `compiler`, vectorisation, pré-allocation ou simplification d’un algorithme. La trace attendue est un benchmark reproductible, une comparaison avant/après et une note expliquant le compromis entre performance, lisibilité et maintenance.
 
 ## Pages du module
+
+- [Page d'entrée de la semaine 12](../12-synthese-performance-parallele/index.qmd)
 
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)

@@ -19,6 +19,8 @@ Stabiliser le dépôt de départ avant la semaine 2. Le but n’est pas de rendr
 6. Pousser vers GitHub si l’authentification fonctionne.
 7. Noter le blocage exact si GitHub ne fonctionne pas encore.
 
+Si SSH ou GitHub est encore inaccessible, conserver les commits locaux et demander du soutien avec la commande tentée et le message d’erreur complet. Ne jamais transmettre une clé privée ou un jeton. La configuration de l’accès et le premier `git push` sont à reprendre avant le début du laboratoire de la semaine 2; il n’est pas nécessaire de recommencer le dépôt.
+
 ## Trace minimale à conserver
 
 Le dossier `modules/semaine-01/` doit contenir un journal avec:

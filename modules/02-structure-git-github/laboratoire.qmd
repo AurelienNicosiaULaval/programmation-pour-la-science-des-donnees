@@ -160,6 +160,15 @@ Chercher les chemins absolus dans les fichiers texte du dépôt.
 grep -R -n "/Users\\|/home\\|C:\\\\" README.md docs modules scripts 2>/dev/null
 ```
 
+Dans PowerShell, utiliser l’alternative suivante:
+
+```powershell
+Get-ChildItem -Path README.md, docs, modules, scripts -Recurse -File -ErrorAction SilentlyContinue |
+  Select-String -Pattern '/Users/|/home/|C:\\'
+```
+
+Les deux commandes cherchent les mêmes marqueurs courants. Lire chaque résultat avant de modifier le fichier: une chaîne peut être un exemple documenté plutôt qu’un chemin réellement utilisé par le code.
+
 Remplacer les chemins absolus par des chemins relatifs depuis la racine du dépôt.
 
 Exemple à éviter:

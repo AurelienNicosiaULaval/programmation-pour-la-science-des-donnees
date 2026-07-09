@@ -1,37 +1,32 @@
 ---
-title: "Cycle de vie des modèles - Après la classe"
+title: "14C - Limites, suivi et maintenance - Après la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de consolidation
+## Consolidation
 
-Stabiliser la fiche de suivi et vérifier qu’elle serait compréhensible sans explication orale.
+Stabiliser la fiche de suivi et vérifier qu'elle s'applique au livrable réel, même si le projet ne contient aucun modèle prédictif.
 
 ## À faire
 
-- Relire la fiche de suivi.
-- Vérifier que les données et la version du code sont identifiables.
-- Ajouter une limite si elle manque.
-- Ajouter un risque de dérive ou de mauvais usage si la fiche ne contient que des scores.
-- Vérifier que la prochaine action est assez concrète pour être refaite.
-- Faire un commit si le document a été corrigé.
+- Vérifier que le type, l'objectif et le public prévu sont explicites.
+- Relier la fiche au fichier principal et au commit.
+- Distinguer ce qui a été validé de ce qui ne l'a pas été.
+- Conserver au moins trois risques pertinents.
+- Ajouter une limite ou un usage hors contexte.
+- Rendre la vérification future assez précise pour être exécutée.
+- Documenter tout usage significatif de l'IA dans `docs/ai-log.md`.
 
-## Réflexion courte
+## Trace finale
 
-Répondre dans le journal:
+Conserver dans le portfolio ou le dépôt:
 
-- Quelle vérification devrait être refaite plus tard?
-- Quelle utilisation du modèle serait risquée?
-- Quelle information manque encore?
-
-## Trace portfolio finale
-
-Conserver:
-
-- le chemin de la fiche de suivi;
+- le chemin de la fiche;
 - le commit associé;
-- la donnée ou source utilisée;
-- la vérification future prévue;
-- la déclaration IA si l’IA a influencé la documentation, le diagnostic ou l’interprétation.
+- la preuve de validation de la voie 14A;
+- la commande de reproduction de 14B;
+- la vérification future et la prochaine action.
+
+Ces éléments préparent les questions de défense de semaine 15.

@@ -1,5 +1,5 @@
 ---
-title: "Programmation asynchrone et parallèle - Laboratoire"
+title: "12B - Programmation asynchrone et parallèle - Laboratoire choisi"
 format:
   html:
     embed-resources: true
@@ -7,14 +7,23 @@ format:
 
 ## Mise en contexte
 
-Dans ce laboratoire, vous allez paralléliser une tâche statistique classique : le **Bootstrap**. Le bootstrap implique de ré-échantillonner un jeu de données des milliers de fois et de ré-ajuster un modèle statistique à chaque étape. C'est un cas d'usage parfait pour le calcul parallèle, car chaque simulation est totalement indépendante des autres (problème "embarrassingly parallel").
+Cette voie est choisie après le profilage du bloc 12A. Vous allez comparer les versions séquentielle et parallèle d'un bootstrap. Les réplications sont indépendantes, mais le parallèle peut rester moins avantageux à cause du démarrage des processus et de la copie des données. Un résultat plus lent est acceptable s'il est correctement mesuré et interprété.
 
 ## Objectifs du laboratoire
 
 1.  Mesurer les performances d'un bootstrap séquentiel.
 2.  Paralléliser le calcul à l'aide de `future` et `furrr`.
-3.  Mesurer le gain de temps (Speedup) selon le nombre de cœurs.
+3.  Comparer les temps et la surcharge sans viser un facteur d'accélération précis.
 4.  Assurer la reproductibilité stricte des coefficients bootstrappés.
+
+## Garde-fous obligatoires
+
+- Au maximum deux workers et, si possible, un coeur laissé au système.
+- Repli automatique sur `plan(sequential)` si moins de deux workers sont disponibles.
+- Retour à `plan(sequential)` après chaque essai.
+- Aucun changement concurrent d'un même fichier.
+- Réduire `n_replis` si la mémoire ou la durée devient problématique.
+- Aucune vitesse absolue ni accélération minimale n'est évaluée.
 
 ---
 
@@ -31,7 +40,7 @@ library(tibble)
 # Fonction effectuant une seule réplication bootstrap
 une_repli_bootstrap <- function(data) {
   # Ré-échantillonnage avec remplacement
-  indices <- sample(1:nrow(data), replace = TRUE)
+  indices <- sample.int(nrow(data), size = nrow(data), replace = TRUE)
   data_boot <- data[indices, ]
   
   # Ajustement du modèle linéaire
@@ -41,10 +50,11 @@ une_repli_bootstrap <- function(data) {
   coef(fit)
 }
 
-# Lancer 2 000 réplications en séquentiel
+# Lancer un nombre modéré de réplications en séquentiel
+n_replis <- 500L
 set.seed(123)
 temps_seq <- system.time({
-  coefs_seq <- map(1:2000, ~ une_repli_bootstrap(quakes))
+  coefs_seq <- map(seq_len(n_replis), ~ une_repli_bootstrap(quakes))
 })
 cat("Temps séquentiel :", temps_seq["elapsed"], "secondes.\n")
 ```
@@ -54,7 +64,7 @@ cat("Temps séquentiel :", temps_seq["elapsed"], "secondes.\n")
 ## Exercice 2 : Parallélisation avec `furrr`
 
 1.  Chargez le package `furrr`.
-2.  Configurez le plan de calcul parallèle local avec `plan(multisession, workers = 2)` (ou plus si votre machine possède plus de cœurs).
+2.  Calculez un nombre prudent de workers avec `availableCores()` et ne dépassez jamais deux workers dans ce laboratoire.
 3.  Modifiez la boucle séquentielle en utilisant `future_map()` au lieu de `map()`.
 4.  **Important** : Configurez l'argument `.options = furrr_options(seed = TRUE)` pour garantir que le bootstrap soit reproductible.
 5.  Mesurez le temps parallèle.
@@ -62,14 +72,22 @@ cat("Temps séquentiel :", temps_seq["elapsed"], "secondes.\n")
 ```r
 library(furrr)
 
-# 1. Planification
-plan(multisession, workers = 2)
+# 1. Planification prudente avec repli séquentiel
+coeurs_disponibles <- as.integer(future::availableCores())
+workers <- max(1L, min(2L, coeurs_disponibles - 1L))
+
+if (workers >= 2L) {
+  future::plan(future::multisession, workers = workers)
+} else {
+  message("Un seul coeur est disponible: exécution séquentielle.")
+  future::plan(future::sequential)
+}
 
 # 2. Exécution parallèle
 set.seed(123)
 temps_par <- system.time({
   coefs_par <- future_map(
-    1:2000, 
+    seq_len(n_replis),
     ~ une_repli_bootstrap(quakes), 
     .options = furrr_options(seed = TRUE)
   )
@@ -77,7 +95,7 @@ temps_par <- system.time({
 cat("Temps parallèle :", temps_par["elapsed"], "secondes.\n")
 
 # Revenir en mode séquentiel
-plan(sequential)
+future::plan(future::sequential)
 ```
 
 ---
@@ -87,9 +105,9 @@ plan(sequential)
 Le **Speedup** est défini par le rapport du temps de calcul séquentiel sur le temps de calcul parallèle :
 $$\text{Speedup} = \frac{T_{\text{séquentiel}}}{T_{\text{parallèle}}}$$
 
-1.  Calculez le speedup obtenu sur votre machine.
-2.  Si vous avez configuré 2 cœurs (`workers = 2`), le speedup est-il exactement égal à 2 ? Expliquez pourquoi (surcharge système, threads système, etc.).
-3.  Augmentez le nombre de cœurs à 4 (si possible) et recalculez le speedup. Observe-t-on des rendements décroissants ?
+1.  Calculez le rapport observé sur votre machine, en conservant le contexte de la mesure.
+2.  Expliquez pourquoi ce rapport peut être inférieur à 1, proche de 1 ou supérieur à 1 selon la surcharge, la charge de fond et la taille de la tâche.
+3.  N'augmentez pas le nombre de workers pour chercher un meilleur résultat. Décidez plutôt si l'essai à deux workers justifie la complexité ajoutée.
 
 ---
 
@@ -99,17 +117,25 @@ Vérifiez que deux exécutions successives de votre bootstrap parallèle, préc�
 
 ```r
 # Lancement 1
-plan(multisession, workers = 2)
+coeurs_disponibles <- as.integer(future::availableCores())
+workers <- max(1L, min(2L, coeurs_disponibles - 1L))
+if (workers >= 2L) {
+  future::plan(future::multisession, workers = workers)
+} else {
+  future::plan(future::sequential)
+}
 set.seed(123)
-run1 <- future_map(1:500, ~ une_repli_bootstrap(quakes), .options = furrr_options(seed = TRUE))
+run1 <- future_map(1:200, ~ une_repli_bootstrap(quakes), .options = furrr_options(seed = TRUE))
 
 # Lancement 2
 set.seed(123)
-run2 <- future_map(1:500, ~ une_repli_bootstrap(quakes), .options = furrr_options(seed = TRUE))
+run2 <- future_map(1:200, ~ une_repli_bootstrap(quakes), .options = furrr_options(seed = TRUE))
 
-plan(sequential)
+future::plan(future::sequential)
 
 # Vérification d'égalité stricte
 all.equal(run1, run2)
 ```
-*Si le résultat est `TRUE`, votre simulation est reproductible et valide pour un rapport scientifique.*
+*Si le résultat est `TRUE`, les deux exécutions sont reproductibles pour cette vérification. Cela ne suffit pas, à lui seul, à valider toute l'analyse statistique.*
+
+Consignez la comparaison et la décision dans `docs/semaine-12-performance.md`. Cette voie ne crée aucun second livrable.

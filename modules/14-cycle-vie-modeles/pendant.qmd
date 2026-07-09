@@ -1,87 +1,59 @@
 ---
-title: "Cycle de vie des modèles - Pendant la classe"
+title: "14C - Limites, suivi et maintenance - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de la séance
+## Place dans la séance
 
-Transformer une analyse de modélisation en fiche de suivi: contexte, données, version du code, validation, limites, risques et prochaine vérification.
+Ce noyau occupe 30 minutes du [déroulement commun de semaine 14](../14-synthese-finale/index.qmd).
 
-## Déroulement proposé
+## Atelier de 30 minutes
 
-| Moment | Activité | Résultat attendu |
+| Temps | Activité | Résultat |
 |---:|---|---|
-| 0-15 min | Retour sur la préparation | Identifier les informations minimales à suivre |
-| 15-35 min | Démonstration courte | Montrer une fiche incomplète et la corriger |
-| 35-75 min | Travail individuel | Remplir une première fiche de suivi |
-| 75-105 min | Revue en duo | Vérifier données, version du code, validation et limites |
-| 105-135 min | Discussion de risques | Repérer dérive, usage hors contexte et données manquantes |
-| 135-165 min | Correction | Ajouter une vérification future et une responsabilité de maintenance |
-| 165-180 min | Synthèse | Committer la fiche et noter la prochaine action |
+| 0-5 min | Identifier le livrable et sa version | Fichier principal et commit |
+| 5-15 min | Résumer la validation et les limites | Contrôle réalisé et portée réelle |
+| 15-25 min | Nommer trois risques | Données ou entrées, code, usage ou interprétation |
+| 25-30 min | Prévoir le suivi | Vérification future et prochaine action |
 
-## Démonstration courte
+## Structure minimale
 
-Présenter une fiche de suivi volontairement incomplète:
-
-- modèle sans version du code;
-- données de départ non identifiées;
-- performance indiquée sans contexte d'évaluation;
-- aucune limite d'utilisation;
-- aucune vérification future.
-
-Corriger la fiche en direct pour montrer que la documentation fait partie du modèle, pas seulement du rapport final.
-
-## Structure minimale de la fiche
-
-La fiche peut tenir dans `docs/fiche-suivi-modele.md`.
+La fiche peut tenir dans `docs/fiche-suivi.md`:
 
 ```markdown
-# Fiche de suivi du modèle
+# Fiche de suivi
 
-## Objectif
+## Livrable et objectif
 
-## Données utilisées
+## Public et usage prévus
 
-## Version du code
+## Données, entrées ou paramètres
 
-## Méthode et paramètres principaux
+## Fichier principal et commit
 
-## Validation effectuée
+## Validation ou contrôle effectué
 
-## Performance observée
+## Limites et usages hors contexte
 
-## Limites d'utilisation
+## Risques
 
-## Risques de dérive ou de mauvaise utilisation
-
-## Vérification future
-
-## Responsable ou prochaine action
+## Vérification future et prochaine action
 ```
 
-## Points de contrôle
+## Adapter la fiche au livrable
 
-- La fiche renvoie à un commit, une version ou une date.
-- Les données utilisées sont identifiables.
-- La validation est décrite, pas seulement chiffrée.
-- Les limites sont concrètes.
-- Une vérification future est prévue.
-- L'usage significatif de l'IA est déclaré si l'IA a aidé à documenter, corriger ou interpréter le modèle.
+| Livrable | Validation à résumer | Vérification future possible |
+|---|---|---|
+| Modèle | Données d'évaluation, mesure et référence | Réévaluer sur de nouvelles données |
+| Pipeline | Contrôles de schéma, tests et sorties | Relancer après un changement de source |
+| Tableau de bord ou application | Scénarios, filtres, entrées et accessibilité | Rejouer les scénarios après une mise à jour |
+| Rapport | Sources, calculs, rendu et cohérence narrative | Rendre à nouveau avec les nouvelles données |
+| Composant logiciel | Tests nominaux, cas limites et erreurs | Relancer les tests après une dépendance modifiée |
 
 ## Revue en duo
 
-La personne qui relit doit pouvoir répondre:
+La personne qui relit doit pouvoir retrouver la version, expliquer ce qui a été contrôlé, nommer un usage risqué et exécuter ou décrire la vérification future.
 
-- Est-ce que je sais quelles données ont produit ce modèle?
-- Est-ce que je sais quelle version du code a été utilisée?
-- Est-ce que je comprends la performance annoncée?
-- Est-ce que je vois un usage qui serait risqué?
-- Est-ce que je sais quoi revérifier plus tard?
-
-## Synthèse de fin de séance
-
-Terminer avec une phrase de ce type:
-
-> Le modèle peut être réutilisé seulement si ..., et il devrait être revérifié lorsque ...
+Tout usage significatif de l'IA qui influence la fiche est documenté dans `docs/ai-log.md`.

@@ -1,33 +1,55 @@
 ---
-title: "Collaboration, documentation et packaging - Ressources"
+title: "Semaine 15 - Ressources et checklists"
 format:
   html:
     embed-resources: true
 ---
 
-## Documentations officielles et livres
+## Pages de référence du cours
 
-*   [Site officiel R Packages](https://r-pkgs.org/) : Le livre de référence complet en ligne pour tout savoir sur la construction de packages R.
-*   [Site officiel de devtools](https://devtools.r-lib.org/) : Fonctions utilitaires interactives d'aide au développement.
-*   [Site officiel de usethis](https://usethis.r-lib.org/) : Automatisation de la configuration de fichiers (tests, documentation, Git, licences).
-*   [Site officiel de roxygen2](https://roxygen2.r-lib.org/) : Syntaxes de balises et de fiches d'aide.
+- [Site Quarto personnel](../../site-personnel.qmd)
+- [Présentation et revue du projet](../../presentation.qmd)
+- [Portfolio](../../portfolio.qmd)
+- [Évaluations](../../evaluations.qmd)
+- [Projet d'équipe](../../projets.qmd)
+- [Politique IA](../../ia.qmd)
 
----
+## Pages de la semaine
 
-## Liste des fonctions clés du développeur de package
+- [Préparation](avant.qmd)
+- [Déroulement de 180 minutes](pendant.qmd)
+- [Clinique finale](laboratoire.qmd)
+- [Exercice formatif non noté](defi.qmd)
+- [Consolidation](apres.qmd)
 
-Voici un mémo rapide des commandes à saisir dans votre console R pour piloter le développement :
+## Checklist minimale du site
 
-| Commande | Package | Action |
-|---|---|---|
-| `create_package("nom")` | `usethis` | Initialise l'arborescence physique d'un package R. |
-| `use_r("nom_fichier")` | `usethis` | Crée un fichier R vide dans le répertoire `R/`. |
-| `use_package("nom_pkg")` | `usethis` | Déclare la dépendance d'un package tiers dans DESCRIPTION. |
-| `use_data(objet)` | `usethis` | Sauvegarde un jeu de données de travail dans `data/`. |
-| `use_testthat()` | `usethis` | Initialise l'infrastructure de tests unitaires. |
-| `use_test("nom")` | `usethis` | Crée un script de test dans `tests/testthat/`. |
-| `document()` | `devtools` | Génère les fichiers `.Rd` d'aide et met à jour le `NAMESPACE`. |
-| `load_all()` | `devtools` | Charge toutes les fonctions du package en mémoire (mode interactif). |
-| `test()` | `devtools` | Exécute tous les scripts de tests unitaires avec `testthat`. |
-| `check()` | `devtools` | Lance la suite complète de diagnostics et de vérifications de structure. |
-| `install()` | `devtools` | Installe le package local sur votre machine R. |
+- URL publique;
+- dépôt source;
+- commit remis;
+- deux réalisations commentées;
+- lien au portfolio;
+- confidentialité vérifiée;
+- déclaration IA lorsque pertinente.
+
+## Checklist minimale du projet
+
+- dépôt et commit final;
+- README et commande principale;
+- support de présentation;
+- preuve de validation et limites;
+- extrait de code défendable;
+- `docs/contributions.md`;
+- bilan individuel;
+- `docs/ai-log.md` lorsque pertinent.
+
+## Documentation officielle
+
+- [Quarto - GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+- [GitHub Docs - About pull request reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
+
+## Approfondissement facultatif
+
+- [Annexe: construire un package R local](annexe-package-r.qmd)
+
+Cette annexe rassemble l'ancien contenu de packaging. Elle convient seulement aux projets qui ont des fonctions R réutilisables et qui ont déjà terminé les productions obligatoires. Elle ne constitue pas une remise de semaine 15.

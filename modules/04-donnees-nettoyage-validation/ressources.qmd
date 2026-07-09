@@ -5,7 +5,17 @@ format:
     embed-resources: true
 ---
 
-## Checklist d’importation
+## Parcours recommandé
+
+Cette page est une référence, pas une liste de lectures à maîtriser entièrement avant le laboratoire.
+
+| Niveau | Ressources à utiliser |
+|---|---|
+| Essentiel avant le laboratoire | Checklists d’importation et de nettoyage; messages d’erreur fréquents |
+| Pendant le laboratoire | Assertions; valeurs manquantes; fusion de données |
+| Pour aller plus loin | Fichiers volumineux; SQL; API; formats d’exportation |
+
+## Essentiel avant le laboratoire: checklist d’importation
 
 Avant de nettoyer:
 
@@ -17,7 +27,7 @@ Avant de nettoyer:
 - les types ont-ils été inspectés?
 - les messages d’importation ont-ils été lus?
 
-## Checklist de nettoyage
+## Essentiel avant le laboratoire: checklist de nettoyage
 
 Avant de sauvegarder:
 
@@ -30,7 +40,7 @@ Avant de sauvegarder:
 - les assertions passent;
 - la version propre est sauvegardée dans `data/processed/`.
 
-## Assertions utiles
+## Pendant le laboratoire: assertions utiles
 
 Exemples à adapter:
 
@@ -44,7 +54,7 @@ stopifnot(all(data$type %in% c("A", "B", "C")))
 
 Pour un projet plus grand, ces vérifications pourront être déplacées dans des fonctions et testées avec `testthat` à partir de la semaine 10.
 
-## Messages d’erreur fréquents
+## Essentiel avant le laboratoire: messages d’erreur fréquents
 
 | Message ou symptôme | Cause possible | Réaction |
 |---|---|---|
@@ -54,7 +64,7 @@ Pour un projet plus grand, ces vérifications pourront être déplacées dans de
 | Jointure qui augmente trop le nombre de lignes | Clé non unique | Compter les clés avant la jointure |
 | Script qui marche seulement sur une machine | Chemin local ou fichier non versionné | Utiliser chemins relatifs et README |
 
-## Aperçu fichiers volumineux
+## Pour aller plus loin: fichiers volumineux
 
 Si un fichier est trop lourd:
 
@@ -65,7 +75,7 @@ Si un fichier est trop lourd:
 - envisager `arrow` ou Parquet pour des données plus grandes;
 - envisager `duckdb` pour interroger sans tout charger en mémoire.
 
-## Aperçu SQL
+## Pour aller plus loin: SQL
 
 Structure minimale d’une extraction:
 
@@ -95,7 +105,7 @@ resume <- dbGetQuery(
 dbDisconnect(con, shutdown = TRUE)
 ```
 
-## Aperçu API
+## Pour aller plus loin: API
 
 Une requête API doit être documentée:
 
@@ -128,7 +138,7 @@ donnees_api <- resp_body_json(resp)
 
 Ce squelette ne doit pas être exécuté tel quel: l’URL est fictive.
 
-## Traitement des valeurs manquantes et fusion de données
+## Pendant le laboratoire: valeurs manquantes et fusion de données
 
 Voici des exemples d'opérations courantes pour détecter et traiter les valeurs manquantes, ainsi que pour fusionner des tables.
 
@@ -236,7 +246,7 @@ population_1960 <- data.frame(
   - `inner_join(x, y)` : Conserve uniquement les lignes présentes dans les deux tables.
   - `full_join(x, y)` : Conserve toutes les lignes des deux tables.
 
-## Exportation et formats de fichiers en R
+## Pour aller plus loin: exportation et formats de fichiers en R
 
 Ces exemples complètent l’importation vue en laboratoire. Ils montrent comment écrire des données dans des formats courants avec des chemins relatifs.
 

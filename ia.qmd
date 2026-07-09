@@ -17,7 +17,7 @@ Tu peux utiliser l’IA si tu peux ensuite expliquer, vérifier, modifier et dé
 |---|---|
 | Non permise | Aucun outil d’IA générative pendant l’évaluation. |
 | Permise | IA autorisée pour clarifier une notion, obtenir un exemple ou reformuler une explication. |
-| Permise, déclarée | IA autorisée, mais tout usage significatif doit être documenté dans `ai-log.md` ou dans la section prévue. |
+| Permise, déclarée | IA autorisée, mais tout usage significatif doit être documenté dans `docs/ai-log.md` ou dans la section prévue. |
 | Intégrée | IA attendue comme partie de la tâche: formuler, tester, vérifier, adapter et documenter l’apport de l’IA. |
 
 ## Application aux évaluations
@@ -40,7 +40,7 @@ L’utilisation d’outils d’IA générative n’est pas permise pour cette é
 
 ### IA permise, déclarée
 
-L’utilisation d’outils d’IA générative est permise, à condition d’être déclarée lorsque l’aide obtenue influence de manière significative le code, la documentation, l’analyse ou le livrable remis. L’étudiante ou l’étudiant doit documenter l’usage dans le fichier `ai-log.md` ou dans la section prévue à cet effet. Le travail remis doit être compris, vérifié, adapté au contexte du projet et défendable. Le fait de remettre du code ou du texte non compris, non vérifié ou non déclaré peut être pénalisé.
+L’utilisation d’outils d’IA générative est permise, à condition d’être déclarée lorsque l’aide obtenue influence de manière significative le code, la documentation, l’analyse ou le livrable remis. L’étudiante ou l’étudiant doit documenter l’usage dans `docs/ai-log.md` ou dans la section prévue à cet effet. Le travail remis doit être compris, vérifié, adapté au contexte du projet et défendable. Le fait de remettre du code ou du texte non compris, non vérifié ou non déclaré peut être pénalisé.
 
 ### IA intégrée
 
@@ -73,7 +73,7 @@ Les mini-tests de préparation sont réalisés à livre ouvert. L’utilisation 
 
 ## Déclaration obligatoire
 
-Chaque projet, portfolio, site personnel ou défi qui utilise le statut “permise, déclarée” ou “intégrée” doit contenir un fichier `ai-log.md` ou une déclaration équivalente.
+Chaque projet, portfolio, site personnel ou défi qui utilise le statut “permise, déclarée” ou “intégrée” doit contenir `docs/ai-log.md` ou une déclaration équivalente explicitement nommée dans la consigne.
 
 La déclaration doit indiquer:
 

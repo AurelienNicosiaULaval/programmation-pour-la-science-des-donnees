@@ -1,5 +1,5 @@
 ---
-title: "Profilage, optimisation et performance - Défi"
+title: "12A - Profilage, optimisation et performance - Défi"
 format:
   html:
     embed-resources: true
@@ -9,39 +9,43 @@ format:
 
 L'objectif de ce défi est de mettre en pratique la méthodologie de profilage et d'optimisation sur un code R réaliste, idéalement tiré de votre projet de session ou de vos portfolios.
 
+Ce défi de module est formatif et non noté. Il prépare les défis techniques notés. La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère de qualité, mais elle ne transforme pas cette activité en remise notée.
+
 ### Tâche : Optimisation mesurée de votre code
 
 1.  **Sélection** : Choisissez un script R ou une fonction de traitement que vous avez écrite dans un module précédent (par exemple, le nettoyage des données du module 4 ou les itérations fonctionnelles du module 10) qui effectue des calculs répétés.
 2.  **Profilage initial** : Utilisez `profvis` pour profiler l'exécution globale de votre script. Prenez une capture d'écran du graphe en cascade (Flame Graph) ou notez les lignes de code qui consomment le plus de CPU et de mémoire.
-3.  **Optimisation** : Proposez une version optimisée en appliquant l'une des astuces vues en classe (pré-allocation de listes/vecteurs, remplacement de boucles par de la vectorisation, ou simplification d'appels de fonctions de base redondants).
-4.  **Benchmarking** : Utilisez `bench::mark()` pour comparer de façon stricte la version initiale (lente) et la version optimisée (rapide).
+3.  **Modification ciblée** : Proposez une version modifiée en appliquant une piste issue du profilage, par exemple une pré-allocation, une vectorisation ou la simplification d'appels redondants.
+4.  **Benchmarking** : Utilisez `bench::mark()` pour comparer avec le même protocole la version initiale et la version modifiée.
 
 *Si vous n'avez pas de script personnel sous la main, vous pouvez optimiser une fonction de recherche et d'extraction de séquences de nombres identiques (Run Length Encoding manuel) sur un vecteur de taille $N = 100\ 000$ (en recréant manuellement le comportement de `rle()` avec des boucles).*
 
 ---
 
-## Livrables attendus dans votre portfolio
+## Contribution à l'unique fiche de semaine 12
 
-1.  **Le script de benchmark** : Un fichier R (ex: `R/benchmark_projet.R`) contenant le code initial, le code optimisé, et l'appel à `bench::mark()`.
-2.  **Une note technique d'optimisation** rédigée sur votre portfolio (ex: dans votre journal de bord) contenant :
+Ajoutez les éléments suivants à `docs/semaine-12-performance.md`, conformément à la [checklist unique](../12-synthese-performance-parallele/index.qmd):
+
+1.  **Le script mesuré**: indiquez le chemin du code initial, du code modifié et de l'appel à `bench::mark()`.
+2.  **La note de décision** contient:
     *   La capture d'écran ou la description du flame graph initial.
     *   Le tableau comparatif obtenu avec `bench::mark()` (copiez-collez les colonnes de temps médian et de mémoire allouée).
-    *   Une explication textuelle simple de la raison pour laquelle votre code optimisé est plus performant (ex: suppression des copies mémoires, réduction du nombre d'itérations).
-    *   Une réflexion sur la lisibilité : la version optimisée est-elle plus ou moins facile à relire que l'originale ? Est-ce que le gain de performance en valait la peine ?
+    *   Une explication de la différence observée ou de l'absence de différence, reliée au profil et aux allocations.
+    *   Une réflexion sur la lisibilité: la version modifiée est-elle plus ou moins facile à relire que l'originale? Le résultat observé justifie-t-il de la conserver?
 
 ---
 
-## Grille d'évaluation simplifiée
+## Repères de rétroaction formative
 
 *   **Rigueur scientifique** : L'optimisation est validée par des données de benchmark objectives (médiane de temps d'exécution et allocations mémoire) et non sur une simple impression.
 *   **Correction technique** : Suppression des réallocations de mémoire dans les boucles (pré-allocation) ou utilisation appropriée de la vectorisation.
-*   **Recul critique** : Réflexion sur le compromis entre performance et lisibilité du code (ne pas optimiser inutilement si le code original prend 10 ms).
+*   **Recul critique** : Réflexion sur le compromis entre performance, correction, lisibilité et fréquence réelle d'exécution.
 
 ## Place de l'IA
 
 Statut: permise, déclarée.
 
-L'IA peut proposer une version vectorisée ou expliquer un résultat de profilage. Les mesures doivent être exécutées et interprétées par la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative le code optimisé ou la note technique.
+L'IA peut aider à proposer une transformation ou à expliquer une syntaxe `profvis`. Toute contribution significative de l'IA doit être consignée dans `docs/ai-log.md` en indiquant l'outil, le but de l'utilisation, l'élément retenu et la vérification effectuée. Le code et le texte conservés doivent être compris, vérifiés, adaptés au contexte et défendables par la personne étudiante.
 
 Ce défi de module est aussi une répétition utile pour le défi technique 3 de la semaine 13, qui demandera le même cycle: mesurer, améliorer, vérifier et documenter.
 

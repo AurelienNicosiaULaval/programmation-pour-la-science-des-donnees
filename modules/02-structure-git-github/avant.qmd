@@ -53,19 +53,34 @@ Sur Windows, dans Git Bash:
 grep -R -n "C:\\\\" README.md docs modules scripts 2>/dev/null
 ```
 
+Sur Windows, dans PowerShell, utiliser plutôt:
+
+```powershell
+Get-ChildItem -Path README.md, docs, modules, scripts -Recurse -File -ErrorAction SilentlyContinue |
+  Select-String -Pattern '/Users/|/home/|C:\\'
+```
+
+Une absence de résultat signifie qu’aucun des marqueurs recherchés n’a été trouvé dans les fichiers parcourus. Cette commande ne prouve pas à elle seule que tous les chemins sont portables; les chemins repérés doivent encore être lus dans leur contexte.
+
 Si une commande ne fonctionne pas, noter le message complet. La correction se fera en laboratoire.
 
 ## Mini-test de préparation
 
-Répondre brièvement avant la séance:
+Le [gabarit commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd) précise le fonctionnement stable utilisé pendant la session.
 
-1. À quoi sert `git status`?
-2. Quelle est la différence entre un fichier modifié et un fichier indexé avec `git add`?
-3. Pourquoi un chemin comme `/Users/prenom/projet/data/fichier.csv` pose-t-il problème dans un dépôt partagé?
-4. Où placerais-tu un script R réutilisable dans le portfolio?
-5. Écris un exemple de message de commit trop vague et une version améliorée.
+- Durée cible: 5 à 10 minutes.
+- Questions: répondre aux trois questions ci-dessous, dans l’ordre.
+- Format de remise: trois réponses numérotées et courtes dans le canal officiel indiqué par l’équipe enseignante.
+- Échéance: remettre les réponses avant le début du laboratoire.
+- Règle IA: l’IA est permise pour clarifier une notion. Elle ne remplace pas l’exécution locale des commandes ni la compréhension des réponses.
+- Trace: le résultat reste enregistré dans le canal de remise et une difficulté est notée pour le laboratoire. Une clarification mineure n’exige pas d’entrée IA; si l’aide influence une trace de portfolio, du code, de la documentation ou une décision conservée, la consigner dans `docs/ai-log.md`.
+- Complétion minimale: les trois réponses sont soumises et `git status` ainsi que la recherche de chemins ont été exécutés.
 
-Statut IA du mini-test: permise pour clarifier une notion, mais les réponses doivent être formulées et comprises par la personne étudiante.
+Questions:
+
+1. À quoi sert `git status`, et quelle différence y a-t-il entre un fichier modifié et un fichier indexé avec `git add`?
+2. Pourquoi `/Users/prenom/projet/data/fichier.csv` pose-t-il problème dans un dépôt partagé? Proposer un chemin relatif et indiquer où placer un script R réutilisable qui le lit.
+3. À partir de la sortie réelle de `git status` ou de la recherche de chemins, noter une observation vérifiable, une difficulté à reprendre au laboratoire et un message de commit précis pour la prochaine correction.
 
 ## À apporter en classe
 

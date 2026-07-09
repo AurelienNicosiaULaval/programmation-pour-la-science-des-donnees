@@ -33,7 +33,7 @@ La démonstration montre seulement le cycle minimal:
 
 ## Points de contrôle
 
-Avant de quitter le laboratoire, vérifier:
+Avant de quitter le laboratoire, vérifier le noyau obligatoire:
 
 - le dossier du portfolio existe;
 - le fichier `README.md` existe;
@@ -42,6 +42,8 @@ Avant de quitter le laboratoire, vérifier:
 - `git status` donne un état compréhensible;
 - au moins un commit a été créé;
 - un blocage GitHub est documenté si la synchronisation échoue.
+
+Le second commit, la configuration SSH et le premier envoi vers GitHub peuvent être régularisés après la séance si un problème technique a été documenté. Ils doivent être repris avant le début du laboratoire de la semaine 2; les autres traces locales ne doivent pas attendre la résolution de GitHub.
 
 ## Billet de sortie
 

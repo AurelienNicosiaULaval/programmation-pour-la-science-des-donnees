@@ -31,6 +31,8 @@ C'est la compétence finale nécessaire pour structurer les livrables d'équipe 
 - Rédiger un document `.qmd` propre et lisible.
 - Configurer les options globales de compilation dans le YAML.
 - Masquer le code technique pour les rapports destinés aux décideurs (`echo: false`).
+- Donner aux figures une légende, un texte alternatif et des encodages qui ne dépendent pas uniquement de la couleur.
+- décider explicitement si les fichiers HTML générés sont suivis dans Git et documenter cette politique;
 - Documenter la reproductibilité et citer les sources.
 
 ## Livrables de la semaine
@@ -39,7 +41,7 @@ C'est la compétence finale nécessaire pour structurer les livrables d'équipe 
 |---|---|
 | Mini-test | Questions courtes sur le YAML, les options de blocs et le rendu |
 | Laboratoire | Rapport Quarto court compilé sans erreur depuis une session propre |
-| Portfolio | Fichier `.qmd` et rendu conservés dans `reports/` ou `modules/semaine-07/` |
+| Portfolio | Fichier `.qmd`, rendu HTML vérifié et politique documentée de suivi ou d’exclusion du HTML |
 | Git | Commits séparant le rapport, les corrections et la documentation |
 
 ## Déroulement
@@ -56,7 +58,7 @@ C'est la compétence finale nécessaire pour structurer les livrables d'équipe 
 
 Statut: permise, déclarée.
 
-L'IA peut aider à trouver la syntaxe d'une option YAML, par exemple une table des matières flottante, ou à structurer un tableau complexe en Markdown. La rédaction de l'interprétation des résultats et la structure générale du rapport doivent rester le produit de la réflexion de la personne étudiante. Tout usage significatif doit être documenté dans `docs/ai-log.md` ou dans le journal.
+L'IA peut aider à trouver la syntaxe d'une option YAML, par exemple une table des matières flottante, ou à structurer un tableau complexe en Markdown. La rédaction de l'interprétation des résultats et la structure générale du rapport doivent rester le produit de la réflexion de la personne étudiante. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 

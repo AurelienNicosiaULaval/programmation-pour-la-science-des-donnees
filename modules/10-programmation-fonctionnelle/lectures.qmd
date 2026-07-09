@@ -10,9 +10,9 @@ format:
 ### Lecture principale
 *   **R for Data Science (2e édition)**, de Hadley Wickham, Mine Çetinkaya-Rundel et Garrett Grolemund :
     *   [Chapter 25: Functions](https://r4ds.hadley.nz/functions) : Concepts de base, réduction de duplication, arguments par défaut et écriture sécurisée.
-    *   [Chapter 26: Iteration](https://r4ds.hadley.nz/iteration) : Utilisation des fonctions de la famille `map()` pour remplacer les boucles.
+    *   [Chapter 26: Iteration](https://r4ds.hadley.nz/iteration) : Utilisation de la famille `map()` pour exprimer une itération et comparaison avec une boucle explicite ou `vapply()`.
 
-### Lectures avancées (facultatives mais fortement recommandées)
+### Lectures d'approfondissement facultatives
 *   **Advanced R**, de Hadley Wickham :
     *   [Chapter 6: Functions](https://adv-r.hadley.nz/functions.html) : Portée lexicale, évaluation paresseuse (lazy evaluation) et l'argument `...`.
     *   [Chapter 7: Environments](https://adv-r.hadley.nz/environments.html) : Liaison de noms à des valeurs, environnements englobants et de liaison.
@@ -20,7 +20,7 @@ format:
 
 ---
 
-## Geste R à reproduire chez vous
+## Geste R facultatif à reproduire chez vous
 
 Exécutez ce court script pour tester votre compréhension de l'évaluation paresseuse (lazy evaluation) en R. En R, les arguments ne sont évalués que lorsqu'ils sont effectivement utilisés dans la fonction.
 

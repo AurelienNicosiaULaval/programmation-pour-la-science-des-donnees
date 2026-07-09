@@ -14,6 +14,8 @@ Comment organiser un projet R pour qu’il soit compréhensible, versionné et r
 
 La semaine 1 a créé le point de départ du portfolio. La semaine 2 transforme ce départ en structure de travail plus solide: dossiers, chemins relatifs, conventions de nommage, commits, README et mini-test de préparation.
 
+Repère de progression: en semaine 1, il fallait démarrer un dépôt et conserver une première trace locale; en semaine 2, il faut rendre ce dépôt relançable et lisible pour une autre personne. Il ne s’agit donc pas de recommencer le dépôt, mais de le consolider.
+
 Cette semaine prépare directement le jalon portfolio de la semaine 3, où la structure, les conventions et les premières traces seront évaluées.
 
 ## Objectifs du module

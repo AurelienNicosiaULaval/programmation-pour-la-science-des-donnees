@@ -11,14 +11,15 @@ Après la séance de laboratoire, vous devez finaliser votre défi et mettre à 
 
 ### Activités de consolidation
 
-1.  **Vérification de la propreté du code** :
+1.  **Vérification du noyau obligatoire** :
     *   Assurez-vous que vos constructeurs S3 valident bien les types en entrée.
-    *   Vérifiez que vos classes R6 n'exposent pas en `public` des champs qui devraient rester cachés en `private` (principe d'encapsulation).
+    *   Vérifiez qu'au moins une méthode S3 produit le comportement attendu.
+    *   Relisez votre décision `S3`, `R6` ou `aucune classe nécessaire` et vérifiez qu'elle repose sur un besoin réel.
 2.  **Exécution des tests unitaires** :
-    *   Si vous avez choisi l'option R6 ou S3 avec validations, lancez vos tests unitaires `testthat` dans une console propre pour valider que les cas limites fonctionnent.
+    *   Lancez au moins un test d'invariant S3 dans une console propre. Si vous avez choisi la voie R6, testez aussi la mutation ou le refus d'une entrée invalide.
 3.  **Mise à jour du portfolio** :
-    *   Ajoutez le fichier contenant votre classe (S3 ou R6) et le script de démonstration dans votre portfolio.
-    *   Rédigez la note de conception expliquant votre choix de système.
+    *   Ajoutez l'objet S3 et son script de démonstration dans votre portfolio.
+    *   Joignez la note de décision R6 au même jalon. Le prototype R6, s'il existe, reste une extension de cette trace et non un second livrable.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Profilage, optimisation et performance - Lectures"
+title: "12A - Profilage, optimisation et performance - Lectures"
 format:
   html:
     embed-resources: true

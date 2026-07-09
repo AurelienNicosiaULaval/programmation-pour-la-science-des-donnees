@@ -7,7 +7,9 @@ format:
 
 ## Nature du défi
 
-Ce défi de module est une activité de départ pour le portfolio. Il ne remplace pas les défis techniques notés du cours. Il prépare le jalon portfolio de la semaine 3.
+Ce défi de module est une activité formative et non notée. Il ne remplace pas les défis techniques notés du cours. Il prépare le jalon portfolio de la semaine 3.
+
+La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère transférable pour relire la qualité du travail. Son utilisation ne transforme pas ce défi de module en évaluation notée.
 
 ## Objectif
 
@@ -36,11 +38,11 @@ Dans le dépôt `portfolio-stt4230`, produire:
 
 ## Place de l’IA
 
-Statut: permise pour comprendre, diagnostiquer et reformuler.
+Statut: permise, déclarée.
 
 L’IA peut aider à comprendre une erreur, proposer une formulation de README ou expliquer une commande Git. La personne étudiante doit vérifier les commandes localement et adapter le texte au dépôt réel.
 
-Ajouter une entrée dans `docs/ai-log.md` seulement si l’IA influence de manière significative un choix technique, du code ou une formulation reprise dans le portfolio.
+Règle commune: le travail doit être compris, vérifié, adapté au contexte et défendable. Si l’IA influence de manière significative le code, la documentation, une décision ou le livrable, documenter cet usage dans `docs/ai-log.md`.
 
 ## Critères de réussite
 

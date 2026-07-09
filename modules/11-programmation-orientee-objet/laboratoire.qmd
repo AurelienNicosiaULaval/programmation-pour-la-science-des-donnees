@@ -7,7 +7,15 @@ format:
 
 ## Mise en contexte
 
-Dans ce laboratoire, vous allez pratiquer les deux principaux systèmes d'objets en R. Dans la première partie, vous implémenterez un système S3 pour encapsuler des résultats d'analyses statistiques et surcharger les comportements d'affichage. Dans la seconde partie, vous créerez une classe R6 pour simuler un jeu de société de type *Serpents et Échelles*, en utilisant la sémantique de référence pour faire évoluer l'état de la partie.
+Dans ce laboratoire, vous allez construire un objet S3 pour un résultat d'analyse, tester un invariant et décider si R6 est pertinent pour un besoin précis. Le prototype R6 est une voie choisie. Une alternative directement liée au suivi d'un pipeline est proposée; le simulateur *Serpents et Échelles* est conservé comme approfondissement.
+
+## Noyau obligatoire
+
+Le noyau est terminé lorsque vous disposez de:
+
+1. un constructeur S3 et au moins une méthode;
+2. un test d'invariant;
+3. une note de décision de cinq à huit lignes indiquant si R6 est justifié pour votre projet et pourquoi.
 
 ---
 
@@ -57,9 +65,90 @@ summary.analyse_s3 <- function(object, ...) {
 
 ---
 
-## Exercice 2 : Une classe R6 pour simuler un jeu (Serpents et Échelles)
+## Exercice 2: décision architecturale S3 ou R6
 
-Recyclons le jeu historique *Serpents et Échelles* en l'encapsulant dans une classe R6 nommée `JeuSerpentEchelle`. Ce choix permet de conserver l'état du jeu (position des joueurs, historique des lancers) au sein de l'objet et de le faire muter à chaque tour.
+Choisissez un composant réel ou plausible de votre projet et répondez aux quatre questions suivantes:
+
+1. L'objet représente-t-il surtout un résultat à afficher ou résumer? Dans ce cas, S3 est généralement suffisant.
+2. Plusieurs opérations doivent-elles partager et modifier le même état au fil du temps?
+3. Une ressource persistante doit-elle être encapsulée, par exemple une connexion, un cache ou le suivi d'étapes?
+4. Une simple liste accompagnée de fonctions pures serait-elle plus facile à tester et à maintenir?
+
+Concluez par l'une des décisions suivantes: `S3 retenu`, `R6 retenu` ou `aucune classe nécessaire`. Une décision négative sur R6 est une réponse pleinement valide si elle est justifiée.
+
+---
+
+## Voie R6 choisie: suivi d'un pipeline de données
+
+Si votre décision justifie un état mutable, vous pouvez prototyper la classe suivante. Elle conserve l'état de chaque étape sans exposer directement la table interne.
+
+```r
+library(R6)
+
+SuiviPipeline <- R6Class(
+  "SuiviPipeline",
+  private = list(
+    ..etat = NULL
+  ),
+  public = list(
+    initialize = function(etapes = c("importer", "valider", "transformer")) {
+      if (!is.character(etapes) || length(etapes) == 0 || anyNA(etapes)) {
+        stop("'etapes' doit être un vecteur de caractères non vide et sans NA.")
+      }
+      if (anyDuplicated(etapes)) {
+        stop("Les noms d'étapes doivent être uniques.")
+      }
+      private$..etat <- data.frame(
+        etape = etapes,
+        statut = rep("a_faire", length(etapes)),
+        message = rep(NA_character_, length(etapes)),
+        stringsAsFactors = FALSE
+      )
+    },
+    terminer = function(etape, message = NA_character_) {
+      i <- match(etape, private$..etat$etape)
+      if (is.na(i)) stop("Étape inconnue: ", etape)
+      private$..etat$statut[i] <- "terminee"
+      private$..etat$message[i] <- message
+      invisible(self)
+    },
+    echouer = function(etape, message) {
+      i <- match(etape, private$..etat$etape)
+      if (is.na(i)) stop("Étape inconnue: ", etape)
+      private$..etat$statut[i] <- "echec"
+      private$..etat$message[i] <- as.character(message)
+      invisible(self)
+    },
+    etat = function() {
+      private$..etat
+    }
+  )
+)
+
+suivi <- SuiviPipeline$new()
+suivi$terminer("importer", "Fichier CSV lu")
+suivi$terminer("valider", "Types et valeurs manquantes vérifiés")
+suivi$etat()
+```
+
+Testez au moins un invariant, par exemple le refus d'une étape inconnue ou de noms dupliqués.
+
+---
+
+## Approfondissement facultatif: une classe R6 pour simuler un jeu
+
+Recyclons le jeu historique *Serpents et Échelles* en l'encapsulant dans une classe R6 nommée `JeuSerpentEchelle`. Ce choix permet de conserver l'état du jeu au sein de l'objet et de le faire muter à chaque tour. Cette activité n'ajoute aucun livrable.
+
+Pour relier l'exemple au projet, utilisez la correspondance suivante:
+
+| Simulateur | Pipeline de données |
+|---|---|
+| position des joueurs | statut de chaque étape |
+| numéro du tour | numéro ou date de l'exécution |
+| gagnant | pipeline terminé sans erreur |
+| `jouer_tour()` | exécuter ou valider l'étape suivante |
+
+Si vous choisissez le jeu, ajoutez deux phrases expliquant ce transfert dans votre note de décision.
 
 ### Spécifications de la classe :
 *   **Champs privés** : `..planche` (vecteur représentant les décalages de cases des serpents et échelles).

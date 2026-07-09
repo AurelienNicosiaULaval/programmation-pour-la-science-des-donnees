@@ -15,6 +15,16 @@ Dans ce laboratoire, vous allez concevoir une fonction robuste pour calculer des
 2.  Mettre en place des tests unitaires avec `testthat`.
 3.  Remplacer des structures itératives manuelles par des fonctions `purrr::map()`.
 
+## Seuil de réussite du noyau obligatoire
+
+À la fin du laboratoire, la trace minimale est:
+
+1. une fonction dont les entrées sont validées;
+2. au moins un test automatisé pertinent qui passe;
+3. une itération qui applique cette fonction à plusieurs entrées.
+
+Les exercices 1 à 3 construisent directement cette trace. Il n'est pas nécessaire de maîtriser la portée lexicale, les promesses ou `browser()` pour la compléter.
+
 ---
 
 ## Exercice 1 : Écriture de la fonction et validation
@@ -119,11 +129,23 @@ res_liste <- quakes |>
   map(\(colonne) calculer_resume_numerique(colonne, na.rm = TRUE))
 
 # 2. Conversion en data frame propre
-# Rappel : map_dfr() étant obsolète dans les versions récentes de purrr, 
-# la méthode moderne recommandée est de combiner map() et list_rbind() ou de convertir manuellement.
+# Rappel : map_dfr() a été remplacée dans les recommandations actuelles de purrr;
+# la combinaison map() et list_rbind() rend le type de sortie plus explicite.
 res_table <- res_liste |> 
   map(as_tibble) |> 
   list_rbind(names_to = "variable")
 
 print(res_table)
 ```
+
+---
+
+## Approfondissement facultatif: observer l'évaluation
+
+Choisissez une seule piste si le noyau obligatoire est terminé:
+
+- insérer temporairement `browser()` dans votre fonction pour inspecter `v` et `na.rm`, puis retirer cet appel du script final;
+- modifier une variable libre utilisée par une fonction et expliquer le rôle de son environnement englobant;
+- reproduire l'exemple de promesse de la page [Lectures](lectures.qmd) et expliquer pourquoi un argument non utilisé n'est pas évalué.
+
+Cette partie sert à comprendre le fonctionnement de R. Elle n'ajoute aucun livrable à la semaine.

@@ -75,17 +75,35 @@ library_calls
 
 Si la sortie est vide, ce n’est pas un problème. La semaine sert aussi à documenter qu’il n’y a pas encore beaucoup de dépendances.
 
+## Règle guidée pour `renv.lock`
+
+Règle unique du cours: `renv.lock` est attendu dès qu’un livrable versionné et destiné à être relancé dépend d’au moins un package externe à R de base. Avant ce moment, son absence est acceptable seulement si l’état des dépendances et la justification sont documentés dans `docs/dependances.md`.
+
+| Situation observée | Décision attendue |
+|---|---|
+| Les fichiers à relancer utilisent seulement R de base | Ne pas initialiser `renv`; indiquer qu’aucune dépendance externe n’est encore requise |
+| Des packages sont seulement explorés et aucun livrable stable n’en dépend encore | Documenter les packages testés et la raison du report; réévaluer la décision au prochain jalon du portfolio |
+| Un script, un rapport ou une autre trace versionnée à relancer utilise un package externe | Initialiser `renv`, produire `renv.lock`, vérifier le fichier puis le versionner |
+
+Si l’initialisation de `renv` échoue dans le troisième cas, documenter temporairement le message d’erreur, les packages utilisés et la prochaine action. Un blocage technique documenté explique un report; il ne change pas la règle.
+
 ## Mini-test de préparation
 
-Répondre brièvement avant la séance:
+Le [gabarit commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd) précise le fonctionnement stable utilisé pendant la session.
 
-1. Quelle différence fais-tu entre installer un package et le charger avec `library()`?
-2. À quoi sert `.gitignore`?
-3. Pourquoi ne faut-il pas versionner `.Rhistory` ou `.RData`?
-4. Que documente un fichier `renv.lock`?
-5. Donne un exemple de fichier qui devrait être conservé dans Git et un exemple de fichier qui devrait être ignoré.
+- Durée cible: 5 à 10 minutes.
+- Questions: répondre aux trois questions ci-dessous, dans l’ordre.
+- Format de remise: trois réponses numérotées et courtes dans le canal officiel indiqué par l’équipe enseignante.
+- Échéance: remettre les réponses avant le début du laboratoire.
+- Règle IA: l’IA est permise pour clarifier une notion. Elle ne remplace pas l’exécution locale du code ni la compréhension des réponses.
+- Trace: le résultat reste enregistré dans le canal de remise et une difficulté est notée pour le laboratoire. Une clarification mineure n’exige pas d’entrée IA; si l’aide influence une trace de portfolio, du code, de la documentation ou une décision conservée, la consigner dans `docs/ai-log.md`.
+- Complétion minimale: les trois réponses sont soumises et `sessionInfo()` ainsi que l’inventaire des packages ont été exécutés.
 
-Statut IA du mini-test: permise pour clarifier une notion, mais les réponses doivent être formulées et comprises par la personne étudiante.
+Questions:
+
+1. Quelle différence y a-t-il entre installer un package et le charger avec `library()`? Quel rôle distinct joue `renv.lock`?
+2. Un script versionné et destiné à être relancé utilise `tibble`. Selon la règle guidée, faut-il créer `renv.lock`? Nommer aussi un fichier local qui devrait être exclu par `.gitignore`.
+3. Dans lequel des trois cas de la règle guidée ton portfolio se trouve-t-il? Citer une sortie réellement observée dans `sessionInfo()` ou dans l’inventaire des packages, puis noter une difficulté à reprendre au laboratoire.
 
 ## À apporter en classe
 

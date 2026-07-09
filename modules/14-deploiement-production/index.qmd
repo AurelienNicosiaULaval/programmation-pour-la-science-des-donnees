@@ -1,60 +1,57 @@
 ---
-title: "Déploiement et mise en production"
-description: "Préparer un livrable R utilisable hors de l’environnement de développement"
+title: "14B - Reproduction et livraison du projet"
+description: "Exécuter le point d'entrée documenté et vérifier le livrable"
 format:
   html:
     embed-resources: true
 ---
 
-## Question du module
+## Question du bloc
 
-Comment préparer un projet R pour qu’une autre personne puisse l’exécuter, le vérifier et l’utiliser dans un contexte réaliste?
+Une autre personne peut-elle exécuter le projet depuis la racine du dépôt, comprendre un échec et vérifier la sortie obtenue?
 
-## Objectifs du module
+## Statut dans la semaine 14
 
-- distinguer prototype, livrable et mise en production;
-- documenter les étapes d’exécution;
-- identifier les dépendances et les paramètres essentiels;
-- prévoir les erreurs fréquentes;
-- préparer un plan minimal de maintenance.
+Ce bloc est le noyau obligatoire de la [semaine 14 intégrée](../14-synthese-finale/index.qmd). Il porte sur la reproduction locale d'un livrable existant.
 
-## Place dans le cours
+Dans ce cours, « déploiement » ne signifie pas qu'il faut publier une application ou un service sur Internet. Aucun déploiement public n'est obligatoire. Un script, un pipeline, un rapport, un tableau de bord ou une application exécutée localement peut satisfaire l'objectif si sa procédure est claire et testée.
 
-Ce module est le bloc de reproduction et de livraison de la semaine 14. Il ne demande pas de créer un produit plus gros en fin de session. Il sert à vérifier que le produit déjà développé peut être relancé, compris et discuté sans explication orale.
+## Objectifs du bloc
 
-La semaine 14 regroupe trois blocs complémentaires:
-
-| Bloc | Page | Rôle |
-|---|---|---|
-| 1 | Modèles d’apprentissage automatique | Construire ou analyser un pipeline de modélisation minimal |
-| 2 | Déploiement et mise en production | Vérifier que le livrable final peut être relancé par une autre personne |
-| 3 | Cycle de vie des modèles | Documenter les limites, le suivi et la maintenance après la remise |
-
-Ce bloc soutient directement la remise finale du projet d’équipe et le jalon portfolio 3.
+- nommer un point d'entrée unique;
+- documenter les dépendances, entrées, paramètres et sorties;
+- exécuter le point d'entrée depuis une session propre;
+- produire des erreurs qui indiquent le fichier ou l'étape en cause;
+- vérifier automatiquement la présence et la validité minimale d'une sortie;
+- distinguer reproduction locale, publication et exploitation continue.
 
 ## Trace attendue
 
-- un README de reproduction;
-- une commande ou procédure d’exécution;
-- une note sur les dépendances;
-- une section sur les limites et les risques.
+- une section `Reproduction` dans le README;
+- une commande principale copiée et testée;
+- un script de vérification qui exécute réellement un point d'entrée simple;
+- une sortie vérifiée ou un message d'erreur informatif;
+- une limite de reproduction ou de publication;
+- le commit associé.
 
-## Place de l’IA
+Cette trace appartient à la checklist unique de semaine 14 et n'est pas une remise séparée.
+
+## Place de l'IA
 
 Statut: permise, déclarée.
 
-Tout usage significatif qui influence la documentation, le code ou l’analyse des risques doit être documenté dans `docs/ai-log.md`.
+Tout usage significatif qui influence le code, la procédure de reproduction ou l'analyse d'une erreur doit être documenté dans `docs/ai-log.md`.
 
 ## Variante STT-6230
 
-Comparer deux stratégies de reproduction ou de livraison du projet: rapport autonome, script de relance, environnement `renv`, automatisation simple ou vérification par GitHub Actions. La trace attendue est une note technique qui recommande une option réaliste et nomme ses limites.
+Comparer deux stratégies réalistes, par exemple une reproduction locale et une automatisation par intégration continue. Recommander une option et préciser ses coûts, ses risques et ce qui demeure non vérifié.
 
-## Pages du module
+## Pages du bloc
 
-- [Avant la classe](avant.qmd)
-- [Pendant la classe](pendant.qmd)
-- [Laboratoire](laboratoire.qmd)
-- [Après la classe](apres.qmd)
-- [Défi de module](defi.qmd)
-- [Lectures](lectures.qmd)
+- [Préparation commune](avant.qmd)
+- [Atelier de reproduction](pendant.qmd)
+- [Laboratoire et gabarit exécutable](laboratoire.qmd)
+- [Consolidation](apres.qmd)
+- [Exercice formatif non noté](defi.qmd)
+- [Lectures ciblées](lectures.qmd)
 - [Ressources](ressources.qmd)

@@ -16,3 +16,9 @@ Chaque défi technique compte pour 10 points. La grille commune ci-dessous est a
 | Total | 10 |  |
 
 Les fichiers exacts des défis évalués sont fournis au moment de l’évaluation. Ils ne sont pas publiés sur le site avant la séance.
+
+## Usage dans les défis de module
+
+Les activités intitulées `Défi de module` sont formatives et ne constituent pas l'un des trois défis techniques notés. Elles peuvent utiliser cette grille comme repère de transfert, sans attribution de points. Leur page doit l'indiquer explicitement.
+
+Pour les tâches de performance ou de parallélisation, la vitesse absolue dépend de la machine et n'est pas évaluée. La qualité de la mesure, la reproductibilité de la comparaison et la justification de la décision sont les preuves attendues.

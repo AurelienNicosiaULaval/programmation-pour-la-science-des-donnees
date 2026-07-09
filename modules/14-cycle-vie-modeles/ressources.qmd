@@ -1,5 +1,5 @@
 ---
-title: "Cycle de vie des modèles - Ressources"
+title: "14C - Limites, suivi et maintenance - Ressources"
 format:
   html:
     embed-resources: true
@@ -7,66 +7,41 @@ format:
 
 ## Ressources internes
 
-- [Modèles d'apprentissage automatique](../14-modeles-apprentissage-automatique/index.qmd)
-- [Portfolio GitHub individuel](../../portfolio.qmd)
-- [Projets](../../projets.qmd)
+- [Semaine 14 intégrée](../14-synthese-finale/index.qmd)
+- [Validation adaptée au projet](../14-modeles-apprentissage-automatique/index.qmd)
+- [Reproduction du livrable](../14-deploiement-production/index.qmd)
+- [Laboratoire et gabarit](laboratoire.qmd)
+- [Exercice formatif non noté](defi.qmd)
+- [Portfolio individuel](../../portfolio.qmd)
+- [Projet d'équipe](../../projets.qmd)
 - [Politique IA](../../ia.qmd)
-- [Laboratoire](laboratoire.qmd)
-- [Défi de module](defi.qmd)
 
 ## Références externes
 
-- Mitchell et al. (2019), [Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993)
-- Gebru et al. (2021), [Datasheets for Datasets](https://arxiv.org/abs/1803.09010)
+- Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D. et Gebru, T. (2019). [Model Cards for Model Reporting](https://doi.org/10.1145/3287560.3287596). *Proceedings of the Conference on Fairness, Accountability, and Transparency*, 220-229. Association for Computing Machinery.
+- Gebru et al. (2021), [Datasheets for Datasets](https://doi.org/10.1145/3458723)
 - Sculley et al. (2015), [Hidden Technical Debt in Machine Learning Systems](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems)
-- NIST (2023), [AI Risk Management Framework 1.0](https://www.nist.gov/itl/ai-risk-management-framework)
 - rOpenSci, [The targets R package user manual](https://books.ropensci.org/targets/)
 
-Ces références servent à structurer la documentation, les limites et le suivi. Le cours demande une fiche de suivi courte, pas un dossier de conformité complet.
+La référence de Mitchell et al. sert de structure documentaire. La fiche du cours est volontairement adaptée aux livrables non prédictifs.
 
 ## Questions de vérification
 
-- Le modèle peut-il être relié à une version du code?
-- Les données d'entrée sont-elles identifiables?
-- La validation est-elle documentée?
-- Les limites sont-elles explicites?
-- Les risques liés aux données, au code, aux usages et à l’interprétation sont-ils nommés?
-- Une vérification future est-elle prévue?
-- La personne responsable de la prochaine action est-elle identifiable?
+- Le livrable et son public prévu sont-ils explicites?
+- Les données, entrées ou paramètres sont-ils identifiables?
+- La fiche renvoie-t-elle à un fichier et à un commit?
+- La validation est-elle décrite, avec ses éléments non vérifiés?
+- Trois risques pertinents sont-ils nommés?
+- Une limite ou un usage hors contexte est-il écrit?
+- La vérification future est-elle exécutable?
 
 ## Erreurs fréquentes
 
-- Conserver seulement le score final du modèle.
-- Oublier la version du code ou des données.
-- Documenter la performance sans préciser comment elle a été obtenue.
-- Confondre un modèle testé localement et un modèle maintenu.
-- Ne pas décrire les usages hors contexte.
-- Oublier de noter quand le modèle devrait être revérifié.
+- Réserver la fiche aux modèles prédictifs.
+- Conserver seulement un score ou une capture d'écran.
+- Oublier la version du code, des données ou des dépendances.
+- Confondre un test local et une garantie de maintenance.
+- Décrire une vérification future sans condition ni procédure.
+- Oublier les usages hors contexte et les risques d'interprétation.
 
-## Gabarit court
-
-```markdown
-# Fiche de suivi du modèle
-
-## Objectif
-
-## Données
-
-## Version du code
-
-## Validation
-
-## Performance
-
-## Limites
-
-## Risques liés aux données
-
-## Risques liés au code
-
-## Risques liés aux usages
-
-## Risques liés à l’interprétation
-
-## Vérification future
-```
+Le [gabarit complet](laboratoire.qmd) est prêt à adapter au projet.

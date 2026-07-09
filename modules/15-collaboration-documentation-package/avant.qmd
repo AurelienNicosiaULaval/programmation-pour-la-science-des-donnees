@@ -1,5 +1,5 @@
 ---
-title: "Site personnel, collaboration et documentation finale - Avant la classe"
+title: "Semaine 15 - Avant la classe"
 format:
   html:
     embed-resources: true
@@ -7,107 +7,55 @@ format:
 
 ## Objectif de préparation
 
-Vérifier d'abord les éléments nécessaires à la séance finale: site Quarto personnel publié, dépôt source du site, dépôt final du projet, README, support bref, issue ou pull request de revue, contributions, bilan individuel et déclaration IA.
+Arriver avec les liens, fichiers et explications nécessaires à la publication du site, à la défense, à la revue de code, à la vérification des contributions et au bilan.
 
-Si votre projet contient des fonctions réutilisables, préparer aussi l'option package R local: outils de compilation, packages de développement (`devtools`, `usethis`, `roxygen2`) et structure minimale d'un package. Cette partie est une consolidation technique, pas une nouvelle remise majeure imposée à toute l'équipe.
+Temps total estimé: 45 minutes. Il n'y a aucun mini-test noté.
 
-Temps de préparation estimé : 40 minutes.
+## Préparation en quatre étapes
 
-## À lire
+### 1. Vérifier le site publié, 15 minutes
 
-1.  **R Packages (2e édition)**, de Hadley Wickham et Jenny Bryan :
-    *   [Chapter 1: Introduction](https://r-pkgs.org/introduction.html) : Pourquoi créer des packages R, la philosophie du développement.
-    *   [Chapter 2: The Whole Game](https://r-pkgs.org/whole-game.html) : Un aperçu de toutes les étapes de développement en créant un premier package jouet.
-    *   [Chapter 7: R Code](https://r-pkgs.org/code.html) : Où mettre vos fonctions et comment gérer les imports/exports.
-    *   [Chapter 16: Roxygen2](https://r-pkgs.org/man.html) : La syntaxe des commentaires pour générer automatiquement la documentation.
+- Ouvrir l'URL GitHub Pages dans une fenêtre privée ou dans un autre navigateur.
+- Tester la navigation et les liens essentiels.
+- Confirmer que les deux réalisations sont commentées.
+- Vérifier le lien vers le portfolio.
+- Noter l'URL du dépôt source et l'identifiant du commit remis.
 
----
+### 2. Vérifier le dépôt final, 10 minutes
 
-## Exemples R à exécuter
+- Lire le README comme une personne externe.
+- Exécuter la commande principale ou le vérificateur de reproduction.
+- Confirmer la sortie attendue.
+- Relire les limites et les éléments non vérifiés.
 
-Ouvrez votre console R et exécutez les instructions suivantes.
+### 3. Préparer la revue de code et la défense, 10 minutes
 
-### Étape 1 : Vérifier la présence des compilateurs système
+Choisir un extrait assez court pour être expliqué sans défilement prolongé. Préparer les réponses suivantes:
 
-Pour compiler et construire un package R localement, votre ordinateur doit disposer de compilateurs C/C++ et d'outils système (comme Rtools sous Windows, ou Xcode Command Line Tools sous macOS).
+- Quel problème résout-il?
+- Quelles sont ses entrées et ses sorties?
+- De quelles dépendances a-t-il besoin?
+- Comment a-t-il été validé?
+- Que se passe-t-il en cas d'entrée invalide ou de donnée manquante?
+- Quelle limite demeure?
 
-```r
-# Installer le package de vérification si nécessaire
-if (!requireNamespace("pkgbuild", quietly = TRUE)) {
-  install.packages("pkgbuild")
-}
+### 4. Vérifier les traces individuelles, 10 minutes
 
-# La fonction suivante doit retourner TRUE
-pkgbuild::has_build_tools()
-```
+- Relire `docs/contributions.md`.
+- Confirmer que les contributions sont reliées à des fichiers, issues, revues ou commits.
+- Finaliser le bilan individuel.
+- Compléter `docs/ai-log.md` si un usage significatif de l'IA a influencé le travail.
 
-*Si la fonction retourne `TRUE`, vous êtes prêt ! Sinon, R vous invitera à installer les outils manquants.*
+## À apporter
 
-### Étape 1 bis : Vérifier le site Quarto personnel
+- URL du site publié;
+- URL du dépôt source du site;
+- URL du dépôt final du projet;
+- identifiant du commit évalué;
+- support de présentation;
+- extrait de code;
+- chemin vers `docs/contributions.md`;
+- chemin vers le bilan individuel;
+- chemin vers `docs/ai-log.md` lorsque pertinent.
 
-Dans le dossier du site personnel, lancez:
-
-```bash
-quarto render
-git status
-```
-
-Le site doit aussi être consultable sur GitHub Pages avant la remise.
-
-### Étape 2 : Modèle de commentaire `roxygen2`
-
-En R, la documentation n'est pas écrite dans les fiches `.Rd` directement. On écrit des commentaires spéciaux débutant par `#'` juste au-dessus des fonctions dans nos fichiers R.
-
-Voici un exemple type de fonction documentée :
-
-```r
-#' Distance de Manhattan
-#'
-#' Calcule la distance de Manhattan entre deux points de même dimension.
-#'
-#' @param point1 Un vecteur numérique représentant les coordonnées du premier point.
-#' @param point2 Un vecteur numérique représentant les coordonnées du deuxième point.
-#' @return Un objet de classe \code{"distman"} contenant la distance calculée.
-#' @author Votre Nom
-#' @export
-#' @examples
-#' dist_manhattan(point1 = c(0, -5), point2 = c(2, -10))
-dist_manhattan <- function(point1, point2) {
-  if (length(point1) != length(point2)) {
-    stop("Les points doivent avoir la même longueur.")
-  }
-  sortie <- list(dist = sum(abs(point1 - point2)))
-  class(sortie) <- "distman"
-  return(sortie)
-}
-```
-
----
-
-## Questions d'autovérification
-
-Il n'y a pas de mini-test noté à la semaine 15. Les questions suivantes servent à vérifier sa préparation; les réponses sont discutées en classe.
-
-### Question 1 : Le rôle de devtools::check()
-Que fait précisément la commande `devtools::check()` (ou `R CMD check` sous le capot) ?
-
-*   **Option A :** Elle vérifie que le code s'exécute le plus rapidement possible (benchmark).
-*   **Option B :** Elle lance une série complète de tests de conformité, vérifie les fiches d'aide, teste le code des exemples, s'assure que toutes les dépendances sont déclarées, et exécute les tests unitaires.
-*   **Option C :** Elle télécharge la dernière version de R sur le CRAN.
-*   **Option D :** Elle formate le code selon les règles du tidyverse.
-
-### Question 2 : Rendre une fonction disponible à l'utilisateur
-Quelle balise spéciale de commentaire `roxygen2` devez-vous absolument ajouter au-dessus d'une fonction pour qu'elle soit exportée (rendue accessible à l'utilisateur après un `library(monpackage)`) ?
-
-*   **Option A :** `#' @import`
-*   **Option B :** `#' @public`
-*   **Option C :** `#' @export`
-*   **Option D :** `#' @noRd`
-
-### Question 3 : Gestion des dépendances logicielles
-Si une fonction de votre package fait appel à la fonction `geom_point()` du package `ggplot2`, quelle est la bonne pratique pour le déclarer dans votre package R ?
-
-*   **Option A :** Écrire `library(ggplot2)` au début de votre fonction R.
-*   **Option B :** Ajouter `ggplot2` dans le champ `Imports` du fichier `DESCRIPTION` (via `usethis::use_package()`) et appeler la fonction sous la forme `ggplot2::geom_point()`.
-*   **Option C :** Copier le code source de `geom_point()` directement dans votre package.
-*   **Option D :** Rien, R charge automatiquement tous les packages installés sur le système.
+Le package R est une [annexe facultative](annexe-package-r.qmd). Ne pas consacrer le temps de préparation obligatoire à cette option tant que les éléments ci-dessus ne sont pas terminés.

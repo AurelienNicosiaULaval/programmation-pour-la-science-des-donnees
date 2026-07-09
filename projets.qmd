@@ -121,7 +121,7 @@ projet-stt4230/
 | Semaine 6 | Proposition | Sujet, équipe, question, source de données, risques, dépôt initial |
 | Semaine 9 | Point de suivi | Importation, nettoyage initial, premières visualisations, problèmes rencontrés |
 | Semaine 12 | Version intermédiaire | Pipeline partiel, rapport ou tableau de bord partiel, validations initiales, contributions visibles |
-| Semaine 14 | Remise finale | Produit complet, documentation de reproduction, limites, contribution individuelle, `ai-log` si pertinent |
+| Semaine 14 | Remise finale | Produit complet, documentation de reproduction, limites, contribution individuelle, `docs/ai-log.md` si pertinent |
 | Semaine 15 | Défense du projet | Démonstration, revue de code, questions, bilan final individuel |
 
 Le point de suivi de la semaine 9 est formatif. Il sert à éviter les projets trop tardifs, trop larges ou techniquement bloqués.
@@ -257,7 +257,7 @@ Le projet compte pour 30 points. Le point de suivi de la semaine 9 est formatif 
 | Produit final: analyse, visualisations, rapport Quarto ou tableau de bord | 7 |
 | Validation, limites et jugement: tests, contrôles de cohérence, interprétation prudente | 3 |
 | Collaboration et traces individuelles: issues, commits, pull requests, `docs/contributions.md` | 3 |
-| Transparence IA et documentation finale: `ai-log`, README, documentation de reproduction | 1 |
+| Transparence IA et documentation finale: `docs/ai-log.md`, README, documentation de reproduction | 1 |
 | Total | 30 |
 
 Pour STT-6230, la note technique courte est obligatoire. Son absence limite l’accès aux points associés à la validation, aux limites, au jugement et à la documentation.

@@ -7,39 +7,40 @@ format:
 
 ## Consignes du défi de la semaine
 
-L'objectif de ce défi est de structurer un morceau de code ou de traitement issu de votre projet de session (ou d'un cas d'utilisation réel) en utilisant les principes de la programmation orientée objet en R.
+L'objectif de ce défi est de structurer un résultat réel du projet ou du portfolio avec S3, puis de décider explicitement si R6 apporterait un bénéfice pour ce même contexte.
 
-Vous devez choisir **l'une des deux options** suivantes :
+Ce défi de module est formatif et non noté. Il prépare les défis techniques notés. La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère de qualité, mais elle ne transforme pas cette activité en remise notée.
 
-### Option A : Création d'une classe S3 de rapport
-Si votre projet génère des structures de données (listes imbriquées, statistiques par groupes, tables de modélisation) :
+## Noyau obligatoire: objet S3 et décision R6
+
+Si votre projet génère des structures de données, des statistiques par groupes ou des résultats de validation:
 1.  **Constructeur S3** : Créez une fonction constructeur propre qui valide les types de données entrants et retourne un objet avec une classe personnalisée (ex: `"validation_donnees"` ou `"analyse_comparative"`).
 2.  **Surcharge de méthodes** : Écrivez des méthodes personnalisées pour :
     *   `print()` : affiche un résumé élégant et lisible directement dans la console R.
     *   `summary()` : calcule et retourne des indicateurs globaux sous forme de tableau.
     *   `plot()` (facultatif) : génère un graphique `ggplot2` standardisé représentant le contenu de votre objet.
 
-### Option B : Encapsulation d'une étape de pipeline en R6
-Si votre projet interagit avec des ressources externes ou nécessite de conserver un état interne (ex: une connexion à une base de données, un client d'API web, ou un gestionnaire de configuration locale) :
-1.  **Définition R6Class** : Créez une classe R6 encapsulant les paramètres (champs privés comme les clés d'accès ou configurations).
-2.  **Validation des paramètres** : Utilisez la méthode `initialize()` pour valider la validité des entrées.
-3.  **Méthodes d'action** : Implémentez des méthodes de mise à jour ou de récupération de données modifiant l'état de l'objet (sémantique de référence).
-4.  **Tests unitaires** : Rédigez au moins 3 tests unitaires avec `testthat` vérifiant que l'objet s'instancie correctement et que les validations privées bloquent les entrées erronées.
+3. **Test d'invariant**: vérifiez au moins une règle du constructeur ou d'une méthode.
+4. **Décision R6**: rédigez cinq à huit lignes indiquant si le contexte exige un état mutable partagé, une connexion, un cache ou le suivi d'étapes. Concluez par `R6 retenu` ou `R6 non retenu`.
+
+### Extension choisie: prototype R6
+
+Seulement si la décision est `R6 retenu`, adaptez la classe `SuiviPipeline` du [laboratoire](laboratoire.qmd) ou créez un prototype minimal lié aux données. Testez une mutation et un cas invalide. Une simple décision `R6 non retenu`, correctement justifiée, satisfait entièrement le noyau obligatoire.
 
 ---
 
 ## Livrables attendus dans votre portfolio
 
-1.  **Le code source de la classe** : enregistré dans un fichier R séparé (ex: `R/classe_S3.R` ou `R/client_R6.R`).
+1.  **Le code source de la classe S3** : enregistré dans un fichier R séparé (ex: `R/classe_s3.R`).
 2.  **Un script de démonstration** : montrant comment créer l'objet, interagir avec ses méthodes, et le résultat affiché dans la console.
 3.  **Une note de conception** dans votre journal de bord décrivant :
-    *   Le choix entre le système S3 et R6 pour votre cas d'usage (pourquoi ce système est-il le plus adapté ?).
+    *   La décision sur R6 pour votre cas d'usage et les critères utilisés.
     *   Les invariants (règles de validation) de votre classe.
     *   Un exemple d'affichage console ou de fonctionnement.
 
 ---
 
-## Grille d'évaluation simplifiée
+## Repères de rétroaction formative
 
 *   **Cohérence** : Le choix entre S3 et R6 est pertinent vis-à-vis du problème (S3 pour du dispatch fonctionnel sans état, R6 pour de l'encapsulation stricte et de la référence).
 *   **Validation** : Les données d'entrée sont validées dès l'initialisation et lèvent des exceptions compréhensibles en cas de problème.
@@ -49,7 +50,7 @@ Si votre projet interagit avec des ressources externes ou nécessite de conserve
 
 Statut: permise, déclarée.
 
-L'IA peut aider à produire le squelette d'une classe ou à comprendre un message d'erreur de dispatch. Le choix du système, les invariants et la note de conception doivent rester ceux de la personne étudiante. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative la classe, les tests ou la note.
+L'IA peut aider à retrouver la syntaxe d'une méthode S3 ou à esquisser une interface R6. Toute contribution significative de l'IA doit être consignée dans `docs/ai-log.md` en indiquant l'outil, le but de l'utilisation, l'élément retenu et la vérification effectuée. Le code et le texte conservés doivent être compris, vérifiés, adaptés au contexte et défendables par la personne étudiante.
 
 ## Variante STT-6230
 

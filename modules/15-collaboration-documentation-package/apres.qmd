@@ -1,33 +1,42 @@
 ---
-title: "Site personnel, collaboration et documentation finale - Après la classe"
+title: "Semaine 15 - Après la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Consolidation et livrables
+## Vérification finale des remises
 
-Après la séance finale, vous devez vérifier que les traces évaluées sont bien déposées: site Quarto personnel publié, dépôt source du site, dépôt final du projet, support bref, revue de code, `docs/contributions.md`, déclaration IA lorsque pertinente et bilan individuel.
+Après la séance, confirmer que les traces évaluées sont accessibles dans leur état final.
 
-Si vous avez réalisé l'option package R local, ajoutez aussi les traces techniques correspondantes dans votre portfolio ou dans le dépôt de projet.
+## Site personnel
 
-### Activités de consolidation
+- URL publique fonctionnelle;
+- dépôt source accessible selon les consignes;
+- commit remis identifiable;
+- deux réalisations commentées;
+- lien au portfolio;
+- aucune donnée ou information non autorisée;
+- déclaration IA présente lorsque pertinente.
 
-1.  **Vérification diagnostique (Zéro Warning/Error)** :
-    *   Exécutez `devtools::check()` dans votre console R.
-    *   Assurez-vous qu'aucun message d'erreur ou d'avertissement n'est affiché.
-2.  **Validation des tests** :
-    *   Vérifiez que tous les tests unitaires passent avec succès (`devtools::test()`).
-3.  **Mise à jour du portfolio** :
-    *   Ajoutez le dossier de votre package de défi dans votre dépôt de portfolio (ou commettez les sources proprement).
-    *   Rédigez la note technique d'explication et de réussite des vérifications dans votre journal de bord.
+## Projet d'équipe
 
----
+- dépôt et commit final;
+- README et commande de reproduction;
+- support de présentation;
+- preuve de validation;
+- limites documentées;
+- extrait utilisé pour la revue de code;
+- `docs/contributions.md`;
+- bilan individuel;
+- `docs/ai-log.md` lorsque pertinent.
 
-## Les pièges classiques de la création de package en R
+## Dernière vérification
 
-*   **Ne pas déclarer les dépendances externes** : Utiliser des fonctions comme `ggplot()` ou `filter()` sans ajouter les packages correspondants dans la rubrique `Imports` de DESCRIPTION (via `usethis::use_package()`).
-*   **Oublier le préfixe `package::fonction` dans le code** : Même après avoir configuré les dépendances et les imports Roxygen2, vous devez de préférence appeler les fonctions externes sous la forme `dplyr::filter()` dans le corps de vos fonctions pour éviter tout risque de masquage de nom.
-*   **Laisser des appels à `library()` ou `require()` dans vos fonctions** : Ces appels sont strictement interdits dans les fonctions d'un package R car ils forcent le chargement global et peuvent perturber la session de l'utilisateur.
-*   **Laisser des chemins absolus dans les exemples ou les tests** : Avoir du code comme `read.csv("/Users/monnom/Documents/data.csv")` fera planter `devtools::check()` immédiatement (car la machine de test ou de vos collègues n'a pas accès à ce dossier). Utilisez uniquement des chemins relatifs ou des objets générés à la volée.
-*   **Oublier d'exporter les méthodes S3** : Oublier de mettre le tag `#' @export` sur des fonctions d'affichage de classe comme `print.distman`. Si vous ne l'exportez pas, la méthode S3 ne sera pas reconnue par R lors de l'affichage de l'objet.
+Ouvrir les URL à partir d'un navigateur qui n'utilise pas votre session habituelle. Vérifier ensuite que le commit remis correspond bien aux fichiers présentés.
+
+Ne pas ajouter une nouvelle fonctionnalité après la défense sauf si une correction demandée est explicitement autorisée. Conserver toute correction dans un commit distinct et documenté.
+
+## Option facultative
+
+Une équipe qui a terminé toutes les remises et possède des fonctions R réutilisables peut poursuivre avec l'[annexe package R](annexe-package-r.qmd). Cette option n'ajoute aucune production obligatoire de semaine 15.

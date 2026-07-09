@@ -1,5 +1,5 @@
 ---
-title: "Programmation asynchrone et parallèle"
+title: "12B - Programmation asynchrone et parallèle"
 description: "Quand le parallèle aide-t-il, et quand complique-t-il inutilement le projet?"
 format:
   html:
@@ -10,16 +10,19 @@ format:
 
 Quand le calcul parallèle ou asynchrone est-il réellement bénéfique en R, et quand introduit-il une complexité ou une surcharge inutiles?
 
+> [!IMPORTANT]
+> Ce bloc est une voie choisie de la [semaine 12 intégrée](../12-synthese-performance-parallele/index.qmd). Commencez par le noyau 12A. Vous pouvez compléter la semaine sans paralléliser si le profilage ne justifie pas cette complexité.
+
 ## Rôle dans le cours
 
-Ce module fait suite au profilage de code. Après avoir appris à mesurer et optimiser votre code de manière séquentielle (module précédent), vous apprendrez à exploiter les architectures multi-cœurs de vos ordinateurs. R étant mono-threadé par défaut, l'utilisation de packages comme `future` et `furrr` permet de distribuer les calculs lourds (simulations Monte Carlo, Bootstraps, réglages d'hyperparamètres) sur plusieurs processus en parallèle. Vous étudierez les gains réels, mais aussi les pièges classiques (surcharge de communication, perte de reproductibilité, consommation mémoire).
+Ce bloc fait suite au profilage de code. Il sert à expérimenter une architecture multiprocessus lorsque les tâches sont indépendantes et que la mesure initiale rend cette piste crédible. Les packages `future` et `furrr` permettent de distribuer certains calculs, mais la surcharge de communication, la copie en mémoire et la reproductibilité peuvent rendre la solution parallèle moins bonne. Cette conclusion est pleinement acceptable.
 
 ## Objectifs du module
 
-À la fin de la semaine, chaque personne devrait pouvoir:
+À la fin de cette voie choisie, la personne devrait pouvoir:
 
 - comprendre les concepts d'évaluation synchrone (bloquante) versus asynchrone (non bloquante) en R;
-- configurer un plan de calcul parallèle adapté à sa machine avec le package `future`;
+- configurer un plan de calcul adapté à sa machine avec au plus deux workers et un repli séquentiel;
 - remplacer les appels `purrr::map()` par leurs équivalents parallèles `furrr::future_map()`;
 - garantir la reproductibilité des simulations en contrôlant les graines aléatoires en parallèle (générateur L'Ecuyer-CMRG);
 - évaluer le coût de transfert des données (overhead) vers les processus de travail;
@@ -27,26 +30,34 @@ Ce module fait suite au profilage de code. Après avoir appris à mesurer et opt
 
 ## Compétences visées
 
-- Mettre en place un plan de calcul multisession ou multicœur propre en R.
+- Mettre en place un plan `multisession` prudent ou conserver le plan séquentiel.
 - Paralléliser une boucle d'itération fonctionnelle sans effets de bord.
 - Sécuriser la génération de nombres aléatoires parallèles avec `seed = TRUE`.
-- Quantifier la surcharge (overhead) et le gain d'accélération (Speedup) à l'aide de graphiques comparatifs.
+- Comparer une exécution séquentielle et une exécution parallèle sans attendre une vitesse absolue ni une accélération minimale.
+
+## Politique locale de ressources
+
+- Utiliser au maximum deux workers pour les exercices du cours.
+- Laisser si possible un coeur disponible pour le système.
+- Employer `future::availableCores()` plutôt qu'un nombre supposé de coeurs.
+- Revenir à `plan(sequential)` à la fin ou dès qu'une erreur, une pression mémoire ou une instabilité apparaît.
+- Conserver la voie séquentielle comme solution valide et reproductible.
 
 ## Déroulement
 
 | Moment | Page à utiliser | Résultat |
 |---|---|---|
-| Avant la classe | [Avant la classe](avant.qmd) | Lire les concepts de futurs et d'itérations parallèles et faire le mini-test |
-| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les démos de plans de calcul, de surcharge mémoire et de reproductibilité |
-| Laboratoire | [Laboratoire](laboratoire.qmd) | Paralléliser une simulation bootstrap lourde et valider sa reproductibilité |
-| Défi de module | [Défi de module](defi.qmd) | Adapter une tâche à une exécution parallèle documentée |
-| Après la classe | [Après la classe](apres.qmd) | Déposer la trace portfolio: plan `future`, comparaison, reproductibilité et commit |
+| Orientation | [Avant la classe](avant.qmd) | Lire les critères de décision; l'auto-vérification est facultative et non remise |
+| Pendant la classe | [Pendant la classe](pendant.qmd) | Observer les plans de calcul, la surcharge mémoire et la reproductibilité |
+| Laboratoire choisi | [Laboratoire](laboratoire.qmd) | Tester une simulation séquentielle et parallèle avec garde-fous |
+| Défi facultatif | [Défi de module](defi.qmd) | Adapter une tâche seulement si le profilage le justifie |
+| Après la classe | [Après la classe](apres.qmd) | Ajouter la décision à l'unique fiche de semaine 12 |
 
 ## Place de l’IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à convertir une syntaxe d'itération complexe ou à comprendre un message d'erreur lié aux variables globales non exportées. La personne étudiante doit néanmoins être capable de justifier la configuration de son plan de calcul et d'interpréter le gain mesuré. Tout usage significatif doit être documenté dans `docs/ai-log.md`.
+L'IA peut aider à expliquer un message de `future` ou à convertir une itération. Toute contribution significative de l'IA doit être consignée dans `docs/ai-log.md` en indiquant l'outil, le but de l'utilisation, l'élément retenu et la vérification effectuée. Le code et le texte conservés doivent être compris, vérifiés, adaptés au contexte et défendables par la personne étudiante.
 
 Le défi technique 3 de la semaine 13 pourra mobiliser ces compétences: le diagnostic, l'amélioration mesurée et la validation y seront évalués avec une IA intégrée à la tâche.
 
@@ -55,6 +66,8 @@ Le défi technique 3 de la semaine 13 pourra mobiliser ces compétences: le diag
 Analyser théoriquement et empiriquement les limites d'accélération d'une simulation ou d'un traitement du projet en appliquant la **Loi d'Amdahl**. La trace attendue est un calcul de speedup, une estimation de la portion séquentielle et une recommandation sur l’intérêt réel de paralléliser.
 
 ## Pages du module
+
+- [Page d'entrée de la semaine 12](../12-synthese-performance-parallele/index.qmd)
 
 - [Avant la classe](avant.qmd)
 - [Pendant la classe](pendant.qmd)

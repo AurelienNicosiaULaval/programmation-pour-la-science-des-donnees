@@ -1,5 +1,5 @@
 ---
-title: "Modèles d'apprentissage automatique - Ressources"
+title: "14A - Validation adaptée au projet - Ressources"
 format:
   html:
     embed-resources: true
@@ -7,46 +7,40 @@ format:
 
 ## Ressources internes
 
-- [Avant la classe](avant.qmd)
-- [Pendant la classe](pendant.qmd)
-- [Laboratoire](laboratoire.qmd)
-- [Défi de module](defi.qmd)
-- [Cycle de vie des modèles](../14-cycle-vie-modeles/index.qmd)
+- [Semaine 14 intégrée](../14-synthese-finale/index.qmd)
+- [Atelier selon le type de projet](pendant.qmd)
+- [Laboratoire prédictif facultatif](laboratoire.qmd)
+- [Exercice formatif non noté](defi.qmd)
+- [Reproduction du livrable](../14-deploiement-production/index.qmd)
+- [Limites et suivi](../14-cycle-vie-modeles/index.qmd)
 - [Projet d'équipe](../../projets.qmd)
 
-## Documentation officielle
+## Ressources par voie
 
-- [tidymodels - Get Started](https://www.tidymodels.org/start/)
-- [tidymodels - Resampling](https://www.tidymodels.org/start/resampling/)
-- [recipes](https://recipes.tidymodels.org/)
-- [parsnip](https://parsnip.tidymodels.org/)
-- [workflows](https://workflows.tidymodels.org/)
-- [yardstick](https://yardstick.tidymodels.org/)
+| Voie | Ressources |
+|---|---|
+| Prédiction | [tidymodels](https://www.tidymodels.org/start/), [yardstick](https://yardstick.tidymodels.org/) |
+| Description ou analyse | [pointblank](https://rstudio.github.io/pointblank/), [The Turing Way](https://book.the-turing-way.org/reproducible-research/reproducible-research) |
+| Visualisation ou tableau de bord | [Quarto - Figures](https://quarto.org/docs/authoring/figures.html), [W3C - Images](https://www.w3.org/WAI/tutorials/images/) |
+| Application | [Shiny - Testing](https://shiny.posit.co/r/articles/improve/testing-overview/) |
+| Génie logiciel | [testthat](https://testthat.r-lib.org/articles/testthat.html) |
 
-## Questions de vérification
+## Checklist commune
 
-- La variable cible est-elle définie avant de choisir le modèle?
-- La séparation entraînement/évaluation est-elle faite avant l'ajustement?
-- La mesure de performance correspond-elle au type de cible?
-- Une référence simple est-elle fournie?
-- Les limites des données sont-elles écrites?
-- Le script peut-il être relancé dans une session propre?
+- La validation correspond à la finalité du projet.
+- La preuve est produite par code ou par une procédure vérifiable.
+- Une référence, un contrôle ou un comportement attendu est explicite.
+- La conclusion est proportionnée à la preuve.
+- Une limite est écrite.
+- Le fichier et le commit sont retrouvables.
 
 ## Erreurs fréquentes
 
-- Évaluer le modèle sur les données utilisées pour l'entraîner.
-- Choisir une mesure de performance sans lien avec la question.
-- Confondre corrélation, prédiction et causalité.
-- Oublier de documenter la variable cible.
-- Ne pas comparer le modèle à une référence simple.
-- Présenter une performance comme définitive alors qu'elle dépend d'une seule séparation des données.
-
-## Données
-
-Prioriser des données publiques canadiennes ou québécoises lorsque le contexte du projet le permet:
-
-- [Données Québec](https://www.donneesquebec.ca/)
-- [Gouvernement ouvert du Canada](https://rechercher.ouvert.canada.ca/data/)
-- [Ville de Québec - données ouvertes](https://www.ville.quebec.qc.ca/services/donnees-services-ouverts/index.aspx)
+- Ajouter un modèle parce qu'il semble attendu alors qu'il ne répond pas à la question.
+- Valider sur les mêmes données ou cas qui ont servi à construire le résultat sans le signaler.
+- Confondre absence d'erreur et preuve de validité.
+- Choisir une mesure sans lien avec l'usage prévu.
+- Oublier les entrées invalides, les valeurs extrêmes ou les filtres.
+- Présenter un résultat comme définitif à partir d'un seul contrôle.
 
 Les données sensibles, nominatives ou dont les droits de diffusion ne sont pas clairs ne doivent pas être publiées dans un dépôt public.

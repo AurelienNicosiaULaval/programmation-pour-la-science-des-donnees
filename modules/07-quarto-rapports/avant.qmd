@@ -3,6 +3,8 @@ title: "Quarto et rapports - Avant la classe"
 format:
   html:
     embed-resources: true
+execute:
+  eval: false
 ---
 
 ## Objectif de préparation
@@ -21,13 +23,13 @@ Temps recommandé : 30 à 45 minutes.
 
 ## Concept clé : Quarto vs R Markdown
 
-Quarto est la nouvelle génération d'outils de publication scientifique développée par Posit (anciennement RStudio). Il remplace R Markdown en offrant plusieurs améliorations :
+Quarto est un outil de nouvelle génération développé par Posit pour la publication scientifique et technique. Il constitue une alternative moderne à R Markdown et propose notamment les possibilités suivantes:
 
 1.  **Indépendance du langage** : Quarto supporte nativement R, Python, Julia et Observable sans dépendre de l'écosystème de packages R (bien qu'il utilise le moteur Knitr en coulisse pour compiler le code R).
 2.  **Syntaxe unifiée** : Toutes les options de formatage et de rendu sont centralisées dans le YAML.
 3.  **Nouvelle syntaxe de blocs de code** : 
-    *   *R Markdown (obsolète)* : ````{r mon_bloc, echo=FALSE, warning=FALSE}```` (les options sont définies dans les accolades, ce qui devient vite illisible).
-    *   *Quarto (recommandé)* : Les options de bloc sont déclarées au début du bloc en utilisant le commentaire spécial `#|` (appelé "pipe comment") :
+    *   *Syntaxe classique R Markdown*: ````{r mon_bloc, echo=FALSE, warning=FALSE}```` (les options sont définies dans les accolades).
+    *   *Syntaxe Quarto utilisée dans ce cours*: les options de bloc sont déclarées au début du bloc en utilisant le commentaire spécial `#|`:
         ```r
         #| label: mon_bloc
         #| echo: false
@@ -57,7 +59,7 @@ Ceci est du texte en **gras** et en *italique*.
 
 ## Bloc de R
 
-```{{r}}
+```{r}
 #| label: calcul-simple
 #| echo: true
 
@@ -65,8 +67,22 @@ summary(cars)
 ```
 ````
 
-## À noter avant la classe
+## Mini-test de préparation
 
-- Quel package R est utilisé par Quarto pour exécuter les blocs de code R par défaut ?
-- Quelle est la fonction de l'option YAML `embed-resources: true` ?
-- Quelle option de bloc permet de masquer le code R tout en affichant ses résultats (graphiques, tables) ?
+Ce mini-test fait partie de la composante « Mini-tests de préparation » décrite dans la page [Évaluations](../../evaluations.qmd).
+
+Le [gabarit commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd) précise le fonctionnement stable utilisé pendant la session.
+
+- Durée cible: 5 à 10 minutes.
+- Questions: répondre aux trois questions ci-dessous, dans l’ordre.
+- Format de remise: trois réponses numérotées et courtes dans le canal officiel indiqué par l’équipe enseignante.
+- Échéance: remettre les réponses avant le début du laboratoire.
+- Règle IA: l’IA est permise pour clarifier une notion. Elle ne remplace pas l’exécution locale du code ni la compréhension des réponses.
+- Trace: le résultat reste enregistré dans le canal de remise et une difficulté est notée pour le laboratoire. Une clarification mineure n’exige pas d’entrée IA; si l’aide influence une trace de portfolio, du code, de la documentation ou une décision conservée, la consigner dans `docs/ai-log.md`.
+- Complétion minimale: les trois réponses sont soumises et le fichier `test.qmd` a été rendu localement.
+
+Questions:
+
+1. Quel package R est utilisé par Quarto pour exécuter les blocs de code R par défaut?
+2. Quelle est la fonction de l’option YAML `embed-resources: true`, et quelle limite ne résout-elle pas à elle seule?
+3. Après avoir rendu `test.qmd`, indiquer la commande ou l’action utilisée, le résultat réellement observé et une difficulté à reprendre au laboratoire. Nommer aussi l’option de bloc qui masquerait le code R tout en affichant ses résultats.

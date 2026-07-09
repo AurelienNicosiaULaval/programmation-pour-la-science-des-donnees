@@ -7,16 +7,18 @@ format:
 
 ## Activités en classe
 
+Le noyau obligatoire de la séance est le triplet fonction, test automatisé et itération. Les notions de portée lexicale, d'environnements, de promesses et l'utilisation de `browser()` sont présentées comme approfondissements et ne sont pas exigées dans la trace minimale de la semaine.
+
 ### 1. Retour sur le mini-test et clarifications (15 min)
 *   **Question 1 :** Pourquoi la condition `cond_e <- c` échoue-t-elle ? R ne peut pas convertir un objet de type fonction (`closure`) en valeur logique de façon implicite. Les conditions numériques (ex: `1`) sont converties en `TRUE` (car tout nombre différent de 0 vaut `TRUE`), mais pour des fonctions, la conversion échoue avec l'erreur : `"un objet de type 'closure' ne peut être converti en type 'logical'"`.
-*   **Question 2 :** L'option D (`repeat`) n'est pas équivalente. Pour qu'une boucle `repeat` se comporte comme une boucle `while (i < length(letters))`, il faut que la condition d'arrêt (le `break`) soit le négatif strict de la condition du `while`, c'est-à-dire `i >= length(letters)` ou `!(i < length(letters))`, et non `i > length(letters)`.
-*   **Question 3 :** L'option C est la seule correcte. Elle passe l'argument `all = all` (qui récupère la valeur locale de l'argument de la fonction) et transmet les arguments supplémentaires via `...`.
+*   **Question 2:** L'option D retourne une liste, alors que la boucle préallouée, `vapply()` et `map_dbl()` retournent un vecteur numérique. La boucle n'est pas incorrecte: elle est ici une solution explicite et fiable grâce à la préallocation.
+*   **Question 3:** Il n'y a pas une réponse unique. Vérifiez que le chemin existe, que la répétition est observable et que les entrées et la sortie proposées permettraient de remplacer au moins deux occurrences sans dépendre d'une variable globale cachée.
 
 ---
 
-### 2. Démonstration 1 : Diagnostics interactifs avec `browser()` (15 min)
+### 2. Approfondissement facultatif: diagnostic interactif avec `browser()` (15 min)
 
-Le débogage interactif est un outil fondamental pour comprendre l'état interne de nos fonctions à une étape précise de leur exécution.
+Cette démonstration permet de comprendre l'état interne d'une fonction à une étape précise de son exécution. Il faut savoir reconnaître l'outil, mais sa maîtrise n'est pas évaluée cette semaine.
 
 Exécutons ensemble ce bloc de code en classe pour interrompre l'exécution et inspecter l'environnement local :
 
@@ -57,7 +59,7 @@ compte_impair_debug(c(1, 2, NA, 5), na.rm = TRUE)
 
 ---
 
-### 3. Démonstration 2 : Des boucles à `purrr::map()` (20 min)
+### 3. Noyau obligatoire: des boucles à `purrr::map()` (20 min)
 
 Nous allons comparer la syntaxe d'une boucle classique pour compter le nombre de valeurs uniques par colonne dans le jeu de données `iris` avec la syntaxe moderne de `purrr`.
 
@@ -81,7 +83,7 @@ resultats_purrr <- map_int(iris, ~ length(unique(.x)))
 print(resultats_purrr)
 ```
 
-**Avantages de la version `purrr` :**
-1.  **Pas d'initialisation manuelle** d'un conteneur vide (évite le bug fréquent de l'initialisation trop courte ou de type incorrect).
-2.  **Sécurité des types** : si une colonne retournait autre chose qu'un entier unique, `map_int` générerait une erreur immédiate.
-3.  **Code concis et déclaratif** : on exprime *ce que l'on veut faire* plutôt que *comment itérer*.
+**Points à comparer:**
+1.  `map_int()` construit la sortie sans préallocation explicite; la boucle montre directement comment le vecteur est rempli.
+2.  `map_int()` valide ici le type de chaque résultat; `vapply()` ou une affectation dans un vecteur préalloué peuvent offrir un contrôle comparable.
+3.  `map_int()` est concise pour une transformation simple. Une boucle explicite peut être plus lisible lorsque le contrôle de flux ou l'état évolue à chaque itération.

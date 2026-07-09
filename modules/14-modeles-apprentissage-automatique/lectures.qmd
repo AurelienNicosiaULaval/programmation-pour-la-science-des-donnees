@@ -1,45 +1,54 @@
 ---
-title: "Modèles d'apprentissage automatique - Lectures"
+title: "14A - Validation adaptée au projet - Lectures"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif des lectures
+## Lecture selon la voie choisie
 
-Préparer la séance en distinguant clairement quatre gestes: formuler une question prédictive, séparer les données d'entraînement et d'évaluation, ajuster un modèle, puis interpréter les résultats avec prudence.
+Ces références sont facultatives et ciblées. Dans la préparation unique de semaine 14, consacrer au plus 10 minutes à la ressource qui correspond au projet. Il n'y a aucun mini-test noté.
 
-## Lecture principale
+### Projet prédictif
 
-Lire la documentation officielle de tidymodels sur la structure générale d'un flux de modélisation:
+- [tidymodels - Get Started](https://www.tidymodels.org/start/)
+- [tidymodels - Resampling](https://www.tidymodels.org/start/resampling/)
+- [yardstick](https://yardstick.tidymodels.org/)
 
-- [Get Started - tidymodels](https://www.tidymodels.org/start/)
-- [Resampling - tidymodels](https://www.tidymodels.org/start/resampling/)
-- [yardstick: Tidy Characterizations of Model Performance](https://yardstick.tidymodels.org/)
+Repérer la séparation entre entraînement et évaluation, la mesure de performance et la comparaison à une référence simple.
 
-Pendant la lecture, noter la différence entre:
+### Projet descriptif ou analytique
 
-- la variable cible et les variables explicatives;
-- l'entraînement et l'évaluation;
-- une performance apparente et une performance estimée sur des données non vues;
-- une mesure d'erreur et une interprétation substantielle.
+- [pointblank - validation de données](https://rstudio.github.io/pointblank/)
+- [The Turing Way - Reproducible Research](https://book.the-turing-way.org/reproducible-research/reproducible-research)
 
-## Lecture complémentaire
+Repérer un contrôle de qualité, une hypothèse de calcul ou un test de sensibilité qui pourrait modifier le résultat principal.
 
-Pour relier le modèle au projet d'équipe, consulter:
+### Visualisation ou tableau de bord
 
-- [recipes](https://recipes.tidymodels.org/), pour documenter les transformations appliquées aux données;
-- [parsnip](https://parsnip.tidymodels.org/), pour séparer la spécification du modèle de son moteur;
-- [workflows](https://workflows.tidymodels.org/), pour assembler prétraitement et modèle.
+- [Quarto - Figure Options](https://quarto.org/docs/authoring/figures.html)
+- [W3C - Images Tutorial](https://www.w3.org/WAI/tutorials/images/)
 
-Ces liens servent de références. Le laboratoire utilise volontairement un exemple minimal pour faire apparaître les principes sans imposer toute la syntaxe tidymodels.
+Repérer comment vérifier la source des valeurs, les filtres, la lisibilité et une description textuelle utile.
 
-## Geste R à reproduire
+### Application
 
-Exécuter le script suivant dans un fichier `scripts/modele_minimal.R`. Il crée un jeu de données fictif de stations, sépare les données, ajuste un modèle linéaire et compare l'erreur du modèle à une référence simple.
+- [Shiny - Testing](https://shiny.posit.co/r/articles/improve/testing-overview/)
+
+Repérer un scénario nominal, une entrée invalide et la sortie observable à vérifier.
+
+### Génie logiciel
+
+- [testthat - Get started](https://testthat.r-lib.org/articles/testthat.html)
+- [R Packages - Testing basics](https://r-pkgs.org/testing-basics.html)
+
+Repérer un comportement nominal, un cas limite et le message attendu en cas d'erreur.
+
+## Exemple facultatif de voie prédictive
+
+Le script suivant illustre une séparation entraînement-évaluation et une référence moyenne. Il sert d'exemple si cette voie correspond au projet; il n'est pas une production obligatoire.
 
 ```r
-# Modele predictif minimal et reproductible
 set.seed(4230)
 
 donnees_station <- data.frame(
@@ -55,42 +64,36 @@ donnees_station$consommation <- 85 +
   1.8 * donnees_station$vent +
   rnorm(120, mean = 0, sd = 8)
 
-indices_entrainement <- sample(seq_len(nrow(donnees_station)), size = 0.75 * nrow(donnees_station))
+indices_entrainement <- sample(
+  seq_len(nrow(donnees_station)),
+  size = 0.75 * nrow(donnees_station)
+)
 
 entrainement <- donnees_station[indices_entrainement, ]
 evaluation <- donnees_station[-indices_entrainement, ]
 
-modele <- lm(consommation ~ temperature + humidite + vent, data = entrainement)
+modele <- lm(
+  consommation ~ temperature + humidite + vent,
+  data = entrainement
+)
 
 predictions <- predict(modele, newdata = evaluation)
 reference <- mean(entrainement$consommation)
 
-rmse_modele <- sqrt(mean((evaluation$consommation - predictions)^2))
-rmse_reference <- sqrt(mean((evaluation$consommation - reference)^2))
-
 data.frame(
   approche = c("modele_lineaire", "reference_moyenne"),
-  rmse = c(rmse_modele, rmse_reference)
+  rmse = c(
+    sqrt(mean((evaluation$consommation - predictions)^2)),
+    sqrt(mean((evaluation$consommation - reference)^2))
+  )
 )
 ```
 
-## Trace attendue
+## Questions d'autovérification formative
 
-Ajouter au portfolio une courte note contenant:
+- Quelle preuve serait la plus convaincante pour le type de projet choisi?
+- Quel résultat ou comportement sert de référence?
+- Quelle limite doit accompagner cette preuve?
+- Où le fichier et son commit seront-ils indiqués?
 
-- la question prédictive;
-- la variable cible;
-- les variables explicatives retenues;
-- la stratégie de séparation des données;
-- la mesure de performance utilisée;
-- une limite ou un risque d'interpretation.
-
-## Mini-test de préparation
-
-Répondre brièvement aux questions suivantes:
-
-1. Pourquoi ne faut-il pas évaluer uniquement le modèle sur les données utilisées pour l'entraîner?
-2. Dans l'exemple ci-dessus, quelle est la variable cible?
-3. Que mesure la RMSE?
-4. Pourquoi comparer le modèle à une référence simple comme la moyenne?
-5. Quelle information manque encore pour savoir si ce modèle serait acceptable dans un contexte réel?
+Ces questions ne sont ni remises ni notées.

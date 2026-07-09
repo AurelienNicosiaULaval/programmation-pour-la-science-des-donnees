@@ -15,7 +15,7 @@ format:
 *   [Site officiel de purrr](https://purrr.tidyverse.org/) : Exemples complets, tutoriels d'itération et détails des fonctions.
 *   [Site officiel de testthat](https://testthat.r-lib.org/) : Guide de démarrage rapide pour écrire des tests dans un package ou un projet standard.
 
-## Guide rapide : Utiliser `browser()` pour le débogage
+## Approfondissement facultatif: utiliser `browser()` pour le débogage
 
 Lorsque votre code s'arrête sur une instruction `browser()` dans la console, vous entrez dans un environnement interactif spécial. Voici les actions clés :
 

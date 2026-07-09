@@ -1,76 +1,60 @@
 ---
-title: "Site personnel, collaboration et documentation finale - Pendant la classe"
+title: "Semaine 15 - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Activités en classe
+## Objectif de la séance
 
-La séance finale est consacrée à trois objets: le [site Quarto personnel](../../site-personnel.qmd), la [présentation et revue du projet](../../presentation.qmd), puis le retour technique final.
+Vérifier les sites publiés, réaliser les défenses et revues de code, rendre les contributions vérifiables et fermer le projet par un bilan.
 
-Le déroulement ci-dessous sert de bloc technique complémentaire si un temps de consolidation est réservé au packaging, ou si une équipe veut transformer une partie de son projet en composant R documenté.
+## Déroulement de 180 minutes
 
-### 1. Retour sur les questions d'autovérification (15 min)
+| Moment | Activité | Contrôle |
+|---:|---|---|
+| 0-15 min | Ouverture | Chaque personne ouvre son site, son dépôt source et le commit remis |
+| 15-45 min | Revue croisée des sites | Une autre personne vérifie publication, navigation, deux réalisations et lien au portfolio |
+| 45-105 min | Défenses, bloc 1 | Présentation, revue de code et questions pour chaque équipe |
+| 105-115 min | Pause |  |
+| 115-165 min | Défenses, bloc 2 | Présentation, revue de code et questions pour chaque équipe |
+| 165-175 min | Contributions et bilans | Chemins et preuves confirmés |
+| 175-180 min | Clôture | Une limite et une prochaine action par équipe |
 
-*   **Question 1 :** La bonne réponse est l'**Option B**. `devtools::check()` est l'outil indispensable du développeur R. Il lance plus de 50 vérifications rigoureuses pour s'assurer que le package compile, s'installe, ne comporte pas de liens d'aide brisés, que le code R ne contient pas d'erreurs de syntaxe grossières, et lance tous les tests unitaires.
-*   **Question 2 :** La bonne réponse est l'**Option C**. La balise `#' @export` indique à `roxygen2` d'écrire le nom de la fonction dans le fichier `NAMESPACE`. Sans cela, la fonction reste interne au package (utilisable avec `monpackage:::ma_fonction` mais cachée par défaut).
-*   **Question 3 :** La bonne réponse est l'**Option B**. Utiliser `library()` dans un package est une mauvaise pratique majeure (cela pollue l'environnement de recherche globale de l'utilisateur). On doit utiliser `usethis::use_package()` pour déclarer la dépendance dans `DESCRIPTION` et appeler la fonction de façon qualifiée avec le préfixe `ggplot2::geom_point()`.
+## Revue croisée du site
 
----
+La personne qui relit vérifie:
 
-### 2. Démonstration 1 : Les fonctions phares de la construction (25 min)
+- l'URL publiée, pas seulement l'aperçu local;
+- la cohérence de la navigation;
+- les deux réalisations et leur commentaire;
+- le lien vers le portfolio;
+- le dépôt source et le commit remis;
+- l'absence de donnée ou d'information qui ne devrait pas être publique;
+- la présence de la déclaration IA lorsque pertinente.
 
-Nous allons passer en revue le cycle de vie typique du développement d'un package R sur un exemple.
+Noter un problème bloquant et une amélioration non bloquante. Corriger d'abord le problème bloquant.
 
-#### Étape 1 : Initialiser la structure
-On crée le dossier et l'arborescence standard :
-```r
-# Initialiser le package (crée DESCRIPTION, NAMESPACE, R/)
-usethis::create_package(path = "chemin/vers/monpackage")
-```
+## Structure de chaque défense
 
-#### Étape 2 : Ajouter une fonction
-On crée un fichier R dans le dossier `R/` :
-```r
-usethis::use_r(name = "ma_fonction")
-```
-*Copier-coller le code de notre fonction et ses commentaires `roxygen2` dans le fichier ouvert.*
+La durée exacte dépend du nombre d'équipes et est annoncée avant la séance. Chaque créneau conserve les trois parties suivantes:
 
-#### Étape 3 : Compiler la documentation
-On transforme les commentaires en fiches d'aide `.Rd` (dossier `man/`) et mettons à jour `NAMESPACE` :
-```r
-devtools::document()
-```
+1. présentation de la question, des données, de la démarche, du résultat et des limites;
+2. revue d'un extrait de code, avec entrées, sorties, dépendances, validation et cas d'échec;
+3. questions sur la reproduction, les choix, les contributions et les limites.
 
-#### Étape 4 : Charger et tester à la volée
-On charge le package temporairement en mémoire sans l'installer (très pratique pour tester notre code interactivement) :
-```r
-devtools::load_all()
-```
+## Questions possibles
 
-#### Étape 5 : Lancer les vérifications diagnostiques
-On vérifie l'absence de bugs et d'oublis de déclarations :
-```r
-devtools::check()
-```
+- Quelle commande reproduit le résultat principal?
+- Quelle validation soutient la conclusion?
+- Quel changement de données ou de dépendance pourrait invalider le livrable?
+- Pourquoi cet extrait de code a-t-il été retenu?
+- Que fait le programme face à une entrée invalide?
+- Quelle contribution individuelle peut être retrouvée dans le dépôt?
+- Quelle conclusion ne devrait pas être tirée du projet?
 
----
+## Clôture
 
-### 3. Démonstration 2 : Dissimuler une fonction d'aide (Interne) (15 min)
+Avant de quitter, vérifier les chemins vers le site, le dépôt, le commit, `docs/contributions.md`, le bilan et `docs/ai-log.md` lorsque pertinent.
 
-Dans un package, on a souvent des fonctions utilitaires secondaires que l'on ne veut pas exposer publiquement à l'utilisateur. Pour les documenter pour nos collègues développeurs sans générer de fiche d'aide publique, on utilise la balise `@noRd`.
-
-```r
-#' Formater les étiquettes en majuscules
-#'
-#' Fonction interne d'aide pour standardiser les titres.
-#'
-#' @param txt Une chaîne de caractères.
-#' @return En majuscules.
-#' @noRd # Indique à roxygen2 de NE PAS générer de fichier .Rd et de ne pas exporter la fonction
-majuscules_interne <- function(txt) {
-  toupper(txt)
-}
-```
-*Après avoir roulé `devtools::document()`, la fonction `majuscules_interne` n'apparaît ni dans le `NAMESPACE` ni dans le dossier `man/`.*
+L'[annexe package R](annexe-package-r.qmd) reste une option après la finalisation des remises; elle n'occupe aucun créneau obligatoire de cette séance.

@@ -7,11 +7,13 @@ format:
 
 ## Activités en classe
 
+Le noyau obligatoire est la construction et le dispatch d'un objet S3. La démonstration R6 sert à prendre une décision architecturale. S4 n'est pas enseigné comme troisième système à maîtriser cette semaine.
+
 ### 1. Retour sur le mini-test (15 min)
 
 *   **Question 1 :** L'objet `WWWusage` a la classe `"ts"`. Lors de l'appel à `summary(WWWusage)`, le dispatch de R cherche d'abord la méthode `summary.ts()`. Si elle existe (ce qui est le cas dans le package base), R l'appelle. La bonne réponse est donc **Option B : `summary.ts`**.
 *   **Question 2 :** En S3, la règle de nommage d'une méthode est `<nom_generique>.<nom_classe>`. Pour surcharger `plot` pour la classe `matrix`, la syntaxe est `plot.matrix <- function(x, ...)`. La bonne réponse est **Option B**.
-*   **Question 3 :** Contrairement aux listes S3 et aux objets R6 qui utilisent `$`, les objets de classe S4 accèdent à leurs slots internes (attributs stricts) avec l'opérateur `@` (ou la fonction `slot()`). La bonne réponse est **Option C**.
+*   **Question 3:** Il n'y a pas une réponse unique. S3 convient souvent à un résultat à afficher ou résumer; R6 mérite d'être évalué lorsque plusieurs opérations doivent partager et faire évoluer un état encapsulé; aucune classe est souvent la meilleure décision si des fonctions pures et une liste suffisent.
 
 ---
 
@@ -50,9 +52,9 @@ rapporter(m) # Appelle rapporter.modele_simple
 
 ---
 
-### 3. Démonstration 2 : R6, encapsulation et mutabilité (25 min)
+### 3. Voie choisie: R6, encapsulation et mutabilité (25 min)
 
-La force de R6 réside dans l'encapsulation (le fait de cacher des variables internes) et les champs actifs (Active Bindings) servant de contrôles de validation (getters/setters).
+La force de R6 réside dans l'encapsulation et la gestion d'un état mutable. Cette démonstration est observée par tout le groupe, mais l'implémentation complète d'une classe R6 est demandée seulement aux personnes dont le problème justifie ce choix.
 
 Découvrons ensemble comment implémenter un compte bancaire sécurisé en R6 :
 
@@ -113,3 +115,7 @@ compte_copie$deposer(10) # Modifie AUSSI mon_compte !
 compte_independant <- mon_compte$clone()
 compte_independant$deposer(100) # N'affecte pas mon_compte
 ```
+
+### Transfert vers un projet de données
+
+Dans un pipeline, le solde privé peut être remplacé par l'état des étapes, `deposer()` par une méthode qui marque une étape comme terminée et le clonage par la création d'une exécution indépendante. Le laboratoire propose cette alternative liée aux données avant le simulateur de jeu.

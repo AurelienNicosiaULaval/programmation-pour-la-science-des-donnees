@@ -1,58 +1,41 @@
 ---
-title: "Déploiement et mise en production - Pendant la classe"
+title: "14B - Reproduction et livraison - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de la séance
+## Place dans la séance
 
-Transformer un livrable qui fonctionne sur votre machine en livrable relançable par une autre personne.
+Ce noyau occupe 40 minutes du [déroulement commun de semaine 14](../14-synthese-finale/index.qmd). Le test croisé de 30 minutes est réalisé plus tard dans la séance intégrée.
 
-## Déroulement proposé
+## Atelier de 40 minutes
 
-| Moment | Activité | Résultat attendu |
+| Temps | Activité | Résultat |
 |---:|---|---|
-| 0-15 min | Retour sur le mini-test | Identifier les conditions minimales de reproduction |
-| 15-35 min | Démonstration courte | Montrer une reproduction qui échoue à cause d'une dépendance ou d'un chemin implicite |
-| 35-80 min | Audit du livrable | Lister fichiers, dépendances, commandes et sorties attendues |
-| 80-115 min | Travail guidé | Écrire ou corriger la procédure de reproduction |
-| 115-140 min | Test croisé | Faire relire la procédure par une autre personne |
-| 140-165 min | Correction | Corriger les étapes implicites et les limites |
-| 165-180 min | Commit final | Committer README, script de vérification et note de limites |
-
-## Démonstration courte
-
-Partir d'un script qui fonctionne seulement parce que:
-
-- le répertoire de travail est déjà le bon;
-- un objet existe dans la console;
-- un package est installé localement mais non documenté;
-- une sortie est écrite dans un dossier absent.
-
-Corriger ensuite le script pour que l'erreur devienne informative.
+| 0-5 min | Nommer le point d'entrée et la sortie | Une commande et un chemin explicites |
+| 5-20 min | Exécuter depuis une session propre | Succès observé ou erreur conservée |
+| 20-35 min | Ajouter une vérification et une erreur informative | Script qui exécute réellement le point d'entrée |
+| 35-40 min | Mettre à jour le README | Procédure copiée et adaptée au dépôt réel |
 
 ## Points de contrôle
 
-- Le README indique les commandes à exécuter.
-- Les dépendances R sont indiquées.
-- Les fichiers d'entrée et de sortie sont nommés.
+- La commande commence à la racine du dépôt.
+- Le vérificateur exécute le point d'entrée, pas seulement `file.exists()` sur les dossiers.
+- Une erreur d'exécution indique le point d'entrée et le message original.
+- Une sortie absente ou vide provoque un échec explicite.
+- Les dépendances et les données requises sont nommées.
 - Les chemins sont relatifs.
-- Une vérification minimale existe.
-- Les limites du déploiement sont explicites.
+- La limite entre reproduction locale et déploiement public est explicite.
 
-## Revue en duo
+## Test croisé
 
-Échanger les procédures de reproduction. La personne qui relit doit pouvoir répondre:
+La personne qui relit utilise seulement le README. Elle note:
 
-- quelle commande exécuter en premier;
-- quels packages installer ou restaurer;
-- quelles sorties attendre;
-- quoi faire si une étape échoue;
-- quelles données ne doivent pas être publiées.
+- la première commande ambiguë;
+- la première dépendance manquante;
+- la sortie observée;
+- le message obtenu si elle provoque une erreur simple;
+- toute donnée qui ne devrait pas être publique.
 
-## Synthèse de fin de séance
-
-Terminer avec une phrase de ce type:
-
-> Une autre personne peut relancer le livrable en exécutant ..., mais le déploiement reste limité par ...
+Tout usage significatif de l'IA qui influence le script ou la procédure est documenté dans `docs/ai-log.md`.

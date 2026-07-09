@@ -7,13 +7,15 @@ format:
 
 ## Consignes du défi de la semaine
 
-L'objectif de ce défi est d'appliquer les principes de la programmation fonctionnelle à votre propre code ou à un problème réaliste de traitement de données pour le portfolio.
+L'objectif de ce défi est de refactoriser un fragment réel et identifiable de votre portfolio ou de votre projet de session. Le défi ne doit pas créer un exercice isolé si un fragment existant peut être amélioré.
+
+Ce défi de module est formatif et non noté. Il prépare les défis techniques notés. La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) peut servir de repère de qualité, mais elle ne transforme pas cette activité en remise notée.
 
 ### Tâche principale : Refactorisation de code répétitif
 
-Identifiez dans vos travaux précédents (par exemple, le nettoyage des données du module 4 ou la production de graphiques du module 6) un bloc de code comportant de la duplication (copier-coller sur plusieurs variables ou fichiers). 
+Identifiez dans vos travaux précédents un bloc de code comportant de la duplication. Notez dans votre journal le chemin du fichier et les lignes ou l'étape du pipeline concernés. Les choix prioritaires sont un script de nettoyage du module 4, une production de figures du module 6, un rapport du module 7, un fragment du portfolio ou le dépôt du projet de session.
 
-Si vous n'avez pas de code répétitif sous la main, vous pouvez travailler sur le scénario suivant : *Lire et nettoyer 3 fichiers de données brutes similaires (simulez ou créez 3 petits fichiers CSV de ventes ou de température), extraire leurs statistiques descriptives, et combiner le tout dans un rapport final.*
+Si, après cette recherche, aucun fragment réel n'est disponible, utilisez le scénario de repli suivant: lire et nettoyer trois petits fichiers CSV de même structure, extraire leurs statistiques descriptives et combiner les résultats. Indiquez explicitement dans la note qu'il s'agit du scénario de repli.
 
 Vous devez :
 1.  **Créer une fonction générique** pour réaliser la tâche répétitive (ex: nettoyage d'une colonne spécifique, importation standardisée d'un fichier).
@@ -36,18 +38,18 @@ Votre soumission doit contenir :
 
 ---
 
-## Grille d'évaluation simplifiée
+## Repères de rétroaction formative
 
 *   **Rigueur** : La fonction valide ses arguments (types et longueurs) et gère correctement les valeurs manquantes (`NA`).
 *   **Reproductibilité** : Les tests unitaires s'exécutent et passent avec succès sans intervention manuelle.
-*   **Modernité** : Utilisation adéquate des variantes typées de `map()` de `purrr` à la place de boucles manuelles `for` non optimisées ou de fonctions de base R obsolètes.
+*   **Adéquation** : Le mécanisme d'itération choisi produit le type attendu et reste lisible. Une boucle correctement préallouée est acceptable lorsqu'elle rend le traitement plus clair; une variante typée de `map()` est utile lorsqu'elle exprime mieux la sortie attendue.
 *   **Documentation** : La note explicative montre clairement le gain en lisibilité et en maintenance apporté par la refactorisation.
 
 ## Place de l'IA
 
 Statut: permise, déclarée.
 
-L'IA peut aider à proposer des cas de tests ou à diagnostiquer une erreur `purrr`. Les tests conservés doivent correspondre au comportement réellement attendu et être compris. Ajouter une entrée dans `docs/ai-log.md` si l'IA influence de manière significative la fonction, les tests ou la note explicative.
+L'IA peut aider à proposer des cas de test ou à comprendre une erreur de syntaxe avec `purrr`. Toute contribution significative de l'IA doit être consignée dans `docs/ai-log.md` en indiquant l'outil, le but de l'utilisation, l'élément retenu et la vérification effectuée. Le code et le texte conservés doivent être compris, vérifiés, adaptés au contexte et défendables par la personne étudiante.
 
 ## Variante STT-6230
 

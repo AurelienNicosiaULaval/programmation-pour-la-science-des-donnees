@@ -1,53 +1,57 @@
 ---
-title: "Modèles d'apprentissage automatique - Pendant la classe"
+title: "14A - Validation adaptée au projet - Pendant la classe"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de la séance
+## Place dans la séance
 
-Construire un pipeline de modélisation minimal, puis vérifier que la performance annoncée correspond à une évaluation défendable.
+Ce bloc occupe 40 minutes du [déroulement commun de semaine 14](../14-synthese-finale/index.qmd). Chaque équipe travaille sur une seule voie de validation.
 
-## Déroulement proposé
+## Atelier de 40 minutes
 
-| Moment | Activité | Résultat attendu |
+| Temps | Activité | Résultat |
 |---:|---|---|
-| 0-15 min | Retour sur le mini-test | Distinguer cible, variables explicatives, entraînement et évaluation |
-| 15-35 min | Démonstration courte | Montrer une fuite de données simple et ses conséquences |
-| 35-80 min | Laboratoire guidé | Ajuster un modèle, produire des prédictions et calculer une mesure d'erreur |
-| 80-105 min | Revue en duo | Relire la stratégie de validation et la note de limites |
-| 105-135 min | Amélioration ciblée | Comparer le modèle à une référence simple |
-| 135-160 min | Trace portfolio | Committer le script et la note de modélisation |
-| 160-180 min | Synthèse | Identifier ce qui manque pour rendre le modèle réutilisable |
+| 0-5 min | Nommer le résultat principal et la voie choisie | Question de validation explicite |
+| 5-25 min | Exécuter un contrôle, un test ou une mesure | Preuve produite par code ou procédure vérifiable |
+| 25-35 min | Interpréter le résultat | Une conclusion et une limite |
+| 35-40 min | Noter le fichier et le commit | Trace retrouvable pour la défense |
 
-## Démonstration courte
+## Questions selon la voie
 
-Montrer deux versions d'une évaluation:
+### Prédiction
 
-1. ajuster et évaluer le modèle sur toutes les données;
-2. séparer les données avant l'ajustement et évaluer sur une partie tenue à l'écart.
+- Les données d'évaluation ont-elles été tenues à l'écart?
+- Le modèle est-il comparé à une référence simple?
+- La mesure correspond-elle à la cible et à l'usage prévu?
 
-La discussion doit faire ressortir que la seconde version est moins confortable, mais plus honnête.
+### Description ou analyse
 
-## Points de contrôle
+- Les données et exclusions qui produisent le résultat sont-elles traçables?
+- Un contrôle ou un test de sensibilité confirme-t-il le résultat principal?
+- Une autre agrégation raisonnable changerait-elle la conclusion?
 
-- La variable cible est explicite.
-- Les données d'évaluation ne sont pas utilisées pour ajuster le modèle.
-- La mesure de performance est calculée par code, pas estimée à l'oeil.
-- Une référence simple est fournie pour interpréter la performance.
-- Les limites sont écrites dans le dépôt.
-- L'usage significatif de l'IA est déclaré si une aide a influencé le code ou l'interprétation.
+### Visualisation ou tableau de bord
 
-## Questions de revue en duo
+- Les encodages correspondent-ils aux variables sources?
+- Les valeurs manquantes, extrêmes et filtres sont-ils visibles et cohérents?
+- Le résultat reste-t-il lisible au clavier, avec une taille de texte normale et sans dépendre uniquement de la couleur?
 
-- Le script peut-il être relancé depuis la racine du dépôt?
-- Une autre personne peut-elle trouver où la séparation des données est faite?
-- La note indique-t-elle ce que le modèle ne permet pas de conclure?
-- Le README ou le journal indique-t-il les packages nécessaires?
+### Application
 
-## Synthèse de fin de séance
+- Un scénario nominal produit-il la sortie attendue?
+- Une entrée invalide déclenche-t-elle une erreur compréhensible?
+- L'état affiché correspond-il aux données ou paramètres réellement utilisés?
 
-Chaque personne termine avec une phrase de ce type:
+### Génie logiciel
 
-> Le modèle est utilisable pour ..., mais il reste fragile parce que ...
+- Le composant passe-t-il un test nominal et un cas limite?
+- Ses dépendances et entrées sont-elles explicites?
+- L'échec est-il informatif et reproductible?
+
+## Revue en duo
+
+La personne qui relit doit pouvoir montrer où la validation est exécutée, expliquer la preuve produite et nommer au moins une conclusion qui serait abusive.
+
+Tout usage significatif de l'IA qui influence la validation ou l'interprétation est documenté dans `docs/ai-log.md`.

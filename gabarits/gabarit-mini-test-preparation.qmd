@@ -1,0 +1,35 @@
+---
+title: "Gabarit des mini-tests de préparation"
+format:
+  html:
+    embed-resources: true
+---
+
+Ce gabarit fixe les éléments qui doivent être visibles dans chaque mini-test de préparation. Les questions changent selon le module, mais le fonctionnement reste stable pendant la session.
+
+## Fonction du mini-test
+
+Le mini-test vérifie que la lecture et le geste technique minimal ont été réalisés avant le laboratoire. Il sert aussi à repérer une difficulté à traiter au début de la séance.
+
+## Format commun
+
+| Élément | Règle commune |
+|---|---|
+| Durée cible | 5 à 10 minutes, à l'intérieur de la préparation hebdomadaire annoncée |
+| Questions | Trois questions: compréhension, lecture de code ou décision, puis difficulté ou vérification personnelle |
+| Remise | Dans le canal officiel indiqué par l'équipe enseignante, avant le début du laboratoire |
+| IA | Permise pour clarifier une notion; les réponses remises doivent être comprises et vérifiées |
+| Trace | Résultat enregistré dans le canal de remise et difficulté notée pour le laboratoire |
+| Complétion | Les trois réponses sont soumises et le geste technique demandé a été exécuté |
+
+Les réponses ne doivent pas être copiées automatiquement dans le portfolio. Une note de portfolio est utile seulement lorsqu'une question, une erreur ou une vérification contribue à la progression de la semaine.
+
+## Structure à reprendre dans les modules
+
+1. Une question courte sur le concept central.
+2. Une question qui demande de lire, prévoir ou corriger un fragment de code.
+3. Une question personnelle et vérifiable: erreur rencontrée, sortie obtenue, décision prise ou point à reprendre.
+
+## Règle IA
+
+L'IA est permise pour les mini-tests de préparation. Elle ne remplace pas l'exécution locale du code ni la compréhension des réponses. Une déclaration détaillée dans `docs/ai-log.md` n'est pas exigée pour une clarification mineure. Elle devient nécessaire si l'aide influence une trace de portfolio, un rapport, du code ou une décision technique conservée.

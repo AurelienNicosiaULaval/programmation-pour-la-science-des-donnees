@@ -7,14 +7,18 @@ format:
 
 ## Lectures recommandées
 
-### Lecture principale
+### Lecture principale obligatoire
 *   **Advanced R**, de Hadley Wickham :
-    *   [Chapter 12: S3](https://adv-r.hadley.nz/s3.html) : Comprendre comment fonctionne le système S3, l'évaluation des méthodes, l'héritage et l'utilisation de `NextMethod()`.
-    *   [Chapter 14: R6](https://adv-r.hadley.nz/r6.html) : Comprendre la structure R6, les méthodes publiques/privées, le clonage et la sémantique de référence.
+    *   [Chapter 12: S3](https://adv-r.hadley.nz/s3.html) : Comprendre les classes, les constructeurs et le dispatch des méthodes.
 
-### Lectures complémentaires
+### Lecture ciblée pour la décision R6
+
 *   **Advanced R**, de Hadley Wickham :
-    *   [Chapter 13: S4](https://adv-r.hadley.nz/s4.html) : Pour comprendre la philosophie des classes strictes et formelles utilisées dans certains packages scientifiques majeurs (Bioconductor, Matrix).
+    *   [Chapter 14: R6](https://adv-r.hadley.nz/r6.html) : Lire l'introduction et la sémantique de référence. Les champs actifs et l'héritage sont facultatifs.
+
+### Lectures complémentaires facultatives
+*   **Advanced R**, de Hadley Wickham :
+    *   [Chapter 13: S4](https://adv-r.hadley.nz/s4.html) : À consulter seulement si un package du projet retourne un objet S4. Aucune création de classe S4 n'est attendue.
     *   [Chapter 16: Trade-offs](https://adv-r.hadley.nz/oo-tradeoffs.html) : Une comparaison synthétique des différents systèmes de POO en R (S3, S4, RC, R6).
 
 ---
