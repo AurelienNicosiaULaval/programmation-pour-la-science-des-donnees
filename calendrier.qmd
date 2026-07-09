@@ -5,9 +5,9 @@ format:
     embed-resources: true
 ---
 
-Ce calendrier v1 associe la progression du cours aux mercredis de l’automne 2026. Les repères institutionnels proviennent du [calendrier universitaire 2026-2027 de l’Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf).
+Ce calendrier présente la progression du cours les mercredis de l’automne 2026. Les repères institutionnels proviennent du [calendrier universitaire 2026-2027 de l’Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf).
 
-Les mini-tests de préparation sont prévus les semaines sans défi technique, sauf ajustement selon le rythme réel du groupe.
+Les mini-tests de préparation sont prévus les semaines sans défi technique.
 
 Les défis techniques individuels occupent environ une heure de la séance. Le reste de la séance demeure un temps d’apprentissage: retour technique, consolidation, portfolio, projet ou atelier de transfert. Le travail fait après la remise du défi ne modifie pas le livrable évalué.
 
@@ -68,7 +68,7 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance r�
 
 Les mini-tests servent à soutenir la préparation hebdomadaire. Ils sont courts et liés aux lectures ou gestes R à reproduire avant le laboratoire.
 
-| Semaines | Statut v1 |
+| Semaines | Fonctionnement |
 |---|---|
 | 2, 3, 4 | Mini-tests réguliers |
 | 5 | Pas de mini-test prévu quand un défi technique est prévu |
@@ -76,7 +76,7 @@ Les mini-tests servent à soutenir la préparation hebdomadaire. Ils sont courts
 | 8 | Pas de mini-test prévu quand un défi technique est prévu |
 | 9, 10, 11, 12 | Mini-tests réguliers |
 | 13 | Pas de mini-test prévu quand un défi technique est prévu |
-| 14 | Pas de mini-test prévu dans la v1; préparation finale du projet et du portfolio |
+| 14 | Pas de mini-test prévu; préparation finale du projet et du portfolio |
 
 Le format commun, la trace et la règle IA des mini-tests sont décrits dans le [gabarit des mini-tests de préparation](gabarits/gabarit-mini-test-preparation.qmd). La semaine 12 comporte un seul mini-test, même si elle contient un noyau de profilage et une voie de parallélisation.
 
@@ -110,8 +110,3 @@ La [page intégratrice de semaine 14](modules/14-synthese-finale/index.qmd) cons
 | 13 | Défi technique 3 | 15 min de mise en place, 60 min de défi individuel, remise, puis post-mortem technique sur tests, limites et jugement professionnel |
 
 Les ateliers qui suivent les défis servent à apprendre à partir de tâches analogues, à consolider le portfolio ou à avancer le projet. Ils ne servent pas à modifier le livrable évalué.
-
-## Dates et modalités à confirmer
-
-- La plage horaire exacte de la séance finale reste à confirmer avec l’horaire officiel.
-- Les règles de retard et la plateforme finale de remise seront celles du plan de cours institutionnel.
