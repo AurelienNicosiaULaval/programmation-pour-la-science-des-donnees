@@ -33,6 +33,8 @@ quarto render
 
 Le site rendu est créé dans `_site/`.
 
+Le rendu produit aussi des pages `.llms.md` et un index `llms.txt` destinés au compagnon GPT du cours. Le workflow GitHub Pages vérifie cet index après le rendu.
+
 ## Dépendances R
 
 Le cours recommande `renv`, mais aucun package n’est installé automatiquement.
