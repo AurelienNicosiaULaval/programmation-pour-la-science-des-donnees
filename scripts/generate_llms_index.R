@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
-# Quarto 1.9 produit les pages .llms.md. Ce garde-fou crée l'index llms.txt
-# seulement si une version de Quarto ne l'a pas déjà produit pendant le rendu.
+# Quarto 1.9 produit les pages .llms.md. Ce garde-fou réécrit l'index llms.txt
+# avec des liens relatifs afin qu'il reste valide sous un sous-répertoire GitHub Pages.
 
 args <- commandArgs(trailingOnly = TRUE)
 output_dir <- if (length(args)) args[[1]] else "_site"
@@ -11,10 +11,6 @@ if (!dir.exists(output_dir)) {
 }
 
 index_path <- file.path(output_dir, "llms.txt")
-if (file.exists(index_path)) {
-  message("Index LLM déjà présent: ", index_path)
-  quit(status = 0)
-}
 
 files <- list.files(
   output_dir,
@@ -48,4 +44,4 @@ lines <- c(
 )
 
 writeLines(lines, index_path, useBytes = TRUE)
-message("Index LLM créé: ", index_path, " (", length(files), " pages)")
+message("Index LLM normalisé: ", index_path, " (", length(files), " pages)")
