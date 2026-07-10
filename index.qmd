@@ -29,15 +29,15 @@ Le cours est structuré en 15 semaines:
 2. Structure de projet, Git, GitHub
 3. Dépendances et reproductibilité
 4. Données et nettoyage
-5. [Défi technique 1 et consolidation](defis.qmd#defi-technique-1)
+5. [Défi technique 1](defis.qmd#defi-technique-1), puis [Consolidation : Git, données et portfolio](modules/05-consolidation-git-donnees-portfolio/index.qmd)
 6. Visualisation
 7. Quarto, rapports, communication
-8. [Défi technique 2](defis.qmd#defi-technique-2)
+8. [Défi technique 2](defis.qmd#defi-technique-2), puis [Consolidation : validation et IA](modules/08-consolidation-validation-ia/index.qmd)
 9. [Consolidation et revue intermédiaire](modules/09-consolidation/index.qmd)
 10. Fonctions, `purrr`, pipelines
 11. POO et architecture
 12. [Performance et parallélisation](modules/12-synthese-performance-parallele/index.qmd)
-13. [Défi technique 3 et consolidation](defis.qmd#defi-technique-3)
+13. [Défi technique 3](defis.qmd#defi-technique-3), puis [Consolidation : tests, limites et transfert](modules/13-consolidation-tests-limites-transfert/index.qmd)
 14. [Synthèse finale adaptée au projet: reproduction, limites et modèle lorsque pertinent](modules/14-synthese-finale/index.qmd)
 15. Site personnel, présentation et revue du projet
 

@@ -1,0 +1,85 @@
+---
+title: "Semaine 5 - Consolidation : Git, données et portfolio"
+description: "Transformer les difficultés observées au défi 1 en pratiques reproductibles"
+format:
+  html:
+    embed-resources: true
+---
+
+## Rôle de cet atelier
+
+Cet atelier commence après la remise du [défi technique 1](../../defis.qmd#defi-technique-1). Le défi est une évaluation individuelle; cet atelier est une activité d'apprentissage non évaluée.
+
+Le livrable remis au défi ne peut plus être modifié. Le travail porte sur un exemple analogue fourni en classe ou sur une trace non évaluée du portfolio.
+
+Il n'y a ni mini-test, ni préparation supplémentaire, ni remise additionnelle pour cet atelier.
+
+## Question de la séance
+
+Comment repérer, expliquer et corriger une difficulté de projet R sans perdre la traçabilité de Git ni rendre le dépôt fragile?
+
+## Matière consolidée
+
+- structure d'un projet R;
+- chemins relatifs et organisation des fichiers;
+- importation et validation simple de données;
+- messages d'erreur et diagnostic reproductible;
+- README, commits et trace de portfolio.
+
+## Déroulement après la remise
+
+| Moment | Activité | Résultat attendu |
+|---:|---|---|
+| 1:30 à 1:50 | Retour technique guidé | Une erreur fréquente et sa cause sont comprises |
+| 1:50 à 2:30 | Atelier sur un cas analogue | Un projet ou script analogue est relancé et corrigé |
+| 2:30 à 2:50 | Revue en duo | Une autre personne relit la procédure et essaie de reproduire la correction |
+| 2:50 à 3:00 | Trace de sortie | Une note courte et un commit non évalué sont prêts |
+
+## Atelier guidé
+
+Sur le cas analogue fourni en classe, ou sur une trace non évaluée de votre portfolio:
+
+1. partir de la racine du projet et vérifier l'état Git;
+2. relancer le script ou le rapport indiqué;
+3. identifier au moins un problème concret parmi un chemin fragile, une importation incorrecte, une donnée manquante mal traitée, une documentation insuffisante ou une étape non reproductible;
+4. corriger le problème sans modifier le défi remis;
+5. faire vérifier la procédure par une autre personne;
+6. consigner le problème, la correction et la vérification dans une note de portfolio.
+
+La correction doit pouvoir être décrite par une personne qui n'a pas vu l'erreur initiale.
+
+## Trace non évaluée
+
+Dans le dossier de la semaine ou dans docs/semaine-05-consolidation.md, noter:
+
+~~~md
+## Problème observé
+
+## Correction appliquée
+
+## Vérification exécutée
+
+## Ce qui reste fragile
+~~~
+
+Ajouter un commit lisible si cette trace est conservée dans le portfolio. Cette trace n'est pas une nouvelle remise évaluée.
+
+## Règle IA
+
+L'atelier reste sans IA, comme le défi technique 1. La priorité est de consolider la capacité individuelle à diagnostiquer un projet R, ses données et sa documentation.
+
+## Critères de réussite
+
+- le défi remis demeure inchangé;
+- le problème traité est précis et observable;
+- la correction est testée depuis la racine du projet;
+- la procédure peut être relue ou reproduite par une autre personne;
+- la trace de portfolio distingue ce qui est corrigé de ce qui reste à améliorer.
+
+## Après la séance
+
+Si un problème semblable existe dans le portfolio, le corriger dans une trace distincte du défi évalué. Garder l'historique des corrections plutôt que réécrire le travail comme si l'erreur n'avait jamais existé.
+
+## Variante STT-6230
+
+Comparer deux corrections possibles pour le même problème et justifier celle retenue selon la reproductibilité, la lisibilité et le risque de maintenance.

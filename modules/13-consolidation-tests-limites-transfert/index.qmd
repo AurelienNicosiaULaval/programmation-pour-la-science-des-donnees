@@ -1,0 +1,87 @@
+---
+title: "Semaine 13 - Consolidation : tests, limites et transfert"
+description: "Transformer le diagnostic du défi 3 en pratiques de validation pour le projet"
+format:
+  html:
+    embed-resources: true
+---
+
+## Rôle de cet atelier
+
+Cet atelier commence après la remise du [défi technique 3](../../defis.qmd#defi-technique-3). Le défi est une évaluation individuelle; l'atelier est une activité d'apprentissage non évaluée.
+
+Le livrable remis au défi ne peut plus être modifié. Le travail porte sur un cas analogue, une erreur fréquente ou une amélioration à transférer vers le portfolio ou le projet.
+
+Il n'y a ni mini-test, ni préparation supplémentaire, ni remise additionnelle pour cet atelier.
+
+## Question de la séance
+
+Comment transformer un diagnostic technique, y compris un diagnostic assisté par IA, en amélioration vérifiable et maintenable?
+
+## Matière consolidée
+
+- test d'un résultat avant et après une correction;
+- vérification d'une optimisation ou d'un diagnostic;
+- limites d'une mesure, d'un test ou d'une proposition IA;
+- écriture d'une issue ou d'une tâche de maintenance;
+- transfert d'une leçon vers le projet final.
+
+## Déroulement après la remise
+
+| Moment | Activité | Résultat attendu |
+|---:|---|---|
+| 1:30 à 1:50 | Post-mortem guidé | Une erreur fréquente, une vérification et une limite sont distinguées |
+| 1:50 à 2:30 | Atelier sur un cas analogue | Une amélioration est comparée à un état initial |
+| 2:30 à 2:50 | Transfert vers le projet | Une issue ou une tâche de validation réaliste est formulée |
+| 2:50 à 3:00 | Trace de sortie | Une note de post-mortem non évaluée est prête |
+
+## Atelier guidé
+
+Sur le cas analogue fourni en classe ou sur une trace non évaluée:
+
+1. nommer le problème et l'hypothèse de diagnostic;
+2. conserver une mesure, une sortie ou un comportement avant modification;
+3. appliquer une seule amélioration à la fois;
+4. vérifier que le résultat reste correct ou que l'amélioration est réelle;
+5. identifier au moins une limite de la vérification;
+6. créer une issue ou une tâche pour transférer une pratique utile vers le projet final.
+
+Une amélioration plus rapide, plus courte ou proposée par une IA n'est pas automatiquement meilleure. Elle doit préserver le résultat attendu et rester explicable.
+
+## Trace non évaluée
+
+Dans le dossier de la semaine ou dans docs/semaine-13-postmortem.md, conserver:
+
+~~~md
+## Problème et hypothèse
+
+## État initial observé
+
+## Vérification avant et après
+
+## Limite de la conclusion
+
+## Transfert vers le projet
+~~~
+
+Ajouter un lien vers l'issue, la tâche ou le commit du projet si un transfert est retenu. Cette trace ne modifie pas le défi évalué.
+
+## Règle IA
+
+L'IA est permise pour l'exemple analogue, mais l'étudiante ou l'étudiant doit déclarer tout usage significatif dans docs/ai-log.md, vérifier les propositions et expliquer ce qui a été conservé, modifié ou rejeté.
+
+## Critères de réussite
+
+- le défi remis demeure inchangé;
+- la vérification compare un état initial à un état modifié;
+- la conclusion ne dépasse pas ce que la mesure permet d'affirmer;
+- une limite est écrite explicitement;
+- le transfert vers le projet correspond à une action réalisable avant la semaine 14.
+
+## Après la séance
+
+Choisir une seule amélioration ou vérification à intégrer au projet final. La semaine 14 portera ensuite sur la reproduction du livrable, ses limites et sa maintenance.
+
+## Variante STT-6230
+
+Comparer deux stratégies de validation ou d'optimisation et recommander celle qui convient au projet selon le coût, le gain observé, la robustesse et ce qui demeure non vérifié.

@@ -1,0 +1,85 @@
+---
+title: "Semaine 8 - Consolidation : validation et IA"
+description: "Vérifier une solution assistée par IA sur un exemple non évalué"
+format:
+  html:
+    embed-resources: true
+---
+
+## Rôle de cet atelier
+
+Cet atelier commence après la remise du [défi technique 2](../../defis.qmd#defi-technique-2). Le défi est une évaluation individuelle; l'atelier est une activité d'apprentissage non évaluée.
+
+Le livrable remis au défi ne peut plus être modifié. Le travail porte sur un exemple analogue fourni en classe, jamais sur une correction collective du défi.
+
+Il n'y a ni mini-test, ni préparation supplémentaire, ni remise additionnelle pour cet atelier.
+
+## Question de la séance
+
+Comment décider qu'une proposition issue d'une IA est correcte, adaptée au projet et suffisamment documentée pour être conservée?
+
+## Matière consolidée
+
+- validation d'un pipeline simple;
+- vérification d'une figure et d'un résultat attendu;
+- lecture critique d'un rapport Quarto court;
+- distinction entre proposition, vérification et décision;
+- déclaration proportionnée d'un usage de l'IA.
+
+## Déroulement après la remise
+
+| Moment | Activité | Résultat attendu |
+|---:|---|---|
+| 1:30 à 1:50 | Retour technique guidé | Une stratégie de validation est comparée à une réponse seulement plausible |
+| 1:50 à 2:30 | Atelier sur un exemple analogue | Une proposition est acceptée, modifiée ou rejetée avec une preuve |
+| 2:30 à 2:50 | Revue en duo | Une autre personne vérifie la preuve et repère une limite |
+| 2:50 à 3:00 | Trace de sortie | Une note de validation non évaluée est prête |
+
+## Atelier guidé
+
+À partir du cas analogue fourni en classe:
+
+1. identifier ce que la proposition doit produire: table, figure, fichier Quarto rendu ou transformation de données;
+2. choisir deux vérifications concrètes, par exemple une valeur attendue, un cas limite, une comparaison avec un calcul manuel ou une inspection visuelle;
+3. exécuter réellement ces vérifications;
+4. décider ce qui est conservé, modifié ou rejeté;
+5. améliorer un élément non évalué du rapport ou du pipeline;
+6. faire relire la décision et sa preuve par une autre personne.
+
+L'objectif n'est pas d'obtenir une réponse qui semble convaincante. Il est de pouvoir montrer pourquoi elle est ou n'est pas fiable.
+
+## Trace non évaluée
+
+Dans le dossier de la semaine ou dans docs/semaine-08-validation.md, conserver:
+
+~~~md
+## Proposition examinée
+
+## Vérifications exécutées
+
+## Décision : conservée, modifiée ou rejetée
+
+## Limite restante
+~~~
+
+Si l'IA a influencé cette trace, compléter docs/ai-log.md avec la demande, la vérification et la décision. Une clarification mineure qui n'influence aucune trace conservée n'exige pas de déclaration détaillée.
+
+## Règle IA
+
+L'IA est permise pour l'exemple analogue. Toute aide qui influence du code, une figure, un rapport ou une décision conservée doit être déclarée. L'usage de l'IA ne remplace ni l'exécution locale ni l'interprétation du résultat.
+
+## Critères de réussite
+
+- le défi remis demeure inchangé;
+- la proposition étudiée est reliée à une sortie observable;
+- deux vérifications sont décrites et réellement exécutées;
+- la décision est justifiée par une preuve, pas seulement par l'autorité de l'outil;
+- la limite restante est explicite.
+
+## Après la séance
+
+Réutiliser cette méthode de validation dans le projet ou le portfolio lorsque vous acceptez une aide technique significative. La semaine 10 formalisera ensuite la conception de fonctions, les tests et la réduction du copier-coller.
+
+## Variante STT-6230
+
+Ajouter une vérification adverse: construire un jeu de données, une entrée ou un cas limite où la proposition pourrait échouer, puis préciser ce que le résultat apprend sur sa robustesse.
