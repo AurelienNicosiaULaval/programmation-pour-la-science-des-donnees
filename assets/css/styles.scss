@@ -69,23 +69,10 @@ a:focus-visible {
   color: var(--stt-navy-deep);
 }
 
-#quarto-sidebar,
 .sidebar {
   background: var(--stt-surface);
 }
 
-/* Une page de parcours montre le menu du parcours, pas deux sommaires concurrents. */
-body.nav-sidebar #quarto-margin-sidebar {
-  display: none;
-}
-
-@media (min-width: 992px) {
-  body.nav-sidebar #quarto-content.page-columns main.content {
-    grid-column: body-content-start / page-end-inset;
-  }
-}
-
-#quarto-sidebar .sidebar-title,
 .sidebar-title {
   color: var(--stt-ink);
   font-weight: 800;
