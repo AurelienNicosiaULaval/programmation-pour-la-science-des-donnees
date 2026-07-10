@@ -74,7 +74,7 @@ website:
         - text: "Soutien technique"
           href: soutien-technique.qmd
     right:
-      - text: "Plan de cours"
+      - text: "Plan"
         href: plan-cours.qmd
       - text: "IA"
         href: ia.qmd
