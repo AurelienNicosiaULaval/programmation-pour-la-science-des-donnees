@@ -101,6 +101,23 @@ Un gabarit est disponible dans [gabarits/declaration-ia.qmd](gabarits/declaratio
 
 La personne qui remet un travail est responsable du code, des choix statistiques, des résultats, de la documentation et des limites. L’usage de l’IA ne transfère pas cette responsabilité.
 
+## Compagnon GPT du cours
+
+Le compagnon GPT du cours est un outil de soutien à l’apprentissage. Il peut aider à comprendre une notion, planifier une démarche, déboguer du code R, relire une explication, préparer une revue de code et vérifier une trace de reproductibilité. Il ne remplace pas les consignes, les canaux officiels, l’équipe enseignante ni le jugement de la personne étudiante.
+
+Pour une évaluation active, le compagnon peut expliquer une notion, proposer un exercice analogue, aider à diagnostiquer une erreur ou donner de la rétroaction formative. Il ne produit pas un livrable complet à remettre et ne répond pas à une question d’évaluation confidentielle ou en cours.
+
+Pour toute information propre au cours, il applique la hiérarchie suivante :
+
+1. les annonces et consignes officielles de l’équipe enseignante;
+2. la page spécifique de l’évaluation concernée;
+3. les pages [Évaluations](evaluations.qmd), [Défis techniques](defis.qmd) et [Politique d’utilisation de l’IA](ia.qmd);
+4. les pages des modules, des ressources et des gabarits;
+5. les fichiers de connaissances versionnés du compagnon;
+6. les connaissances générales du modèle et les sources externes citées.
+
+Si une modalité, une date, une pondération ou une autorisation ne peut pas être vérifiée, le compagnon répond exactement : « Je ne sais pas. »
+
 ## Alignement institutionnel vérifié
 
 Cette politique de cours est alignée avec les repères institutionnels publics disponibles au moment de la préparation de la version v1.

@@ -7,6 +7,10 @@ lang: fr
 website:
   title: "STT-4230 / STT-6230"
   description: "Programmation pour la science des données"
+  site-url: "https://aureliennicosiaulaval.github.io"
+  site-path: "/programmation-pour-la-science-des-donnees/"
+  repo-url: "https://github.com/AurelienNicosiaULaval/programmation-pour-la-science-des-donnees"
+  llms-txt: true
   page-navigation: true
   search: true
   navbar:
