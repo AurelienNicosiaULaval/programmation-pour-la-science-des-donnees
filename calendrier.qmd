@@ -34,16 +34,16 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance r�
 | 2 | 9 septembre 2026 | Structure de projet, Git, GitHub | Workflow Git, chemins relatifs, conventions | Créer ou nettoyer un dépôt | Mini-test, structure et conventions |
 | 3 | 16 septembre 2026 | Dépendances et reproductibilité | `renv`, `.gitignore`, chemins relatifs | Relancer un projet sur une autre machine ou session propre | Mini-test, jalon portfolio 1 |
 | 4 | 23 septembre 2026 | Données et nettoyage | Importation, validation, tidy data, transformation, fichiers volumineux, SQL/API en aperçu | Construire un premier pipeline de données avec vérifications et assertions simples | Mini-test, pipeline de données et revue courte |
-| 5 | 30 septembre 2026 | Défi technique 1 et consolidation | Révision projet, Git, importation, nettoyage simple | Défi individuel 1 h sans IA, puis atelier de consolidation Git, données et portfolio | Défi 1, aucune IA; atelier non évalué |
+| 5 | 30 septembre 2026 | Défi technique 1, puis consolidation Git, données et portfolio | Révision projet, Git, importation, nettoyage simple | Défi individuel 1 h sans IA, puis [atelier de consolidation](modules/05-consolidation-git-donnees-portfolio/index.qmd) | Défi 1, aucune IA; trace non évaluée de consolidation |
 | 6 | 7 octobre 2026 | Visualisation | `ggplot2`, choix graphiques, communication visuelle | Produire et améliorer une figure | Mini-test, proposition du projet d’équipe |
 | 7 | 14 octobre 2026 | Quarto et communication | Rapports reproductibles, narration et résultats | Compiler un rapport Quarto court | Mini-test, rapport Quarto et revue courte |
-| 8 | 21 octobre 2026 | Défi technique 2 et consolidation | Fonctions, pipeline, visualisation, IA déclarée | Défi individuel 1 h, puis atelier sur validation et usage déclaré de l’IA | Défi 2, trace dans `docs/ai-log.md`; atelier non évalué |
+| 8 | 21 octobre 2026 | Défi technique 2, puis consolidation validation et IA | Pipeline, visualisation, rapport Quarto, IA déclarée | Défi individuel 1 h, puis [atelier de validation et IA](modules/08-consolidation-validation-ia/index.qmd) | Défi 2, trace dans `docs/ai-log.md`; trace non évaluée de validation |
 | Relâche | 28 octobre 2026 | Semaine de lecture | Aucun mini-test régulier | Aucune séance régulière | Travail autonome et rattrapage |
 | 9 | 4 novembre 2026 | [Consolidation](modules/09-consolidation/index.qmd) | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test, jalon portfolio 2, point de suivi projet formatif |
 | 10 | 11 novembre 2026 | Fonctions, `purrr` et tests | Fonctions, itérations, réduction du copier-coller, assertions, `testthat` | Transformer du code exploratoire en fonctions testables | Mini-test, fonction dans `R/`, test minimal |
 | 11 | 18 novembre 2026 | POO et architecture | S3 et R6, différences et cas d’usage | Structurer des objets ou composants du projet | Mini-test, note POO ou architecture |
 | 12 | 25 novembre 2026 | [Performance et parallèle](modules/12-synthese-performance-parallele/index.qmd) | Mesure et profilage; parallèle selon la tâche et la machine | Mesurer un goulot, améliorer le code, puis décider si le parallèle est pertinent | Un seul mini-test, une trace avant/après, version intermédiaire du projet |
-| 13 | 2 décembre 2026 | Défi technique 3 et consolidation | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis post-mortem technique sur tests, validation et limites | Défi 3, rapport technique et trace IA; atelier non évalué |
+| 13 | 2 décembre 2026 | Défi technique 3, puis consolidation tests, limites et transfert | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis [post-mortem et transfert](modules/13-consolidation-tests-limites-transfert/index.qmd) | Défi 3, rapport technique et trace IA; trace non évaluée de transfert |
 | 14 | 9 décembre 2026 | [Synthèse finale](modules/14-synthese-finale/index.qmd) | Reproduction et limites; modélisation ou autre validation selon le projet | Stabiliser le livrable final, vérifier son point d'entrée et préparer sa défense | Préparation finale, remise finale projet, jalon portfolio 3 |
 | 15 | 16 décembre 2026 | Site personnel, présentation et revue du projet | Site Quarto personnel, dépôt final, support bref, issue ou pull request, bilan individuel | Présentations, revue de code, questions, vérification des contributions, vérification des sites publiés | Site Quarto personnel, défense du projet |
 
@@ -105,8 +105,8 @@ La [page intégratrice de semaine 14](modules/14-synthese-finale/index.qmd) cons
 
 | Semaine | Défi | Déroulement prévu |
 |---:|---|---|
-| 5 | Défi technique 1 | 15 min de mise en place, 60 min de défi individuel, remise, puis atelier de consolidation sans IA |
-| 8 | Défi technique 2 | 15 min de mise en place, 60 min de défi individuel, remise, puis atelier sur validation et déclaration de l’IA |
-| 13 | Défi technique 3 | 15 min de mise en place, 60 min de défi individuel, remise, puis post-mortem technique sur tests, limites et jugement professionnel |
+| 5 | Défi technique 1 | 15 min de mise en place, 60 min de défi individuel, remise, puis [consolidation Git, données et portfolio](modules/05-consolidation-git-donnees-portfolio/index.qmd) sans IA |
+| 8 | Défi technique 2 | 15 min de mise en place, 60 min de défi individuel, remise, puis [consolidation validation et IA](modules/08-consolidation-validation-ia/index.qmd) |
+| 13 | Défi technique 3 | 15 min de mise en place, 60 min de défi individuel, remise, puis [consolidation tests, limites et transfert](modules/13-consolidation-tests-limites-transfert/index.qmd) |
 
 Les ateliers qui suivent les défis servent à apprendre à partir de tâches analogues, à consolider le portfolio ou à avancer le projet. Ils ne servent pas à modifier le livrable évalué.

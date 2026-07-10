@@ -27,7 +27,7 @@ Les trois défis techniques ne sont pas trois examens semblables. Ils ont trois 
 | Défi | Moment | Rôle | Ce qui est vérifié | Règle IA |
 |---|---:|---|---|---|
 | Défi 1 | Semaine 5 | Vérifier les bases individuelles | Structure de projet, Git, importation, nettoyage simple, chemins relatifs, README minimal | Non permise |
-| Défi 2 | Semaine 8 | Vérifier la programmation avec aide encadrée | Fonctions, pipeline, visualisation, rapport Quarto court, capacité à documenter l’aide reçue | Permise, déclarée |
+| Défi 2 | Semaine 8 | Vérifier la programmation avec aide encadrée | Pipeline simple, visualisation, rapport Quarto court, capacité à documenter l’aide reçue | Permise, déclarée |
 | Défi 3 | Semaine 13 | Vérifier le jugement professionnel avec IA | Diagnostic, débogage, optimisation, parallélisation ou amélioration d’un mini-projet, validation des suggestions IA | Intégrée |
 
 Les directives publiques de préparation au premier défi sont disponibles ici: [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd).
@@ -40,9 +40,15 @@ Le défi 2 répond à la question suivante: est-ce que l’étudiante ou l’ét
 
 Le défi 3 répond à la question suivante: est-ce que l’étudiante ou l’étudiant sait utiliser l’IA comme assistant technique sans perdre son jugement professionnel?
 
-Les activités appelées “défi” dans les modules servent de préparation ou de pratique. Seuls les trois défis techniques indiqués dans la table d’évaluation comptent chacun pour 10 %.
+Seuls les trois défis techniques indiqués dans la table d’évaluation comptent chacun pour 10 %. Les ateliers de consolidation qui suivent les défis sont des modules d'apprentissage non évalués.
 
 Chaque défi technique occupe environ une heure de la séance. La partie restante du laboratoire sert au retour technique, à la consolidation, au portfolio ou au projet. Cette partie n’est pas utilisée pour modifier le livrable évalué.
+
+| Après le défi | Module non évalué | Travail |
+|---|---|---|
+| Défi 1 | [Consolidation : Git, données et portfolio](modules/05-consolidation-git-donnees-portfolio/index.qmd) | Reprendre un problème analogue sans IA |
+| Défi 2 | [Consolidation : validation et IA](modules/08-consolidation-validation-ia/index.qmd) | Valider une proposition sur un exemple analogue |
+| Défi 3 | [Consolidation : tests, limites et transfert](modules/13-consolidation-tests-limites-transfert/index.qmd) | Faire un post-mortem et transférer une pratique vers le projet |
 
 ## Traces attendues
 
