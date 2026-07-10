@@ -1,56 +1,131 @@
 ---
 title: "STT-4230 / STT-6230 - Programmation pour la science des données"
+body-classes: page-home
 format:
   html:
+    toc: false
     embed-resources: true
 ---
 
-Ce site regroupe les notes, laboratoires, défis, consignes d’évaluation, gabarits et ressources du cours STT-4230 / STT-6230 offert à l’automne 2026 à l’Université Laval.
+```{=html}
+<section class="stt-home-hero" aria-labelledby="stt-home-title">
+  <div>
+    <p class="stt-home-kicker">STT-4230 / STT-6230</p>
+    <h1 id="stt-home-title">Programmation pour la science des données</h1>
+    <p class="stt-home-lead">Ce site regroupe les notes, laboratoires, défis, consignes d’évaluation, gabarits et ressources du cours STT-4230 / STT-6230 offert à l’automne 2026 à l’Université Laval.</p>
+    <div class="stt-home-actions" aria-label="Liens principaux du cours">
+      <a class="stt-home-action stt-home-action--primary" href="demarrage.html">Démarrage étudiant</a>
+      <a class="stt-home-action" href="calendrier.html">Calendrier</a>
+      <a class="stt-home-action" href="evaluations.html">Évaluations</a>
+    </div>
+  </div>
+  <div class="stt-home-visual" aria-hidden="true">
+    <div class="stt-home-visual__grid">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="stt-home-visual__mark">
+      <strong>STT</strong>
+      <span>4230 / 6230</span>
+    </div>
+  </div>
+</section>
 
-## Commencer
+<section class="stt-home-snapshot" aria-label="Repères rapides">
+  <div>
+    <span class="stt-home-snapshot__label">Session</span>
+    <span class="stt-home-snapshot__value">Automne 2026</span>
+  </div>
+  <div>
+    <span class="stt-home-snapshot__label">Outils</span>
+    <span class="stt-home-snapshot__value">R, Git et GitHub</span>
+  </div>
+  <div>
+    <span class="stt-home-snapshot__label">Rythme</span>
+    <span class="stt-home-snapshot__value">Avant, pendant et après la classe</span>
+  </div>
+  <div>
+    <span class="stt-home-snapshot__label">Productions</span>
+    <span class="stt-home-snapshot__value">Portfolio, défis et projet</span>
+  </div>
+</section>
 
-1. Lire [Démarrage étudiant](demarrage.qmd) avant la première séance.
-2. Consulter le [Calendrier](calendrier.qmd) pour repérer la préparation et les échéances de la semaine.
-3. Ouvrir le module correspondant depuis le menu « Modules » pour trouver la préparation, le laboratoire et la trace attendue.
+<section class="stt-home-section" aria-labelledby="start-title">
+  <div class="stt-home-section__header">
+    <h2 id="start-title">Commencer</h2>
+  </div>
+  <div class="stt-home-action-grid">
+    <a class="stt-home-action-card" href="demarrage.html">
+      <span class="stt-home-action-card__number" aria-hidden="true">01</span>
+      <p>Lire Démarrage étudiant avant la première séance.</p>
+    </a>
+    <a class="stt-home-action-card" href="calendrier.html">
+      <span class="stt-home-action-card__number" aria-hidden="true">02</span>
+      <p>Consulter le Calendrier pour repérer la préparation et les échéances de la semaine.</p>
+    </a>
+    <article class="stt-home-action-card">
+      <span class="stt-home-action-card__number" aria-hidden="true">03</span>
+      <p>Ouvrir le module correspondant depuis le menu « Modules » pour trouver la préparation, le laboratoire et la trace attendue.</p>
+    </article>
+  </div>
+</section>
 
-## Chaque semaine
+<section class="stt-home-section" aria-labelledby="week-title">
+  <div class="stt-home-section__header">
+    <h2 id="week-title">Chaque semaine</h2>
+  </div>
+  <div class="stt-home-table-wrap">
+    <table>
+      <thead>
+        <tr><th>Moment</th><th>Ce que vous faites</th><th>Trace utile</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Avant la classe</td><td>Lire l’extrait demandé, essayer les exemples R, faire le mini-test lorsqu’il est annoncé et préparer le dépôt</td><td>Question, commit initial ou note courte</td></tr>
+        <tr><td>Pendant le laboratoire</td><td>Clarifier les points difficiles, produire dans le dépôt et demander de l’aide avec un exemple reproductible</td><td>Script, rapport, fonction, test, figure, issue ou pull request</td></tr>
+        <tr><td>Après la classe</td><td>Stabiliser la trace demandée et mettre à jour le portfolio</td><td>Livrable, journal ou <code>docs/ai-log.md</code> lorsque pertinent</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-| Moment | Ce que vous faites | Trace utile |
-|---|---|---|
-| Avant la classe | Lire l’extrait demandé, essayer les exemples R, faire le mini-test lorsqu’il est annoncé et préparer le dépôt | Question, commit initial ou note courte |
-| Pendant le laboratoire | Clarifier les points difficiles, produire dans le dépôt et demander de l’aide avec un exemple reproductible | Script, rapport, fonction, test, figure, issue ou pull request |
-| Après la classe | Stabiliser la trace demandée et mettre à jour le portfolio | Livrable, journal ou `docs/ai-log.md` lorsque pertinent |
+<section class="stt-home-section" aria-labelledby="progression-title">
+  <div class="stt-home-section__header">
+    <h2 id="progression-title">Progression</h2>
+    <p>Le cours est structuré en 15 semaines:</p>
+  </div>
+  <ol class="stt-home-progression">
+    <li>Mise en route, diagnostic R/Git/Positron</li>
+    <li>Structure de projet, Git, GitHub</li>
+    <li>Dépendances et reproductibilité</li>
+    <li>Données et nettoyage</li>
+    <li><a href="defis.html#defi-technique-1">Défi technique 1</a>, puis <a href="modules/05-consolidation-git-donnees-portfolio/">Consolidation : Git, données et portfolio</a></li>
+    <li>Visualisation</li>
+    <li>Quarto, rapports, communication</li>
+    <li><a href="defis.html#defi-technique-2">Défi technique 2</a>, puis <a href="modules/08-consolidation-validation-ia/">Consolidation : validation et IA</a></li>
+    <li><a href="modules/09-consolidation/">Consolidation et revue intermédiaire</a></li>
+    <li>Fonctions, <code>purrr</code>, pipelines</li>
+    <li>POO et architecture</li>
+    <li><a href="modules/12-synthese-performance-parallele/">Performance et parallélisation</a></li>
+    <li><a href="defis.html#defi-technique-3">Défi technique 3</a>, puis <a href="modules/13-consolidation-tests-limites-transfert/">Consolidation : tests, limites et transfert</a></li>
+    <li><a href="modules/14-synthese-finale/">Synthèse finale adaptée au projet: reproduction, limites et modèle lorsque pertinent</a></li>
+    <li>Site personnel, présentation et revue du projet</li>
+  </ol>
+</section>
 
-## Progression
-
-Le cours est structuré en 15 semaines:
-
-1. Mise en route, diagnostic R/Git/Positron
-2. Structure de projet, Git, GitHub
-3. Dépendances et reproductibilité
-4. Données et nettoyage
-5. [Défi technique 1](defis.qmd#defi-technique-1), puis [Consolidation : Git, données et portfolio](modules/05-consolidation-git-donnees-portfolio/index.qmd)
-6. Visualisation
-7. Quarto, rapports, communication
-8. [Défi technique 2](defis.qmd#defi-technique-2), puis [Consolidation : validation et IA](modules/08-consolidation-validation-ia/index.qmd)
-9. [Consolidation et revue intermédiaire](modules/09-consolidation/index.qmd)
-10. Fonctions, `purrr`, pipelines
-11. POO et architecture
-12. [Performance et parallélisation](modules/12-synthese-performance-parallele/index.qmd)
-13. [Défi technique 3](defis.qmd#defi-technique-3), puis [Consolidation : tests, limites et transfert](modules/13-consolidation-tests-limites-transfert/index.qmd)
-14. [Synthèse finale adaptée au projet: reproduction, limites et modèle lorsque pertinent](modules/14-synthese-finale/index.qmd)
-15. Site personnel, présentation et revue du projet
-
-## Évaluations et productions
-
-Les productions à suivre sont les mini-tests de préparation, le portfolio GitHub individuel, trois défis techniques, le projet filé en équipe et le site Quarto personnel. La page [Évaluations](evaluations.qmd) présente les pondérations, les échéances, les traces attendues et les règles d’utilisation de l’IA.
-
-## Portfolio et GitHub
-
-Le portfolio individuel est construit progressivement. Il doit contenir des traces concrètes du travail: code, visualisations, rapports, applications ou prototypes, documentation, réflexions et déclarations d’usage de l’IA lorsque nécessaire.
-
-GitHub est utilisé pour versionner le travail, documenter les contributions, soutenir la revue de code, publier le site personnel et rendre la progression visible.
-
-## IA générative
-
-L’IA peut être permise, déclarée ou intégrée selon l’activité. Avant une remise, consulter la [Politique d’utilisation de l’IA](ia.qmd) et la règle propre à l’évaluation.
+<section class="stt-home-section stt-home-info-grid" aria-label="Productions et règles du cours">
+  <div class="stt-home-info-card">
+    <h2>Évaluations et productions</h2>
+    <p>Les productions à suivre sont les mini-tests de préparation, le portfolio GitHub individuel, trois défis techniques, le projet filé en équipe et le site Quarto personnel. La page <a href="evaluations.html">Évaluations</a> présente les pondérations, les échéances, les traces attendues et les règles d’utilisation de l’IA.</p>
+  </div>
+  <div class="stt-home-info-card">
+    <h2>Portfolio et GitHub</h2>
+    <p>Le portfolio individuel est construit progressivement. Il doit contenir des traces concrètes du travail: code, visualisations, rapports, applications ou prototypes, documentation, réflexions et déclarations d’usage de l’IA lorsque nécessaire.</p>
+    <p>GitHub est utilisé pour versionner le travail, documenter les contributions, soutenir la revue de code, publier le site personnel et rendre la progression visible.</p>
+  </div>
+  <div class="stt-home-info-card">
+    <h2>IA générative</h2>
+    <p>L’IA peut être permise, déclarée ou intégrée selon l’activité. Avant une remise, consulter la <a href="ia.html">Politique d’utilisation de l’IA</a> et la règle propre à l’évaluation.</p>
+  </div>
+</section>
+```
