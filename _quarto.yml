@@ -17,8 +17,6 @@ website:
     left:
       - text: "Accueil"
         href: index.qmd
-      - text: "Démarrer"
-        href: demarrage.qmd
       - text: "Calendrier"
         href: calendrier.qmd
       - text: "Modules"
@@ -54,9 +52,11 @@ website:
         - text: "15 - Publication et défense"
           href: modules/15-collaboration-documentation-package/index.qmd
       - text: "Évaluations"
-        href: evaluations.qmd
-      - text: "Projet et portfolio"
         menu:
+        - text: "Vue d’ensemble"
+          href: evaluations.qmd
+        - text: "Défis techniques"
+          href: defis.qmd
         - text: "Projet d’équipe"
           href: projets.qmd
         - text: "Portfolio individuel"
@@ -65,8 +65,14 @@ website:
           href: site-personnel.qmd
         - text: "Présentation et revue"
           href: presentation.qmd
-      - text: "Ressources"
+        - text: "Règles d’usage de l’IA"
+          href: ia.qmd
+      - text: "Aide et ressources"
         menu:
+        - text: "Démarrage étudiant"
+          href: demarrage.qmd
+        - text: "Plan de cours"
+          href: plan-cours.qmd
         - text: "Données autorisées"
           href: donnees.qmd
         - text: "Lectures"
@@ -77,13 +83,8 @@ website:
           href: dependances.qmd
         - text: "Soutien technique"
           href: soutien-technique.qmd
-    right:
-      - text: "Plan"
-        href: plan-cours.qmd
-      - text: "IA"
-        href: ia.qmd
-      - text: "Communication"
-        href: communication.qmd
+        - text: "Communication"
+          href: communication.qmd
   sidebar:
     - id: modules
       title: "Modules"
@@ -144,17 +145,6 @@ website:
           contents:
             - gabarits/gabarit-mini-test-preparation.qmd
             - gabarits/template-site-personnel.qmd
-    - id: ressources
-      title: "Ressources"
-      contents:
-        - demarrage.qmd
-        - donnees.qmd
-        - lectures.qmd
-        - ressources.qmd
-        - ressources/rattrapage-r-git-defi-1.qmd
-        - dependances.qmd
-        - soutien-technique.qmd
-        - communication.qmd
   page-footer:
     left: "STT-4230 / STT-6230 - Université Laval"
     right: "Contenu sous licence CC BY-NC-SA 4.0, sauf indication contraire."
