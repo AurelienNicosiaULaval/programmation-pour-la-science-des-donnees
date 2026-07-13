@@ -11,9 +11,13 @@ Le noyau obligatoire est la construction et le dispatch d'un objet S3. La démon
 
 ### 1. Retour sur le mini-test (15 min)
 
-*   **Question 1 :** L'objet `WWWusage` a la classe `"ts"`. Lors de l'appel à `summary(WWWusage)`, le dispatch de R cherche d'abord la méthode `summary.ts()`. Si elle existe (ce qui est le cas dans le package base), R l'appelle. La bonne réponse est donc **Option B : `summary.ts`**.
-*   **Question 2 :** En S3, la règle de nommage d'une méthode est `<nom_generique>.<nom_classe>`. Pour surcharger `plot` pour la classe `matrix`, la syntaxe est `plot.matrix <- function(x, ...)`. La bonne réponse est **Option B**.
-*   **Question 3:** Il n'y a pas une réponse unique. S3 convient souvent à un résultat à afficher ou résumer; R6 mérite d'être évalué lorsque plusieurs opérations doivent partager et faire évoluer un état encapsulé; aucune classe est souvent la meilleure décision si des fonctions pures et une liste suffisent.
+Après la fermeture du questionnaire dans Brio, le retour collectif porte sur:
+
+- la recherche d'une méthode S3 et le repli vers une méthode par défaut;
+- la convention de nommage `generique.classe`;
+- les critères permettant de choisir S3, R6 ou aucune classe.
+
+Les réponses et la rétroaction détaillée sont publiées dans Brio après la fermeture.
 
 ---
 

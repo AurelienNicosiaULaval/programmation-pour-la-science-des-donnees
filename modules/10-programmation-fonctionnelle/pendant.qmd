@@ -10,9 +10,14 @@ format:
 Le noyau obligatoire de la séance est le triplet fonction, test automatisé et itération. Les notions de portée lexicale, d'environnements, de promesses et l'utilisation de `browser()` sont présentées comme approfondissements et ne sont pas exigées dans la trace minimale de la semaine.
 
 ### 1. Retour sur le mini-test et clarifications (15 min)
-*   **Question 1 :** Pourquoi la condition `cond_e <- c` échoue-t-elle ? R ne peut pas convertir un objet de type fonction (`closure`) en valeur logique de façon implicite. Les conditions numériques (ex: `1`) sont converties en `TRUE` (car tout nombre différent de 0 vaut `TRUE`), mais pour des fonctions, la conversion échoue avec l'erreur : `"un objet de type 'closure' ne peut être converti en type 'logical'"`.
-*   **Question 2:** L'option D retourne une liste, alors que la boucle préallouée, `vapply()` et `map_dbl()` retournent un vecteur numérique. La boucle n'est pas incorrecte: elle est ici une solution explicite et fiable grâce à la préallocation.
-*   **Question 3:** Il n'y a pas une réponse unique. Vérifiez que le chemin existe, que la répétition est observable et que les entrées et la sortie proposées permettraient de remplacer au moins deux occurrences sans dépendre d'une variable globale cachée.
+
+Après la fermeture du questionnaire dans Brio, le retour collectif porte sur:
+
+- les types d'objets qui peuvent servir de condition à `if`;
+- la différence entre une liste et un vecteur typé comme sortie d'itération;
+- les critères permettant de transformer une répétition réelle en fonction.
+
+Les réponses et la rétroaction détaillée sont publiées dans Brio après la fermeture.
 
 ---
 

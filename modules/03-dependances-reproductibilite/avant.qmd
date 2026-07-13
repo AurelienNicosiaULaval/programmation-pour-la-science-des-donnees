@@ -89,21 +89,15 @@ Si l’initialisation de `renv` échoue dans le troisième cas, documenter tempo
 
 ## Mini-test de préparation
 
-Le [gabarit commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd) précise le fonctionnement stable utilisé pendant la session.
+Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
 
-- Durée cible: 5 à 10 minutes.
-- Questions: répondre aux trois questions ci-dessous, dans l’ordre.
-- Format de remise: trois réponses numérotées et courtes dans le canal officiel indiqué par l’équipe enseignante.
-- Échéance: remettre les réponses avant le début du laboratoire.
-- Règle IA: l’IA est permise pour clarifier une notion. Elle ne remplace pas l’exécution locale du code ni la compréhension des réponses.
-- Trace: le résultat reste enregistré dans le canal de remise et une difficulté est notée pour le laboratoire. Une clarification mineure n’exige pas d’entrée IA; si l’aide influence une trace de portfolio, du code, de la documentation ou une décision conservée, la consigner dans `docs/ai-log.md`.
-- Complétion minimale: les trois réponses sont soumises et `sessionInfo()` ainsi que l’inventaire des packages ont été exécutés.
+Thèmes à préparer:
 
-Questions:
+- distinguer un package installé, un package chargé et une dépendance consignée;
+- reconnaître les fichiers à versionner ou à ignorer;
+- inspecter les dépendances du projet et noter une difficulté réelle.
 
-1. Quelle différence y a-t-il entre installer un package et le charger avec `library()`? Quel rôle distinct joue `renv.lock`?
-2. Un script versionné et destiné à être relancé utilise `tibble`. Selon la règle guidée, faut-il créer `renv.lock`? Nommer aussi un fichier local qui devrait être exclu par `.gitignore`.
-3. Dans lequel des trois cas de la règle guidée ton portfolio se trouve-t-il? Citer une sortie réellement observée dans `sessionInfo()` ou dans l’inventaire des packages, puis noter une difficulté à reprendre au laboratoire.
+Les questions exactes ne sont pas publiées sur le site. Consulter le [fonctionnement commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd).
 
 ## À apporter en classe
 

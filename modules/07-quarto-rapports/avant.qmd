@@ -69,20 +69,12 @@ summary(cars)
 
 ## Mini-test de préparation
 
-Ce mini-test fait partie de la composante « Mini-tests de préparation » décrite dans la page [Évaluations](../../evaluations.qmd).
+Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
 
-Le [gabarit commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd) précise le fonctionnement stable utilisé pendant la session.
+Thèmes à préparer:
 
-- Durée cible: 5 à 10 minutes.
-- Questions: répondre aux trois questions ci-dessous, dans l’ordre.
-- Format de remise: trois réponses numérotées et courtes dans le canal officiel indiqué par l’équipe enseignante.
-- Échéance: remettre les réponses avant le début du laboratoire.
-- Règle IA: l’IA est permise pour clarifier une notion. Elle ne remplace pas l’exécution locale du code ni la compréhension des réponses.
-- Trace: le résultat reste enregistré dans le canal de remise et une difficulté est notée pour le laboratoire. Une clarification mineure n’exige pas d’entrée IA; si l’aide influence une trace de portfolio, du code, de la documentation ou une décision conservée, la consigner dans `docs/ai-log.md`.
-- Complétion minimale: les trois réponses sont soumises et le fichier `test.qmd` a été rendu localement.
+- reconnaître le moteur utilisé pour exécuter les blocs R;
+- comprendre la portée et les limites de `embed-resources: true`;
+- rendre le document de préparation et noter le résultat observé.
 
-Questions:
-
-1. Quel package R est utilisé par Quarto pour exécuter les blocs de code R par défaut?
-2. Quelle est la fonction de l’option YAML `embed-resources: true`, et quelle limite ne résout-elle pas à elle seule?
-3. Après avoir rendu `test.qmd`, indiquer la commande ou l’action utilisée, le résultat réellement observé et une difficulté à reprendre au laboratoire. Nommer aussi l’option de bloc qui masquerait le code R tout en affichant ses résultats.
+Les questions exactes ne sont pas publiées sur le site. Consulter le [fonctionnement commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd).

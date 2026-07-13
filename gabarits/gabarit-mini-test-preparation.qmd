@@ -5,7 +5,7 @@ format:
     embed-resources: true
 ---
 
-Ce gabarit fixe les éléments qui doivent être visibles dans chaque mini-test de préparation. Les questions changent selon le module, mais le fonctionnement reste stable pendant la session.
+Ce gabarit décrit le fonctionnement étudiant des mini-tests de préparation. Les questions exactes se trouvent uniquement dans Brio pendant leur période d'ouverture.
 
 ## Fonction du mini-test
 
@@ -15,20 +15,24 @@ Le mini-test vérifie que la lecture et le geste technique minimal ont été ré
 
 | Élément | Règle commune |
 |---|---|
-| Durée cible | 5 à 10 minutes, à l'intérieur de la préparation hebdomadaire annoncée |
-| Questions | Trois questions: compréhension, lecture de code ou décision, puis difficulté ou vérification personnelle |
-| Remise | Dans le canal officiel indiqué par l'équipe enseignante, avant le début du laboratoire |
+| Plateforme | Brio, sous forme d'évaluation de type questionnaire |
+| Disponibilité | Ouverture 48 heures avant le laboratoire et fermeture au début du laboratoire |
+| Durée et tentative | 10 minutes, une tentative |
+| Questions | Concept sur 4 points, lecture de code ou décision sur 6 points, puis difficulté ou vérification personnelle non notée |
+| Correction | Automatique pour les deux questions notées; résultat et corrigé publiés après la fermeture |
 | IA | Permise pour clarifier une notion; les réponses remises doivent être comprises et vérifiées |
-| Trace | Résultat enregistré dans le canal de remise et difficulté notée pour le laboratoire |
-| Complétion | Les trois réponses sont soumises et le geste technique demandé a été exécuté |
+| Trace | Résultat enregistré dans Brio et difficulté notée pour le laboratoire |
 
-Les réponses ne doivent pas être copiées automatiquement dans le portfolio. Une note de portfolio est utile seulement lorsqu'une question, une erreur ou une vérification contribue à la progression de la semaine.
+Les neuf mini-tests ont le même poids à l'intérieur de la composante de 10 %. Les réponses ne doivent pas être copiées automatiquement dans le portfolio. Une note de portfolio est utile seulement lorsqu'une question, une erreur ou une vérification contribue à la progression de la semaine.
 
 ## Structure à reprendre dans les modules
 
-1. Une question courte sur le concept central.
-2. Une question qui demande de lire, prévoir ou corriger un fragment de code.
-3. Une question personnelle et vérifiable: erreur rencontrée, sortie obtenue, décision prise ou point à reprendre.
+Chaque page de préparation indique les thèmes à maîtriser et le geste technique à exécuter. Elle ne reproduit pas les questions évaluées. Pour se préparer:
+
+1. comprendre le concept central indiqué;
+2. exécuter le fragment de code ou la vérification demandée;
+3. noter une difficulté, une sortie obtenue ou un point à reprendre;
+4. ouvrir Brio pendant la période prévue et répondre au questionnaire.
 
 ## Règle IA
 

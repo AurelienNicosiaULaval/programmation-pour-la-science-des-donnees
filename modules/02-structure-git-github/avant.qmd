@@ -66,21 +66,15 @@ Si une commande ne fonctionne pas, noter le message complet. La correction se fe
 
 ## Mini-test de préparation
 
-Le [gabarit commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd) précise le fonctionnement stable utilisé pendant la session.
+Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
 
-- Durée cible: 5 à 10 minutes.
-- Questions: répondre aux trois questions ci-dessous, dans l’ordre.
-- Format de remise: trois réponses numérotées et courtes dans le canal officiel indiqué par l’équipe enseignante.
-- Échéance: remettre les réponses avant le début du laboratoire.
-- Règle IA: l’IA est permise pour clarifier une notion. Elle ne remplace pas l’exécution locale des commandes ni la compréhension des réponses.
-- Trace: le résultat reste enregistré dans le canal de remise et une difficulté est notée pour le laboratoire. Une clarification mineure n’exige pas d’entrée IA; si l’aide influence une trace de portfolio, du code, de la documentation ou une décision conservée, la consigner dans `docs/ai-log.md`.
-- Complétion minimale: les trois réponses sont soumises et `git status` ainsi que la recherche de chemins ont été exécutés.
+Thèmes à préparer:
 
-Questions:
+- reconnaître un chemin relatif au projet;
+- associer les commandes Git de base à leur rôle;
+- exécuter `git status` et noter une difficulté réelle.
 
-1. À quoi sert `git status`, et quelle différence y a-t-il entre un fichier modifié et un fichier indexé avec `git add`?
-2. Pourquoi `/Users/prenom/projet/data/fichier.csv` pose-t-il problème dans un dépôt partagé? Proposer un chemin relatif et indiquer où placer un script R réutilisable qui le lit.
-3. À partir de la sortie réelle de `git status` ou de la recherche de chemins, noter une observation vérifiable, une difficulté à reprendre au laboratoire et un message de commit précis pour la prochaine correction.
+Les questions exactes ne sont pas publiées sur le site. Consulter le [fonctionnement commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd).
 
 ## À apporter en classe
 

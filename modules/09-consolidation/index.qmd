@@ -28,17 +28,15 @@ Avant le laboratoire:
 
 ## Mini-test de préparation
 
-Durée cible: 5 à 10 minutes.
+Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
 
-1. Quel fichier ou livrable as-tu relancé, et quel résultat permet de confirmer que la relance a réussi?
-2. Quelle correction est prioritaire avant la semaine 10: duplication de code, chemin fragile, dépendance implicite, validation absente ou documentation incomplète? Justifie en une phrase.
-3. Quelle difficulté précise veux-tu traiter pendant le laboratoire?
+Thèmes à préparer:
 
-Remise: dans le canal officiel indiqué par l'équipe enseignante, avant le début du laboratoire.
+- reconnaître une preuve de relance réussie;
+- prioriser une correction qui améliore la reproductibilité;
+- relancer un livrable réel et noter une difficulté précise.
 
-IA: permise pour clarifier une notion. Les vérifications et la réponse personnelle doivent correspondre au dépôt réel. Si l'aide influence une correction conservée, la documenter dans `docs/ai-log.md`.
-
-Trace et complétion: les trois réponses sont soumises, le livrable annoncé a été relancé et la difficulté est assez précise pour guider le travail en classe. Le fonctionnement commun est décrit dans le [gabarit des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd).
+Les questions exactes ne sont pas publiées sur le site. Consulter le [fonctionnement commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd).
 
 ## Travail pendant le laboratoire
 

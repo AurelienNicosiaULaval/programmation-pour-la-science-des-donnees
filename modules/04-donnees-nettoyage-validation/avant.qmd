@@ -30,21 +30,15 @@ Si une valeur est `FALSE`, créer le dossier manquant avant la séance.
 
 ## Mini-test de préparation
 
-Le [gabarit commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd) précise le fonctionnement stable utilisé pendant la session.
+Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
 
-- Durée cible: 5 à 10 minutes.
-- Questions: répondre aux trois questions ci-dessous, dans l’ordre.
-- Format de remise: trois réponses numérotées et courtes dans le canal officiel indiqué par l’équipe enseignante.
-- Échéance: remettre les réponses avant le début du laboratoire.
-- Règle IA: l’IA est permise pour clarifier une notion. Elle ne remplace pas l’exécution locale du code ni la compréhension des réponses.
-- Trace: le résultat reste enregistré dans le canal de remise et une difficulté est notée pour le laboratoire. Une clarification mineure n’exige pas d’entrée IA; si l’aide influence une trace de portfolio, du code, de la documentation ou une décision conservée, la consigner dans `docs/ai-log.md`.
-- Complétion minimale: les trois réponses sont soumises et les commandes de vérification des dossiers ont été exécutées.
+Thèmes à préparer:
 
-Questions:
+- choisir une fonction d'importation adaptée au séparateur du fichier;
+- interpréter une règle de nettoyage et une assertion;
+- noter une sortie, une erreur ou une vérification réellement observée.
 
-1. Quelle différence fais-tu entre des données brutes et des données nettoyées, et pourquoi les données brutes ne doivent-elles pas être écrasées?
-2. Dans la transformation `precip_mm = if_else(precip_mm < 0, NA_real_, precip_mm)`, quelle décision est prise? Proposer une assertion qui vérifierait ensuite l’absence de précipitations négatives non manquantes.
-3. Après avoir exécuté les commandes de préparation, indiquer une sortie ou une erreur réellement observée et la vérification minimale à faire avant de sauvegarder un fichier propre.
+Les questions exactes ne sont pas publiées sur le site. Consulter le [fonctionnement commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd).
 
 ## Pratique sans IA
 
