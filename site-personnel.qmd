@@ -40,7 +40,7 @@ Le site doit être assez simple pour être maintenu après le cours. Il n’est 
 |---|---|
 | Pondération | 10 % |
 | Type | Individuel |
-| Moment | Semaine 15 (16 décembre 2026) |
+| Moment | Semaine 15 (16 décembre 2026, 13 h 30 à 16 h 20) |
 | Support | Site Quarto publié sur GitHub Pages et dépôt GitHub source |
 | IA | Permise, déclarée |
 

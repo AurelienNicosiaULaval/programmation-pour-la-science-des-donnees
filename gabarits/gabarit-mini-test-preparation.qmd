@@ -9,19 +9,19 @@ Ce gabarit décrit le fonctionnement étudiant des mini-tests de préparation. L
 
 ## Fonction du mini-test
 
-Le mini-test vérifie que la lecture et le geste technique minimal ont été réalisés avant le laboratoire. Il sert aussi à repérer une difficulté à traiter au début de la séance.
+Le mini-test vérifie que la lecture et le geste technique minimal ont été réalisés avant la séance. Il sert aussi à repérer une difficulté à traiter au début de la classe.
 
 ## Format commun
 
 | Élément | Règle commune |
 |---|---|
 | Plateforme | Brio, sous forme d'évaluation de type questionnaire |
-| Disponibilité | Ouverture 48 heures avant le laboratoire et fermeture au début du laboratoire |
+| Disponibilité | Ouverture le lundi à 13 h 30 et fermeture le mercredi à 13 h 30, au début de la séance |
 | Durée et tentative | 10 minutes, une tentative |
 | Questions | Concept sur 4 points, lecture de code ou décision sur 6 points, puis difficulté ou vérification personnelle non notée |
 | Correction | Automatique pour les deux questions notées; résultat et corrigé publiés après la fermeture |
 | IA | Permise pour clarifier une notion; les réponses remises doivent être comprises et vérifiées |
-| Trace | Résultat enregistré dans Brio et difficulté notée pour le laboratoire |
+| Trace | Résultat enregistré dans Brio et difficulté notée pour la séance |
 
 Les neuf mini-tests ont le même poids à l'intérieur de la composante de 10 %. Les réponses ne doivent pas être copiées automatiquement dans le portfolio. Une note de portfolio est utile seulement lorsqu'une question, une erreur ou une vérification contribue à la progression de la semaine.
 

@@ -11,13 +11,13 @@ Cette page présente les pondérations, les échéances, les traces attendues et
 
 | Composante | Pondération | Type | Moment | Règle IA |
 |---|---:|---|---|---|
-| Mini-tests de préparation | 10 % | Individuel | Semaines 2, 3, 4, 6, 7, 9, 10, 11 et 12 | Permise |
+| Mini-tests de préparation | 10 % | Individuel | Séances 2, 3, 4, 6, 7, 9, 10, 11 et 12; remise dans Brio le mercredi avant 13 h 30 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
-| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 (16 décembre 2026) | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 (16 décembre 2026, 13 h 30 à 16 h 20) | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
-| Site Quarto personnel | 10 % | Individuel | Semaine 15 (16 décembre 2026) | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15 (16 décembre 2026, 13 h 30 à 16 h 20) | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
 ## Rôle des trois défis techniques
@@ -54,7 +54,7 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 
 | Composante | Traces attendues |
 |---|---|
-| Mini-tests de préparation | Résultat enregistré dans Brio et difficulté ou observation personnelle non notée à reprendre au laboratoire |
+| Mini-tests de préparation | Résultat enregistré dans Brio avant 13 h 30 et difficulté ou observation personnelle non notée à reprendre pendant la séance |
 | Portfolio GitHub individuel | Dépôt individuel, dossiers hebdomadaires, scripts, fonctions, rapports, README, conventions, `docs/ai-log.md`, bilan final, commits réguliers |
 | Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
 | Défi 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
@@ -64,7 +64,7 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 
 ## Repère de semaine 15
 
-En semaine 15, trois objets sont à distinguer.
+La semaine 15 correspond à la séance d’évaluation finale du mercredi 16 décembre 2026, de 13 h 30 à 16 h 20. Cette séance se trouve dans la période réservée aux examens. Trois objets sont à distinguer.
 
 | Objet | Rôle | Trace attendue |
 |---|---|---|
@@ -121,11 +121,11 @@ Les mini-tests de préparation sont réalisés à livre ouvert. L’utilisation 
 
 ### Mini-tests de préparation
 
-Les mini-tests sont de courts questionnaires individuels dans Brio. Ils visent la préparation au laboratoire et la vérification des lectures. Neuf mini-tests sont prévus et forment ensemble la composante de 10 %. Ils ont tous le même poids dans cette composante.
+Les mini-tests sont de courts questionnaires individuels dans Brio. Ils visent la préparation à la séance et la vérification des lectures. Neuf mini-tests sont prévus et forment ensemble la composante de 10 %. Ils ont tous le même poids dans cette composante.
 
 Chaque mini-test suit le même fonctionnement:
 
-- ouverture dans Brio 48 heures avant le laboratoire et fermeture au début du laboratoire;
+- ouverture dans Brio le lundi à 13 h 30 et fermeture le mercredi à 13 h 30, soit au début de la séance;
 - durée maximale de 10 minutes et une seule tentative;
 - trois questions: une question de concept notée sur 4, une question de lecture de code ou de décision notée sur 6, puis une difficulté ou observation personnelle non notée;
 - correction automatique des deux questions notées;

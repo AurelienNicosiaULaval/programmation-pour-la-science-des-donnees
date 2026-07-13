@@ -91,6 +91,8 @@ Si l’initialisation de `renv` échoue dans le troisième cas, documenter tempo
 
 Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
 
+Disponibilité dans Brio: du lundi 14 septembre 2026 à 13 h 30 au mercredi 16 septembre 2026 à 13 h 30.
+
 Thèmes à préparer:
 
 - distinguer un package installé, un package chargé et une dépendance consignée;

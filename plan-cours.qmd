@@ -7,6 +7,8 @@ format:
 
 Cette page présente les objectifs, la progression, les repères de calendrier et les modalités d’évaluation du cours.
 
+Horaire du cours: mercredi, de 13 h 30 à 16 h 20. Source: [fiche officielle du cours STT-4230, Université Laval](https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique).
+
 ## Description officielle
 
 Bonnes pratiques de codage et gestion du versionnage du code. Manipulation et gestion des données. Visualisation des données. Rédaction de rapports et création d’applications web. Programmation orientée objet pour la science des données. Pipelines de transformation des données. Optimisation du code. Programmation parallèle. Cycle de vie d’un modèle, déploiement et mise en production. Collaboration et documentation. Ce cours utilise le langage de programmation R.
@@ -26,6 +28,7 @@ Les dates suivantes proviennent du calendrier universitaire 2026-2027 de l’Uni
 | Congé de la fête du Travail | 7 septembre 2026 |
 | Date limite de modification du choix de cours | 8 septembre 2026 |
 | Date limite d’abandon avec remboursement | 14 septembre 2026 |
+| Congé lié aux élections provinciales | 5 octobre 2026 |
 | Congé de l’Action de grâce | 12 octobre 2026 |
 | Semaine de lecture | 26 au 30 octobre 2026 |
 | Date limite d’abandon sans échec et sans remboursement | 9 novembre 2026 |
@@ -34,6 +37,8 @@ Les dates suivantes proviennent du calendrier universitaire 2026-2027 de l’Uni
 | Période réservée aux examens | 14 au 20 décembre 2026 |
 
 Source: [Calendrier universitaire 2026-2027, Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf).
+
+Les 14 séances régulières ont lieu du 2 septembre au 9 décembre. La séance d’évaluation finale du mercredi 16 décembre, de 13 h 30 à 16 h 20, se trouve dans la période réservée aux examens et non dans la session régulière.
 
 ## Objectif général
 
@@ -75,13 +80,13 @@ Le tableau suivant présente les composantes évaluées du cours.
 
 | Évaluation | Pondération | Type | Moment | IA |
 |---|---:|---|---|---|
-| Mini-tests de préparation | 10 % | Individuel | Semaines 2, 3, 4, 6, 7, 9, 10, 11 et 12 | Permise |
+| Mini-tests de préparation | 10 % | Individuel | Séances 2, 3, 4, 6, 7, 9, 10, 11 et 12; remise dans Brio le mercredi avant 13 h 30 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
-| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 (16 décembre 2026) | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 (16 décembre 2026, 13 h 30 à 16 h 20) | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
-| Site Quarto personnel | 10 % | Individuel | Semaine 15 (16 décembre 2026) | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15 (16 décembre 2026, 13 h 30 à 16 h 20) | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
 Les critères détaillés, les consignes et les différences entre STT-4230 et STT-6230 sont regroupés dans la page [Évaluations](evaluations.qmd).

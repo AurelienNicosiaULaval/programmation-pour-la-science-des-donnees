@@ -5,22 +5,28 @@ format:
     embed-resources: true
 ---
 
-Ce calendrier présente la progression du cours les mercredis de l’automne 2026. Les repères institutionnels proviennent du [calendrier universitaire 2026-2027 de l’Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf).
+Selon la [fiche officielle du cours STT-4230](https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique), le cours a lieu le mercredi, de 13 h 30 à 16 h 20. Ce calendrier présente les 14 séances régulières de l’automne 2026, du 2 septembre au 9 décembre, ainsi que la séance d’évaluation finale du 16 décembre.
 
-Les mini-tests de préparation sont prévus les semaines sans défi technique.
+Les repères institutionnels proviennent du [calendrier universitaire 2026-2027 de l’Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf). La session régulière se termine le 11 décembre. La séance du 16 décembre appartient donc à la période réservée aux examens, du 14 au 20 décembre; elle ne constitue pas une séance régulière de cours.
+
+La colonne « Séance » suit la progression pédagogique du cours. La semaine de lecture n’est pas comptée comme une séance.
+
+Les mini-tests de préparation sont prévus les semaines sans défi technique. Chaque mini-test doit être terminé et remis dans Brio le mercredi concerné avant 13 h 30, soit avant le début de la séance.
 
 Les défis techniques individuels occupent environ une heure de la séance. Le reste de la séance demeure un temps d’apprentissage: retour technique, consolidation, portfolio, projet ou atelier de transfert. Le travail fait après la remise du défi ne modifie pas le livrable évalué.
 
-La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance régulière n’est prévue cette semaine.
+La semaine de lecture officielle est du 26 au 30 octobre 2026. Il n’y a donc aucune séance le mercredi 28 octobre.
 
 ## Autres repères institutionnels
 
 | Repère | Date |
 |---|---|
+| Début de la session et des cours | 31 août 2026 |
 | Date limite de modification du choix de cours | 8 septembre 2026 |
 | Date limite d’abandon avec remboursement | 14 septembre 2026 |
 | Congé lié aux élections provinciales | 5 octobre 2026 |
 | Congé de l’Action de grâce | 12 octobre 2026 |
+| Semaine de lecture | 26 au 30 octobre 2026 |
 | Date limite d’abandon sans échec et sans remboursement | 9 novembre 2026 |
 | Fête de l’Université | 8 décembre 2026 |
 | Fin de la session | 11 décembre 2026 |
@@ -28,28 +34,28 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance r�
 
 ## Vue synthèse
 
-| Semaine | Date | Thème | Préparation | Travail en laboratoire | Échéances et traces |
+| Séance | Date et horaire | Thème | Préparation | Travail pendant la séance | Échéances et traces |
 |---:|---|---|---|---|---|
-| 1 | 2 septembre 2026 | Mise en route | Fonctionnement du cours, environnement R, GitHub, portfolio | Diagnostic initial, installation, premiers repères | README initial et journal de départ |
-| 2 | 9 septembre 2026 | Structure de projet, Git, GitHub | Workflow Git, chemins relatifs, conventions | Créer ou nettoyer un dépôt | Mini-test, structure et conventions |
-| 3 | 16 septembre 2026 | Dépendances et reproductibilité | `renv`, `.gitignore`, chemins relatifs | Relancer un projet sur une autre machine ou session propre | Mini-test, jalon portfolio 1 |
-| 4 | 23 septembre 2026 | Données et nettoyage | Importation, validation, tidy data, transformation, fichiers volumineux, SQL/API en aperçu | Construire un premier pipeline de données avec vérifications et assertions simples | Mini-test, pipeline de données et revue courte |
-| 5 | 30 septembre 2026 | Défi technique 1, puis consolidation Git, données et portfolio | Révision projet, Git, importation, nettoyage simple | Défi individuel 1 h sans IA, puis [atelier de consolidation](modules/05-consolidation-git-donnees-portfolio/index.qmd) | Défi 1, aucune IA; trace non évaluée de consolidation |
-| 6 | 7 octobre 2026 | Visualisation | `ggplot2`, choix graphiques, communication visuelle | Produire et améliorer une figure | Mini-test, proposition du projet d’équipe |
-| 7 | 14 octobre 2026 | Quarto et communication | Rapports reproductibles, narration et résultats | Compiler un rapport Quarto court | Mini-test, rapport Quarto et revue courte |
-| 8 | 21 octobre 2026 | Défi technique 2, puis consolidation validation et IA | Pipeline, visualisation, rapport Quarto, IA déclarée | Défi individuel 1 h, puis [atelier de validation et IA](modules/08-consolidation-validation-ia/index.qmd) | Défi 2, trace dans `docs/ai-log.md`; trace non évaluée de validation |
-| Relâche | 28 octobre 2026 | Semaine de lecture | Aucun mini-test régulier | Aucune séance régulière | Travail autonome et rattrapage |
-| 9 | 4 novembre 2026 | [Consolidation](modules/09-consolidation/index.qmd) | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test, jalon portfolio 2, point de suivi projet formatif |
-| 10 | 11 novembre 2026 | Fonctions, `purrr` et tests | Fonctions, itérations, réduction du copier-coller, assertions, `testthat` | Transformer du code exploratoire en fonctions testables | Mini-test, fonction dans `R/`, test minimal |
-| 11 | 18 novembre 2026 | POO et architecture | S3 et R6, différences et cas d’usage | Structurer des objets ou composants du projet | Mini-test, note POO ou architecture |
-| 12 | 25 novembre 2026 | [Performance et parallèle](modules/12-synthese-performance-parallele/index.qmd) | Mesure et profilage; parallèle selon la tâche et la machine | Mesurer un goulot, améliorer le code, puis décider si le parallèle est pertinent | Un seul mini-test, une trace avant/après, version intermédiaire du projet |
-| 13 | 2 décembre 2026 | Défi technique 3, puis consolidation tests, limites et transfert | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis [post-mortem et transfert](modules/13-consolidation-tests-limites-transfert/index.qmd) | Défi 3, rapport technique et trace IA; trace non évaluée de transfert |
-| 14 | 9 décembre 2026 | [Synthèse finale](modules/14-synthese-finale/index.qmd) | Reproduction et limites; modélisation ou autre validation selon le projet | Stabiliser le livrable final, vérifier son point d'entrée et préparer sa défense | Préparation finale, remise finale projet, jalon portfolio 3 |
-| 15 | 16 décembre 2026 | Site personnel, présentation et revue du projet | Site Quarto personnel, dépôt final, support bref, issue ou pull request, bilan individuel | Présentations, revue de code, questions, vérification des contributions, vérification des sites publiés | Site Quarto personnel, défense du projet |
+| 1 | 2 septembre 2026<br>13 h 30 à 16 h 20 | [Mise en route](modules/01-structuration-projets/index.qmd) | Fonctionnement du cours, environnement R, GitHub, portfolio | Diagnostic initial, installation, premiers repères | README initial et journal de départ |
+| 2 | 9 septembre 2026<br>13 h 30 à 16 h 20 | [Structure de projet, Git et GitHub](modules/02-structure-git-github/index.qmd) | Workflow Git, chemins relatifs, conventions | Créer ou nettoyer un dépôt | Mini-test dans Brio avant 13 h 30; structure et conventions |
+| 3 | 16 septembre 2026<br>13 h 30 à 16 h 20 | [Dépendances et reproductibilité](modules/03-dependances-reproductibilite/index.qmd) | `renv`, `.gitignore`, chemins relatifs | Relancer un projet sur une autre machine ou session propre | Mini-test dans Brio avant 13 h 30; jalon portfolio 1 |
+| 4 | 23 septembre 2026<br>13 h 30 à 16 h 20 | [Données et nettoyage](modules/04-donnees-nettoyage-validation/index.qmd) | Importation, validation, tidy data, transformation, fichiers volumineux, SQL/API en aperçu | Construire un premier pipeline de données avec vérifications et assertions simples | Mini-test dans Brio avant 13 h 30; pipeline de données et revue courte |
+| 5 | 30 septembre 2026<br>13 h 30 à 16 h 20 | Défi technique 1, puis [consolidation Git, données et portfolio](modules/05-consolidation-git-donnees-portfolio/index.qmd) | Révision projet, Git, importation, nettoyage simple | Défi individuel 1 h sans IA, puis atelier de consolidation | Défi 1, aucune IA; trace non évaluée de consolidation |
+| 6 | 7 octobre 2026<br>13 h 30 à 16 h 20 | [Visualisation](modules/06-visualisation/index.qmd) | `ggplot2`, choix graphiques, communication visuelle | Produire et améliorer une figure | Mini-test dans Brio avant 13 h 30; proposition du projet d’équipe |
+| 7 | 14 octobre 2026<br>13 h 30 à 16 h 20 | [Quarto et communication](modules/07-quarto-rapports/index.qmd) | Rapports reproductibles, narration et résultats | Compiler un rapport Quarto court | Mini-test dans Brio avant 13 h 30; rapport Quarto et revue courte |
+| 8 | 21 octobre 2026<br>13 h 30 à 16 h 20 | Défi technique 2, puis [consolidation validation et IA](modules/08-consolidation-validation-ia/index.qmd) | Pipeline, visualisation, rapport Quarto, IA déclarée | Défi individuel 1 h, puis atelier de validation et IA | Défi 2, trace dans `docs/ai-log.md`; trace non évaluée de validation |
+| Aucune séance | 28 octobre 2026 | Semaine de lecture | Aucun mini-test régulier | Aucun cours | Travail autonome et rattrapage |
+| 9 | 4 novembre 2026<br>13 h 30 à 16 h 20 | [Consolidation](modules/09-consolidation/index.qmd) | Nettoyage du portfolio et du projet | Revue intermédiaire, rattrapage, correction des blocages | Mini-test dans Brio avant 13 h 30; jalon portfolio 2; point de suivi projet formatif |
+| 10 | 11 novembre 2026<br>13 h 30 à 16 h 20 | [Fonctions, `purrr` et tests](modules/10-programmation-fonctionnelle/index.qmd) | Fonctions, itérations, réduction du copier-coller, assertions, `testthat` | Transformer du code exploratoire en fonctions testables | Mini-test dans Brio avant 13 h 30; fonction dans `R/`; test minimal |
+| 11 | 18 novembre 2026<br>13 h 30 à 16 h 20 | [POO et architecture](modules/11-programmation-orientee-objet/index.qmd) | S3 et R6, différences et cas d’usage | Structurer des objets ou composants du projet | Mini-test dans Brio avant 13 h 30; note POO ou architecture |
+| 12 | 25 novembre 2026<br>13 h 30 à 16 h 20 | [Performance et parallèle](modules/12-synthese-performance-parallele/index.qmd) | Mesure et profilage; parallèle selon la tâche et la machine | Mesurer un goulot, améliorer le code, puis décider si le parallèle est pertinent | Mini-test dans Brio avant 13 h 30; trace avant/après; version intermédiaire du projet |
+| 13 | 2 décembre 2026<br>13 h 30 à 16 h 20 | Défi technique 3, puis [consolidation tests, limites et transfert](modules/13-consolidation-tests-limites-transfert/index.qmd) | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis post-mortem et transfert | Défi 3, rapport technique et trace IA; trace non évaluée de transfert |
+| 14 | 9 décembre 2026<br>13 h 30 à 16 h 20 | [Synthèse finale](modules/14-synthese-finale/index.qmd) | Reproduction et limites; modélisation ou autre validation selon le projet | Stabiliser le livrable final, vérifier son point d’entrée et préparer sa défense | Préparation finale, remise finale projet, jalon portfolio 3 |
+| 15, évaluation finale | 16 décembre 2026<br>13 h 30 à 16 h 20 | [Publication, défense et bilan final](modules/15-collaboration-documentation-package/index.qmd) | Site Quarto personnel, dépôt final, support bref, issue ou pull request, bilan individuel | Présentations, revue de code, questions, vérification des contributions et des sites publiés | Site Quarto personnel, défense du projet |
 
 ## Jalons d’évaluation
 
-| Semaine | Jalon | Composante | Nature |
+| Séance | Jalon | Composante | Nature |
 |---:|---|---|---|
 | 3 | Jalon portfolio 1 | Portfolio individuel | Structure, README, conventions, premières traces |
 | 5 | Défi technique 1 | Défi individuel | Vérification des bases sans IA |
@@ -61,22 +67,26 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance r�
 | 13 | Défi technique 3 | Défi individuel | Jugement professionnel avec IA intégrée |
 | 14 | Remise finale du projet | Projet d’équipe | Produit final, reproduction, limites, contributions |
 | 14 | Jalon portfolio 3 | Portfolio individuel | Portfolio complet et bilan final |
-| 15, 16 décembre 2026 | Site Quarto personnel | Individuel | Site publié sur GitHub Pages, dépôt source, deux réalisations commentées |
-| 15, 16 décembre 2026 | Présentation et revue du projet | Projet d’équipe | Démonstration, revue, défense, contribution |
+| 15, 16 décembre 2026, 13 h 30 | Site Quarto personnel | Individuel | Site publié sur GitHub Pages, dépôt source, deux réalisations commentées |
+| 15, 16 décembre 2026, 13 h 30 | Présentation et revue du projet | Projet d’équipe | Démonstration, revue, défense, contribution |
 
 ## Mini-tests
 
-Les mini-tests servent à soutenir la préparation hebdomadaire. Les neuf questionnaires sont administrés dans Brio, ouvrent 48 heures avant le laboratoire et ferment au début de celui-ci. Chaque questionnaire dure au plus 10 minutes et permet une tentative.
+Les mini-tests servent à soutenir la préparation hebdomadaire. Les neuf questionnaires sont administrés dans Brio. Ils ouvrent le lundi à 13 h 30, soit 48 heures avant la séance, et ferment le mercredi à 13 h 30, au début de celle-ci. Chaque questionnaire dure au plus 10 minutes et permet une tentative.
 
-| Semaines | Fonctionnement |
-|---|---|
-| 2, 3, 4 | Mini-tests réguliers |
-| 5 | Pas de mini-test prévu quand un défi technique est prévu |
-| 6, 7 | Mini-tests réguliers |
-| 8 | Pas de mini-test prévu quand un défi technique est prévu |
-| 9, 10, 11, 12 | Mini-tests réguliers |
-| 13 | Pas de mini-test prévu quand un défi technique est prévu |
-| 14 | Pas de mini-test prévu; préparation finale du projet et du portfolio |
+| Séance | Date du mini-test | Échéance dans Brio |
+|---:|---|---|
+| 2 | Mercredi 9 septembre 2026 | Avant 13 h 30 |
+| 3 | Mercredi 16 septembre 2026 | Avant 13 h 30 |
+| 4 | Mercredi 23 septembre 2026 | Avant 13 h 30 |
+| 6 | Mercredi 7 octobre 2026 | Avant 13 h 30 |
+| 7 | Mercredi 14 octobre 2026 | Avant 13 h 30 |
+| 9 | Mercredi 4 novembre 2026 | Avant 13 h 30 |
+| 10 | Mercredi 11 novembre 2026 | Avant 13 h 30 |
+| 11 | Mercredi 18 novembre 2026 | Avant 13 h 30 |
+| 12 | Mercredi 25 novembre 2026 | Avant 13 h 30 |
+
+Il n’y a pas de mini-test aux séances 1, 5, 8, 13, 14 et 15, ni pendant la semaine de lecture.
 
 Le format commun, la notation, la trace et la règle IA des mini-tests sont décrits dans le [gabarit des mini-tests de préparation](gabarits/gabarit-mini-test-preparation.qmd). La semaine 12 comporte un seul mini-test, même si elle contient un noyau de profilage et une voie de parallélisation.
 

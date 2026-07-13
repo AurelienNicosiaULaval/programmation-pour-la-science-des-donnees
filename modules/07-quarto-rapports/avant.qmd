@@ -71,6 +71,8 @@ summary(cars)
 
 Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
 
+Disponibilité dans Brio: du lundi 12 octobre 2026 à 13 h 30 au mercredi 14 octobre 2026 à 13 h 30.
+
 Thèmes à préparer:
 
 - reconnaître le moteur utilisé pour exécuter les blocs R;

@@ -81,7 +81,7 @@ format:
         <tr><th>Moment</th><th>Ce que vous faites</th><th>Trace utile</th></tr>
       </thead>
       <tbody>
-        <tr><td>Avant la classe</td><td>Lire l’extrait demandé, essayer les exemples R, faire le mini-test lorsqu’il est annoncé et préparer le dépôt</td><td>Question, commit initial ou note courte</td></tr>
+        <tr><td>Avant la classe</td><td>Lire l’extrait demandé, essayer les exemples R, terminer dans Brio le mini-test annoncé avant 13 h 30 le mercredi et préparer le dépôt</td><td>Question, résultat du mini-test, commit initial ou note courte</td></tr>
         <tr><td>Pendant le laboratoire</td><td>Clarifier les points difficiles, produire dans le dépôt et demander de l’aide avec un exemple reproductible</td><td>Script, rapport, fonction, test, figure, issue ou pull request</td></tr>
         <tr><td>Après la classe</td><td>Stabiliser la trace demandée et mettre à jour le portfolio</td><td>Livrable, journal ou <code>docs/ai-log.md</code> lorsque pertinent</td></tr>
       </tbody>

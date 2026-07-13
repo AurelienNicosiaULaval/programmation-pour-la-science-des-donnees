@@ -24,7 +24,7 @@ Le bloc 12B ne constitue pas un deuxième module à terminer. Une personne peut 
 Temps total estimé: 50 minutes maximum.
 
 1. 25 minutes: lire les sections principales de la page [12A - Avant la classe](../12-profilage-optimisation-performance/avant.qmd) et exécuter l'exemple `bench::mark()`;
-2. 10 minutes: répondre au seul mini-test de la semaine, situé dans cette même page 12A;
+2. 10 minutes: répondre au seul mini-test de la semaine, situé dans cette même page 12A, puis le remettre dans Brio le mercredi 25 novembre 2026 avant 13 h 30;
 3. 10 minutes: lire la section de décision de la page [12B - Avant la classe](../12-programmation-parallele/avant.qmd), sans devoir lancer un plan parallèle;
 4. 5 minutes: choisir un script ou une fonction du portfolio ou du projet qui pourra être mesuré en classe.
 
