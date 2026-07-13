@@ -98,57 +98,12 @@ c1$valeur
 
 ## Mini-test de préparation
 
-Ce mini-test fait partie de la composante « Mini-tests de préparation » décrite dans la page [Évaluations](../../evaluations.qmd) et suit le [gabarit commun](../../gabarits/gabarit-mini-test-preparation.qmd).
+Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
 
-- Durée cible: 5 à 10 minutes, comprise dans les 45 minutes de préparation.
-- Questions: répondre aux trois questions ci-dessous dans l'ordre.
-- Format de remise: trois réponses numérotées dans le canal officiel indiqué par l'équipe enseignante.
-- Échéance: remettre avant le début du laboratoire.
-- Règle IA: l'IA est permise pour clarifier une notion. Les réponses doivent être comprises et vérifiées. Une clarification mineure n'exige pas d'entrée détaillée; si l'aide influence du code, une décision ou une trace conservée, la consigner dans `docs/ai-log.md`.
-- Trace: conserver le résultat dans le canal de remise et apporter en classe la difficulté relevée.
-- Complétion minimale: les trois réponses sont présentes et la décision personnelle de la question 3 est justifiée.
+Thèmes à préparer:
 
-### Question 1 : Résolution de dispatch S3
-Quelle méthode S3 est appelée par la fonction générique `summary()` si elle reçoit en entrée, comme premier argument, l'objet de série temporelle `WWWusage` (provenant du package `datasets`) ?
+- comprendre le dispatch S3;
+- appliquer la convention de nommage `generique.classe`;
+- décider si un composant du projet justifie S3, R6 ou aucune classe.
 
-*Aide : Regardez la classe de l'objet avec `class(WWWusage)` et listez les méthodes de `summary` avec `methods("summary")`.*
-
-*   **Option A :** `summary.default`
-*   **Option B :** `summary.ts`
-*   **Option C :** `summary.matrix`
-*   **Option D :** `ts.summary`
-
-### Question 2 : Syntaxe de création de méthode S3
-Lequel des blocs de code suivants crée correctement une méthode de la fonction générique `plot()` pour un objet de classe `"matrix"` ?
-
-**Option A :**
-```r
-plot_matrix <- function(x, ...) {
-  pairs(x = x, ...)
-}
-```
-
-**Option B :**
-```r
-plot.matrix <- function(x, ...) {
-  pairs(x = x, ...)
-}
-```
-
-**Option C :**
-```r
-matrix.plot <- function(x, ...) {
-  pairs(x = x, ...)
-}
-```
-
-**Option D :**
-```r
-plot.matrix(x, ...) {
-  pairs(x = x, ...)
-}
-```
-
-### Question 3 : Décision personnelle S3 ou R6
-
-Identifiez un résultat ou un composant de votre projet. Indiquez si vous retiendriez `S3`, si vous évalueriez `R6`, ou si aucune classe n'est nécessaire. Justifiez avec un critère observable: besoin d'affichage ou de dispatch, état mutable partagé, ressource persistante, ou suffisance de fonctions et listes simples. Notez aussi une difficulté à reprendre en classe.
+Les questions exactes ne sont pas publiées sur le site. Consulter le [fonctionnement commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd).

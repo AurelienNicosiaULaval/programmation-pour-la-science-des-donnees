@@ -83,54 +83,12 @@ print(moyennes_texte)
 
 ## Mini-test de préparation
 
-Ce mini-test fait partie de la composante « Mini-tests de préparation » décrite dans la page [Évaluations](../../evaluations.qmd) et suit le [gabarit commun](../../gabarits/gabarit-mini-test-preparation.qmd).
+Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
 
-- Durée cible: 5 à 10 minutes, comprise dans les 45 minutes de préparation.
-- Questions: répondre aux trois questions ci-dessous dans l'ordre.
-- Format de remise: trois réponses numérotées dans le canal officiel indiqué par l'équipe enseignante.
-- Échéance: remettre avant le début du laboratoire.
-- Règle IA: l'IA est permise pour clarifier une notion. Les réponses doivent être comprises et vérifiées. Une clarification mineure n'exige pas d'entrée détaillée; si l'aide influence du code, une décision ou une trace conservée, la consigner dans `docs/ai-log.md`.
-- Trace: conserver le résultat dans le canal de remise et apporter en classe la difficulté relevée.
-- Complétion minimale: les trois réponses sont présentes et le fragment réel demandé à la question 3 est identifié.
+Thèmes à préparer:
 
-### Question 1 : Les conditions dans une alternative
+- reconnaître une condition valide pour `if`;
+- distinguer le type de sortie de `map()`, `map_dbl()`, `vapply()` et d'une boucle pré-allouée;
+- repérer un fragment réel à transformer en fonction.
 
-Lequel des objets suivants provoquera une **erreur de compilation ou d'exécution** s'il est inséré comme condition dans une structure `if (condition) { ... }` ?
-
-```r
-# Options de conditions :
-cond_a <- FALSE
-cond_b <- 1
-cond_c <- anyNA(airquality)
-cond_d <- all(1:5 >= 2 & 1:5 <= 4)
-cond_e <- c # Le symbole de la fonction de concaténation de base R
-```
-
-*Indice : Une condition de `if` doit pouvoir être convertie en valeur logique de longueur 1.*
-
-### Question 2 : Type de la sortie
-
-On veut calculer la moyenne de chaque élément de `donnees` et obtenir un vecteur numérique. Quelle option retourne une structure différente des trois autres?
-
-```r
-donnees <- list(c(1, 3), c(2, 4), c(5, 7))
-
-# Option A
-resultat_a <- numeric(length(donnees))
-for (i in seq_along(donnees)) {
-  resultat_a[i] <- mean(donnees[[i]])
-}
-
-# Option B
-resultat_b <- vapply(donnees, mean, numeric(1))
-
-# Option C
-resultat_c <- purrr::map_dbl(donnees, mean)
-
-# Option D
-resultat_d <- purrr::map(donnees, mean)
-```
-
-### Question 3 : Fragment réel à refactoriser
-
-Dans votre portfolio ou votre projet, identifiez un fragment contenant une répétition. Donnez le chemin du fichier, décrivez en une phrase la répétition, puis nommez les entrées et la sortie de la fonction que vous pourriez créer. Si aucun fragment n'est encore disponible, signalez cette difficulté pour utiliser le scénario de repli en classe.
+Les questions exactes ne sont pas publiées sur le site. Consulter le [fonctionnement commun des mini-tests](../../gabarits/gabarit-mini-test-preparation.qmd).

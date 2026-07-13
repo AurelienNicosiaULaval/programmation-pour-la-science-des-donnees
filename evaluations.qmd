@@ -54,7 +54,7 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 
 | Composante | Traces attendues |
 |---|---|
-| Mini-tests de préparation | Résultat du quiz, micro-réponse personnelle liée au module, question ou difficulté à apporter au laboratoire |
+| Mini-tests de préparation | Résultat enregistré dans Brio et difficulté ou observation personnelle non notée à reprendre au laboratoire |
 | Portfolio GitHub individuel | Dépôt individuel, dossiers hebdomadaires, scripts, fonctions, rapports, README, conventions, `docs/ai-log.md`, bilan final, commits réguliers |
 | Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
 | Défi 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
@@ -121,17 +121,19 @@ Les mini-tests de préparation sont réalisés à livre ouvert. L’utilisation 
 
 ### Mini-tests de préparation
 
-Les mini-tests sont courts et liés à la préparation hebdomadaire. Ils visent la préparation au laboratoire et la vérification des lectures. Ils peuvent inclure une micro-réponse personnelle liée au module, ainsi qu’une question ou une difficulté à apporter au laboratoire.
+Les mini-tests sont de courts questionnaires individuels dans Brio. Ils visent la préparation au laboratoire et la vérification des lectures. Neuf mini-tests sont prévus et forment ensemble la composante de 10 %. Ils ont tous le même poids dans cette composante.
 
 Chaque mini-test suit le même fonctionnement:
 
-- durée cible de 5 à 10 minutes dans la préparation annoncée;
-- trois questions portant sur un concept, un geste ou une décision, puis une difficulté personnelle;
-- remise dans le canal officiel avant le début du laboratoire;
+- ouverture dans Brio 48 heures avant le laboratoire et fermeture au début du laboratoire;
+- durée maximale de 10 minutes et une seule tentative;
+- trois questions: une question de concept notée sur 4, une question de lecture de code ou de décision notée sur 6, puis une difficulté ou observation personnelle non notée;
+- correction automatique des deux questions notées;
+- publication du résultat et du corrigé après la fermeture du questionnaire;
 - IA permise pour clarifier, avec responsabilité de comprendre et de vérifier;
-- résultat enregistré dans le canal de remise et difficulté apportée en classe.
+- même barème pour STT-4230 et STT-6230; la différenciation des deux sigles se fait dans les productions plus longues.
 
-La semaine 12 contient un seul mini-test commun au profilage et à la décision éventuelle de paralléliser. Le [gabarit des mini-tests](gabarits/gabarit-mini-test-preparation.qmd) précise les éléments qui doivent apparaître dans chaque page de préparation.
+La semaine 12 contient un seul mini-test commun au profilage et à la décision éventuelle de paralléliser. Les questions exactes sont accessibles uniquement dans Brio pendant la période prévue. Le [gabarit des mini-tests](gabarits/gabarit-mini-test-preparation.qmd) décrit le fonctionnement commun et les thèmes à préparer.
 
 ### Portfolio GitHub individuel
 

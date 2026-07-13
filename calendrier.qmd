@@ -66,7 +66,7 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Aucune séance r�
 
 ## Mini-tests
 
-Les mini-tests servent à soutenir la préparation hebdomadaire. Ils sont courts et liés aux lectures ou gestes R à reproduire avant le laboratoire.
+Les mini-tests servent à soutenir la préparation hebdomadaire. Les neuf questionnaires sont administrés dans Brio, ouvrent 48 heures avant le laboratoire et ferment au début de celui-ci. Chaque questionnaire dure au plus 10 minutes et permet une tentative.
 
 | Semaines | Fonctionnement |
 |---|---|
@@ -78,7 +78,7 @@ Les mini-tests servent à soutenir la préparation hebdomadaire. Ils sont courts
 | 13 | Pas de mini-test prévu quand un défi technique est prévu |
 | 14 | Pas de mini-test prévu; préparation finale du projet et du portfolio |
 
-Le format commun, la trace et la règle IA des mini-tests sont décrits dans le [gabarit des mini-tests de préparation](gabarits/gabarit-mini-test-preparation.qmd). La semaine 12 comporte un seul mini-test, même si elle contient un noyau de profilage et une voie de parallélisation.
+Le format commun, la notation, la trace et la règle IA des mini-tests sont décrits dans le [gabarit des mini-tests de préparation](gabarits/gabarit-mini-test-preparation.qmd). La semaine 12 comporte un seul mini-test, même si elle contient un noyau de profilage et une voie de parallélisation.
 
 ## Rôle des blocs de semaine 12
 

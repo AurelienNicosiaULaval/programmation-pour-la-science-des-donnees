@@ -9,9 +9,13 @@ format:
 
 ### 1. Retour sur le mini-test (15 min)
 
-*   **Question 1:** La bonne réponse est **Option D**. Certaines expressions créent davantage d'objets intermédiaires, mais la vitesse observée dépend de la version de R, du matériel et de la charge de la machine. Une conclusion doit venir d'un benchmark qui vérifie aussi l'équivalence des résultats.
-*   **Question 2 :** La bonne réponse est l'**Option B**. La moyenne est fortement influencée par des valeurs extrêmes, notamment les pics de latence induits par la désallocation de mémoire par le Garbage Collector (GC). La médiane représente le temps d'exécution typique "hors GC".
-*   **Question 3:** Les ordres peuvent varier. Vérifiez que chaque réponse rapporte une observation réellement exécutée et un facteur de contexte. Le mini-test n'attribue aucun mérite à une machine plus rapide ni à un ordre particulier lorsque le protocole est correctement décrit.
+Après la fermeture du questionnaire dans Brio, le retour collectif porte sur:
+
+- la nécessité de vérifier l'équivalence des résultats avant de comparer la vitesse;
+- l'interprétation de la médiane et des valeurs extrêmes;
+- les limites d'un benchmark exécuté sur une machine donnée.
+
+Les réponses et la rétroaction détaillée sont publiées dans Brio après la fermeture. Aucune comparaison entre personnes ou entre machines n'est utilisée pour la note.
 
 ---
 
