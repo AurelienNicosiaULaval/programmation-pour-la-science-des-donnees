@@ -9,15 +9,20 @@ Cette page regroupe les procédures de dépannage et les ressources de rattrapag
 
 ## Diagnostic initial
 
-Un diagnostic non noté est prévu en début de session pour vérifier:
+Deux diagnostics non notés ont des rôles distincts.
 
+Avant la première séance, l’[autodiagnostic des bases de R](diagnostic-r.qmd) vérifie:
+
+- objets, vecteurs et sous-ensembles;
+- valeurs manquantes et conditions logiques;
 - importation d’un fichier;
 - manipulation simple de données;
-- graphique de base;
 - petite fonction;
-- commit Git.
+- lecture d’un message d’erreur et vérification d’un résultat.
 
-Le diagnostic sert à orienter le soutien, pas à classer les étudiantes et étudiants.
+Pendant la mise en route, le diagnostic technique de la semaine 1 vérifie l’accès à R, Git, Quarto et à l’éditeur de code. Ces outils sont ensuite travaillés dans le cours.
+
+Les diagnostics servent à orienter le soutien, pas à classer les étudiantes et étudiants. Le [parcours de mise à niveau des bases de R](ressources/mise-a-niveau-r.qmd) propose une révision ciblée selon le résultat.
 
 ## Question technique efficace
 
@@ -93,7 +98,8 @@ Les ressources de rattrapage couvrent au minimum:
 - commits Git;
 - lecture de messages d’erreur.
 
-Ressource disponible pour le premier défi: [Rattrapage R/Git pour le défi technique 1](ressources/rattrapage-r-git-defi-1.qmd).
+- Avant le cours: [Mise à niveau des bases de R](ressources/mise-a-niveau-r.qmd).
+- Avant le premier défi: [Rattrapage R/Git pour le défi technique 1](ressources/rattrapage-r-git-defi-1.qmd).
 
 ## Authentification GitHub
 

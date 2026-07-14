@@ -17,6 +17,10 @@ Bonnes pratiques de codage et gestion du versionnage du code. Manipulation et ge
 
 STT-1100 ou IFT-4902.
 
+La fiche officielle précise également: « L’étudiant doit avoir une connaissance minimale de R pour s’inscrire à ce cours. » Avant la première séance, chaque personne peut vérifier ses acquis avec l’[autodiagnostic des bases de R](diagnostic-r.qmd), puis utiliser le [parcours de mise à niveau](ressources/mise-a-niveau-r.qmd) au besoin.
+
+Source: [fiche officielle du cours STT-4230, Université Laval](https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique), version affichée du 13 mai 2025 et consultée le 14 juillet 2026.
+
 ## Repères de calendrier
 
 Les dates suivantes proviennent du calendrier universitaire 2026-2027 de l’Université Laval.

@@ -69,8 +69,12 @@ website:
           href: ia.qmd
       - text: "Aide et ressources"
         menu:
+        - text: "Autodiagnostic R"
+          href: diagnostic-r.qmd
         - text: "Démarrage étudiant"
           href: demarrage.qmd
+        - text: "Mise à niveau R"
+          href: ressources/mise-a-niveau-r.qmd
         - text: "Plan de cours"
           href: plan-cours.qmd
         - text: "Données autorisées"

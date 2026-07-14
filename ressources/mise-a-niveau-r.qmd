@@ -1,0 +1,359 @@
+---
+title: "Mise à niveau des bases de R"
+description: "Parcours ciblé avant STT-4230 / STT-6230"
+format:
+  html:
+    embed-resources: true
+    toc: true
+---
+
+Cette page accompagne l’[autodiagnostic des bases de R](../diagnostic-r.qmd). Commencez par les sections indiquées dans votre bilan. Exécutez chaque exemple dans un script, puis relancez le script depuis une session R propre.
+
+Les données utilisées ici sont fictives. Elles servent uniquement à la pratique et ne décrivent pas des observations réelles au Québec.
+
+## Méthode de travail
+
+Pour chaque section:
+
+1. recopiez le code dans un fichier `.R`;
+2. prédisez le résultat avant de l’exécuter;
+3. exécutez le script ligne par ligne;
+4. modifiez une valeur ou une condition;
+5. relancez le script complet;
+6. vérifiez le résultat avec les assertions proposées.
+
+## Objets et vecteurs {#objets-vecteurs}
+
+Objectif: créer un objet, effectuer un calcul vectorisé et sélectionner des positions.
+
+```r
+# Créer un vecteur numérique
+temperatures <- c(18.4, 17.1, 19.3, 16.8)
+
+# Appliquer des opérations vectorisées
+temperatures_fahrenheit <- temperatures * 9 / 5 + 32
+temperatures_arrondies <- round(temperatures, digits = 1)
+
+# Sélectionner par position et par condition
+deuxieme_temperature <- temperatures[2]
+temperatures_au_moins_18 <- temperatures[temperatures >= 18]
+
+# Vérifier les résultats
+stopifnot(deuxieme_temperature == 17.1)
+stopifnot(identical(
+  temperatures_au_moins_18,
+  c(18.4, 19.3)
+))
+
+temperatures_fahrenheit
+temperatures_arrondies
+temperatures_au_moins_18
+```
+
+À maîtriser avant de poursuivre:
+
+- distinguer un nom d’objet et sa valeur;
+- savoir que les positions commencent à 1;
+- comprendre qu’une opération sur un vecteur s’applique généralement à chaque élément;
+- utiliser un vecteur logique pour sélectionner ou modifier des valeurs.
+
+## Sous-ensembles et valeurs manquantes {#sous-ensembles-valeurs-manquantes}
+
+Objectif: détecter les valeurs manquantes et les traiter explicitement.
+
+```r
+# Créer un vecteur qui contient une valeur manquante
+temperatures <- c(18.4, NA, 17.1, 19.3, 16.8)
+
+# Repérer les valeurs manquantes
+positions_manquantes <- is.na(temperatures)
+
+# Conserver les valeurs observées
+temperatures_observees <- temperatures[!is.na(temperatures)]
+
+# Calculer une moyenne après avoir retiré explicitement les valeurs manquantes
+temperature_moyenne <- mean(temperatures, na.rm = TRUE)
+
+# Combiner des conditions logiques
+temperatures_valides_et_chaudes <- temperatures[
+  !is.na(temperatures) & temperatures >= 18
+]
+
+# Vérifier les résultats
+stopifnot(sum(positions_manquantes) == 1)
+stopifnot(length(temperatures_observees) == 4)
+stopifnot(isTRUE(all.equal(
+  temperatures_valides_et_chaudes,
+  c(18.4, 19.3)
+)))
+
+temperature_moyenne
+temperatures_valides_et_chaudes
+```
+
+À maîtriser avant de poursuivre:
+
+- ne pas comparer une valeur à `NA` avec `==`;
+- utiliser `is.na()` et `!is.na()`;
+- savoir qu’une valeur manquante peut se propager dans un calcul;
+- utiliser `na.rm = TRUE` seulement après avoir décidé que le retrait est approprié.
+
+## Tableaux et transformations {#tableaux-transformations}
+
+Objectif: inspecter, filtrer, transformer et résumer un tableau.
+
+```r
+# Charger les bibliothèques
+library(tidyverse)
+
+# Créer les données fictives de l’exercice
+mesures <- tibble(
+  station = c("Québec", "Québec", "Lévis", "Lévis", "Saguenay"),
+  temperature = c(18.4, NA, 17.1, 19.3, 16.8),
+  valide = c(TRUE, FALSE, TRUE, TRUE, TRUE)
+)
+
+# Inspecter le tableau
+glimpse(mesures)
+
+# Filtrer les lignes et créer une variable
+mesures_valides <- mesures |>
+  filter(valide, !is.na(temperature)) |>
+  mutate(ecart_18 = temperature - 18)
+
+# Résumer les données par station
+resume_station <- mesures_valides |>
+  group_by(station) |>
+  summarise(
+    nombre = n(),
+    temperature_moyenne = mean(temperature),
+    .groups = "drop"
+  )
+
+# Vérifier les résultats
+stopifnot(nrow(mesures_valides) == 4)
+stopifnot(sum(resume_station$nombre) == 4)
+
+mesures_valides
+resume_station
+```
+
+À maîtriser avant de poursuivre:
+
+- reconnaître les lignes, les colonnes et les types de variables;
+- distinguer `filter()`, `select()`, `mutate()` et `summarise()`;
+- comprendre l’effet de `group_by()` sur un résumé;
+- vérifier le nombre de lignes avant et après une transformation.
+
+## Fonctions et contrôle {#fonctions-controle}
+
+Objectif: écrire une petite fonction avec un argument par défaut et traiter un vecteur.
+
+```r
+# Définir une fonction vectorisée
+classer_temperature <- function(x, seuil = 18) {
+  ifelse(
+    is.na(x),
+    NA_character_,
+    ifelse(x >= seuil, "au moins le seuil", "sous le seuil")
+  )
+}
+
+# Appliquer la fonction
+temperatures <- c(18.4, NA, 17.1, 19.3)
+classes <- classer_temperature(temperatures)
+
+# Modifier le seuil par défaut
+classes_seuil_19 <- classer_temperature(
+  temperatures,
+  seuil = 19
+)
+
+# Vérifier les résultats
+stopifnot(identical(
+  classes,
+  c("au moins le seuil", NA, "sous le seuil", "au moins le seuil")
+))
+
+classes
+classes_seuil_19
+```
+
+Une boucle simple doit aussi pouvoir être lue, même si une solution vectorisée est souvent préférable:
+
+```r
+# Accumuler une somme avec une boucle
+total <- 0
+
+for (valeur in c(2, 5, 8)) {
+  total <- total + valeur
+}
+
+stopifnot(total == 15)
+total
+```
+
+À maîtriser avant de poursuivre:
+
+- identifier les arguments et la valeur retournée d’une fonction;
+- remplacer un argument par défaut lors de l’appel;
+- distinguer une condition unique avec `if` d’un traitement vectorisé;
+- suivre l’évolution d’un objet dans une boucle courte.
+
+## Scripts, importation et aide {#scripts-importation-aide}
+
+Objectif: créer un petit fichier CSV, l’importer avec un chemin relatif et consulter l’aide.
+
+Le script suivant crée lui-même son fichier d’exercice. Il peut donc être relancé sans téléchargement externe.
+
+```r
+# Charger les bibliothèques
+library(tidyverse)
+
+# Créer le dossier du projet au besoin
+dir.create("data", showWarnings = FALSE)
+
+# Créer et enregistrer les données fictives de l’exercice
+mesures_a_ecrire <- tibble(
+  station = c("Québec", "Lévis", "Saguenay"),
+  temperature = c(18.4, 17.1, 16.8)
+)
+
+write_csv(mesures_a_ecrire, "data/mesures.csv")
+
+# Importer le fichier avec un chemin relatif
+mesures_importees <- read_csv(
+  "data/mesures.csv",
+  show_col_types = FALSE
+)
+
+# Inspecter et vérifier l’importation
+glimpse(mesures_importees)
+stopifnot(nrow(mesures_importees) == 3)
+stopifnot(all(c("station", "temperature") %in% names(mesures_importees)))
+
+mesures_importees
+```
+
+Commandes d’aide à essayer dans la console:
+
+```r
+?mean
+help("read.csv")
+args(mean)
+example(mean)
+```
+
+À maîtriser avant de poursuivre:
+
+- conserver le code dans un script plutôt que seulement dans la console;
+- placer un chemin entre guillemets;
+- distinguer une fonction de lecture d’une fonction d’écriture;
+- utiliser `source("R/script.R")` pour exécuter un script;
+- ouvrir l’aide et repérer les arguments d’une fonction.
+
+## Erreurs et vérification {#erreurs-verification}
+
+Objectif: lire le premier message utile, isoler la cause et ajouter une vérification.
+
+```r
+# Définir une fonction avec des vérifications explicites
+moyenne_securitaire <- function(x) {
+  stopifnot(is.numeric(x))
+  stopifnot(any(!is.na(x)))
+
+  mean(x, na.rm = TRUE)
+}
+
+# Cas valide
+resultat <- moyenne_securitaire(c(2, NA, 8))
+stopifnot(resultat == 5)
+
+resultat
+```
+
+Essayez ensuite volontairement ces appels, un à la fois, et lisez le message complet:
+
+```r
+# Type invalide
+moyenne_securitaire(c("2", "8"))
+
+# Aucune valeur observée
+moyenne_securitaire(c(NA_real_, NA_real_))
+```
+
+Procédure minimale de diagnostic:
+
+1. relire la première erreur utile;
+2. identifier la ligne et l’objet concernés;
+3. vérifier le nom, le type et le contenu de l’objet avec `class()`, `str()` et `head()`;
+4. reproduire le problème avec le plus petit exemple possible;
+5. corriger une seule hypothèse à la fois;
+6. relancer le script depuis une session propre.
+
+## Exercice de synthèse
+
+Créez un script complet qui:
+
+1. charge explicitement tidyverse;
+2. importe `data/mesures.csv`;
+3. vérifie les noms de colonnes;
+4. retire les températures manquantes;
+5. crée une fonction qui convertit des degrés Celsius en degrés Fahrenheit;
+6. ajoute la colonne convertie;
+7. écrit le résultat dans `data/mesures_preparees.csv`;
+8. vérifie que le fichier a été créé.
+
+::: {.callout-note collapse="true"}
+## Afficher une solution possible
+
+```r
+# Charger les bibliothèques
+library(tidyverse)
+
+# Importer les données
+mesures <- read_csv(
+  "data/mesures.csv",
+  show_col_types = FALSE
+)
+
+# Valider la structure attendue
+colonnes_attendues <- c("station", "temperature")
+stopifnot(all(colonnes_attendues %in% names(mesures)))
+
+# Définir une fonction de conversion réutilisable
+celsius_vers_fahrenheit <- function(x) {
+  x * 9 / 5 + 32
+}
+
+# Préparer les données
+mesures_preparees <- mesures |>
+  filter(!is.na(temperature)) |>
+  mutate(
+    temperature_fahrenheit = celsius_vers_fahrenheit(temperature)
+  )
+
+# Enregistrer et vérifier la sortie
+write_csv(
+  mesures_preparees,
+  "data/mesures_preparees.csv"
+)
+
+stopifnot(file.exists("data/mesures_preparees.csv"))
+stopifnot(nrow(mesures_preparees) > 0)
+
+mesures_preparees
+```
+:::
+
+## Quand refaire l’autodiagnostic
+
+Refaites l’[autodiagnostic](../diagnostic-r.qmd) après avoir travaillé vos sections faibles. Pour que la seconde tentative soit informative, attendez au moins une séance de travail et répondez sans consulter les solutions.
+
+Si vous obtenez encore moins de 2 sur 3 dans un domaine, conservez votre bilan et apportez une question précise à la première séance ou au canal officiel du cours.
+
+## Références
+
+- R Core Team (2026), [An Introduction to R, version 4.6.1](https://cran.r-project.org/doc/manuals/r-release/R-intro.html).
+- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023), [R for Data Science, 2e édition](https://r4ds.hadley.nz/).
+- Posit, [documentation officielle de dplyr](https://dplyr.tidyverse.org/reference/index.html) et [documentation officielle de readr](https://readr.tidyverse.org/reference/read_delim.html), consultées le 14 juillet 2026.

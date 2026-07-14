@@ -13,6 +13,7 @@ Temps recommandé: 30 à 45 minutes.
 
 ## À lire
 
+- [Autodiagnostic des bases de R](../../diagnostic-r.qmd), à terminer avant la première séance
 - [Démarrage étudiant](../../demarrage.qmd)
 - [Portfolio GitHub individuel](../../portfolio.qmd), sections "Structure minimale", "README" et "Commits"
 - [Soutien technique](../../soutien-technique.qmd), sections "Diagnostic initial" et "Question technique efficace"

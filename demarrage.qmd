@@ -9,6 +9,10 @@ Cette page explique comment utiliser le site et se préparer au cours.
 
 ## Avant la première séance
 
+La [fiche officielle du cours STT-4230](https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique) précise qu’une connaissance minimale de R est nécessaire. Faites d’abord l’[autodiagnostic des bases de R](diagnostic-r.qmd). Selon le bilan obtenu, utilisez le [parcours de mise à niveau](ressources/mise-a-niveau-r.qmd) avant la première séance.
+
+Ce test porte sur les acquis antérieurs en R. La vérification de R, Git, GitHub et Quarto ci-dessous constitue une préparation technique distincte.
+
 Préparer l’environnement suivant avant ou pendant le premier laboratoire:
 
 | Outil | Attendu minimal | Vérification |
@@ -96,6 +100,8 @@ Vérifier le statut d’IA pour chaque tâche. Si l’IA est utilisée de façon
 
 ## Où trouver de l’aide
 
+- [Autodiagnostic des bases de R](diagnostic-r.qmd).
+- [Mise à niveau des bases de R](ressources/mise-a-niveau-r.qmd).
 - Page [Soutien technique](soutien-technique.qmd).
 - Canal officiel du cours.
 - Équipe enseignante pendant les laboratoires.

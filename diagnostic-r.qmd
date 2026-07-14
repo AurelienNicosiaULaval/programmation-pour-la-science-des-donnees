@@ -1,0 +1,471 @@
+---
+title: "Autodiagnostic des bases de R"
+description: "Test non noté pour vérifier les bases de R nécessaires avant STT-4230 / STT-6230"
+format:
+  html:
+    embed-resources: true
+    toc: true
+---
+
+La description officielle du cours précise qu’une connaissance minimale de R est nécessaire avant l’inscription. Cet autodiagnostic permet de vérifier ces bases avant la première séance. Il ne vérifie pas Git, GitHub, Quarto ou la structuration d’un projet, qui font partie de la progression du cours.
+
+::: {.callout-note}
+## Modalités
+
+- Durée indicative: 20 minutes pour le questionnaire, puis 10 minutes pour la vérification pratique.
+- Première tentative: sans documentation, sans exécuter le code et sans outil d’IA.
+- Le test n’est pas noté et ne constitue pas une décision d’admission.
+- Les réponses et le résultat restent dans le navigateur. Aucune donnée n’est transmise ni enregistrée.
+:::
+
+Les seuils d’interprétation sont des repères pédagogiques propres à ce cours. Ils n’ont pas fait l’objet d’une validation psychométrique. Une réponse exacte peut résulter d’un hasard: la vérification pratique demeure donc importante.
+
+```{=html}
+<section class="diagnostic-shell" data-diagnostic-r aria-labelledby="diagnostic-r-heading">
+  <div class="diagnostic-intro">
+    <p class="diagnostic-eyebrow">18 questions, 6 domaines</p>
+    <h2 id="diagnostic-r-heading">Questionnaire autocorrigé</h2>
+    <p>Répondez à toutes les questions, puis sélectionnez « Calculer mon bilan ». La correction détaillée et les ressources ciblées apparaîtront après le calcul.</p>
+  </div>
+
+  <div class="diagnostic-progress-wrap">
+    <div id="diagnostic-r-progress-text">0 question répondue sur 18</div>
+    <progress id="diagnostic-r-progress" value="0" max="18" aria-label="Progression du questionnaire"></progress>
+  </div>
+
+  <form id="diagnostic-r-form" novalidate>
+    <section class="diagnostic-domain" aria-labelledby="domain-fondamentaux">
+      <div class="diagnostic-domain-heading">
+        <span>01</span>
+        <h3 id="domain-fondamentaux">Objets et vecteurs</h3>
+      </div>
+
+      <fieldset class="diagnostic-question" data-domain="fondamentaux" data-answer="b">
+        <legend><span>Question 1</span> Quel résultat produit ce code?</legend>
+        <pre><code class="language-r">x &lt;- c(3, 5, 8)
+x * 2</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q1" value="a"> <code>6</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q1" value="b"> <code>c(6, 10, 16)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q1" value="c"> <code>c(3, 5, 8, 3, 5, 8)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q1" value="d"> Une erreur</label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>La multiplication est vectorisée: chaque élément de <code>x</code> est multiplié par 2.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="fondamentaux" data-answer="c">
+        <legend><span>Question 2</span> Quelle valeur est retournée?</legend>
+        <pre><code class="language-r">x &lt;- c(10, 20, 30)
+x[2]</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q2" value="a"> <code>10</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q2" value="b"> <code>30</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q2" value="c"> <code>20</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q2" value="d"> <code>NA</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>Les positions commencent à 1 en R. La position 2 contient la valeur 20.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="fondamentaux" data-answer="a">
+        <legend><span>Question 3</span> Quelle instruction remplace toutes les valeurs négatives de <code>x</code> par 0?</legend>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q3" value="a"> <code>x[x &lt; 0] &lt;- 0</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q3" value="b"> <code>x &lt; 0 &lt;- 0</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q3" value="c"> <code>x[x &gt; 0] &lt;- 0</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q3" value="d"> <code>x[0] &lt;- x</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>Le vecteur logique <code>x &lt; 0</code> sélectionne les positions à modifier dans <code>x</code>.</p>
+      </fieldset>
+    </section>
+
+    <section class="diagnostic-domain" aria-labelledby="domain-sous-ensembles">
+      <div class="diagnostic-domain-heading">
+        <span>02</span>
+        <h3 id="domain-sous-ensembles">Sous-ensembles et valeurs manquantes</h3>
+      </div>
+
+      <fieldset class="diagnostic-question" data-domain="sous_ensembles" data-answer="d">
+        <legend><span>Question 4</span> Quel résultat produit ce code?</legend>
+        <pre><code class="language-r">is.na(c(2, NA, 5))</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q4" value="a"> <code>TRUE</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q4" value="b"> <code>c(TRUE, FALSE, TRUE)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q4" value="c"> <code>c(2, 5)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q4" value="d"> <code>c(FALSE, TRUE, FALSE)</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span><code>is.na()</code> teste chaque position et retourne <code>TRUE</code> seulement pour la valeur manquante.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="sous_ensembles" data-answer="b">
+        <legend><span>Question 5</span> Quelle valeur est retournée?</legend>
+        <pre><code class="language-r">mean(c(4, NA, 8), na.rm = TRUE)</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q5" value="a"> <code>NA</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q5" value="b"> <code>6</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q5" value="c"> <code>4</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q5" value="d"> Une erreur</label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span><code>na.rm = TRUE</code> retire la valeur manquante avant de calculer la moyenne de 4 et 8.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="sous_ensembles" data-answer="c">
+        <legend><span>Question 6</span> Quel vecteur logique est retourné?</legend>
+        <pre><code class="language-r">x &lt;- c(-1, NA, 3)
+!is.na(x) &amp; x &gt; 0</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q6" value="a"> <code>c(FALSE, NA, TRUE)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q6" value="b"> <code>c(TRUE, FALSE, TRUE)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q6" value="c"> <code>c(FALSE, FALSE, TRUE)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q6" value="d"> <code>c(-1, 3)</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>Une position doit être non manquante et strictement positive. À la deuxième position, <code>!is.na(x)</code> vaut <code>FALSE</code>, <code>x &gt; 0</code> vaut <code>NA</code>, et <code>FALSE &amp; NA</code> donne <code>FALSE</code>.</p>
+      </fieldset>
+    </section>
+
+    <section class="diagnostic-domain" aria-labelledby="domain-tableaux">
+      <div class="diagnostic-domain-heading">
+        <span>03</span>
+        <h3 id="domain-tableaux">Tableaux et transformations</h3>
+      </div>
+
+      <fieldset class="diagnostic-question" data-domain="tableaux" data-answer="a">
+        <legend><span>Question 7</span> Quelle valeur est retournée?</legend>
+        <pre><code class="language-r">donnees &lt;- data.frame(
+  station = c("Québec", "Lévis", "Saguenay"),
+  temperature = c(18.4, 17.1, 16.8)
+)
+nrow(donnees)</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q7" value="a"> <code>3</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q7" value="b"> <code>2</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q7" value="c"> <code>5</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q7" value="d"> Une erreur</label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>Le tableau contient trois observations, donc trois lignes.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="tableaux" data-answer="d">
+        <legend><span>Question 8</span> Quelle expression extrait la colonne <code>temperature</code> sous forme de vecteur?</legend>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q8" value="a"> <code>donnees(temperature)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q8" value="b"> <code>temperature$donnees</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q8" value="c"> <code>donnees[temperature]</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q8" value="d"> <code>donnees$temperature</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>L’opérateur <code>$</code> accède à une colonne nommée d’un tableau et retourne ici son vecteur de valeurs.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="tableaux" data-answer="b">
+        <legend><span>Question 9</span> Que fait cette chaîne de transformation avec <code>dplyr</code>?</legend>
+        <pre><code class="language-r">donnees |&gt;
+  filter(valeur &gt;= 10) |&gt;
+  arrange(desc(valeur))</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q9" value="a"> Elle remplace les valeurs inférieures à 10 par 0.</label>
+          <label class="diagnostic-option"><input type="radio" name="q9" value="b"> Elle conserve les lignes où <code>valeur &gt;= 10</code>, puis les trie par valeur décroissante.</label>
+          <label class="diagnostic-option"><input type="radio" name="q9" value="c"> Elle conserve la colonne <code>valeur</code> et supprime toutes les autres.</label>
+          <label class="diagnostic-option"><input type="radio" name="q9" value="d"> Elle calcule la moyenne de <code>valeur</code>.</label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span><code>filter()</code> conserve les lignes qui satisfont la condition, puis <code>arrange(desc())</code> les ordonne en décroissant.</p>
+      </fieldset>
+    </section>
+
+    <section class="diagnostic-domain" aria-labelledby="domain-fonctions">
+      <div class="diagnostic-domain-heading">
+        <span>04</span>
+        <h3 id="domain-fonctions">Fonctions et contrôle</h3>
+      </div>
+
+      <fieldset class="diagnostic-question" data-domain="fonctions" data-answer="c">
+        <legend><span>Question 10</span> Quel résultat produit cet appel?</legend>
+        <pre><code class="language-r">ajouter &lt;- function(x, k = 1) {
+  x + k
+}
+
+ajouter(c(2, 5), k = 3)</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q10" value="a"> <code>c(2, 5, 3)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q10" value="b"> <code>c(3, 6)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q10" value="c"> <code>c(5, 8)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q10" value="d"> Une erreur, car <code>k</code> a déjà une valeur par défaut.</label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>L’argument fourni <code>k = 3</code> remplace la valeur par défaut, puis 3 est ajouté à chaque élément de <code>x</code>.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="fonctions" data-answer="a">
+        <legend><span>Question 11</span> Quelle expression classe chaque valeur de <code>x</code> dans un vecteur?</legend>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q11" value="a"> <code>ifelse(x &gt;= 10, "élevée", "faible")</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q11" value="b"> <code>if (x &gt;= 10) "élevée" else "faible"</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q11" value="c"> <code>x &gt;= 10 &lt;- c("élevée", "faible")</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q11" value="d"> <code>switch(x, "élevée", "faible")</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span><code>ifelse()</code> évalue une condition pour chaque position du vecteur. Un bloc <code>if</code> ordinaire attend une seule condition.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="fonctions" data-answer="d">
+        <legend><span>Question 12</span> Quelle est la valeur finale de <code>total</code>?</legend>
+        <pre><code class="language-r">total &lt;- 0
+for (i in 1:4) {
+  total &lt;- total + i
+}</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q12" value="a"> <code>4</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q12" value="b"> <code>6</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q12" value="c"> <code>24</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q12" value="d"> <code>10</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>La boucle additionne successivement 1, 2, 3 et 4. La somme finale vaut 10.</p>
+      </fieldset>
+    </section>
+
+    <section class="diagnostic-domain" aria-labelledby="domain-scripts">
+      <div class="diagnostic-domain-heading">
+        <span>05</span>
+        <h3 id="domain-scripts">Scripts, importation et aide</h3>
+      </div>
+
+      <fieldset class="diagnostic-question" data-domain="scripts" data-answer="b">
+        <legend><span>Question 13</span> Quel appel importe le fichier CSV avec <code>readr</code> en utilisant un chemin relatif?</legend>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q13" value="a"> <code>readr::write_csv("data/mesures.csv")</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q13" value="b"> <code>readr::read_csv("data/mesures.csv")</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q13" value="c"> <code>readr::read_csv(data/mesures.csv)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q13" value="d"> <code>library("data/mesures.csv")</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span><code>read_csv()</code> lit un CSV. Le chemin est une chaîne de caractères et il est relatif au dossier de travail courant.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="scripts" data-answer="c">
+        <legend><span>Question 14</span> Quelle commande exécute le script <code>R/nettoyage.R</code>?</legend>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q14" value="a"> <code>run("R/nettoyage.R")</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q14" value="b"> <code>library("R/nettoyage.R")</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q14" value="c"> <code>source("R/nettoyage.R")</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q14" value="d"> <code>readLines(R/nettoyage.R)</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span><code>source()</code> lit et évalue les expressions contenues dans un fichier R.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="scripts" data-answer="a">
+        <legend><span>Question 15</span> Quelle commande ouvre la page d’aide de la fonction <code>mean()</code>?</legend>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q15" value="a"> <code>?mean</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q15" value="b"> <code>mean?</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q15" value="c"> <code>search(mean)</code></label>
+          <label class="diagnostic-option"><input type="radio" name="q15" value="d"> <code>library(mean)</code></label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span><code>?mean</code>, qui équivaut à <code>help(mean)</code>, ouvre la documentation de la fonction.</p>
+      </fieldset>
+    </section>
+
+    <section class="diagnostic-domain" aria-labelledby="domain-diagnostic">
+      <div class="diagnostic-domain-heading">
+        <span>06</span>
+        <h3 id="domain-diagnostic">Lecture d’erreurs et vérification</h3>
+      </div>
+
+      <fieldset class="diagnostic-question" data-domain="diagnostic" data-answer="c">
+        <legend><span>Question 16</span> Que signifie principalement le message <code>object 'ventes' not found</code>?</legend>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q16" value="a"> Le package <code>ventes</code> doit être installé.</label>
+          <label class="diagnostic-option"><input type="radio" name="q16" value="b"> Le fichier de données contient nécessairement une erreur.</label>
+          <label class="diagnostic-option"><input type="radio" name="q16" value="c"> Aucun objet accessible ne porte exactement le nom <code>ventes</code> à cet endroit du programme.</label>
+          <label class="diagnostic-option"><input type="radio" name="q16" value="d"> R manque de mémoire.</label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>Il faut vérifier que l’objet a été créé, que le bon script a été exécuté et que le nom respecte les majuscules et minuscules.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="diagnostic" data-answer="b">
+        <legend><span>Question 17</span> La console affiche un symbole <code>+</code> après cette ligne. Quelle est la cause la plus probable?</legend>
+        <pre><code class="language-r">moyenne &lt;- mean(c(4, 6, 8)</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q17" value="a"> La moyenne ne peut pas être calculée sur des entiers.</label>
+          <label class="diagnostic-option"><input type="radio" name="q17" value="b"> Une parenthèse fermante manque, donc l’expression est incomplète.</label>
+          <label class="diagnostic-option"><input type="radio" name="q17" value="c"> L’opérateur <code>&lt;-</code> est interdit avec <code>mean()</code>.</label>
+          <label class="diagnostic-option"><input type="radio" name="q17" value="d"> Le symbole <code>+</code> indique que le calcul est terminé.</label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span>Le symbole de continuation <code>+</code> indique que R attend la suite d’une expression incomplète. Il manque ici une parenthèse.</p>
+      </fieldset>
+
+      <fieldset class="diagnostic-question" data-domain="diagnostic" data-answer="d">
+        <legend><span>Question 18</span> Que se passe-t-il lors de l’exécution de cette vérification?</legend>
+        <pre><code class="language-r">stopifnot(all(c(2, 5, 8) &gt;= 0))</code></pre>
+        <div class="diagnostic-options">
+          <label class="diagnostic-option"><input type="radio" name="q18" value="a"> La commande retourne le vecteur <code>c(2, 5, 8)</code>.</label>
+          <label class="diagnostic-option"><input type="radio" name="q18" value="b"> La commande remplace les valeurs positives par <code>TRUE</code>.</label>
+          <label class="diagnostic-option"><input type="radio" name="q18" value="c"> La commande provoque toujours une erreur.</label>
+          <label class="diagnostic-option"><input type="radio" name="q18" value="d"> La condition est vraie, donc le programme continue sans erreur.</label>
+        </div>
+        <p class="diagnostic-feedback" aria-live="polite" hidden><span class="diagnostic-feedback-status"></span><code>all()</code> retourne <code>TRUE</code>, car les trois valeurs sont non négatives. <code>stopifnot()</code> n’interrompt donc pas le programme.</p>
+      </fieldset>
+    </section>
+
+    <p id="diagnostic-r-form-alert" class="diagnostic-form-alert" role="alert" hidden></p>
+
+    <div class="diagnostic-form-actions">
+      <button class="diagnostic-button diagnostic-button--primary" type="submit">Calculer mon bilan</button>
+      <button class="diagnostic-button" type="button" id="diagnostic-r-reset">Recommencer</button>
+    </div>
+  </form>
+
+  <section id="diagnostic-r-result" class="diagnostic-result" aria-live="polite" hidden>
+    <div class="diagnostic-result-summary">
+      <div id="diagnostic-r-result-score" class="diagnostic-result-score" aria-label="Résultat global"></div>
+      <div>
+        <p class="diagnostic-eyebrow">Votre bilan</p>
+        <h2 id="diagnostic-r-result-title"></h2>
+        <p id="diagnostic-r-result-message"></p>
+      </div>
+    </div>
+
+    <div class="diagnostic-result-grid">
+      <div>
+        <h3>Résultats par domaine</h3>
+        <div class="diagnostic-table-wrap">
+          <table class="diagnostic-domain-table">
+            <thead><tr><th>Domaine</th><th>Résultat</th><th>Suite</th></tr></thead>
+            <tbody id="diagnostic-r-domain-results"></tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3>Prochaines étapes</h3>
+        <ul id="diagnostic-r-result-actions"></ul>
+        <p class="diagnostic-threshold-note">Repères: 15 à 18 avec au moins 2 sur 3 dans chaque domaine, bases prêtes; 11 à 14, consolidation; 0 à 10, remise à niveau prioritaire.</p>
+      </div>
+    </div>
+
+    <button class="diagnostic-button" type="button" id="diagnostic-r-copy">Copier mon bilan</button>
+  </section>
+</section>
+```
+
+## Vérification pratique {#verification-pratique}
+
+Cette partie vérifie la capacité à écrire et à exécuter un court script, et non seulement à reconnaître une réponse. Les données ci-dessous sont fictives et servent uniquement à l’exercice.
+
+Copiez le code suivant dans un nouveau script R:
+
+```r
+mesures <- data.frame(
+  station = c("Québec", "Québec", "Lévis", "Lévis", "Saguenay"),
+  temperature = c(18.4, NA, 17.1, 19.3, 16.8),
+  valide = c(TRUE, FALSE, TRUE, TRUE, TRUE)
+)
+```
+
+Sans consulter la solution:
+
+1. conservez seulement les lignes valides dont la température n’est pas manquante;
+2. calculez la température moyenne par station;
+3. écrivez une fonction `ecart_reference(x, reference = 18)` qui retourne `x - reference`, puis appliquez-la aux températures conservées;
+4. relancez le script depuis une session R propre.
+
+Le résultat attendu contient quatre lignes valides. Les moyennes sont 18,4 pour Québec, 18,2 pour Lévis et 16,8 pour Saguenay.
+
+::: {.callout-note collapse="true"}
+## Afficher une solution possible
+
+### Avec tidyverse
+
+```r
+# Charger les bibliothèques
+library(tidyverse)
+
+# Créer les données fictives de l’exercice
+mesures <- tibble(
+  station = c("Québec", "Québec", "Lévis", "Lévis", "Saguenay"),
+  temperature = c(18.4, NA, 17.1, 19.3, 16.8),
+  valide = c(TRUE, FALSE, TRUE, TRUE, TRUE)
+)
+
+# Conserver les mesures valides et observées
+mesures_valides <- mesures |>
+  filter(valide, !is.na(temperature))
+
+# Calculer les moyennes par station
+moyennes_station <- mesures_valides |>
+  group_by(station) |>
+  summarise(
+    temperature_moyenne = mean(temperature),
+    .groups = "drop"
+  )
+
+# Définir et appliquer une fonction
+ecart_reference <- function(x, reference = 18) {
+  x - reference
+}
+
+mesures_valides <- mesures_valides |>
+  mutate(ecart = ecart_reference(temperature))
+
+# Vérifier les principaux résultats
+stopifnot(nrow(mesures_valides) == 4)
+stopifnot(isTRUE(all.equal(
+  sort(moyennes_station$temperature_moyenne),
+  sort(c(18.4, 18.2, 16.8))
+)))
+
+mesures_valides
+moyennes_station
+```
+
+### Avec R de base
+
+```r
+# Créer les données fictives de l’exercice
+mesures <- data.frame(
+  station = c("Québec", "Québec", "Lévis", "Lévis", "Saguenay"),
+  temperature = c(18.4, NA, 17.1, 19.3, 16.8),
+  valide = c(TRUE, FALSE, TRUE, TRUE, TRUE)
+)
+
+# Conserver les mesures valides et observées
+mesures_valides <- mesures[
+  mesures$valide & !is.na(mesures$temperature),
+]
+
+# Calculer les moyennes par station
+moyennes_station <- aggregate(
+  temperature ~ station,
+  data = mesures_valides,
+  FUN = mean
+)
+
+# Définir et appliquer une fonction
+ecart_reference <- function(x, reference = 18) {
+  x - reference
+}
+
+mesures_valides$ecart <- ecart_reference(
+  mesures_valides$temperature
+)
+
+# Vérifier les principaux résultats
+stopifnot(nrow(mesures_valides) == 4)
+stopifnot(isTRUE(all.equal(
+  sort(moyennes_station$temperature),
+  sort(c(18.4, 18.2, 16.8))
+)))
+
+mesures_valides
+moyennes_station
+```
+:::
+
+Si vous n’avez pas pu terminer cette tâche sans la solution, suivez au minimum les sections signalées dans votre bilan, même si votre résultat au questionnaire est élevé.
+
+## Ressources et fondement du contenu
+
+Les questions couvrent les éléments introductifs documentés dans les références suivantes:
+
+- R Core Team (2026), [An Introduction to R, version 4.6.1](https://cran.r-project.org/doc/manuals/r-release/R-intro.html): objets, vecteurs, valeurs manquantes, sous-ensembles, tableaux, contrôle, fonctions, importation et aide;
+- Wickham, Çetinkaya-Rundel et Grolemund (2023), [R for Data Science, 2e édition](https://r4ds.hadley.nz/): transformations de données et flux de travail avec tidyverse;
+- Posit, [documentation officielle de dplyr](https://dplyr.tidyverse.org/reference/index.html) et [documentation officielle de readr](https://readr.tidyverse.org/reference/read_delim.html), consultées le 14 juillet 2026.
+
+Pour travailler les domaines faibles, utilisez le [parcours de mise à niveau en R](ressources/mise-a-niveau-r.qmd). La formulation du prérequis provient de la [fiche officielle de STT-4230, Université Laval](https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique), version affichée du 13 mai 2025 et consultée le 14 juillet 2026.
+
+```{=html}
+<script src="assets/js/diagnostic-r.js"></script>
+```

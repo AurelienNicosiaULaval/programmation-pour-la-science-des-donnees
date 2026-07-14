@@ -12,9 +12,10 @@ format:
   <div>
     <p class="stt-home-kicker">STT-4230 / STT-6230</p>
     <h1 id="stt-home-title">Programmation pour la science des données</h1>
-    <p class="stt-home-lead">Ce site regroupe les notes, laboratoires, défis, consignes d’évaluation, gabarits et ressources du cours STT-4230 / STT-6230 offert à l’automne 2026 à l’Université Laval.</p>
+    <p class="stt-home-lead">Ce site regroupe les notes, laboratoires, défis, consignes d’évaluation, gabarits et ressources du cours STT-4230 / STT-6230 offert à l’automne 2026 à l’Université Laval. La <a href="https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique">fiche officielle du cours</a> indique qu’une connaissance minimale de R est requise: l’<a href="diagnostic-r.html">autodiagnostic</a> permet de vérifier ses bases avant la première séance.</p>
     <div class="stt-home-actions" aria-label="Liens principaux du cours">
-      <a class="stt-home-action stt-home-action--primary" href="demarrage.html">Démarrage étudiant</a>
+      <a class="stt-home-action stt-home-action--primary" href="diagnostic-r.html">Tester mes bases en R</a>
+      <a class="stt-home-action" href="demarrage.html">Démarrage étudiant</a>
       <a class="stt-home-action" href="calendrier.html">Calendrier</a>
       <a class="stt-home-action" href="evaluations.html">Évaluations</a>
     </div>
@@ -56,13 +57,13 @@ format:
     <h2 id="start-title">Commencer</h2>
   </div>
   <div class="stt-home-action-grid">
-    <a class="stt-home-action-card" href="demarrage.html">
+    <a class="stt-home-action-card" href="diagnostic-r.html">
       <span class="stt-home-action-card__number" aria-hidden="true">01</span>
-      <p>Lire Démarrage étudiant avant la première séance.</p>
+      <p>Faire l’autodiagnostic pour vérifier les bases minimales de R.</p>
     </a>
-    <a class="stt-home-action-card" href="calendrier.html">
+    <a class="stt-home-action-card" href="demarrage.html">
       <span class="stt-home-action-card__number" aria-hidden="true">02</span>
-      <p>Consulter le Calendrier pour repérer la préparation et les échéances de la semaine.</p>
+      <p>Lire Démarrage étudiant et vérifier l’environnement de travail.</p>
     </a>
     <article class="stt-home-action-card">
       <span class="stt-home-action-card__number" aria-hidden="true">03</span>
