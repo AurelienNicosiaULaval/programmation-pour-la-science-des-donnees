@@ -42,7 +42,7 @@ Les dates suivantes proviennent du calendrier universitaire 2026-2027 de l’Uni
 
 Source: [Calendrier universitaire 2026-2027, Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf).
 
-Les 14 séances régulières ont lieu du 2 septembre au 9 décembre. La séance d’évaluation finale du mercredi 16 décembre, de 13 h 30 à 16 h 20, se trouve dans la période réservée aux examens et non dans la session régulière.
+Les 14 séances régulières ont lieu du 2 septembre au 9 décembre. Une séance d’évaluation finale se tient pendant la période réservée aux examens, du 14 au 20 décembre. Sa date, son heure et son local seront confirmés dans Brio.
 
 ## Objectif général
 
@@ -86,11 +86,11 @@ Le tableau suivant présente les composantes évaluées du cours.
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Séances 2, 3, 4, 6, 7, 9, 10, 11 et 12; remise dans Brio le mercredi avant 13 h 30 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
-| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 (16 décembre 2026, 13 h 30 à 16 h 20) | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 pendant la période d’examens; fenêtre à confirmer dans Brio | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
-| Site Quarto personnel | 10 % | Individuel | Semaine 15 (16 décembre 2026, 13 h 30 à 16 h 20) | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15 pendant la période d’examens; fenêtre à confirmer dans Brio | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
 Les critères détaillés, les consignes et les différences entre STT-4230 et STT-6230 sont regroupés dans la page [Évaluations](evaluations.qmd).

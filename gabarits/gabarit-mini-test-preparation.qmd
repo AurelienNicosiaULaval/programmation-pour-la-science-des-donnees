@@ -19,7 +19,7 @@ Le mini-test vérifie que la lecture et le geste technique minimal ont été ré
 | Disponibilité | Ouverture le lundi à 13 h 30 et fermeture le mercredi à 13 h 30, au début de la séance |
 | Durée et tentative | 10 minutes, une tentative |
 | Questions | Concept sur 4 points, lecture de code ou décision sur 6 points, puis difficulté ou vérification personnelle non notée |
-| Correction | Automatique pour les deux questions notées; résultat et corrigé publiés après la fermeture |
+| Correction | Automatique pour les deux questions notées; résultat et corrigé publiés par la personne enseignante après la fermeture |
 | IA | Permise pour clarifier une notion; les réponses remises doivent être comprises et vérifiées |
 | Trace | Résultat enregistré dans Brio et difficulté notée pour la séance |
 

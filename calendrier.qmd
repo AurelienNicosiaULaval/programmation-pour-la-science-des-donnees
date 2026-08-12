@@ -5,9 +5,9 @@ format:
     embed-resources: true
 ---
 
-Selon la [fiche officielle du cours STT-4230](https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique), le cours a lieu le mercredi, de 13 h 30 à 16 h 20. Ce calendrier présente les 14 séances régulières de l’automne 2026, du 2 septembre au 9 décembre, ainsi que la séance d’évaluation finale du 16 décembre.
+Selon la [fiche officielle du cours STT-4230](https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique), le cours a lieu le mercredi, de 13 h 30 à 16 h 20. Ce calendrier présente les 14 séances régulières de l’automne 2026, du 2 septembre au 9 décembre, ainsi qu’une séance d’évaluation finale pendant la période d’examens.
 
-Les repères institutionnels proviennent du [calendrier universitaire 2026-2027 de l’Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf). La session régulière se termine le 11 décembre. La séance du 16 décembre appartient donc à la période réservée aux examens, du 14 au 20 décembre; elle ne constitue pas une séance régulière de cours.
+Les repères institutionnels proviennent du [calendrier universitaire 2026-2027 de l’Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf). La session régulière se termine le 11 décembre et la période réservée aux examens s’étend du 14 au 20 décembre. La date, l’heure et le local de la séance finale doivent être confirmés par la Faculté et seront annoncés dans Brio.
 
 La colonne « Séance » suit la progression pédagogique du cours. La semaine de lecture n’est pas comptée comme une séance.
 
@@ -51,7 +51,7 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Il n’y a donc a
 | 12 | 25 novembre 2026<br>13 h 30 à 16 h 20 | [Performance et parallèle](modules/12-synthese-performance-parallele/index.qmd) | Mesure et profilage; parallèle selon la tâche et la machine | Mesurer un goulot, améliorer le code, puis décider si le parallèle est pertinent | Mini-test dans Brio avant 13 h 30; trace avant/après; version intermédiaire du projet |
 | 13 | 2 décembre 2026<br>13 h 30 à 16 h 20 | Défi technique 3, puis [consolidation tests, limites et transfert](modules/13-consolidation-tests-limites-transfert/index.qmd) | IA intégrée à la tâche, vérification obligatoire | Défi individuel 1 h, puis post-mortem et transfert | Défi 3, rapport technique et trace IA; trace non évaluée de transfert |
 | 14 | 9 décembre 2026<br>13 h 30 à 16 h 20 | [Synthèse finale](modules/14-synthese-finale/index.qmd) | Reproduction et limites; modélisation ou autre validation selon le projet | Stabiliser le livrable final, vérifier son point d’entrée et préparer sa défense | Préparation finale, remise finale projet, jalon portfolio 3 |
-| 15, évaluation finale | 16 décembre 2026<br>13 h 30 à 16 h 20 | [Publication, défense et bilan final](modules/15-collaboration-documentation-package/index.qmd) | Site Quarto personnel, dépôt final, support bref, issue ou pull request, bilan individuel | Présentations, revue de code, questions, vérification des contributions et des sites publiés | Site Quarto personnel, défense du projet |
+| 15, évaluation finale | Période du 14 au 20 décembre 2026<br>Date, heure et local à confirmer dans Brio | [Publication, défense et bilan final](modules/15-collaboration-documentation-package/index.qmd) | Site Quarto personnel, dépôt final, support bref, issue ou pull request, bilan individuel | Présentations, revue de code, questions, vérification des contributions et des sites publiés | Site Quarto personnel, défense du projet |
 
 ## Jalons d’évaluation
 
@@ -67,8 +67,8 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Il n’y a donc a
 | 13 | Défi technique 3 | Défi individuel | Jugement professionnel avec IA intégrée |
 | 14 | Remise finale du projet | Projet d’équipe | Produit final, reproduction, limites, contributions |
 | 14 | Jalon portfolio 3 | Portfolio individuel | Portfolio complet et bilan final |
-| 15, 16 décembre 2026, 13 h 30 | Site Quarto personnel | Individuel | Site publié sur GitHub Pages, dépôt source, deux réalisations commentées |
-| 15, 16 décembre 2026, 13 h 30 | Présentation et revue du projet | Projet d’équipe | Démonstration, revue, défense, contribution |
+| 15, fenêtre à confirmer dans la période du 14 au 20 décembre | Site Quarto personnel | Individuel | Site publié sur GitHub Pages, dépôt source, deux réalisations commentées |
+| 15, fenêtre à confirmer dans la période du 14 au 20 décembre | Présentation et revue du projet | Projet d’équipe | Démonstration, revue, défense, contribution |
 
 ## Mini-tests
 

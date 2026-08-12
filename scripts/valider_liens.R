@@ -12,7 +12,9 @@ excluded_dir_names <- c(
   ".local-prompts",
   "tmp",
   "renv",
-  "site_libs"
+  "site_libs",
+  "node_modules",
+  "outputs"
 )
 
 collect_source_files <- function(path = ".") {

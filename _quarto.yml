@@ -1,14 +1,15 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - assets/documents/exercices-consolidation/**
 
 lang: fr
 
 website:
   title: "STT-4230 / STT-6230"
   description: "Programmation pour la science des données"
-  site-url: "https://aureliennicosiaulaval.github.io"
-  site-path: "/programmation-pour-la-science-des-donnees/"
+  site-url: "https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/"
   repo-url: "https://github.com/AurelienNicosiaULaval/programmation-pour-la-science-des-donnees"
   llms-txt: true
   page-navigation: true
@@ -69,6 +70,8 @@ website:
           href: ia.qmd
       - text: "Aide et ressources"
         menu:
+        - text: "Exercices de consolidation"
+          href: exercices-consolidation.qmd
         - text: "Autodiagnostic R"
           href: diagnostic-r.qmd
         - text: "Démarrage étudiant"

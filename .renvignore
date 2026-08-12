@@ -1,0 +1,5 @@
+node_modules/
+outputs/
+_site/
+.quarto/
+assets/documents/exercices-consolidation/

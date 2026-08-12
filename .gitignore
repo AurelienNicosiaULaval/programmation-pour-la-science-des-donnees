@@ -6,6 +6,9 @@
 .quarto/
 _site/
 site_libs/
+node_modules/
+node_modules
+outputs/
 *_files/
 /.quarto/
 /renv/library/
