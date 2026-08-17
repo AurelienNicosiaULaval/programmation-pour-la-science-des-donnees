@@ -8,7 +8,9 @@ format:
     toc-depth: 2
 ---
 
-Cette page rassemble les exercices de l’ancien cours dans une seule ressource. Le matériel est classé selon les semaines d’origine afin de préserver sa structure et son contexte.
+Cette page indexe les exercices de l'ancien cours. Pendant la session, le module Brio de chaque semaine indique le dossier à utiliser. Les fichiers sont distribués à partir du [dépôt GitHub du cours](https://github.com/AurelienNicosiaULaval/programmation-pour-la-science-des-donnees/tree/main/assets/documents/exercices-consolidation).
+
+Pour télécharger un exercice, ouvrir le dossier de la semaine dans GitHub, puis télécharger le fichier ou le ZIP indiqué. Les documents affichés ci-dessous constituent aussi une archive de consultation.
 
 Les pages HTML contiennent les exercices de laboratoire et leur correction. Les PDF proposent des exercices supplémentaires à réaliser de manière autonome. Il ne s’agit ni de mini-tests, ni d’activités Brio, ni d’évaluations.
 

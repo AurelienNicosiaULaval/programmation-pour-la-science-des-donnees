@@ -28,7 +28,7 @@ Si une étape bloque, noter le message exact et consulter [Soutien technique](so
 
 ## Utiliser le site
 
-Commencer par lire la page du module de la semaine. Chaque module indique quoi faire avant, pendant et après la séance.
+Commencer par le module de la semaine dans Brio. Chaque module réunit la matière, la lecture, le mini-test lorsqu'il est prévu, le lien vers les exercices GitHub et les consignes d'évaluation pertinentes sur ce site.
 
 ## Préparation hebdomadaire
 
@@ -81,7 +81,7 @@ renv::restore()
 
 Les consignes préciseront le format exact: lien GitHub, fichier rendu, pull request, issue, rapport Quarto ou autre livrable.
 
-Les mini-tests constituent une exception stable: ils sont toujours réalisés dans Brio. Ils ouvrent 48 heures avant le laboratoire, ferment au début du laboratoire, durent au plus 10 minutes et permettent une tentative.
+Les mini-tests constituent une exception stable: ils sont toujours réalisés dans Brio. Ils ouvrent à 16 h 20 à la fin du cours précédent, ferment le mardi à 23 h 59, durent au plus 10 minutes et permettent une tentative.
 
 ## Portfolio
 

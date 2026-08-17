@@ -1,6 +1,12 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "*.qmd"
+    - "defis/*.qmd"
+    - "gabarits/*.qmd"
+    - "ressources/*.qmd"
+    - "!modules/"
   resources:
     - assets/documents/exercices-consolidation/**
 
@@ -20,38 +26,6 @@ website:
         href: index.qmd
       - text: "Calendrier"
         href: calendrier.qmd
-      - text: "Modules"
-        menu:
-        - text: "1 - Mise en route"
-          href: modules/01-structuration-projets/index.qmd
-        - text: "2 - Structure, Git et GitHub"
-          href: modules/02-structure-git-github/index.qmd
-        - text: "3 - Dépendances et reproductibilité"
-          href: modules/03-dependances-reproductibilite/index.qmd
-        - text: "4 - Données et validation"
-          href: modules/04-donnees-nettoyage-validation/index.qmd
-        - text: "5 - Consolidation : Git, données et portfolio"
-          href: modules/05-consolidation-git-donnees-portfolio/index.qmd
-        - text: "6 - Visualisation"
-          href: modules/06-visualisation/index.qmd
-        - text: "7 - Quarto et rapports"
-          href: modules/07-quarto-rapports/index.qmd
-        - text: "8 - Consolidation : validation et IA"
-          href: modules/08-consolidation-validation-ia/index.qmd
-        - text: "9 - Consolidation"
-          href: modules/09-consolidation/index.qmd
-        - text: "10 - Fonctions et tests"
-          href: modules/10-programmation-fonctionnelle/index.qmd
-        - text: "11 - POO et architecture"
-          href: modules/11-programmation-orientee-objet/index.qmd
-        - text: "12 - Performance et parallèle"
-          href: modules/12-synthese-performance-parallele/index.qmd
-        - text: "13 - Consolidation : tests, limites et transfert"
-          href: modules/13-consolidation-tests-limites-transfert/index.qmd
-        - text: "14 - Synthèse finale"
-          href: modules/14-synthese-finale/index.qmd
-        - text: "15 - Publication et défense"
-          href: modules/15-collaboration-documentation-package/index.qmd
       - text: "Évaluations"
         menu:
         - text: "Vue d’ensemble"

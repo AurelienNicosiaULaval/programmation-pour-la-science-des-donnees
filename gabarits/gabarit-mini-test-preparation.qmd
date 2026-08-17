@@ -16,7 +16,7 @@ Le mini-test vérifie que la lecture et le geste technique minimal ont été ré
 | Élément | Règle commune |
 |---|---|
 | Plateforme | Brio, sous forme d'évaluation de type questionnaire |
-| Disponibilité | Ouverture le lundi à 13 h 30 et fermeture le mercredi à 13 h 30, au début de la séance |
+| Disponibilité | Ouverture à 16 h 20 à la fin de la séance précédente et fermeture le mardi à 23 h 59, la veille du cours |
 | Durée et tentative | 10 minutes, une tentative |
 | Questions | Concept sur 4 points, lecture de code ou décision sur 6 points, puis difficulté ou vérification personnelle non notée |
 | Correction | Automatique pour les deux questions notées; résultat et corrigé publiés par la personne enseignante après la fermeture |

@@ -1,47 +1,175 @@
 ---
-title: "Lectures"
+title: "Lectures libres"
 format:
   html:
     embed-resources: true
 ---
 
-Les lectures servent à préparer un geste technique précis. Elles ne remplacent pas le laboratoire.
+Les lectures préparent la matière du cours et les mini-tests. Elles proviennent principalement de livres accessibles gratuitement en ligne. Les passages obligatoires sont volontairement courts: environ 20 à 30 minutes par semaine, auxquels s'ajoutent quelques exemples R à exécuter.
 
-## Structure hebdomadaire
+Lorsqu'un mini-test est prévu, il ouvre dans Brio à 16 h 20 à la fin du cours précédent et ferme le mardi à 23 h 59, la veille du cours concerné. Il dure 10 minutes et permet une tentative.
 
-Chaque préparation doit contenir:
+## Semaine 1, 2 septembre {#semaine-01}
 
-1. une lecture courte;
-2. deux ou trois exemples R à exécuter;
-3. un mini-test lorsqu'il est prévu, sinon une courte autovérification formative;
-4. une trace dans le portfolio;
-5. une question ou difficulté à apporter en classe.
+Matière: prise en main de R, organisation du travail et GitHub.
 
-Lorsqu'un mini-test est prévu, il suit le [gabarit commun des mini-tests de préparation](gabarits/gabarit-mini-test-preparation.qmd): trois questions dans Brio, 10 minutes, une tentative, ouverture le lundi à 13 h 30 et fermeture le mercredi à 13 h 30 au début de la séance.
+- R for Data Science, chapitre 2, [Workflow: basics](https://r4ds.hadley.nz/workflow-basics.html), sections 2.1 à 2.5.
+- R for Data Science, chapitre 6, [Workflow: scripts and projects](https://r4ds.hadley.nz/workflow-scripts.html), sections 6.1 à 6.3.
 
-| Étape | Charge indicative | Fonction |
-|---|---:|---|
-| Lire | 15 à 25 min | Comprendre le geste technique de la semaine |
-| Exécuter | 10 à 20 min | Faire rouler deux ou trois exemples R |
-| Vérifier | 10 à 15 min | Répondre au mini-test |
-| Préparer | 5 à 10 min | Noter une question, préparer le dépôt ou déposer une trace |
-| Produire | Laboratoire | Transformer la préparation en livrable accompagné |
+À exécuter: créer un projet, un script R et vérifier le répertoire de travail avec `getwd()`.
 
-## Charge visée
+Il n'y a pas de mini-test noté cette semaine.
 
-La préparation avant la séance doit rester raisonnable, environ 45 à 60 minutes au total.
+## Semaine 2, 9 septembre {#semaine-02}
 
-## Références principales
+Matière: bases de R, structures de données et fichiers.
 
-- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). R for Data Science, 2e édition: <https://r4ds.hadley.nz/>.
-- Bryan, J. et Hester, J. Happy Git and GitHub for the useR: <https://happygitwithr.com/>.
-- Documentation officielle Quarto: <https://quarto.org/docs/guide/>.
-- Wickham, H. (2019). Advanced R, 2e édition: <https://adv-r.hadley.nz/>.
-- Wickham, H. et Bryan, J. (2023). R Packages, 2e édition: <https://r-pkgs.org/>.
-- Wickham, H. (2021). Mastering Shiny: <https://mastering-shiny.org/>.
-- Kuhn, M. et Silge, J. (2022). Tidy Modeling with R: <https://www.tmwr.org/>.
-- Documentation officielle `renv`: <https://rstudio.github.io/renv/>.
+- Advanced R, chapitre 3, [Vectors](https://adv-r.hadley.nz/vectors-chap.html), sections 3.2, 3.5 et 3.6.
+- R for Data Science, chapitre 7, [Data import](https://r4ds.hadley.nz/data-import.html), sections 7.1 à 7.3.
 
-## Lectures par module
+À exécuter: construire un vecteur, une liste et un cadre de données, puis importer un petit fichier CSV.
 
-Les lectures obligatoires et complémentaires sont précisées dans les pages de chaque module. Les premières semaines privilégient les textes courts et directement exécutables afin de préparer les laboratoires.
+Mini-test 1: structures de données, coercition et lecture de fichiers. Fermeture le 8 septembre à 23 h 59.
+
+## Semaine 3, 16 septembre {#semaine-03}
+
+Matière: calculs mathématiques et statistiques en R.
+
+- R for Data Science, chapitre 13, [Numbers](https://r4ds.hadley.nz/numbers.html), sections 13.1 à 13.4.
+- Advanced R, chapitre 3, [Vectors](https://adv-r.hadley.nz/vectors-chap.html), rappel des sections 3.2.3 et 3.2.4 sur les valeurs manquantes et la coercition.
+
+À exécuter: calculer une moyenne avec et sans `na.rm = TRUE`, puis simuler une proportion avec `set.seed()` et `rnorm()`.
+
+Mini-test 2: calcul vectoriel, valeurs manquantes, simulation et reproductibilité. Fermeture le 15 septembre à 23 h 59.
+
+## Semaine 4, 23 septembre {#semaine-04}
+
+Matière: prétraitement des données.
+
+- R for Data Science, chapitre 3, [Data transformation](https://r4ds.hadley.nz/data-transform.html), sections 3.1 à 3.5.
+- R for Data Science, chapitre 18, [Missing values](https://r4ds.hadley.nz/missing-values.html), sections 18.1 à 18.3.
+
+À exécuter: filtrer, sélectionner, transformer et résumer un petit tableau contenant des valeurs manquantes.
+
+Mini-test 3: importation, transformation, données manquantes et validation simple. Fermeture le 22 septembre à 23 h 59.
+
+## Semaine 5, 30 septembre {#semaine-05}
+
+Cette semaine commence par le défi technique 1. Il n'y a pas de nouvelle lecture obligatoire ni de mini-test.
+
+Révision ciblée: semaines 2 à 4, en particulier structures de données, importation, calcul vectoriel et prétraitement.
+
+Après le défi, commencer la lecture de la semaine 6 sur les graphiques.
+
+## Semaine 6, 7 octobre {#semaine-06}
+
+Matière: graphiques en R et communication visuelle.
+
+- R for Data Science, chapitre 1, [Data visualization](https://r4ds.hadley.nz/data-visualize.html), sections 1.1 à 1.3 et 1.6.
+- R for Data Science, chapitre 11, [Communication](https://r4ds.hadley.nz/communication.html), sections sur les étiquettes et les annotations.
+
+À exécuter: produire un nuage de points avec `ggplot2`, ajouter une couche, améliorer les étiquettes et sauvegarder la figure.
+
+Mini-test 4: grammaire graphique, géométries, associations esthétiques et sauvegarde. Fermeture le 6 octobre à 23 h 59.
+
+## Semaine 7, 14 octobre {#semaine-07}
+
+Matière: bonnes pratiques, R Markdown et transition vers Quarto.
+
+- R for Data Science, chapitre 4, [Workflow: code style](https://r4ds.hadley.nz/workflow-style.html), sections 4.1 à 4.4.
+- R for Data Science, chapitre 28, [Quarto](https://r4ds.hadley.nz/quarto.html), sections 28.1 à 28.4.
+
+À exécuter: rendre un court document `.qmd` contenant un titre, un paragraphe, une cellule R et une figure.
+
+Mini-test 5: style, cellules de code, options d'exécution et rendu reproductible. Fermeture le 13 octobre à 23 h 59.
+
+## Semaine 8, 21 octobre {#semaine-08}
+
+Cette semaine commence par le défi technique 2. Il n'y a pas de nouvelle lecture obligatoire ni de mini-test à remettre avant la séance.
+
+Révision ciblée: pipeline de données, graphique `ggplot2`, rapport reproductible et déclaration de l'usage de l'IA.
+
+À la fin du cours, le mini-test 6 ouvre pour la semaine 9. Il demeure accessible pendant la semaine de lecture.
+
+## Semaine 9, 4 novembre {#semaine-09}
+
+Matière: structures de contrôle et fonctions.
+
+- Advanced R, chapitre 5, [Control flow](https://adv-r.hadley.nz/control-flow.html), sections 5.1 à 5.3.
+- Advanced R, chapitre 6, [Functions](https://adv-r.hadley.nz/functions.html), sections 6.1 à 6.3.
+
+À exécuter: écrire une fonction courte utilisant `if`, valider une entrée et tester au moins trois cas.
+
+Mini-test 6: conditions, boucles, fonctions, arguments et valeurs de retour. Fermeture le 3 novembre à 23 h 59.
+
+## Semaine 10, 11 novembre {#semaine-10}
+
+Matière: fonctions, tests, exceptions et débogage.
+
+- Advanced R, chapitre 8, [Conditions](https://adv-r.hadley.nz/conditions.html), sections 8.1 à 8.3.
+- Advanced R, chapitre 22, [Debugging](https://adv-r.hadley.nz/debugging.html), sections 22.1 à 22.3.
+- Lecture complémentaire: R Packages, chapitre 13, [Testing basics](https://r-pkgs.org/testing-basics.html), sections 13.1 à 13.3.
+
+À exécuter: provoquer puis diagnostiquer une erreur simple, et écrire un test minimal pour une fonction.
+
+Mini-test 7: conditions, types de sortie, erreurs et stratégie de débogage. Fermeture le 10 novembre à 23 h 59.
+
+## Semaine 11, 18 novembre {#semaine-11}
+
+Matière: programmation orientée objet.
+
+- Advanced R, chapitre 13, [S3](https://adv-r.hadley.nz/s3.html), sections 13.1 à 13.3.
+- Advanced R, chapitre 14, [R6](https://adv-r.hadley.nz/r6.html), sections 14.1 à 14.3.
+
+À exécuter: créer un petit objet S3 avec une méthode `print()`, puis comparer son comportement à un objet R6 fourni.
+
+Mini-test 8: classe, fonction générique, dispatch S3 et sémantique de référence R6. Fermeture le 17 novembre à 23 h 59.
+
+## Semaine 12, 25 novembre {#semaine-12}
+
+Matière: mesure, optimisation et introduction à la métaprogrammation.
+
+- Advanced R, chapitre 23, [Measuring performance](https://adv-r.hadley.nz/perf-measure.html), sections 23.1 à 23.3.
+- Advanced R, chapitre 17, [Metaprogramming: big picture](https://adv-r.hadley.nz/meta-big-picture.html), sections 17.1 et 17.2.
+
+À exécuter: comparer deux expressions équivalentes avec un outil de mesure, puis capturer une expression avec `rlang::expr()` sans l'exécuter.
+
+Mini-test 9: interprétation d'une mesure, équivalence des résultats et principe « le code est aussi une donnée ». Fermeture le 24 novembre à 23 h 59.
+
+## Semaine 13, 2 décembre {#semaine-13}
+
+Cette semaine commence par le défi technique 3. Il n'y a pas de mini-test.
+
+Après le défi:
+
+- R Packages, chapitre 1, [The Whole Game](https://r-pkgs.org/whole-game.html), sections 1.1 à 1.5.
+
+Objectif: reconnaître la structure minimale d'un package et situer les fonctions dans le dossier `R/`.
+
+## Semaine 14, 9 décembre {#semaine-14}
+
+Matière: reproduction, limites et conclusion.
+
+- The Turing Way, [Guide for Reproducible Research](https://book.the-turing-way.org/reproducible-research/reproducible-research/), introduction et sections liées à la reproductibilité du projet.
+
+À faire: relancer le point d'entrée du projet depuis la racine, vérifier les dépendances et noter une limite réelle du livrable.
+
+Il n'y a pas de mini-test.
+
+## Semaine 15, période d'examens {#semaine-15}
+
+Préparation du site personnel et de la défense:
+
+- R for Data Science, chapitre 29, [Quarto formats](https://r4ds.hadley.nz/quarto-formats.html), sections pertinentes au format du site ou du rapport.
+- Consulter les consignes du [site Quarto personnel](site-personnel.qmd) et de la [présentation et revue](presentation.qmd).
+
+Il n'y a pas de mini-test.
+
+## Livres utilisés et licences
+
+- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). [R for Data Science, 2e édition](https://r4ds.hadley.nz/). Accès gratuit, licence CC BY-NC-ND 3.0.
+- Wickham, H. (2019). [Advanced R, 2e édition](https://adv-r.hadley.nz/). Licence CC BY-NC-SA 4.0; code sous licence MIT.
+- Wickham, H. et Bryan, J. (2023). [R Packages, 2e édition](https://r-pkgs.org/). Accès gratuit, licence CC BY-NC-ND 4.0.
+- The Turing Way Community. [The Turing Way](https://book.the-turing-way.org/). Licence CC BY 4.0.
+
+Les liens conduisent vers les sites officiels des livres. Aucun chapitre n'est reproduit dans le site du cours.

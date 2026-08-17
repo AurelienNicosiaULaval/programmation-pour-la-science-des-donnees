@@ -67,7 +67,7 @@ format:
     </a>
     <article class="stt-home-action-card">
       <span class="stt-home-action-card__number" aria-hidden="true">03</span>
-      <p>Ouvrir le module correspondant depuis le menu « Modules » pour trouver la préparation, le laboratoire et la trace attendue.</p>
+      <p>Ouvrir dans Brio le module de la semaine pour trouver la matière, la lecture, les exercices GitHub et les échéances.</p>
     </article>
   </div>
 </section>
@@ -82,7 +82,7 @@ format:
         <tr><th>Moment</th><th>Ce que vous faites</th><th>Trace utile</th></tr>
       </thead>
       <tbody>
-        <tr><td>Avant la classe</td><td>Lire l’extrait demandé, essayer les exemples R, terminer dans Brio le mini-test annoncé avant 13 h 30 le mercredi et préparer le dépôt</td><td>Question, résultat du mini-test, commit initial ou note courte</td></tr>
+        <tr><td>Avant la classe</td><td>Lire l’extrait demandé, essayer les exemples R, terminer dans Brio le mini-test avant sa fermeture le mardi à 23 h 59 et préparer le dépôt</td><td>Question, résultat du mini-test, commit initial ou note courte</td></tr>
         <tr><td>Pendant le laboratoire</td><td>Clarifier les points difficiles, produire dans le dépôt et demander de l’aide avec un exemple reproductible</td><td>Script, rapport, fonction, test, figure, issue ou pull request</td></tr>
         <tr><td>Après la classe</td><td>Stabiliser la trace demandée et mettre à jour le portfolio</td><td>Livrable, journal ou <code>docs/ai-log.md</code> lorsque pertinent</td></tr>
       </tbody>
@@ -93,23 +93,23 @@ format:
 <section class="stt-home-section" aria-labelledby="progression-title">
   <div class="stt-home-section__header">
     <h2 id="progression-title">Progression</h2>
-    <p>Le cours est structuré en 15 semaines:</p>
+    <p>Le cours reprend la progression hebdomadaire familière, avec les évaluations de l’automne 2026:</p>
   </div>
   <ol class="stt-home-progression">
-    <li>Mise en route, diagnostic R/Git/Positron</li>
-    <li>Structure de projet, Git, GitHub</li>
-    <li>Dépendances et reproductibilité</li>
-    <li>Données et nettoyage</li>
-    <li><a href="defis.html#defi-technique-1">Défi technique 1</a>, puis <a href="modules/05-consolidation-git-donnees-portfolio/">Consolidation : Git, données et portfolio</a></li>
-    <li>Visualisation</li>
-    <li>Quarto, rapports, communication</li>
-    <li><a href="defis.html#defi-technique-2">Défi technique 2</a>, puis <a href="modules/08-consolidation-validation-ia/">Consolidation : validation et IA</a></li>
-    <li><a href="modules/09-consolidation/">Consolidation et revue intermédiaire</a></li>
-    <li>Fonctions, <code>purrr</code>, pipelines</li>
-    <li>POO et architecture</li>
-    <li><a href="modules/12-synthese-performance-parallele/">Performance et parallélisation</a></li>
-    <li><a href="defis.html#defi-technique-3">Défi technique 3</a>, puis <a href="modules/13-consolidation-tests-limites-transfert/">Consolidation : tests, limites et transfert</a></li>
-    <li><a href="modules/14-synthese-finale/">Synthèse finale adaptée au projet: reproduction, limites et modèle lorsque pertinent</a></li>
+    <li>Présentation du cours, R et GitHub</li>
+    <li>Bases de R, structures et fichiers</li>
+    <li>Calculs mathématiques et statistiques</li>
+    <li>Prétraitement des données</li>
+    <li><a href="defis.html#defi-technique-1">Défi technique 1</a>, puis graphiques en R</li>
+    <li>Graphiques et bonnes pratiques</li>
+    <li>R Markdown et transition vers Quarto</li>
+    <li><a href="defis.html#defi-technique-2">Défi technique 2</a>, puis consolidation</li>
+    <li>Structures de contrôle et fonctions</li>
+    <li>Fonctions, tests, exceptions et débogage</li>
+    <li>Programmation orientée objet</li>
+    <li>Mesure, optimisation et métaprogrammation</li>
+    <li><a href="defis.html#defi-technique-3">Défi technique 3</a>, puis aperçu des packages R</li>
+    <li>Récapitulatif, reproduction et conclusion</li>
     <li>Site personnel, présentation et revue du projet</li>
   </ol>
 </section>

@@ -69,7 +69,7 @@ summary(cars)
 
 ## Mini-test de préparation
 
-Le questionnaire noté se trouve dans Brio. Il ouvre 48 heures avant le laboratoire, ferme au début du laboratoire, dure au plus 10 minutes et permet une tentative.
+Le questionnaire noté se trouve dans Brio. Il ouvre à 16 h 20 à la fin de la séance précédente, ferme le mardi à 23 h 59, dure au plus 10 minutes et permet une tentative.
 
 Disponibilité dans Brio: du lundi 12 octobre 2026 à 13 h 30 au mercredi 14 octobre 2026 à 13 h 30.
 

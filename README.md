@@ -2,7 +2,9 @@
 
 Site Quarto du cours STT-4230 / STT-6230 à l’Université Laval.
 
-Ce dépôt contient uniquement le matériel destiné aux étudiantes et étudiants: modules, laboratoires, préparation publique aux défis, évaluations, portfolio, politique d’utilisation de l’IA, ressources et gabarits.
+Ce dépôt contient uniquement le matériel destiné aux étudiantes et étudiants: exercices distribués par GitHub, lectures libres, préparation publique aux défis, évaluations, portfolio, politique d’utilisation de l’IA, ressources et gabarits.
+
+Pour l'automne 2026, les pages hebdomadaires sont organisées dans Brio. Les sources de la refonte complète demeurent dans `modules/` pour une prochaine année, mais elles ne sont pas rendues dans le site public de la session actuelle.
 
 Les décisions de conception pédagogique, les documents de pilotage, les corrigés, les consignes évaluées exactes et les données sensibles sont conservés dans le dépôt enseignant privé.
 
@@ -57,12 +59,12 @@ Pour mettre à jour `renv.lock` après installation ou mise à jour de packages:
 renv::snapshot()
 ```
 
-## Ajouter un module
+## Préparer un module pour une prochaine année
 
 1. Créer un dossier dans `modules/`.
 2. Ajouter au minimum `index.qmd`, `avant.qmd`, `pendant.qmd`, `laboratoire.qmd`, `defi.qmd`, `apres.qmd`, `lectures.qmd` et `ressources.qmd`.
 3. Vérifier que le module précise la préparation, la production attendue, le statut IA, la trace portfolio et l’attente STT-6230 lorsque pertinente.
-4. Ajouter l’entrée correspondante dans `_quarto.yml`.
+4. Ajouter l'entrée correspondante à la navigation et à la liste `project.render` dans `_quarto.yml` seulement lorsque la refonte complète sera utilisée.
 5. Placer les notes enseignantes, corrigés et fichiers sensibles dans le dépôt enseignant privé ou dans `.enseignant-prive/`.
 6. Exécuter `quarto render`.
 
