@@ -5,9 +5,7 @@ format:
     embed-resources: true
 ---
 
-Les lectures préparent la matière du cours et les mini-tests. Chaque semaine rassemble d'abord les fiches du [site de notes de cours STT-4230 / STT-6230](https://stt4230.rbind.io/), puis des passages complémentaires tirés de livres accessibles gratuitement en ligne.
-
-Lorsqu'un mini-test est prévu, il ouvre dans Brio à 16 h 20 à la fin du cours précédent et ferme le mardi à 23 h 59, la veille du cours concerné. Il dure 10 minutes et permet une tentative.
+Les lectures préparent la matière du cours. Chaque semaine rassemble d'abord les fiches du [site de notes de cours STT-4230 / STT-6230](https://stt4230.rbind.io/), puis des passages complémentaires tirés de livres accessibles gratuitement en ligne.
 
 ## Semaine 1, 2 septembre {#semaine-01}
 
@@ -22,12 +20,6 @@ Matière: prise en main de R, organisation du travail et GitHub.
 
 - R for Data Science, chapitre 2, [Workflow: basics](https://r4ds.hadley.nz/workflow-basics.html), sections 2.1 à 2.5.
 - R for Data Science, chapitre 6, [Workflow: scripts and projects](https://r4ds.hadley.nz/workflow-scripts.html), sections 6.1 à 6.3.
-
-### À exécuter
-
-Créer un projet, un script R et vérifier le répertoire de travail avec `getwd()`.
-
-Il n'y a pas de mini-test noté cette semaine.
 
 ## Semaine 2, 9 septembre {#semaine-02}
 
@@ -44,12 +36,6 @@ Matière: bases de R, structures de données et fichiers.
 - Advanced R, chapitre 3, [Vectors](https://adv-r.hadley.nz/vectors-chap.html), sections 3.2, 3.5 et 3.6.
 - R for Data Science, chapitre 7, [Data import](https://r4ds.hadley.nz/data-import.html), sections 7.1 à 7.3.
 
-### À exécuter
-
-Construire un vecteur, une liste et un cadre de données, puis importer un petit fichier CSV.
-
-Mini-test 1: structures de données, coercition et lecture de fichiers. Fermeture le 8 septembre à 23 h 59.
-
 ## Semaine 3, 16 septembre {#semaine-03}
 
 Matière: calculs mathématiques et statistiques en R.
@@ -65,12 +51,6 @@ Matière: calculs mathématiques et statistiques en R.
 - R for Data Science, chapitre 13, [Numbers](https://r4ds.hadley.nz/numbers.html), sections 13.1 à 13.4.
 - Advanced R, chapitre 3, [Vectors](https://adv-r.hadley.nz/vectors-chap.html), rappel des sections 3.2.3 et 3.2.4 sur les valeurs manquantes et la coercition.
 
-### À exécuter
-
-Calculer une moyenne avec et sans `na.rm = TRUE`, puis simuler une proportion avec `set.seed()` et `rnorm()`.
-
-Mini-test 2: calcul vectoriel, valeurs manquantes, simulation et reproductibilité. Fermeture le 15 septembre à 23 h 59.
-
 ## Semaine 4, 23 septembre {#semaine-04}
 
 Matière: prétraitement des données.
@@ -85,15 +65,9 @@ Matière: prétraitement des données.
 - R for Data Science, chapitre 3, [Data transformation](https://r4ds.hadley.nz/data-transform.html), sections 3.1 à 3.5.
 - R for Data Science, chapitre 18, [Missing values](https://r4ds.hadley.nz/missing-values.html), sections 18.1 à 18.3.
 
-### À exécuter
-
-Filtrer, sélectionner, transformer et résumer un petit tableau contenant des valeurs manquantes.
-
-Mini-test 3: importation, transformation, données manquantes et validation simple. Fermeture le 22 septembre à 23 h 59.
-
 ## Semaine 5, 30 septembre {#semaine-05}
 
-Cette semaine commence par le défi technique 1. Il n'y a pas de mini-test.
+Cette semaine permet de revoir les fiches suivantes.
 
 ### Révision dans les notes de cours STT-4230
 
@@ -103,7 +77,7 @@ Cette semaine commence par le défi technique 1. Il n'y a pas de mini-test.
 - [Calculs statistiques en R](https://stt4230.rbind.io/calculs/calculs_stat_r/).
 - [Prétraitement de données en R](https://stt4230.rbind.io/manipulation_donnees/pretraitement_donnees_r/).
 
-### À commencer après le défi
+### Lectures suivantes
 
 - [Graphiques en R](https://stt4230.rbind.io/communication_resultats/graphiques_r/).
 - [Graphiques avec ggplot2 en R](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/).
@@ -122,12 +96,6 @@ Matière: graphiques en R et communication visuelle.
 - R for Data Science, chapitre 1, [Data visualization](https://r4ds.hadley.nz/data-visualize.html), sections 1.1 à 1.3 et 1.6.
 - R for Data Science, chapitre 11, [Communication](https://r4ds.hadley.nz/communication.html), sections sur les étiquettes et les annotations.
 
-### À exécuter
-
-Produire un nuage de points avec `ggplot2`, ajouter une couche, améliorer les étiquettes et sauvegarder la figure.
-
-Mini-test 4: grammaire graphique, géométries, associations esthétiques et sauvegarde. Fermeture le 6 octobre à 23 h 59.
-
 ## Semaine 7, 14 octobre {#semaine-07}
 
 Matière: bonnes pratiques, R Markdown et transition vers Quarto.
@@ -142,23 +110,15 @@ Matière: bonnes pratiques, R Markdown et transition vers Quarto.
 - R for Data Science, chapitre 4, [Workflow: code style](https://r4ds.hadley.nz/workflow-style.html), sections 4.1 à 4.4.
 - R for Data Science, chapitre 28, [Quarto](https://r4ds.hadley.nz/quarto.html), sections 28.1 à 28.4.
 
-### À exécuter
-
-Rendre un court document `.qmd` contenant un titre, un paragraphe, une cellule R et une figure.
-
-Mini-test 5: style, cellules de code, options d'exécution et rendu reproductible. Fermeture le 13 octobre à 23 h 59.
-
 ## Semaine 8, 21 octobre {#semaine-08}
 
-Cette semaine commence par le défi technique 2. Il n'y a pas de mini-test à remettre avant la séance.
+Cette semaine permet de revoir les fiches suivantes.
 
 ### Révision dans les notes de cours STT-4230
 
 - [Prétraitement de données en R](https://stt4230.rbind.io/manipulation_donnees/pretraitement_donnees_r/).
 - [Graphiques avec ggplot2 en R](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/).
 - [Rédaction de documents en R Markdown](https://stt4230.rbind.io/communication_resultats/redaction_r_markdown/).
-
-À la fin du cours, le mini-test 6 ouvre pour la semaine 9. Il demeure accessible pendant la semaine de lecture.
 
 ## Semaine 9, 4 novembre {#semaine-09}
 
@@ -175,12 +135,6 @@ Matière: structures de contrôle et fonctions.
 - Advanced R, chapitre 5, [Control flow](https://adv-r.hadley.nz/control-flow.html), sections 5.1 à 5.3.
 - Advanced R, chapitre 6, [Functions](https://adv-r.hadley.nz/functions.html), sections 6.1 à 6.3.
 
-### À exécuter
-
-Écrire une fonction courte utilisant `if`, valider une entrée et tester au moins trois cas.
-
-Mini-test 6: conditions, boucles, fonctions, arguments et valeurs de retour. Fermeture le 3 novembre à 23 h 59.
-
 ## Semaine 10, 11 novembre {#semaine-10}
 
 Matière: fonctions, tests, exceptions et débogage.
@@ -196,12 +150,6 @@ Matière: fonctions, tests, exceptions et débogage.
 - Advanced R, chapitre 22, [Debugging](https://adv-r.hadley.nz/debugging.html), sections 22.1 à 22.3.
 - R Packages, chapitre 13, [Testing basics](https://r-pkgs.org/testing-basics.html), sections 13.1 à 13.3.
 
-### À exécuter
-
-Provoquer puis diagnostiquer une erreur simple, et écrire un test minimal pour une fonction.
-
-Mini-test 7: conditions, types de sortie, erreurs et stratégie de débogage. Fermeture le 10 novembre à 23 h 59.
-
 ## Semaine 11, 18 novembre {#semaine-11}
 
 Matière: programmation orientée objet.
@@ -215,12 +163,6 @@ Matière: programmation orientée objet.
 
 - Advanced R, chapitre 13, [S3](https://adv-r.hadley.nz/s3.html), sections 13.1 à 13.3.
 - Advanced R, chapitre 14, [R6](https://adv-r.hadley.nz/r6.html), sections 14.1 à 14.3.
-
-### À exécuter
-
-Créer un petit objet S3 avec une méthode `print()`, puis comparer son comportement à un objet R6 fourni.
-
-Mini-test 8: classe, fonction générique, dispatch S3 et sémantique de référence R6. Fermeture le 17 novembre à 23 h 59.
 
 ## Semaine 12, 25 novembre {#semaine-12}
 
@@ -236,15 +178,9 @@ Matière: mesure, optimisation et introduction à la métaprogrammation.
 - Advanced R, chapitre 23, [Measuring performance](https://adv-r.hadley.nz/perf-measure.html), sections 23.1 à 23.3.
 - Advanced R, chapitre 17, [Metaprogramming: big picture](https://adv-r.hadley.nz/meta-big-picture.html), sections 17.1 et 17.2.
 
-### À exécuter
-
-Comparer deux expressions équivalentes avec un outil de mesure, puis capturer une expression avec `rlang::expr()` sans l'exécuter.
-
-Mini-test 9: interprétation d'une mesure, équivalence des résultats et principe « le code est aussi une donnée ». Fermeture le 24 novembre à 23 h 59.
-
 ## Semaine 13, 2 décembre {#semaine-13}
 
-Cette semaine commence par le défi technique 3. Il n'y a pas de mini-test.
+Cette semaine porte sur l'utilisation et le développement de packages R.
 
 ### Notes de cours STT-4230
 
@@ -255,7 +191,7 @@ Cette semaine commence par le défi technique 3. Il n'y a pas de mini-test.
 
 - R Packages, chapitre 1, [The Whole Game](https://r-pkgs.org/whole-game.html), sections 1.1 à 1.5.
 
-Objectif: reconnaître la structure minimale d'un package et situer les fonctions dans le dossier `R/`.
+Pendant la lecture, repérer la structure minimale d'un package et la place des fonctions dans le dossier `R/`.
 
 ## Semaine 14, 9 décembre {#semaine-14}
 
@@ -270,10 +206,6 @@ Matière: reproduction, limites et conclusion.
 
 - The Turing Way, [Guide for Reproducible Research](https://book.the-turing-way.org/reproducible-research/reproducible-research/), introduction et sections liées à la reproductibilité du projet.
 
-À faire: relancer le point d'entrée du projet depuis la racine, vérifier les dépendances et noter une limite réelle du livrable.
-
-Il n'y a pas de mini-test.
-
 ## Semaine 15, période d'examens {#semaine-15}
 
 Préparation du site personnel et de la défense.
@@ -287,8 +219,6 @@ Préparation du site personnel et de la défense.
 - R for Data Science, chapitre 29, [Quarto formats](https://r4ds.hadley.nz/quarto-formats.html), sections pertinentes au format du site ou du rapport.
 
 Consulter également les consignes du [site Quarto personnel](site-personnel.qmd) et de la [présentation et revue](presentation.qmd).
-
-Il n'y a pas de mini-test.
 
 ## Références en accès libre
 
