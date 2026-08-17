@@ -8,7 +8,7 @@ format:
     toc-depth: 2
 ---
 
-Cette page indexe les exercices de l'ancien cours. Pendant la session, le module Brio de chaque semaine indique le dossier à utiliser. Les fichiers sont distribués à partir du [dépôt GitHub du cours](https://github.com/AurelienNicosiaULaval/programmation-pour-la-science-des-donnees/tree/main/assets/documents/exercices-consolidation).
+Cette page rassemble les exercices associés aux principaux thèmes du cours. Pendant la session, le module Brio de chaque semaine indique le dossier à utiliser. Les fichiers sont distribués à partir du [dépôt GitHub du cours](https://github.com/AurelienNicosiaULaval/programmation-pour-la-science-des-donnees/tree/main/assets/documents/exercices-consolidation).
 
 Pour télécharger un exercice, ouvrir le dossier de la semaine dans GitHub, puis télécharger le fichier ou le ZIP indiqué. Les documents affichés ci-dessous constituent aussi une archive de consultation.
 
@@ -16,14 +16,14 @@ Les pages HTML contiennent les exercices de laboratoire et leur correction. Les 
 
 Chaque document est replié par défaut. Sélectionner son titre pour le consulter directement dans la page. Un lien permet aussi de l’ouvrir dans un nouvel onglet. Les fichiers de données sont téléchargeables lorsqu’ils existent.
 
-## Ancienne semaine 2 : structures et fichiers {#semaine-02}
+## Structures et fichiers {#semaine-02}
 
 Thèmes : structures de données, fichiers texte, JSON, Excel, données en ligne, sauvegarde d’objets R et facteurs.
 
 <details class="exercise-document">
 <summary>Exercices de laboratoire corrigés</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-02/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés de l’ancienne semaine 2" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-02/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les structures et les fichiers" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-02/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
 </details>
@@ -31,7 +31,7 @@ Thèmes : structures de données, fichiers texte, JSON, Excel, données en ligne
 <details class="exercise-document">
 <summary>Exercices supplémentaires facultatifs</summary>
 <div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-02/exercices-supplementaires.pdf" title="Exercices supplémentaires de l’ancienne semaine 2" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-02/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les structures et les fichiers" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-02/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
 </details>
@@ -42,14 +42,14 @@ Le ZIP contient `productionFruits.csv`, `EVENEMENT.JSON`, `OlympiquesCanadaHiver
 
 Le PDF conservé dans le dossier transmis porte la mention « Hiver 2024 ». Il est publié ici sans modification avec le matériel de la semaine 2.
 
-## Ancienne semaine 3 : calculs en R {#semaine-03}
+## Calculs en R {#semaine-03}
 
 Thèmes : calcul vectoriel, conditions logiques, formules mathématiques, lois de probabilité, simulation, tests statistiques et modèles linéaires.
 
 <details class="exercise-document">
 <summary>Exercices de laboratoire corrigés</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-03/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés de l’ancienne semaine 3" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-03/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les calculs en R" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-03/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
 </details>
@@ -57,7 +57,7 @@ Thèmes : calcul vectoriel, conditions logiques, formules mathématiques, lois d
 <details class="exercise-document">
 <summary>Exercices supplémentaires facultatifs</summary>
 <div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-03/exercices-supplementaires.pdf" title="Exercices supplémentaires de l’ancienne semaine 3" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-03/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les calculs en R" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-03/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
 </details>
@@ -66,14 +66,14 @@ Thèmes : calcul vectoriel, conditions logiques, formules mathématiques, lois d
 
 Le ZIP contient `fruitsFinal.rds`, `student-mat.csv` et `ex_supp_s3.rda`.
 
-## Ancienne semaine 4 : prétraitement des données {#semaine-04}
+## Prétraitement des données {#semaine-04}
 
 Thèmes : transformation de variables, dates, données manquantes, sélection, normalisation, chaînes de caractères et fusion des données olympiques.
 
 <details class="exercise-document">
 <summary>Exercices de laboratoire corrigés</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-04/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés de l’ancienne semaine 4" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-04/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur le prétraitement des données" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-04/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
 </details>
@@ -81,7 +81,7 @@ Thèmes : transformation de variables, dates, données manquantes, sélection, n
 <details class="exercise-document">
 <summary>Exercices supplémentaires facultatifs</summary>
 <div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-04/exercices-supplementaires.pdf" title="Exercices supplémentaires de l’ancienne semaine 4" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-04/exercices-supplementaires.pdf" title="Exercices supplémentaires sur le prétraitement des données" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-04/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
 </details>
@@ -90,14 +90,14 @@ Thèmes : transformation de variables, dates, données manquantes, sélection, n
 
 Le ZIP contient `fruitsFinal.rds` et `ex_supp_s4.rda`.
 
-## Ancienne semaine 5 : graphiques en R {#semaine-05}
+## Graphiques en R {#semaine-05}
 
 Thèmes : système graphique de base, superposition d’observations, annotations, sous-fenêtres et `ggplot2`.
 
 <details class="exercise-document">
 <summary>Exercices de laboratoire corrigés</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-05/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés de l’ancienne semaine 5" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-05/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les graphiques en R" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-05/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
 </details>
@@ -105,7 +105,7 @@ Thèmes : système graphique de base, superposition d’observations, annotation
 <details class="exercise-document">
 <summary>Exercices supplémentaires facultatifs, document intitulé « semaine 6 »</summary>
 <div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-05/exercices-supplementaires-semaine-06.pdf" title="Exercices supplémentaires associés à l’ancienne semaine 5" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-05/exercices-supplementaires-semaine-06.pdf" title="Exercices supplémentaires sur les graphiques en R" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-05/exercices-supplementaires-semaine-06.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
 </details>
@@ -114,14 +114,14 @@ Thèmes : système graphique de base, superposition d’observations, annotation
 
 Le PDF original est intitulé « Exercices supplémentaires facultatifs semaine 6 », même s’il se trouve dans le dossier de la semaine 5. Son contenu porte sur la visualisation.
 
-## Ancienne semaine 7 : bonnes pratiques et R Markdown {#semaine-07}
+## Bonnes pratiques et R Markdown {#semaine-07}
 
 Thèmes : style et bonnes pratiques de programmation, puis reconstruction d’un document reproductible à partir d’une sortie HTML.
 
 <details class="exercise-document">
 <summary>Exercices de laboratoire corrigés</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-07/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés de l’ancienne semaine 7" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-07/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les bonnes pratiques et R Markdown" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-07/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
 </details>
@@ -129,7 +129,7 @@ Thèmes : style et bonnes pratiques de programmation, puis reconstruction d’un
 <details class="exercise-document">
 <summary>Défi R Markdown</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-07/defi-r-markdown.html" title="Défi R Markdown de l’ancienne semaine 7" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-07/defi-r-markdown.html" title="Défi R Markdown" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-07/defi-r-markdown.html" target="_blank" rel="noopener">Ouvrir le défi dans un nouvel onglet</a></p>
 </details>
@@ -138,14 +138,14 @@ Thèmes : style et bonnes pratiques de programmation, puis reconstruction d’un
 
 Le ZIP contient l’image `join.jpg`, le document à reproduire `merge.html` et sa source corrigée `merge.Rmd`.
 
-## Ancienne semaine 8 : contrôle, boucles et fonctions {#semaine-08}
+## Contrôle, boucles et fonctions {#semaine-08}
 
 Thèmes : imprécision numérique, environnements, structures de contrôle, boucles, fonctions, arguments et programmation fonctionnelle.
 
 <details class="exercise-document">
 <summary>Exercices de laboratoire corrigés</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-08/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés de l’ancienne semaine 8" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-08/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur le contrôle, les boucles et les fonctions" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-08/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
 </details>
@@ -153,7 +153,7 @@ Thèmes : imprécision numérique, environnements, structures de contrôle, bouc
 <details class="exercise-document">
 <summary>Exercices supplémentaires facultatifs, document intitulé « semaine 9 »</summary>
 <div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-08/exercices-supplementaires-semaine-09.pdf" title="Exercices supplémentaires associés à l’ancienne semaine 8" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-08/exercices-supplementaires-semaine-09.pdf" title="Exercices supplémentaires sur le contrôle, les boucles et les fonctions" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-08/exercices-supplementaires-semaine-09.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
 </details>
@@ -162,14 +162,14 @@ Thèmes : imprécision numérique, environnements, structures de contrôle, bouc
 
 Le PDF original est intitulé « Exercices supplémentaires semaine 9 ». Le fichier fourni localement se nomme `ex_supp_s8.rda`, même si le PDF mentionne `ex_supp_s9.rda`.
 
-## Ancienne semaine 11 : objets, tests et exceptions {#semaine-11}
+## Objets, tests et exceptions {#semaine-11}
 
 Thèmes : classes et méthodes S3, aperçu S4, vérification d’une fonction, gestion des exceptions et débogage.
 
 <details class="exercise-document">
 <summary>Exercices de laboratoire corrigés</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-11/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés de l’ancienne semaine 11" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-11/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les objets, les tests et les exceptions" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-11/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
 </details>
@@ -177,7 +177,7 @@ Thèmes : classes et méthodes S3, aperçu S4, vérification d’une fonction, g
 <details class="exercise-document">
 <summary>Exercices supplémentaires</summary>
 <div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-11/exercices-supplementaires.pdf" title="Exercices supplémentaires de l’ancienne semaine 11" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-11/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les objets, les tests et les exceptions" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-11/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
 </details>
@@ -186,14 +186,14 @@ Thèmes : classes et méthodes S3, aperçu S4, vérification d’une fonction, g
 
 Le ZIP contient les différentes versions de `coef_asym`, le fichier `tests_coef_asym.R` et les images utilisées dans les exercices supplémentaires.
 
-## Ancienne semaine 13 : tests et performance {#semaine-13}
+## Tests et performance {#semaine-13}
 
 Thèmes : tests et exceptions, mesure du temps d’exécution, allocation de mémoire, vectorisation, parallélisation et métaprogrammation.
 
 <details class="exercise-document">
 <summary>Exercices corrigés sur les tests et les exceptions</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-13/exercices-tests-corriges.html" title="Exercices corrigés sur les tests et les exceptions de l’ancienne semaine 13" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-13/exercices-tests-corriges.html" title="Exercices corrigés sur les tests et les exceptions" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-13/exercices-tests-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
 </details>
@@ -201,7 +201,7 @@ Thèmes : tests et exceptions, mesure du temps d’exécution, allocation de mé
 <details class="exercise-document">
 <summary>Exercices corrigés sur la performance</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="semaine-13/exercices-performance-corriges.html" title="Exercices corrigés sur la performance de l’ancienne semaine 13" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-13/exercices-performance-corriges.html" title="Exercices corrigés sur la performance" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-13/exercices-performance-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
 </details>
@@ -209,7 +209,7 @@ Thèmes : tests et exceptions, mesure du temps d’exécution, allocation de mé
 <details class="exercise-document">
 <summary>Exercices supplémentaires</summary>
 <div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-13/exercices-supplementaires.pdf" title="Exercices supplémentaires de l’ancienne semaine 13" loading="lazy"></iframe>
+<iframe data-exercise-file="semaine-13/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les tests et la performance" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-13/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
 </details>
@@ -220,7 +220,7 @@ Les exercices supplémentaires demandent notamment de comparer plusieurs implém
 
 1. Commencer par le PDF supplémentaire ou tenter les questions du laboratoire sans regarder les solutions.
 2. Ouvrir ensuite le HTML corrigé pour comparer la démarche et le résultat.
-3. Adapter les anciens chemins absolus à un projet R actuel et utiliser des chemins relatifs.
+3. Adapter les chemins absolus indiqués à un projet R actuel et utiliser des chemins relatifs.
 4. Conserver ce travail dans un dossier de pratique distinct des remises évaluées.
 
 <script>

@@ -93,7 +93,7 @@ format:
 <section class="stt-home-section" aria-labelledby="progression-title">
   <div class="stt-home-section__header">
     <h2 id="progression-title">Progression</h2>
-    <p>Le cours reprend la progression hebdomadaire familière, avec les évaluations de l’automne 2026:</p>
+    <p>Le cours suit une progression hebdomadaire qui relie la matière, les lectures, les exercices et les évaluations:</p>
   </div>
   <ol class="stt-home-progression">
     <li>Présentation du cours, R et GitHub</li>
