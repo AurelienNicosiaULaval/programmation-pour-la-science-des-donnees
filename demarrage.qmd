@@ -28,7 +28,7 @@ Si une étape bloque, noter le message exact et consulter [Soutien technique](so
 
 ## Utiliser le site
 
-Commencer par le module de la semaine dans Brio. Chaque module réunit la matière, la lecture, le mini-test lorsqu'il est prévu, le lien vers les exercices GitHub et les consignes d'évaluation pertinentes sur ce site.
+Commencer par le module de la semaine dans Brio. Chaque module réunit la matière, la lecture, le mini-test lorsqu'il est prévu, le lien vers les [exercices](exercices-consolidation.qmd) et la trace attendue dans le portfolio.
 
 ## Préparation hebdomadaire
 
@@ -37,18 +37,18 @@ Avant la séance:
 - lire les notes courtes;
 - exécuter les exemples R;
 - répondre dans Brio au mini-test lorsqu'il est prévu;
-- préparer le dépôt GitHub;
+- travailler dans le dépôt personnel du portfolio;
 - noter une question ou une erreur à discuter.
 
 ## GitHub
 
-Chaque personne doit travailler dans son dépôt personnel lorsque demandé. Les commits doivent être fréquents et lisibles.
+L'équipe enseignante crée un dépôt personnel pour chaque personne inscrite à partir du [modèle minimal A2026](https://github.com/STT-4230-6230/portfolio-stt4230-a2026-template). Le même dépôt est utilisé pendant toute la session. Les commits doivent être réguliers et lisibles.
 
 Exemple de dépôt cloné avec SSH:
 
 ```bash
-git clone git@github.com:utilisateur/portfolio-stt4230.git
-cd portfolio-stt4230
+git clone git@github.com:STT-4230-6230/VOTRE-DEPOT.git
+cd VOTRE-DEPOT
 git status
 ```
 
@@ -85,14 +85,17 @@ Les mini-tests constituent une exception stable: ils sont toujours réalisés da
 
 ## Portfolio
 
-Le portfolio est mis à jour chaque semaine. Il doit contenir les traces du travail, pas seulement les résultats finaux.
+Le portfolio est mis à jour chaque semaine. Il contient uniquement le travail personnel, pas les énoncés ni les corrigés fournis par le cours.
 
 Une entrée hebdomadaire minimale contient généralement:
 
-- un fichier de code, rapport ou note technique;
-- une courte explication de ce qui a été tenté et vérifié;
+- une trace issue d'une lecture, d'un exercice ou d'une activité du cours;
+- au moins un fichier produit personnellement;
+- une courte explication de ce qui a été tenté, vérifié et appris;
 - des commits lisibles;
 - une déclaration IA lorsque le statut de l’activité le demande.
+
+Consulter les [consignes complètes du portfolio](portfolio.qmd) avant le premier jalon.
 
 ## IA
 

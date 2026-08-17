@@ -1,17 +1,19 @@
 ---
-title: "Gabarit de journal de portfolio"
+title: "Gabarit détaillé facultatif du portfolio"
 format:
   html:
     embed-resources: true
 ---
 
-Ce gabarit est à copier dans le portfolio individuel. Les mentions "À compléter" sont des champs à remplir par la personne étudiante chaque semaine.
+Ce gabarit facultatif peut remplacer le court `README.md` d'une semaine lorsqu'une trace demande davantage de documentation. Le modèle minimal du dépôt suffit pour commencer; il n'est pas nécessaire de reproduire toutes les sections ci-dessous chaque semaine.
+
+Le journal contient uniquement le travail personnel. Ajouter un lien vers la lecture, l'exercice ou l'activité utilisée plutôt que copier l'énoncé ou un corrigé.
 
 Cours: STT-4230 / STT-6230
 
 Semaine:
 
-Module:
+Ressource ou activité utilisée:
 
 Date:
 

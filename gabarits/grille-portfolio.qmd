@@ -1,17 +1,53 @@
 ---
-title: "Grille d’évaluation du portfolio"
+title: "Grille d'évaluation du portfolio"
 embed-resources: true
 ---
 
-Cette grille stabilise les critères du portfolio GitHub individuel. Le portfolio compte pour 20 points.
+Le portfolio GitHub individuel compte pour 20 points. Il est évalué progressivement à partir du même dépôt personnel.
+
+Les traces évaluées doivent être produites par l'étudiante ou l'étudiant. Les énoncés et les corrigés fournis par le cours ne font pas partie du portfolio.
+
+## Jalon 1, semaine 3, 4 points
 
 | Critère | Points | Indicateurs |
 |---|---:|---|
-| Régularité et progression | 4 | traces réparties dans le temps, commits significatifs, reprises visibles |
-| Organisation du dépôt | 4 | README clair, dossiers cohérents, fichiers nommés de façon compréhensible |
-| Reproductibilité | 4 | chemins relatifs, dépendances documentées, scripts relançables, usage pertinent de `renv` |
-| Qualité du code et validation | 4 | code lisible, fonctions lorsque pertinent, tests, diagnostics ou contrôles de cohérence |
-| Réflexion et transparence IA | 4 | notes sur les difficultés, décisions, limites, bilan final et `docs/ai-log.md` lorsque nécessaire |
-| Total | 20 |  |
+| Démarrage du dépôt | 1 | dépôt accessible, README initial et structure minimale compréhensible |
+| Premières traces | 1 | productions personnelles présentes dans les semaines réellement travaillées |
+| Documentation | 1 | point de départ, fichiers produits, vérification et prochaine étape indiqués |
+| Progression Git | 1 | commits réguliers et messages compréhensibles |
+| Total | 4 |  |
 
-Pour STT-6230, au moins une trace avancée est attendue: note technique courte, comparaison d’approches, validation plus formelle, analyse de performance ou discussion approfondie des limites.
+## Jalon 2, semaine 9, 6 points
+
+| Critère | Points | Indicateurs |
+|---|---:|---|
+| Régularité et diversité | 2 | progression depuis le jalon 1 et traces provenant de plusieurs activités, notamment des lectures et des exercices |
+| Organisation | 1 | dossiers créés selon les besoins, fichiers bien nommés, navigation compréhensible |
+| Reproductibilité | 1 | chemins relatifs et indications suffisantes pour relancer les productions principales |
+| Validation et amélioration | 1 | vérification réelle et au moins une reprise après une difficulté ou une rétroaction |
+| Réflexion et transparence IA | 1 | difficultés, décisions et usages significatifs de l'IA documentés |
+| Total | 6 |  |
+
+## Jalon 3, semaine 14, 10 points
+
+| Critère | Points | Indicateurs |
+|---|---:|---|
+| Progression sur la session | 2 | travail personnel réparti dans le temps, continuité et diversité des traces |
+| Organisation et README final | 2 | structure cohérente, semaines et productions importantes faciles à retrouver |
+| Reproductibilité | 2 | code et documents relançables, dépendances documentées, chemins relatifs |
+| Qualité du travail et validation | 2 | code lisible, résultats vérifiés, tests ou contrôles adaptés, améliorations visibles |
+| Bilan et transparence | 2 | apprentissages, difficultés, limites, usages IA et lien au site personnel présentés clairement |
+| Total | 10 |  |
+
+## Différenciation STT-4230 / STT-6230
+
+Pour STT-4230, le portfolio doit montrer un travail régulier, compréhensible, reproductible et correctement documenté.
+
+Pour STT-6230, au moins une trace évaluée au jalon 2 ou 3 doit ajouter une dimension technique plus approfondie: comparaison d'approches, validation plus formelle, analyse de performance ou discussion méthodologique des limites.
+
+## Repères communs
+
+- Une trace incomplète peut être pertinente si la démarche, le blocage et la prochaine étape sont documentés honnêtement.
+- La quantité de fichiers ne remplace pas la qualité du travail ni la progression.
+- Un grand nombre de commits artificiels n'est pas valorisé.
+- Une copie d'énoncé ou de corrigé ne constitue pas une trace personnelle.

@@ -12,7 +12,7 @@ Cette page présente les pondérations, les échéances, les traces attendues et
 | Composante | Pondération | Type | Moment | Règle IA |
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Séances 2, 3, 4, 6, 7, 9, 10, 11 et 12; fermeture dans Brio le mardi à 23 h 59 | Permise |
-| Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalons semaines 3, 9, 14 | Permise, déclarée |
+| Portfolio GitHub individuel | 20 % | Individuel cumulatif | Semaine 3: 4 points; semaine 9: 6 points; semaine 14: 10 points | Permise, déclarée |
 | Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 pendant la période d’examens; fenêtre à confirmer dans Brio | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
@@ -46,16 +46,16 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 
 | Après le défi | Module non évalué | Travail |
 |---|---|---|
-| Défi 1 | Exercice analogue dans le dépôt GitHub | Reprendre un problème analogue sans IA |
-| Défi 2 | Exercice analogue dans le dépôt GitHub | Valider une proposition sur un exemple analogue |
-| Défi 3 | Exercice analogue dans le dépôt GitHub | Faire un post-mortem et transférer une pratique vers le projet |
+| Défi 1 | Exercice analogue sur le site du cours | Reprendre un problème analogue sans IA et conserver sa trace personnelle dans le portfolio |
+| Défi 2 | Exercice analogue sur le site du cours | Valider une proposition sur un exemple analogue et documenter la démarche dans le portfolio |
+| Défi 3 | Exercice analogue sur le site du cours | Faire un post-mortem et transférer une pratique vers le portfolio ou le projet |
 
 ## Traces attendues
 
 | Composante | Traces attendues |
 |---|---|
 | Mini-tests de préparation | Résultat enregistré dans Brio avant la fermeture du mardi à 23 h 59 et difficulté ou observation personnelle non notée à reprendre pendant la séance |
-| Portfolio GitHub individuel | Dépôt individuel, dossiers hebdomadaires, scripts, fonctions, rapports, README, conventions, `docs/ai-log.md`, bilan final, commits réguliers |
+| Portfolio GitHub individuel | Dépôt personnel créé une fois par l'équipe enseignante, dossiers ajoutés semaine après semaine, productions personnelles issues des lectures, exercices et activités, README, vérifications, bilan final et commits réguliers |
 | Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
 | Défi 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
 | Défi 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `docs/ai-log.md` ou fichier de réflexion IA |
@@ -84,14 +84,19 @@ Les grilles suivantes détaillent les critères appliqués aux productions:
 - [Grille des défis techniques](gabarits/grille-defis-techniques.qmd)
 - [Grille de présentation et revue du projet](gabarits/grille-presentation-bilan.qmd)
 
-## Trace hebdomadaire du portfolio
+## Travail hebdomadaire du portfolio
 
-Chaque semaine, l’étudiante ou l’étudiant ajoute au minimum:
+Le même dépôt personnel est utilisé pendant toute la session. Chaque semaine, l'étudiante ou l'étudiant y ajoute au minimum:
 
-- un fichier de code, de rapport ou de note technique;
-- une courte note explicative dans le dossier du module;
-- 2 à 3 commits significatifs;
-- une mise à jour du README, du journal IA ou des conventions si pertinent.
+- une trace concrète issue d'une lecture, d'un exercice ou d'une activité du cours;
+- au moins un fichier produit personnellement;
+- une courte explication du travail;
+- une vérification, une difficulté ou une piste d'amélioration;
+- des commits dont les messages permettent de comprendre la progression.
+
+Les énoncés et les corrigés fournis par le cours ne sont pas copiés dans le portfolio. Un lien vers la ressource utilisée est ajouté dans le dossier de la semaine.
+
+L'équipe enseignante crée le dépôt à partir du [modèle minimal A2026](https://github.com/STT-4230-6230/portfolio-stt4230-a2026-template), qui contient seulement la semaine 1 et les fichiers nécessaires au démarrage. Les dossiers suivants sont créés progressivement par la personne étudiante.
 
 ## Règles IA
 
@@ -137,7 +142,9 @@ La semaine 12 contient un seul mini-test portant sur la mesure, l'optimisation e
 
 ### Portfolio GitHub individuel
 
-Le portfolio GitHub individuel est évalué de façon cumulative. Il documente la progression, les traces de code, les décisions, les réflexions, les validations, les rapports, les prototypes et les usages déclarés de l’IA.
+Le portfolio GitHub individuel est évalué de façon cumulative aux semaines 3, 9 et 14 pour 4, 6 et 10 points. Il documente la progression et l'appropriation personnelle du cours à partir des lectures, des exercices, des séances, des défis, du projet et des rétroactions.
+
+Le dépôt contient uniquement le travail de l'étudiante ou de l'étudiant: code, décisions, réflexions, validations, rapports, prototypes et usages déclarés de l'IA. La [page du portfolio](portfolio.qmd) décrit le fonctionnement hebdomadaire et les exigences de chaque jalon.
 
 ### Projet filé en équipe
 
