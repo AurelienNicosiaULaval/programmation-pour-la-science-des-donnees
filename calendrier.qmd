@@ -7,7 +7,7 @@ format:
 
 Le cours a lieu le mercredi, de 13 h 30 à 16 h 20. Chaque semaine associe une matière, les notes du cours STT-4230, des lectures complémentaires, des exercices et, lorsqu'il y a lieu, une évaluation.
 
-Chaque semaine, le module Brio constitue le point d'entrée. Il donne accès à la matière, aux lectures, au mini-test lorsqu'il est prévu, aux exercices distribués par GitHub et aux consignes d'évaluation pertinentes sur ce site.
+Chaque semaine, le module Brio constitue le point d'entrée. Il donne accès à la matière, aux lectures, au mini-test lorsqu'il est prévu, aux exercices sur ce site et à la trace attendue dans le portfolio GitHub individuel.
 
 La semaine de lecture officielle est du 26 au 30 octobre 2026. Il n'y a aucune séance le mercredi 28 octobre.
 
@@ -18,28 +18,29 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Il n'y a aucune s
 | Matière et annonces de la semaine | Module hebdomadaire dans Brio |
 | Lectures obligatoires | [Lectures libres](lectures.qmd), section de la semaine |
 | Mini-test | Questionnaire dans Brio |
-| Exercices | [Dépôt GitHub du cours](https://github.com/AurelienNicosiaULaval/programmation-pour-la-science-des-donnees/tree/main/assets/documents/exercices-consolidation) |
-| Portfolio, projet, défis et site personnel | Pages [Évaluations](evaluations.qmd) de ce site |
+| Exercices | Page [Exercices](exercices-consolidation.qmd) du site du cours |
+| Portfolio individuel | Dépôt personnel créé une fois par l'équipe enseignante à partir du [modèle A2026](https://github.com/STT-4230-6230/portfolio-stt4230-a2026-template) |
+| Projet, défis et site personnel | Pages [Évaluations](evaluations.qmd) de ce site |
 
 ## Calendrier semaine par semaine
 
-| Semaine | Séance | Ouverture du module Brio | Matière | Lecture et exercice | Évaluation ou jalon |
+| Semaine | Séance | Ouverture du module Brio | Matière | Lecture, exercice et portfolio | Évaluation ou jalon |
 |---:|---|---|---|---|---|
-| 1 | 2 septembre | 26 août, 16 h 20 | Présentation du cours, prise en main de R et GitHub | [Lecture semaine 1](lectures.qmd#semaine-01); mise en route du dépôt | Départ du portfolio, non noté |
-| 2 | 9 septembre | 2 septembre, 16 h 20 | Bases de R, structures de données et fichiers | [Lecture semaine 2](lectures.qmd#semaine-02); [exercices GitHub: structures et fichiers](exercices-consolidation.qmd#semaine-02) | Mini-test 1, fermeture le 8 septembre à 23 h 59 |
-| 3 | 16 septembre | 9 septembre, 16 h 20 | Calculs mathématiques et statistiques en R | [Lecture semaine 3](lectures.qmd#semaine-03); [exercices GitHub: calculs en R](exercices-consolidation.qmd#semaine-03) | Mini-test 2, fermeture le 15 septembre à 23 h 59; jalon portfolio 1 |
-| 4 | 23 septembre | 16 septembre, 16 h 20 | Prétraitement des données | [Lecture semaine 4](lectures.qmd#semaine-04); [exercices GitHub: prétraitement des données](exercices-consolidation.qmd#semaine-04) | Mini-test 3, fermeture le 22 septembre à 23 h 59; préparation au défi 1 |
-| 5 | 30 septembre | 23 septembre, 16 h 20 | Défi technique 1, puis graphiques en R | [Révision semaine 5](lectures.qmd#semaine-05); [exercices GitHub: graphiques en R](exercices-consolidation.qmd#semaine-05) | [Défi technique 1](defis.qmd#defi-technique-1), 10 %, sans IA |
-| 6 | 7 octobre | 30 septembre, 16 h 20 | Suite des graphiques, bonnes pratiques et introduction aux rapports reproductibles | [Lecture semaine 6](lectures.qmd#semaine-06); [exercices GitHub: graphiques en R](exercices-consolidation.qmd#semaine-05) | Mini-test 4, fermeture le 6 octobre à 23 h 59; [proposition du projet](projets.qmd) |
-| 7 | 14 octobre | 7 octobre, 16 h 20 | Bonnes pratiques, R Markdown et transition vers Quarto | [Lecture semaine 7](lectures.qmd#semaine-07); [exercices GitHub: bonnes pratiques et R Markdown](exercices-consolidation.qmd#semaine-07) | Mini-test 5, fermeture le 13 octobre à 23 h 59; rapport Quarto |
-| 8 | 21 octobre | 14 octobre, 16 h 20 | Défi technique 2, puis consolidation | [Révision semaine 8](lectures.qmd#semaine-08); exercice analogue dans GitHub après la remise | [Défi technique 2](defis.qmd#defi-technique-2), 10 %, IA permise et déclarée |
-| Lecture | 28 octobre | Le module 9 est déjà ouvert | Aucune séance | Rattrapage et travail autonome | Aucun mini-test à remettre cette semaine |
-| 9 | 4 novembre | 21 octobre, 16 h 20 | Structures de contrôle et fonctions | [Lecture semaine 9](lectures.qmd#semaine-09); [exercices GitHub: contrôle, boucles et fonctions](exercices-consolidation.qmd#semaine-08) | Mini-test 6, fermeture le 3 novembre à 23 h 59; jalon portfolio 2; suivi formatif du projet |
-| 10 | 11 novembre | 4 novembre, 16 h 20 | Fonctions, tests, exceptions et débogage | [Lecture semaine 10](lectures.qmd#semaine-10); [exercices GitHub: objets, tests et exceptions](exercices-consolidation.qmd#semaine-11) | Mini-test 7, fermeture le 10 novembre à 23 h 59 |
-| 11 | 18 novembre | 11 novembre, 16 h 20 | Programmation orientée objet | [Lecture semaine 11](lectures.qmd#semaine-11); [exercices GitHub: objets, tests et exceptions](exercices-consolidation.qmd#semaine-11) | Mini-test 8, fermeture le 17 novembre à 23 h 59 |
-| 12 | 25 novembre | 18 novembre, 16 h 20 | Mesure, optimisation et introduction à la métaprogrammation | [Lecture semaine 12](lectures.qmd#semaine-12); [exercices GitHub: tests et performance](exercices-consolidation.qmd#semaine-13) | Mini-test 9, fermeture le 24 novembre à 23 h 59; version intermédiaire du projet |
-| 13 | 2 décembre | 25 novembre, 16 h 20 | Défi technique 3, puis organisation minimale d'un package R | [Lecture semaine 13](lectures.qmd#semaine-13); exercice analogue après la remise | [Défi technique 3](defis.qmd#defi-technique-3), 10 %, IA intégrée |
-| 14 | 9 décembre | 2 décembre, 16 h 20 | Récapitulatif, reproduction et conclusion | [Lecture semaine 14](lectures.qmd#semaine-14); vérification finale du dépôt | [Remise finale du projet](projets.qmd); jalon portfolio 3 |
+| 1 | 2 septembre | 26 août, 16 h 20 | Présentation du cours, prise en main de R et GitHub | [Lecture semaine 1](lectures.qmd#semaine-01); prise en main du dépôt personnel; première trace | Départ du portfolio, non noté |
+| 2 | 9 septembre | 2 septembre, 16 h 20 | Bases de R, structures de données et fichiers | [Lecture semaine 2](lectures.qmd#semaine-02); [exercices: structures et fichiers](exercices-consolidation.qmd#semaine-02); trace semaine 2 | Mini-test 1, fermeture le 8 septembre à 23 h 59 |
+| 3 | 16 septembre | 9 septembre, 16 h 20 | Calculs mathématiques et statistiques en R | [Lecture semaine 3](lectures.qmd#semaine-03); [exercices: calculs en R](exercices-consolidation.qmd#semaine-03); trace semaine 3 | Mini-test 2, fermeture le 15 septembre à 23 h 59; jalon portfolio 1, 4 points |
+| 4 | 23 septembre | 16 septembre, 16 h 20 | Prétraitement des données | [Lecture semaine 4](lectures.qmd#semaine-04); [exercices: prétraitement](exercices-consolidation.qmd#semaine-04); trace semaine 4 | Mini-test 3, fermeture le 22 septembre à 23 h 59; préparation au défi 1 |
+| 5 | 30 septembre | 23 septembre, 16 h 20 | Défi technique 1, puis graphiques en R | [Révision semaine 5](lectures.qmd#semaine-05); [exercices: graphiques](exercices-consolidation.qmd#semaine-05); trace personnelle après le défi | [Défi technique 1](defis.qmd#defi-technique-1), 10 %, sans IA |
+| 6 | 7 octobre | 30 septembre, 16 h 20 | Suite des graphiques, bonnes pratiques et introduction aux rapports reproductibles | [Lecture semaine 6](lectures.qmd#semaine-06); [exercices: graphiques](exercices-consolidation.qmd#semaine-05); trace semaine 6 | Mini-test 4, fermeture le 6 octobre à 23 h 59; [proposition du projet](projets.qmd) |
+| 7 | 14 octobre | 7 octobre, 16 h 20 | Bonnes pratiques, R Markdown et transition vers Quarto | [Lecture semaine 7](lectures.qmd#semaine-07); [exercices: bonnes pratiques et R Markdown](exercices-consolidation.qmd#semaine-07); trace semaine 7 | Mini-test 5, fermeture le 13 octobre à 23 h 59; rapport Quarto |
+| 8 | 21 octobre | 14 octobre, 16 h 20 | Défi technique 2, puis consolidation | [Révision semaine 8](lectures.qmd#semaine-08); exercice analogue; trace personnelle après le défi | [Défi technique 2](defis.qmd#defi-technique-2), 10 %, IA permise et déclarée |
+| Lecture | 28 octobre | Le module 9 est déjà ouvert | Aucune séance | Rattrapage des lectures, exercices et traces du portfolio | Aucun mini-test à remettre cette semaine |
+| 9 | 4 novembre | 21 octobre, 16 h 20 | Structures de contrôle et fonctions | [Lecture semaine 9](lectures.qmd#semaine-09); [exercices: contrôle, boucles et fonctions](exercices-consolidation.qmd#semaine-08); trace semaine 9 | Mini-test 6, fermeture le 3 novembre à 23 h 59; jalon portfolio 2, 6 points; suivi formatif du projet |
+| 10 | 11 novembre | 4 novembre, 16 h 20 | Fonctions, tests, exceptions et débogage | [Lecture semaine 10](lectures.qmd#semaine-10); [exercices: objets, tests et exceptions](exercices-consolidation.qmd#semaine-11); trace semaine 10 | Mini-test 7, fermeture le 10 novembre à 23 h 59 |
+| 11 | 18 novembre | 11 novembre, 16 h 20 | Programmation orientée objet | [Lecture semaine 11](lectures.qmd#semaine-11); [exercices: objets, tests et exceptions](exercices-consolidation.qmd#semaine-11); trace semaine 11 | Mini-test 8, fermeture le 17 novembre à 23 h 59 |
+| 12 | 25 novembre | 18 novembre, 16 h 20 | Mesure, optimisation et introduction à la métaprogrammation | [Lecture semaine 12](lectures.qmd#semaine-12); [exercices: tests et performance](exercices-consolidation.qmd#semaine-13); trace semaine 12 | Mini-test 9, fermeture le 24 novembre à 23 h 59; version intermédiaire du projet |
+| 13 | 2 décembre | 25 novembre, 16 h 20 | Défi technique 3, puis organisation minimale d'un package R | [Lecture semaine 13](lectures.qmd#semaine-13); exercice analogue; trace personnelle après le défi | [Défi technique 3](defis.qmd#defi-technique-3), 10 %, IA intégrée |
+| 14 | 9 décembre | 2 décembre, 16 h 20 | Récapitulatif, reproduction et conclusion | [Lecture semaine 14](lectures.qmd#semaine-14); bilan et vérification finale du portfolio | [Remise finale du projet](projets.qmd); jalon portfolio 3, 10 points |
 | 15 | Période du 14 au 20 décembre, à confirmer dans Brio | 9 décembre, 16 h 20 | Publication, défense et bilan | [Préparation semaine 15](lectures.qmd#semaine-15) | [Site Quarto personnel](site-personnel.qmd); défense du projet |
 
 ## Mini-tests de préparation
@@ -66,14 +67,14 @@ Le mini-test 6 demeure ouvert pendant la semaine de lecture, puisqu'aucune séan
 
 | Semaine | Jalon | Composante |
 |---:|---|---|
-| 3 | Jalon portfolio 1 | [Portfolio individuel](portfolio.qmd) |
+| 3 | Jalon portfolio 1, 4 points | [Portfolio individuel](portfolio.qmd) |
 | 5 | Défi technique 1 | [Défis techniques](defis.qmd) |
 | 6 | Proposition du projet | [Projet d'équipe](projets.qmd) |
 | 8 | Défi technique 2 | [Défis techniques](defis.qmd) |
-| 9 | Jalon portfolio 2 et suivi formatif du projet | Portfolio et projet |
+| 9 | Jalon portfolio 2, 6 points, et suivi formatif du projet | Portfolio et projet |
 | 12 | Version intermédiaire du projet | Projet d'équipe |
 | 13 | Défi technique 3 | Défis techniques |
-| 14 | Remise finale du projet et jalon portfolio 3 | Projet et portfolio |
+| 14 | Remise finale du projet et jalon portfolio 3, 10 points | Projet et portfolio |
 | 15 | Site personnel et défense | Site Quarto personnel et projet |
 
 ## Repères institutionnels

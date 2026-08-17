@@ -1,6 +1,6 @@
 ---
-title: "Exercices de consolidation"
-subtitle: "Une ressource autonome pour pratiquer à son rythme"
+title: "Exercices"
+subtitle: "Un point de départ pour le travail personnel"
 format:
   html:
     embed-resources: true
@@ -8,11 +8,13 @@ format:
     toc-depth: 2
 ---
 
-Cette page rassemble les exercices associés aux principaux thèmes du cours. Pendant la session, le module Brio de chaque semaine indique le dossier à utiliser. Les fichiers sont distribués à partir du [dépôt GitHub du cours](https://github.com/AurelienNicosiaULaval/programmation-pour-la-science-des-donnees/tree/main/assets/documents/exercices-consolidation).
+Cette page rassemble les exercices associés aux principaux thèmes du cours. Le module Brio de chaque semaine indique la section à utiliser.
 
-Pour télécharger un exercice, ouvrir le dossier de la semaine dans GitHub, puis télécharger le fichier ou le ZIP indiqué. Les documents affichés ci-dessous constituent aussi une archive de consultation.
+Les énoncés, les documents et les fichiers de données restent sur le site du cours. Il n'est plus nécessaire de cloner un nouveau dépôt d'exercices chaque semaine.
 
-Les pages HTML contiennent les exercices de laboratoire et leur correction. Les PDF proposent des exercices supplémentaires à réaliser de manière autonome. Il ne s’agit ni de mini-tests, ni d’activités Brio, ni d’évaluations.
+Chaque personne réalise son travail dans le même [portfolio GitHub individuel](portfolio.qmd) pendant toute la session. Le portfolio contient uniquement le travail personnel: code, résultats, visualisations, vérifications et réflexions. Il ne doit pas contenir de copie des énoncés ni des corrigés du cours; un lien vers la présente section suffit.
+
+Les pages HTML contiennent les exercices de laboratoire et leur correction. Les PDF proposent des exercices supplémentaires à réaliser de manière autonome. Commencer par tenter l'exercice et enregistrer son travail personnel avant de consulter le corrigé. Le corrigé sert ensuite à vérifier et à améliorer sa propre production; il ne doit pas être copié dans le portfolio.
 
 Chaque document est replié par défaut. Sélectionner son titre pour le consulter directement dans la page. Un lien permet aussi de l’ouvrir dans un nouvel onglet. Les fichiers de données sont téléchargeables lorsqu’ils existent.
 
@@ -221,7 +223,7 @@ Les exercices supplémentaires demandent notamment de comparer plusieurs implém
 1. Commencer par le PDF supplémentaire ou tenter les questions du laboratoire sans regarder les solutions.
 2. Ouvrir ensuite le HTML corrigé pour comparer la démarche et le résultat.
 3. Adapter les chemins absolus indiqués à un projet R actuel et utiliser des chemins relatifs.
-4. Conserver ce travail dans un dossier de pratique distinct des remises évaluées.
+4. Conserver le travail personnel dans le dossier de la semaine du portfolio et ajouter un lien vers la présente section.
 
 <script>
 const exerciseBasePath = "assets/documents/exercices-consolidation/h2023/";

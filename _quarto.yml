@@ -44,7 +44,7 @@ website:
           href: ia.qmd
       - text: "Aide et ressources"
         menu:
-        - text: "Exercices de consolidation"
+        - text: "Exercices"
           href: exercices-consolidation.qmd
         - text: "Autodiagnostic R"
           href: diagnostic-r.qmd

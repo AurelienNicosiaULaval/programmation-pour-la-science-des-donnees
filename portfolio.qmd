@@ -5,193 +5,218 @@ format:
     embed-resources: true
 ---
 
-Le portfolio GitHub individuel est construit progressivement pendant la session. Il montre les traces du travail, les décisions prises, les apprentissages et la capacité à développer un projet R reproductible.
+Le portfolio GitHub individuel est le dépôt de travail personnel utilisé pendant toute la session. Il montre comment les lectures, les exercices, les séances, les défis, le projet et les rétroactions sont transformés en productions concrètes.
 
-## Modalités d’évaluation
+Le portfolio n'est ni une collection d'énoncés ni un dossier assemblé à la fin de la session. Il contient le travail de l'étudiante ou de l'étudiant et rend sa progression visible dans le temps.
+
+## Modalités d'évaluation
 
 | Élément | Modalité |
 |---|---|
 | Pondération | 20 % |
 | Type | Individuel, cumulatif |
-| Jalons | Semaines 3, 9 et 14 |
+| Jalon 1 | Semaine 3, 4 points |
+| Jalon 2 | Semaine 9, 6 points |
+| Jalon 3 | Semaine 14, 10 points |
 | IA | Permise, déclarée |
-| Remise | Directement dans un dépôt GitHub individuel |
+| Remise | Adresse du dépôt et identifiant du commit à évaluer |
 
-Le portfolio n’est pas un dossier assemblé à la fin de la session. Il doit montrer une progression réelle dans le temps.
+Grille détaillée: [Grille d'évaluation du portfolio](gabarits/grille-portfolio.qmd).
 
-Grille détaillée: [Grille d’évaluation du portfolio](gabarits/grille-portfolio.qmd).
+## Ce qui alimente le portfolio
 
-## Rôle du portfolio
+Le travail hebdomadaire peut partir de plusieurs composantes du cours.
 
-- Conserver les traces hebdomadaires du cours.
-- Documenter la progression individuelle.
-- Montrer la qualité du code et de la documentation.
-- Rendre visibles les validations, tests, corrections et reprises.
-- Relier les lectures, laboratoires, défis et projets.
-- Déclarer l’usage significatif de l’IA.
-- Préparer le bilan final individuel.
-- Sélectionner des réalisations qui pourront être valorisées dans le site Quarto personnel.
+| Point de départ | Exemples de traces personnelles |
+|---|---|
+| Lecture | synthèse courte, exemple personnel, essai de code, question documentée |
+| Exercice | démarche, code, résultat, visualisation, autre méthode |
+| Séance ou laboratoire | fichier produit, diagnostic, erreur comprise, vérification |
+| Défi technique | réflexion après la remise, amélioration sur un cas analogue, apprentissage transféré |
+| Projet d'équipe | contribution individuelle, fonction réutilisable, prototype, décision expliquée |
+| Rétroaction | version améliorée, comparaison avant-après, correction personnelle |
 
-## Structure minimale
+Une trace n'a pas besoin d'être parfaite. Elle doit toutefois être personnelle, compréhensible et assez documentée pour montrer ce qui a été tenté, appris ou vérifié.
+
+## Travail personnel seulement
+
+Le dépôt contient uniquement le travail produit par l'étudiante ou l'étudiant.
+
+- Ne pas copier les énoncés du cours dans le dépôt.
+- Ne pas déposer les corrigés fournis par le cours.
+- Ajouter plutôt un lien vers la lecture, l'exercice ou la consigne utilisée.
+- Distinguer clairement le travail individuel des contributions réalisées dans le projet d'équipe.
+- Conserver les versions successives lorsqu'une erreur est corrigée ou qu'une production est améliorée.
+
+Le mot « correction » désigne ici une amélioration apportée à son propre travail. Il ne désigne jamais la copie d'un corrigé fourni.
+
+## Dépôt créé au début de la session
+
+L'équipe enseignante crée un dépôt personnel pour chaque personne inscrite à partir du [modèle minimal du portfolio A2026](https://github.com/STT-4230-6230/portfolio-stt4230-a2026-template).
+
+Le dépôt de départ contient seulement:
 
 ```text
 portfolio-stt4230/
   README.md
   .gitignore
-  renv.lock
-  docs/
-    conventions.md
-    ai-log.md
-    bilan-final.md
-  modules/
+  portfolio-stt4230.Rproj
+  semaines/
     semaine-01/
-    semaine-02/
-    semaine-03/
-  R/
-  scripts/
-  reports/
-  outputs/
-  data/
-    raw/
-    processed/
+      README.md
 ```
 
-Cette structure peut être adaptée si le README explique clairement l’organisation retenue.
+Il ne contient pas d'avance les dossiers des semaines 2 à 15. Chaque semaine, la personne étudiante crée le dossier nécessaire et fait évoluer la structure selon son travail réel.
 
-## Trace hebdomadaire minimale
+Des sous-dossiers comme `data/`, `figures/`, `R/`, `reports/`, `tests/` ou `docs/` sont ajoutés seulement lorsqu'ils deviennent utiles. Le README doit expliquer les choix d'organisation importants.
 
-Chaque semaine, l’étudiante ou l’étudiant ajoute au minimum:
+## Travail hebdomadaire minimal
 
-- un fichier de code, de rapport ou de note technique;
-- une courte note explicative dans le dossier du module;
-- 2 à 3 commits significatifs;
-- une mise à jour du README, du journal IA ou des conventions si pertinent.
+Chaque semaine, le dépôt doit montrer au minimum:
 
-La courte note explicative peut indiquer:
+- une trace concrète issue d'une lecture, d'un exercice ou d'une activité du cours;
+- au moins un fichier produit par la personne étudiante;
+- une courte explication du travail réalisé;
+- une vérification, une difficulté ou une piste d'amélioration;
+- des commits dont les messages permettent de comprendre la progression.
 
+La trace peut être un fichier `.R`, `.qmd` ou `.md`, une fonction, un test, une figure, un rapport, un résultat reproductible ou une note technique. Une semaine de défi ou de projet peut produire une réflexion ou une trace de contribution plutôt qu'un nouvel exercice isolé.
+
+## Dossier de la semaine
+
+Le `README.md` de chaque semaine indique au minimum:
+
+- la ressource, la lecture, l'exercice ou l'activité utilisée;
 - ce qui a été produit;
-- ce qui a été difficile;
+- les fichiers importants;
 - ce qui a été vérifié;
-- ce qui doit être repris;
-- les commits, issues ou pull requests utiles.
+- une difficulté, une question ou une prochaine étape.
 
-## Contenu attendu
+Exemple:
 
-| Élément | Attente |
-|---|---|
-| `README.md` | Présenter le portfolio, expliquer la structure, indiquer comment relancer les exemples principaux |
-| `.gitignore` | Exclure les fichiers temporaires, historiques locaux, secrets et sorties lourdes non nécessaires |
-| `renv.lock` | Documenter l’environnement R lorsque pertinent |
-| `docs/conventions.md` | Décrire les conventions de nommage, dossiers, scripts et commits |
-| `docs/ai-log.md` | Déclarer les usages significatifs de l’IA |
-| `docs/bilan-final.md` | Synthétiser les apprentissages, difficultés, contributions et prochaines pistes |
-| `modules/semaine-XX/` | Conserver les traces hebdomadaires |
-| `R/` | Regrouper les fonctions réutilisables |
-| `scripts/` | Contenir les scripts d’exécution ou de préparation |
-| `reports/` | Contenir les rapports Quarto ou documents analytiques |
-| `outputs/` | Contenir les sorties utiles à conserver |
-| `data/` | Séparer données brutes et données traitées lorsque des données sont utilisées |
+```markdown
+# Semaine 4
 
-`renv.lock` est attendu lorsque le portfolio contient du code R dont les dépendances doivent être relancées de façon fiable. Si le fichier n’est pas encore pertinent à un jalon donné, le README doit expliquer comment les dépendances sont gérées.
+## Point de départ
 
-Les données utilisées dans le portfolio doivent respecter les règles de provenance et de droit d’usage indiquées dans [Données autorisées](donnees.qmd).
+Lien vers la lecture ou l'exercice utilisé.
 
-## README
+## Travail personnel
 
-Le README doit permettre à une autre personne de comprendre le portfolio sans explication orale. Il doit au minimum contenir:
+Description courte du travail réalisé.
 
-- une courte description du portfolio;
-- la structure des dossiers;
-- les principales commandes ou étapes pour relancer les livrables;
-- les liens vers les semaines ou livrables importants;
-- une note sur les dépendances R;
-- une indication sur la déclaration IA.
+## Fichiers produits
 
-## `docs/ai-log.md`
+- `nettoyage.R`
 
-L’IA est permise et déclarée pour le portfolio. Le fichier `docs/ai-log.md` doit être proportionné: il n’a pas besoin d’être long, mais il doit permettre de comprendre les usages significatifs de l’IA.
+## Vérification
 
-Chaque entrée importante devrait indiquer:
+Description de la vérification effectuée.
 
-- l’outil utilisé;
+## Difficulté ou prochaine étape
+
+Question, limite ou élément à reprendre.
+```
+
+## Commits et progression
+
+Il n'y a pas de quota artificiel de commits. L'historique doit cependant montrer un travail régulier et des changements regroupés par intention.
+
+Un historique utile contient:
+
+- des messages de commit compréhensibles;
+- des ajouts répartis pendant la session;
+- des reprises visibles après une erreur ou une rétroaction;
+- peu de gros commits vagues effectués seulement avant un jalon.
+
+Lorsqu'une amélioration importante est apportée, conserver un commit avant et un commit après permet de montrer la progression.
+
+## Jalons évalués
+
+### Jalon 1, semaine 3, 4 points
+
+Le dépôt doit être accessible et contenir:
+
+- un README initial;
+- les dossiers des premières semaines réellement travaillées;
+- des productions personnelles clairement identifiées;
+- un historique Git compréhensible;
+- une première vérification ou reprise documentée.
+
+### Jalon 2, semaine 9, 6 points
+
+Le dépôt doit montrer:
+
+- une progression régulière depuis le premier jalon;
+- plusieurs types de traces, notamment des lectures et des exercices;
+- au moins une amélioration apportée après une difficulté ou une rétroaction;
+- une organisation adaptée aux fichiers réellement produits;
+- des chemins relatifs et des indications suffisantes pour relancer les productions principales;
+- une déclaration IA lorsque son usage a été significatif.
+
+### Jalon 3, semaine 14, 10 points
+
+Le dépôt final doit présenter:
+
+- une progression cohérente sur l'ensemble de la session;
+- un README à jour qui permet de retrouver les semaines et productions importantes;
+- du code et des documents relançables depuis la racine du projet;
+- des vérifications, tests ou contrôles adaptés aux productions;
+- un court bilan final sur les apprentissages, les difficultés et les améliorations;
+- une déclaration complète des usages significatifs de l'IA;
+- le lien vers le site Quarto personnel et la trace sélectionnée pour ce site.
+
+## Reproductibilité
+
+Le portfolio utilise des chemins relatifs. Les dépendances nécessaires sont indiquées dans le README ou dans un fichier dédié. `renv` est ajouté seulement lorsqu'il devient utile pour reproduire les travaux présents dans le dépôt.
+
+Avant un jalon, vérifier au minimum:
+
+- que les fichiers importants s'ouvrent ou s'exécutent depuis la racine du projet;
+- que les données utilisées peuvent être retrouvées légalement;
+- qu'aucun mot de passe, jeton, secret ou fichier confidentiel n'est suivi par Git;
+- que les résultats annoncés correspondent aux fichiers présents dans le dépôt.
+
+Les données doivent respecter les règles de provenance et de droit d'usage décrites dans [Données autorisées](donnees.qmd).
+
+## Déclaration de l'IA
+
+L'IA est permise et déclarée pour le portfolio. Un fichier comme `docs/ai-log.md` est créé lorsque l'IA influence de façon significative une production, une décision, du code ou un texte.
+
+Une entrée importante indique:
+
+- l'outil utilisé;
 - la tâche demandée;
-- le résumé de la réponse utile;
-- les vérifications faites;
-- les modifications intégrées au portfolio.
-
-Les usages mineurs pour reformuler une question ou clarifier une notion simple n’ont pas besoin d’être consignés en détail, sauf si la consigne de la semaine le demande.
-
-## Commits
-
-Les commits doivent rendre la progression visible. Un bon historique Git contient:
-
-- des commits réguliers;
-- des messages compréhensibles;
-- des changements regroupés par intention;
-- des corrections visibles après rétroaction;
-- peu de gros commits vagues de fin de session.
-
-## Jalons
-
-| Moment | Attentes principales |
-|---|---|
-| Semaine 3 | Dépôt créé, README initial, structure de dossiers, conventions de base, premières traces hebdomadaires |
-| Semaine 9 | Progression visible, plusieurs modules documentés, fonctions ou scripts réutilisables, premières validations, `docs/ai-log.md` si pertinent |
-| Semaine 14 | Portfolio complet, README à jour, traces hebdomadaires organisées, bilan final, usages IA déclarés |
-
-Le site Quarto personnel remis en semaine 15 utilise au moins une réalisation issue du portfolio, mais il constitue une composante évaluée distincte.
+- ce qui a été retenu;
+- les vérifications effectuées;
+- les modifications intégrées au travail personnel.
 
 ## Lien avec le site Quarto personnel
 
-Le portfolio est la source de progression. Le site Quarto personnel est la vitrine publique. La relation entre les deux doit être explicite.
+Le portfolio est le dépôt de progression. Le site Quarto personnel est une vitrine publique distincte.
 
-À la fin de la session, le portfolio doit contenir dans le `README.md` ou dans `docs/bilan-final.md`:
+À la fin de la session, le README ou le bilan final du portfolio indique:
 
-- l’adresse du site Quarto personnel publié;
-- l’adresse du dépôt source du site;
+- l'adresse du site Quarto personnel;
+- l'adresse du dépôt source du site;
 - la trace du portfolio sélectionnée pour le site;
-- le lien vers le fichier, dossier, rapport ou commit correspondant, si ce lien peut être publié.
+- le fichier, le dossier ou le commit correspondant, lorsque ce lien peut être publié.
 
-La trace reprise dans le site peut être un script, un rapport Quarto, une visualisation, une fonction, un diagnostic, une validation ou une note technique. Elle doit être commentée dans le site personnel avec son contexte, sa production, les outils utilisés, les vérifications effectuées, une limite et une piste d’amélioration.
-
-Il n’est pas nécessaire de rendre tout le portfolio public dans le site personnel. Si une trace contient des données, informations ou brouillons qui ne doivent pas être publiés, le site doit présenter une version publique résumée.
-
-## Traces professionnelles à accumuler
-
-- Validation ou test d’un élément de code.
-- Journal d’erreur ou exemple minimal reproductible.
-- Revue de code donnée ou reçue.
-- Transformation d’un script exploratoire en code plus stable.
-- Note sur les limites d’un jeu de données.
-- Déclaration d’usage de l’IA lorsque nécessaire.
-- Comparaison entre une première version et une version améliorée.
-
-## Critères d’évaluation
-
-| Critère | Ce qui est observé |
-|---|---|
-| Régularité | Traces réparties dans le temps, commits significatifs, progression réelle |
-| Organisation | Structure claire, fichiers bien nommés, README utile |
-| Reproductibilité | Code relançable, dépendances documentées, chemins relatifs |
-| Qualité du code | Lisibilité, modularité, fonctions lorsque pertinent, absence de duplication excessive |
-| Validation | Tests, vérifications, diagnostics ou contrôles de cohérence |
-| Réflexion | Notes sur les difficultés, reprises, décisions et apprentissages |
-| Transparence IA | `docs/ai-log.md` présent et proportionné lorsque l’IA influence le travail |
+Il n'est pas nécessaire de rendre tout le portfolio public dans le site personnel. Une trace contenant des données ou des informations qui ne doivent pas être publiées doit être présentée sous une forme publique résumée.
 
 ## Différenciation STT-4230 / STT-6230
 
 Pour STT-4230, le portfolio doit montrer un travail régulier, compréhensible, reproductible et correctement documenté.
 
-Pour STT-6230, le portfolio doit ajouter au moins une trace plus avancée, par exemple:
+Pour STT-6230, au moins une trace ajoute une dimension technique plus approfondie, par exemple une comparaison d'approches, une validation plus formelle, une analyse de performance ou une discussion méthodologique des limites.
 
-- une note technique courte;
-- une comparaison d’approches;
-- une validation plus formelle;
-- une analyse de performance;
-- une discussion plus approfondie des limites.
+## Remise à chaque jalon
 
-## Modalités de remise
+La remise contient:
 
-- Les jalons sont les semaines 3, 9 et 14.
-- `renv.lock` est utilisé lorsque pertinent pour documenter l’environnement R.
-- La remise se fait directement dans le dépôt GitHub individuel.
+- l'adresse du dépôt personnel;
+- l'identifiant du commit à évaluer;
+- le chemin vers la trace que la personne souhaite mettre en évidence;
+- la déclaration IA à jour, lorsque pertinente.
+
+Le même dépôt est utilisé pendant toute la session. Aucune archive ZIP ni nouvelle copie du dépôt n'est demandée à chaque semaine.

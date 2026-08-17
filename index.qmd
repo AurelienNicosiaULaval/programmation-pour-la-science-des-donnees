@@ -67,7 +67,7 @@ format:
     </a>
     <article class="stt-home-action-card">
       <span class="stt-home-action-card__number" aria-hidden="true">03</span>
-      <p>Ouvrir dans Brio le module de la semaine pour trouver la matière, la lecture, les exercices GitHub et les échéances.</p>
+      <p>Ouvrir dans Brio le module de la semaine pour trouver la matière, la lecture, les exercices et les échéances.</p>
     </article>
   </div>
 </section>
@@ -121,8 +121,8 @@ format:
   </div>
   <div class="stt-home-info-card">
     <h2>Portfolio et GitHub</h2>
-    <p>Le portfolio individuel est construit progressivement. Il doit contenir des traces concrètes du travail: code, visualisations, rapports, applications ou prototypes, documentation, réflexions et déclarations d’usage de l’IA lorsque nécessaire.</p>
-    <p>GitHub est utilisé pour versionner le travail, documenter les contributions, soutenir la revue de code, publier le site personnel et rendre la progression visible.</p>
+    <p>Un dépôt personnel est créé une fois au début de la session. Les lectures, exercices, séances, défis, projets et rétroactions alimentent ensuite des productions personnelles organisées semaine après semaine.</p>
+    <p>GitHub sert à conserver le code, les notes, les vérifications et les améliorations. Les énoncés et les corrigés du cours ne sont pas copiés dans le portfolio.</p>
   </div>
   <div class="stt-home-info-card">
     <h2>IA générative</h2>
