@@ -1,0 +1,38 @@
+---
+title: "Module 2 - Structures et fichiers"
+subtitle: "Exercices de laboratoire et exercices supplémentaires"
+body-classes: page-exercises
+page-layout: full
+format:
+  html:
+    embed-resources: true
+    toc: false
+---
+
+{{< include ../includes/exercise-module-nav.md >}}
+
+Thèmes : structures de données, fichiers texte, JSON, Excel, données en ligne, sauvegarde d’objets R et facteurs.
+
+<details class="exercise-document">
+<summary>Exercices de laboratoire corrigés</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-02/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les structures et les fichiers" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-02/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir les exercices de laboratoire dans un nouvel onglet</a></p>
+</details>
+
+<details class="exercise-document">
+<summary>Exercices supplémentaires facultatifs</summary>
+<div class="exercise-frame exercise-frame--pdf">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-02/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les structures et les fichiers" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-02/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir les exercices supplémentaires dans un nouvel onglet</a></p>
+</details>
+
+[Télécharger les fichiers de données, ZIP](../assets/documents/exercices-consolidation/h2023/semaine-02/fichiers-donnees.zip){.exercise-download}
+
+Le ZIP contient `productionFruits.csv`, `EVENEMENT.JSON`, `OlympiquesCanadaHiver.xlsx`, `OlympiquesUSAHiver.json`, `villesHotes.rds`, `listehorairebiblio.xls` et `x.rda`.
+
+Le PDF fourni avec ce matériel porte la mention « Hiver 2024 ». Il est publié sans modification.
+
+{{< include ../includes/exercise-loader.md >}}

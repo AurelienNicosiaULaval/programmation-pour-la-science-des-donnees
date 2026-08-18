@@ -1,0 +1,36 @@
+---
+title: "Module 9 - Contrôle, boucles et fonctions"
+subtitle: "Exercices de laboratoire et exercices supplémentaires"
+body-classes: page-exercises
+page-layout: full
+format:
+  html:
+    embed-resources: true
+    toc: false
+---
+
+{{< include ../includes/exercise-module-nav.md >}}
+
+Thèmes : imprécision numérique, environnements, structures de contrôle, boucles, fonctions, arguments et programmation fonctionnelle.
+
+<details class="exercise-document">
+<summary>Exercices de laboratoire corrigés</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-08/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur le contrôle, les boucles et les fonctions" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-08/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir les exercices de laboratoire dans un nouvel onglet</a></p>
+</details>
+
+<details class="exercise-document">
+<summary>Exercices supplémentaires facultatifs</summary>
+<div class="exercise-frame exercise-frame--pdf">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-08/exercices-supplementaires-semaine-09.pdf" title="Exercices supplémentaires sur le contrôle, les boucles et les fonctions" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-08/exercices-supplementaires-semaine-09.pdf" target="_blank" rel="noopener">Ouvrir les exercices supplémentaires dans un nouvel onglet</a></p>
+</details>
+
+[Télécharger le fichier de données, ZIP](../assets/documents/exercices-consolidation/h2023/semaine-08/fichiers-donnees.zip){.exercise-download}
+
+Le fichier fourni se nomme `ex_supp_s8.rda`, même si le PDF mentionne `ex_supp_s9.rda`.
+
+{{< include ../includes/exercise-loader.md >}}

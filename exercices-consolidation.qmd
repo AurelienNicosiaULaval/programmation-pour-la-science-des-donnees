@@ -1,241 +1,107 @@
 ---
 title: "Exercices"
-subtitle: "Un point de départ pour le travail personnel"
+subtitle: "Choisir un module et travailler dans une page dédiée"
+body-classes: page-exercises-index
+page-layout: full
 format:
   html:
     embed-resources: true
-    toc: true
-    toc-depth: 2
+    toc: false
 ---
 
-Cette page rassemble les exercices associés aux principaux thèmes du cours. Le module Brio de chaque semaine indique la section à utiliser.
+Les exercices sont maintenant organisés par module. Chaque module possède sa propre page large, avec les exercices de laboratoire, les exercices supplémentaires et les fichiers de données disponibles.
 
-Les énoncés, les documents et les fichiers de données restent sur le site du cours. Il n'est plus nécessaire de cloner un nouveau dépôt d'exercices chaque semaine.
+Le module Brio de chaque semaine indique la page à utiliser. Les énoncés et les documents restent sur le site du cours; il n’est donc pas nécessaire de créer ou de cloner un nouveau dépôt d’exercices.
 
-Chaque personne réalise son travail dans le même [portfolio GitHub individuel](portfolio.qmd) pendant toute la session. Le portfolio contient uniquement le travail personnel: code, résultats, visualisations, vérifications et réflexions. Il ne doit pas contenir de copie des énoncés ni des corrigés du cours; un lien vers la présente section suffit.
+Le travail réalisé doit être conservé dans le même [portfolio GitHub individuel](portfolio.qmd) pendant toute la session. Le portfolio contient uniquement le travail personnel: code, résultats, visualisations, vérifications et réflexions. Il ne doit pas contenir de copie des énoncés ni des corrigés.
 
-Les pages HTML contiennent les exercices de laboratoire et leur correction. Les PDF proposent des exercices supplémentaires à réaliser de manière autonome. Commencer par tenter l'exercice et enregistrer son travail personnel avant de consulter le corrigé. Le corrigé sert ensuite à vérifier et à améliorer sa propre production; il ne doit pas être copié dans le portfolio.
+## Choisir un module
 
-Chaque document est replié par défaut. Sélectionner son titre pour le consulter directement dans la page. Un lien permet aussi de l’ouvrir dans un nouvel onglet. Les fichiers de données sont téléchargeables lorsqu’ils existent.
+::: {.exercise-module-grid}
+::: {.exercise-module-card #semaine-02}
+### Module 2
 
-## Structures et fichiers {#semaine-02}
+#### Structures et fichiers
 
-Thèmes : structures de données, fichiers texte, JSON, Excel, données en ligne, sauvegarde d’objets R et facteurs.
+Structures de données, fichiers texte, JSON, Excel, données en ligne, sauvegarde d’objets R et facteurs.
 
-<details class="exercise-document">
-<summary>Exercices de laboratoire corrigés</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-02/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les structures et les fichiers" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-02/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
-</details>
+[Voir les exercices du module 2](exercices/module-02-structures-fichiers.qmd){.exercise-module-link}
+:::
 
-<details class="exercise-document">
-<summary>Exercices supplémentaires facultatifs</summary>
-<div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-02/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les structures et les fichiers" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-02/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
-</details>
+::: {.exercise-module-card #semaine-03}
+### Module 3
 
-[Télécharger les fichiers de données, ZIP](assets/documents/exercices-consolidation/h2023/semaine-02/fichiers-donnees.zip){.exercise-download}
+#### Calculs en R
 
-Le ZIP contient `productionFruits.csv`, `EVENEMENT.JSON`, `OlympiquesCanadaHiver.xlsx`, `OlympiquesUSAHiver.json`, `villesHotes.rds`, `listehorairebiblio.xls` et `x.rda`.
+Calcul vectoriel, conditions logiques, probabilités, simulation, tests statistiques et modèles linéaires.
 
-Le PDF conservé dans le dossier transmis porte la mention « Hiver 2024 ». Il est publié ici sans modification avec le matériel de la semaine 2.
+[Voir les exercices du module 3](exercices/module-03-calculs-r.qmd){.exercise-module-link}
+:::
 
-## Calculs en R {#semaine-03}
+::: {.exercise-module-card #semaine-04}
+### Module 4
 
-Thèmes : calcul vectoriel, conditions logiques, formules mathématiques, lois de probabilité, simulation, tests statistiques et modèles linéaires.
+#### Prétraitement des données
 
-<details class="exercise-document">
-<summary>Exercices de laboratoire corrigés</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-03/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les calculs en R" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-03/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
-</details>
+Transformation de variables, dates, données manquantes, normalisation, chaînes de caractères et fusion.
 
-<details class="exercise-document">
-<summary>Exercices supplémentaires facultatifs</summary>
-<div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-03/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les calculs en R" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-03/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
-</details>
+[Voir les exercices du module 4](exercices/module-04-pretraitement-donnees.qmd){.exercise-module-link}
+:::
 
-[Télécharger les fichiers de données, ZIP](assets/documents/exercices-consolidation/h2023/semaine-03/fichiers-donnees.zip){.exercise-download}
+::: {.exercise-module-card #semaine-05}
+### Modules 5 et 6
 
-Le ZIP contient `fruitsFinal.rds`, `student-mat.csv` et `ex_supp_s3.rda`.
+#### Graphiques en R
 
-## Prétraitement des données {#semaine-04}
+Graphiques de base, annotations, sous-fenêtres et `ggplot2`.
 
-Thèmes : transformation de variables, dates, données manquantes, sélection, normalisation, chaînes de caractères et fusion des données olympiques.
+[Voir les exercices des modules 5 et 6](exercices/modules-05-06-graphiques-r.qmd){.exercise-module-link}
+:::
 
-<details class="exercise-document">
-<summary>Exercices de laboratoire corrigés</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-04/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur le prétraitement des données" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-04/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
-</details>
+::: {.exercise-module-card #semaine-07}
+### Module 7
 
-<details class="exercise-document">
-<summary>Exercices supplémentaires facultatifs</summary>
-<div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-04/exercices-supplementaires.pdf" title="Exercices supplémentaires sur le prétraitement des données" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-04/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
-</details>
+#### Bonnes pratiques et R Markdown
 
-[Télécharger les fichiers de données, ZIP](assets/documents/exercices-consolidation/h2023/semaine-04/fichiers-donnees.zip){.exercise-download}
+Style de programmation et reconstruction d’un document reproductible.
 
-Le ZIP contient `fruitsFinal.rds` et `ex_supp_s4.rda`.
+[Voir les exercices du module 7](exercices/module-07-bonnes-pratiques-rmarkdown.qmd){.exercise-module-link}
+:::
 
-## Graphiques en R {#semaine-05}
+::: {.exercise-module-card #semaine-08}
+### Module 9
 
-Thèmes : système graphique de base, superposition d’observations, annotations, sous-fenêtres et `ggplot2`.
+#### Contrôle, boucles et fonctions
 
-<details class="exercise-document">
-<summary>Exercices de laboratoire corrigés</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-05/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les graphiques en R" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-05/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
-</details>
+Imprécision numérique, environnements, structures de contrôle, boucles et fonctions.
 
-<details class="exercise-document">
-<summary>Exercices supplémentaires facultatifs, document intitulé « semaine 6 »</summary>
-<div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-05/exercices-supplementaires-semaine-06.pdf" title="Exercices supplémentaires sur les graphiques en R" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-05/exercices-supplementaires-semaine-06.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
-</details>
+[Voir les exercices du module 9](exercices/module-09-controle-fonctions.qmd){.exercise-module-link}
+:::
 
-[Télécharger le fichier de données, ZIP](assets/documents/exercices-consolidation/h2023/semaine-05/fichiers-donnees.zip){.exercise-download}
+::: {.exercise-module-card #semaine-11}
+### Modules 10 et 11
 
-Le PDF original est intitulé « Exercices supplémentaires facultatifs semaine 6 », même s’il se trouve dans le dossier de la semaine 5. Son contenu porte sur la visualisation.
+#### Objets, tests et exceptions
 
-## Bonnes pratiques et R Markdown {#semaine-07}
+Classes et méthodes, vérification d’une fonction, exceptions et débogage.
 
-Thèmes : style et bonnes pratiques de programmation, puis reconstruction d’un document reproductible à partir d’une sortie HTML.
+[Voir les exercices des modules 10 et 11](exercices/modules-10-11-objets-tests.qmd){.exercise-module-link}
+:::
 
-<details class="exercise-document">
-<summary>Exercices de laboratoire corrigés</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-07/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les bonnes pratiques et R Markdown" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-07/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
-</details>
+::: {.exercise-module-card #semaine-13}
+### Module 12
 
-<details class="exercise-document">
-<summary>Défi R Markdown</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-07/defi-r-markdown.html" title="Défi R Markdown" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-07/defi-r-markdown.html" target="_blank" rel="noopener">Ouvrir le défi dans un nouvel onglet</a></p>
-</details>
+#### Tests et performance
 
-[Télécharger les fichiers du défi, ZIP](assets/documents/exercices-consolidation/h2023/semaine-07/fichiers-donnees.zip){.exercise-download}
+Tests, mesure du temps d’exécution, mémoire, vectorisation, parallélisation et métaprogrammation.
 
-Le ZIP contient l’image `join.jpg`, le document à reproduire `merge.html` et sa source corrigée `merge.Rmd`.
+[Voir les exercices du module 12](exercices/module-12-tests-performance.qmd){.exercise-module-link}
+:::
+:::
 
-## Contrôle, boucles et fonctions {#semaine-08}
+## Comment utiliser les exercices
 
-Thèmes : imprécision numérique, environnements, structures de contrôle, boucles, fonctions, arguments et programmation fonctionnelle.
-
-<details class="exercise-document">
-<summary>Exercices de laboratoire corrigés</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-08/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur le contrôle, les boucles et les fonctions" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-08/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
-</details>
-
-<details class="exercise-document">
-<summary>Exercices supplémentaires facultatifs, document intitulé « semaine 9 »</summary>
-<div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-08/exercices-supplementaires-semaine-09.pdf" title="Exercices supplémentaires sur le contrôle, les boucles et les fonctions" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-08/exercices-supplementaires-semaine-09.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
-</details>
-
-[Télécharger le fichier de données, ZIP](assets/documents/exercices-consolidation/h2023/semaine-08/fichiers-donnees.zip){.exercise-download}
-
-Le PDF original est intitulé « Exercices supplémentaires semaine 9 ». Le fichier fourni localement se nomme `ex_supp_s8.rda`, même si le PDF mentionne `ex_supp_s9.rda`.
-
-## Objets, tests et exceptions {#semaine-11}
-
-Thèmes : classes et méthodes S3, aperçu S4, vérification d’une fonction, gestion des exceptions et débogage.
-
-<details class="exercise-document">
-<summary>Exercices de laboratoire corrigés</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-11/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les objets, les tests et les exceptions" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-11/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
-</details>
-
-<details class="exercise-document">
-<summary>Exercices supplémentaires</summary>
-<div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-11/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les objets, les tests et les exceptions" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-11/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
-</details>
-
-[Télécharger les fichiers de départ et les images, ZIP](assets/documents/exercices-consolidation/h2023/semaine-11/fichiers-donnees.zip){.exercise-download}
-
-Le ZIP contient les différentes versions de `coef_asym`, le fichier `tests_coef_asym.R` et les images utilisées dans les exercices supplémentaires.
-
-## Tests et performance {#semaine-13}
-
-Thèmes : tests et exceptions, mesure du temps d’exécution, allocation de mémoire, vectorisation, parallélisation et métaprogrammation.
-
-<details class="exercise-document">
-<summary>Exercices corrigés sur les tests et les exceptions</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-13/exercices-tests-corriges.html" title="Exercices corrigés sur les tests et les exceptions" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-13/exercices-tests-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
-</details>
-
-<details class="exercise-document">
-<summary>Exercices corrigés sur la performance</summary>
-<div class="exercise-frame">
-<iframe data-exercise-file="semaine-13/exercices-performance-corriges.html" title="Exercices corrigés sur la performance" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-13/exercices-performance-corriges.html" target="_blank" rel="noopener">Ouvrir la page corrigée dans un nouvel onglet</a></p>
-</details>
-
-<details class="exercise-document">
-<summary>Exercices supplémentaires</summary>
-<div class="exercise-frame exercise-frame--pdf">
-<iframe data-exercise-file="semaine-13/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les tests et la performance" loading="lazy"></iframe>
-</div>
-<p class="exercise-open"><a href="assets/documents/exercices-consolidation/h2023/semaine-13/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir le PDF dans un nouvel onglet</a></p>
-</details>
-
-Les exercices supplémentaires demandent notamment de comparer plusieurs implémentations d’une matrice polynomiale et plusieurs stratégies de simulation.
-
-## Conseils d’utilisation
-
-1. Commencer par le PDF supplémentaire ou tenter les questions du laboratoire sans regarder les solutions.
-2. Ouvrir ensuite le HTML corrigé pour comparer la démarche et le résultat.
-3. Adapter les chemins absolus indiqués à un projet R actuel et utiliser des chemins relatifs.
-4. Conserver le travail personnel dans le dossier de la semaine du portfolio et ajouter un lien vers la présente section.
-
-<script>
-const exerciseBasePath = "assets/documents/exercices-consolidation/h2023/";
-
-document.querySelectorAll(".exercise-document").forEach((section) => {
-  section.addEventListener("toggle", () => {
-    if (!section.open) return;
-
-    section.querySelectorAll("iframe[data-exercise-file]").forEach((frame) => {
-      frame.src = exerciseBasePath + frame.dataset.exerciseFile;
-      frame.removeAttribute("data-exercise-file");
-    });
-  }, { once: true });
-});
-</script>
+1. Commencer par les exercices supplémentaires ou tenter les questions du laboratoire sans regarder la correction.
+2. Consulter ensuite la correction pour comparer la démarche et le résultat.
+3. Adapter les chemins indiqués à un projet R actuel et utiliser des chemins relatifs.
+4. Conserver le travail personnel dans le dossier hebdomadaire du portfolio et ajouter un lien vers la page du module.
