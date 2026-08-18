@@ -607,3 +607,347 @@ body.page-calendar-visual h2 {
   .week-card__identity { grid-template-columns: auto 1fr; align-items: baseline; }
   .mini-test-intro { grid-template-columns: 1fr; }
 }
+
+/* Calendrier hebdomadaire de la session */
+.calendar-hero--compact {
+  min-height: 390px;
+}
+
+.calendar-hero__visual--calendar {
+  display: grid;
+  min-height: 330px;
+  place-items: center;
+  padding: 1.3rem;
+  overflow: visible;
+}
+
+.mini-month {
+  width: min(100%, 355px);
+  padding: 1.15rem;
+  border: 1px solid #cbdde4;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 18px 38px rgba(8, 61, 83, 0.12);
+}
+
+.mini-month__title {
+  margin-bottom: 0.8rem;
+  color: var(--calendar-navy);
+  font-size: 1.05rem;
+  font-weight: 850;
+  text-align: center;
+}
+
+.mini-month__days,
+.mini-month__dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.mini-month__days {
+  margin-bottom: 0.35rem;
+  color: #71838d;
+  font-size: 0.68rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.mini-month__dates span {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--calendar-copy);
+  font-size: 0.74rem;
+  font-weight: 750;
+}
+
+.mini-month__dates .is-class {
+  background: var(--calendar-teal);
+  color: #ffffff;
+}
+
+.mini-month__dates .is-deadline {
+  border: 2px solid var(--calendar-red);
+  color: var(--calendar-red);
+}
+
+.mini-month__dates .is-challenge {
+  background: var(--calendar-yellow);
+  color: #5e4800;
+}
+
+.calendar-hero__legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  color: var(--calendar-copy);
+  font-size: 0.76rem;
+  font-weight: 750;
+}
+
+.calendar-hero__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+}
+
+.legend-dot--class { background: var(--calendar-teal); }
+.legend-dot--deadline { border: 2px solid var(--calendar-red); }
+.legend-dot--challenge { background: var(--calendar-yellow); }
+
+.calendar-wayfinding {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin: 1.2rem 0 4rem;
+  overflow: hidden;
+  border: 1px solid var(--calendar-line);
+  background: var(--calendar-line);
+}
+
+.calendar-wayfinding > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem;
+  align-items: start;
+  min-height: 112px;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.calendar-wayfinding p {
+  margin: 0;
+  color: var(--calendar-copy);
+  font-size: 0.84rem;
+  line-height: 1.46;
+}
+
+.calendar-wayfinding strong { color: var(--calendar-navy); }
+
+.calendar-wayfinding__icon {
+  display: grid;
+  width: 2.05rem;
+  height: 2.05rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 850;
+}
+
+.calendar-wayfinding__icon--prepare { background: var(--calendar-navy); }
+.calendar-wayfinding__icon--class { background: var(--calendar-teal); }
+.calendar-wayfinding__icon--after { background: var(--calendar-red); }
+
+.semester-calendar-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 1.1rem;
+}
+
+.semester-calendar-intro h2,
+.calendar-closing h2 {
+  margin: 0;
+  color: var(--calendar-navy);
+  font-size: clamp(2rem, 3.8vw, 3.15rem);
+  font-weight: 850;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+.semester-calendar-intro > p {
+  max-width: 650px;
+  margin: 0 0 0.2rem;
+  color: var(--calendar-copy);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.semester-calendar-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--calendar-line);
+  border-radius: 0.9rem;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(8, 61, 83, 0.06);
+}
+
+.semester-calendar {
+  width: 100%;
+  min-width: 1040px;
+  margin: 0;
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.semester-calendar th,
+.semester-calendar td {
+  padding: 0.72rem;
+  border: 0;
+  border-right: 1px solid var(--calendar-line);
+  border-bottom: 1px solid var(--calendar-line);
+  vertical-align: top;
+}
+
+.semester-calendar tr > *:last-child { border-right: 0; }
+.semester-calendar tbody tr:last-child > * { border-bottom: 0; }
+
+.semester-calendar thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 0.85rem 0.72rem;
+  border-bottom: 0;
+  background: var(--calendar-navy);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.semester-calendar thead th:first-child { width: 10.5rem; }
+
+.semester-calendar__month th {
+  padding: 0.52rem 0.85rem;
+  border-right: 0;
+  border-bottom: 1px solid var(--calendar-line);
+  background: #edf6f8;
+  color: var(--calendar-navy);
+  font-size: 0.84rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.semester-calendar tbody > tr:not(.semester-calendar__month) > th {
+  background: #f8fbfc;
+  color: var(--calendar-navy);
+  text-align: left;
+}
+
+.week-label {
+  display: block;
+  margin-bottom: 0.27rem;
+  color: var(--calendar-red);
+  font-size: 1.08rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.semester-calendar time {
+  color: #71838d;
+  font-size: 0.76rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.calendar-date {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #74858e;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.event {
+  display: block;
+  margin: 0 0 0.42rem;
+  padding: 0.43rem 0.5rem;
+  border-left: 4px solid var(--calendar-navy);
+  background: #f2f7f8;
+  color: #28424e;
+  font-size: 0.78rem;
+  font-weight: 670;
+  line-height: 1.35;
+}
+
+.event:last-child { margin-bottom: 0; }
+.event--prepare { border-left-color: var(--calendar-navy); background: #edf4f7; }
+.event--deadline { border-left-color: var(--calendar-red); background: #fff0f1; color: #7e1820; }
+.event--class { border-left-color: var(--calendar-teal); background: #e9f6f5; color: #155562; font-weight: 800; }
+.event--after { border-left-color: var(--calendar-blue); background: #eef6fb; }
+.event--challenge { border-left-color: var(--calendar-yellow); background: #fff8df; color: #604a00; font-weight: 800; }
+.event--milestone { border-left-color: var(--calendar-red); background: #fceff0; color: #7e1820; font-weight: 800; }
+.event--break { border-left-color: #7f8c92; background: #f1f3f3; color: #48595f; }
+.event--final { border-left-color: var(--calendar-yellow); background: var(--calendar-navy); color: #ffffff; font-weight: 800; }
+
+.semester-calendar__break > * { background: #fafbfb !important; }
+.semester-calendar__final > * { background: #fdf8e7 !important; }
+.semester-calendar__final .week-label { color: #8b6800; }
+
+.calendar-closing {
+  margin: 4rem 0 2.5rem;
+}
+
+.calendar-closing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.35rem;
+}
+
+.calendar-closing__grid article {
+  min-height: 175px;
+  padding: 1.25rem;
+  border-top: 5px solid var(--calendar-navy);
+  background: #f8fbfc;
+}
+
+.calendar-closing__grid article:nth-child(2) { border-top-color: var(--calendar-red); background: #fff6f6; }
+.calendar-closing__grid article:nth-child(3) { border-top-color: var(--calendar-yellow); background: #fff9e6; }
+
+.calendar-closing__label {
+  color: var(--calendar-red);
+  font-size: 0.75rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.calendar-closing__grid p {
+  margin: 1.2rem 0 0;
+  color: var(--calendar-copy);
+  font-size: 0.92rem;
+  line-height: 1.48;
+}
+
+.calendar-source {
+  margin: 1.2rem 0 0;
+  color: var(--calendar-copy);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 960px) {
+  .calendar-wayfinding,
+  .calendar-closing__grid { grid-template-columns: 1fr; }
+  .semester-calendar-intro { grid-template-columns: 1fr; gap: 0.75rem; }
+}
+
+@media (max-width: 680px) {
+  .calendar-hero--compact { min-height: auto; }
+  .calendar-hero__visual--calendar { min-height: auto; }
+  .mini-month { max-width: 340px; }
+  .semester-calendar-wrap { border-radius: 0.45rem; }
+}

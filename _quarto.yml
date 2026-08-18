@@ -27,7 +27,7 @@ website:
         href: index.qmd
       - text: "Calendrier"
         href: calendrier.qmd
-      - text: "Parcours visuel"
+      - text: "Calendrier visuel"
         href: calendrier-visuel.qmd
       - text: "Présentation du cours"
         href: presentation-cours.qmd
