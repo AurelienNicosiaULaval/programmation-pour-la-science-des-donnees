@@ -20,6 +20,7 @@ format:
       <a class="stt-home-action" href="calendrier.html">Calendrier détaillé</a>
       <a class="stt-home-action" href="presentation-cours.html">Présentation du cours</a>
       <a class="stt-home-action" href="evaluations.html">Évaluations</a>
+      <a class="stt-home-action stt-home-action--gpt" href="https://chatgpt.com/g/g-689dc0b2bb348191b77cd4609dfce184-gpt-stt-4230-stt-6230" target="_blank" rel="noopener">Ouvrir le GPT du cours</a>
     </div>
   </div>
   <div class="stt-home-visual" aria-hidden="true">
@@ -129,6 +130,7 @@ format:
   <div class="stt-home-info-card">
     <h2>IA générative</h2>
     <p>L’IA peut être permise, déclarée ou intégrée selon l’activité. Avant une remise, consulter la <a href="ia.html">Politique d’utilisation de l’IA</a> et la règle propre à l’évaluation.</p>
+    <p><a href="https://chatgpt.com/g/g-689dc0b2bb348191b77cd4609dfce184-gpt-stt-4230-stt-6230" target="_blank" rel="noopener">Accéder au GPT STT-4230 / STT-6230</a></p>
   </div>
 </section>
 ```

@@ -105,6 +105,14 @@ La personne qui remet un travail est responsable du code, des choix statistiques
 
 Le compagnon GPT du cours est un outil de soutien à l’apprentissage. Il peut aider à comprendre une notion, planifier une démarche, déboguer du code R, relire une explication, préparer une revue de code et vérifier une trace de reproductibilité. Il ne remplace pas les consignes, les canaux officiels, l’équipe enseignante ni le jugement de la personne étudiante.
 
+::: {.stt-gpt-callout}
+### GPT STT-4230 / STT-6230
+
+Utilisez le compagnon personnalisé du cours pour obtenir une aide guidée en programmation R, reproductibilité, Git, Quarto et usage responsable de l’IA.
+
+[Ouvrir le GPT du cours](https://chatgpt.com/g/g-689dc0b2bb348191b77cd4609dfce184-gpt-stt-4230-stt-6230){.stt-gpt-callout__link target="_blank" rel="noopener"}
+:::
+
 Pour une évaluation active, le compagnon peut expliquer une notion, proposer un exercice analogue, aider à diagnostiquer une erreur ou donner de la rétroaction formative. Il ne produit pas un livrable complet à remettre et ne répond pas à une question d’évaluation confidentielle ou en cours.
 
 Pour toute information propre au cours, il applique la hiérarchie suivante :

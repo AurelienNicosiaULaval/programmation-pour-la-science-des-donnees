@@ -69,6 +69,8 @@ website:
           href: ia.qmd
       - text: "Aide et ressources"
         menu:
+        - text: "GPT du cours"
+          href: https://chatgpt.com/g/g-689dc0b2bb348191b77cd4609dfce184-gpt-stt-4230-stt-6230
         - text: "Autodiagnostic R"
           href: diagnostic-r.qmd
         - text: "Démarrage étudiant"
@@ -99,6 +101,7 @@ format:
       light:
         - cosmo
         - assets/css/styles.scss
+    include-after-body: assets/includes/course-gpt-widget.inc
     toc: true
     toc-depth: 3
     number-sections: false
