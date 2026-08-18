@@ -1,0 +1,629 @@
+---
+title: "Git et GitHub"
+subtitle: "Versionner, collaborer et garder des traces de travail utiles"
+author: "Aurélien Nicosia"
+format:
+  revealjs:
+    theme:
+      - default
+      - assets/css/reveal-git-github.scss
+    embed-resources: true
+    slide-number: c/t
+    progress: true
+    navigation-mode: linear
+    transition: fade
+    background-transition: fade
+    center-title-slide: false
+    footer: "STT-4230 / STT-6230 · Université Laval"
+    code-overflow: wrap
+    highlight-style: github
+---
+
+## Pourquoi cette capsule au premier cours? {background-color="#eef8fc"}
+
+::: {.git-kicker}
+Les outils du cours
+:::
+
+::: {.git-lead}
+Git et GitHub ne servent pas seulement à remettre des fichiers. Ils permettent de conserver l'histoire d'un projet, de vérifier ce qui a été fait et de travailler avec d'autres personnes sans perdre le fil.
+:::
+
+::: {.git-checklist}
+<div>Comprendre la différence entre Git et GitHub.</div>
+<div>Lire l'état d'un dépôt avant d'agir.</div>
+<div>Créer des commits qui expliquent le travail.</div>
+<div>Savoir quoi protéger avant de publier.</div>
+:::
+
+::: {.notes}
+Présenter cette capsule avant le laboratoire de semaine 1. Elle donne le vocabulaire et le modèle mental. La configuration détaillée de SSH et les opérations de rattrapage restent dans les pages du site et le laboratoire.
+:::
+
+## Le problème que nous voulons éviter
+
+::: {.git-quote}
+« Quel fichier est le bon? Qu'est-ce qui a changé? Est-ce que je peux revenir en arrière? »
+:::
+
+Un projet de science des données produit rapidement beaucoup de traces:
+
+- données importées ou nettoyées;
+- scripts R et fonctions;
+- figures, tableaux et rapports Quarto;
+- décisions, corrections et commentaires;
+- contributions de plusieurs personnes.
+
+Sans historique explicite, on garde souvent des copies comme <code>analyse_finale_v7_vraiment_finale.R</code>. Elles n'expliquent ni le changement, ni sa raison, ni la version qui a produit un résultat.
+
+## Le contrôle de version, en une phrase
+
+Le contrôle de version enregistre les changements d'un ensemble de fichiers au fil du temps afin de pouvoir comparer, comprendre et retrouver des versions antérieures.
+
+::: {.git-grid}
+::: {.git-card}
+<h3>Ce que cela rend possible</h3>
+
+- retrouver un état stable;
+- comparer deux versions;
+- identifier l'origine d'une modification;
+- conserver une trace des choix.
+:::
+
+::: {.git-card .git-card--accent}
+<h3>Ce que cela ne garantit pas</h3>
+
+- que le code est correct;
+- que les données sont autorisées à être publiées;
+- qu'un projet est reproductible sans vérification;
+- qu'une personne comprend son propre commit.
+:::
+:::
+
+La responsabilité scientifique reste humaine: Git conserve une trace, mais ne valide pas automatiquement le raisonnement.
+
+## Git et GitHub ne sont pas la même chose
+
+| Outil | Où? | Rôle principal |
+|---|---|---|
+| Git | Sur votre ordinateur, dans le dépôt local | Versionner les fichiers et leur historique |
+| GitHub | Service en ligne | Héberger, partager, discuter, relire et organiser des projets Git |
+
+Git fonctionne localement. Un commit est donc possible même si le réseau ou l'authentification GitHub ne fonctionne pas encore.
+
+GitHub ajoute un dépôt distant, une interface Web et des outils de collaboration. C'est là que l'on peut voir les commits, ouvrir une issue, proposer une pull request ou publier un site lorsque le projet le prévoit.
+
+## Une carte simple du projet
+
+::: {.git-map}
+::: {.git-map__place}
+<h3>Votre ordinateur</h3>
+
+Un dossier de projet, les fichiers et l'historique Git local.
+
+Vous pouvez modifier, comparer et committer ici.
+:::
+
+::: {.git-map__arrows}
+<span><code>git push</code> →</span>
+<span>← <code>git pull</code></span>
+:::
+
+::: {.git-map__place .git-map__place--remote}
+<h3>GitHub</h3>
+
+Une copie distante du dépôt et un espace de collaboration.
+
+Vous pouvez partager, relire et discuter ici.
+:::
+:::
+
+Le mot <code>origin</code> désigne souvent le dépôt GitHub configuré comme dépôt distant. C'est une convention de nom, pas un service distinct.
+
+## Les mots qui reviennent tout le temps
+
+::: {.git-grid .git-grid--three}
+::: {.git-card}
+<h3>Dépôt ou repository</h3>
+
+Le dossier du projet et son historique Git.
+:::
+
+::: {.git-card}
+<h3>Commit</h3>
+
+Un point d'historique qui enregistre un ensemble ciblé de changements.
+:::
+
+::: {.git-card}
+<h3>Diff</h3>
+
+La différence entre deux états de fichiers.
+:::
+
+::: {.git-card}
+<h3>Branche</h3>
+
+Une ligne de travail distincte. Elle isole une modification avant son intégration.
+:::
+
+::: {.git-card}
+<h3>Remote</h3>
+
+Un dépôt distant connu du dépôt local, souvent GitHub.
+:::
+
+::: {.git-card}
+<h3>README</h3>
+
+La porte d'entrée du projet: objectif, structure et procédure minimale.
+:::
+:::
+
+## L'historique est une suite de décisions
+
+::: {.git-flow}
+<div class="git-flow__step"><strong>1. Départ</strong><span>Importer les données brutes.</span></div>
+<div class="git-flow__step"><strong>2. Nettoyage</strong><span>Corriger les types et valeurs manquantes.</span></div>
+<div class="git-flow__step"><strong>3. Analyse</strong><span>Ajouter une fonction ou un modèle.</span></div>
+<div class="git-flow__step"><strong>4. Vérification</strong><span>Contrôler les résultats et le rapport.</span></div>
+:::
+
+Chaque étape peut devenir un ou plusieurs commits lorsque le travail atteint un état qui mérite d'être conservé.
+
+Un commit n'est pas un bouton « fini ». C'est une trace précise: ce qui a changé et pourquoi cette étape est maintenant enregistrée.
+
+## Un commit utile répond à deux questions
+
+::: {.git-grid}
+::: {.git-card .git-card--warning}
+<h3>Peu utile</h3>
+
+<code>update</code><br>
+<code>test</code><br>
+<code>ok</code><br>
+<code>version finale</code>
+
+Ces messages obligent les autres personnes, ou vous-même dans trois semaines, à ouvrir le diff pour comprendre l'intention.
+:::
+
+::: {.git-card .git-card--accent}
+<h3>Lisible</h3>
+
+<code>Ajouter le diagnostic de l'environnement</code><br>
+<code>Corriger le chemin relatif des données</code><br>
+<code>Documenter la procédure de reproduction</code>
+
+Le message décrit l'intention et le diff montre le détail.
+:::
+:::
+
+Un bon test: une personne qui lit seulement la liste des commits peut-elle reconstituer le déroulement du projet?
+
+## Toujours commencer par observer
+
+::: {.git-command}
+<code>git status</code> montre les fichiers que Git reconnaît, ceux qui ont changé et ceux qui sont prêts pour le prochain commit.
+:::
+
+~~~~bash
+git status
+git diff
+~~~~
+
+- <code>git status</code> répond: « Dans quel état est mon dépôt? »
+- <code>git diff</code> répond: « Qu'est-ce qui a changé dans les fichiers non indexés? »
+
+Avant d'ajouter un fichier, lire son nom. Avant de committer, lire le contenu qui sera enregistré. Une interface graphique dans Positron ou RStudio peut aider, mais les questions restent les mêmes.
+
+## Une même action, trois façons de la faire
+
+| Intention | Terminal | RStudio | Positron |
+|---|---|---|---|
+| Voir l'état | <code>git status</code> | Onglet <code>Git</code>: fichiers affichés | Vue <code>Source Control</code>: liste <code>Changes</code> |
+| Lire les changements | <code>git diff</code> | Sélectionner un fichier puis <code>Diff</code> | Cliquer le fichier dans <code>Changes</code> |
+| Préparer un fichier | <code>git add fichier</code> | Cocher le fichier dans l'onglet Git ou la fenêtre Commit | Cliquer le <code>+</code> du fichier pour le placer dans <code>Staged Changes</code> |
+| Enregistrer | <code>git commit -m "message"</code> | <code>Commit</code>, message, puis <code>Commit</code> dans la fenêtre | Écrire le message, puis cliquer <code>Commit</code> |
+| Envoyer | <code>git push</code> | Bouton <code>Push</code> | <code>...</code> puis <code>Push</code>, ou <code>Sync Changes</code> |
+| Récupérer | <code>git pull --ff-only</code> | Bouton <code>Pull</code> | <code>...</code> puis <code>Pull</code>, ou <code>Sync Changes</code> |
+
+::: {.git-small}
+Les interfaces ne remplacent pas Git: elles exécutent les mêmes opérations. <code>Sync Changes</code> effectue un pull puis un push; il n'est pas une vérification neutre de l'état.
+:::
+
+## RStudio: où cliquer, dans l'ordre
+
+::: {.git-grid}
+::: {.git-card}
+<h3>Étape 1: voir et relire</h3>
+
+Dans le projet RStudio, ouvrir l'onglet <code>Git</code>, généralement dans le panneau supérieur droit.
+
+Sélectionner un fichier, puis cliquer <code>Diff</code> pour lire les changements avant de les enregistrer.
+:::
+
+::: {.git-card}
+<h3>Étape 2: préparer et committer</h3>
+
+Cocher uniquement les fichiers à inclure. Cliquer <code>Commit</code>.
+
+Dans la fenêtre « Review Changes », vérifier les fichiers cochés, écrire le message, puis cliquer <code>Commit</code>.
+:::
+
+::: {.git-card}
+<h3>Étape 3: partager</h3>
+
+Une fois le commit créé localement, cliquer <code>Push</code> dans l'onglet Git ou le menu Git.
+
+Utiliser <code>Pull</code> avant de commencer un bloc de travail collaboratif, seulement si l'état local est compris.
+:::
+:::
+
+::: {.git-command}
+Si l'onglet <code>Git</code> n'apparaît pas, vérifier que le dossier a été ouvert comme projet RStudio et que Git est installé et reconnu par RStudio.
+:::
+
+## Positron: où cliquer, dans l'ordre
+
+::: {.git-grid}
+::: {.git-card}
+<h3>Étape 1: ouvrir Source Control</h3>
+
+Cliquer l'icône <code>Source Control</code> dans la barre d'activité à gauche.
+
+Si le dossier n'est pas encore un dépôt Git, cliquer <code>Initialize Repository</code>. S'il est déjà cloné, les fichiers apparaissent sous <code>Changes</code>.
+:::
+
+::: {.git-card}
+<h3>Étape 2: relire et préparer</h3>
+
+Cliquer un fichier dans <code>Changes</code> pour ouvrir le diff.
+
+Cliquer le <code>+</code> près du fichier à inclure. Il se déplace vers <code>Staged Changes</code>. Ne pas tout préparer automatiquement sans avoir relu.
+:::
+
+::: {.git-card}
+<h3>Étape 3: committer et synchroniser</h3>
+
+Écrire un message dans la boîte de message de commit, puis cliquer <code>Commit</code>.
+
+Pour une seule direction, ouvrir <code>...</code> et choisir <code>Push</code> ou <code>Pull</code>. <code>Sync Changes</code> combine les deux opérations.
+:::
+:::
+
+::: {.git-command}
+Dans Positron, ne pas utiliser le bouton d'étincelles pour générer le message de commit dans ce premier exercice: le message doit expliquer votre propre décision.
+:::
+
+## Le cycle local minimal
+
+::: {.git-flow}
+<div class="git-flow__step"><strong>Observer</strong><span><code>git status</code><br>Lire l'état.</span></div>
+<div class="git-flow__step"><strong>Modifier</strong><span>Éditer, exécuter et vérifier.</span></div>
+<div class="git-flow__step"><strong>Préparer</strong><span><code>git add</code><br>Choisir les fichiers.</span></div>
+<div class="git-flow__step"><strong>Relire</strong><span><code>git diff --staged</code><br>Voir le prochain commit.</span></div>
+<div class="git-flow__step"><strong>Enregistrer</strong><span><code>git commit</code><br>Décrire l'intention.</span></div>
+:::
+
+Ce cycle crée un historique local. La synchronisation avec GitHub vient ensuite.
+
+## Le rôle de la zone d'index
+
+Git ne commit pas automatiquement tous les changements. La zone d'index, souvent appelée staging area, permet de choisir ce qui entre dans le prochain commit.
+
+~~~~bash
+# Voir ce qui existe et ce qui a changé
+git status
+
+# Préparer seulement le README
+git add README.md
+
+# Lire exactement ce qui sera committé
+git diff --staged
+
+# Enregistrer la décision
+git commit -m "Documenter la structure du portfolio"
+~~~~
+
+Cette étape intermédiaire aide à éviter les commits qui mélangent une correction, une figure temporaire et un fichier sensible.
+
+## Exemple: rendre une correction vérifiable
+
+Supposons qu'un script lisait un fichier par un chemin propre à votre ordinateur.
+
+~~~~r
+# Fragile: le chemin dépend d'un ordinateur particulier
+# donnees <- readr::read_csv("/Users/moi/projet/data/observations.csv")
+
+# Portable: le chemin est relatif à la racine du projet
+donnees <- readr::read_csv("data/observations.csv")
+~~~~
+
+Un historique lisible peut distinguer:
+
+1. <code>Ajouter la première importation des observations</code>;
+2. <code>Corriger le chemin de donnees pour le rendre portable</code>;
+3. <code>Verifier le rendu du rapport depuis la racine du projet</code>.
+
+La troisième étape est importante: un changement qui paraît plausible doit être exécuté et vérifié.
+
+## Quand GitHub entre en jeu
+
+Après un ou plusieurs commits locaux, GitHub permet de mettre une copie du dépôt à distance et de travailler autour de cette copie.
+
+~~~~bash
+# Vérifier le dépôt distant configuré
+git remote -v
+
+# Envoyer les commits locaux vers GitHub
+git push
+~~~~
+
+Avant un travail collaboratif, récupérer l'état partagé lorsque le dépôt est déjà configuré:
+
+~~~~bash
+git pull --ff-only
+~~~~
+
+Si cette dernière commande échoue, ne pas forcer une correction au hasard. Lire le message, conserver le travail local et demander de l'aide avec l'état observé.
+
+## GitHub ne remplace pas l'organisation du projet
+
+::: {.git-grid}
+::: {.git-card}
+<h3>GitHub rend visible</h3>
+
+- le README;
+- l'historique des commits;
+- les différences entre versions;
+- les discussions, issues et pull requests;
+- les résultats de validations automatisées, si le projet en possède.
+:::
+
+::: {.git-card .git-card--accent}
+<h3>Le dépôt doit déjà être compréhensible</h3>
+
+- fichiers nommés clairement;
+- structure cohérente;
+- chemins relatifs;
+- données et sorties documentées;
+- procédure de reproduction minimale.
+:::
+:::
+
+Un dépôt désorganisé reste désorganisé après un <code>git push</code>.
+
+## Collaboration: la pull request
+
+Une pull request propose de faire entrer des changements d'une branche dans une autre, souvent vers <code>main</code>. Elle sert à montrer le diff, discuter les choix et relire avant l'intégration.
+
+::: {.git-flow}
+<div class="git-flow__step"><strong>Créer une branche</strong><span>Isoler une tâche précise.</span></div>
+<div class="git-flow__step"><strong>Commiter</strong><span>Produire des changements ciblés.</span></div>
+<div class="git-flow__step"><strong>Ouvrir une PR</strong><span>Expliquer la proposition.</span></div>
+<div class="git-flow__step"><strong>Relire</strong><span>Commenter, vérifier, ajuster.</span></div>
+<div class="git-flow__step"><strong>Fusionner</strong><span>Intégrer après accord.</span></div>
+:::
+
+Au premier cours, l'objectif est de reconnaître ce cycle. Nous le pratiquerons progressivement; il n'est pas attendu que tout le monde maîtrise les branches aujourd'hui.
+
+## Ce qu'on lit dans une pull request
+
+| Partie | Question utile |
+|---|---|
+| Titre et description | Quel problème est traité? Quelle décision est proposée? |
+| Commits | Les étapes sont-elles ciblées et lisibles? |
+| Fichiers modifiés | Le changement est-il limité à ce qui est nécessaire? |
+| Diff | Chaque ligne ajoutée ou retirée est-elle justifiée? |
+| Checks | Quelles vérifications automatiques ont réussi ou échoué? |
+| Discussion | Les commentaires reçoivent-ils une réponse claire? |
+
+Une pull request n'est pas une formalité. C'est un objet de communication et de contrôle de qualité.
+
+## Travailler en équipe sans se marcher sur les pieds
+
+::: {.git-grid}
+::: {.git-card .git-card--accent}
+<h3>Habitudes à installer</h3>
+
+- annoncer qui traite quelle tâche;
+- faire de petits commits cohérents;
+- pousser régulièrement lorsqu'il est prudent de partager;
+- lire une pull request avant de l'approuver;
+- documenter les décisions qui ne sont pas visibles dans le code.
+:::
+
+::: {.git-card .git-card--warning}
+<h3>Habitudes à éviter</h3>
+
+- modifier la même zone sans coordination;
+- committer des fichiers générés ou temporaires sans raison;
+- régler un conflit en supprimant du code sans le comprendre;
+- approuver une PR qui n'a pas été lue;
+- écrire un message du type <code>fix</code> sans contexte.
+:::
+:::
+
+## Les conflits sont un signal, pas une catastrophe
+
+Un conflit apparaît lorsque Git ne peut pas décider seul comment combiner deux modifications incompatibles. Par exemple, deux personnes ont modifié la même ligne dans des directions différentes.
+
+::: {.git-grid}
+::: {.git-card}
+<h3>Réponse raisonnable</h3>
+
+1. arrêter et lire le message;
+2. identifier les fichiers concernés;
+3. comparer les intentions, pas seulement les lignes;
+4. choisir une version cohérente;
+5. exécuter les vérifications;
+6. documenter la résolution.
+:::
+
+::: {.git-card .git-card--warning}
+<h3>À ne pas faire</h3>
+
+- supprimer les marqueurs de conflit sans comprendre;
+- utiliser une commande proposée sur Internet sans savoir son effet;
+- forcer un push pour passer par-dessus le travail d'une autre personne;
+- jeter les changements locaux avant d'avoir compris leur rôle.
+:::
+:::
+
+## Protéger le projet et les personnes
+
+Avant chaque commit, vérifier les noms et le contenu des fichiers ajoutés.
+
+::: {.git-grid}
+::: {.git-card .git-card--warning}
+<h3>Ne jamais committer ou publier</h3>
+
+- mot de passe ou jeton d'accès;
+- clé SSH privée;
+- données confidentielles ou renseignements personnels;
+- fichier fourni sous une licence incompatible;
+- capture d'écran contenant des informations sensibles.
+:::
+
+::: {.git-card .git-card--accent}
+<h3>Réflexes utiles</h3>
+
+- utiliser <code>.gitignore</code> pour les fichiers locaux ou générés;
+- lire <code>git status</code> et <code>git diff --staged</code>;
+- demander avant de publier un fichier dont le statut est incertain;
+- protéger le compte GitHub avec un mot de passe unique et l'authentification à deux facteurs.
+:::
+:::
+
+GitHub ne peut pas retirer la responsabilité de vérifier ce qui est partagé.
+
+## Votre compte GitHub: prêt pour le cours
+
+::: {.git-checklist}
+<div>Le compte est accessible et l'adresse courriel est vérifiée.</div>
+<div>Le nom d'utilisateur est professionnel et durable.</div>
+<div>Le profil ne contient pas de renseignement que vous ne souhaitez pas rendre public.</div>
+<div>L'authentification à deux facteurs est activée.</div>
+<div>Vous savez où voir les invitations aux dépôts ou aux organisations.</div>
+<div>Vous ne partagez jamais un jeton ou une clé privée pour demander de l'aide.</div>
+:::
+
+Le cours peut demander une invitation à un dépôt ou à une organisation. Accepter seulement une invitation liée au cours et vérifier son origine avant de l'accepter.
+
+## Ce que Git et GitHub apportent au portfolio
+
+Le portfolio du cours n'est pas une galerie de résultats parfaits. C'est une trace de travail que vous pourrez expliquer.
+
+::: {.git-grid .git-grid--three}
+::: {.git-card}
+<h3>Preuve d'avancement</h3>
+
+Les commits rendent visibles les étapes et les corrections.
+:::
+
+::: {.git-card}
+<h3>Documentation</h3>
+
+Le README et les journaux expliquent la structure et les choix.
+:::
+
+::: {.git-card}
+<h3>Reproductibilité</h3>
+
+Les scripts, chemins et rapports permettent de relancer le travail.
+:::
+:::
+
+Une belle visualisation sans code, sans données documentées ni procédure de reproduction ne suffit pas à démontrer le travail réalisé.
+
+## Activité guidée du premier laboratoire
+
+Aujourd'hui, l'objectif réaliste est de créer une première trace locale et de comprendre son état.
+
+::: {.git-flow}
+<div class="git-flow__step"><strong>1. Ouvrir</strong><span>Créer ou cloner le dossier du portfolio.</span></div>
+<div class="git-flow__step"><strong>2. Structurer</strong><span>Ajouter README, dossiers et <code>.gitignore</code>.</span></div>
+<div class="git-flow__step"><strong>3. Vérifier</strong><span>Exécuter le diagnostic R, Git et Quarto.</span></div>
+<div class="git-flow__step"><strong>4. Commiter</strong><span>Conserver une étape lisible localement.</span></div>
+<div class="git-flow__step"><strong>5. Synchroniser</strong><span>Pousser vers GitHub si l'accès est prêt.</span></div>
+:::
+
+Si GitHub ou SSH bloque, le travail local et les commits locaux demeurent valables. Consigner la commande, le message complet et la prochaine action dans le journal de semaine 1.
+
+## Démonstration: le minimum à savoir lire
+
+~~~~bash
+# Depuis la racine du dépôt
+git status
+
+# Après une modification volontaire de README.md
+git add README.md
+git diff --staged
+git commit -m "Ajouter le README initial du portfolio"
+
+# Seulement lorsque le dépôt distant est configuré et que l'accès fonctionne
+git push
+~~~~
+
+À la fin de la démonstration, vous devez pouvoir répondre:
+
+- Où se trouve mon dépôt local?
+- Quel fichier vais-je réellement committer?
+- Qu'est-ce que mon message de commit explique?
+- Est-ce que la synchronisation GitHub est réglée, ou ai-je une trace exacte du blocage?
+
+## Si quelque chose bloque
+
+Une bonne demande d'aide contient des faits vérifiables.
+
+::: {.git-command}
+Contexte: ce que j'essayais de faire<br>
+Commande exécutée: la commande exacte<br>
+Résultat: le message complet, sans secret<br>
+État du dépôt: sortie de <code>git status</code><br>
+Ce que j'ai déjà essayé: une ou deux actions précises
+:::
+
+Éviter les diagnostics vagues comme « Git ne marche pas ». Une erreur précise est un point de départ utile pour la personne qui aide.
+
+## À retenir
+
+::: {.git-grid}
+::: {.git-card .git-card--dark}
+<h3>Git est local</h3>
+
+Il enregistre l'histoire du projet sur votre ordinateur. Les commits peuvent exister avant GitHub.
+:::
+
+::: {.git-card .git-card--dark}
+<h3>GitHub est collaboratif</h3>
+
+Il héberge une copie distante et fournit des outils pour partager, relire et discuter.
+:::
+
+::: {.git-card .git-card--dark}
+<h3>La commande de départ est <code>git status</code></h3>
+
+Lire l'état avant d'ajouter, committer, pousser ou corriger.
+:::
+
+::: {.git-card .git-card--dark}
+<h3>Un commit est une explication</h3>
+
+Séparer les intentions et écrire un message que vous comprendrez plus tard.
+:::
+:::
+
+## Ressources à garder
+
+- [Pro Git, « À propos de la gestion de version »](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-%C3%80-propos-de-la-gestion-de-version)
+- [Pro Git, « Enregistrer des modifications dans le dépôt »](https://git-scm.com/book/fr/v2/Les-bases-de-Git-Enregistrer-des-modifications-dans-le-d%C3%A9p%C3%B4t)
+- [GitHub Docs, « Hello World »](https://docs.github.com/fr/get-started/using-github/hello-world)
+- [GitHub Docs, pull requests](https://docs.github.com/fr/pull-requests/reference/pull-requests)
+- [GitHub Docs, authentification à deux facteurs](https://docs.github.com/fr/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication)
+- [Happy Git and GitHub for the useR](https://happygitwithr.com/), par Jenny Bryan, Jim Hester et les auxiliaires de STAT 545
+- [Ressources du cours](ressources.qmd) et [Soutien technique](soutien-technique.qmd)
+
+::: {.git-small}
+Les notions de contrôle de version et de cycle des fichiers suivent Pro Git. Les définitions et le déroulement des pull requests suivent la documentation GitHub consultée le 18 août 2026. La ressource Happy Git est particulièrement adaptée au travail avec R.
+:::
