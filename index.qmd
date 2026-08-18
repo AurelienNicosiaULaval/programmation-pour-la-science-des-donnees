@@ -16,7 +16,9 @@ format:
     <div class="stt-home-actions" aria-label="Liens principaux du cours">
       <a class="stt-home-action stt-home-action--primary" href="diagnostic-r.html">Tester mes bases en R</a>
       <a class="stt-home-action" href="demarrage.html">Démarrage étudiant</a>
-      <a class="stt-home-action" href="calendrier.html">Calendrier</a>
+      <a class="stt-home-action" href="calendrier-visuel.html">Calendrier visuel</a>
+      <a class="stt-home-action" href="calendrier.html">Calendrier détaillé</a>
+      <a class="stt-home-action" href="presentation-cours.html">Présentation du cours</a>
       <a class="stt-home-action" href="evaluations.html">Évaluations</a>
     </div>
   </div>

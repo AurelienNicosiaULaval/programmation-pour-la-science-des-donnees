@@ -1,0 +1,462 @@
+---
+pagetitle: "STT-4230 / STT-6230 - Présentation du cours"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    theme: simple
+    css: assets/css/presentation-cours.css
+    slide-number: c/t
+    show-slide-number: all
+    transition: fade
+    background-transition: fade
+    width: 1600
+    height: 900
+    margin: 0.055
+    center: false
+    controls: true
+    progress: true
+    history: true
+    hash: true
+    navigation-mode: linear
+    footer: "STT-4230 / STT-6230 · Automne 2026"
+embed-resources: true
+editor: source
+---
+
+## {#bienvenue .title-slide background-color="#f7fafb"}
+
+<div class="course-hero">
+<div class="course-hero__copy">
+<p class="eyebrow">STT-4230 / STT-6230 · Automne 2026</p>
+<h1>Programmer pour<br>livrer de la science<br>des données.</h1>
+<p class="course-hero__lead">R, données, rapports, tests, collaboration et jugement professionnel.</p>
+<p class="course-hero__presenter">Aurélien Nicosia · Université Laval</p>
+</div>
+<div class="course-hero__visual" aria-label="Les outils et productions du cours">
+  <div class="hero-orbit hero-orbit--outer"></div>
+  <div class="hero-orbit hero-orbit--middle"></div>
+  <div class="hero-orbit hero-orbit--inner"></div>
+  <div class="hero-node hero-node--r">R</div>
+  <div class="hero-node hero-node--git">Git</div>
+  <div class="hero-node hero-node--q">Q</div>
+  <div class="hero-node hero-node--data">data</div>
+  <div class="hero-core"><strong>STT</strong><span>4230 / 6230</span></div>
+</div>
+</div>
+
+::: {.notes}
+Ouvrir sur la promesse du cours, pas sur les détails administratifs. Demander: « À quoi ressemble un projet de science des données que vous seriez fier de montrer? »
+
+Sources internes: index.qmd; plan-cours.qmd.
+:::
+
+## Ce cours ne vise pas le code qui fonctionne une fois {.statement-slide}
+
+<div class="statement-layout">
+<p class="statement-main">Il vise le travail qu'une autre personne peut <span>relancer</span>, <span>comprendre</span> et <span>utiliser</span>.</p>
+<div class="quality-triad">
+  <div><span class="triad-number">01</span><h3>Reproductible</h3><p>Un projet qui se relance sans bricolage caché.</p></div>
+  <div><span class="triad-number">02</span><h3>Explicable</h3><p>Des choix, résultats et limites que vous pouvez défendre.</p></div>
+  <div><span class="triad-number">03</span><h3>Livrable</h3><p>Une production claire pour un vrai public.</p></div>
+</div>
+</div>
+
+::: {.notes}
+Faire le lien avec le futur portfolio: le cours produit des preuves de compétences, pas seulement des réponses d'exercices.
+
+Source interne: objectif général, plan-cours.qmd.
+:::
+
+## Votre pratique va couvrir tout le cycle du travail
+
+<div class="practice-grid">
+<div class="practice-card"><span>01</span><h3>Structurer</h3><p>un projet, un dépôt, des conventions et des dépendances.</p></div>
+<div class="practice-card"><span>02</span><h3>Fiabiliser</h3><p>les données, le code, les tests et les chemins de reproduction.</p></div>
+<div class="practice-card"><span>03</span><h3>Communiquer</h3><p>avec des figures, rapports Quarto et documentation utile.</p></div>
+<div class="practice-card"><span>04</span><h3>Améliorer</h3><p>la performance, l'architecture et la maintenabilité du travail.</p></div>
+<div class="practice-card"><span>05</span><h3>Collaborer</h3><p>avec GitHub, issues, revue de code et traces de contribution.</p></div>
+<div class="practice-card"><span>06</span><h3>Décider</h3><p>quand utiliser l'IA, comment la vérifier et quoi en déclarer.</p></div>
+</div>
+
+<p class="slide-takeaway">La programmation est ici un moyen de produire une analyse fiable et communicable.</p>
+
+::: {.notes}
+La liste reprend les objectifs spécifiques, sans les lire comme une liste d'administration. Insister sur le fait que les techniques se répondent dans le projet filé.
+
+Source interne: plan-cours.qmd.
+:::
+
+## À la fin, vous aurez des preuves visibles de votre travail
+
+<div class="output-cloud">
+<span class="output-chip output-chip--xl">dépôts GitHub</span>
+<span class="output-chip output-chip--md">données validées</span>
+<span class="output-chip output-chip--lg">rapports Quarto</span>
+<span class="output-chip output-chip--sm">fonctions testées</span>
+<span class="output-chip output-chip--md">figures utiles</span>
+<span class="output-chip output-chip--lg">projet d'équipe</span>
+<span class="output-chip output-chip--sm">revues de code</span>
+<span class="output-chip output-chip--md">journal IA</span>
+<span class="output-chip output-chip--xl">site personnel</span>
+</div>
+
+<div class="output-caption">Chaque production devient une trace: elle montre ce que vous avez conçu, vérifié, amélioré ou expliqué.</div>
+
+::: {.notes}
+Ce ne sont pas neuf livrables isolés. Le portfolio rassemble les traces qui reviennent dans le projet et le site personnel.
+
+Sources internes: evaluations.qmd; portfolio.qmd; projets.qmd; site-personnel.qmd.
+:::
+
+## Votre point de départ: des bases de R et un atelier prêt
+
+<div class="starting-layout">
+<div class="starting-copy">
+<p class="big-copy">Une connaissance minimale de R est attendue.</p>
+<p>Le cours part des bases utiles de R, puis progresse vers les données, les graphiques, les rapports et le code durable.</p>
+<div class="starting-callout"><strong>Avant la première séance:</strong> faites l'autodiagnostic R. Utilisez le parcours de mise à niveau si une base manque.</div>
+</div>
+<div class="tool-stack">
+  <div><span class="tool-symbol">R</span><p>analyser</p></div>
+  <div><span class="tool-symbol">P</span><p>Positron ou RStudio</p></div>
+  <div><span class="tool-symbol">Q</span><p>rendre avec Quarto</p></div>
+  <div><span class="tool-symbol">G</span><p>versionner avec Git et GitHub</p></div>
+</div>
+</div>
+
+::: {.notes}
+Ne pas décourager les personnes qui ont des bases inégales. La mise à niveau est une voie explicite, mais elle doit être engagée tout de suite. Rappeler que GitHub en SSH est privilégié lorsque possible.
+
+Sources internes: plan-cours.qmd; demarrage.qmd; soutien-technique.qmd.
+:::
+
+## Une semaine se vit en trois temps
+
+<div class="weekly-flow">
+<div class="weekly-step weekly-step--before"><span>Avant</span><h3>Préparer</h3><p>Lire, exécuter les exemples, préparer le dépôt et noter ce qui bloque.</p><small>Mini-test dans Brio lorsqu'il est prévu.</small></div>
+<div class="weekly-arrow" aria-hidden="true">→</div>
+<div class="weekly-step weekly-step--during"><span>Pendant</span><h3>Construire</h3><p>Clarifier, coder, tester, discuter et demander de l'aide avec un exemple reproductible.</p><small>Le laboratoire est un atelier.</small></div>
+<div class="weekly-arrow" aria-hidden="true">→</div>
+<div class="weekly-step weekly-step--after"><span>Après</span><h3>Stabiliser</h3><p>Rendre, vérifier, documenter et ajouter une trace au portfolio.</p><small>Le travail devient réutilisable.</small></div>
+</div>
+
+<p class="center-note">9 mini-tests · ouverture le mercredi à 16 h 20 · fermeture le mardi à 23 h 59 · 10 minutes au plus · une seule tentative</p>
+
+::: {.notes}
+Le rituel est plus important que la charge apparente: préparation légère, mise en pratique accompagnée, puis une trace stable. La consigne active est toujours celle affichée dans Brio.
+
+Sources internes: index.qmd; calendrier.qmd; evaluations.qmd; demarrage.qmd.
+:::
+
+## Le laboratoire est un lieu pour expérimenter, pas pour rester bloqué seul
+
+<div class="lab-layout">
+<div class="lab-quote"><p>Vous arrivez avec une question, un exemple ou une première hypothèse.</p></div>
+<div class="lab-steps">
+<div><span>01</span><p>Clarifier l'objectif et la consigne.</p></div>
+<div><span>02</span><p>Essayer par petites étapes dans le bon projet.</p></div>
+<div><span>03</span><p>Vérifier un résultat, une figure ou un test.</p></div>
+<div><span>04</span><p>Conserver une trace nette avant de repartir.</p></div>
+</div>
+</div>
+
+<p class="slide-takeaway">L'aide est plus efficace quand elle part d'un exemple minimal reproductible.</p>
+
+::: {.notes}
+Présenter le labo comme un espace où demander de l'aide est une bonne pratique professionnelle. Cela prépare la diapositive sur les canaux de soutien.
+
+Sources internes: communication.qmd; soutien-technique.qmd.
+:::
+
+## Quatre espaces, quatre rôles complémentaires
+
+<div class="ecosystem-grid">
+<div class="ecosystem-card ecosystem-card--site"><span>Site du cours</span><h3>Apprendre</h3><p>Modules, lectures, laboratoires, gabarits et ressources.</p></div>
+<div class="ecosystem-card ecosystem-card--brio"><span>Brio</span><h3>Confirmer</h3><p>Annonces, consignes finales, remises, dates et modalités officielles.</p></div>
+<div class="ecosystem-card ecosystem-card--github"><span>GitHub</span><h3>Tracer</h3><p>Versions, issues, revue de code, dépôts et contributions.</p></div>
+<div class="ecosystem-card ecosystem-card--people"><span>Équipe enseignante</span><h3>Débloquer</h3><p>Concepts, choix techniques, diagnostic et rétroaction.</p></div>
+</div>
+
+<p class="center-note">En cas de différence, une consigne officielle dans Brio ou une annonce explicite de l'équipe enseignante prévaut.</p>
+
+::: {.notes}
+Préciser que GitHub est une trace de travail et non un remplacement de l'espace institutionnel. Les canaux et disponibilités détaillés sont communiqués dans l'espace institutionnel.
+
+Source interne: communication.qmd.
+:::
+
+## Le parcours de la session: une montée en puissance
+
+<div class="phase-ribbon">
+<div class="phase-ribbon__item phase-ribbon__item--one"><span>Semaines 1 à 4</span><h3>Prendre R en main</h3><p>R, fichiers, calculs, données et prétraitement.</p></div>
+<div class="phase-ribbon__item phase-ribbon__item--two"><span>Semaines 5 à 8</span><h3>Faire parler les données</h3><p>Défi 1, graphiques, bonnes pratiques, rapports et défi 2.</p></div>
+<div class="phase-ribbon__item phase-ribbon__item--three"><span>Semaines 9 à 13</span><h3>Rendre le code durable</h3><p>Contrôle, fonctions, tests, objets, performance et défi 3.</p></div>
+<div class="phase-ribbon__item phase-ribbon__item--four"><span>Semaines 14 et 15</span><h3>Publier et défendre</h3><p>Bilan, projet, site personnel, démonstration et revue.</p></div>
+</div>
+
+<p class="center-note">Les défis font des points d'étape. Le projet et le portfolio donnent une direction à tout le parcours.</p>
+
+::: {.notes}
+Cette vue donne l'architecture pédagogique avant de présenter les semaines une à une.
+
+Source interne: plan-cours.qmd; calendrier.qmd.
+:::
+
+## 1 à 5 · Prendre R en main et apprendre à regarder les données {.phase-slide}
+
+<div class="roadmap roadmap--five">
+<div><span class="week">S1</span><h3>Mise en route</h3><p>Présentation, prise en main de R et GitHub, première trace.</p></div>
+<div><span class="week">S2</span><h3>Bases de R</h3><p>Structures de données et fichiers.</p></div>
+<div><span class="week">S3</span><h3>Calculs en R</h3><p>Calculs mathématiques et statistiques.</p></div>
+<div><span class="week">S4</span><h3>Prétraiter</h3><p>Préparer les données avant de les analyser.</p></div>
+<div class="roadmap-challenge"><span class="week">S5</span><h3>Défi 1</h3><p>Défi individuel, puis première exploration graphique, sans IA.</p></div>
+</div>
+
+<p class="slide-takeaway">Objectif: manipuler des données en R et en garder une trace personnelle compréhensible.</p>
+
+::: {.notes}
+Nommer le défi comme une vérification de bases, pas un examen qui arrive sans préparation. Après la remise, l'atelier de consolidation porte sur un cas analogue et ne modifie pas le livrable évalué.
+
+Source interne: calendrier.qmd; evaluations.qmd.
+:::
+
+## 6 à 10 · Visualiser, rapporter et construire de bonnes habitudes {.phase-slide}
+
+<div class="roadmap roadmap--five">
+<div><span class="week">S6</span><h3>Graphiques et rapports</h3><p>Figures, bonnes pratiques et introduction aux rapports reproductibles.</p></div>
+<div><span class="week">S7</span><h3>Bien rédiger</h3><p>Bonnes pratiques, R Markdown et transition vers Quarto.</p></div>
+<div class="roadmap-challenge"><span class="week">S8</span><h3>Défi 2</h3><p>Défi individuel, IA permise et déclarée, puis consolidation.</p></div>
+<div><span class="week">S9</span><h3>Contrôle et fonctions</h3><p>Conditions, boucles et premières fonctions.</p></div>
+<div><span class="week">S10</span><h3>Tests et débogage</h3><p>Fonctions, exceptions et correction d'erreurs.</p></div>
+</div>
+
+<p class="slide-takeaway">Objectif: passer d'un résultat obtenu à une figure ou un rapport que l'on peut expliquer et améliorer.</p>
+
+::: {.notes}
+Mentionner la semaine de lecture du 26 au 30 octobre, sans séance le mercredi 28 octobre, entre les semaines 8 et 9.
+
+Source interne: calendrier.qmd.
+:::
+
+## 11 à 15 · Développer, optimiser et conclure {.phase-slide}
+
+<div class="roadmap roadmap--five">
+<div><span class="week">S11</span><h3>Objets en R</h3><p>Programmation orientée objet.</p></div>
+<div><span class="week">S12</span><h3>Performance</h3><p>Mesure, optimisation et introduction à la métaprogrammation.</p></div>
+<div class="roadmap-challenge"><span class="week">S13</span><h3>Défi 3</h3><p>IA intégrée, puis organisation minimale d'un package R.</p></div>
+<div><span class="week">S14</span><h3>Récapitulatif</h3><p>Reproduction, conclusion et finalisation du projet.</p></div>
+<div class="roadmap-final"><span class="week">S15</span><h3>Publication et défense</h3><p>Site, démonstration, revue de code et bilan.</p></div>
+</div>
+
+<p class="slide-takeaway">Objectif: livrer un projet reproductible, documenté et expliqué avec lucidité.</p>
+
+::: {.notes}
+La semaine 15 est une séance d'évaluation dans la période du 14 au 20 décembre. La date, l'heure et le local sont confirmés dans Brio.
+
+Source interne: calendrier.qmd; presentation.qmd.
+:::
+
+## L'évaluation accompagne cette progression
+
+<div class="assessment-bar" aria-label="Pondérations du cours">
+<div class="assessment-segment assessment-segment--mini" style="flex: 10"><strong>10 %</strong><span>Mini-tests</span></div>
+<div class="assessment-segment assessment-segment--portfolio" style="flex: 20"><strong>20 %</strong><span>Portfolio GitHub</span></div>
+<div class="assessment-segment assessment-segment--project" style="flex: 30"><strong>30 %</strong><span>Projet filé</span></div>
+<div class="assessment-segment assessment-segment--challenge" style="flex: 30"><strong>30 %</strong><span>3 défis de 10 %</span></div>
+<div class="assessment-segment assessment-segment--site" style="flex: 10"><strong>10 %</strong><span>Site Quarto</span></div>
+</div>
+
+<div class="assessment-legend">
+<div><span class="legend-dot legend-dot--mini"></span><p><strong>9 mini-tests</strong><br>préparer et vérifier</p></div>
+<div><span class="legend-dot legend-dot--portfolio"></span><p><strong>3 jalons</strong><br>4, 6 et 10 points</p></div>
+<div><span class="legend-dot legend-dot--project"></span><p><strong>3 jalons</strong><br>semaines 6, 12 et 14</p></div>
+<div><span class="legend-dot legend-dot--challenge"></span><p><strong>3 défis</strong><br>semaines 5, 8 et 13</p></div>
+<div><span class="legend-dot legend-dot--site"></span><p><strong>Publication</strong><br>semaine 15</p></div>
+</div>
+
+::: {.notes}
+La note n'est pas concentrée dans une seule épreuve. Montrer que les composantes se soutiennent: les mini-tests préparent, le portfolio documente, les défis vérifient et le projet intègre.
+
+Source interne: evaluations.qmd; calendrier.qmd.
+:::
+
+## Trois défis, trois manières de montrer votre autonomie
+
+<div class="challenge-ladder">
+<div class="challenge-step challenge-step--one"><span>Défi 1 · 10 %</span><h3>Faire seul</h3><p>Structure de projet, Git, importation, nettoyage simple et README.</p><small>IA non permise</small></div>
+<div class="challenge-step challenge-step--two"><span>Défi 2 · 10 %</span><h3>Faire avec une aide transparente</h3><p>Pipeline simple, visualisation et rapport Quarto court.</p><small>IA permise, déclarée</small></div>
+<div class="challenge-step challenge-step--three"><span>Défi 3 · 10 %</span><h3>Faire preuve de jugement</h3><p>Diagnostic, amélioration et validation d'un mini-projet.</p><small>IA intégrée et vérifiée</small></div>
+</div>
+
+<p class="center-note">Les ateliers de consolidation qui suivent les défis sont des moments d'apprentissage non évalués.</p>
+
+::: {.notes}
+La règle IA devient progressivement un objet d'apprentissage. Bien distinguer « IA permise » de « code non vérifié accepté »: le travail doit toujours être compris et défendable.
+
+Source interne: evaluations.qmd; ia.qmd.
+:::
+
+## Le portfolio GitHub rend votre progression visible
+
+<div class="portfolio-layout">
+<div class="portfolio-quote"><p>Votre portfolio ne montre pas seulement le résultat final.</p><p>Il montre <strong>comment</strong> vous avez appris à le produire.</p></div>
+<div class="portfolio-list">
+<div><span>Code</span><p>scripts, fonctions et tests</p></div>
+<div><span>Décisions</span><p>README, conventions, notes et validations</p></div>
+<div><span>Évolution</span><p>commits, corrections et revue</p></div>
+<div><span>Réflexion</span><p>limites, apprentissages et usage d'IA déclaré</p></div>
+</div>
+</div>
+
+<div class="milestone-row"><div><span>Jalon 1</span><strong>Semaine 3</strong></div><div><span>Jalon 2</span><strong>Semaine 9</strong></div><div><span>Jalon 3</span><strong>Semaine 14</strong></div></div>
+
+::: {.notes}
+Mentionner la routine minimale: une trace personnelle, au moins un fichier produit, une explication courte, une vérification ou une difficulté, puis des commits qui rendent la progression lisible. Cela aide à éviter le portfolio assemblé à la fin de la session.
+
+Source interne: evaluations.qmd; portfolio.qmd.
+:::
+
+## Le projet filé transforme les techniques en produit collectif
+
+<div class="project-journey">
+<div><span class="project-date">S6</span><h3>Proposition</h3><p>Question, données, risques et dépôt initial.</p></div>
+<div class="project-line"></div>
+<div><span class="project-date">S12</span><h3>Version intermédiaire</h3><p>Pipeline et produit partiellement fonctionnel.</p></div>
+<div class="project-line"></div>
+<div><span class="project-date">S14</span><h3>Livraison</h3><p>Reproduction, limites, documentation et contributions.</p></div>
+<div class="project-line"></div>
+<div><span class="project-date">S15</span><h3>Défense</h3><p>Démonstration, revue de code et questions.</p></div>
+</div>
+
+<div class="project-checklist"><span>Un dépôt clair</span><span>Un produit démontrable</span><span>Des traces individuelles</span><span>Une équipe capable de l'expliquer</span></div>
+
+::: {.notes}
+Le produit peut inclure un pipeline, un rapport, une application ou un tableau de bord. La forme exacte suit le problème choisi. La présentation et la revue de code font partie du projet de 30 %, elles ne constituent pas une composante distincte.
+
+Sources internes: projets.qmd; presentation.qmd; evaluations.qmd.
+:::
+
+## Le site Quarto personnel rend une partie de votre travail publiable
+
+<div class="personal-site-layout">
+<div class="site-window"><div class="site-window__bar"><i></i><i></i><i></i></div><div class="site-window__content"><span class="site-window__kicker">Votre site</span><strong>Ce que je sais produire</strong><div class="site-window__tiles"><span></span><span></span><span></span></div></div></div>
+<div class="site-requirements">
+<p class="eyebrow">Individuel · 10 % · semaine 15</p>
+<h3>Une vitrine courte, claire et vérifiable</h3>
+<ul>
+<li>Site publié avec Quarto et GitHub Pages</li>
+<li>Dépôt source et dernier commit évalué</li>
+<li>Au moins deux réalisations commentées</li>
+<li>Une trace liée au portfolio</li>
+<li>Usage de l'IA déclaré si pertinent</li>
+</ul>
+</div>
+</div>
+
+::: {.notes}
+Le site ne remplace pas le portfolio ni la défense du projet. Il sélectionne une partie publiable du travail. Aucune information personnelle sensible n'est obligatoire.
+
+Source interne: site-personnel.qmd; evaluations.qmd.
+:::
+
+## STT-6230 ajoute de la profondeur, pas une deuxième session
+
+<div class="course-levels">
+<div class="course-level course-level--4230"><p class="eyebrow">STT-4230</p><h3>Livrer un travail solide</h3><p>Fonctionnel, reproductible, structuré et documenté.</p></div>
+<div class="course-level course-level--6230"><p class="eyebrow">STT-6230</p><h3>Justifier davantage</h3><p>Ajouter, selon le livrable, une comparaison, des tests, une analyse de performance ou une note méthodologique.</p></div>
+</div>
+
+<p class="center-note">Même parcours commun. Attentes d'approfondissement explicites dans les productions longues.</p>
+
+::: {.notes}
+Éviter de présenter STT-6230 comme simplement « plus de code ». La différence porte sur la justification technique, la comparaison, les tests ou la note méthodologique adaptée au livrable.
+
+Source interne: evaluations.qmd.
+:::
+
+## L'IA peut aider. Votre responsabilité demeure entière.
+
+<div class="ai-layout">
+<div class="ai-principle"><p class="eyebrow">La règle simple</p><h3>Vous pouvez utiliser l'IA si vous pouvez ensuite <span>expliquer</span>, <span>vérifier</span>, <span>modifier</span> et <span>défendre</span> ce qu'elle a aidé à produire.</h3></div>
+<div class="ai-rules"><div><span>Oui</span><p>Comprendre une erreur, obtenir un exemple, comparer des stratégies, relire ou générer des idées de tests.</p></div><div><span>Toujours</span><p>Tester localement, adapter au contexte, déclarer l'aide importante et protéger les données sensibles.</p></div></div>
+</div>
+
+<div class="ai-red-line">Un code ou une justification non compris n'est pas prêt à être remis, même s'il fonctionne.</div>
+
+::: {.notes}
+Faire le lien avec les défis: non permise, permise et déclarée, puis intégrée. Les activités et modalités détaillées sont précisées dans les consignes d'évaluation.
+
+Source interne: ia.qmd; evaluations.qmd.
+:::
+
+## Pour obtenir de l'aide rapidement, rendez le problème visible
+
+<div class="help-layout">
+<div class="help-question"><p>« Mon code ne fonctionne pas »</p><span>devient</span><p>« Voici l'objectif, le message d'erreur complet, un exemple minimal, mon commit et ce que j'ai déjà essayé. »</p></div>
+<div class="help-checklist">
+<div><span>1</span>Contexte et objectif</div>
+<div><span>2</span>Commande et message d'erreur</div>
+<div><span>3</span>Exemple minimal reproductible</div>
+<div><span>4</span>Résultat attendu et obtenu</div>
+<div><span>5</span>Ce qui a déjà été essayé</div>
+<div><span>6</span>Lien vers le commit ou le fichier</div>
+</div>
+</div>
+
+::: {.notes}
+Cette façon de demander de l'aide vaut aussi dans un travail d'équipe et en contexte professionnel. Les canaux et disponibilités sont communiqués dans l'espace institutionnel.
+
+Source interne: communication.qmd; soutien-technique.qmd.
+:::
+
+## Les grands repères de l'automne 2026
+
+<div class="term-map">
+<div class="term-map__event term-map__event--start"><span>2 sept.</span><h3>Première séance</h3><p>Mise en route et diagnostic initial.</p></div>
+<div class="term-map__line"></div>
+<div class="term-map__event"><span>28 oct.</span><h3>Pas de séance</h3><p>Semaine de lecture.</p></div>
+<div class="term-map__line"></div>
+<div class="term-map__event"><span>9 déc.</span><h3>Dernière séance régulière</h3><p>Synthèse, remise finale du projet et portfolio.</p></div>
+<div class="term-map__line"></div>
+<div class="term-map__event term-map__event--end"><span>14 au 20 déc.</span><h3>Évaluation finale</h3><p>Site personnel et défense. Date, heure et local confirmés dans Brio.</p></div>
+</div>
+
+<p class="center-note">Séances régulières: chaque mercredi, de 13 h 30 à 16 h 20, du 2 septembre au 9 décembre.</p>
+
+::: {.notes}
+Les dates institutionnelles sont fournies à titre de repères. Pour toute remise ou modalité administrative, demander aux personnes étudiantes de vérifier Brio.
+
+Sources internes: calendrier.qmd; plan-cours.qmd. Sources institutionnelles: fiche officielle STT-4230 et calendrier ULaval 2026-2027, cités dans ces pages.
+:::
+
+## Votre première séquence commence maintenant {.action-slide}
+
+<div class="first-steps">
+<div><span>01</span><h3>Vérifier vos bases</h3><p>Faire l'autodiagnostic R et choisir une cible de mise à niveau si nécessaire.</p></div>
+<div><span>02</span><h3>Préparer l'atelier</h3><p>R, Positron ou RStudio, Quarto, Git, GitHub et SSH lorsque possible.</p></div>
+<div><span>03</span><h3>Créer une première trace</h3><p>README initial et journal de départ dans le dépôt demandé.</p></div>
+</div>
+
+<div class="next-class"><span>Prochaine séance · 9 septembre</span><strong>Bases de R, structures de données et fichiers</strong><p>Lire la semaine 2 et terminer le mini-test 1 dans Brio avant le mardi 8 septembre à 23 h 59.</p></div>
+
+::: {.notes}
+Faire réaliser les premières vérifications en classe si le temps le permet. Pour la prochaine séance, orienter vers le module 2 et la page Démarrage étudiant.
+
+Sources internes: calendrier.qmd; demarrage.qmd.
+:::
+
+## {#bienvenue-au-laboratoire .closing-slide background-color="#083d53"}
+
+<div class="closing-content">
+<p class="eyebrow eyebrow--light">STT-4230 / STT-6230</p>
+<h2>Bienvenue dans l'atelier.</h2>
+<p>Cette session, vous allez transformer des idées, des données et du code en productions que vous pouvez expliquer avec confiance.</p>
+<div class="closing-rule"></div>
+<p class="closing-small">Soyez curieux. Soyez rigoureux. Gardez une trace.</p>
+<p class="course-url"><a href="https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/">aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees</a></p>
+</div>
+
+::: {.notes}
+Terminer avec une invitation à ouvrir le site, pas simplement avec « des questions? ». Garder quelques minutes pour les premiers blocages techniques.
+:::

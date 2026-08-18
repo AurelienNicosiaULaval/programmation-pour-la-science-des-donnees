@@ -26,7 +26,13 @@ website:
       - text: "Accueil"
         href: index.qmd
       - text: "Calendrier"
-        href: calendrier.qmd
+        menu:
+        - text: "Vue visuelle"
+          href: calendrier-visuel.qmd
+        - text: "Vue détaillée"
+          href: calendrier.qmd
+      - text: "Présentation du cours"
+        href: presentation-cours.qmd
       - text: "Exercices"
         menu:
         - text: "Vue d’ensemble"

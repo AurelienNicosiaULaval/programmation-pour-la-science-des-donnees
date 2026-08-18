@@ -1,0 +1,230 @@
+---
+title: "Calendrier visuel"
+body-classes: page-calendar-visual
+format:
+  html:
+    toc: false
+    css: assets/css/calendrier-visuel.css
+    embed-resources: true
+---
+<section class="calendar-hero" aria-labelledby="calendar-hero-title">
+<div class="calendar-hero__copy">
+<p class="calendar-kicker">STT-4230 / STT-6230 · Automne 2026</p>
+<h1 id="calendar-hero-title">Votre parcours de la session</h1>
+<p>Une vue unique pour savoir quoi préparer, quoi faire en classe et quelle trace garder d’une semaine à l’autre.</p>
+<div class="calendar-hero__actions">
+<a class="calendar-button calendar-button--primary" href="calendrier.qmd">Calendrier détaillé</a>
+<a class="calendar-button" href="evaluations.qmd">Évaluations</a>
+<a class="calendar-button" href="demarrage.qmd">Démarrage étudiant</a>
+</div>
+</div>
+<div class="calendar-hero__visual" aria-hidden="true">
+<div class="calendar-orbit calendar-orbit--one"></div>
+<div class="calendar-orbit calendar-orbit--two"></div>
+<div class="calendar-orbit calendar-orbit--three"></div>
+<span class="calendar-token calendar-token--read">lire</span>
+<span class="calendar-token calendar-token--lab">faire</span>
+<span class="calendar-token calendar-token--trace">garder</span>
+<div class="calendar-core"><strong>15</strong><span>semaines</span></div>
+</div>
+</section>
+<section class="calendar-snapshot" aria-label="Repères de session">
+<div><span>Rythme</span><strong>Mercredi<br>13 h 30 à 16 h 20</strong></div>
+<div><span>Séances régulières</span><strong>2 septembre<br>au 9 décembre</strong></div>
+<div><span>Semaine de lecture</span><strong>26 au 30 octobre<br>aucune séance le 28</strong></div>
+<div><span>Évaluation finale</span><strong>14 au 20 décembre<br>Brio confirme le moment</strong></div>
+</section>
+## Une semaine réussie laisse une trace
+<div class="weekly-routine">
+<div class="weekly-routine__step weekly-routine__step--before">
+<span>Avant</span>
+<h3>Préparer</h3>
+<p>Ouvrir le module Brio, lire, exécuter un exemple, commencer l’exercice et noter une question.</p>
+<small>Mini-test lorsqu’il est prévu.</small>
+</div>
+<div class="weekly-routine__arrow" aria-hidden="true">→</div>
+<div class="weekly-routine__step weekly-routine__step--during">
+<span>En classe</span>
+<h3>Essayer et clarifier</h3>
+<p>Travailler dans le dépôt, discuter des choix, vérifier les résultats et demander de l’aide avec un exemple reproductible.</p>
+<small>Le laboratoire est un atelier.</small>
+</div>
+<div class="weekly-routine__arrow" aria-hidden="true">→</div>
+<div class="weekly-routine__step weekly-routine__step--after">
+<span>Après</span>
+<h3>Garder une preuve</h3>
+<p>Ajouter une trace personnelle au portfolio: fichier produit, explication, vérification, difficulté ou prochaine étape.</p>
+<small>La progression devient visible.</small>
+</div>
+</div>
+<div class="calendar-notice"><strong>Point d’entrée de chaque semaine:</strong> le module Brio. Il contient la matière, les lectures, le mini-test s’il y a lieu, les exercices et la trace attendue.</div>
+## Le parcours en quatre étapes
+<div class="calendar-phases">
+<div class="calendar-phase calendar-phase--one"><span>S1 à S4</span><h3>Prendre R en main</h3><p>R, fichiers, calculs, données et prétraitement.</p></div>
+<div class="calendar-phase calendar-phase--two"><span>S5 à S8</span><h3>Faire parler les données</h3><p>Graphiques, rapports, bonnes pratiques et deux premiers défis.</p></div>
+<div class="calendar-phase calendar-phase--three"><span>S9 à S13</span><h3>Rendre le code durable</h3><p>Fonctions, tests, objets, performance et troisième défi.</p></div>
+<div class="calendar-phase calendar-phase--four"><span>S14 et S15</span><h3>Publier et défendre</h3><p>Projet final, portfolio, site personnel et défense.</p></div>
+</div>
+## Semaine par semaine
+<div class="calendar-key" aria-label="Légende du calendrier">
+<span class="calendar-key__dot calendar-key__dot--standard"></span> séance régulière
+<span class="calendar-key__dot calendar-key__dot--challenge"></span> défi technique
+<span class="calendar-key__dot calendar-key__dot--pause"></span> pause ou semaine de lecture
+<span class="calendar-key__dot calendar-key__dot--final"></span> jalon majeur ou évaluation finale
+</div>
+<div class="week-list">
+<article class="week-card">
+<div class="week-card__identity"><span class="week-card__number">S1</span><time datetime="2026-09-02">2 sept.</time></div>
+<div class="week-card__topic"><h3>Prise en main de R et GitHub</h3><p>Présentation du cours, environnement de travail et première trace.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 1 et prendre en main le dépôt personnel.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Se repérer dans R et GitHub, démarrer le portfolio.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Départ du portfolio, non noté.</p></div>
+</article>
+<article class="week-card">
+<div class="week-card__identity"><span class="week-card__number">S2</span><time datetime="2026-09-09">9 sept.</time></div>
+<div class="week-card__topic"><h3>Bases de R, structures et fichiers</h3><p>Objets, structures de données et lecture ou écriture de fichiers.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 2, essayer les exemples et faire les exercices sur les structures et fichiers.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Manipuler les objets et les fichiers dans son dépôt.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Mini-test 1, fermeture le 8 sept. à 23 h 59.</p></div>
+</article>
+<article class="week-card">
+<div class="week-card__identity"><span class="week-card__number">S3</span><time datetime="2026-09-16">16 sept.</time></div>
+<div class="week-card__topic"><h3>Calculs mathématiques et statistiques</h3><p>Utiliser R pour calculer, vérifier et interpréter.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 3 et faire les exercices de calcul en R.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Travailler des calculs reproductibles et documenter les vérifications.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Mini-test 2, fermeture le 15 sept. à 23 h 59. Jalon portfolio 1, 4 points.</p></div>
+</article>
+<article class="week-card">
+<div class="week-card__identity"><span class="week-card__number">S4</span><time datetime="2026-09-23">23 sept.</time></div>
+<div class="week-card__topic"><h3>Prétraitement des données</h3><p>Préparer les données avant toute analyse ou visualisation.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 4 et faire les exercices de prétraitement.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Transformer les données et contrôler les étapes importantes.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Mini-test 3, fermeture le 22 sept. à 23 h 59. Préparer le défi 1.</p></div>
+</article>
+<article class="week-card week-card--challenge">
+<div class="week-card__identity"><span class="week-card__number">S5</span><time datetime="2026-09-30">30 sept.</time></div>
+<div class="week-card__topic"><h3>Défi technique 1, puis graphiques</h3><p>Vérifier les bases individuelles et ouvrir la porte aux graphiques.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Réviser la matière des semaines 1 à 4 et relire la préparation au défi.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Défi individuel d’une heure, puis exercice analogue sur les graphiques.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Défi 1, 10 %, IA non permise. Garder ensuite une trace personnelle de l’exercice analogue.</p></div>
+</article>
+<article class="week-card week-card--project">
+<div class="week-card__identity"><span class="week-card__number">S6</span><time datetime="2026-10-07">7 oct.</time></div>
+<div class="week-card__topic"><h3>Graphiques et rapports reproductibles</h3><p>Suite des graphiques, bonnes pratiques et premiers rapports.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 6 et faire les exercices de graphiques.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Améliorer une figure et préparer une communication reproductible.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Mini-test 4, fermeture le 6 oct. à 23 h 59. Proposition du projet.</p></div>
+</article>
+<article class="week-card">
+<div class="week-card__identity"><span class="week-card__number">S7</span><time datetime="2026-10-14">14 oct.</time></div>
+<div class="week-card__topic"><h3>Bonnes pratiques et transition vers Quarto</h3><p>R Markdown, rédaction et première transition vers Quarto.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 7 et faire les exercices de bonnes pratiques et de R Markdown.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Rendre un rapport court et vérifier sa lisibilité.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Mini-test 5, fermeture le 13 oct. à 23 h 59. Rapport Quarto.</p></div>
+</article>
+<article class="week-card week-card--challenge">
+<div class="week-card__identity"><span class="week-card__number">S8</span><time datetime="2026-10-21">21 oct.</time></div>
+<div class="week-card__topic"><h3>Défi technique 2 et consolidation</h3><p>Produire un livrable court avec une aide IA transparente.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Réviser le pipeline, les graphiques et le rapport court.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Défi individuel d’une heure, puis exercice analogue de consolidation.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Défi 2, 10 %, IA permise et déclarée. Documenter l’usage significatif.</p></div>
+</article>
+<article class="week-card week-card--pause">
+<div class="week-card__identity"><span class="week-card__number">Pause</span><time datetime="2026-10-28">28 oct.</time></div>
+<div class="week-card__topic"><h3>Semaine de lecture</h3><p>Aucune séance le mercredi 28 octobre.</p></div>
+<div class="week-card__prepare"><span>À faire</span><p>Rattraper les lectures, exercices et traces qui n’ont pas encore été stabilisés.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Aucun cours.</p></div>
+<div class="week-card__trace"><span>Repère</span><p>Le module de la semaine 9 est déjà ouvert. Le mini-test 6 reste accessible.</p></div>
+</article>
+<article class="week-card week-card--project">
+<div class="week-card__identity"><span class="week-card__number">S9</span><time datetime="2026-11-04">4 nov.</time></div>
+<div class="week-card__topic"><h3>Structures de contrôle et fonctions</h3><p>Conditions, boucles et premières fonctions réutilisables.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 9 et faire les exercices sur le contrôle et les fonctions.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Transformer un raisonnement en fonction et vérifier son comportement.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Mini-test 6, fermeture le 3 nov. à 23 h 59. Jalon portfolio 2, 6 points. Suivi projet formatif.</p></div>
+</article>
+<article class="week-card">
+<div class="week-card__identity"><span class="week-card__number">S10</span><time datetime="2026-11-11">11 nov.</time></div>
+<div class="week-card__topic"><h3>Fonctions, tests, exceptions et débogage</h3><p>Passer du code qui fonctionne au code que l’on peut vérifier.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 10 et faire les exercices sur les objets, tests et exceptions.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Tester une fonction, comprendre une erreur et améliorer une solution.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Mini-test 7, fermeture le 10 nov. à 23 h 59.</p></div>
+</article>
+<article class="week-card">
+<div class="week-card__identity"><span class="week-card__number">S11</span><time datetime="2026-11-18">18 nov.</time></div>
+<div class="week-card__topic"><h3>Programmation orientée objet</h3><p>Comprendre les objets et choisir une structure adaptée au besoin.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 11 et reprendre les exercices sur les objets, tests et exceptions.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Structurer un objet ou composant et expliciter ses choix.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Mini-test 8, fermeture le 17 nov. à 23 h 59.</p></div>
+</article>
+<article class="week-card week-card--project">
+<div class="week-card__identity"><span class="week-card__number">S12</span><time datetime="2026-11-25">25 nov.</time></div>
+<div class="week-card__topic"><h3>Mesure, optimisation et métaprogrammation</h3><p>Mesurer avant d’optimiser et documenter les compromis.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 12 et faire les exercices sur les tests et la performance.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Mesurer un comportement, améliorer le code et justifier une décision.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Mini-test 9, fermeture le 24 nov. à 23 h 59. Version intermédiaire du projet.</p></div>
+</article>
+<article class="week-card week-card--challenge">
+<div class="week-card__identity"><span class="week-card__number">S13</span><time datetime="2026-12-02">2 déc.</time></div>
+<div class="week-card__topic"><h3>Défi technique 3 et package R</h3><p>Utiliser l’IA avec jugement, puis organiser un package minimal.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 13 et revoir les pratiques de validation et de performance.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Défi individuel d’une heure, puis exercice analogue de transfert.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Défi 3, 10 %, IA intégrée. Garder une trace détaillée du diagnostic et des vérifications.</p></div>
+</article>
+<article class="week-card week-card--final">
+<div class="week-card__identity"><span class="week-card__number">S14</span><time datetime="2026-12-09">9 déc.</time></div>
+<div class="week-card__topic"><h3>Récapitulatif, reproduction et conclusion</h3><p>Stabiliser le projet, le portfolio et les derniers éléments à expliquer.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Lire la semaine 14, vérifier le projet et compléter le bilan du portfolio.</p></div>
+<div class="week-card__class"><span>En classe</span><p>Relancer, vérifier, corriger les fragilités et préparer la suite.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Remise finale du projet. Jalon portfolio 3, 10 points.</p></div>
+</article>
+<article class="week-card week-card--final">
+<div class="week-card__identity"><span class="week-card__number">S15</span><time datetime="2026-12-14">14 au 20 déc.</time></div>
+<div class="week-card__topic"><h3>Publication, défense et bilan</h3><p>Présenter un travail que l’on peut montrer, expliquer et défendre.</p></div>
+<div class="week-card__prepare"><span>Préparer</span><p>Finaliser le site, le dépôt du projet, le support bref et la revue de code choisie.</p></div>
+<div class="week-card__class"><span>Évaluation finale</span><p>Présentation, démonstration, revue de code, questions et bilan.</p></div>
+<div class="week-card__trace"><span>Trace / jalon</span><p>Site Quarto personnel et défense du projet. Date, heure et local confirmés dans Brio.</p></div>
+</article>
+</div>
+## Les mini-tests: une préparation courte, régulière et utile
+<div class="mini-test-intro">
+<p><strong>9 mini-tests · 10 %</strong></p>
+<p>Ils ouvrent le mercredi à 16 h 20 après la séance précédente et ferment le mardi à 23 h 59, la veille du cours. Chaque questionnaire contient trois questions, dure au plus 10 minutes et permet une tentative.</p>
+</div>
+<div class="mini-test-grid">
+<div><span>MT1 · S2</span><p>Bases de R, structures et fichiers</p><small>8 sept. · 23 h 59</small></div>
+<div><span>MT2 · S3</span><p>Calculs mathématiques et statistiques</p><small>15 sept. · 23 h 59</small></div>
+<div><span>MT3 · S4</span><p>Prétraitement des données</p><small>22 sept. · 23 h 59</small></div>
+<div><span>MT4 · S6</span><p>Graphiques en R</p><small>6 oct. · 23 h 59</small></div>
+<div><span>MT5 · S7</span><p>Bonnes pratiques et rapports</p><small>13 oct. · 23 h 59</small></div>
+<div><span>MT6 · S9</span><p>Structures de contrôle et fonctions</p><small>3 nov. · 23 h 59</small></div>
+<div><span>MT7 · S10</span><p>Fonctions, tests, exceptions et débogage</p><small>10 nov. · 23 h 59</small></div>
+<div><span>MT8 · S11</span><p>Programmation orientée objet</p><small>17 nov. · 23 h 59</small></div>
+<div><span>MT9 · S12</span><p>Mesure, optimisation et métaprogrammation</p><small>24 nov. · 23 h 59</small></div>
+</div>
+<p class="calendar-footnote">Le mini-test 6 reste ouvert pendant la semaine de lecture, puisqu’il n’y a pas de séance le 28 octobre.</p>
+## Les jalons qui structurent la session
+<div class="milestone-timeline">
+<div class="milestone-timeline__event"><span>S3</span><h3>Portfolio 1</h3><p>4 points</p></div>
+<div class="milestone-timeline__line"></div>
+<div class="milestone-timeline__event milestone-timeline__event--challenge"><span>S5</span><h3>Défi 1</h3><p>10 % · sans IA</p></div>
+<div class="milestone-timeline__line"></div>
+<div class="milestone-timeline__event milestone-timeline__event--project"><span>S6</span><h3>Projet</h3><p>Proposition</p></div>
+<div class="milestone-timeline__line"></div>
+<div class="milestone-timeline__event milestone-timeline__event--challenge"><span>S8</span><h3>Défi 2</h3><p>10 % · IA déclarée</p></div>
+<div class="milestone-timeline__line"></div>
+<div class="milestone-timeline__event"><span>S9</span><h3>Portfolio 2</h3><p>6 points</p></div>
+<div class="milestone-timeline__line"></div>
+<div class="milestone-timeline__event milestone-timeline__event--project"><span>S12</span><h3>Projet</h3><p>Version intermédiaire</p></div>
+<div class="milestone-timeline__line"></div>
+<div class="milestone-timeline__event milestone-timeline__event--challenge"><span>S13</span><h3>Défi 3</h3><p>10 % · IA intégrée</p></div>
+<div class="milestone-timeline__line"></div>
+<div class="milestone-timeline__event milestone-timeline__event--final"><span>S14</span><h3>Projet et portfolio</h3><p>Remise finale · 10 points</p></div>
+<div class="milestone-timeline__line"></div>
+<div class="milestone-timeline__event milestone-timeline__event--final"><span>S15</span><h3>Site et défense</h3><p>Période d’examens</p></div>
+</div>
+<section class="calendar-final-callout" aria-label="Vérification avant chaque remise">
+<div><span>Avant chaque remise</span><h2>Relire la consigne active dans Brio.</h2></div>
+<p>Vérifier le dépôt, les fichiers produits, le rendu Quarto, les liens, les données et la déclaration d’IA lorsqu’elle est nécessaire.</p>
+</section>
+<p class="calendar-source-note">Les dates, pondérations et modalités sont alignées sur les pages <a href="calendrier.qmd">Calendrier</a> et <a href="evaluations.qmd">Évaluations</a>. En cas de différence, Brio et les annonces explicites de l’équipe enseignante prévalent.</p>
