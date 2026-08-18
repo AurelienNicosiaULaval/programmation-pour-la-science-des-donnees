@@ -10,9 +10,9 @@ format:
 
 Cette annexe est facultative. Elle convient à une équipe dont le projet contient plusieurs fonctions R réutilisables et qui choisit explicitement de les structurer en package local.
 
-Elle ne fait pas partie du noyau obligatoire de semaine 15. Un package R n'est ni une production évaluée imposée, ni un préalable au site personnel, à la défense, à la revue de code, au bilan ou au dépôt final.
+Elle ne fait pas partie du noyau obligatoire de semaine 15. Un package R n'est ni une production évaluée imposée, ni un préalable au site Quarto personnel.
 
-Avant de commencer, terminer les éléments de la [semaine 15](index.qmd). La création du package ne doit pas mettre en danger les livrables finaux.
+Avant de commencer, terminer la remise du [site Quarto personnel](../../site-personnel.qmd). La création du package ne doit pas mettre en danger cette remise.
 
 ## Objectifs facultatifs
 

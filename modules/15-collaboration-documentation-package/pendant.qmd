@@ -1,60 +1,24 @@
 ---
-title: "Semaine 15 - Pendant la classe"
+title: "Semaine 15 - Vérification finale"
 format:
   html:
     embed-resources: true
 ---
 
-## Objectif de la séance
+## Travail autonome
 
-Vérifier les sites publiés, réaliser les défenses et revues de code, rendre les contributions vérifiables et fermer le projet par un bilan.
+Il n’y a pas de séance de cours en semaine 15. Utiliser ce temps pour vérifier et remettre le site Quarto personnel avant le mercredi 16 décembre 2026 à 23 h 59.
 
-## Déroulement de 180 minutes
+## Contrôles essentiels
 
-| Moment | Activité | Contrôle |
-|---:|---|---|
-| 0-15 min | Ouverture | Chaque personne ouvre son site, son dépôt source et le commit remis |
-| 15-45 min | Revue croisée des sites | Une autre personne vérifie publication, navigation, deux réalisations et lien au portfolio |
-| 45-105 min | Défenses, bloc 1 | Présentation, revue de code et questions pour chaque équipe |
-| 105-115 min | Pause |  |
-| 115-165 min | Défenses, bloc 2 | Présentation, revue de code et questions pour chaque équipe |
-| 165-175 min | Contributions et bilans | Chemins et preuves confirmés |
-| 175-180 min | Clôture | Une limite et une prochaine action par équipe |
+| Vérification | Résultat attendu |
+|---|---|
+| Publication | L’URL GitHub Pages ouvre sans session locale |
+| Navigation | Les pages et liens essentiels fonctionnent |
+| Réalisations | Au moins deux réalisations sont expliquées |
+| Portfolio | Une trace personnelle est liée explicitement |
+| Dépôt | Le dépôt source et le dernier commit sont accessibles |
+| Confidentialité | Aucune information ou donnée non autorisée n’est publiée |
+| IA | La déclaration est présente lorsqu’elle est pertinente |
 
-## Revue croisée du site
-
-La personne qui relit vérifie:
-
-- l'URL publiée, pas seulement l'aperçu local;
-- la cohérence de la navigation;
-- les deux réalisations et leur commentaire;
-- le lien vers le portfolio;
-- le dépôt source et le commit remis;
-- l'absence de donnée ou d'information qui ne devrait pas être publique;
-- la présence de la déclaration IA lorsque pertinente.
-
-Noter un problème bloquant et une amélioration non bloquante. Corriger d'abord le problème bloquant.
-
-## Structure de chaque défense
-
-La durée exacte dépend du nombre d'équipes et est annoncée avant la séance. Chaque créneau conserve les trois parties suivantes:
-
-1. présentation de la question, des données, de la démarche, du résultat et des limites;
-2. revue d'un extrait de code, avec entrées, sorties, dépendances, validation et cas d'échec;
-3. questions sur la reproduction, les choix, les contributions et les limites.
-
-## Questions possibles
-
-- Quelle commande reproduit le résultat principal?
-- Quelle validation soutient la conclusion?
-- Quel changement de données ou de dépendance pourrait invalider le livrable?
-- Pourquoi cet extrait de code a-t-il été retenu?
-- Que fait le programme face à une entrée invalide?
-- Quelle contribution individuelle peut être retrouvée dans le dépôt?
-- Quelle conclusion ne devrait pas être tirée du projet?
-
-## Clôture
-
-Avant de quitter, vérifier les chemins vers le site, le dépôt, le commit, `docs/contributions.md`, le bilan et `docs/ai-log.md` lorsque pertinent.
-
-L'[annexe package R](annexe-package-r.qmd) reste une option après la finalisation des remises; elle n'occupe aucun créneau obligatoire de cette séance.
+Corriger d’abord toute URL cassée, page absente ou information confidentielle. Ne pas ajouter de nouvelle production liée au projet d’équipe: sa défense a eu lieu en semaine 14.

@@ -155,14 +155,14 @@ format:
 <th scope="row"><span class="week-label">S14</span><time datetime="2026-12-09">7 au 13 déc.</time></th>
 <td><span class="calendar-date">7 déc.</span><span class="event event--prepare">Vérifier le portfolio et préparer la remise finale.</span></td>
 <td><span class="calendar-date">8 déc.</span><span class="event event--prepare">Finaliser le projet et le bilan personnel.</span></td>
-<td><span class="calendar-date">9 déc.</span><span class="event event--class">S14 · Récapitulatif, reproduction et conclusion.</span><span class="event event--milestone">Remise finale du projet et jalon portfolio 3 · 10 points.</span></td>
-<td><span class="calendar-date">10 au 13 déc.</span><span class="event event--after">Préparer le site personnel et la défense du projet.</span></td>
+<td><span class="calendar-date">9 déc.</span><span class="event event--class">S14 · Récapitulatif, reproduction, conclusion et défense du projet.</span><span class="event event--milestone">Remise finale du projet, jalon portfolio 3 · 10 points et défense du projet.</span></td>
+<td><span class="calendar-date">10 au 13 déc.</span><span class="event event--after">Préparer et vérifier le site personnel avant sa remise.</span></td>
 </tr>
 <tr class="semester-calendar__final">
 <th scope="row"><span class="week-label">S15</span><time datetime="2026-12-14">14 au 20 déc.</time></th>
-<td colspan="2"><span class="calendar-date">14 au 15 déc.</span><span class="event event--final">Période réservée aux examens. Confirmer dans Brio la date, l’heure et le local.</span></td>
-<td><span class="calendar-date">Évaluation finale</span><span class="event event--final">Site Quarto personnel, défense du projet et bilan.</span></td>
-<td><span class="calendar-date">Après la séance</span><span class="event event--final">Vérifier que les livrables et liens finaux sont accessibles.</span></td>
+<td colspan="2"><span class="calendar-date">14 au 15 déc.</span><span class="event event--final">Finaliser, rendre et vérifier le site Quarto personnel.</span></td>
+<td><span class="calendar-date">16 déc. · 23 h 59</span><span class="event event--final">Remise du site Quarto personnel · 10 %.</span></td>
+<td><span class="calendar-date">Après la remise</span><span class="event event--final">Aucune autre remise ni séance du cours.</span></td>
 </tr>
 </tbody>
 </table>
@@ -176,7 +176,7 @@ format:
 <div class="calendar-closing__grid">
 <article><span class="calendar-closing__label">Mini-tests</span><p>Neuf mini-tests, trois questions, 10 minutes, une tentative. Ils ferment le mardi à 23 h 59.</p></article>
 <article><span class="calendar-closing__label">Défis</span><p>Les défis 1, 2 et 3 ont lieu en semaines 5, 8 et 13. Consulter la règle d’usage de l’IA propre à chaque défi.</p></article>
-<article><span class="calendar-closing__label">Période finale</span><p>Les séances régulières se terminent le 9 décembre. L’évaluation finale se tient pendant la période du 14 au 20 décembre.</p></article>
+<article><span class="calendar-closing__label">Fin de session</span><p>La défense du projet a lieu en S14, le 9 décembre. Le site Quarto personnel doit être remis le mercredi 16 décembre à 23 h 59.</p></article>
 </div>
 <p class="calendar-source">Brio reste la source active pour les ouvertures, les mini-tests et les précisions de dernière minute. Le <a href="calendrier.qmd">calendrier détaillé</a> conserve les liens vers les lectures, exercices et évaluations.</p>
 </section>

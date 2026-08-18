@@ -1,5 +1,5 @@
 ---
-title: "Semaine 15 - Avant la classe"
+title: "Semaine 15 - Préparation de la remise"
 format:
   html:
     embed-resources: true
@@ -7,55 +7,18 @@ format:
 
 ## Objectif de préparation
 
-Arriver avec les liens, fichiers et explications nécessaires à la publication du site, à la défense, à la revue de code, à la vérification des contributions et au bilan.
+Préparer la seule remise de semaine 15: le site Quarto personnel, attendu le mercredi 16 décembre 2026 à 23 h 59.
 
-Temps total estimé: 45 minutes. Il n'y a aucun mini-test noté.
+Temps total estimé: 30 à 45 minutes. Il n’y a aucun mini-test ni activité en classe.
 
-## Préparation en quatre étapes
+## Checklist
 
-### 1. Vérifier le site publié, 15 minutes
-
-- Ouvrir l'URL GitHub Pages dans une fenêtre privée ou dans un autre navigateur.
+- Ouvrir l’URL GitHub Pages dans une fenêtre privée ou dans un autre navigateur.
 - Tester la navigation et les liens essentiels.
-- Confirmer que les deux réalisations sont commentées.
-- Vérifier le lien vers le portfolio.
-- Noter l'URL du dépôt source et l'identifiant du commit remis.
+- Vérifier que deux réalisations sont commentées et qu’une trace du portfolio est liée.
+- Noter l’URL du dépôt source et l’identifiant du commit remis.
+- Vérifier que le dépôt ne publie aucune donnée, information personnelle, clé ou jeton non autorisé.
+- Compléter la déclaration IA si elle est pertinente.
+- Exécuter `quarto render`, puis pousser le dernier commit sur GitHub.
 
-### 2. Vérifier le dépôt final, 10 minutes
-
-- Lire le README comme une personne externe.
-- Exécuter la commande principale ou le vérificateur de reproduction.
-- Confirmer la sortie attendue.
-- Relire les limites et les éléments non vérifiés.
-
-### 3. Préparer la revue de code et la défense, 10 minutes
-
-Choisir un extrait assez court pour être expliqué sans défilement prolongé. Préparer les réponses suivantes:
-
-- Quel problème résout-il?
-- Quelles sont ses entrées et ses sorties?
-- De quelles dépendances a-t-il besoin?
-- Comment a-t-il été validé?
-- Que se passe-t-il en cas d'entrée invalide ou de donnée manquante?
-- Quelle limite demeure?
-
-### 4. Vérifier les traces individuelles, 10 minutes
-
-- Relire `docs/contributions.md`.
-- Confirmer que les contributions sont reliées à des fichiers, issues, revues ou commits.
-- Finaliser le bilan individuel.
-- Compléter `docs/ai-log.md` si un usage significatif de l'IA a influencé le travail.
-
-## À apporter
-
-- URL du site publié;
-- URL du dépôt source du site;
-- URL du dépôt final du projet;
-- identifiant du commit évalué;
-- support de présentation;
-- extrait de code;
-- chemin vers `docs/contributions.md`;
-- chemin vers le bilan individuel;
-- chemin vers `docs/ai-log.md` lorsque pertinent.
-
-Le package R est une [annexe facultative](annexe-package-r.qmd). Ne pas consacrer le temps de préparation obligatoire à cette option tant que les éléments ci-dessus ne sont pas terminés.
+Consulter la page [Site Quarto personnel](../../site-personnel.qmd) pour les consignes et les traces attendues.

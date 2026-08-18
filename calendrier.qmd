@@ -40,8 +40,8 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Il n'y a aucune s
 | 11 | 18 novembre | 11 novembre, 16 h 20 | Programmation orientée objet | [Lecture semaine 11](lectures.qmd#semaine-11); [exercices: objets, tests et exceptions](exercices/modules-10-11-objets-tests.qmd); trace semaine 11 | Mini-test 8, fermeture le 17 novembre à 23 h 59 |
 | 12 | 25 novembre | 18 novembre, 16 h 20 | Mesure, optimisation et introduction à la métaprogrammation | [Lecture semaine 12](lectures.qmd#semaine-12); [exercices: tests et performance](exercices/module-12-tests-performance.qmd); trace semaine 12 | Mini-test 9, fermeture le 24 novembre à 23 h 59; version intermédiaire du projet |
 | 13 | 2 décembre | 25 novembre, 16 h 20 | Défi technique 3, puis organisation minimale d'un package R | [Lecture semaine 13](lectures.qmd#semaine-13); exercice analogue; trace personnelle après le défi | [Défi technique 3](defis.qmd#defi-technique-3), 10 %, IA intégrée |
-| 14 | 9 décembre | 2 décembre, 16 h 20 | Récapitulatif, reproduction et conclusion | [Lecture semaine 14](lectures.qmd#semaine-14); bilan et vérification finale du portfolio | [Remise finale du projet](projets.qmd); jalon portfolio 3, 10 points |
-| 15 | Période du 14 au 20 décembre, à confirmer dans Brio | 9 décembre, 16 h 20 | Publication, défense et bilan | [Préparation semaine 15](lectures.qmd#semaine-15) | [Site Quarto personnel](site-personnel.qmd); défense du projet |
+| 14 | 9 décembre | 2 décembre, 16 h 20 | Récapitulatif, reproduction, conclusion et défense du projet | [Lecture semaine 14](lectures.qmd#semaine-14); bilan et vérification finale du portfolio | [Remise finale du projet](projets.qmd); jalon portfolio 3, 10 points; défense du projet pendant la séance |
+| 15 | Mercredi 16 décembre, 23 h 59 | Sans objet | Remise du site Quarto personnel | [Préparation semaine 15](lectures.qmd#semaine-15); finalisation et vérification du site | [Site Quarto personnel](site-personnel.qmd), 10 % |
 
 ## Mini-tests de préparation
 
@@ -74,8 +74,8 @@ Le mini-test 6 demeure ouvert pendant la semaine de lecture, puisqu'aucune séan
 | 9 | Jalon portfolio 2, 6 points, et suivi formatif du projet | Portfolio et projet |
 | 12 | Version intermédiaire du projet | Projet d'équipe |
 | 13 | Défi technique 3 | Défis techniques |
-| 14 | Remise finale du projet et jalon portfolio 3, 10 points | Projet et portfolio |
-| 15 | Site personnel et défense | Site Quarto personnel et projet |
+| 14 | Remise finale du projet, jalon portfolio 3, 10 points et défense du projet pendant la séance | Projet et portfolio |
+| 15 | Remise du site Quarto personnel, mercredi 16 décembre à 23 h 59 | Site Quarto personnel |
 
 ## Repères institutionnels
 
@@ -89,4 +89,4 @@ Le mini-test 6 demeure ouvert pendant la semaine de lecture, puisqu'aucune séan
 | Fin de la session | 11 décembre 2026 |
 | Période réservée aux examens | 14 au 20 décembre 2026 |
 
-Sources: [fiche officielle du cours STT-4230](https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique) et [calendrier universitaire 2026-2027 de l'Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf). La date, l'heure et le local de la séance finale seront confirmés dans Brio.
+Sources: [fiche officielle du cours STT-4230](https://www.ulaval.ca/etudes/cours/stt-4230-r-pour-scientifique) et [calendrier universitaire 2026-2027 de l'Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf). La remise du site Quarto personnel est fixée au mercredi 16 décembre 2026 à 23 h 59.

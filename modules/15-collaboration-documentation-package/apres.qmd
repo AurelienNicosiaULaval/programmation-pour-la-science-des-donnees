@@ -1,42 +1,21 @@
 ---
-title: "Semaine 15 - Après la classe"
+title: "Semaine 15 - Après la remise"
 format:
   html:
     embed-resources: true
 ---
 
-## Vérification finale des remises
+## Vérification finale
 
-Après la séance, confirmer que les traces évaluées sont accessibles dans leur état final.
-
-## Site personnel
+Après avoir remis le site Quarto personnel, conserver les éléments qui permettent de le retrouver:
 
 - URL publique fonctionnelle;
 - dépôt source accessible selon les consignes;
 - commit remis identifiable;
 - deux réalisations commentées;
 - lien au portfolio;
-- aucune donnée ou information non autorisée;
 - déclaration IA présente lorsque pertinente.
 
-## Projet d'équipe
+Ne pas modifier le site après la remise, sauf lorsqu’une correction est explicitement demandée. Toute correction autorisée doit être conservée dans un commit distinct et documenté.
 
-- dépôt et commit final;
-- README et commande de reproduction;
-- support de présentation;
-- preuve de validation;
-- limites documentées;
-- extrait utilisé pour la revue de code;
-- `docs/contributions.md`;
-- bilan individuel;
-- `docs/ai-log.md` lorsque pertinent.
-
-## Dernière vérification
-
-Ouvrir les URL à partir d'un navigateur qui n'utilise pas votre session habituelle. Vérifier ensuite que le commit remis correspond bien aux fichiers présentés.
-
-Ne pas ajouter une nouvelle fonctionnalité après la défense sauf si une correction demandée est explicitement autorisée. Conserver toute correction dans un commit distinct et documenté.
-
-## Option facultative
-
-Une équipe qui a terminé toutes les remises et possède des fonctions R réutilisables peut poursuivre avec l'[annexe package R](annexe-package-r.qmd). Cette option n'ajoute aucune production obligatoire de semaine 15.
+L’[annexe package R](annexe-package-r.qmd) reste facultative et n’ajoute aucune production obligatoire.

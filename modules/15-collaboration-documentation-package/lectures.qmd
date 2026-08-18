@@ -7,31 +7,15 @@ format:
 
 ## Lecture essentielle, 20 minutes
 
-Relire seulement les sections directement liées aux remises finales:
+Relire seulement les sections directement liées à la remise du site:
 
 1. [Site Quarto personnel](../../site-personnel.qmd): livrables, publication, confidentialité et checklist de remise.
-2. [Présentation et revue du projet](../../presentation.qmd): structure de la défense, rôle de la revue de code et questions.
-3. [Portfolio](../../portfolio.qmd): traces, bilan et liaison au site personnel.
-4. [Évaluations](../../evaluations.qmd): distinction entre le site individuel, la défense du projet et le portfolio.
+2. [Évaluations](../../evaluations.qmd): pondération, échéance et traces attendues.
+3. [Portfolio](../../portfolio.qmd): trace à relier au site personnel.
 
 ## Références techniques au besoin
 
-- [Quarto - GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
-- [GitHub Docs - About pull request reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
+- [Quarto: Publishing to GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+- [GitHub Pages](https://pages.github.com/)
 
-Utiliser ces références pour résoudre une question précise de publication ou de revue. Elles ne créent aucune nouvelle production.
-
-## Questions d'autovérification formative
-
-- L'URL publique s'ouvre-t-elle sans session locale?
-- Le dépôt source et le commit évalué sont-ils identifiables?
-- Les deux réalisations sont-elles expliquées, pas seulement affichées?
-- L'extrait de code peut-il être expliqué en quelques minutes?
-- Les contributions individuelles sont-elles reliées à des preuves?
-- Le bilan distingue-t-il apprentissages, limites et prochaine étape?
-
-Ces questions ne sont ni remises ni notées.
-
-## Lecture facultative
-
-La construction d'un package R est conservée dans l'[annexe facultative](annexe-package-r.qmd). Elle ne fait pas partie des lectures essentielles de semaine 15.
+Ces références aident à résoudre une question précise de publication. Elles ne créent aucune nouvelle production.

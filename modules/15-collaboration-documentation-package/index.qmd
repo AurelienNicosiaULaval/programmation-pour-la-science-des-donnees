@@ -1,95 +1,47 @@
 ---
-title: "Semaine 15 - Publication, défense et bilan final"
-description: "Publier le site personnel, défendre le projet et rendre les contributions vérifiables"
+title: "Semaine 15 - Remise du site Quarto personnel"
+description: "Finaliser, publier et remettre le site personnel avant le mercredi 16 décembre 2026 à 23 h 59"
 format:
   html:
     embed-resources: true
 ---
 
-## Question de la semaine
+## La seule remise de S15
 
-Comment rendre le travail final accessible, vérifiable et défendable par une personne qui n'a pas suivi son développement?
+La défense du projet, la revue de code et le bilan final ont lieu pendant le cours de semaine 14, le mercredi 9 décembre. En semaine 15, il n’y a qu’une remise: le site Quarto personnel, au plus tard le mercredi 16 décembre 2026 à 23 h 59.
 
-## Noyau obligatoire
+## Objectif
 
-La dernière semaine porte sur les productions réellement évaluées:
+Publier une vitrine courte, claire et vérifiable qui permet à une personne externe de comprendre ce que vous savez produire.
 
-- le site Quarto personnel publié et son dépôt source;
-- les deux réalisations commentées et la liaison au portfolio;
-- le dépôt final du projet et son commit évalué;
-- la défense du projet;
-- la revue d'un extrait de code;
-- les contributions individuelles vérifiables;
-- le bilan individuel;
-- `docs/ai-log.md` lorsqu'un usage significatif de l'IA doit être déclaré.
+## À remettre
 
-La création d'un package R n'est pas une production obligatoire. Elle est déplacée dans une [annexe facultative](annexe-package-r.qmd) destinée aux projets qui contiennent des fonctions réutilisables et qui ont déjà terminé les exigences ci-dessus.
+- l’URL GitHub Pages du site publié;
+- l’URL du dépôt source;
+- l’identifiant du dernier commit évalué;
+- au moins deux réalisations commentées;
+- un lien explicite vers une trace du portfolio;
+- une déclaration IA lorsque pertinente.
 
-## Objectifs de la semaine
+Le site doit être accessible au moment de la remise. Une URL qui ne fonctionne pas ne permet pas de vérifier l’objectif de publication.
 
-À la fin de la séance, chaque personne doit pouvoir:
+## Vérification avant la remise
 
-- ouvrir le site publié à partir de son URL;
-- retrouver le dépôt source et le commit remis;
-- expliquer le choix des deux réalisations;
-- présenter la question, la démarche, le résultat et les limites du projet;
-- expliquer un extrait de code, ses entrées, ses sorties et ses dépendances;
-- répondre à une question de reproduction ou de validation;
-- situer sa contribution dans le travail d'équipe;
-- formuler un bilan bref et une prochaine étape réaliste.
+1. Exécuter `quarto render` dans le dossier du site.
+2. Ouvrir l’URL GitHub Pages dans une fenêtre privée ou dans un autre navigateur.
+3. Vérifier les liens internes, le dépôt source et les deux réalisations.
+4. Retirer toute donnée, information personnelle ou clé qui ne doit pas être publique.
+5. Pousser le dernier commit sur GitHub avant le mercredi 16 décembre à 23 h 59.
 
-## Déroulement réaliste de trois heures
-
-| Moment | Activité | Résultat attendu |
-|---:|---|---|
-| 0-15 min | Ouverture et vérification des liens | URL, dépôt et commit accessibles |
-| 15-45 min | Vérification croisée des sites personnels | Site publié, deux réalisations, portfolio et déclaration vérifiés |
-| 45-105 min | Défenses, bloc 1 | Présentations, revue de code et questions |
-| 105-115 min | Pause |  |
-| 115-165 min | Défenses, bloc 2 | Présentations, revue de code et questions |
-| 165-175 min | Contributions et bilans | `docs/contributions.md` et bilan retrouvables |
-| 175-180 min | Clôture | Prochaine action et trace finale confirmées |
-
-Les deux blocs de défense réservent 110 minutes au total. La durée exacte par équipe est annoncée selon le nombre d'équipes. Chaque créneau comprend obligatoirement une présentation, une revue de code et des questions de défense; aucune de ces trois parties ne doit être supprimée pour ajouter une nouvelle démonstration technique.
-
-## Productions à avoir sous la main
-
-### Site personnel
-
-- URL GitHub Pages fonctionnelle;
-- URL du dépôt source;
-- identifiant du commit remis;
-- deux réalisations commentées;
-- lien explicite vers le portfolio;
-- déclaration IA conforme, lorsque pertinente.
-
-### Projet d'équipe
-
-- dépôt final et README;
-- commande principale de reproduction;
-- support bref;
-- extrait de code choisi pour la revue;
-- preuve de validation et limites;
-- `docs/contributions.md`;
-- bilan individuel.
-
-## Place de l'IA
-
-Statut: permise, déclarée.
-
-Tout usage significatif qui influence le code, le site, la validation, les visuels, la documentation ou la préparation de la défense doit être documenté dans `docs/ai-log.md`. La personne étudiante doit pouvoir expliquer et défendre le contenu produit.
-
-## Variante STT-6230
-
-Ajouter à la défense une justification technique courte reliée au projet réel: comparaison d'approches, validation supplémentaire, analyse de performance, automatisation, publication ou plan de maintenance. L'[annexe package R](annexe-package-r.qmd) est une option possible, jamais une obligation.
-
-## Pages de la semaine
+## Pages utiles
 
 - [Préparation](avant.qmd)
-- [Déroulement de la séance](pendant.qmd)
-- [Clinique finale](laboratoire.qmd)
-- [Consolidation après la séance](apres.qmd)
+- [Vérification finale](pendant.qmd)
+- [Clinique de remise](laboratoire.qmd)
+- [Après la remise](apres.qmd)
 - [Exercice formatif non noté](defi.qmd)
 - [Lectures essentielles](lectures.qmd)
-- [Ressources et checklists](ressources.qmd)
-- [Annexe facultative: package R local](annexe-package-r.qmd)
+- [Ressources et checklist](ressources.qmd)
+- [Consignes complètes du site Quarto personnel](../../site-personnel.qmd)
+
+La création d’un package R demeure une [annexe facultative](annexe-package-r.qmd). Elle ne constitue pas une remise de semaine 15.

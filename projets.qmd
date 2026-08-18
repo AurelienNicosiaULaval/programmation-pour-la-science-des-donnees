@@ -121,8 +121,7 @@ projet-stt4230/
 | Semaine 6 | Proposition | Sujet, équipe, question, source de données, risques, dépôt initial |
 | Semaine 9 | Point de suivi | Importation, nettoyage initial, premières visualisations, problèmes rencontrés |
 | Semaine 12 | Version intermédiaire | Pipeline partiel, rapport ou tableau de bord partiel, validations initiales, contributions visibles |
-| Semaine 14 | Remise finale | Produit complet, documentation de reproduction, limites, contribution individuelle, `docs/ai-log.md` si pertinent |
-| Semaine 15 | Défense du projet | Démonstration, revue de code, questions, bilan final individuel |
+| Semaine 14 | Remise finale et défense du projet | Produit complet, documentation de reproduction, limites, contribution individuelle, `docs/ai-log.md` si pertinent, démonstration, revue de code, questions et bilan final individuel |
 
 Le point de suivi de la semaine 9 est formatif. Il sert à éviter les projets trop tardifs, trop larges ou techniquement bloqués.
 
@@ -225,7 +224,7 @@ Chaque entrée importante doit indiquer:
 
 ## Présentation et revue du projet
 
-La présentation, la revue de code et le bilan final de la semaine 15 font partie du projet filé en équipe. Cette activité ne constitue plus une composante séparée de 10 %. Elle sert à vérifier que le dépôt remis peut être défendu, relu, expliqué et discuté.
+La présentation, la revue de code et le bilan final de la semaine 14 font partie du projet filé en équipe. Cette activité ne constitue pas une composante séparée de 10 %. Elle sert à vérifier que le dépôt remis peut être défendu, relu, expliqué et discuté.
 
 Consulter la page [Présentation et revue du projet](presentation.qmd).
 

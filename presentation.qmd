@@ -13,12 +13,12 @@ Repère de correction: [Grille de présentation et revue du projet](gabarits/gri
 
 ## À distinguer du site personnel
 
-La séance de semaine 15 combine deux objets évalués séparément.
+La défense du projet se déroule pendant la séance de semaine 14. La remise du site personnel est la seule exigence de semaine 15.
 
 | Objet | Type | Ce qui est vérifié |
 |---|---|---|
-| Site Quarto personnel | Individuel, 10 % | site publié sur GitHub Pages, dépôt source, deux réalisations commentées, lien vers une trace du portfolio |
-| Présentation et revue du projet | Équipe, intégrée au projet de 30 % | démonstration, revue de code, contributions, validations, limites et réponses aux questions |
+| Site Quarto personnel | Individuel, 10 %, semaine 15 | site publié sur GitHub Pages, dépôt source, deux réalisations commentées, lien vers une trace du portfolio |
+| Présentation et revue du projet | Équipe, intégrée au projet de 30 %, semaine 14 | démonstration, revue de code, contributions, validations, limites et réponses aux questions |
 
 Le site personnel peut présenter une réalisation issue du projet, mais il ne remplace pas la défense du projet. La défense du projet peut renvoyer au portfolio ou au site personnel, mais elle doit d’abord permettre d’expliquer le dépôt final de l’équipe.
 
@@ -33,7 +33,7 @@ Cette séance n’est pas une deuxième correction complète du projet. Elle ser
 | Élément | Modalité |
 |---|---|
 | Composante | Projet filé en équipe |
-| Moment | Semaine 15 pendant la période d’examens; date, heure et local à confirmer dans Brio |
+| Moment | Semaine 14, mercredi 9 décembre, de 13 h 30 à 16 h 20, pendant le cours régulier |
 | Type | Équipe, avec questions individuelles possibles |
 | Support | Dépôt GitHub final, démonstration et bref support de présentation |
 | IA | Permise, déclarée |

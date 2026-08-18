@@ -206,9 +206,9 @@ Matière: reproduction, limites et conclusion.
 
 - The Turing Way, [Guide for Reproducible Research](https://book.the-turing-way.org/reproducible-research/reproducible-research/), introduction et sections liées à la reproductibilité du projet.
 
-## Semaine 15, période d'examens {#semaine-15}
+## Semaine 15, remise du site Quarto personnel {#semaine-15}
 
-Préparation du site personnel et de la défense.
+Finalisation, publication et remise du site personnel avant le mercredi 16 décembre à 23 h 59.
 
 ### Notes de cours STT-4230
 
@@ -218,7 +218,7 @@ Préparation du site personnel et de la défense.
 
 - R for Data Science, chapitre 29, [Quarto formats](https://r4ds.hadley.nz/quarto-formats.html), sections pertinentes au format du site ou du rapport.
 
-Consulter également les consignes du [site Quarto personnel](site-personnel.qmd) et de la [présentation et revue](presentation.qmd).
+Consulter les consignes du [site Quarto personnel](site-personnel.qmd).
 
 ## Références en accès libre
 

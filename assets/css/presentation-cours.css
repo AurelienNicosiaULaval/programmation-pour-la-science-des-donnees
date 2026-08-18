@@ -1004,6 +1004,10 @@
   margin-top: 110px;
 }
 
+.project-journey--three {
+  grid-template-columns: 1fr 44px 1fr 44px 1fr;
+}
+
 .project-journey > div:not(.project-line) {
   min-height: 245px;
   padding: 28px 25px;

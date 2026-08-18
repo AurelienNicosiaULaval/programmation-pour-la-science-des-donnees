@@ -112,8 +112,8 @@ format:
     <li>Programmation orientée objet</li>
     <li>Mesure, optimisation et métaprogrammation</li>
     <li><a href="defis.html#defi-technique-3">Défi technique 3</a>, puis aperçu des packages R</li>
-    <li>Récapitulatif, reproduction et conclusion</li>
-    <li>Site personnel, présentation et revue du projet</li>
+    <li>Récapitulatif, reproduction, conclusion et défense du projet</li>
+    <li>Remise du site Quarto personnel</li>
   </ol>
 </section>
 

@@ -1,28 +1,18 @@
 ---
-title: "Semaine 15 - Ressources et checklists"
+title: "Semaine 15 - Ressources et checklist"
 format:
   html:
     embed-resources: true
 ---
 
-## Pages de référence du cours
+## Pages de référence
 
 - [Site Quarto personnel](../../site-personnel.qmd)
-- [Présentation et revue du projet](../../presentation.qmd)
-- [Portfolio](../../portfolio.qmd)
 - [Évaluations](../../evaluations.qmd)
-- [Projet d'équipe](../../projets.qmd)
+- [Portfolio](../../portfolio.qmd)
 - [Politique IA](../../ia.qmd)
 
-## Pages de la semaine
-
-- [Préparation](avant.qmd)
-- [Déroulement de 180 minutes](pendant.qmd)
-- [Clinique finale](laboratoire.qmd)
-- [Exercice formatif non noté](defi.qmd)
-- [Consolidation](apres.qmd)
-
-## Checklist minimale du site
+## Checklist minimale
 
 - URL publique;
 - dépôt source;
@@ -32,24 +22,9 @@ format:
 - confidentialité vérifiée;
 - déclaration IA lorsque pertinente.
 
-## Checklist minimale du projet
-
-- dépôt et commit final;
-- README et commande principale;
-- support de présentation;
-- preuve de validation et limites;
-- extrait de code défendable;
-- `docs/contributions.md`;
-- bilan individuel;
-- `docs/ai-log.md` lorsque pertinent.
-
 ## Documentation officielle
 
-- [Quarto - GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
-- [GitHub Docs - About pull request reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
+- [Quarto: Publishing to GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+- [GitHub Pages](https://pages.github.com/)
 
-## Approfondissement facultatif
-
-- [Annexe: construire un package R local](annexe-package-r.qmd)
-
-Cette annexe rassemble l'ancien contenu de packaging. Elle convient seulement aux projets qui ont des fonctions R réutilisables et qui ont déjà terminé les productions obligatoires. Elle ne constitue pas une remise de semaine 15.
+L’[annexe package R](annexe-package-r.qmd) est facultative et ne constitue pas une remise de semaine 15.

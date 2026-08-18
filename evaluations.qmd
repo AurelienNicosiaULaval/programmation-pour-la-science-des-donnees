@@ -13,11 +13,11 @@ Cette page présente les pondérations, les échéances, les traces attendues et
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Séances 2, 3, 4, 6, 7, 9, 10, 11 et 12; ouverture dans Brio le mercredi à 16 h 20 après la séance précédente et fermeture le mardi à 23 h 59 | Permise |
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Semaine 3: 4 points; semaine 9: 6 points; semaine 14: 10 points | Permise, déclarée |
-| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6, 12, remise finale semaine 14, défense semaine 15 pendant la période d’examens; fenêtre à confirmer dans Brio | Permise, déclarée |
+| Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6 et 12; remise finale et défense en semaine 14, pendant la séance du mercredi 9 décembre | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
-| Site Quarto personnel | 10 % | Individuel | Semaine 15 pendant la période d’examens; fenêtre à confirmer dans Brio | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15, mercredi 16 décembre à 23 h 59 | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
 ## Rôle des trois défis techniques
@@ -62,15 +62,15 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 | Défi 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
 | Site Quarto personnel | Adresse GitHub Pages publique, dépôt source du site, dernier commit évalué, page de présentation ou compétences, au moins deux réalisations commentées, lien ou référence vers une trace du portfolio, déclaration IA si pertinente |
 
-## Repère de semaine 15
+## Repères de fin de session
 
-La semaine 15 correspond à une séance d’évaluation finale pendant la période réservée aux examens, du 14 au 20 décembre 2026. La date, l’heure et le local seront confirmés dans Brio. Trois objets sont à distinguer.
+La défense du projet est intégrée à la séance de semaine 14, le mercredi 9 décembre. La seule remise de semaine 15 est le site Quarto personnel, à remettre le mercredi 16 décembre 2026 à 23 h 59.
 
 | Objet | Rôle | Trace attendue |
 |---|---|---|
-| Site Quarto personnel | Composante individuelle de 10 % | URL GitHub Pages, dépôt source, dernier commit, deux réalisations commentées |
-| Défense du projet | Partie du projet d’équipe de 30 % | dépôt final, démonstration, support bref, issue ou pull request de revue, contributions |
-| Portfolio individuel | Source des traces et du bilan individuel | dépôt individuel à jour, bilan final, lien vers le site personnel, trace reprise dans le site |
+| Défense du projet | Partie du projet d’équipe de 30 %, semaine 14 | dépôt final, démonstration, support bref, issue ou pull request de revue, contributions |
+| Portfolio individuel | Jalon 3, semaine 14 | dépôt individuel à jour, bilan final, lien vers le site personnel, trace reprise dans le site |
+| Site Quarto personnel | Composante individuelle de 10 %, semaine 15 | URL GitHub Pages, dépôt source, dernier commit, deux réalisations commentées |
 
 Le site personnel ne remplace ni le portfolio ni le projet. Il sélectionne des éléments publiables et les présente dans une forme courte, publique et vérifiable.
 
@@ -152,7 +152,7 @@ Le projet filé en équipe intègre plusieurs compétences du cours dans un dép
 
 La contribution individuelle doit être vérifiable par Git, issues, pull requests, fichier de contributions, bilan individuel et questions orales si nécessaire.
 
-La présentation, la revue de code et le bilan final de la semaine 15 font partie de la défense du projet. Ils ne constituent plus une composante séparée de 10 %. Ils servent à vérifier que le dépôt remis peut être expliqué, relu, défendu et discuté.
+La présentation, la revue de code et le bilan final réalisés pendant la séance de semaine 14 font partie de la défense du projet. Ils ne constituent pas une composante séparée de 10 %. Ils servent à vérifier que le dépôt remis peut être expliqué, relu, défendu et discuté.
 
 ### Site Quarto personnel
 
@@ -162,7 +162,7 @@ Le site doit inclure au moins une réalisation liée au portfolio individuel et 
 
 Le CV complet, la photo, l’adresse, le numéro de téléphone et les renseignements personnels ne sont pas obligatoires. Une page de compétences ou de parcours synthétique est acceptée si la personne ne souhaite pas publier un CV complet.
 
-La remise du site personnel doit inclure l’adresse GitHub Pages, l’adresse du dépôt source, l’identifiant du dernier commit à évaluer et l’emplacement des deux réalisations commentées. Le portfolio doit indiquer quelle trace est reprise dans le site personnel.
+La remise du site personnel doit inclure l’adresse GitHub Pages, l’adresse du dépôt source, l’identifiant du dernier commit à évaluer et l’emplacement des deux réalisations commentées. Elle est due le mercredi 16 décembre 2026 à 23 h 59. Le portfolio doit indiquer quelle trace est reprise dans le site personnel.
 
 ## Grille commune de qualité
 

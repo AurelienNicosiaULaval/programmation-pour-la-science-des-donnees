@@ -1,104 +1,23 @@
 ---
-title: "Semaine 15 - Clinique finale"
+title: "Semaine 15 - Clinique de remise"
 format:
   html:
     embed-resources: true
 ---
 
-## Rôle de la clinique
+## Fiche d’autovérification
 
-Cette page fournit les fiches de travail utilisées pendant la séance de trois heures. Elle ne constitue pas un laboratoire supplémentaire et ne demande aucun nouveau développement.
-
-## Poste 1 - Site publié
-
-Ouvrir le site à partir de son URL publique et compléter:
+Cette fiche ne constitue pas un laboratoire ni une nouvelle production. Elle sert à vérifier le site Quarto personnel avant sa remise du mercredi 16 décembre 2026 à 23 h 59.
 
 | Vérification | Résultat | Correction nécessaire |
 |---|---|---|
-| La page d'accueil s'ouvre |  |  |
+| La page d’accueil s’ouvre |  |  |
 | La navigation principale fonctionne |  |  |
 | Deux réalisations sont commentées |  |  |
 | Le portfolio est relié explicitement |  |  |
 | Le dépôt source est identifiable |  |  |
-| Le commit remis est noté |  |  |
+| Le dernier commit est noté |  |  |
 | Les données et informations publiées sont autorisées |  |  |
 | La déclaration IA est présente lorsque pertinente |  |  |
 
-Corriger en priorité une URL cassée, une page absente ou une information confidentielle.
-
-## Poste 2 - Dépôt final et reproduction
-
-Une personne externe utilise seulement le README pour répondre:
-
-- Quelle est la question du projet?
-- Quelle commande faut-il exécuter?
-- Quelles données et dépendances sont nécessaires?
-- Quelle sortie confirme le succès?
-- Quelle validation a été effectuée?
-- Quelles limites sont reconnues?
-
-Si la commande ne fonctionne pas, conserver le message d'erreur et corriger la première étape implicite. Ne pas réécrire le projet pendant la séance finale.
-
-## Poste 3 - Revue de code
-
-Choisir un extrait court et compléter la fiche:
-
-```markdown
-## Extrait choisi
-
-Fichier et lignes:
-Commit:
-
-## Rôle
-
-## Entrées et sorties
-
-## Dépendances
-
-## Validation ou tests
-
-## Cas d'échec
-
-## Limite ou amélioration future
-```
-
-La revue évalue la compréhension et la défendabilité du code, pas sa sophistication.
-
-## Poste 4 - Contributions individuelles
-
-Dans `docs/contributions.md`, chaque contribution importante doit pouvoir être reliée à au moins une preuve:
-
-| Contribution | Fichier, issue, revue ou commit | Vérification |
-|---|---|---|
-| Analyse ou code |  |  |
-| Validation ou tests |  |  |
-| Documentation ou site |  |  |
-| Revue ou coordination |  |  |
-
-Une liste de tâches sans lien vers une trace ne suffit pas à rendre la contribution vérifiable.
-
-## Poste 5 - Bilan individuel
-
-Le bilan répond brièvement à cinq questions:
-
-1. Quelle contribution représente le mieux votre travail?
-2. Quelle décision technique pouvez-vous défendre?
-3. Quelle difficulté a modifié votre manière de travailler?
-4. Quelle limite du projet demeure importante?
-5. Quelle serait la prochaine action réaliste?
-
-## Poste 6 - Déclaration IA
-
-Si l'IA a eu une influence significative, vérifier que `docs/ai-log.md` indique:
-
-- la tâche concernée;
-- l'outil ou le système utilisé;
-- l'aide reçue;
-- la vérification réalisée;
-- la décision finale prise par la personne étudiante ou l'équipe.
-
-## Critère de sortie
-
-La clinique est terminée lorsque les liens publics fonctionnent, les traces sont retrouvables et chaque personne peut expliquer l'extrait de code, sa contribution, une limite et la prochaine action.
-
-Pour un approfondissement après cette étape, consulter l'[annexe facultative sur les packages R](annexe-package-r.qmd).
+Corriger en priorité une URL cassée, une page absente ou une information confidentielle. Après la correction, refaire l’ouverture dans une fenêtre privée ou dans un autre navigateur.

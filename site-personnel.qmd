@@ -40,7 +40,7 @@ Le site doit être assez simple pour être maintenu après le cours. Il n’est 
 |---|---|
 | Pondération | 10 % |
 | Type | Individuel |
-| Moment | Semaine 15 pendant la période d’examens; date, heure et local à confirmer dans Brio |
+| Moment | Semaine 15, mercredi 16 décembre 2026 à 23 h 59 |
 | Support | Site Quarto publié sur GitHub Pages et dépôt GitHub source |
 | IA | Permise, déclarée |
 
@@ -133,7 +133,7 @@ Le CV complet n’est pas obligatoire. Une page de compétences, de parcours ou 
 
 ## Remise
 
-La remise de semaine 15 doit permettre de retrouver sans ambiguïté:
+La remise est due le mercredi 16 décembre 2026 à 23 h 59 et doit permettre de retrouver sans ambiguïté:
 
 - l’adresse du site publié;
 - l’adresse du dépôt GitHub source;
