@@ -1,0 +1,377 @@
+/*-- scss:defaults --*/
+$body-bg: #f7fafc;
+$body-color: #102a43;
+$link-color: #0b5cad;
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+$presentation-font-size-root: 32px;
+$presentation-heading-font: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+$presentation-heading-color: #0b4f6c;
+$presentation-heading-font-weight: 800;
+$presentation-heading-letter-spacing: -0.02em;
+
+/*-- scss:rules --*/
+:root {
+  --git-navy: #0b4f6c;
+  --git-blue: #0b5cad;
+  --git-teal: #2a9d8f;
+  --git-red: #b5121b;
+  --git-ink: #102a43;
+  --git-muted: #486581;
+  --git-line: #c8d8e0;
+  --git-pale: #eef8fc;
+  --git-paper: #ffffff;
+}
+
+.reveal {
+  color: var(--git-ink);
+  font-weight: 450;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--git-navy);
+  text-transform: none;
+}
+
+.reveal h1 {
+  font-size: 1.85em;
+  line-height: 1.02;
+}
+
+.reveal h2 {
+  font-size: 1.35em;
+  line-height: 1.08;
+}
+
+.reveal h3 {
+  font-size: 0.88em;
+}
+
+.reveal p,
+.reveal li {
+  line-height: 1.33;
+}
+
+.reveal ul,
+.reveal ol {
+  margin-top: 0.45em;
+}
+
+.reveal li + li {
+  margin-top: 0.32em;
+}
+
+.reveal a {
+  color: var(--git-blue);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+.reveal pre {
+  box-shadow: none;
+  font-size: 0.67em;
+  width: 100%;
+}
+
+.reveal pre code {
+  max-height: 510px;
+  padding: 1em;
+  border: 1px solid #bddbe8;
+  border-radius: 8px;
+  background: #edf7fb;
+  color: #102a43;
+}
+
+.reveal code {
+  color: #173f5f;
+}
+
+.reveal table {
+  width: 100%;
+  margin-top: 0.45em;
+  font-size: 0.76em;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--git-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.reveal table th {
+  padding: 0.42em 0.6em;
+  background: var(--git-pale);
+  color: var(--git-navy);
+  font-weight: 800;
+}
+
+.reveal table td {
+  padding: 0.42em 0.6em;
+  vertical-align: top;
+  border-color: var(--git-line);
+}
+
+.reveal .slide-number {
+  right: 1.05em;
+  bottom: 0.55em;
+  color: var(--git-navy);
+  background: transparent;
+  font-size: 0.55em;
+}
+
+.reveal .progress {
+  height: 6px;
+  color: var(--git-teal);
+}
+
+.reveal .footer {
+  bottom: 0.52em;
+  left: 1.25em;
+  color: var(--git-muted);
+  font-size: 0.42em;
+}
+
+.reveal .title-slide {
+  padding: 0 !important;
+}
+
+.reveal .title-slide h1 {
+  max-width: 950px;
+  margin: 0.35em 0 0.25em;
+  font-size: 2.05em;
+}
+
+.reveal .title-slide .subtitle {
+  max-width: 800px;
+  color: var(--git-muted);
+  font-size: 0.95em;
+  line-height: 1.35;
+}
+
+.reveal .title-slide .quarto-title-authors {
+  margin-top: 2.3em;
+  color: var(--git-navy);
+  font-size: 0.68em;
+}
+
+.git-kicker {
+  margin-bottom: 0.6em;
+  color: var(--git-red);
+  font-size: 0.5em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.git-lead {
+  max-width: 930px;
+  color: var(--git-muted);
+  font-size: 1.05em;
+  line-height: 1.38;
+}
+
+.git-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7em;
+  margin: 0.65em 0;
+}
+
+.git-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.git-card {
+  min-height: 4.9em;
+  padding: 0.64em 0.76em;
+  border: 1px solid var(--git-line);
+  border-radius: 10px;
+  background: var(--git-paper);
+}
+
+.git-card h3 {
+  margin: 0 0 0.28em;
+  font-size: 0.78em;
+}
+
+.git-card p,
+.git-card ul {
+  margin: 0;
+  font-size: 0.65em;
+  line-height: 1.34;
+}
+
+.git-card--accent {
+  border-color: #a6d8d2;
+  background: #effaf8;
+}
+
+.git-card--warning {
+  border-color: #ebc1c4;
+  background: #fff5f5;
+}
+
+.git-card--dark {
+  border-color: var(--git-navy);
+  background: var(--git-navy);
+  color: #ffffff;
+}
+
+.git-card--dark h3,
+.git-card--dark code {
+  color: #ffffff;
+}
+
+.git-card--dark p {
+  color: #ecf7fb;
+}
+
+.git-flow {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0.25em;
+  margin: 1.1em 0 0.65em;
+}
+
+.git-flow__step {
+  flex: 1;
+  position: relative;
+  min-height: 4.4em;
+  padding: 0.52em 0.45em;
+  border: 1px solid var(--git-line);
+  border-radius: 9px;
+  background: var(--git-paper);
+  text-align: center;
+}
+
+.git-flow__step + .git-flow__step::before {
+  position: absolute;
+  top: 44%;
+  left: -0.25em;
+  color: var(--git-teal);
+  content: "→";
+  font-size: 1.35em;
+  font-weight: 800;
+}
+
+.git-flow__step strong {
+  display: block;
+  margin-bottom: 0.25em;
+  color: var(--git-navy);
+  font-size: 0.59em;
+}
+
+.git-flow__step span {
+  display: block;
+  color: var(--git-muted);
+  font-size: 0.48em;
+  line-height: 1.24;
+}
+
+.git-flow__step code {
+  font-size: 0.83em;
+}
+
+.git-map {
+  display: grid;
+  grid-template-columns: 1fr 0.35fr 1fr;
+  align-items: center;
+  gap: 0.35em;
+  max-width: 950px;
+  margin: 0.9em auto;
+}
+
+.git-map__place {
+  min-height: 5.8em;
+  padding: 0.7em;
+  border: 1px solid var(--git-line);
+  border-radius: 12px;
+  background: var(--git-paper);
+}
+
+.git-map__place h3 {
+  margin: 0 0 0.25em;
+  font-size: 0.85em;
+}
+
+.git-map__place p {
+  margin: 0;
+  color: var(--git-muted);
+  font-size: 0.62em;
+  line-height: 1.35;
+}
+
+.git-map__place--remote {
+  border-color: #a6d8d2;
+  background: #effaf8;
+}
+
+.git-map__arrows {
+  color: var(--git-teal);
+  font-size: 0.54em;
+  font-weight: 800;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.git-map__arrows span {
+  display: block;
+}
+
+.git-command {
+  max-width: 980px;
+  margin: 0.85em auto;
+  padding: 0.65em 0.82em;
+  border-left: 6px solid var(--git-teal);
+  border-radius: 0 10px 10px 0;
+  background: #effaf8;
+  font-size: 0.78em;
+  line-height: 1.4;
+}
+
+.git-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35em 1.2em;
+  margin-top: 0.65em;
+  font-size: 0.75em;
+}
+
+.git-checklist div::before {
+  margin-right: 0.4em;
+  color: var(--git-teal);
+  content: "✓";
+  font-weight: 800;
+}
+
+.git-small {
+  color: var(--git-muted);
+  font-size: 0.56em;
+  line-height: 1.35;
+}
+
+.git-quote {
+  max-width: 900px;
+  margin: 0.9em auto;
+  padding: 0.8em 1em;
+  border-left: 6px solid var(--git-navy);
+  background: var(--git-pale);
+  color: var(--git-navy);
+  font-size: 1.07em;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .git-grid,
+  .git-grid--three,
+  .git-checklist {
+    grid-template-columns: 1fr;
+  }
+}
