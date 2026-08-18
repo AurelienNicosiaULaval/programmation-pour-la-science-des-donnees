@@ -1,0 +1,36 @@
+---
+title: "Modules 5 et 6 - Graphiques en R"
+subtitle: "Exercices de laboratoire et exercices supplémentaires"
+body-classes: page-exercises
+page-layout: full
+format:
+  html:
+    embed-resources: true
+    toc: false
+---
+
+{{< include ../includes/exercise-module-nav.md >}}
+
+Thèmes : système graphique de base, superposition d’observations, annotations, sous-fenêtres et `ggplot2`.
+
+<details class="exercise-document">
+<summary>Exercices de laboratoire corrigés</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-05/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les graphiques en R" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-05/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir les exercices de laboratoire dans un nouvel onglet</a></p>
+</details>
+
+<details class="exercise-document">
+<summary>Exercices supplémentaires facultatifs</summary>
+<div class="exercise-frame exercise-frame--pdf">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-05/exercices-supplementaires-semaine-06.pdf" title="Exercices supplémentaires sur les graphiques en R" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-05/exercices-supplementaires-semaine-06.pdf" target="_blank" rel="noopener">Ouvrir les exercices supplémentaires dans un nouvel onglet</a></p>
+</details>
+
+[Télécharger le fichier de données, ZIP](../assets/documents/exercices-consolidation/h2023/semaine-05/fichiers-donnees.zip){.exercise-download}
+
+Le PDF original est intitulé « Exercices supplémentaires facultatifs semaine 6 ». Son contenu porte sur la visualisation.
+
+{{< include ../includes/exercise-loader.md >}}

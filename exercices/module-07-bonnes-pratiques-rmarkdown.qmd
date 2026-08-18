@@ -1,0 +1,36 @@
+---
+title: "Module 7 - Bonnes pratiques et R Markdown"
+subtitle: "Exercices de laboratoire et défi reproductible"
+body-classes: page-exercises
+page-layout: full
+format:
+  html:
+    embed-resources: true
+    toc: false
+---
+
+{{< include ../includes/exercise-module-nav.md >}}
+
+Thèmes : style et bonnes pratiques de programmation, puis reconstruction d’un document reproductible à partir d’une sortie HTML.
+
+<details class="exercise-document">
+<summary>Exercices de laboratoire corrigés</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-07/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les bonnes pratiques et R Markdown" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-07/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir les exercices de laboratoire dans un nouvel onglet</a></p>
+</details>
+
+<details class="exercise-document">
+<summary>Défi R Markdown</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-07/defi-r-markdown.html" title="Défi R Markdown" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-07/defi-r-markdown.html" target="_blank" rel="noopener">Ouvrir le défi dans un nouvel onglet</a></p>
+</details>
+
+[Télécharger les fichiers du défi, ZIP](../assets/documents/exercices-consolidation/h2023/semaine-07/fichiers-donnees.zip){.exercise-download}
+
+Le ZIP contient l’image `join.jpg`, le document à reproduire `merge.html` et sa source corrigée `merge.Rmd`.
+
+{{< include ../includes/exercise-loader.md >}}

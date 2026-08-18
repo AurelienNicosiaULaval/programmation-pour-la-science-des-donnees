@@ -1,0 +1,36 @@
+---
+title: "Module 3 - Calculs en R"
+subtitle: "Exercices de laboratoire et exercices supplémentaires"
+body-classes: page-exercises
+page-layout: full
+format:
+  html:
+    embed-resources: true
+    toc: false
+---
+
+{{< include ../includes/exercise-module-nav.md >}}
+
+Thèmes : calcul vectoriel, conditions logiques, formules mathématiques, lois de probabilité, simulation, tests statistiques et modèles linéaires.
+
+<details class="exercise-document">
+<summary>Exercices de laboratoire corrigés</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-03/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les calculs en R" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-03/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir les exercices de laboratoire dans un nouvel onglet</a></p>
+</details>
+
+<details class="exercise-document">
+<summary>Exercices supplémentaires facultatifs</summary>
+<div class="exercise-frame exercise-frame--pdf">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-03/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les calculs en R" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-03/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir les exercices supplémentaires dans un nouvel onglet</a></p>
+</details>
+
+[Télécharger les fichiers de données, ZIP](../assets/documents/exercices-consolidation/h2023/semaine-03/fichiers-donnees.zip){.exercise-download}
+
+Le ZIP contient `fruitsFinal.rds`, `student-mat.csv` et `ex_supp_s3.rda`.
+
+{{< include ../includes/exercise-loader.md >}}

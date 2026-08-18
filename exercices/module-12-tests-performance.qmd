@@ -1,0 +1,42 @@
+---
+title: "Module 12 - Tests et performance"
+subtitle: "Exercices corrigés et exercices supplémentaires"
+body-classes: page-exercises
+page-layout: full
+format:
+  html:
+    embed-resources: true
+    toc: false
+---
+
+{{< include ../includes/exercise-module-nav.md >}}
+
+Thèmes : tests et exceptions, mesure du temps d’exécution, allocation de mémoire, vectorisation, parallélisation et métaprogrammation.
+
+<details class="exercise-document">
+<summary>Exercices corrigés sur les tests et les exceptions</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-13/exercices-tests-corriges.html" title="Exercices corrigés sur les tests et les exceptions" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-13/exercices-tests-corriges.html" target="_blank" rel="noopener">Ouvrir les exercices sur les tests dans un nouvel onglet</a></p>
+</details>
+
+<details class="exercise-document">
+<summary>Exercices corrigés sur la performance</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-13/exercices-performance-corriges.html" title="Exercices corrigés sur la performance" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-13/exercices-performance-corriges.html" target="_blank" rel="noopener">Ouvrir les exercices sur la performance dans un nouvel onglet</a></p>
+</details>
+
+<details class="exercise-document">
+<summary>Exercices supplémentaires</summary>
+<div class="exercise-frame exercise-frame--pdf">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-13/exercices-supplementaires.pdf" title="Exercices supplémentaires sur les tests et la performance" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-13/exercices-supplementaires.pdf" target="_blank" rel="noopener">Ouvrir les exercices supplémentaires dans un nouvel onglet</a></p>
+</details>
+
+Les exercices supplémentaires demandent notamment de comparer plusieurs implémentations d’une matrice polynomiale et plusieurs stratégies de simulation.
+
+{{< include ../includes/exercise-loader.md >}}

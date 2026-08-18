@@ -4,6 +4,7 @@ project:
   render:
     - "*.qmd"
     - "defis/*.qmd"
+    - "exercices/*.qmd"
     - "gabarits/*.qmd"
     - "ressources/*.qmd"
     - "!modules/"
@@ -26,6 +27,26 @@ website:
         href: index.qmd
       - text: "Calendrier"
         href: calendrier.qmd
+      - text: "Exercices"
+        menu:
+        - text: "Vue d’ensemble"
+          href: exercices-consolidation.qmd
+        - text: "Module 2 - Structures et fichiers"
+          href: exercices/module-02-structures-fichiers.qmd
+        - text: "Module 3 - Calculs en R"
+          href: exercices/module-03-calculs-r.qmd
+        - text: "Module 4 - Prétraitement des données"
+          href: exercices/module-04-pretraitement-donnees.qmd
+        - text: "Modules 5 et 6 - Graphiques en R"
+          href: exercices/modules-05-06-graphiques-r.qmd
+        - text: "Module 7 - Bonnes pratiques et R Markdown"
+          href: exercices/module-07-bonnes-pratiques-rmarkdown.qmd
+        - text: "Module 9 - Contrôle, boucles et fonctions"
+          href: exercices/module-09-controle-fonctions.qmd
+        - text: "Modules 10 et 11 - Objets, tests et exceptions"
+          href: exercices/modules-10-11-objets-tests.qmd
+        - text: "Module 12 - Tests et performance"
+          href: exercices/module-12-tests-performance.qmd
       - text: "Évaluations"
         menu:
         - text: "Vue d’ensemble"
@@ -44,8 +65,6 @@ website:
           href: ia.qmd
       - text: "Aide et ressources"
         menu:
-        - text: "Exercices"
-          href: exercices-consolidation.qmd
         - text: "Autodiagnostic R"
           href: diagnostic-r.qmd
         - text: "Démarrage étudiant"
