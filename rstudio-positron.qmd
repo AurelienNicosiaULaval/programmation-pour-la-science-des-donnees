@@ -1,0 +1,509 @@
+---
+title: "RStudio ou Positron?"
+subtitle: "Choisir son environnement de travail pour le cours"
+author: "Aurélien Nicosia"
+date: "Automne 2026"
+lang: fr
+format:
+  revealjs:
+    theme: [default, assets/css/reveal-rstudio-positron.scss]
+    slide-number: c/t
+    show-slide-number: all
+    embed-resources: true
+    incremental: false
+    width: 1280
+    height: 720
+    footer: "STT-4230 / STT-6230 · RStudio ou Positron"
+    highlight-style: github
+    code-line-numbers: false
+    transition: fade
+    navigation-mode: linear
+    controls-tutorial: false
+    hash: true
+    history: true
+execute:
+  eval: false
+  echo: true
+---
+
+## Au programme {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+**1. Le contexte**
+
+- Qu'est-ce qu'un IDE ?
+- RStudio : l'incontournable
+- Positron : le nouveau venu
+
+**2. La comparaison**
+
+- Architecture et philosophie
+- Fonctionnalités côte à côte
+- Ce que chacun fait de mieux
+:::
+
+::: {.column width="50%"}
+**3. La migration**
+
+- Les 5 changements à comprendre
+- La palette de commandes
+- Raccourcis clavier RStudio
+- Projets, Quarto, Git
+- Check-list du premier jour
+
+**4. Alors, on change ?**
+:::
+:::
+
+## 1. Le contexte {background-color="#1f3a5f"}
+
+## R, ce n'est pas un IDE
+
+::: {.fragment}
+**R** = le langage + le moteur de calcul (l'interpréteur).
+:::
+
+::: {.fragment}
+**L'IDE** = l'atelier autour de R : éditeur de code, console, visualisation
+des données, graphiques, aide, gestion de projet, Git.
+:::
+
+::: {.fragment}
+> On peut faire du R sans IDE (dans un terminal).
+> On ne le fait presque jamais.
+:::
+
+::: {.fragment}
+On peut donc **changer d'IDE sans changer une seule ligne de code R**.
+C'est tout l'enjeu de cette présentation.
+:::
+
+## RStudio : 15 ans de référence
+
+::: {.columns}
+::: {.column width="55%"}
+- Sorti en **2011**, développé par RStudio PBC — devenu **Posit** en 2022.
+- Le standard *de facto* de l'enseignement et de la recherche en statistique.
+- Pensé **de A à Z pour R** : quatre panneaux, projets `.Rproj`, `knitr`,
+  développement de packages, Shiny.
+- Open source (AGPL), disponible en desktop et en serveur.
+:::
+
+::: {.column width="45%"}
+::: {.callout-note appearance="simple"}
+### Toujours maintenu
+Posit s'engage à **continuer de maintenir RStudio** : sécurité, stabilité,
+corrections de bogues, améliorations ciblées.
+
+Mais les **grandes nouveautés** vont désormais en priorité à Positron.
+:::
+:::
+:::
+
+## Positron : l'IDE de nouvelle génération
+
+::: {.columns}
+::: {.column width="55%"}
+- Annoncé par Posit en **2024**, version stable en **2025**.
+- Construit sur **Code OSS**, la base libre de VS Code.
+- Conçu pour la **science des données**, pas pour le développement logiciel
+  générique : console, variables, graphiques, explorateur de données intégrés.
+- **R et Python sur un pied d'égalité**, dans le même outil.
+- **Gratuit** pour l'usage personnel, académique et commercial
+  (licence Elastic 2.0, *source-available*).
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip appearance="simple"}
+### En une phrase
+Positron, c'est **la puissance de VS Code** avec **les réflexes de RStudio**.
+:::
+
+::: {.fragment}
+Nouveautés 2026 : éditeur de notebooks, explorateur de données qui ouvre
+directement Excel/Parquet, panneau *Connections* pour les bases de données,
+assistant IA intégré (désactivable).
+:::
+:::
+:::
+
+## Pourquoi cette présentation ?
+
+::: {.incremental}
+- Posit oriente clairement l'avenir vers Positron.
+- Les collègues, les blogs, les formations en parlent de plus en plus.
+- Les étudiants qui font **du R et du Python** y gagnent immédiatement.
+- Mais RStudio reste parfaitement fonctionnel : **rien ne presse**.
+:::
+
+::: {.fragment}
+::: {.callout-important}
+Ce cours ne vous impose pas d'outil. L'objectif est que vous sachiez
+**choisir en connaissance de cause** — et que vous ne soyez pas perdus
+si vous ouvrez l'autre.
+:::
+:::
+
+## 2. La comparaison {background-color="#1f3a5f"}
+
+## Deux philosophies
+
+| | **RStudio** | **Positron** |
+|---|---|---|
+| Origine | Écrit pour R, de zéro | Fork de Code OSS (VS Code) |
+| Langages | R (+ Python via `reticulate`) | R **et** Python de première classe |
+| Interface | 4 panneaux fixes, boutons dédiés | Barre d'activité + panneaux flexibles |
+| Point d'entrée | Les menus et les boutons | La **palette de commandes** |
+| Extensions | Add-ins R | Marché d'extensions VS Code (des milliers) |
+| Unité de travail | Le fichier `.Rproj` | N'importe quel **dossier** |
+
+## Une différence structurelle : le noyau {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+### RStudio
+L'interface **et** la session R vivent dans le même processus.
+
+- Si R plante, l'IDE vacille.
+- Une seule session R à la fois.
+- Changer de version de R = redémarrer l'IDE.
+:::
+
+::: {.column width="50%"}
+### Positron
+L'interface parle à R via un **noyau** séparé (architecture Jupyter).
+
+- R plante ? L'IDE reste debout, on relance le noyau.
+- **Plusieurs sessions R en parallèle**, dans le même projet.
+- Changer de version de R : un clic dans le sélecteur d'interpréteur.
+:::
+:::
+
+::: {.fragment}
+::: {.callout-note appearance="simple"}
+En pratique : tester le même script sous R 4.4 et R 4.5 côte à côte devient trivial.
+:::
+:::
+
+## Ce que Positron fait mieux
+
+::: {.incremental}
+- **Explorateur de données** : tri multi-colonnes, filtres, profil de colonne,
+  ouverture directe de CSV, Parquet, **Excel** — sans écrire une ligne de code.
+- **Versions de R multiples** et sessions concurrentes.
+- **Python natif** : le même confort qu'en R (utile dès qu'un cours mélange les deux).
+- **Extensions** : Git Graph, correcteur orthographique, thèmes, LaTeX, Copilot…
+- **Débogage** plus lisible : pile d'appels et environnements séparés.
+- **Travail à distance** : interface locale, calcul sur un serveur.
+- **Intelligence du code R** : « aller à la définition », renommage,
+  références croisées entre fichiers du projet.
+:::
+
+## Ce que RStudio fait mieux
+
+::: {.incremental}
+- **Sauvegarde et restauration de l'espace de travail** entre deux sessions.
+- **Panneaux dédiés** : *Build*, *Profile*, installation de packages —
+  dans Positron, ces fonctions existent mais passent par la palette.
+- **R Markdown et Sweave** : support plus profond
+  (Positron mise avant tout sur **Quarto**).
+- **Add-ins RStudio** : la plupart ne fonctionnent pas dans Positron ;
+  certaines fonctions de `{rstudioapi}` non plus.
+- **Assistant d'import de données** (le bouton *Import Dataset*).
+- **15 ans de rodage** pour l'analyse et le développement de packages en R.
+:::
+
+## Ce qui ne change pas
+
+::: {.callout-tip}
+### Votre code R fonctionne à l'identique
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+- Vos scripts `.R`, `.qmd`, `.Rmd`
+- Vos packages (CRAN, Bioconductor, GitHub)
+- `{tidyverse}`, `{ggplot2}`, `{data.table}`…
+- `{renv}` pour la reproductibilité
+- Le rendu Quarto et R Markdown
+:::
+
+::: {.column width="50%"}
+- **Shiny** : lancement et aperçu intégré
+- **Git** : même dépôt, mêmes commits
+- `{testthat}`, `{devtools}`, `{usethis}`
+- Vos fichiers `.Rprofile` et `.Renviron`
+- Le pipe `|>` et le raccourci pour l'insérer
+:::
+:::
+
+::: {.fragment}
+Un projet R se déplace d'un IDE à l'autre **sans aucune modification**.
+:::
+
+## Tableau récapitulatif {.smaller}
+
+| Critère | RStudio | Positron |
+|---|:---:|:---:|
+| Prise en main débutant en R | ★★★★★ | ★★★★ |
+| Confort R au quotidien | ★★★★★ | ★★★★ |
+| Python | ★★ | ★★★★★ |
+| Exploration de données | ★★★ | ★★★★★ |
+| Développement de packages | ★★★★★ | ★★★★ |
+| Git | ★★★ | ★★★★★ |
+| Personnalisation / extensions | ★★ | ★★★★★ |
+| Écosystème de tutoriels francophones | ★★★★★ | ★★★ |
+| Stabilité des habitudes | ★★★★★ | ★★★ |
+
+## 3. Migrer depuis RStudio {background-color="#1f3a5f"}
+
+## Les 5 changements à comprendre
+
+::: {.incremental}
+1. **La palette de commandes remplace les boutons.**
+   `Ctrl+Shift+P` (`Cmd+Shift+P` sur Mac) — on tape ce qu'on veut faire.
+2. **Le projet devient un dossier.** Plus besoin de `.Rproj`
+   (mais il reste reconnu).
+3. **La barre d'activité remplace les panneaux fixes.**
+   Fichiers, recherche, Git, extensions : une icône chacun, à gauche.
+4. **L'interpréteur R se choisit explicitement**, en haut à droite.
+5. **Tout se configure dans les *Settings*** (`Ctrl+,`),
+   pas dans un menu Options.
+:::
+
+## La palette de commandes : le réflexe n°1
+
+Un seul raccourci à retenir pour commencer :
+
+```r
+Ctrl + Shift + P     # Windows / Linux
+Cmd  + Shift + P     # macOS
+```
+
+::: {.fragment}
+Puis on tape en langage naturel (en anglais) :
+:::
+
+::: {.fragment}
+| Ce que je veux | Ce que je tape |
+|---|---|
+| Redémarrer R | `restart` |
+| Installer un package | `install` |
+| Rendre un document Quarto | `render` |
+| Changer de version de R | `interpreter` |
+| Créer un projet | `new project` |
+| Ouvrir les préférences | `settings` |
+:::
+
+## Retrouver ses raccourcis RStudio
+
+Positron peut activer un jeu de raccourcis **compatibles RStudio**.
+
+::: {.fragment}
+**Comment faire :** `Ctrl+,` → chercher `rstudioKeybindings` → cocher
+`workbench.keybindings.rstudioKeybindings` → **redémarrer Positron**.
+:::
+
+::: {.fragment}
+Ou directement dans le `settings.json` :
+
+```json
+{
+  "workbench.keybindings.rstudioKeybindings": true
+}
+```
+:::
+
+::: {.fragment}
+On retrouve alors `Ctrl+1` / `Ctrl+2` (éditeur / console), `F2`
+(aller à la définition), le commentaire de bloc, etc.
+:::
+
+## Les raccourcis du quotidien {.smaller}
+
+| Action | RStudio | Positron |
+|---|---|---|
+| Exécuter la ligne / la sélection | `Ctrl+Entrée` | `Ctrl+Entrée` |
+| Insérer le pipe `\|>` | `Ctrl+Maj+M` | `Ctrl+Maj+M` |
+| Insérer un chunk | `Ctrl+Alt+I` | `Ctrl+Alt+I` |
+| Aide contextuelle | `F1` | `F1` |
+| Vider la console | `Ctrl+L` | `Ctrl+L` |
+| Redémarrer R | `Ctrl+Maj+F10` | Palette → `restart` |
+| Rendre le document | `Ctrl+Maj+K` | `Ctrl+Maj+K` |
+| Palette de commandes | — | `Ctrl+Maj+P` |
+| Aller à la définition | `F2` | `F2` |
+
+::: {.callout-note appearance="simple"}
+Sur macOS, remplacer `Ctrl` par `Cmd` et `Alt` par `Option`.
+:::
+
+## Projets : du `.Rproj` au dossier
+
+::: {.columns}
+::: {.column width="50%"}
+### Avant
+1. `File → New Project`
+2. RStudio crée un `.Rproj`
+3. Ouvrir le `.Rproj` fixe le répertoire de travail
+:::
+
+::: {.column width="50%"}
+### Maintenant
+1. `File → Open Folder…`
+2. Le dossier **est** le projet
+3. Le répertoire de travail suit le dossier ouvert
+:::
+:::
+
+::: {.fragment}
+::: {.callout-tip}
+### Le conseil qui ne change pas
+Un dossier = un projet. Jamais de `setwd()` en dur.
+Utilisez `{here}` pour vos chemins : `here::here("data", "notes.csv")`.
+:::
+:::
+
+## Quarto et les documents
+
+::: {.incremental}
+- Quarto est **intégré nativement** : pas d'extension à installer.
+- Le bouton **Render** et l'aperçu à droite fonctionnent comme dans RStudio.
+- Éditeur **visuel** disponible, comme le mode *Visual* de RStudio.
+- Les chunks R s'exécutent avec `Ctrl+Entrée`, avec les mêmes boutons
+  ▶ « exécuter ce chunk » / « exécuter les chunks précédents ».
+- R Markdown (`.Rmd`) fonctionne aussi, mais **Quarto est la voie recommandée** —
+  c'est déjà le format du cours.
+:::
+
+## Git : la vraie bonne surprise
+
+::: {.columns}
+::: {.column width="55%"}
+- Panneau **Source Control** dans la barre d'activité (icône branche).
+- Statut Git **directement dans l'explorateur de fichiers**
+  (couleurs : modifié, nouveau, ignoré).
+- Différences côte à côte, ligne par ligne, avec possibilité de
+  *stager* une portion de fichier seulement.
+- Extensions : **Git Graph** pour visualiser l'historique.
+:::
+
+::: {.column width="45%"}
+::: {.callout-note appearance="simple"}
+### Pour un cours
+C'est l'argument le plus convaincant après l'explorateur de données :
+les étudiants comprennent enfin ce qu'ils committent.
+:::
+:::
+:::
+
+## L'explorateur de données
+
+::: {.incremental}
+- Clic sur un objet dans le panneau **Variables**, ou :
+
+  ```r
+  View(mon_tableau)
+  ```
+
+- Tri sur **plusieurs colonnes**, filtres empilables.
+- **Profil de colonne** : distribution, valeurs manquantes, type — en un coup d'œil.
+- Ouverture directe d'un fichier `.csv`, `.parquet`, `.xlsx`
+  **sans l'importer dans R**.
+- Fonctionne aussi sur les *tibbles* volumineux, sans figer la session.
+:::
+
+## Ce qui va vous manquer (soyons honnêtes)
+
+::: {.incremental}
+- Les **add-ins** RStudio auxquels vous tenez (`{datapasta}`, `{styler}` via
+  le menu Addins…) — certains ont un équivalent en extension, d'autres non.
+- La **console colorée** qui conserve la mise en forme du code exécuté.
+- Les **boutons** *Build* / *Install and Restart* pour les packages :
+  ils existent, mais via la palette ou le terminal.
+- Le réflexe de la **souris** : Positron récompense le clavier.
+- **Deux semaines d'inconfort.** C'est le prix réel de la migration.
+:::
+
+## Check-list du premier jour
+
+::: {.incremental}
+1. Installer Positron (`positron.posit.co`) — l'installation de R reste séparée.
+2. Ouvrir un dossier de projet existant : `File → Open Folder…`
+3. Vérifier l'interpréteur R en haut à droite.
+4. Activer les raccourcis RStudio (`rstudioKeybindings`) et redémarrer.
+5. Faire le tour guidé : palette → `Welcome: Open Walkthrough`.
+6. Choisir un thème et une police lisible (`Ctrl+,`).
+7. Ouvrir un `.qmd` du cours et le rendre : `Ctrl+Maj+K`.
+8. Installer 2-3 extensions utiles, pas 20.
+:::
+
+## 4. Alors, on change ? {background-color="#1f3a5f"}
+
+## Ma recommandation
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.callout-tip}
+### Restez sur RStudio si…
+- Vous débutez en R **cette session** et vous voulez suivre les tutoriels
+  francophones sans friction.
+- Vous développez surtout des packages.
+- Vous dépendez d'add-ins précis.
+- Vous êtes efficaces et ça vous suffit.
+:::
+:::
+
+::: {.column width="50%"}
+::: {.callout-note}
+### Passez à Positron si…
+- Vous faites **R et Python**.
+- Vous manipulez de gros fichiers de données.
+- Vous voulez progresser sur Git.
+- Vous venez de VS Code.
+- Vous voulez l'outil sur lequel Posit investit.
+:::
+:::
+:::
+
+::: {.fragment}
+**Rien n'oblige à choisir :** les deux peuvent être installés en parallèle
+et ouvrir le même projet.
+:::
+
+## Pour ce cours
+
+::: {.incremental}
+- Les **deux IDE sont acceptés**. Le code remis doit tourner dans les deux.
+- Les démonstrations indiquent les parcours équivalents dans les deux IDE quand ils diffèrent.
+- Les consignes donnent d’abord la commande à retenir, puis le bouton, le menu ou la palette de commandes utile :
+  `quarto::quarto_render()`, `install.packages()`, `renv::restore()`.
+- Si vous migrez, faites-le **maintenant**, pas la veille d'une remise.
+:::
+
+::: {.fragment}
+::: {.callout-important}
+L'outil n'est pas la compétence. Ce qui compte, c'est votre code —
+et qu'il soit reproductible.
+:::
+:::
+
+## Pour aller plus loin
+
+- **Site officiel de Positron** — `positron.posit.co`
+- **Guide de migration RStudio → Positron** — `positron.posit.co/migrate-rstudio.html`
+- **Comparaison officielle des fonctionnalités** — `positron.posit.co/migrate-rstudio-compare.html`
+- **Raccourcis RStudio dans Positron** — `positron.posit.co/migrate-rstudio-keybindings.html`
+- **FAQ Posit : Positron remplace-t-il RStudio ?** — `positron.posit.co/faqs.html`
+- **Notes de version mensuelles** — `positron.posit.co/release-notes/`
+
+## Merci ! {.center}
+
+::: {style="text-align:center; font-size:1.2em; margin-top:1em;"}
+**Des questions ?**
+:::
+
+::: {style="text-align:center; font-size:0.8em; color:#7b8794; margin-top:1.5em;"}
+Le seul mauvais choix serait de passer plus de temps à configurer son IDE
+qu'à écrire du R.
+:::

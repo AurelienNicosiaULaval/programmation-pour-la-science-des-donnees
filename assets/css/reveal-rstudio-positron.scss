@@ -1,0 +1,82 @@
+/*-- scss:defaults --*/
+
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$presentation-heading-font: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$body-bg: #ffffff !default;
+$body-color: #1f2933 !default;
+$link-color: #1f6f8b !default;
+
+$presentation-heading-color: #1f3a5f !default;
+$presentation-font-size-root: 30px !default;
+$code-block-font-size: 0.7em !default;
+
+/*-- scss:rules --*/
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.reveal h2 {
+  border-bottom: 3px solid #e0a458;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.6em;
+}
+
+.reveal section.title-slide h1,
+.reveal .slide-background + section h1 {
+  border-bottom: none;
+}
+
+/* Section dividers (background-color slides) */
+.reveal section[data-background-color] h1 {
+  color: #ffffff;
+  border-bottom: none;
+  text-align: center;
+}
+
+.reveal table {
+  font-size: 0.85em;
+  border-collapse: collapse;
+}
+
+.reveal table th {
+  background-color: #1f3a5f;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.reveal table tr:nth-child(even) {
+  background-color: #f4f6f8;
+}
+
+.reveal table td,
+.reveal table th {
+  padding: 0.35em 0.6em;
+  border: 1px solid #d7dde3;
+}
+
+.reveal code {
+  color: #b5451b;
+}
+
+.reveal .slide-number {
+  background-color: rgba(31, 58, 95, 0.85);
+}
+
+.reveal .footer {
+  color: #7b8794;
+  font-size: 0.55em;
+}
+
+.reveal ul,
+.reveal ol {
+  line-height: 1.35;
+}
+
+.reveal .callout {
+  font-size: 0.9em;
+}

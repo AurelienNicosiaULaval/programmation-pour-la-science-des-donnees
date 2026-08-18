@@ -24,6 +24,8 @@ Préparer l’environnement suivant avant ou pendant le premier laboratoire:
 | SSH GitHub | Clé SSH configurée lorsque possible | `ssh -T git@github.com` |
 | Interface R | Positron ou RStudio | ouverture d’un projet R |
 
+Pour choisir l’interface qui vous convient et repérer les équivalences utiles, consulter la capsule [RStudio ou Positron?](rstudio-positron.qmd). Les deux environnements sont acceptés dans le cours.
+
 Si une étape bloque, noter le message exact et consulter [Soutien technique](soutien-technique.qmd).
 
 ## Utiliser le site
