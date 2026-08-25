@@ -252,7 +252,7 @@ Source interne: calendrier.qmd.
 <p class="slide-takeaway">Objectif: livrer un projet reproductible, documenté et expliqué avec lucidité.</p>
 
 ::: {.notes}
-La défense du projet a lieu pendant le cours régulier de S14, le mercredi 9 décembre. La seule remise de S15 est le site Quarto personnel, le mercredi 16 décembre à 23 h 59.
+La défense du projet a lieu pendant le cours régulier de S14, le mercredi 9 décembre. La seule remise de S15 est le site Quarto personnel, le mercredi 16 décembre à 23 h 55.
 
 Source interne: calendrier.qmd; presentation.qmd.
 :::
@@ -340,7 +340,7 @@ Sources internes: projets.qmd; presentation.qmd; evaluations.qmd.
 <div class="personal-site-layout">
 <div class="site-window"><div class="site-window__bar"><i></i><i></i><i></i></div><div class="site-window__content"><span class="site-window__kicker">Votre site</span><strong>Ce que je sais produire</strong><div class="site-window__tiles"><span></span><span></span><span></span></div></div></div>
 <div class="site-requirements">
-<p class="eyebrow">Individuel · 10 % · mercredi 16 décembre, 23 h 59</p>
+<p class="eyebrow">Individuel · 10 % · mercredi 16 décembre, 23 h 55</p>
 <h3>Une vitrine courte, claire et vérifiable</h3>
 <ul>
 <li>Site publié avec Quarto et GitHub Pages</li>
@@ -417,7 +417,7 @@ Source interne: communication.qmd; soutien-technique.qmd.
 <div class="term-map__line"></div>
 <div class="term-map__event"><span>9 déc.</span><h3>Dernière séance régulière</h3><p>Synthèse, remise finale du projet, portfolio et défense.</p></div>
 <div class="term-map__line"></div>
-<div class="term-map__event term-map__event--end"><span>16 déc. · 23 h 59</span><h3>Remise individuelle</h3><p>Site Quarto personnel seulement.</p></div>
+<div class="term-map__event term-map__event--end"><span>16 déc. · 23 h 55</span><h3>Remise individuelle</h3><p>Site Quarto personnel seulement.</p></div>
 </div>
 
 <p class="center-note">Séances régulières: chaque mercredi, de 13 h 30 à 16 h 20, du 2 septembre au 9 décembre.</p>

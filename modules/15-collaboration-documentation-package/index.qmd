@@ -1,6 +1,6 @@
 ---
 title: "Semaine 15 - Remise du site Quarto personnel"
-description: "Finaliser, publier et remettre le site personnel avant le mercredi 16 décembre 2026 à 23 h 59"
+description: "Finaliser, publier et remettre le site personnel avant le mercredi 16 décembre 2026 à 23 h 55"
 format:
   html:
     embed-resources: true
@@ -8,7 +8,7 @@ format:
 
 ## La seule remise de S15
 
-La défense du projet, la revue de code et le bilan final ont lieu pendant le cours de semaine 14, le mercredi 9 décembre. En semaine 15, il n’y a qu’une remise: le site Quarto personnel, au plus tard le mercredi 16 décembre 2026 à 23 h 59.
+La défense du projet, la revue de code et le bilan final ont lieu pendant le cours de semaine 14, le mercredi 9 décembre. En semaine 15, il n’y a qu’une remise: le site Quarto personnel, au plus tard le mercredi 16 décembre 2026 à 23 h 55.
 
 ## Objectif
 
@@ -31,7 +31,7 @@ Le site doit être accessible au moment de la remise. Une URL qui ne fonctionne 
 2. Ouvrir l’URL GitHub Pages dans une fenêtre privée ou dans un autre navigateur.
 3. Vérifier les liens internes, le dépôt source et les deux réalisations.
 4. Retirer toute donnée, information personnelle ou clé qui ne doit pas être publique.
-5. Pousser le dernier commit sur GitHub avant le mercredi 16 décembre à 23 h 59.
+5. Pousser le dernier commit sur GitHub avant le mercredi 16 décembre à 23 h 55.
 
 ## Pages utiles
 

@@ -7,7 +7,7 @@ format:
 
 ## Travail autonome
 
-Il n’y a pas de séance de cours en semaine 15. Utiliser ce temps pour vérifier et remettre le site Quarto personnel avant le mercredi 16 décembre 2026 à 23 h 59.
+Il n’y a pas de séance de cours en semaine 15. Utiliser ce temps pour vérifier et remettre le site Quarto personnel avant le mercredi 16 décembre 2026 à 23 h 55.
 
 ## Contrôles essentiels
 

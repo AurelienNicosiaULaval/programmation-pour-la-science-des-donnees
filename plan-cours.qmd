@@ -42,7 +42,7 @@ Les dates suivantes proviennent du calendrier universitaire 2026-2027 de l’Uni
 
 Source: [Calendrier universitaire 2026-2027, Université Laval](https://www.ulaval.ca/sites/default/files/notre-universite/direction-gouv/Documents_officiels/Calendrier_universitaire/Calendrier_universitaire_2026-2027.pdf).
 
-Les 14 séances régulières ont lieu du 2 septembre au 9 décembre. La défense du projet est intégrée à la 14e séance, le mercredi 9 décembre, de 13 h 30 à 16 h 20. Le site Quarto personnel doit être remis le mercredi 16 décembre à 23 h 59.
+Les 14 séances régulières ont lieu du 2 septembre au 9 décembre. La défense du projet est intégrée à la 14e séance, le mercredi 9 décembre, de 13 h 30 à 16 h 20. Le site Quarto personnel doit être remis le mercredi 16 décembre à 23 h 55.
 
 ## Objectif général
 
@@ -76,7 +76,7 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 | 12 | Mesure, optimisation et métaprogrammation | Mesurer avant d'optimiser et comprendre que le code peut être manipulé comme une donnée |
 | 13 | Défi 3, puis structure minimale d'un package | Défi individuel 1 h avec IA intégrée, puis aperçu des packages R |
 | 14 | Récapitulatif, reproduction, conclusion et défense du projet | Stabiliser le projet, documenter ses limites et défendre le travail d’équipe |
-| 15 | Site Quarto personnel | Remettre le site Quarto personnel le mercredi 16 décembre à 23 h 59 |
+| 15 | Site Quarto personnel | Remettre le site Quarto personnel le mercredi 16 décembre à 23 h 55 |
 
 ## Évaluations
 
@@ -90,7 +90,7 @@ Le tableau suivant présente les composantes évaluées du cours.
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
-| Site Quarto personnel | 10 % | Individuel | Semaine 15, mercredi 16 décembre à 23 h 59 | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15, mercredi 16 décembre à 23 h 55 | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
 Les critères détaillés, les consignes et les différences entre STT-4230 et STT-6230 sont regroupés dans la page [Évaluations](evaluations.qmd).

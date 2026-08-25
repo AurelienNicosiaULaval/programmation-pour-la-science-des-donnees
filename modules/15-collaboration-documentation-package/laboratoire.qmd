@@ -7,7 +7,7 @@ format:
 
 ## Fiche d’autovérification
 
-Cette fiche ne constitue pas un laboratoire ni une nouvelle production. Elle sert à vérifier le site Quarto personnel avant sa remise du mercredi 16 décembre 2026 à 23 h 59.
+Cette fiche ne constitue pas un laboratoire ni une nouvelle production. Elle sert à vérifier le site Quarto personnel avant sa remise du mercredi 16 décembre 2026 à 23 h 55.
 
 | Vérification | Résultat | Correction nécessaire |
 |---|---|---|

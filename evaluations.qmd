@@ -17,7 +17,7 @@ Cette page présente les pondérations, les échéances, les traces attendues et
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
-| Site Quarto personnel | 10 % | Individuel | Semaine 15, mercredi 16 décembre à 23 h 59 | Permise, déclarée |
+| Site Quarto personnel | 10 % | Individuel | Semaine 15, mercredi 16 décembre à 23 h 55 | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
 ## Rôle des trois défis techniques
@@ -64,7 +64,7 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 
 ## Repères de fin de session
 
-La défense du projet est intégrée à la séance de semaine 14, le mercredi 9 décembre. La seule remise de semaine 15 est le site Quarto personnel, à remettre le mercredi 16 décembre 2026 à 23 h 59.
+La défense du projet est intégrée à la séance de semaine 14, le mercredi 9 décembre. La seule remise de semaine 15 est le site Quarto personnel, à remettre le mercredi 16 décembre 2026 à 23 h 55.
 
 | Objet | Rôle | Trace attendue |
 |---|---|---|
@@ -162,7 +162,7 @@ Le site doit inclure au moins une réalisation liée au portfolio individuel et 
 
 Le CV complet, la photo, l’adresse, le numéro de téléphone et les renseignements personnels ne sont pas obligatoires. Une page de compétences ou de parcours synthétique est acceptée si la personne ne souhaite pas publier un CV complet.
 
-La remise du site personnel doit inclure l’adresse GitHub Pages, l’adresse du dépôt source, l’identifiant du dernier commit à évaluer et l’emplacement des deux réalisations commentées. Elle est due le mercredi 16 décembre 2026 à 23 h 59. Le portfolio doit indiquer quelle trace est reprise dans le site personnel.
+La remise du site personnel doit inclure l’adresse GitHub Pages, l’adresse du dépôt source, l’identifiant du dernier commit à évaluer et l’emplacement des deux réalisations commentées. Elle est due le mercredi 16 décembre 2026 à 23 h 55. Le portfolio doit indiquer quelle trace est reprise dans le site personnel.
 
 ## Grille commune de qualité
 

@@ -137,4 +137,4 @@ Le document institutionnel _Principes directeurs concernant l’intelligence art
 Sources:
 
 - [Université Laval, IA dans les études](https://www.ulaval.ca/technologies-de-linformation/systemes-dintelligence-artificielle/ia-etudes)
-- [Université Laval, Principes directeurs concernant l’intelligence artificielle à l’Université Laval, 2025](https://www.enseigner.ulaval.ca/system/files/public/numerique/intelligence-articielle/principes-directeurs.pdf)
+- [Université Laval, Principes directeurs concernant l’intelligence artificielle dans l’enseignement et l’apprentissage](https://www.enseigner.ulaval.ca/numerique-et-ia/intelligence-artificielle/principes-directeurs-concernant-lintelligence-artificielle-dans-lenseignement-et-lapprentissage)

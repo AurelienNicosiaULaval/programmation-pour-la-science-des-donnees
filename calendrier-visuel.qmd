@@ -161,7 +161,7 @@ format:
 <tr class="semester-calendar__final">
 <th scope="row"><span class="week-label">S15</span><time datetime="2026-12-14">14 au 20 déc.</time></th>
 <td colspan="2"><span class="calendar-date">14 au 15 déc.</span><span class="event event--final">Finaliser, rendre et vérifier le site Quarto personnel.</span></td>
-<td><span class="calendar-date">16 déc. · 23 h 59</span><span class="event event--final">Remise du site Quarto personnel · 10 %.</span></td>
+<td><span class="calendar-date">16 déc. · 23 h 55</span><span class="event event--final">Remise du site Quarto personnel · 10 %.</span></td>
 <td><span class="calendar-date">Après la remise</span><span class="event event--final">Aucune autre remise ni séance du cours.</span></td>
 </tr>
 </tbody>
@@ -176,7 +176,7 @@ format:
 <div class="calendar-closing__grid">
 <article><span class="calendar-closing__label">Mini-tests</span><p>Neuf mini-tests, trois questions, 10 minutes, une tentative. Ils ferment le mardi à 23 h 59.</p></article>
 <article><span class="calendar-closing__label">Défis</span><p>Les défis 1, 2 et 3 ont lieu en semaines 5, 8 et 13. Consulter la règle d’usage de l’IA propre à chaque défi.</p></article>
-<article><span class="calendar-closing__label">Fin de session</span><p>La défense du projet a lieu en S14, le 9 décembre. Le site Quarto personnel doit être remis le mercredi 16 décembre à 23 h 59.</p></article>
+<article><span class="calendar-closing__label">Fin de session</span><p>La défense du projet a lieu en S14, le 9 décembre. Le site Quarto personnel doit être remis le mercredi 16 décembre à 23 h 55.</p></article>
 </div>
 <p class="calendar-source">Brio reste la source active pour les ouvertures, les mini-tests et les précisions de dernière minute. Le <a href="calendrier.qmd">calendrier détaillé</a> conserve les liens vers les lectures, exercices et évaluations.</p>
 </section>
