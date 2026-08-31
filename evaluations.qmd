@@ -55,7 +55,7 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 | Composante | Traces attendues |
 |---|---|
 | Mini-tests de préparation | Résultat enregistré dans Brio avant la fermeture du mardi à 23 h 59 et difficulté ou observation personnelle non notée à reprendre pendant la séance |
-| Portfolio GitHub individuel | Dépôt personnel créé une fois par l'équipe enseignante, dossiers ajoutés semaine après semaine, productions personnelles issues des lectures, exercices et activités, README, vérifications, bilan final et commits réguliers |
+| Portfolio GitHub individuel | Dépôt privé `portfolio-stt4230-IDUL` créé une fois par l'équipe enseignante à partir du modèle A2026, cloné par la personne étudiante, dossiers ajoutés semaine après semaine, productions personnelles issues des lectures, exercices et activités, README, vérifications, bilan final et commits réguliers |
 | Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
 | Défi 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
 | Défi 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `docs/ai-log.md` ou fichier de réflexion IA |

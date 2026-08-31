@@ -1,0 +1,8 @@
+---
+title: "Laboratoire 1 - Prise en main du portfolio"
+format:
+  html:
+    embed-resources: true
+---
+
+{{< include modules/01-structuration-projets/laboratoire.qmd >}}

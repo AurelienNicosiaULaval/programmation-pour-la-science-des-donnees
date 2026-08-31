@@ -7,6 +7,8 @@ format:
 
 Cette page regroupe les procédures de dépannage et les ressources de rattrapage.
 
+Pour installer R, RStudio ou Positron, Git et Quarto, puis configurer GitHub avec SSH, commencer par le guide [Installation et vérification technique](installation.qmd).
+
 ## Diagnostic initial
 
 Deux diagnostics non notés ont des rôles distincts.
@@ -21,6 +23,8 @@ Avant la première séance, l’[autodiagnostic des bases de R](diagnostic-r.qmd
 - lecture d’un message d’erreur et vérification d’un résultat.
 
 Pendant la mise en route, le diagnostic technique de la semaine 1 vérifie l’accès à R, Git, Quarto et à l’éditeur de code. Ces outils sont ensuite travaillés dans le cours.
+
+Les commandes à exécuter et les résultats attendus sont regroupés dans la section [Vérification technique complète](installation.qmd#vérification-technique-complète).
 
 Les diagnostics servent à orienter le soutien, pas à classer les étudiantes et étudiants. Le [parcours de mise à niveau des bases de R](ressources/mise-a-niveau-r.qmd) propose une révision ciblée selon le résultat.
 

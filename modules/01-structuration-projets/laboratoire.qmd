@@ -7,122 +7,96 @@ format:
 
 ## Objectif du laboratoire
 
-Mettre en place un dépôt de portfolio minimal, documenté et versionné. Le laboratoire n’exige pas une analyse statistique. Il installe l’espace de travail qui servira pendant la session.
+Cloner le dépôt privé de portfolio préparé par l'équipe enseignante, comprendre la structure fournie, produire une première trace personnelle et synchroniser les premiers commits.
+
+La personne étudiante ne crée pas un nouveau dépôt GitHub. Elle travaille dans la copie privée du modèle qui lui a été attribuée sous le nom `portfolio-stt4230-IDUL`.
 
 ## Résultat attendu
 
 À la fin du laboratoire, le dépôt contient au minimum:
 
 ```text
-portfolio-stt4230/
+portfolio-stt4230-IDUL/
   README.md
   .gitignore
-  docs/
-    ai-log.md
-  modules/
+  portfolio-stt4230.Rproj
+  semaines/
     semaine-01/
-      .gitkeep
-      journal.qmd
+      README.md
   scripts/
-    .gitkeep
     diagnostic.R
-  outputs/
-    .gitkeep
 ```
 
-La structure peut être adaptée, mais le README doit expliquer l’organisation réelle du dépôt.
+Le modèle fournit déjà `README.md`, `.gitignore`, `portfolio-stt4230.Rproj` et `semaines/semaine-01/README.md`. La personne étudiante complète ces fichiers et ajoute `scripts/diagnostic.R`.
 
-## Étape 1 - Créer ou ouvrir le dépôt
+## Étape 1 - Repérer le dépôt attribué
 
-Option A: dépôt déjà créé sur GitHub.
+1. Se connecter à GitHub avec le compte communiqué à l'équipe enseignante.
+2. Ouvrir l'organisation `STT-4230-6230`.
+3. Repérer le dépôt privé `portfolio-stt4230-VOTRE-IDUL`.
+4. Vérifier que l'identifiant dans le nom du dépôt est le bon.
+
+Ne pas utiliser le bouton de copie du modèle et ne pas créer un dépôt parallèle.
+
+## Étape 2 - Cloner le dépôt
+
+Depuis le dossier dans lequel vous conservez vos projets de cours, exécuter:
 
 ```bash
-git clone git@github.com:VOTRE-COMPTE/portfolio-stt4230.git
-cd portfolio-stt4230
+git clone git@github.com:STT-4230-6230/portfolio-stt4230-VOTRE-IDUL.git
+cd portfolio-stt4230-VOTRE-IDUL
+git status
+git remote -v
 ```
 
-Option B: dossier local sans dépôt Git.
+Remplacer `VOTRE-IDUL` par l'identifiant présent dans le nom du dépôt attribué.
 
-```bash
-mkdir portfolio-stt4230
-cd portfolio-stt4230
-git init
-```
+Vérifier ensuite que:
 
-Remplacer `VOTRE-COMPTE` par le nom du compte GitHub. Si l’authentification SSH n’est pas prête, travailler localement et documenter le blocage.
+- `git status` ne signale aucune modification inattendue;
+- le dépôt distant `origin` pointe vers le dépôt attribué dans l'organisation du cours;
+- les quatre fichiers du modèle sont présents.
 
-### Voie de rattrapage SSH ou GitHub
+## Si le clonage échoue
 
-Un problème de compte GitHub, de clé SSH ou d’authentification ne doit pas bloquer le travail local. Dans ce cas:
+Ne pas utiliser `git init` et ne pas créer un autre dépôt GitHub. Conserver plutôt:
 
-1. choisir l’option B et initialiser le dépôt avec `git init`;
-2. réaliser la structure, le README, le diagnostic et les commits localement;
-3. copier dans `modules/semaine-01/journal.qmd` la commande tentée et le message d’erreur complet, sans jamais copier une clé privée ou un jeton;
-4. indiquer comme prochaine action la configuration de l’accès GitHub;
-5. demander du soutien à partir de cette trace, puis associer le dépôt distant lorsque l’accès fonctionne.
+- l'adresse exacte du dépôt tenté;
+- la commande exécutée;
+- le message d'erreur complet;
+- le nom d'utilisateur GitHub utilisé;
+- l'IDUL attendu dans le nom du dépôt.
 
-Il n’est pas nécessaire de recréer le dépôt local après la résolution du problème. La synchronisation peut être régularisée sans perdre les commits déjà faits.
+Ne jamais copier une clé SSH privée ou un jeton d'accès. Pendant que l'équipe enseignante vérifie l'attribution, le diagnostic R peut être exécuté dans un fichier temporaire. Une fois l'accès corrigé, cloner le dépôt attribué et y ajouter le travail réalisé.
 
-## Étape 2 - Créer la structure minimale
+## Étape 3 - Personnaliser le README
 
-```bash
-mkdir -p docs modules/semaine-01 scripts outputs
-touch .gitignore docs/ai-log.md modules/semaine-01/.gitkeep scripts/.gitkeep outputs/.gitkeep
-```
+Ouvrir `README.md` et compléter le champ `Nom` au début du fichier. Lire ensuite les sections sur le travail hebdomadaire, les jalons et les vérifications avant un commit.
 
-Ajouter dans `.gitignore`:
-
-```text
-.Rhistory
-.RData
-.Rproj.user/
-.DS_Store
-*.html
-*.log
-```
-
-Faire un premier commit qui capture seulement la structure de départ.
+Vérifier la modification:
 
 ```bash
 git status
-git add .gitignore docs/ai-log.md modules/semaine-01/.gitkeep scripts/.gitkeep outputs/.gitkeep
-git commit -m "Initialiser la structure du portfolio"
+git diff -- README.md
 ```
 
-## Étape 3 - Rédiger un README initial
+Créer un premier commit personnel:
 
-Le `README.md` doit être court, mais utile.
-
-````md
-# Portfolio STT-4230 / STT-6230
-
-Ce dépôt regroupe mes traces de travail pour le cours de programmation pour la science des données.
-
-## Structure
-
-- `modules/`: traces hebdomadaires.
-- `scripts/`: scripts R exécutables.
-- `outputs/`: sorties conservées.
-- `docs/`: conventions, bilan et journal IA lorsque pertinent.
-
-## Reproduction
-
-Les scripts doivent être exécutés depuis la racine du dépôt.
-
-```r
-source("scripts/diagnostic.R")
+```bash
+git add README.md
+git diff --staged
+git commit -m "Personnaliser le portfolio"
 ```
 
-## IA
+## Étape 4 - Ajouter le diagnostic technique
 
-Les usages significatifs de l’IA seront déclarés dans `docs/ai-log.md`.
-````
+Créer le dossier `scripts/`, puis le fichier `scripts/diagnostic.R`.
 
-Créer ou modifier ensuite le fichier `README.md` avec ce contenu.
+```bash
+mkdir -p scripts
+```
 
-## Étape 4 - Ajouter le diagnostic R
-
-Dans `scripts/diagnostic.R`, placer le code suivant.
+Placer le code suivant dans `scripts/diagnostic.R`:
 
 ```r
 # Diagnostic technique de départ pour STT-4230 / STT-6230
@@ -150,98 +124,68 @@ diagnostic <- list(
 print(diagnostic)
 ```
 
-Exécuter ensuite:
+Exécuter le script depuis la racine du dépôt:
 
 ```r
 source("scripts/diagnostic.R")
 ```
 
-Si une commande échoue, copier le message complet dans le journal de départ.
+Si une commande échoue, conserver le message complet pour la trace de la semaine 1.
 
-## Étape 5 - Rédiger le journal de départ
+## Étape 5 - Compléter la trace de la semaine 1
 
-Dans `modules/semaine-01/journal.qmd`, ajouter:
+Ouvrir `semaines/semaine-01/README.md` et remplacer les indications du modèle par une trace personnelle. Elle doit préciser:
 
-```markdown
----
-title: "Journal semaine 1"
-format:
-  html:
-    embed-resources: true
----
+- que le laboratoire de démarrage constitue le point de départ;
+- que `scripts/diagnostic.R` a été produit;
+- quelles vérifications ont réussi;
+- quelle difficulté subsiste, s'il y en a une;
+- quelle sera la prochaine action avant la semaine 2.
 
-## État de départ
-
-- R fonctionne: oui / non / à vérifier
-- Git fonctionne: oui / non / à vérifier
-- Quarto fonctionne: oui / non / à vérifier
-- GitHub fonctionne: oui / non / à vérifier
-
-## Ce que j’ai fait
-
-Décrire les fichiers créés et les commandes importantes.
-
-## Ce qui reste fragile
-
-Noter une erreur, une hésitation ou une décision à valider.
-
-## Prochaine action
-
-Indiquer la prochaine vérification à faire avant la semaine 2.
-```
+Ne pas supprimer les rubriques du modèle. Les compléter de manière concise et factuelle.
 
 ## Étape 6 - Faire un second commit lisible
 
 ```bash
 git status
-git add README.md modules/semaine-01/journal.qmd scripts/diagnostic.R
-git commit -m "Ajouter le README et le diagnostic de depart"
+git diff
+git add scripts/diagnostic.R semaines/semaine-01/README.md
+git diff --staged
+git commit -m "Ajouter le diagnostic de la semaine 1"
 ```
 
-Les messages de commit peuvent être adaptés, mais ils doivent décrire l’intention du changement. Le point important est de conserver au moins deux étapes visibles: la structure, puis la documentation et le diagnostic.
+Les messages peuvent être adaptés, mais chaque commit doit correspondre à une intention compréhensible.
 
-## Étape 7 - Pousser vers GitHub si possible
-
-Si le dépôt distant existe déjà:
+## Étape 7 - Pousser et vérifier sur GitHub
 
 ```bash
 git push
 ```
 
-Si le dépôt local doit être associé à GitHub:
+Ouvrir ensuite le dépôt sur GitHub et vérifier que les deux commits personnels et les fichiers modifiés sont visibles.
 
-```bash
-git remote add origin git@github.com:VOTRE-COMPTE/portfolio-stt4230.git
-git branch -M main
-git push -u origin main
-```
+Si `git push` échoue, ne pas supprimer le dépôt local ni recommencer le travail. Conserver les commits locaux, noter le message complet dans `semaines/semaine-01/README.md` et demander de l'aide avec les faits observés.
 
-Si `git push` échoue, ne pas effacer le dépôt local. Noter le message d’erreur complet et consulter [Ressources](ressources.qmd).
-
-## Ce qui doit être terminé, et ce qui peut être régularisé
+## Ce qui doit être terminé
 
 Avant de quitter le laboratoire, chaque personne doit avoir:
 
-- un dépôt Git local ouvert depuis sa racine;
-- la structure minimale, un README et le journal de semaine 1;
-- un diagnostic exécuté, ou une erreur précise consignée;
-- au moins un commit local lisible;
-- une trace du blocage si GitHub ou SSH ne fonctionne pas.
+- cloné le dépôt privé qui lui a été attribué, ou documenté précisément le problème d'accès;
+- complété son nom dans le `README.md`;
+- ajouté et exécuté `scripts/diagnostic.R`, ou documenté son erreur;
+- complété `semaines/semaine-01/README.md`;
+- créé au moins un commit personnel lisible;
+- poussé ses commits, ou documenté précisément le blocage.
 
-Peuvent être régularisés après la séance:
-
-- le second commit si le dépannage a occupé une partie importante du laboratoire;
-- la configuration SSH;
-- l’association du dépôt local à GitHub et le premier `git push`.
-
-Ces éléments de rattrapage doivent être repris avant le début du laboratoire de la semaine 2. La synchronisation GitHub demeure distincte de la réussite du travail local.
+Le second commit et la configuration SSH peuvent être régularisés après la séance si un problème technique réel a été documenté.
 
 ## Vérification finale
 
 Avant de quitter:
 
+- `git remote -v` pointe vers le dépôt attribué;
 - `git status` ne contient pas de surprise;
-- le dépôt contient au moins un commit local;
-- le README explique la structure;
-- le journal semaine 1 mentionne les blocages réels;
-- aucun secret, jeton d’accès ou fichier confidentiel n’a été ajouté.
+- le `README.md` identifie la personne étudiante;
+- la trace de semaine 1 correspond au travail réellement effectué;
+- aucun secret, jeton d'accès ou fichier confidentiel n'a été ajouté;
+- les commits personnels sont visibles sur GitHub, lorsque la synchronisation fonctionne.

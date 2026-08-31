@@ -538,28 +538,28 @@ Une belle visualisation sans code, sans données documentées ni procédure de r
 
 ## Activité guidée du premier laboratoire
 
-Aujourd'hui, l'objectif réaliste est de créer une première trace locale et de comprendre son état.
+Aujourd'hui, l'objectif réaliste est de cloner le dépôt privé attribué, d'y créer une première trace personnelle et de comprendre son état.
 
 ::: {.git-flow}
-<div class="git-flow__step"><strong>1. Ouvrir</strong><span>Créer ou cloner le dossier du portfolio.</span></div>
-<div class="git-flow__step"><strong>2. Structurer</strong><span>Ajouter README, dossiers et <code>.gitignore</code>.</span></div>
+<div class="git-flow__step"><strong>1. Cloner</strong><span>Récupérer <code>portfolio-stt4230-IDUL</code>.</span></div>
+<div class="git-flow__step"><strong>2. Personnaliser</strong><span>Compléter le README et la trace de semaine 1.</span></div>
 <div class="git-flow__step"><strong>3. Vérifier</strong><span>Exécuter le diagnostic R, Git et Quarto.</span></div>
 <div class="git-flow__step"><strong>4. Commiter</strong><span>Conserver une étape lisible localement.</span></div>
 <div class="git-flow__step"><strong>5. Synchroniser</strong><span>Pousser vers GitHub si l'accès est prêt.</span></div>
 :::
 
-Si GitHub ou SSH bloque, le travail local et les commits locaux demeurent valables. Consigner la commande, le message complet et la prochaine action dans le journal de semaine 1.
+Si le clonage bloque, ne pas créer un dépôt parallèle. Consigner la commande, le message complet, le compte GitHub utilisé et l'IDUL attendu. Si seul l'envoi bloque après le clonage, les commits locaux demeurent valables.
 
 ## Démonstration: le minimum à savoir lire
 
 ~~~~bash
-# Depuis la racine du dépôt
+# Après avoir cloné le dépôt attribué et ouvert sa racine
 git status
 
 # Après une modification volontaire de README.md
 git add README.md
 git diff --staged
-git commit -m "Ajouter le README initial du portfolio"
+git commit -m "Personnaliser le portfolio"
 
 # Seulement lorsque le dépôt distant est configuré et que l'accès fonctionne
 git push
@@ -570,7 +570,7 @@ git push
 - Où se trouve mon dépôt local?
 - Quel fichier vais-je réellement committer?
 - Qu'est-ce que mon message de commit explique?
-- Est-ce que la synchronisation GitHub est réglée, ou ai-je une trace exacte du blocage?
+- Est-ce que je travaille bien dans le dépôt attribué, et la synchronisation GitHub est-elle réglée?
 
 ## Si quelque chose bloque
 

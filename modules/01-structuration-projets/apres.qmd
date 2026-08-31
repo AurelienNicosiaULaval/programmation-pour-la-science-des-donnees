@@ -13,7 +13,7 @@ Stabiliser le dépôt de départ avant la semaine 2. Le but n’est pas de rendr
 
 1. Relire le `README.md` comme si une autre personne devait comprendre le dépôt.
 2. Relancer `source("scripts/diagnostic.R")` depuis la racine du dépôt.
-3. Corriger le journal de départ pour qu’il reflète l’état réel de l’environnement.
+3. Corriger `semaines/semaine-01/README.md` pour qu’il reflète l’état réel de l’environnement.
 4. Vérifier `git status`.
 5. Faire un commit si des fichiers ont été modifiés.
 6. Pousser vers GitHub si l’authentification fonctionne.
@@ -23,7 +23,7 @@ Si SSH ou GitHub est encore inaccessible, conserver les commits locaux et demand
 
 ## Trace minimale à conserver
 
-Le dossier `modules/semaine-01/` doit contenir un journal avec:
+Le fichier `semaines/semaine-01/README.md` doit indiquer:
 
 - ce qui fonctionne;
 - ce qui ne fonctionne pas;
@@ -33,7 +33,7 @@ Le dossier `modules/semaine-01/` doit contenir un journal avec:
 
 ## Réflexion courte
 
-Répondre dans le journal:
+Répondre dans la trace de la semaine 1:
 
 - Qu’est-ce que je peux maintenant reproduire sans aide?
 - Quelle partie de mon environnement reste incertaine?
@@ -42,4 +42,4 @@ Répondre dans le journal:
 
 ## Préparation de la semaine 2
 
-La semaine 2 portera sur la structure de projet, Git, GitHub et les chemins relatifs. Avant cette séance, le dépôt portfolio devrait être accessible localement, même si la synchronisation GitHub n’est pas encore réglée.
+La semaine 2 portera sur les bases de R, les structures de données et les fichiers. Avant cette séance, le dépôt portfolio attribué doit être accessible localement et la personne étudiante doit avoir terminé la lecture de la semaine 2 ainsi que le mini-test 1 dans Brio avant le mardi 8 septembre à 23 h 59.

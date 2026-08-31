@@ -433,7 +433,7 @@ Sources internes: calendrier.qmd; plan-cours.qmd. Sources institutionnelles: fic
 <div class="first-steps">
 <div><span>01</span><h3>Vérifier vos bases</h3><p>Faire l'autodiagnostic R et choisir une cible de mise à niveau si nécessaire.</p></div>
 <div><span>02</span><h3>Préparer l'atelier</h3><p>R, Positron ou RStudio, Quarto, Git, GitHub et SSH lorsque possible.</p></div>
-<div><span>03</span><h3>Créer une première trace</h3><p>README initial et journal de départ dans le dépôt demandé.</p></div>
+<div><span>03</span><h3>Créer une première trace</h3><p>Cloner le dépôt attribué, compléter le README et documenter la semaine 1.</p></div>
 </div>
 
 <div class="next-class"><span>Prochaine séance · 9 septembre</span><strong>Bases de R, structures de données et fichiers</strong><p>Lire la semaine 2 et terminer le mini-test 1 dans Brio avant le mardi 8 septembre à 23 h 59.</p></div>

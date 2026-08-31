@@ -9,12 +9,12 @@ Cette page regroupe les ressources utiles pour le cours.
 
 ## R et environnement
 
-- R.
-- Positron.
-- RStudio comme solution de repli.
-- Quarto.
-- Git.
-- GitHub.
+- [R](https://cran.r-project.org/).
+- [Positron](https://positron.posit.co/download.html).
+- [RStudio Desktop](https://posit.co/downloads/).
+- [Quarto](https://quarto.org/docs/get-started/).
+- [Git](https://git-scm.com/install/).
+- [GitHub](https://github.com/).
 
 ## Programmation et science des données
 
@@ -28,6 +28,7 @@ Cette page regroupe les ressources utiles pour le cours.
 ## Ressources du cours
 
 - [Démarrage](demarrage.qmd)
+- [Installation et vérification technique](installation.qmd)
 - [Données autorisées](donnees.qmd)
 - [Dépendances R](dependances.qmd)
 - [Soutien technique](soutien-technique.qmd)

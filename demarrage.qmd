@@ -24,6 +24,8 @@ Préparer l’environnement suivant avant ou pendant le premier laboratoire:
 | SSH GitHub | Clé SSH configurée lorsque possible | `ssh -T git@github.com` |
 | Interface R | Positron ou RStudio | ouverture d’un projet R |
 
+Si un outil manque ou si une commande échoue, suivre le guide [Installation et vérification technique](installation.qmd). Il présente les étapes pour Windows, macOS et Linux, puis une vérification complète de l'environnement.
+
 Pour choisir l’interface qui vous convient et repérer les équivalences utiles, consulter la capsule [RStudio ou Positron?](rstudio-positron.qmd). Les deux environnements sont acceptés dans le cours.
 
 Si une étape bloque, noter le message exact et consulter [Soutien technique](soutien-technique.qmd).
@@ -44,15 +46,19 @@ Avant la séance:
 
 ## GitHub
 
-L'équipe enseignante crée un dépôt personnel pour chaque personne inscrite à partir du modèle minimal privé A2026. Le même dépôt est utilisé pendant toute la session. Les commits doivent être réguliers et lisibles.
+Avant le premier laboratoire, l'équipe enseignante crée un dépôt privé pour chaque personne inscrite à partir du modèle `portfolio-stt4230-a2026-template`. Le dépôt est nommé `portfolio-stt4230-IDUL`, où `IDUL` correspond à l'identifiant ULaval de la personne étudiante. Le même dépôt est utilisé pendant toute la session.
+
+La personne étudiante doit cloner le dépôt qui lui a été attribué. Elle ne doit pas créer un dépôt parallèle ni utiliser `git init` pour remplacer le dépôt du cours.
 
 Exemple de dépôt cloné avec SSH:
 
 ```bash
-git clone git@github.com:STT-4230-6230/VOTRE-DEPOT.git
-cd VOTRE-DEPOT
+git clone git@github.com:STT-4230-6230/portfolio-stt4230-VOTRE-IDUL.git
+cd portfolio-stt4230-VOTRE-IDUL
 git status
 ```
+
+Remplacer `VOTRE-IDUL` par l'identifiant utilisé dans le nom du dépôt attribué. Si le dépôt n'est pas visible ou si le clonage échoue, conserver le message d'erreur complet et demander à l'équipe enseignante de vérifier l'accès. Ne jamais copier une clé privée ou un jeton d'accès dans une demande d'aide.
 
 La configuration SSH évite de manipuler des mots de passe ou jetons dans les scripts. Elle doit être testée avant les remises.
 
@@ -99,6 +105,8 @@ Une entrée hebdomadaire minimale contient généralement:
 
 Consulter les [consignes complètes du portfolio](portfolio.qmd) avant le premier jalon.
 
+Le clonage et la première personnalisation du dépôt sont décrits dans le [laboratoire 1](laboratoire-semaine-01.qmd).
+
 ## IA
 
 Vérifier le statut d’IA pour chaque tâche. Si l’IA est utilisée de façon significative, documenter l’usage dans `docs/ai-log.md`.
@@ -106,6 +114,7 @@ Vérifier le statut d’IA pour chaque tâche. Si l’IA est utilisée de façon
 ## Où trouver de l’aide
 
 - [Autodiagnostic des bases de R](diagnostic-r.qmd).
+- [Installation et vérification technique](installation.qmd).
 - [Mise à niveau des bases de R](ressources/mise-a-niveau-r.qmd).
 - Page [Soutien technique](soutien-technique.qmd).
 - Canal officiel du cours.

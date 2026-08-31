@@ -53,7 +53,7 @@ format:
 <tr>
 <th scope="row"><span class="week-label">S1</span><time datetime="2026-09-02">31 août<br>au 6 sept.</time></th>
 <td><span class="calendar-date">31 août</span><span class="event event--prepare">Ouvrir le module Brio, lire la semaine 1 et prendre R en main.</span></td>
-<td><span class="calendar-date">1 sept.</span><span class="event event--prepare">Préparer le dépôt personnel et noter une première question.</span></td>
+<td><span class="calendar-date">1 sept.</span><span class="event event--prepare">Vérifier l'accès au compte GitHub et noter une première question technique.</span></td>
 <td><span class="calendar-date">2 sept.</span><span class="event event--class">S1 · Présentation du cours, R et GitHub.</span></td>
 <td><span class="calendar-date">3 au 6 sept.</span><span class="event event--after">Créer la première trace du portfolio. Départ non noté.</span></td>
 </tr>

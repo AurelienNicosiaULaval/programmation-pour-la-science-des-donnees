@@ -1,0 +1,229 @@
+---
+title: "Installation et vérification technique"
+description: "Installer et vérifier R, RStudio ou Positron, Git, Quarto, GitHub et SSH"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page sert avant la première séance et lorsqu'un outil manque pendant le laboratoire. Il n'est pas nécessaire de tout réinstaller si les vérifications réussissent.
+
+## Environnement requis
+
+| Élément | Exigence du cours |
+|---|---|
+| R | Installation locale fonctionnelle |
+| Interface | Positron ou RStudio; les deux sont acceptés |
+| Git | Installation locale reconnue dans le terminal et dans l'interface choisie |
+| Quarto | Commande `quarto` fonctionnelle |
+| GitHub | Compte actif correspondant au nom d'utilisateur communiqué à l'équipe enseignante |
+| SSH | Connexion à GitHub configurée lorsque l'environnement le permet |
+| Package R de départ | `tidyverse` |
+
+Ordre recommandé: R, interface, Git, Quarto, compte GitHub, SSH, puis packages R.
+
+## 1. Installer R
+
+R doit être installé avant RStudio ou Positron. Utiliser exclusivement un installateur officiel du Comprehensive R Archive Network.
+
+### Windows
+
+1. Ouvrir [R pour Windows](https://cran.r-project.org/bin/windows/base/).
+2. Télécharger l'installateur de la version courante de R.
+3. Exécuter le fichier `.exe` et conserver les options d'installation ordinaires.
+4. Fermer et rouvrir le terminal ainsi que l'interface de programmation.
+
+### macOS
+
+1. Ouvrir [R pour macOS](https://cran.r-project.org/bin/macosx/).
+2. Choisir le fichier correspondant au processeur du Mac: Apple Silicon `arm64` ou Intel `x86_64`.
+3. Ouvrir le fichier `.pkg` et suivre l'assistant d'installation.
+4. Fermer et rouvrir le terminal ainsi que l'interface de programmation.
+
+Pour connaître le processeur, ouvrir le menu Apple, puis « À propos de ce Mac ».
+
+### Linux
+
+Ouvrir [R pour Linux](https://cran.r-project.org/bin/linux/), choisir la distribution utilisée et suivre les commandes officielles correspondantes. Les commandes diffèrent entre Ubuntu, Debian, Fedora, Red Hat et les autres distributions.
+
+### Vérifier R
+
+Dans RStudio ou Positron, exécuter:
+
+```r
+R.version.string
+```
+
+Dans un terminal, essayer également:
+
+```bash
+R --version
+```
+
+Sous Windows, il est possible que R fonctionne dans RStudio ou Positron sans que la commande `R` soit immédiatement disponible dans tous les terminaux. Dans ce cas, conserver le résultat de `R.version.string` et signaler le problème de chemin au lieu de réinstaller R sans diagnostic.
+
+## 2. Installer Positron ou RStudio
+
+Une seule interface suffit. Les deux peuvent être installées sur le même ordinateur.
+
+### Option A: Positron
+
+1. Ouvrir la [page officielle de téléchargement de Positron](https://positron.posit.co/download.html).
+2. Choisir l'installateur correspondant au système et au processeur.
+3. Installer puis ouvrir Positron.
+4. Vérifier que l'interpréteur R sélectionné correspond à l'installation de R.
+
+### Option B: RStudio Desktop
+
+1. Ouvrir la [page officielle de téléchargement de RStudio Desktop](https://posit.co/downloads/).
+2. Choisir l'édition gratuite de RStudio Desktop et l'installateur correspondant au système.
+3. Installer puis ouvrir RStudio.
+4. Exécuter `R.version.string` dans la console.
+
+RStudio et Positron sont des interfaces. Leur installation ne remplace pas l'installation de R.
+
+## 3. Installer Git
+
+1. Ouvrir la [page officielle d'installation de Git](https://git-scm.com/install/).
+2. Choisir Windows, macOS ou Linux.
+3. Suivre la procédure proposée pour le système utilisé.
+4. Sous Windows, l'installation standard de Git for Windows fournit aussi Git Bash.
+5. Fermer et rouvrir le terminal, RStudio ou Positron.
+
+Vérifier dans un terminal:
+
+```bash
+git --version
+```
+
+Vérifier ensuite que l'interface choisie reconnaît Git:
+
+- RStudio: l'onglet `Git` apparaît lorsqu'un projet Git est ouvert;
+- Positron: la vue `Source Control` affiche l'état du dépôt cloné.
+
+Ne pas utiliser `Initialize Repository` pour le portfolio du cours. Le portfolio est déjà un dépôt Git et doit être cloné depuis GitHub.
+
+## 4. Installer Quarto
+
+Positron et certaines versions de RStudio peuvent déjà fournir une intégration de Quarto. Il faut néanmoins vérifier la commande avant de conclure qu'une installation séparée est nécessaire.
+
+Dans un terminal:
+
+```bash
+quarto --version
+quarto check
+```
+
+Si la commande n'est pas trouvée:
+
+1. ouvrir la [page officielle d'installation de Quarto](https://quarto.org/docs/get-started/);
+2. télécharger l'installateur Windows, macOS ou Linux;
+3. exécuter l'installateur;
+4. fermer et rouvrir le terminal ainsi que l'interface;
+5. relancer `quarto --version` et `quarto check`.
+
+## 5. Préparer le compte GitHub
+
+1. Créer un compte sur [GitHub](https://github.com/) si nécessaire.
+2. Vérifier l'adresse de courriel du compte.
+3. Activer une méthode d'authentification à deux facteurs lorsque GitHub la demande.
+4. Communiquer à l'équipe enseignante le nom d'utilisateur GitHub exact.
+5. Accepter l'invitation au dépôt `portfolio-stt4230-IDUL`.
+
+L'IDUL et le nom d'utilisateur GitHub ne sont pas nécessairement identiques. Ne pas créer un deuxième compte pour contourner une erreur d'attribution.
+
+## 6. Configurer SSH pour GitHub
+
+Avant de créer une clé, vérifier si une clé existe déjà:
+
+```bash
+ls -al ~/.ssh
+```
+
+Ne pas écraser une clé existante sans comprendre son usage. Si aucune clé appropriée n'existe, suivre la documentation GitHub pour [générer une clé SSH et l'ajouter à l'agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
+La commande de création recommandée par GitHub est:
+
+```bash
+ssh-keygen -t ed25519 -C "VOTRE-COURRIEL-GITHUB"
+```
+
+Choisir une phrase secrète et conserver l'emplacement proposé, sauf si une autre clé utilise déjà ce nom.
+
+Ajouter ensuite la clé publique au compte GitHub en suivant [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh):
+
+1. afficher ou copier le contenu du fichier qui se termine par `.pub`;
+2. ouvrir les paramètres GitHub;
+3. choisir `SSH and GPG keys`;
+4. choisir `New SSH key`;
+5. coller uniquement la clé publique.
+
+Ne jamais transmettre ni copier le fichier de clé privée. Le fichier public se termine normalement par `.pub`.
+
+Tester la connexion:
+
+```bash
+ssh -T git@github.com
+```
+
+Lors de la première connexion, vérifier que l'hôte demandé est bien `github.com` avant d'accepter son empreinte. Un test réussi authentifie le compte, même si GitHub précise qu'il ne fournit pas d'accès shell interactif.
+
+## 7. Installer le package R de départ
+
+Dans la console R:
+
+```r
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+La première commande n'est nécessaire que si le package n'est pas déjà installé. Les autres packages seront ajoutés lorsqu'ils deviendront utiles. Ne pas installer une longue liste de packages sans consigne.
+
+## Vérification technique complète
+
+Dans un terminal:
+
+```bash
+git --version
+quarto --version
+quarto check
+ssh -T git@github.com
+```
+
+Dans RStudio ou Positron:
+
+```r
+R.version.string
+Sys.which(c("git", "quarto", "ssh"))
+library(tidyverse)
+```
+
+| Vérification | Résultat attendu |
+|---|---|
+| `R.version.string` | Une version de R est affichée |
+| `git --version` | Une version de Git est affichée |
+| `quarto --version` | Une version de Quarto est affichée |
+| `quarto check` | L'installation principale de Quarto est indiquée comme fonctionnelle |
+| `ssh -T git@github.com` | Le compte GitHub est authentifié |
+| `library(tidyverse)` | Le package se charge sans erreur |
+
+La vérification du dépôt attribué se poursuit ensuite dans le [laboratoire 1](laboratoire-semaine-01.qmd).
+
+## Si une vérification échoue
+
+1. Ne pas tout réinstaller immédiatement.
+2. Identifier la première commande qui échoue.
+3. Copier le message d'erreur complet.
+4. Noter le système, l'interface utilisée et la commande exécutée.
+5. Fermer et rouvrir le terminal après une installation.
+6. Relancer uniquement la vérification concernée.
+7. Consulter la page [Soutien technique](soutien-technique.qmd) ou demander de l'aide avec ces informations.
+
+## Sources officielles
+
+- R Project, [Comprehensive R Archive Network](https://cran.r-project.org/).
+- Posit, [Download Positron](https://positron.posit.co/download.html).
+- Posit, [Download RStudio Desktop](https://posit.co/downloads/).
+- Git, [Install Git](https://git-scm.com/install/).
+- Quarto, [Get Started](https://quarto.org/docs/get-started/).
+- GitHub Docs, [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).

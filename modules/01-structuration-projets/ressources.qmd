@@ -8,6 +8,7 @@ format:
 ## Ressources internes
 
 - [Démarrage étudiant](../../demarrage.qmd)
+- [Installation et vérification technique](../../installation.qmd)
 - [Portfolio GitHub individuel](../../portfolio.qmd)
 - [Soutien technique](../../soutien-technique.qmd)
 - [Politique IA](../../ia.qmd)

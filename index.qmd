@@ -124,7 +124,7 @@ format:
   </div>
   <div class="stt-home-info-card">
     <h2>Portfolio et GitHub</h2>
-    <p>Un dépôt personnel est créé une fois au début de la session. Les lectures, exercices, séances, défis, projets et rétroactions alimentent ensuite des productions personnelles organisées semaine après semaine.</p>
+    <p>Un dépôt privé <code>portfolio-stt4230-IDUL</code> est créé par l'équipe enseignante à partir du modèle du cours, puis cloné au premier laboratoire. Les lectures, exercices, séances, défis, projets et rétroactions alimentent ensuite des productions personnelles organisées semaine après semaine.</p>
     <p>GitHub sert à conserver le code, les notes, les vérifications et les améliorations. Les énoncés et les corrigés du cours ne sont pas copiés dans le portfolio.</p>
   </div>
   <div class="stt-home-info-card">

@@ -8,7 +8,7 @@ format:
 
 ## Question du module
 
-Comment passer d’un ensemble de fichiers locaux à un projet R documenté, versionné et prêt à être enrichi pendant toute la session?
+Comment prendre en main le dépôt préparé pour le cours et produire une première trace documentée, versionnée et vérifiable?
 
 ## Rôle dans le cours
 
@@ -21,10 +21,11 @@ La semaine 1 produit une première trace dans le portfolio. Cette trace n’est 
 À la fin de la semaine, chaque personne devrait pouvoir:
 
 - vérifier que R, Git, Quarto et un éditeur de code sont accessibles;
-- créer ou préparer un dépôt GitHub personnel pour le portfolio;
-- expliquer la structure minimale du portfolio;
-- produire un `README.md` initial utile;
-- ajouter un journal de départ dans `modules/semaine-01/`;
+- cloner le dépôt privé `portfolio-stt4230-IDUL` attribué par l'équipe enseignante;
+- expliquer la structure minimale fournie par le modèle du portfolio;
+- personnaliser le `README.md` initial;
+- compléter la première trace dans `semaines/semaine-01/README.md`;
+- ajouter et exécuter `scripts/diagnostic.R`;
 - faire au moins deux commits lisibles;
 - formuler une demande d’aide technique avec les informations nécessaires.
 
@@ -33,19 +34,11 @@ La semaine 1 produit une première trace dans le portfolio. Cette trace n’est 
 | Élément | Trace attendue |
 |---|---|
 | Diagnostic technique | Résultat du diagnostic R conservé dans le portfolio ou noté dans le journal |
-| Portfolio | Dépôt `portfolio-stt4230` créé ou préparé |
-| Documentation | `README.md` initial avec objectif, structure et commandes de base |
-| Journal | `modules/semaine-01/journal.qmd` ou `journal.md` |
+| Portfolio | Dépôt privé `portfolio-stt4230-IDUL` cloné depuis l'organisation du cours |
+| Documentation | Champ `Nom` du `README.md` complété et structure du modèle comprise |
+| Trace semaine 1 | `semaines/semaine-01/README.md` complété avec le travail, la vérification et la prochaine étape |
+| Fichier produit | `scripts/diagnostic.R` ajouté et exécuté depuis la racine du dépôt |
 | Git | Au moins deux commits et, si possible, une synchronisation avec GitHub |
-
-## Déroulement
-
-| Moment | Page à utiliser | Résultat |
-|---|---|---|
-| Avant la classe | [Avant la classe](avant.qmd) | Vérifier les accès et noter les blocages |
-| Pendant la classe | [Pendant la classe](pendant.qmd) | Créer la trace de départ du portfolio |
-| Laboratoire | [Laboratoire](laboratoire.qmd) | Diagnostiquer, documenter, committer, pousser |
-| Après la classe | [Après la classe](apres.qmd) | Stabiliser le dépôt et préparer la semaine 2 |
 
 ## Place de l’IA
 

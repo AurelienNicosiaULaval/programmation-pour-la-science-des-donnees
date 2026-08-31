@@ -15,19 +15,25 @@ Temps recommandé: 30 à 45 minutes.
 
 - [Autodiagnostic des bases de R](../../diagnostic-r.qmd), à terminer avant la première séance
 - [Démarrage étudiant](../../demarrage.qmd)
-- [Portfolio GitHub individuel](../../portfolio.qmd), sections "Structure minimale", "README" et "Commits"
+- [Installation et vérification technique](../../installation.qmd), à utiliser si un outil manque ou si une vérification échoue
+- [Portfolio GitHub individuel](../../portfolio.qmd), sections "Dépôt créé au début de la session", "Travail hebdomadaire minimal" et "Commits et progression"
 - [Soutien technique](../../soutien-technique.qmd), sections "Diagnostic initial" et "Question technique efficace"
 - [Lectures du module](lectures.qmd)
 
 ## À préparer
 
 - Un compte GitHub accessible.
+- L'invitation au dépôt privé du portfolio acceptée, lorsque l'équipe enseignante l'a déjà transmise.
 - Un éditeur de code installé ou disponible: Positron, RStudio ou VS Code.
 - Une installation de R fonctionnelle.
 - Une installation de Git fonctionnelle.
-- Une installation de Quarto fonctionnelle, si elle est déjà disponible.
+- Une installation de Quarto fonctionnelle.
 
 Il n’est pas grave si tout ne fonctionne pas avant la première séance. L’objectif est de repérer les blocages tôt.
+
+Le guide [Installation et vérification technique](../../installation.qmd) donne les procédures d'installation pour chaque outil. Noter la première commande qui échoue avant de réinstaller quoi que ce soit.
+
+Ne créez pas vous-même un dépôt de remplacement. Si `portfolio-stt4230-VOTRE-IDUL` n'est pas visible dans l'organisation `STT-4230-6230`, notez votre IDUL, votre nom d'utilisateur GitHub et le message affiché afin que l'équipe enseignante puisse vérifier l'attribution.
 
 ## Diagnostic R à exécuter
 

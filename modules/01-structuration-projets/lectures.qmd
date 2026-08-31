@@ -62,8 +62,8 @@ diagnostic
 Conserver dans le portfolio:
 
 - le fichier `scripts/diagnostic.R`;
-- une note dans `modules/semaine-01/journal.qmd` ou `.md`;
-- un commit qui ajoute la structure de départ;
+- la trace complétée dans `semaines/semaine-01/README.md`;
+- un commit qui personnalise le dépôt attribué;
 - un commit qui ajoute ou corrige le diagnostic.
 
 ## Mini-test

@@ -13,26 +13,25 @@ La [grille des défis techniques](../../gabarits/grille-defis-techniques.qmd) pe
 
 ## Objectif
 
-Créer une première version utilisable du portfolio GitHub individuel.
+Prendre en main le dépôt de portfolio attribué et produire une première version personnelle vérifiable.
 
 ## Consignes
 
-Dans le dépôt `portfolio-stt4230`, produire:
+Dans le dépôt privé `portfolio-stt4230-IDUL` créé par l'équipe enseignante, produire:
 
-- une structure minimale de dossiers;
-- un `README.md` initial;
+- un `README.md` personnalisé;
 - un script `scripts/diagnostic.R`;
-- un journal dans `modules/semaine-01/`;
+- une trace complétée dans `semaines/semaine-01/README.md`;
 - au moins deux commits lisibles;
-- une synchronisation GitHub, si l’authentification est prête.
+- une synchronisation avec le dépôt attribué, si l’authentification est prête.
 
 ## Livrable attendu
 
 | Élément | Attente minimale |
 |---|---|
-| `README.md` | Décrit l’objectif du dépôt, sa structure et les commandes de base |
+| `README.md` | Identifie la personne étudiante et décrit le fonctionnement du portfolio |
 | `scripts/diagnostic.R` | Affiche la version de R, le système, le répertoire de travail, Git et Quarto |
-| `modules/semaine-01/journal.qmd` ou `.md` | Résume l’état de départ, les difficultés et la prochaine action |
+| `semaines/semaine-01/README.md` | Résume le travail, les vérifications, les difficultés et la prochaine action |
 | Git | Contient au moins deux commits avec messages compréhensibles |
 | GitHub | Dépôt poussé si l’accès est prêt, blocage documenté sinon |
 
@@ -55,4 +54,4 @@ Règle commune: le travail doit être compris, vérifié, adapté au contexte et
 
 ## Variante STT-6230
 
-Ajouter une courte note dans le journal sur une limite de la structure actuelle et une amélioration possible pour un projet collaboratif.
+Ajouter une courte note dans `semaines/semaine-01/README.md` sur une limite de la structure actuelle et une amélioration possible pour un projet collaboratif.

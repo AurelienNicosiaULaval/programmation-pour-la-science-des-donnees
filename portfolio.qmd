@@ -52,12 +52,14 @@ Le mot « correction » désigne ici une amélioration apportée à son propre t
 
 ## Dépôt créé au début de la session
 
-L'équipe enseignante crée un dépôt personnel pour chaque personne inscrite à partir du modèle minimal privé du portfolio A2026.
+Avant le premier laboratoire, l'équipe enseignante crée pour chaque personne inscrite un dépôt privé à partir du modèle `STT-4230-6230/portfolio-stt4230-a2026-template`. Le dépôt est nommé `portfolio-stt4230-IDUL`, où `IDUL` est remplacé par l'identifiant ULaval de la personne étudiante, puis l'accès est accordé à son compte GitHub.
+
+La personne étudiante ne crée pas elle-même un nouveau dépôt et n'utilise pas le bouton de copie du modèle. Pendant le premier laboratoire, elle clone le dépôt qui lui a été attribué, complète les fichiers fournis et pousse ses premiers commits.
 
 Le dépôt de départ contient seulement:
 
 ```text
-portfolio-stt4230/
+portfolio-stt4230-IDUL/
   README.md
   .gitignore
   portfolio-stt4230.Rproj
@@ -67,6 +69,8 @@ portfolio-stt4230/
 ```
 
 Il ne contient pas d'avance les dossiers des semaines 2 à 15. Chaque semaine, la personne étudiante crée le dossier nécessaire et fait évoluer la structure selon son travail réel.
+
+Pendant le premier laboratoire, la personne étudiante complète son nom dans le `README.md`, remplit `semaines/semaine-01/README.md`, ajoute son diagnostic technique et conserve ces changements dans des commits personnels lisibles.
 
 Des sous-dossiers comme `data/`, `figures/`, `R/`, `reports/`, `tests/` ou `docs/` sont ajoutés seulement lorsqu'ils deviennent utiles. Le README doit expliquer les choix d'organisation importants.
 
