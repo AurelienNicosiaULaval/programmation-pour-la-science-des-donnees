@@ -52,7 +52,7 @@ Le mot « correction » désigne ici une amélioration apportée à son propre t
 
 ## Dépôt créé au début de la session
 
-L'équipe enseignante crée un dépôt personnel pour chaque personne inscrite à partir du [modèle minimal du portfolio A2026](https://github.com/STT-4230-6230/portfolio-stt4230-a2026-template).
+L'équipe enseignante crée un dépôt personnel pour chaque personne inscrite à partir du modèle minimal privé du portfolio A2026.
 
 Le dépôt de départ contient seulement:
 

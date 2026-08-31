@@ -19,7 +19,7 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Il n'y a aucune s
 | Lectures obligatoires | [Lectures libres](lectures.qmd), section de la semaine |
 | Mini-test | Questionnaire dans Brio |
 | Exercices | Page [Exercices](exercices-consolidation.qmd) du site du cours |
-| Portfolio individuel | Dépôt personnel créé une fois par l'équipe enseignante à partir du [modèle A2026](https://github.com/STT-4230-6230/portfolio-stt4230-a2026-template) |
+| Portfolio individuel | Dépôt personnel créé une fois par l'équipe enseignante à partir du modèle privé A2026 |
 | Projet, défis et site personnel | Pages [Évaluations](evaluations.qmd) de ce site |
 
 ## Calendrier semaine par semaine

@@ -96,7 +96,7 @@ Le même dépôt personnel est utilisé pendant toute la session. Chaque semaine
 
 Les énoncés et les corrigés fournis par le cours ne sont pas copiés dans le portfolio. Un lien vers la ressource utilisée est ajouté dans le dossier de la semaine.
 
-L'équipe enseignante crée le dépôt à partir du [modèle minimal A2026](https://github.com/STT-4230-6230/portfolio-stt4230-a2026-template), qui contient seulement la semaine 1 et les fichiers nécessaires au démarrage. Les dossiers suivants sont créés progressivement par la personne étudiante.
+L'équipe enseignante crée le dépôt à partir du modèle minimal privé A2026, qui contient seulement la semaine 1 et les fichiers nécessaires au démarrage. Les dossiers suivants sont créés progressivement par la personne étudiante.
 
 ## Règles IA
 

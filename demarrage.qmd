@@ -44,7 +44,7 @@ Avant la séance:
 
 ## GitHub
 
-L'équipe enseignante crée un dépôt personnel pour chaque personne inscrite à partir du [modèle minimal A2026](https://github.com/STT-4230-6230/portfolio-stt4230-a2026-template). Le même dépôt est utilisé pendant toute la session. Les commits doivent être réguliers et lisibles.
+L'équipe enseignante crée un dépôt personnel pour chaque personne inscrite à partir du modèle minimal privé A2026. Le même dépôt est utilisé pendant toute la session. Les commits doivent être réguliers et lisibles.
 
 Exemple de dépôt cloné avec SSH:
 
