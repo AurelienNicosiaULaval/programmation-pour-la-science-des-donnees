@@ -388,6 +388,28 @@ Faire le lien avec les défis: non permise, permise et déclarée, puis intégr�
 Source interne: ia.qmd; evaluations.qmd.
 :::
 
+## L'IA du cours est construite à partir de sources vérifiées
+
+<div class="ai-build-flow" aria-label="Construction de l'assistant IA du cours en quatre étapes">
+<div class="ai-build-step ai-build-step--source"><span class="ai-build-number">01</span><h3>Contenu officiel</h3><p>Pages Quarto, politique IA, évaluations, projet, portfolio et site personnel.</p></div>
+<div class="ai-build-arrow" aria-hidden="true">→</div>
+<div class="ai-build-step ai-build-step--release"><span class="ai-build-number">02</span><h3>Sélection versionnée</h3><p>Les contenus publics approuvés sont regroupés avec leur source et leur empreinte numérique.</p></div>
+<div class="ai-build-arrow" aria-hidden="true">→</div>
+<div class="ai-build-step ai-build-step--modes"><span class="ai-build-number">03</span><h3>Modes d'aide</h3><p>Révision, exercices, rétroaction, débogage R, projet, sources et intégrité.</p></div>
+<div class="ai-build-arrow" aria-hidden="true">→</div>
+<div class="ai-build-step ai-build-step--tests"><span class="ai-build-number">04</span><h3>Revue et tests</h3><p>Fidélité aux sources, évaluations actives, confidentialité et gestion de l'incertitude.</p></div>
+</div>
+
+<div class="ai-build-contract"><span>Son contrat</span><p>Pour une règle propre au cours, le GPT cherche la source la plus précise. Si elle n'est pas vérifiable, il doit répondre: « Je ne sais pas. »</p></div>
+
+<p class="ai-build-note">La mise à jour n'est pas automatique: une nouvelle version doit être préparée, chargée, revue et testée avant sa publication.</p>
+
+::: {.notes}
+Présenter cette architecture comme une chaîne de responsabilité, pas comme une garantie que toute réponse sera exacte. Le site du cours et les consignes officielles demeurent les références. Une mise à jour du site ne modifie pas automatiquement le GPT: le paquet de connaissances doit être reconstruit, chargé dans le Builder, enregistré, puis vérifié après rechargement.
+
+Sources internes vérifiées le 1er septembre 2026 dans le projet Pedagogical AI: `README.md`; `course-applications/stt-4230/course.yml`; `content.yml`; `sources.yml`; `gpt/agent-core-stt-4230.md`; `gpt/modes/`; `tests/critical-behavior.yml`; `deployment.yml`.
+:::
+
 ## Pour obtenir de l'aide rapidement, rendez le problème visible
 
 <div class="help-layout">
