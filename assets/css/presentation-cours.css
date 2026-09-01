@@ -1192,6 +1192,10 @@
   line-height: 1.3;
 }
 
+.course-level--6230 p:not(.eyebrow) {
+  color: var(--white) !important;
+}
+
 .ai-principle {
   padding: 38px 40px;
   border-left: 10px solid var(--red);
@@ -1488,6 +1492,131 @@
   margin: 0;
   color: var(--copy) !important;
   font-size: 20px;
+}
+
+.diagnostic-activity-slide h2 {
+  margin-bottom: 34px;
+}
+
+.diagnostic-activity {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 44px;
+  align-items: stretch;
+}
+
+.diagnostic-clock {
+  display: grid;
+  min-height: 430px;
+  padding: 42px 32px 36px;
+  align-content: center;
+  justify-items: center;
+  border-radius: 18px;
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+}
+
+.diagnostic-clock strong {
+  color: var(--yellow);
+  font-size: 150px;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.8;
+}
+
+.diagnostic-clock span {
+  margin-top: 18px;
+  font-size: 33px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.diagnostic-clock small {
+  margin-top: 54px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.diagnostic-task-list {
+  display: grid;
+  align-content: stretch;
+}
+
+.diagnostic-task-list > div {
+  display: grid;
+  grid-template-columns: 66px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 22px;
+  align-content: center;
+  min-height: 136px;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--line);
+}
+
+.diagnostic-task-list > div:first-child {
+  border-top: 2px solid var(--line);
+}
+
+.diagnostic-task-list span {
+  grid-row: 1 / 3;
+  align-self: center;
+  color: var(--red);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.diagnostic-task-list h3 {
+  margin: 0 0 7px;
+  color: var(--navy);
+  font-size: 31px;
+  line-height: 1.08;
+}
+
+.diagnostic-task-list p {
+  margin: 0;
+  color: var(--copy) !important;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.diagnostic-task-list a,
+.diagnostic-install a {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.diagnostic-presence {
+  display: grid;
+  grid-template-columns: 235px 1fr;
+  gap: 25px;
+  align-items: center;
+  margin-top: 26px;
+  padding: 18px 25px;
+  border-left: 8px solid var(--teal);
+  background: var(--pale-teal);
+}
+
+.diagnostic-presence strong {
+  color: var(--navy);
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.diagnostic-presence span {
+  color: var(--copy);
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.diagnostic-install {
+  margin: 15px 0 0;
+  color: var(--copy) !important;
+  font-size: 17px;
+  text-align: right;
 }
 
 .closing-slide {

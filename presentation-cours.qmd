@@ -5,7 +5,9 @@ lang: fr
 format:
   revealjs:
     theme: simple
-    css: assets/css/presentation-cours.css
+    css:
+      - assets/css/presentation-cours.css
+      - assets/css/presentation-github-demo.css
     slide-number: c/t
     show-slide-number: all
     transition: fade
@@ -464,6 +466,194 @@ Sources internes: calendrier.qmd; plan-cours.qmd. Sources institutionnelles: fic
 Faire réaliser les premières vérifications en classe si le temps le permet. Pour la prochaine séance, orienter vers le module 2 et la page Démarrage étudiant.
 
 Sources internes: calendrier.qmd; demarrage.qmd.
+:::
+
+## 25 minutes pour vérifier vos bases en R {.diagnostic-activity-slide}
+
+<div class="diagnostic-activity">
+<div class="diagnostic-clock"><strong>25</strong><span>minutes</span><small>Autodiagnostic R</small></div>
+<div class="diagnostic-task-list">
+<div><span>01</span><h3>Ouvrez l'autodiagnostic</h3><p><a href="diagnostic-r.html" target="_blank" rel="noopener">Autodiagnostic des bases de R</a></p></div>
+<div><span>02</span><h3>Répondez individuellement</h3><p>Notez les notions à revoir et le premier blocage rencontré.</p></div>
+<div><span>03</span><h3>Gardez votre bilan ouvert</h3><p>Nous l'utiliserons pour choisir la bonne mise à niveau.</p></div>
+</div>
+</div>
+
+<div class="diagnostic-presence"><strong>Pendant l'activité</strong><span>Je passe dans la classe pour vérifier votre environnement R et répondre aux blocages.</span></div>
+
+<p class="diagnostic-install">Un outil manque? Consultez <a href="installation.html" target="_blank" rel="noopener">Installation et vérification technique</a>.</p>
+
+::: {.notes}
+Lancer un minuteur de 25 minutes et demander à tout le monde d'ouvrir l'autodiagnostic. Pendant l'activité, circuler dans la classe pour vérifier que R démarre, que la personne peut exécuter du code dans son éditeur et qu'elle conserve le message complet lorsqu'une erreur survient. Diriger les problèmes d'installation vers la page « Installation et vérification technique », sans commencer encore la configuration GitHub.
+
+Après 20 minutes, annoncer qu'il reste 5 minutes. À la fin, demander à chacun de conserver son bilan et d'identifier une notion à revoir. Enchaîner ensuite avec le modèle mental Git et GitHub, puis la démonstration du portfolio.
+
+Sources internes: diagnostic-r.qmd; demarrage.qmd; installation.qmd.
+:::
+
+## GitHub relie votre travail local à une trace visible {.github-demo-slide background-color="#eef8fc"}
+
+::: {.github-mental-model}
+<div class="github-mental-model__node github-mental-model__node--local">
+  <span>1</span>
+  <strong>Mon ordinateur</strong>
+  <small>Je modifie et je vérifie les fichiers.</small>
+</div>
+<div class="github-mental-model__arrow">
+  <strong>git push</strong>
+  <span>→</span>
+  <small>j'envoie mes commits</small>
+</div>
+<div class="github-mental-model__node github-mental-model__node--remote">
+  <span>2</span>
+  <strong>GitHub</strong>
+  <small>Je retrouve la copie distante et son historique.</small>
+</div>
+:::
+
+::: {.github-one-sentence}
+Git enregistre l'histoire sur l'ordinateur. GitHub rend cette histoire visible en ligne.
+:::
+
+::: {.notes}
+Fixer ce modèle mental avant d'ouvrir l'interface. Insister sur le fait qu'un commit est local avant le push.
+:::
+
+## Voici le dépôt qui vous est attribué {.github-demo-slide}
+
+::: {.github-screen-layout}
+
+::: {.github-screen-frame}
+![](assets/img/github-demo/01-depot-portfolio.png){fig-alt="Page principale du portfolio de démonstration privé dans GitHub"}
+:::
+
+::: {.github-screen-legend}
+<div><span>1</span><p><strong>Nom et visibilité</strong><br>Le bon dépôt, marqué Private.</p></div>
+<div><span>2</span><p><strong>Branche main</strong><br>L'état courant du projet.</p></div>
+<div><span>3</span><p><strong>Bouton Code</strong><br>Le point de départ du clonage.</p></div>
+<div><span>4</span><p><strong>Fichiers et README</strong><br>Le contenu et sa porte d'entrée.</p></div>
+:::
+
+:::
+
+::: {.notes}
+Montrer rapidement le nom du dépôt, l'étiquette Private, la branche main, le bouton Code, la liste des fichiers et le README. Ne pas parcourir les onglets avancés à cette étape.
+
+Source visuelle: capture de l'interface GitHub du dépôt privé de démonstration STT-4230-6230/portfolio-stt4230-aunic3, réalisée le 1er septembre 2026.
+:::
+
+## Le bouton Code donne l'adresse à cloner {.github-demo-slide}
+
+::: {.github-screen-layout .github-screen-layout--clone}
+
+::: {.github-screen-frame}
+![](assets/img/github-demo/02-code-clone-ssh.png){fig-alt="Menu Code de GitHub avec l'option SSH sélectionnée"}
+:::
+
+::: {.github-screen-legend}
+<div><span>1</span><p><strong>Local</strong><br>Nous voulons une copie sur l'ordinateur.</p></div>
+<div><span>2</span><p><strong>SSH</strong><br>La méthode privilégiée dans le cours.</p></div>
+<div><span>3</span><p><strong>Copier l'adresse</strong><br>Elle sera collée après <code>git clone</code>.</p></div>
+:::
+
+:::
+
+::: {.github-callout}
+On clone le dépôt attribué. On ne crée pas un deuxième dépôt et on ne fait pas <code>git init</code>.
+:::
+
+::: {.notes}
+Faire remarquer que le menu propose plusieurs méthodes. Sélectionner SSH et copier l'adresse. Le dépôt étudiant portera le sigle de son cours et son IDUL.
+
+Source visuelle: capture du menu Code de GitHub dans le dépôt privé de démonstration, réalisée le 1er septembre 2026.
+:::
+
+## Cloner crée la copie locale du bon dépôt {.github-demo-slide}
+
+::: {.github-clone-visual}
+<div class="github-clone-visual__repo">
+  <span>GitHub</span>
+  <div class="github-clone-visual__choices"><code>portfolio-stt4230-IDUL</code><i>ou</i><code>portfolio-stt6230-IDUL</code></div>
+  <small>le dépôt privé attribué selon votre inscription</small>
+</div>
+<div class="github-clone-visual__command">
+  <span>↓</span>
+  <code>git clone [adresse SSH copiée dans GitHub]</code>
+</div>
+<div class="github-clone-visual__folder">
+  <span>Ordinateur</span>
+  <strong>un nouveau dossier de projet</strong>
+  <small>avec les fichiers et l'historique Git</small>
+</div>
+:::
+
+::: {.github-callout .github-callout--soft}
+Après le clonage, on ouvre ce dossier comme projet dans RStudio ou Positron.
+:::
+
+::: {.notes}
+Remplacer verbalement IDUL par AUNIC3 pendant la démonstration de l'enseignant. Les personnes étudiantes utilisent le dépôt correspondant à leur inscription, STT-4230 ou STT-6230.
+:::
+
+## Le changement suit toujours le même cycle {.github-demo-slide}
+
+::: {.github-cycle}
+<div><span>1</span><strong>Modifier</strong><small>Compléter le README</small></div>
+<div><span>2</span><strong>Vérifier</strong><small>Lire le changement</small></div>
+<div><span>3</span><strong>Committer</strong><small>Expliquer l'intention</small></div>
+<div><span>4</span><strong>Pousser</strong><small>Envoyer vers GitHub</small></div>
+<div><span>5</span><strong>Confirmer</strong><small>Voir la nouvelle trace</small></div>
+:::
+
+::: {.github-commit-message}
+<span>Message attendu</span>
+<code>Personnaliser le portfolio</code>
+:::
+
+::: {.notes}
+Ne pas détailler toutes les commandes ici. Cette diapositive annonce simplement ce que la démonstration va rendre visible.
+:::
+
+## Un commit devient une ligne d'histoire {.github-demo-slide}
+
+::: {.github-history-layout}
+
+::: {.github-screen-frame}
+![](assets/img/github-demo/03-historique-commits.png){fig-alt="Historique GitHub du portfolio avant la démonstration"}
+:::
+
+::: {.github-history-points}
+<div><span>Message</span><strong>Quelle intention?</strong></div>
+<div><span>Auteur</span><strong>Qui a enregistré?</strong></div>
+<div><span>Identifiant</span><strong>Quel état précis?</strong></div>
+:::
+
+:::
+
+::: {.github-callout .github-callout--success}
+Après la démonstration, une deuxième ligne devra apparaître ici.
+:::
+
+::: {.notes}
+L'historique contient seulement le commit initial avant la démonstration. Revenir à cette page après le push et montrer la nouvelle ligne.
+
+Source visuelle: capture de l'historique GitHub du dépôt privé de démonstration, réalisée le 1er septembre 2026.
+:::
+
+## Regardez trois preuves pendant la démonstration {.github-demo-slide background-color="#0b4f6c"}
+
+::: {.github-proof-grid}
+<div><span>01</span><strong>Le bon dépôt</strong><p>Le nom contient le bon sigle et le bon IDUL.</p></div>
+<div><span>02</span><strong>Le bon changement</strong><p>Le README est personnalisé sans ajouter de fichier sensible.</p></div>
+<div><span>03</span><strong>La nouvelle trace</strong><p>Le commit apparaît sur GitHub après le push.</p></div>
+:::
+
+::: {.github-demo-ready}
+Démonstration réelle avec <code>portfolio-stt4230-aunic3</code>
+:::
+
+::: {.notes}
+Passer maintenant au terminal ou à RStudio/Positron. Cloner le dépôt de démonstration, personnaliser le README, vérifier, committer, pousser, puis revenir à l'historique GitHub.
 :::
 
 ## {#bienvenue-au-laboratoire .closing-slide background-color="#083d53"}
