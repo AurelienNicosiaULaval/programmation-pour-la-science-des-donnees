@@ -29,7 +29,7 @@ Configurez l'en-tête YAML avec les options professionnelles suivantes :
 ---
 title: "Rapport d'analyse météorologique du Québec"
 subtitle: "Étude descriptive des températures et précipitations"
-author: "Votre Nom (Étudiante / Étudiant STT-4230)"
+author: "Votre Nom (Étudiante / Étudiant STT-4230 / STT-6230)"
 date: today
 lang: fr
 format:

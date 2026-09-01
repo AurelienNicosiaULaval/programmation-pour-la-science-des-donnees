@@ -11,7 +11,7 @@ Les lectures préparent la matière du cours. Chaque semaine rassemble d'abord l
 
 Matière: prise en main de R, organisation du travail et GitHub.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Présentation de R](https://stt4230.rbind.io/introduction/presentation_r/).
 - [Installation de R et RStudio](https://stt4230.rbind.io/introduction/installation_r_rstudio/).
@@ -25,7 +25,7 @@ Matière: prise en main de R, organisation du travail et GitHub.
 
 Matière: bases de R, structures de données et fichiers.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Concepts de base en R](https://stt4230.rbind.io/introduction/base_r/).
 - [Structures de données en R](https://stt4230.rbind.io/manipulation_donnees/structures_r/).
@@ -40,7 +40,7 @@ Matière: bases de R, structures de données et fichiers.
 
 Matière: calculs mathématiques et statistiques en R.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Calculs mathématiques en R](https://stt4230.rbind.io/calculs/calculs_math_r/).
 - [Calculs statistiques en R](https://stt4230.rbind.io/calculs/calculs_stat_r/).
@@ -55,7 +55,7 @@ Matière: calculs mathématiques et statistiques en R.
 
 Matière: prétraitement des données.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Prétraitement de données en R](https://stt4230.rbind.io/manipulation_donnees/pretraitement_donnees_r/).
 - [Bonnes pratiques en R](https://stt4230.rbind.io/amelioration_code/bonnes_pratiques_r/).
@@ -69,7 +69,7 @@ Matière: prétraitement des données.
 
 Cette semaine permet de revoir les fiches suivantes.
 
-### Révision dans les notes de cours STT-4230
+### Révision dans les notes de cours STT-4230 / STT-6230
 
 - [Structures de données en R](https://stt4230.rbind.io/manipulation_donnees/structures_r/).
 - [Lecture et écriture dans des fichiers externes à partir de R](https://stt4230.rbind.io/manipulation_donnees/lecture_ecriture_r/).
@@ -86,7 +86,7 @@ Cette semaine permet de revoir les fiches suivantes.
 
 Matière: graphiques en R et communication visuelle.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Graphiques en R](https://stt4230.rbind.io/communication_resultats/graphiques_r/).
 - [Graphiques avec ggplot2 en R](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/).
@@ -100,7 +100,7 @@ Matière: graphiques en R et communication visuelle.
 
 Matière: bonnes pratiques, R Markdown et transition vers Quarto.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Bonnes pratiques en R](https://stt4230.rbind.io/amelioration_code/bonnes_pratiques_r/).
 - [Rédaction de documents en R Markdown](https://stt4230.rbind.io/communication_resultats/redaction_r_markdown/).
@@ -114,7 +114,7 @@ Matière: bonnes pratiques, R Markdown et transition vers Quarto.
 
 Cette semaine permet de revoir les fiches suivantes.
 
-### Révision dans les notes de cours STT-4230
+### Révision dans les notes de cours STT-4230 / STT-6230
 
 - [Prétraitement de données en R](https://stt4230.rbind.io/manipulation_donnees/pretraitement_donnees_r/).
 - [Graphiques avec ggplot2 en R](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/).
@@ -124,7 +124,7 @@ Cette semaine permet de revoir les fiches suivantes.
 
 Matière: structures de contrôle et fonctions.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Informations techniques concernant R](https://stt4230.rbind.io/programmation/infos_techniques_r/).
 - [Structures de contrôle en R](https://stt4230.rbind.io/programmation/struct_controle_r/).
@@ -139,7 +139,7 @@ Matière: structures de contrôle et fonctions.
 
 Matière: fonctions, tests, exceptions et débogage.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Fonctions en R](https://stt4230.rbind.io/programmation/fonctions_r/).
 - [Tests et exceptions en R](https://stt4230.rbind.io/programmation/tests_exceptions_r/).
@@ -154,7 +154,7 @@ Matière: fonctions, tests, exceptions et débogage.
 
 Matière: programmation orientée objet.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Programmation orientée objet en R](https://stt4230.rbind.io/programmation/oop_r/).
 - [Tests et exceptions en R](https://stt4230.rbind.io/programmation/tests_exceptions_r/).
@@ -168,7 +168,7 @@ Matière: programmation orientée objet.
 
 Matière: mesure, optimisation et introduction à la métaprogrammation.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Optimisation de temps d'exécution en R](https://stt4230.rbind.io/amelioration_code/optim_temps_r/).
 - [Métaprogrammation en R](https://stt4230.rbind.io/amelioration_code/metaprogrammation_r/).
@@ -182,7 +182,7 @@ Matière: mesure, optimisation et introduction à la métaprogrammation.
 
 Cette semaine porte sur l'utilisation et le développement de packages R.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Utilisation de packages R](https://stt4230.rbind.io/packages/utilisation_packages_r/).
 - [Développement de packages R](https://stt4230.rbind.io/packages/devel_packages_r/).
@@ -197,7 +197,7 @@ Pendant la lecture, repérer la structure minimale d'un package et la place des 
 
 Matière: reproduction, limites et conclusion.
 
-### Révision dans les notes de cours STT-4230
+### Révision dans les notes de cours STT-4230 / STT-6230
 
 - [Utilisation de packages R](https://stt4230.rbind.io/packages/utilisation_packages_r/).
 - [Développement de packages R](https://stt4230.rbind.io/packages/devel_packages_r/).
@@ -210,7 +210,7 @@ Matière: reproduction, limites et conclusion.
 
 Finalisation, publication et remise du site personnel avant le mercredi 16 décembre à 23 h 55.
 
-### Notes de cours STT-4230
+### Notes de cours STT-4230 / STT-6230
 
 - [Rédaction de documents en R Markdown](https://stt4230.rbind.io/communication_resultats/redaction_r_markdown/).
 

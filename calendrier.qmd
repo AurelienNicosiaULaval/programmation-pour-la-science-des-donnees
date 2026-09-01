@@ -5,7 +5,7 @@ format:
     embed-resources: true
 ---
 
-Le cours a lieu le mercredi, de 13 h 30 à 16 h 20. Chaque semaine associe une matière, les notes du cours STT-4230, des lectures complémentaires, des exercices et, lorsqu'il y a lieu, une évaluation.
+Le cours a lieu le mercredi, de 13 h 30 à 16 h 20. Chaque semaine associe une matière, les notes des cours STT-4230 et STT-6230, des lectures complémentaires, des exercices et, lorsqu'il y a lieu, une évaluation.
 
 Chaque semaine, le module Brio constitue le point d'entrée. Il donne accès à la matière, aux lectures, au mini-test lorsqu'il est prévu, aux exercices sur ce site et à la trace attendue dans le portfolio GitHub individuel.
 
