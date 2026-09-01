@@ -17,7 +17,7 @@ Produire un dépôt portfolio dont la structure, les dépendances et les premiè
 
 ## Consignes
 
-Dans le dépôt `portfolio-stt4230`, produire:
+Dans le dépôt personnel du portfolio, produire:
 
 - un README à jour;
 - un `.gitignore` adapté au projet;

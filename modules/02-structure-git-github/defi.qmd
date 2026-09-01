@@ -17,7 +17,7 @@ Stabiliser la structure du portfolio et produire une trace Git lisible.
 
 ## Consignes
 
-Dans le dépôt `portfolio-stt4230`, produire:
+Dans le dépôt personnel du portfolio, produire:
 
 - un `README.md` à jour;
 - un fichier `docs/conventions.md`;

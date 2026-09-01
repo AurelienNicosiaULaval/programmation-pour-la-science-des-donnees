@@ -541,7 +541,7 @@ Une belle visualisation sans code, sans données documentées ni procédure de r
 Aujourd'hui, l'objectif réaliste est de cloner le dépôt privé attribué, d'y créer une première trace personnelle et de comprendre son état.
 
 ::: {.git-flow}
-<div class="git-flow__step"><strong>1. Cloner</strong><span>Récupérer <code>portfolio-stt4230-IDUL</code>.</span></div>
+<div class="git-flow__step"><strong>1. Cloner</strong><span>Récupérer <code>portfolio-stt4230-IDUL</code> ou <code>portfolio-stt6230-IDUL</code>.</span></div>
 <div class="git-flow__step"><strong>2. Personnaliser</strong><span>Compléter le README et la trace de semaine 1.</span></div>
 <div class="git-flow__step"><strong>3. Vérifier</strong><span>Exécuter le diagnostic R, Git et Quarto.</span></div>
 <div class="git-flow__step"><strong>4. Commiter</strong><span>Conserver une étape lisible localement.</span></div>

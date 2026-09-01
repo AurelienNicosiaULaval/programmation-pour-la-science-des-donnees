@@ -52,17 +52,17 @@ Le mot « correction » désigne ici une amélioration apportée à son propre t
 
 ## Dépôt créé au début de la session
 
-Avant le premier laboratoire, l'équipe enseignante crée pour chaque personne inscrite un dépôt privé à partir du modèle `STT-4230-6230/portfolio-stt4230-a2026-template`. Le dépôt est nommé `portfolio-stt4230-IDUL`, où `IDUL` est remplacé par l'identifiant ULaval de la personne étudiante, puis l'accès est accordé à son compte GitHub.
+Avant le premier laboratoire, l'équipe enseignante crée pour chaque personne inscrite un dépôt privé à partir du modèle commun `STT-4230-6230/portfolio-stt4230-6230-a2026-template`. Le dépôt est nommé `portfolio-stt4230-IDUL` pour une inscription à STT-4230 et `portfolio-stt6230-IDUL` pour une inscription à STT-6230. Dans les deux cas, `IDUL` est remplacé par l'identifiant ULaval de la personne étudiante, puis l'accès est accordé à son compte GitHub.
 
 La personne étudiante ne crée pas elle-même un nouveau dépôt et n'utilise pas le bouton de copie du modèle. Pendant le premier laboratoire, elle clone le dépôt qui lui a été attribué, complète les fichiers fournis et pousse ses premiers commits.
 
 Le dépôt de départ contient seulement:
 
 ```text
-portfolio-stt4230-IDUL/
+portfolio-sttSIGLE-IDUL/
   README.md
   .gitignore
-  portfolio-stt4230.Rproj
+  portfolio-stt4230-6230.Rproj
   semaines/
     semaine-01/
       README.md

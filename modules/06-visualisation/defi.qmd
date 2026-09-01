@@ -17,7 +17,7 @@ Créer un graphique de distribution ou de relation propre avec `ggplot2` sur un 
 
 ## Consignes
 
-Dans votre dépôt `portfolio-stt4230` :
+Dans votre dépôt personnel du portfolio:
 
 1.  **Choisir un jeu de données** : Vous pouvez réutiliser `quakes`, employer la série canadienne `datasets::lynx` incluse avec R, reprendre les données météorologiques fictives du module 4, ou utiliser un extrait autorisé déjà présent dans les données de votre projet. Aucune de ces voies ne requiert un nouveau téléchargement.
 2.  **Programmer la figure** :

@@ -14,7 +14,7 @@ Nettoyer le dépôt portfolio pour qu’il soit compréhensible par une autre pe
 À la fin du laboratoire, le dépôt contient au minimum:
 
 ```text
-portfolio-stt4230/
+portfolio-sttSIGLE-IDUL/
   README.md
   docs/
     ai-log.md
@@ -174,7 +174,7 @@ Remplacer les chemins absolus par des chemins relatifs depuis la racine du dép�
 Exemple à éviter:
 
 ```r
-readr::read_csv("/Users/monnom/portfolio-stt4230/data/raw/fichier.csv")
+readr::read_csv("/Users/monnom/portfolio-sttSIGLE-IDUL/data/raw/fichier.csv")
 ```
 
 Exemple préférable:

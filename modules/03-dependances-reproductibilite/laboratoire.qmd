@@ -14,7 +14,7 @@ Préparer le portfolio pour le jalon 1 en documentant les dépendances, les fich
 À la fin du laboratoire, le dépôt contient au minimum:
 
 ```text
-portfolio-stt4230/
+portfolio-sttSIGLE-IDUL/
   README.md
   .gitignore
   docs/

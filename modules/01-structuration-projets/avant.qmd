@@ -33,7 +33,7 @@ Il n’est pas grave si tout ne fonctionne pas avant la première séance. L’o
 
 Le guide [Installation et vérification technique](../../installation.qmd) donne les procédures d'installation pour chaque outil. Noter la première commande qui échoue avant de réinstaller quoi que ce soit.
 
-Ne créez pas vous-même un dépôt de remplacement. Si `portfolio-stt4230-VOTRE-IDUL` n'est pas visible dans l'organisation `STT-4230-6230`, notez votre IDUL, votre nom d'utilisateur GitHub et le message affiché afin que l'équipe enseignante puisse vérifier l'attribution.
+Ne créez pas vous-même un dépôt de remplacement. Si `portfolio-stt4230-VOTRE-IDUL` ou `portfolio-stt6230-VOTRE-IDUL`, selon votre sigle d'inscription, n'est pas visible dans l'organisation `STT-4230-6230`, notez votre IDUL, votre nom d'utilisateur GitHub et le message affiché afin que l'équipe enseignante puisse vérifier l'attribution.
 
 ## Diagnostic R à exécuter
 

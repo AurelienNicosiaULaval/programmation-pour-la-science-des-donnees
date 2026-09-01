@@ -17,7 +17,7 @@ Enrichir le rapport météorologique créé au laboratoire en y intégrant du te
 
 ## Consignes
 
-Dans le fichier `reports/07-rapport-meteo.qmd` de votre dépôt `portfolio-stt4230` :
+Dans le fichier `reports/07-rapport-meteo.qmd` de votre dépôt personnel du portfolio:
 
 1.  **Ajouter du texte dynamique (Inline R code)** :
     *   Dans l'introduction ou la conclusion de votre rapport, ne tapez pas les chiffres statistiques en dur. Utilisez du code R en ligne.

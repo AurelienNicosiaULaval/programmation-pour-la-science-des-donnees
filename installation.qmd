@@ -128,7 +128,7 @@ Si la commande n'est pas trouvée:
 2. Vérifier l'adresse de courriel du compte.
 3. Activer une méthode d'authentification à deux facteurs lorsque GitHub la demande.
 4. Communiquer à l'équipe enseignante le nom d'utilisateur GitHub exact.
-5. Accepter l'invitation au dépôt `portfolio-stt4230-IDUL`.
+5. Accepter l'invitation au dépôt `portfolio-stt4230-IDUL` ou `portfolio-stt6230-IDUL`, selon le sigle d'inscription.
 
 L'IDUL et le nom d'utilisateur GitHub ne sont pas nécessairement identiques. Ne pas créer un deuxième compte pour contourner une erreur d'attribution.
 

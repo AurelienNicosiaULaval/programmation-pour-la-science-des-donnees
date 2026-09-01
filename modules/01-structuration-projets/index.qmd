@@ -21,7 +21,7 @@ La semaine 1 produit une première trace dans le portfolio. Cette trace n’est 
 À la fin de la semaine, chaque personne devrait pouvoir:
 
 - vérifier que R, Git, Quarto et un éditeur de code sont accessibles;
-- cloner le dépôt privé `portfolio-stt4230-IDUL` attribué par l'équipe enseignante;
+- cloner le dépôt privé `portfolio-stt4230-IDUL` ou `portfolio-stt6230-IDUL` attribué par l'équipe enseignante selon le sigle d'inscription;
 - expliquer la structure minimale fournie par le modèle du portfolio;
 - personnaliser le `README.md` initial;
 - compléter la première trace dans `semaines/semaine-01/README.md`;
@@ -34,7 +34,7 @@ La semaine 1 produit une première trace dans le portfolio. Cette trace n’est 
 | Élément | Trace attendue |
 |---|---|
 | Diagnostic technique | Résultat du diagnostic R conservé dans le portfolio ou noté dans le journal |
-| Portfolio | Dépôt privé `portfolio-stt4230-IDUL` cloné depuis l'organisation du cours |
+| Portfolio | Dépôt privé `portfolio-stt4230-IDUL` ou `portfolio-stt6230-IDUL` cloné depuis l'organisation du cours |
 | Documentation | Champ `Nom` du `README.md` complété et structure du modèle comprise |
 | Trace semaine 1 | `semaines/semaine-01/README.md` complété avec le travail, la vérification et la prochaine étape |
 | Fichier produit | `scripts/diagnostic.R` ajouté et exécuté depuis la racine du dépôt |

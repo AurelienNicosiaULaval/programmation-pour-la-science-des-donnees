@@ -46,19 +46,19 @@ Avant la séance:
 
 ## GitHub
 
-Avant le premier laboratoire, l'équipe enseignante crée un dépôt privé pour chaque personne inscrite à partir du modèle `portfolio-stt4230-a2026-template`. Le dépôt est nommé `portfolio-stt4230-IDUL`, où `IDUL` correspond à l'identifiant ULaval de la personne étudiante. Le même dépôt est utilisé pendant toute la session.
+Avant le premier laboratoire, l'équipe enseignante crée un dépôt privé pour chaque personne inscrite à partir du modèle commun `portfolio-stt4230-6230-a2026-template`. Le dépôt est nommé `portfolio-stt4230-IDUL` pour une inscription à STT-4230 et `portfolio-stt6230-IDUL` pour une inscription à STT-6230. Dans les deux cas, `IDUL` correspond à l'identifiant ULaval de la personne étudiante. Le même dépôt est utilisé pendant toute la session.
 
 La personne étudiante doit cloner le dépôt qui lui a été attribué. Elle ne doit pas créer un dépôt parallèle ni utiliser `git init` pour remplacer le dépôt du cours.
 
 Exemple de dépôt cloné avec SSH:
 
 ```bash
-git clone git@github.com:STT-4230-6230/portfolio-stt4230-VOTRE-IDUL.git
-cd portfolio-stt4230-VOTRE-IDUL
+git clone git@github.com:STT-4230-6230/portfolio-sttVOTRE-SIGLE-VOTRE-IDUL.git
+cd portfolio-sttVOTRE-SIGLE-VOTRE-IDUL
 git status
 ```
 
-Remplacer `VOTRE-IDUL` par l'identifiant utilisé dans le nom du dépôt attribué. Si le dépôt n'est pas visible ou si le clonage échoue, conserver le message d'erreur complet et demander à l'équipe enseignante de vérifier l'accès. Ne jamais copier une clé privée ou un jeton d'accès dans une demande d'aide.
+Remplacer `VOTRE-SIGLE` par `4230` ou `6230`, selon l'inscription, et `VOTRE-IDUL` par l'identifiant utilisé dans le nom du dépôt attribué. Si le dépôt n'est pas visible ou si le clonage échoue, conserver le message d'erreur complet et demander à l'équipe enseignante de vérifier l'accès. Ne jamais copier une clé privée ou un jeton d'accès dans une demande d'aide.
 
 La configuration SSH évite de manipuler des mots de passe ou jetons dans les scripts. Elle doit être testée avant les remises.
 

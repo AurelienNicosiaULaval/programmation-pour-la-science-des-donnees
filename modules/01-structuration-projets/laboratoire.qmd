@@ -9,17 +9,17 @@ format:
 
 Cloner le dépôt privé de portfolio préparé par l'équipe enseignante, comprendre la structure fournie, produire une première trace personnelle et synchroniser les premiers commits.
 
-La personne étudiante ne crée pas un nouveau dépôt GitHub. Elle travaille dans la copie privée du modèle qui lui a été attribuée sous le nom `portfolio-stt4230-IDUL`.
+La personne étudiante ne crée pas un nouveau dépôt GitHub. Elle travaille dans la copie privée du modèle qui lui a été attribuée sous le nom `portfolio-stt4230-IDUL` ou `portfolio-stt6230-IDUL`, selon son sigle d'inscription.
 
 ## Résultat attendu
 
 À la fin du laboratoire, le dépôt contient au minimum:
 
 ```text
-portfolio-stt4230-IDUL/
+portfolio-sttSIGLE-IDUL/
   README.md
   .gitignore
-  portfolio-stt4230.Rproj
+  portfolio-stt4230-6230.Rproj
   semaines/
     semaine-01/
       README.md
@@ -27,13 +27,13 @@ portfolio-stt4230-IDUL/
     diagnostic.R
 ```
 
-Le modèle fournit déjà `README.md`, `.gitignore`, `portfolio-stt4230.Rproj` et `semaines/semaine-01/README.md`. La personne étudiante complète ces fichiers et ajoute `scripts/diagnostic.R`.
+Le modèle fournit déjà `README.md`, `.gitignore`, `portfolio-stt4230-6230.Rproj` et `semaines/semaine-01/README.md`. La personne étudiante complète ces fichiers et ajoute `scripts/diagnostic.R`.
 
 ## Étape 1 - Repérer le dépôt attribué
 
 1. Se connecter à GitHub avec le compte communiqué à l'équipe enseignante.
 2. Ouvrir l'organisation `STT-4230-6230`.
-3. Repérer le dépôt privé `portfolio-stt4230-VOTRE-IDUL`.
+3. Repérer le dépôt privé `portfolio-stt4230-VOTRE-IDUL` ou `portfolio-stt6230-VOTRE-IDUL`, selon le sigle d'inscription.
 4. Vérifier que l'identifiant dans le nom du dépôt est le bon.
 
 Ne pas utiliser le bouton de copie du modèle et ne pas créer un dépôt parallèle.
@@ -43,13 +43,13 @@ Ne pas utiliser le bouton de copie du modèle et ne pas créer un dépôt parall
 Depuis le dossier dans lequel vous conservez vos projets de cours, exécuter:
 
 ```bash
-git clone git@github.com:STT-4230-6230/portfolio-stt4230-VOTRE-IDUL.git
-cd portfolio-stt4230-VOTRE-IDUL
+git clone git@github.com:STT-4230-6230/portfolio-sttVOTRE-SIGLE-VOTRE-IDUL.git
+cd portfolio-sttVOTRE-SIGLE-VOTRE-IDUL
 git status
 git remote -v
 ```
 
-Remplacer `VOTRE-IDUL` par l'identifiant présent dans le nom du dépôt attribué.
+Remplacer `VOTRE-SIGLE` par `4230` ou `6230`, selon l'inscription, et `VOTRE-IDUL` par l'identifiant présent dans le nom du dépôt attribué.
 
 Vérifier ensuite que:
 

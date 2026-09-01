@@ -17,7 +17,7 @@ Prendre en main le dépôt de portfolio attribué et produire une première vers
 
 ## Consignes
 
-Dans le dépôt privé `portfolio-stt4230-IDUL` créé par l'équipe enseignante, produire:
+Dans le dépôt privé `portfolio-stt4230-IDUL` ou `portfolio-stt6230-IDUL` créé par l'équipe enseignante selon le sigle d'inscription, produire:
 
 - un `README.md` personnalisé;
 - un script `scripts/diagnostic.R`;
