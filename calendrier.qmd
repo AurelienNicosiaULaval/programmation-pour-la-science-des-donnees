@@ -28,7 +28,7 @@ La semaine de lecture officielle est du 26 au 30 octobre 2026. Il n'y a aucune s
 |---:|---|---|---|---|---|
 | 1 | 2 septembre | 26 août, 16 h 20 | Présentation du cours, prise en main de R et GitHub | [Laboratoire 1](laboratoire-semaine-01.qmd); [capsule Git et GitHub](diapositives-git-github.qmd); [RStudio ou Positron?](rstudio-positron.qmd); [lecture semaine 1](lectures.qmd#semaine-01); clonage du dépôt personnel attribué; première trace | Départ du portfolio, non noté |
 | 2 | 9 septembre | 2 septembre, 16 h 20 | Bases de R, structures de données et fichiers | [Lecture semaine 2](lectures.qmd#semaine-02); [exercices: structures et fichiers](exercices/module-02-structures-fichiers.qmd); trace semaine 2 | Mini-test 1, fermeture le 8 septembre à 23 h 59 |
-| 3 | 16 septembre | 9 septembre, 16 h 20 | Calculs mathématiques et statistiques en R | [Lecture semaine 3](lectures.qmd#semaine-03); [exercices: calculs en R](exercices/module-03-calculs-r.qmd); trace semaine 3 | Mini-test 2, fermeture le 15 septembre à 23 h 59; jalon portfolio 1, 4 points |
+| 3 | 16 septembre | 9 septembre, 16 h 20 | Calculs mathématiques et statistiques en R | [Lecture semaine 3](lectures.qmd#semaine-03); [exercices: calculs en R](exercices/module-03-calculs-r.qmd); trace semaine 3 | Mini-test 2, fermeture le 15 septembre à 23 h 59; [jalon portfolio 1](portfolio.qmd#jalon-1-semaine-3-4-points), 4 points, dépôt GitHub à jour le 16 septembre à 16 h 20 |
 | 4 | 23 septembre | 16 septembre, 16 h 20 | Prétraitement des données | [Lecture semaine 4](lectures.qmd#semaine-04); [exercices: prétraitement](exercices/module-04-pretraitement-donnees.qmd); trace semaine 4 | Mini-test 3, fermeture le 22 septembre à 23 h 59; préparation au défi 1 |
 | 5 | 30 septembre | 23 septembre, 16 h 20 | Défi technique 1, puis graphiques en R | [Révision semaine 5](lectures.qmd#semaine-05); [exercices: graphiques](exercices/modules-05-06-graphiques-r.qmd); trace personnelle après le défi | [Défi technique 1](defis.qmd#defi-technique-1), 10 %, sans IA |
 | 6 | 7 octobre | 30 septembre, 16 h 20 | Suite des graphiques, bonnes pratiques et introduction aux rapports reproductibles | [Lecture semaine 6](lectures.qmd#semaine-06); [exercices: graphiques](exercices/modules-05-06-graphiques-r.qmd); trace semaine 6 | Mini-test 4, fermeture le 6 octobre à 23 h 59; [proposition du projet](projets.qmd) |
@@ -65,9 +65,11 @@ Le mini-test 6 demeure ouvert pendant la semaine de lecture, puisqu'aucune séan
 
 ## Jalons d'évaluation
 
+Les jalons du portfolio sont évalués directement dans le dépôt GitHub personnel. Les commits doivent être poussés sur GitHub avant l'échéance; aucune fiche ni aucun fichier n'est à déposer dans Brio.
+
 | Semaine | Jalon | Composante |
 |---:|---|---|
-| 3 | Jalon portfolio 1, 4 points | [Portfolio individuel](portfolio.qmd) |
+| 3 | Jalon portfolio 1, 4 points, mercredi 16 septembre à 16 h 20 | [Portfolio individuel](portfolio.qmd) |
 | 5 | Défi technique 1 | [Défis techniques](defis.qmd) |
 | 6 | Proposition du projet | [Projet d'équipe](projets.qmd) |
 | 8 | Défi technique 2 | [Défis techniques](defis.qmd) |

@@ -5,14 +5,18 @@ embed-resources: true
 
 Le portfolio GitHub individuel compte pour 20 points. Il est évalué progressivement à partir du même dépôt personnel.
 
+La personne enseignante consulte directement le dépôt GitHub dans son état à l'échéance de chaque jalon. Les changements doivent être enregistrés dans des commits et poussés sur GitHub avant cette échéance. Aucune fiche ni aucun fichier n'est à déposer dans Brio.
+
 Les traces évaluées doivent être produites par l'étudiante ou l'étudiant. Les énoncés et les corrigés fournis par le cours ne font pas partie du portfolio.
 
 ## Jalon 1, semaine 3, 4 points
 
+Échéance: mercredi 16 septembre 2026 à 16 h 20. Les traces des semaines 1 à 3 sont évaluées; la trace de semaine 3 peut être réalisée pendant la séance du 16 septembre. La [checklist du premier jalon](../portfolio.qmd#jalon-1-semaine-3-4-points) précise les éléments à vérifier.
+
 | Critère | Points | Indicateurs |
 |---|---:|---|
 | Démarrage du dépôt | 1 | dépôt accessible, README initial et structure minimale compréhensible |
-| Premières traces | 1 | productions personnelles présentes dans les semaines réellement travaillées |
+| Premières traces | 1 | au moins une production personnelle dans chacun des dossiers des semaines 1 à 3 |
 | Documentation | 1 | point de départ, fichiers produits, vérification et prochaine étape indiqués |
 | Progression Git | 1 | commits réguliers et messages compréhensibles |
 | Total | 4 |  |

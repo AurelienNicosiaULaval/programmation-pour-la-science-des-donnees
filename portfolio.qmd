@@ -15,13 +15,15 @@ Le portfolio n'est ni une collection d'énoncés ni un dossier assemblé à la f
 |---|---|
 | Pondération | 20 % |
 | Type | Individuel, cumulatif |
-| Jalon 1 | Semaine 3, 4 points |
+| Jalon 1 | Mercredi 16 septembre 2026 à 16 h 20, semaine 3, 4 points |
 | Jalon 2 | Semaine 9, 6 points |
 | Jalon 3 | Semaine 14, 10 points |
 | IA | Permise, déclarée |
-| Remise | Adresse du dépôt et identifiant du commit à évaluer |
+| Évaluation | Consultation directe du dépôt GitHub personnel par la personne enseignante, dans son état à l'échéance |
 
 Grille détaillée: [Grille d'évaluation du portfolio](gabarits/grille-portfolio.qmd).
+
+À chaque jalon, enregistrez vos changements dans des commits et poussez-les sur GitHub avant l'échéance indiquée dans Brio. Aucune fiche, aucun fichier ni identifiant de commit n'est à remettre dans Brio pour le portfolio.
 
 ## Ce qui alimente le portfolio
 
@@ -139,13 +141,28 @@ Lorsqu'une amélioration importante est apportée, conserver un commit avant et 
 
 ### Jalon 1, semaine 3, 4 points
 
-Le dépôt doit être accessible et contenir:
+Échéance: mercredi 16 septembre 2026 à 16 h 20, à la fin de la séance de semaine 3. La personne enseignante évalue directement le contenu disponible dans votre dépôt GitHub personnel à cette échéance.
 
-- un README initial;
-- les dossiers des premières semaines réellement travaillées;
-- des productions personnelles clairement identifiées;
-- un historique Git compréhensible;
-- une première vérification ou reprise documentée.
+Avant l'échéance, vérifiez les éléments suivants:
+
+- Le dépôt privé attribué par l'équipe enseignante est accessible et le `README.md` général présente votre travail et permet de retrouver les dossiers des semaines.
+- Les dossiers `semaines/semaine-01/`, `semaines/semaine-02/` et `semaines/semaine-03/` contiennent chacun au moins une production personnelle issue du cours. La trace de semaine 3 peut être réalisée pendant la séance du 16 septembre.
+- Le `README.md` de chaque semaine indique la ressource utilisée, le travail réalisé, les fichiers produits, ce qui a été vérifié et une difficulté, une question ou une prochaine étape.
+- Au moins une vérification réelle ou une amélioration de votre travail est documentée. Une trace incomplète est acceptable si la démarche, le blocage et la prochaine étape sont expliqués.
+- L'historique Git montre la progression avec des messages de commit compréhensibles. Il n'y a pas de nombre imposé de commits.
+- Les usages significatifs de l'IA sont déclarés dans `docs/ai-log.md`, lorsque pertinent.
+
+| Critère | Points |
+|---|---:|
+| Démarrage du dépôt: accès, README général et structure | 1 |
+| Premières traces: productions personnelles des semaines 1 à 3 | 1 |
+| Documentation: point de départ, fichiers, vérification et prochaine étape | 1 |
+| Progression Git: travail réparti dans le temps et messages compréhensibles | 1 |
+| Total | 4 |
+
+Ce premier jalon porte sur le démarrage et les premières traces. Il n'exige pas de site Quarto, de configuration `renv` ni d'architecture avancée. Les mêmes critères s'appliquent à STT-4230 et à STT-6230; l'approfondissement propre à STT-6230 est attendu au jalon 2 ou 3.
+
+Terminez par un `git push`, puis ouvrez votre dépôt sur GitHub pour vérifier que les derniers fichiers et commits y apparaissent. Un commit enregistré seulement sur votre ordinateur n'est pas visible pour la personne enseignante.
 
 ### Jalon 2, semaine 9, 6 points
 
@@ -214,13 +231,15 @@ Pour STT-4230, le portfolio doit montrer un travail régulier, compréhensible, 
 
 Pour STT-6230, au moins une trace ajoute une dimension technique plus approfondie, par exemple une comparaison d'approches, une validation plus formelle, une analyse de performance ou une discussion méthodologique des limites.
 
-## Remise à chaque jalon
+## Évaluation directe dans GitHub à chaque jalon {#remise-à-chaque-jalon}
 
-La remise contient:
+Le même dépôt privé attribué par l'équipe enseignante est évalué pendant toute la session. La personne enseignante consulte directement son contenu et son historique Git dans leur état à l'échéance indiquée dans Brio.
 
-- l'adresse du dépôt personnel;
-- l'identifiant du commit à évaluer;
-- le chemin vers la trace que la personne souhaite mettre en évidence;
-- la déclaration IA à jour, lorsque pertinente.
+Avant chaque échéance:
 
-Le même dépôt est utilisé pendant toute la session. Aucune archive ZIP ni nouvelle copie du dépôt n'est demandée à chaque semaine.
+- enregistrez les changements pertinents dans des commits aux messages compréhensibles;
+- poussez ces commits sur GitHub avec `git push`;
+- ouvrez le dépôt dans votre navigateur et vérifiez que les fichiers et les derniers commits sont présents;
+- vérifiez que les README permettent de retrouver les productions et que la déclaration IA est à jour, lorsque pertinente.
+
+Il n'y a aucune fiche à remplir ni aucun fichier, lien ou identifiant de commit à transmettre dans une boîte de dépôt Brio. Aucune archive ZIP ni nouvelle copie du dépôt n'est demandée.

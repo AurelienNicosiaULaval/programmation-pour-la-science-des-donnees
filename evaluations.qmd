@@ -12,7 +12,7 @@ Cette page présente les pondérations, les échéances, les traces attendues et
 | Composante | Pondération | Type | Moment | Règle IA |
 |---|---:|---|---|---|
 | Mini-tests de préparation | 10 % | Individuel | Séances 2, 3, 4, 6, 7, 9, 10, 11 et 12; ouverture dans Brio le mercredi à 16 h 20 après la séance précédente et fermeture le mardi à 23 h 59 | Permise |
-| Portfolio GitHub individuel | 20 % | Individuel cumulatif | Semaine 3: 4 points; semaine 9: 6 points; semaine 14: 10 points | Permise, déclarée |
+| Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalon 1: 16 septembre à 16 h 20, 4 points; semaine 9: 6 points; semaine 14: 10 points | Permise, déclarée |
 | Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6 et 12; remise finale et défense en semaine 14, pendant la séance du mercredi 9 décembre | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
@@ -143,6 +143,8 @@ La semaine 12 contient un seul mini-test portant sur la mesure, l'optimisation e
 ### Portfolio GitHub individuel
 
 Le portfolio GitHub individuel est évalué de façon cumulative aux semaines 3, 9 et 14 pour 4, 6 et 10 points. Il documente la progression et l'appropriation personnelle du cours à partir des lectures, des exercices, des séances, des défis, du projet et des rétroactions.
+
+La personne enseignante évalue directement le dépôt GitHub personnel dans son état à l'échéance. Les changements doivent être enregistrés dans des commits et poussés sur GitHub avant cette échéance. Aucune fiche, aucun fichier, lien ou identifiant de commit n'est à remettre dans Brio pour le portfolio. Le premier jalon porte sur les semaines 1 à 3 et son échéance est le mercredi 16 septembre 2026 à 16 h 20.
 
 Le dépôt contient uniquement le travail de l'étudiante ou de l'étudiant: code, décisions, réflexions, validations, rapports, prototypes et usages déclarés de l'IA. La [page du portfolio](portfolio.qmd) décrit le fonctionnement hebdomadaire et les exigences de chaque jalon.
 
