@@ -579,4 +579,3 @@ Le data frame lui-même.
 ::: small
 Support adapté des exemples de la semaine 2 conservés dans le site Brio de l’automne 2025. Documentation consultée le 9 septembre 2026.
 :::
-
