@@ -1,0 +1,18 @@
+---
+title: "Retours sur les lectures"
+format:
+  html:
+    embed-resources: true
+---
+
+Les diaporamas présentés en début de séance reprennent les idées essentielles des lectures, les questions du mini-test et des exemples discutés en classe. Ils sont ajoutés ici au fil des semaines.
+
+## Diaporamas disponibles
+
+| Semaine | Séance | Diaporama |
+|:--|:--|:--|
+| 2 | 9 septembre 2026 | [Des fichiers aux objets R](diaporamas/semaine-02.qmd) |
+
+Ouvrez le diaporama, puis utilisez les flèches du clavier pour avancer ou revenir en arrière. La touche Échap affiche une vue d'ensemble des diapositives.
+
+Pour retrouver les textes et les exercices associés, consultez les [lectures](lectures.qmd) et le [calendrier](calendrier.qmd).

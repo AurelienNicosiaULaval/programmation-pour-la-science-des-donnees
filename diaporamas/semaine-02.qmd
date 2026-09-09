@@ -1,0 +1,582 @@
+---
+pagetitle: "Semaine 2 : objets R et fichiers"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    theme: simple
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    transition: none
+    background-transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    chalkboard: false
+    preview-links: false
+    footer: "STT-4230 / STT-6230 · 9 septembre 2026"
+    include-in-header:
+      text: |
+        <style>
+        :root { --ink:#17303d; --navy:#083d53; --teal:#087d85; --paper:#f7fafb; --muted:#536975; --line:#c9dce1; }
+        .reveal { font-family:"Helvetica Neue",Arial,sans-serif; color:var(--ink); background:var(--paper); font-size:36px; }
+        .reveal .slides { text-align:left; }
+        .reveal .slides section { box-sizing:border-box; padding:34px 54px 54px; }
+        .reveal h1,.reveal h2,.reveal h3 { font-family:inherit; color:var(--navy); font-weight:500; text-transform:none; }
+        .reveal h2 { margin:0 0 34px; font-size:61px; line-height:1.12; letter-spacing:-.035em; }
+        .reveal h3 { font-size:36px; margin:18px 0; }
+        .reveal p,.reveal li { line-height:1.35; }
+        .reveal p { margin:17px 0; }
+        .reveal li { margin:15px 0; }
+        .reveal ul,.reveal ol { margin-left:1em; }
+        .reveal strong,.reveal b { font-weight:500; }
+        .reveal code { font-size:.88em; color:var(--navy); }
+        .reveal pre { box-sizing:border-box; width:100%; margin:20px 0; box-shadow:none; font-size:29px; line-height:1.35; }
+        .reveal pre.sourceCode { border-left:4px solid var(--teal); padding:16px 20px; background:#eaf2f4; }
+        .reveal pre code { padding:0; max-height:none; font-size:inherit; white-space:pre; }
+        .reveal .cell-output pre { padding:14px 20px; background:#fff; color:#254b5c; border-left:4px solid #b5cbd3; }
+        .reveal .cell { margin:0; }
+        .reveal table { width:100%; margin:20px 0; font-size:32px; border-collapse:collapse; }
+        .reveal table th { font-weight:500; color:var(--navy); border-bottom:2px solid var(--teal); }
+        .reveal table th,.reveal table td { padding:15px 16px; border-bottom:1px solid var(--line); }
+        .reveal table tr:last-child td { border-bottom:1px solid var(--line); }
+        .reveal a { color:var(--teal); text-decoration:underline; text-underline-offset:5px; }
+        .reveal .columns { gap:55px; }
+        .reveal .column { min-width:0; }
+        .reveal .lead { font-size:49px; line-height:1.28; max-width:1300px; }
+        .reveal .small { font-size:27px; color:var(--muted); }
+        .reveal .source { margin-top:25px; font-size:23px; color:var(--muted); }
+        .reveal .takeaway { border-top:2px solid var(--teal); margin-top:30px; padding-top:20px; font-size:37px; }
+        .reveal .hero-title { font-size:96px; line-height:1.03; letter-spacing:-.045em; margin:30px 0 36px; }
+        .reveal .hero-subtitle { color:#bbdade; font-size:41px; max-width:1120px; }
+        .reveal .hero-meta { margin-top:68px; font-size:29px; color:#d5e5e9; }
+        .reveal section.dark { color:#fff; }
+        .reveal section.dark h1,.reveal section.dark h2 { color:#fff; }
+        .reveal section.dark a { color:#bfe7e8; }
+        .reveal section.dark .small { color:#d5e5e9; }
+        .reveal section.compact table { font-size:29px; }
+        .reveal section.compact table td,.reveal section.compact table th { padding:12px 14px; }
+        .reveal section.compact pre { font-size:27px; }
+        .reveal section.refs p,.reveal section.refs li { font-size:27px; }
+        .reveal .slide-number { font-size:19px; right:22px; bottom:18px; color:#536975; background:transparent; }
+        .reveal .footer { font-size:18px; bottom:18px; color:#647e89; }
+        .reveal .progress { height:5px; color:var(--teal); }
+        .reveal .controls { color:var(--teal); }
+        .reveal .fragment { transition:none; }
+        </style>
+embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: false
+editor: source
+---
+
+```{r}
+#| label: preparation
+#| include: false
+# Bibliothèques utilisées par les démonstrations.
+library(knitr)
+library(readr)
+library(readxl)
+options(width = 75, digits = 6)
+
+# Données fictives conçues pour la séance. Aucun téléchargement au rendu.
+mesures <- data.frame(
+  site = c("QC-01", "LV-01", "QC-02"),
+  n = c(4L, 7L, 9L),
+  indice = c(2.5, 3.5, NA_real_)
+)
+
+# Fichiers de démonstration isolés dans un répertoire temporaire.
+# Le classeur Excel fictif est fourni dans le dossier donnees du diaporama.
+dossier_demo <- tempfile("stt4230-semaine02-")
+dir.create(dossier_demo)
+fichier_csv <- file.path(dossier_demo, "mesures.csv")
+fichier_excel <- file.path(dossier_demo, "mesures.xlsx")
+fichier_rds <- file.path(dossier_demo, "mesures.rds")
+lignes_csv <- c("site;n;indice", "QC-01;4;2,5", "LV-01;7;3,5", "QC-02;9;.")
+writeLines(lignes_csv, fichier_csv, useBytes = TRUE)
+file.copy("donnees/mesures.xlsx", fichier_excel, overwrite = TRUE)
+
+# Fonction d'affichage seulement : toutes les valeurs proviennent de R.
+tableau <- function(x) knitr::kable(x, format = "html", escape = TRUE, row.names = FALSE)
+```
+
+## {#ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Des fichiers<br>aux objets R</h1>
+
+<p class="hero-subtitle">Comprendre ce que l’on importe.<br>Savoir ce que l’on extrait.</p>
+
+<p class="hero-meta">Retour sur les lectures et le mini-test<br>Aurélien Nicosia · 9 septembre 2026</p>
+
+
+## Trois lectures, trois questions {#lectures}
+
+| Lecture | Question à garder en tête |
+|:--|:--|
+| Concepts de base en R | Quel objet cette instruction crée-t-elle ? |
+| Structures de données | Que contient l’objet et comment y accéder ? |
+| Lecture et écriture | Quel objet obtient-on à partir du fichier ? |
+
+::: {.takeaway}
+Aujourd’hui : prédire, exécuter, inspecter.
+:::
+
+::: source
+Baillargeon, notes STT-4230 / STT-6230 : [bases](https://stt4230.rbind.io/introduction/base_r/), [structures](https://stt4230.rbind.io/manipulation_donnees/structures_r/), [fichiers](https://stt4230.rbind.io/manipulation_donnees/lecture_ecriture_r/).
+:::
+
+
+## Vos demandes pour le laboratoire {#demandes}
+
+1. Créer et manipuler un data frame.
+2. Importer des fichiers CSV et Excel.
+3. Comprendre l’indiçage des matrices et des arrays.
+
+::: {.fragment .takeaway}
+Nous reviendrons aussi sur les vecteurs et les facteurs.
+:::
+
+::: source
+Synthèse des réponses à la dernière question du mini-test, consultées le 9 septembre 2026.
+:::
+
+
+## Un nom, une valeur, un appel {#bases}
+
+::: columns
+::: {.column width="50%"}
+
+```{r}
+n <- c(4L, 7L, 9L)
+n
+```
+
+```{r}
+length(n)
+```
+
+:::
+::: {.column width="50%"}
+
+`n` désigne l’objet en mémoire.
+
+`"n"` est une chaîne de caractères.
+
+`length(n)` appelle une fonction.
+
+`4L` est un entier, `4` est un double.
+
+:::
+:::
+
+::: {.takeaway}
+`str(n)` donne un aperçu du contenu et de sa structure.
+:::
+
+
+## Les structures à reconnaître {#structures .compact}
+
+| Objet | Organisation | Types des éléments |
+|:--|:--|:--|
+| Vecteur atomique | Une suite de valeurs | Un type commun |
+| Matrice atomique | Lignes et colonnes | Un type commun |
+| Array atomique | Plusieurs dimensions | Un type commun |
+| Liste | Des éléments, éventuellement imbriqués | Types et longueurs variables |
+| Data frame / tibble | Des colonnes de même longueur | Types possibles différents entre colonnes |
+
+::: {.small}
+Une matrice est un array à deux dimensions. Ici, les exemples de matrices et d’arrays sont atomiques.
+:::
+
+
+## Retour au mini-test : quel type ? {#minitest .compact}
+
+```{r}
+#| label: question-type
+#| results: hide
+typeof(c(2L, 3.5, NA))
+```
+
+`"integer"` · `"double"` · `"logical"` · `"list"`
+
+::: fragment
+
+```{r}
+#| echo: false
+typeof(c(2L, 3.5, NA))
+```
+
+`c()` combine ici les valeurs en un vecteur atomique.
+
+Le double `3.5` impose une conversion commune. Le `NA` devient lui aussi un `NA` de type double.
+
+:::
+
+::: {.fragment .takeaway}
+Avec `list(2L, 3.5, NA)`, chaque élément conserverait son type.
+:::
+
+
+## Le tableau de notre démonstration {#dataframe .compact}
+
+```{r}
+mesures <- data.frame(
+  site = c("QC-01", "LV-01", "QC-02"),
+  n = c(4L, 7L, 9L),
+  indice = c(2.5, 3.5, NA_real_)
+)
+```
+
+```{r}
+#| echo: false
+tableau(mesures)
+```
+
+::: small
+Données fictives pour trois sites de la région de Québec. `n` est un effectif, `indice` une mesure illustrative. `NA` indique une mesure manquante.
+:::
+
+
+## Une colonne : tableau ou vecteur ? {#extraction .compact}
+
+```{r}
+#| results: hide
+mesures["n"]
+mesures[["n"]]
+mesures[, "n"]
+```
+
+Avant d’exécuter : ces trois résultats ont-ils la même classe ?
+
+::: fragment
+
+```{r}
+#| echo: false
+tableau(data.frame(
+  Expression = c('mesures["n"]', 'mesures[["n"]]', 'mesures[, "n"]'),
+  Classe = c(class(mesures["n"]), class(mesures[["n"]]), class(mesures[, "n"])),
+  Résultat = c("Tableau de 3 lignes et 1 colonne", "Vecteur de longueur 3", "Vecteur de longueur 3")
+))
+```
+
+:::
+
+
+## Des lignes et des colonnes {#lignes}
+
+Les sites dont l’effectif est au moins 7, avec leur indice :
+
+```{r}
+#| results: hide
+mesures[mesures$n >= 7, c("site", "indice"), drop = FALSE]
+```
+
+::: fragment
+
+```{r}
+#| echo: false
+tableau(mesures[mesures$n >= 7, c("site", "indice"), drop = FALSE])
+```
+
+`[ lignes, colonnes ]`
+
+`drop = FALSE` conserve une structure de tableau.
+
+:::
+
+
+## Matrice : l’ordre des indices {#matrice .compact}
+
+::: columns
+::: {.column width="50%"}
+
+```{r}
+mat <- matrix(1:6, nrow = 2)
+mat
+```
+
+:::
+::: {.column width="50%"}
+
+Que renvoie `mat[2, 3]` ?
+
+::: fragment
+
+```{r}
+mat[2, 3]
+```
+
+Ligne 2, colonne 3.
+
+:::
+:::
+:::
+
+::: {.fragment .takeaway}
+`mat[, 2]` extrait la colonne en vecteur.<br>`mat[, 2, drop = FALSE]` garde une matrice.
+:::
+
+
+## Un fichier CSV, une convention à lire {#csv .compact}
+
+Contenu de notre fichier `mesures.csv` :
+
+```{r}
+#| echo: false
+#| results: asis
+cat("```text\n", paste(lignes_csv, collapse = "\n"), "\n```\n", sep = "")
+```
+
+Trois détails à repérer avant l’importation :
+
+::: incremental
+
+- Le séparateur de colonnes est `;`.
+- Le séparateur décimal est `,`.
+- Le point `.` représente ici une donnée manquante.
+
+:::
+
+
+## CSV : rendre la lecture explicite {#lecture-csv .compact}
+
+```{r}
+import_base <- read.csv2(
+  fichier_csv,
+  na.strings = "."
+)
+str(import_base)
+```
+
+::: {.takeaway}
+`read.csv2()` utilise `sep = ";"` et `dec = ","`.<br>Le résultat est un data frame.
+:::
+
+
+## La même lecture avec readr {#readr .compact}
+
+```{r}
+library(readr)
+import_tibble <- read_csv2(
+  fichier_csv,
+  na = ".",
+  col_types = cols(
+    site = col_character(),
+    n = col_integer(),
+    indice = col_double()
+  )
+)
+```
+
+::: {.fragment .takeaway}
+Même convention de fichier, types déclarés, résultat sous forme de tibble.
+:::
+
+::: source
+[readr : lecture de fichiers délimités](https://readr.tidyverse.org/reference/read_delim.html), documentation consultée le 9 septembre 2026.
+:::
+
+
+## Excel : quelle feuille, quels types ? {#excel .compact}
+
+```{r}
+library(readxl)
+excel_sheets(fichier_excel)
+```
+
+```{r}
+import_excel <- read_excel(
+  fichier_excel,
+  sheet = "mesures",
+  col_types = c("text", "numeric", "numeric")
+)
+```
+
+::: {.takeaway}
+Le classeur contient des feuilles. La feuille lue devient un objet R.
+:::
+
+::: source
+[readxl : read_excel](https://readxl.tidyverse.org/reference/read_excel.html), documentation consultée le 9 septembre 2026.
+:::
+
+
+## Après Excel : le même réflexe {#tibble .compact}
+
+```{r}
+class(import_excel)
+```
+
+```{r}
+#| echo: false
+tableau(data.frame(
+  Expression = c('import_excel[, "n"]', 'import_excel[["n"]]'),
+  Classe = c(paste(class(import_excel[, "n"]), collapse = ", "), class(import_excel[["n"]])),
+  Résultat = c("Tibble de 3 lignes et 1 colonne", "Vecteur de longueur 3")
+))
+```
+
+::: {.takeaway}
+Pour extraire les valeurs d’une colonne : `[["n"]]` ou `$n`.
+:::
+
+
+## Un import réussi suffit-il ? {#diagnostic .compact}
+
+```{r}
+import_incomplet <- read.csv2(fichier_csv)
+str(import_incomplet$indice)
+```
+
+Pourquoi `indice` contient-il du texte ? Que faut-il changer ?
+
+::: fragment
+
+Le `.` n’a pas été déclaré comme valeur manquante.
+
+```{r}
+import_corrige <- read.csv2(fichier_csv, na.strings = ".")
+str(import_corrige$indice)
+```
+
+:::
+
+
+## Sauvegarder un objet R {#sauvegarder .compact}
+
+```{r}
+saveRDS(import_corrige, fichier_rds)
+copie <- readRDS(fichier_rds)
+identical(import_corrige, copie)
+```
+
+| Besoin | Format possible |
+|:--|:--|
+| Échanger une table de valeurs | CSV |
+| Échanger un classeur avec des feuilles | Excel |
+| Retrouver un objet R et ses attributs | RDS |
+
+
+## À vous de jouer {#laboratoire .dark background-color="#083d53"}
+
+<p class="lead">Sur votre premier fichier du laboratoire :</p>
+
+1. Prévoir les colonnes et leurs types.
+2. Importer, puis vérifier avec `str()` et `head()`.
+3. Extraire une colonne en vecteur et en tableau.
+
+<p class="hero-subtitle">Expliquer une surprise et sa correction.</p>
+
+[Ouvrir les exercices « Structures et fichiers »](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/exercices/module-02-structures-fichiers.html)
+
+::: small
+Compléments disponibles : [array](#array), [facteurs](#facteurs), [listes](#listes).
+:::
+
+
+## Array : un indice par dimension {#array .compact}
+
+```{r}
+comptages <- array(
+  1:12, dim = c(2, 3, 2),
+  dimnames = list(site = c("A", "B"),
+                  jour = c("lun", "mar", "mer"),
+                  semaine = c("s1", "s2"))
+)
+comptages[, , "s2"]
+```
+
+::: {.fragment .takeaway}
+`comptages["B", "mar", "s2"]` vaut `r comptages["B", "mar", "s2"]`.<br>Site B, mardi, semaine 2.
+:::
+
+
+## Facteurs : valeurs et niveaux {#facteurs .compact}
+
+```{r}
+secteur <- factor(c("urbain", "rural", "urbain"),
+                  levels = c("rural", "urbain", "forestier"))
+levels(secteur)
+```
+
+```{r}
+as.integer(secteur)
+```
+
+::: {.takeaway}
+Les entiers sont des codes de niveaux.<br>Ils ne mesurent pas la quantité de « secteur ».
+:::
+
+
+## Une conversion trompeuse {#conversion-facteur .compact}
+
+```{r}
+valeurs <- factor(c("10", "20", "10"))
+as.numeric(valeurs)
+```
+
+Que faudrait-il faire pour récupérer les nombres 10 et 20 ?
+
+::: fragment
+
+```{r}
+as.numeric(as.character(valeurs))
+```
+
+Cette conversion convient ici, car les étiquettes sont numériques.
+
+:::
+
+
+## Liste : le contenant et son contenu {#listes .compact}
+
+```{r}
+sortie <- list(donnees = mesures, note = "Exemple fictif")
+```
+
+::: columns
+::: {.column width="50%"}
+
+`sortie["donnees"]`
+
+Une liste contenant un élément.
+
+`length(sortie["donnees"])` vaut `r length(sortie["donnees"])`.
+
+:::
+::: {.column width="50%"}
+
+`sortie[["donnees"]]`
+
+Le data frame lui-même.
+
+`nrow(sortie[["donnees"]])` vaut `r nrow(sortie[["donnees"]])`.
+
+:::
+:::
+
+::: {.takeaway}
+`[` conserve une sous-liste. `[[` extrait un élément.
+:::
+
+
+## Pour revenir aux explications {#references .refs}
+
+- Baillargeon, S. Notes du cours STT-4230 / STT-6230 : [concepts de base](https://stt4230.rbind.io/introduction/base_r/), [structures de données](https://stt4230.rbind.io/manipulation_donnees/structures_r/), [lecture et écriture](https://stt4230.rbind.io/manipulation_donnees/lecture_ecriture_r/).
+- Wickham, H. (2019). [Advanced R, 2e édition, chapitre 3](https://adv-r.hadley.nz/vectors-chap.html).
+- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). [R for Data Science, 2e édition, chapitre 7](https://r4ds.hadley.nz/data-import.html).
+- Documentation : [readr](https://readr.tidyverse.org/reference/read_delim.html), [readxl](https://readxl.tidyverse.org/reference/read_excel.html), [indiçage en R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Extract.html), [facteurs en R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/factor.html).
+
+::: small
+Support adapté des exemples de la semaine 2 conservés dans le site Brio de l’automne 2025. Documentation consultée le 9 septembre 2026.
+:::
+

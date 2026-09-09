@@ -61,7 +61,7 @@ format:
 <th scope="row"><span class="week-label">S2</span><time datetime="2026-09-09">7 au 13 sept.</time></th>
 <td><span class="calendar-date">7 sept.</span><span class="event event--prepare">Lire la semaine 2, essayer les exemples et commencer les exercices.</span></td>
 <td><span class="calendar-date">8 sept.</span><span class="event event--deadline">Mini-test 1 ferme à 23 h 59.</span></td>
-<td><span class="calendar-date">9 sept.</span><span class="event event--class">S2 · Bases de R, structures et fichiers.</span></td>
+<td><span class="calendar-date">9 sept.</span><span class="event event--class">S2 · Bases de R, structures et fichiers. <a href="diaporamas/semaine-02.html">Retour sur les lectures</a>.</span></td>
 <td><span class="calendar-date">10 au 13 sept.</span><span class="event event--after">Exercices structures et fichiers, puis trace semaine 2.</span></td>
 </tr>
 <tr>

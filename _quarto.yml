@@ -7,6 +7,7 @@ project:
     - "exercices/*.qmd"
     - "gabarits/*.qmd"
     - "ressources/*.qmd"
+    - "diaporamas/*.qmd"
     - "!modules/"
   resources:
     - assets/documents/exercices-consolidation/**
@@ -31,6 +32,8 @@ website:
         href: calendrier-visuel.qmd
       - text: "Présentation du cours"
         href: presentation-cours.qmd
+      - text: "Retours sur les lectures"
+        href: retours-lectures.qmd
       - text: "Exercices"
         menu:
         - text: "Vue d’ensemble"
