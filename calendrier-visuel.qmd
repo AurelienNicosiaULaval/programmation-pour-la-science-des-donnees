@@ -68,7 +68,7 @@ format:
 <th scope="row"><span class="week-label">S3</span><time datetime="2026-09-16">14 au 20 sept.</time></th>
 <td><span class="calendar-date">14 sept.</span><span class="event event--prepare">Lire la semaine 3 et préparer les calculs en R.</span></td>
 <td><span class="calendar-date">15 sept.</span><span class="event event--deadline">Mini-test 2 ferme à 23 h 59.</span></td>
-<td><span class="calendar-date">16 sept.</span><span class="event event--class">S3 · Calculs mathématiques et statistiques en R.</span><span class="event event--milestone">Jalon portfolio 1 · 4 points. Dépôt GitHub à jour à 16 h 20. Aucune fiche à remettre.</span></td>
+<td><span class="calendar-date">16 sept.</span><span class="event event--class">S3 · Calculs mathématiques et statistiques en R. <a href="diaporamas/semaine-03.html">Retour sur le mini-test et démonstrations</a>.</span><span class="event event--milestone">Jalon portfolio 1 · 4 points. Dépôt GitHub à jour à 16 h 20. Aucune fiche à remettre.</span></td>
 <td><span class="calendar-date">17 au 20 sept.</span><span class="event event--after">Conserver calculs, vérifications et interprétation.</span></td>
 </tr>
 <tr>

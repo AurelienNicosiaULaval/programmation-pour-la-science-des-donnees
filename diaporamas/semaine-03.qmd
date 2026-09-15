@@ -1,0 +1,391 @@
+---
+pagetitle: "Semaine 3 : calculs et simulation en R"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    code-line-numbers: false
+    theme: simple
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    transition: none
+    background-transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    chalkboard: false
+    preview-links: false
+    footer: "STT-4230 / STT-6230 · 16 septembre 2026"
+    include-in-header:
+      text: |
+        <style>
+        :root { --ink:#17303d; --navy:#083d53; --teal:#087d85; --paper:#f7fafb; --muted:#536975; --line:#c9dce1; }
+        .reveal { font-family:"Helvetica Neue",Arial,sans-serif; color:var(--ink); background:var(--paper); font-size:36px; }
+        .reveal .slides { text-align:left; }
+        .reveal .slides section { box-sizing:border-box; padding:34px 54px 54px; }
+        .reveal h1,.reveal h2,.reveal h3 { font-family:inherit; color:var(--navy); font-weight:400; text-transform:none; }
+        .reveal h2 { margin:0 0 34px; font-size:61px; line-height:1.12; letter-spacing:-.035em; }
+        .reveal h3 { font-size:36px; margin:18px 0; }
+        .reveal p,.reveal li { line-height:1.35; }
+        .reveal p { margin:17px 0; }
+        .reveal li { margin:15px 0; }
+        .reveal ul,.reveal ol { margin-left:1em; }
+        .reveal strong,.reveal b { font-weight:400; }
+        .reveal code { font-size:.88em; color:var(--navy); }
+        .reveal pre { box-sizing:border-box; width:100%; margin:14px 0; box-shadow:none; font-size:29px; line-height:1.35; }
+        .reveal pre.sourceCode { border-left:4px solid var(--teal); padding:16px 20px; background:#eaf2f4; }
+        .reveal pre code { padding:0; max-height:none; font-size:inherit; white-space:pre; }
+        .reveal .cell-output pre { padding:14px 20px; background:#fff; color:#254b5c; border-left:4px solid #b5cbd3; }
+        .reveal .cell { margin:0; }
+        .reveal table { width:100%; margin:20px 0; font-size:32px; border-collapse:collapse; }
+        .reveal table th { font-weight:400; color:var(--navy); border-bottom:2px solid var(--teal); }
+        .reveal table th,.reveal table td { padding:15px 16px; border-bottom:1px solid var(--line); }
+        .reveal table tr:last-child td { border-bottom:1px solid var(--line); }
+        .reveal a { color:var(--teal); text-decoration:underline; text-underline-offset:5px; }
+        .reveal .columns { gap:55px; }
+        .reveal .column { min-width:0; }
+        .reveal .lead { font-size:49px; line-height:1.28; max-width:1300px; }
+        .reveal .small { font-size:27px; color:var(--muted); }
+        .reveal .source { margin-top:18px; font-size:23px; color:var(--muted); }
+        .reveal .takeaway { border-top:2px solid var(--teal); margin-top:30px; padding-top:20px; font-size:37px; }
+        .reveal .hero-title { font-size:96px; line-height:1.03; letter-spacing:-.045em; margin:30px 0 36px; }
+        .reveal .hero-subtitle { color:#bbdade; font-size:41px; max-width:1120px; }
+        .reveal .hero-meta { margin-top:68px; font-size:29px; color:#d5e5e9; }
+        .reveal section.dark { color:#fff; }
+        .reveal section.dark h1,.reveal section.dark h2 { color:#fff; }
+        .reveal section.dark a { color:#bfe7e8; }
+        .reveal section.dark .small { color:#d5e5e9; }
+        .reveal section.compact table { font-size:29px; }
+        .reveal section.compact table td,.reveal section.compact table th { padding:12px 14px; }
+        .reveal section.compact pre { font-size:27px; }
+        .reveal section.compact .takeaway { margin-top:20px; padding-top:14px; }
+        .reveal section.refs p,.reveal section.refs li { font-size:27px; }
+        .reveal .slide-number { font-size:19px; right:22px; bottom:18px; color:#536975; background:transparent; }
+        .reveal .footer { font-size:18px; bottom:18px; color:#647e89; }
+        .reveal .progress { height:5px; color:var(--teal); }
+        .reveal .controls { color:var(--teal); }
+        .reveal .fragment { transition:none; }
+        </style>
+embed-resources: true
+execute:
+  collapse: true
+  echo: true
+  warning: false
+  message: false
+  error: false
+editor: source
+---
+
+```{r}
+#| label: preparation
+#| include: false
+library(knitr)
+library(stats)
+library(graphics)
+options(width = 65, digits = 5)
+knitr::opts_chunk$set(results = "hold", collapse = TRUE, comment = "#>")
+knitr::read_chunk("demonstration-semaine-03.R")
+```
+
+## {#ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Calculs et<br>simulation en R</h1>
+
+<p class="hero-subtitle">Retour sur le mini-test<br>et démonstrations</p>
+
+<p class="hero-meta">Aurélien Nicosia · 16 septembre 2026<br>STT-4230 / STT-6230</p>
+
+## Mini-test : la moyenne avec un NA {#question-1}
+
+```{r}
+#| label: question-moyenne
+#| results: hide
+```
+
+Quel résultat attendez-vous ?
+
+| Choix | Résultat |
+|:--|:--|
+| A | `c(NA, 14 / 3)` |
+| B | `c(14 / 3, 14 / 3)` |
+| C | `c(3.5, 3.5)` |
+| D | Une erreur |
+
+::: small
+Mini-test de préparation, semaine 3, question 1.
+:::
+
+## Retirer le NA du calcul {#valeurs-manquantes .compact}
+
+```{r}
+#| ref.label: question-moyenne
+#| echo: false
+```
+
+::: fragment
+
+La réponse est A : `(2 + 4 + 8) / 3`, soit `r 14 / 3`.
+
+```{r}
+#| label: denominateur
+```
+
+:::
+
+::: {.takeaway}
+`na.rm = TRUE` calcule la moyenne des valeurs observées.<br>Le NA reste dans `x` et n'est pas remplacé par zéro.
+:::
+
+::: source
+R Core Team, [mean](https://stat.ethz.ch/R-manual/R-devel/library/base/html/mean.html), documentation consultée le 15 septembre 2026.
+:::
+
+## Mini-test : que mesure cette moyenne ? {#question-2}
+
+```{r}
+#| label: question-simulation
+#| results: hide
+```
+
+- La moyenne des valeurs supérieures à 1,96 ?
+- La proportion de valeurs supérieures à 1,96 ?
+- Un quantile ou une variance ?
+
+::: fragment
+
+```{r}
+#| echo: false
+mean(z > 1.96)
+```
+
+:::
+
+::: source
+Mini-test de préparation, semaine 3, question 2. Tirages simulés dans une loi normale standard.
+:::
+
+## Une condition logique devient une proportion {#proportion .compact}
+
+```{r}
+#| label: proportion-logique
+```
+
+::: {.takeaway}
+Pour la moyenne, `TRUE` vaut 1 et `FALSE` vaut 0.<br>Deux dépassements sur cinq : `2 / 5 = 0,4`.
+:::
+
+::: small
+La réponse au mini-test est B : une approximation de la probabilité de dépassement.<br>`mean(z[z > 1.96])` calcule la moyenne des seules valeurs retenues.
+:::
+
+## Simulation et probabilité théorique {#probabilite .compact}
+
+::: columns
+::: {.column width="58%"}
+
+```{r}
+#| label: graphique-normale
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4.8
+#| fig-alt: "Densité normale standard, avec la queue au-delà de 1,96 colorée; son aire vaut environ 0,025."
+```
+
+:::
+::: {.column width="42%"}
+
+```{r}
+#| label: probabilite-theorique
+```
+
+`pnorm(..., lower.tail = FALSE)` calcule la probabilité de dépasser le seuil.
+
+La simulation l'estime avec un nombre fini de tirages.
+
+:::
+:::
+
+::: source
+R Core Team, [loi normale](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Normal.html), documentation consultée le 15 septembre 2026.
+:::
+
+## Reproduire une simulation {#graine .compact}
+
+```{r}
+#| label: graine
+```
+
+::: {.takeaway}
+Une même graine et les mêmes appels reproduisent la séquence, avec la même configuration du générateur.
+:::
+
+::: small
+Fixer la graine au début de l'expérience. Les appels suivants font avancer la séquence.<br>La graine ne garantit pas que l'estimation est précise.
+:::
+
+::: source
+R Core Team, [génération aléatoire](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Random.html), documentation consultée le 15 septembre 2026.
+:::
+
+## Démo : calculer sur tout un vecteur {#vectorisation}
+
+Températures fictives, en degrés Celsius.
+
+```{r}
+#| label: vectorisation
+```
+
+::: {.takeaway}
+L'opération porte sur chaque élément.<br>La moyenne des conditions donne la proportion au-dessus de 9 °C.
+:::
+
+## Démo : le recyclage {#recyclage}
+
+Que se passe-t-il avec une correction de longueur 2 ?
+
+```{r}
+#| label: recyclage
+```
+
+::: {.takeaway}
+R répète ici `c(1, -1)` pour atteindre la longueur 4.<br>Le calcul s'exécute sans avertissement : le résultat doit quand même correspondre à l'intention.
+:::
+
+::: source
+Baillargeon, [calculs mathématiques en R](https://stt4230.rbind.io/calculs/calculs_math_r/), notes STT-4230 / STT-6230.
+:::
+
+## Démo : une matrice de mesures {#matrice}
+
+```{r}
+#| label: matrice-mesures
+```
+
+::: {.takeaway}
+Une moyenne par site ou une moyenne par jour ?<br>Commencer par nommer les lignes et les colonnes.
+:::
+
+## apply : choisir la dimension {#apply .compact}
+
+::: columns
+::: {.column width="50%"}
+
+### Par site : colonnes
+
+```{r}
+#| label: moyennes-colonnes
+```
+
+`2` conserve les colonnes.
+
+:::
+::: {.column width="50%"}
+
+### Par jour : lignes
+
+```{r}
+#| label: moyennes-lignes
+```
+
+`1` conserve les lignes.
+
+:::
+:::
+
+::: {.takeaway}
+Jour 3 : une seule mesure contribue à la moyenne.<br>Une moyenne se lit avec son nombre d'observations.
+:::
+
+::: source
+R Core Team, [apply](https://stat.ethz.ch/R-manual/R-devel/library/base/html/apply.html), documentation consultée le 15 septembre 2026.
+:::
+
+## À vous : quel est le dénominateur ? {#exercice .compact}
+
+```{r}
+#| label: exercice-minute
+#| results: hide
+```
+
+Quel résultat ? Comment le vérifier sans `mean()` ?
+
+::: fragment
+
+```{r}
+#| label: verification-minute
+```
+
+`2 / 4 = 0,5` : parmi les jours observés, la moitié dépasse 10 mm.
+
+:::
+
+::: {.takeaway}
+Que peut-on dire du jour manquant ?
+:::
+
+## Portfolio : premier jalon aujourd'hui {#portfolio}
+
+Échéance : 16 septembre, à 16 h 20. Total : 4 points.
+
+| Critère | Points |
+|:--|--:|
+| Dépôt accessible, README général et structure | 1 |
+| Productions personnelles des semaines 1 à 3 | 1 |
+| Documentation et vérification du travail | 1 |
+| Progression Git et messages compréhensibles | 1 |
+
+La trace de semaine 3 peut être réalisée pendant la séance.
+
+::: {.takeaway}
+Faire un `git push`, puis vérifier les fichiers sur GitHub.
+:::
+
+::: source
+[Consignes du portfolio](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/portfolio.html#jalon-1-semaine-3-4-points) · [Exercices de la semaine](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/exercices/module-03-calculs-r.html)<br>Compléments : [produit matriciel](#produits) · [fonctions de probabilité](#fonctions) · [références](#references).
+:::
+
+## Complément : deux produits {#produits .compact}
+
+```{r}
+#| label: operations-matrices
+```
+
+::: {.takeaway}
+`*` multiplie élément par élément.<br>`%*%` calcule un produit matriciel.
+:::
+
+::: small
+Vérification : l'élément en haut à gauche du produit matriciel vaut `1 × 1 + 2 × 3 = 7`.
+:::
+
+## Complément : d, p, q et r {#fonctions .compact}
+
+| Fonction | Ce qu'elle donne |
+|:--|:--|
+| `dnorm(x)` | La densité au point `x` |
+| `pnorm(x)` | La probabilité d'être inférieur ou égal à `x` |
+| `qnorm(p)` | Le quantile associé à la probabilité `p` |
+| `rnorm(n)` | `n` tirages simulés |
+
+```{r}
+#| label: fonctions-normales
+```
+
+::: small
+Pour une loi continue, une hauteur de densité n'est pas une probabilité ponctuelle.
+:::
+
+## Pour retrouver les explications {#references .refs}
+
+- Baillargeon, S. Notes STT-4230 / STT-6230 : [calculs mathématiques](https://stt4230.rbind.io/calculs/calculs_math_r/), [calculs statistiques](https://stt4230.rbind.io/calculs/calculs_stat_r/) et [calculs par sections](https://stt4230.rbind.io/calculs/calculs_apply_r/).
+- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). [R for Data Science, chapitre 13, sections 13.1 à 13.4](https://r4ds.hadley.nz/numbers.html).
+- R Core Team. Documentation de [mean](https://stat.ethz.ch/R-manual/R-devel/library/base/html/mean.html), de la [loi normale](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Normal.html), de [set.seed](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Random.html) et de [apply](https://stat.ethz.ch/R-manual/R-devel/library/base/html/apply.html), consultée le 15 septembre 2026.
+
+::: small
+Les mesures illustratives sont fictives. Les résultats numériques sont produits par R lors du rendu.
+:::

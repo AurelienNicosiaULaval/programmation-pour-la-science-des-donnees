@@ -11,6 +11,7 @@ project:
     - "!modules/"
   resources:
     - assets/documents/exercices-consolidation/**
+    - diaporamas/*.R
 
 lang: fr
 
