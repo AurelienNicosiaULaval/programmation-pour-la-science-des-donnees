@@ -100,6 +100,22 @@ knitr::read_chunk("demonstration-semaine-03.R")
 
 <p class="hero-meta">Aurélien Nicosia · 16 septembre 2026<br>STT-4230 / STT-6230</p>
 
+## Les points à reprendre {#demandes}
+
+Les demandes de la question ouverte :
+
+- Repérer les valeurs manquantes et distinguer `na.rm` de `na.omit`.
+- Choisir une fonction de la famille `apply`, notamment pour les sous-groupes avec `tapply`.
+- Reprendre les calculs vectorisés et les probabilités estimées par simulation.
+
+::: {.takeaway}
+Pour chaque exemple : prévoir le résultat, exécuter le code, puis vérifier ce qui a été calculé.
+:::
+
+::: source
+Synthèse anonymisée des 20 copies soumises au mini-test de préparation, semaine 3, groupes STT-4230 et STT-6230, consultées dans Brio le 16 septembre 2026.
+:::
+
 ## Mini-test : la moyenne avec un NA {#question-1}
 
 ```{r}
@@ -143,6 +159,41 @@ La réponse est A : `(2 + 4 + 8) / 3`, soit `r 14 / 3`.
 
 ::: source
 R Core Team, [mean](https://stat.ethz.ch/R-manual/R-devel/library/base/html/mean.html), documentation consultée le 15 septembre 2026.
+:::
+
+## Repérer les NA et garder les valeurs observées {#reperer-na .compact}
+
+::: columns
+::: {.column width="50%"}
+
+### Où sont les NA ?
+
+```{r}
+#| label: reperer-na
+```
+
+`is.na` indique les valeurs manquantes; `which` donne leurs positions.
+
+:::
+::: {.column width="50%"}
+
+### Un nouvel objet avec na.omit
+
+```{r}
+#| label: omettre-na
+```
+
+`x_observe` contient les valeurs retenues et garde la trace de la position omise.
+
+:::
+:::
+
+::: small
+`x` reste inchangé. Sur un data frame, `na.omit` retire les lignes incomplètes.<br>Retirer une observation n'est pas estimer sa valeur manquante.
+:::
+
+::: source
+R Core Team, [is.na](https://stat.ethz.ch/R-manual/R-devel/library/base/html/NA.html) et [na.omit](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/na.fail.html), consultés le 16 septembre 2026.
 :::
 
 ## Mini-test : que mesure cette moyenne ? {#question-2}
@@ -260,14 +311,14 @@ R répète ici `c(1, -1)` pour atteindre la longueur 4.<br>Le calcul s'exécute 
 Baillargeon, [calculs mathématiques en R](https://stt4230.rbind.io/calculs/calculs_math_r/), notes STT-4230 / STT-6230.
 :::
 
-## Démo : une matrice de mesures {#matrice}
+## Démo : une matrice de mesures {#matrice .compact}
 
 ```{r}
 #| label: matrice-mesures
 ```
 
 ::: {.takeaway}
-Une moyenne par site ou une moyenne par jour ?<br>Commencer par nommer les lignes et les colonnes.
+`which(..., arr.ind = TRUE)` donne la ligne et la colonne du NA.<br>Une moyenne par site ou une moyenne par jour ?
 :::
 
 ## apply : choisir la dimension {#apply .compact}
@@ -303,6 +354,38 @@ Jour 3 : une seule mesure contribue à la moyenne.<br>Une moyenne se lit avec so
 
 ::: source
 R Core Team, [apply](https://stat.ethz.ch/R-manual/R-devel/library/base/html/apply.html), documentation consultée le 15 septembre 2026.
+:::
+
+## tapply : une moyenne par groupe {#groupes .compact}
+
+::: columns
+::: {.column width="55%"}
+
+Mêmes températures fictives, sous forme de vecteurs.
+
+```{r}
+#| label: moyennes-groupes
+```
+
+:::
+::: {.column width="45%"}
+
+| Fonction | Sur quoi agit-elle ? |
+|:--|:--|
+| `apply` | Lignes ou colonnes d'une matrice |
+| `lapply` | Éléments d'une liste; renvoie une liste |
+| `sapply` | Comme `lapply`, puis simplifie si possible |
+| `tapply` | Groupes définis par une variable |
+
+:::
+:::
+
+::: small
+`site` indique le groupe de chaque valeur. `na.rm = TRUE` est transmis à `mean`.<br>Québec : 2 valeurs observées; Lévis : 3. Le script permet de vérifier ces effectifs.
+:::
+
+::: source
+R Core Team, [tapply](https://stat.ethz.ch/R-manual/R-devel/library/base/html/tapply.html) et [lapply / sapply](https://stat.ethz.ch/R-manual/R-devel/library/base/html/lapply.html), consultés le 16 septembre 2026.
 :::
 
 ## À vous : quel est le dénominateur ? {#exercice .compact}

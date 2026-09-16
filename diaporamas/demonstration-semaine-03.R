@@ -18,6 +18,21 @@ n_observees <- sum(!is.na(x))
 print(n_observees)
 print(sum(x, na.rm = TRUE) / n_observees)
 
+## ---- reperer-na ----
+x <- c(2, 4, NA, 8)
+print(is.na(x))
+print(which(is.na(x)))
+
+## ---- omettre-na ----
+x_observe <- na.omit(x)
+print(x_observe)
+
+## ---- verifier-omission ----
+# L'objet initial reste inchangé; la moyenne utilise 3 valeurs.
+print(x)
+print(mean(x_observe))
+stopifnot(is.na(x[3]), length(x_observe) == 3)
+
 ## ---- question-simulation ----
 set.seed(2026)
 z <- rnorm(10000)
@@ -80,12 +95,11 @@ print(a %*% a)
 
 ## ---- matrice-mesures ----
 # Températures fictives en degrés Celsius.
-mesures <- cbind(
-  Quebec = c(6, 8, NA),
-  Levis = c(7, 9, 11)
-)
+mesures <- cbind(Quebec = c(6, 8, NA),
+                 Levis = c(7, 9, 11))
 rownames(mesures) <- c("Jour 1", "Jour 2", "Jour 3")
 print(mesures)
+print(which(is.na(mesures), arr.ind = TRUE))
 
 ## ---- moyennes-colonnes ----
 print(apply(
@@ -102,6 +116,31 @@ print(apply(
 
 ## ---- effectifs-lignes ----
 print(rowSums(!is.na(mesures)))
+
+## ---- moyennes-groupes ----
+valeurs <- c(6, 8, NA, 7, 9, 11)
+site <- rep(c("Quebec", "Levis"), each = 3)
+print(tapply(
+  valeurs, site, mean, na.rm = TRUE
+))
+
+## ---- effectifs-groupes ----
+print(tapply(!is.na(valeurs), site, sum))
+
+## ---- listes-groupes ----
+# split construit une liste de valeurs par site.
+par_site <- split(valeurs, site)
+print(lapply(par_site, mean, na.rm = TRUE))
+print(sapply(par_site, mean, na.rm = TRUE))
+
+## ---- verifier-groupes ----
+# Même calcul sur la matrice et sur les vecteurs avec groupes.
+moyennes_par_groupe <- tapply(valeurs, site, mean, na.rm = TRUE)
+moyennes_par_colonne <- colMeans(mesures, na.rm = TRUE)
+stopifnot(isTRUE(all.equal(
+  as.numeric(moyennes_par_groupe[colnames(mesures)]),
+  as.numeric(moyennes_par_colonne)
+)))
 
 ## ---- exercice-minute ----
 pluie <- c(0, 12, NA, 4, 20) # Millimètres, données fictives.
@@ -126,3 +165,8 @@ print(c(
 # https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Normal.html
 # https://stat.ethz.ch/R-manual/R-devel/library/base/html/Random.html
 # https://stat.ethz.ch/R-manual/R-devel/library/base/html/apply.html
+# Compléments consultés le 16 septembre 2026 :
+# https://stat.ethz.ch/R-manual/R-devel/library/base/html/NA.html
+# https://stat.ethz.ch/R-manual/R-devel/library/stats/html/na.fail.html
+# https://stat.ethz.ch/R-manual/R-devel/library/base/html/tapply.html
+# https://stat.ethz.ch/R-manual/R-devel/library/base/html/lapply.html
