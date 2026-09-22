@@ -34,7 +34,7 @@ Cette page regroupe les ressources utiles pour le cours.
 - [Soutien technique](soutien-technique.qmd)
 - [Politique IA](ia.qmd)
 - [Gabarit des mini-tests de préparation](gabarits/gabarit-mini-test-preparation.qmd)
-- [Rattrapage R/Git pour le défi technique 1](ressources/rattrapage-r-git-defi-1.qmd)
+- [Rattrapage R pour le défi technique 1](ressources/rattrapage-r-git-defi-1.qmd)
 
 ## Liens de référence
 

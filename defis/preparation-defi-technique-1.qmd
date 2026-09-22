@@ -5,109 +5,106 @@ format:
     embed-resources: true
 ---
 
-## Rôle du défi
+## Rôle et déroulement
 
-Le défi technique 1 vérifie que chaque personne peut travailler seule dans un petit projet R propre, reproductible et versionné.
+Le défi technique 1 vérifie que chaque personne peut travailler seule dans un petit projet R propre et reproductible. Il compte pour 10 % de la note finale.
 
-Le défi dure environ 1 h et compte pour 10 % de la note finale. Le reste de la séance sert à un atelier de consolidation sur des tâches analogues. Le travail fait après la remise ne modifie pas le livrable évalué.
+Il aura lieu le mercredi 30 septembre 2026 au PLT-3928, sur les postes Windows du laboratoire avec des comptes d’examen préparés, sans Internet.
+
+- Travail individuel : de 13 h 30 à 14 h 30, soit 60 minutes.
+- À 14 h 30 : enregistrer les fichiers et arrêter les modifications.
+- Jusqu’à 14 h 45 : récupération des dossiers par l’enseignant, sans poursuite du travail.
+
+Après la remise, la séance se poursuit avec les graphiques en R sur un autre exemple. Cette activité ne modifie pas le livrable évalué.
 
 ## Ce qui sera évalué
 
-Le défi portera sur les bases individuelles vues dans les semaines 1 à 4:
+Le défi mobilise les modules 1 à 4. L’accent porte sur l’organisation du projet, les structures et fichiers de R et le prétraitement des données. Le module 3 intervient brièvement dans un calcul de proportion et le choix de son dénominateur.
 
-- structure de projet;
-- chemins relatifs;
-- importation d’un fichier de données;
-- nettoyage simple;
-- validation par assertions;
-- sauvegarde d’une version propre;
-- README minimal;
-- commits Git lisibles.
+À maîtriser :
 
-Le jeu de données évalué sera fourni au début du défi. Il s’agira de données québécoises réelles ou d’un extrait pédagogique dérivé d’une source ouverte québécoise. Les détails du fichier évalué ne sont pas publiés sur le site du cours.
+- une structure de projet claire et des chemins relatifs;
+- l’importation d’un fichier de données et l’inspection de ses colonnes;
+- le nettoyage simple, les valeurs manquantes et les doublons;
+- la création d’une variable dérivée et d’un résumé par groupe;
+- le calcul et l’interprétation d’une proportion;
+- la validation par des assertions pertinentes;
+- la sauvegarde des résultats par le script;
+- un README minimal permettant de reproduire le travail.
 
-## Règle IA
+Git, les commits et GitHub ne sont pas demandés ni évalués dans ce défi. Aucun rapport Quarto ou graphique n’est requis pour l’épreuve.
 
-Statut: IA non permise.
+Les données évaluées seront fournies au début du défi. Elles proviendront d’une source ouverte québécoise ou d’un extrait pédagogique dérivé de celle-ci. Les fichiers exacts et les résultats attendus ne sont pas publiés avant l’épreuve.
 
-Pendant le défi évalué, il est interdit d’utiliser un outil d’IA générative pour écrire, corriger, expliquer, traduire ou diagnostiquer le code ou la documentation.
+## Ressources autorisées et règle IA
 
-Sont permis:
+Vous pouvez apporter vos documents papier. Sur les comptes d’examen, seules les ressources numériques mises à disposition par l’enseignant sont autorisées, dont les extraits de notes de cours fournis. Aucun fichier personnel ne peut être importé sur le compte d’examen.
 
-- les notes de cours;
-- la documentation officielle;
-- le code produit antérieurement par la personne étudiante;
-- les messages d’aide de R et des packages;
-- les fonctions de recherche dans l’éditeur;
-- Git et GitHub pour versionner et remettre.
+L’aide locale de R et des packages installés, la recherche dans l’éditeur et l’autocomplétion habituelle restent permises. Les logiciels et les packages nécessaires seront préparés sur les postes.
 
-Toute utilisation d’un outil d’IA générative pendant le défi constitue un non-respect de la consigne.
+Statut : IA non permise. Pendant le défi, il est interdit d’utiliser un outil d’IA générative pour écrire, corriger, expliquer, traduire ou diagnostiquer le code ou la documentation, y compris un assistant génératif intégré à l’éditeur. Les échanges de solutions et l’aide d’une autre personne au contenu évalué sont interdits. Signaler à l’équipe toute question de consigne ou tout incident matériel.
 
 ## Préparation recommandée
 
-Avant le défi, chaque personne devrait être capable de refaire sans IA:
+Avant le défi, pratiquer sans IA les gestes suivants :
 
-1. créer une structure de projet avec `data/raw/`, `data/processed/`, `R/` et `README.md`;
-2. lire un fichier CSV avec un chemin relatif;
-3. inspecter les noms, types et valeurs manquantes;
-4. convertir des dates ou des colonnes numériques;
-5. créer une petite variable dérivée;
-6. écrire au moins quatre assertions avec `stopifnot()`;
-7. sauvegarder un fichier propre dans `data/processed/`;
-8. expliquer brièvement les décisions de nettoyage dans un README;
-9. faire au moins deux commits lisibles.
+1. ouvrir un projet R et repérer les dossiers `data/raw/`, `data/processed/`, `R/` et le `README.md`;
+2. lire un fichier CSV avec un chemin relatif et un séparateur approprié;
+3. inspecter les dimensions, noms, types et valeurs manquantes;
+4. nettoyer des colonnes textuelles, convertir une colonne au bon type et traiter les doublons;
+5. créer une variable dérivée simple et un résumé par groupe;
+6. calculer une proportion en choisissant correctement le dénominateur;
+7. écrire et exécuter au moins cinq assertions pertinentes avec `stopifnot()`;
+8. sauvegarder les résultats dans `data/processed/` sans modifier le brut;
+9. documenter les décisions dans un court README, puis relancer le script dans une session R propre.
 
 ## Exercices de préparation
 
-Pour se préparer, reprendre les exercices des semaines 2 à 4 indiqués dans le module Brio et dans la page [Exercices de consolidation](../exercices-consolidation.qmd).
+Reprendre les exercices des modules [2 : structures et fichiers](../exercices/module-02-structures-fichiers.qmd) et [4 : prétraitement](../exercices/module-04-pretraitement-donnees.qmd). Pour le rappel de calcul, revoir les indicateurs logiques, les proportions et les valeurs manquantes dans le [module 3](../exercices/module-03-calculs-r.qmd).
 
-Une fiche de rattrapage est aussi disponible ici: [Rattrapage R/Git pour le défi technique 1](../ressources/rattrapage-r-git-defi-1.qmd).
+Une [fiche de rattrapage R pour le défi 1](../ressources/rattrapage-r-git-defi-1.qmd) reprend les gestes essentiels. Ces pages et leurs liens se consultent avant l’épreuve; l’accès à Internet sera bloqué sur les comptes d’examen.
 
-À pratiquer en priorité:
+À pratiquer en priorité : relancer un script depuis une session propre, vérifier qu’une assertion détecte une anomalie introduite dans une copie de pratique, puis refaire un pipeline court sans IA. Conserver le fichier brut original intact.
 
-- relancer le laboratoire depuis une session R propre;
-- modifier un fichier brut et vérifier que les assertions réagissent correctement;
-- refaire un pipeline court sans consulter l’IA;
-- utiliser un jeu de données ouvert du Québec pour pratiquer l’importation et la validation.
+## Remise
 
-## Directives générales de remise
+Les étudiants enregistrent leur travail dans le dossier du défi, à l’emplacement indiqué sur leur compte d’examen. L’enseignant récupère directement ce dossier à la fin de l’épreuve.
 
-La remise se fera par dépôt GitHub individuel.
+Le dossier doit contenir :
 
-Le dépôt devra contenir:
+- le fichier brut fourni, intact;
+- le script R relançable;
+- les fichiers de résultats demandés;
+- le README court.
 
-- le fichier brut fourni;
-- un script R relançable;
-- un fichier propre sauvegardé;
-- un README court;
-- des commits Git lisibles.
+Aucun dépôt Git, commit, ZIP ou envoi en ligne n’est demandé. Attendre l’autorisation de fermer la session après la récupération des fichiers. Signaler immédiatement un problème de sauvegarde.
 
-La consigne exacte, le fichier de données et les détails de la grille seront fournis au moment du défi.
+La consigne exacte et les noms des fichiers seront fournis au début du défi.
 
-## Critères généraux
+## Grille sur 10 points
 
-Le défi sera évalué sur 10 points selon les dimensions suivantes:
+Les six dimensions sont celles de la [grille commune des défis techniques](../gabarits/grille-defis-techniques.qmd).
 
-| Dimension | Attente |
-|---|---|
-| Structure et Git | Dossiers clairs, chemins relatifs, commits lisibles |
-| Importation | Fichier lu correctement, types inspectés |
-| Nettoyage | Transformations simples, justifiées et reproductibles |
-| Validation | Assertions pertinentes et exécutées |
-| Sauvegarde | Donnée propre sauvegardée au bon endroit |
-| README | Procédure, décisions et limite documentées |
-| Code | Code lisible, sans chemins absolus ni manipulations opaques |
+| Dimension | Points | Attente pour le défi 1 |
+|---|---:|---|
+| Exactitude technique | 3 | Importation, transformations et résultats conformes à la consigne |
+| Reproductibilité | 2 | Script relançable en session propre, chemins relatifs, brut intact et fichiers présents |
+| Qualité du code | 2 | Noms clairs, packages chargés, transformations explicites et code lisible |
+| Documentation et remise | 1 | README utile et fichiers enregistrés à l’emplacement demandé |
+| Validation et explication | 1 | Assertions exécutées et décisions brièvement justifiées |
+| Respect du statut IA | 1 | Travail individuel avec les seules ressources autorisées, sans IA générative |
+| Total | 10 | |
 
 ## À éviter
 
-- utiliser un chemin local comme `/Users/...`;
-- modifier manuellement le fichier brut;
-- écraser les données brutes;
-- ignorer les messages d’importation;
+- utiliser un chemin absolu comme `/Users/...` ou `C:/Users/...`;
+- modifier manuellement ou écraser le fichier brut;
+- ignorer les messages d’importation et les valeurs manquantes;
 - écrire des assertions qui ne vérifient rien d’utile;
 - remettre un script qui fonctionne seulement dans une session déjà préparée;
+- oublier d’enregistrer le script, le README ou les résultats;
 - utiliser l’IA pendant le défi.
 
 ## Après la remise
 
-Après la remise, la séance continue avec un atelier de consolidation. L’atelier permet de revoir les erreurs fréquentes, les stratégies de nettoyage, les messages d’erreur et les assertions. Il ne sert pas à modifier le livrable évalué.
+La séance se poursuit avec les [exercices d’introduction aux graphiques en R](../exercices/modules-05-06-graphiques-r.qmd), sur des données distinctes. Les ressources nécessaires seront fournies hors ligne. La trace de cette activité pourra être ajoutée au portfolio après la séance; elle ne modifie pas le défi remis.

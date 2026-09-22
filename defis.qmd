@@ -17,7 +17,7 @@ Les ateliers suivants font partie des modules du cours, mais ne sont pas des év
 
 | Après le défi | Atelier | Objet de l'apprentissage |
 |---|---|---|
-| Défi 1 | Exercice analogue dans le dépôt GitHub | Reproduire et corriger un problème analogue sans IA |
+| Défi 1 | Introduction aux graphiques en R, ressources fournies hors ligne | Produire et interpréter une figure sur un autre exemple, sans IA |
 | Défi 2 | Exercice analogue dans le dépôt GitHub | Vérifier une proposition sur un exemple analogue et documenter la décision |
 | Défi 3 | Exercice analogue dans le dépôt GitHub | Comparer avant et après, écrire une limite et transférer une pratique vers le projet |
 
@@ -51,15 +51,17 @@ Le premier défi vérifie les bases du travail individuel sans IA:
 - structure de projet;
 - importation et nettoyage simple de données;
 - chemins relatifs;
-- usage de Git et commits;
+- calcul bref de proportion et assertions;
 - README minimal ou note courte de reproduction;
-- historique Git lisible.
+- sauvegarde des fichiers et reproduction depuis une session propre.
 
 Question centrale: est-ce que l’étudiante ou l’étudiant peut fonctionner seul dans un projet R propre?
 
 La consigne exacte et le fichier de données évalué seront fournis au moment du défi. Ils ne sont pas publiés sur le site du cours.
 
-Après la remise, poursuivre avec l'exercice analogue annoncé dans le module Brio et distribué par GitHub. L'atelier reste sans IA afin de respecter l'objectif du défi 1.
+Le défi 1 se déroule le 30 septembre 2026 au PLT-3928, de 13 h 30 à 14 h 30, sur des comptes Windows sans Internet. Les étudiants apportent leurs documents papier; seules les ressources numériques fournies par l’enseignant sur les comptes et l’aide locale de R sont consultables. Aucun fichier personnel ne peut être importé. L’enseignant récupère directement les dossiers jusqu’à 14 h 45; aucun commit, ZIP ou envoi en ligne n’est demandé.
+
+Après la remise, poursuivre avec les [graphiques en R](exercices/modules-05-06-graphiques-r.qmd), sur un autre exemple avec des ressources fournies hors ligne. L’atelier reste sans IA.
 
 ## Défi technique 2
 
@@ -105,6 +107,8 @@ Avant la séance, les étudiantes et étudiants connaissent les dimensions du di
 
 ## Déroulement type d’une séance de défi
 
+Ce tableau est indicatif. Pour le défi 1 du 30 septembre, les horaires précis de la [page de préparation](defis/preparation-defi-technique-1.qmd) s’appliquent : travail de 13 h 30 à 14 h 30, puis récupération jusqu’à 14 h 45.
+
 | Moment | Activité | Rôle |
 |---:|---|---|
 | 0:00 à 0:15 | Mise en place | Rappeler les consignes, vérifier les fichiers, le dépôt et la règle IA |
@@ -118,7 +122,7 @@ Avant la séance, les étudiantes et étudiants connaissent les dimensions du di
 
 | Défi | Traces |
 |---|---|
-| Défi technique 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
+| Défi technique 1 | Dossier récupéré par l’enseignant, fichier brut, script R, résultats et README court, sans IA |
 | Défi technique 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `docs/ai-log.md` ou fichier de réflexion IA |
 | Défi technique 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
 

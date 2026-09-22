@@ -286,7 +286,7 @@ Source interne: evaluations.qmd; calendrier.qmd.
 ## Trois défis, trois manières de montrer votre autonomie
 
 <div class="challenge-ladder">
-<div class="challenge-step challenge-step--one"><span>Défi 1 · 10 %</span><h3>Faire seul</h3><p>Structure de projet, Git, importation, nettoyage simple et README.</p><small>IA non permise</small></div>
+<div class="challenge-step challenge-step--one"><span>Défi 1 · 10 %</span><h3>Faire seul</h3><p>Structure de projet, importation, nettoyage simple, validation et README.</p><small>IA non permise</small></div>
 <div class="challenge-step challenge-step--two"><span>Défi 2 · 10 %</span><h3>Faire avec une aide transparente</h3><p>Pipeline simple, visualisation et rapport Quarto court.</p><small>IA permise, déclarée</small></div>
 <div class="challenge-step challenge-step--three"><span>Défi 3 · 10 %</span><h3>Faire preuve de jugement</h3><p>Diagnostic, amélioration et validation d'un mini-projet.</p><small>IA intégrée et vérifiée</small></div>
 </div>

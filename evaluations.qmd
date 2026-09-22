@@ -26,7 +26,7 @@ Les trois défis techniques ne sont pas trois examens semblables. Ils ont trois 
 
 | Défi | Moment | Rôle | Ce qui est vérifié | Règle IA |
 |---|---:|---|---|---|
-| Défi 1 | Semaine 5 | Vérifier les bases individuelles | Structure de projet, Git, importation, nettoyage simple, chemins relatifs, README minimal | Non permise |
+| Défi 1 | Semaine 5 | Vérifier les bases individuelles | Structure de projet, importation, nettoyage simple, proportion, validation, chemins relatifs et README minimal | Non permise |
 | Défi 2 | Semaine 8 | Vérifier la programmation avec aide encadrée | Pipeline simple, visualisation, rapport Quarto court, capacité à documenter l’aide reçue | Permise, déclarée |
 | Défi 3 | Semaine 13 | Vérifier le jugement professionnel avec IA | Diagnostic, débogage, optimisation, parallélisation ou amélioration d’un mini-projet, validation des suggestions IA | Intégrée |
 
@@ -46,7 +46,7 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 
 | Après le défi | Module non évalué | Travail |
 |---|---|---|
-| Défi 1 | Exercice analogue sur le site du cours | Reprendre un problème analogue sans IA et conserver sa trace personnelle dans le portfolio |
+| Défi 1 | Introduction aux graphiques en R, sur un autre exemple | Produire et interpréter une figure sans IA; ajouter la trace au portfolio après la séance |
 | Défi 2 | Exercice analogue sur le site du cours | Valider une proposition sur un exemple analogue et documenter la démarche dans le portfolio |
 | Défi 3 | Exercice analogue sur le site du cours | Faire un post-mortem et transférer une pratique vers le portfolio ou le projet |
 
@@ -57,7 +57,7 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 | Mini-tests de préparation | Résultat enregistré dans Brio avant la fermeture du mardi à 23 h 59 et difficulté ou observation personnelle non notée à reprendre pendant la séance |
 | Portfolio GitHub individuel | Dépôt privé `portfolio-stt4230-IDUL` ou `portfolio-stt6230-IDUL`, selon le sigle d'inscription, créé une fois par l'équipe enseignante à partir du modèle A2026, cloné par la personne étudiante, dossiers ajoutés semaine après semaine, productions personnelles issues des lectures, exercices et activités, README, vérifications, bilan final et commits réguliers |
 | Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
-| Défi 1 | Dépôt ou dossier remis, code fonctionnel, README court, commits, aucune trace IA |
+| Défi 1 | Dossier récupéré par l’enseignant, fichier brut, script R, résultats et README court, sans IA |
 | Défi 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `docs/ai-log.md` ou fichier de réflexion IA |
 | Défi 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
 | Site Quarto personnel | Adresse GitHub Pages publique, dépôt source du site, dernier commit évalué, page de présentation ou compétences, au moins deux réalisations commentées, lien ou référence vers une trace du portfolio, déclaration IA si pertinente |
@@ -104,7 +104,7 @@ L'équipe enseignante crée le dépôt à partir du modèle minimal privé A2026
 
 Cette règle s’applique au défi technique 1.
 
-L’utilisation d’outils d’IA générative n’est pas permise pour cette évaluation. L’objectif est de vérifier les compétences individuelles de base en structuration de projet, manipulation de fichiers, importation de données, utilisation de Git et rédaction minimale de documentation. Les notes de cours, la documentation officielle et le code produit antérieurement par l’étudiante ou l’étudiant sont permis. Toute utilisation d’un outil d’IA générative pendant cette évaluation constitue un non-respect des consignes.
+L’utilisation d’outils d’IA générative n’est pas permise pour le défi technique 1. L’objectif est de vérifier les compétences individuelles en organisation d’un projet R, importation, nettoyage, validation et documentation. L’épreuve se fait sur un compte Windows sans Internet. Les étudiants peuvent apporter leurs documents papier; les ressources numériques autorisées sont celles mises à disposition par l’enseignant sur les comptes, avec l’aide locale de R et des packages installés. Aucun fichier personnel ne peut être importé. Les assistants génératifs de l’éditeur sont interdits. L’enseignant récupère directement les dossiers; Git, les commits et l’archivage ne sont pas demandés.
 
 ### IA permise, déclarée
 

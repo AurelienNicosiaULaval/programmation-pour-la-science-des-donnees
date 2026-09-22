@@ -1,5 +1,5 @@
 ---
-title: "Rattrapage R/Git pour le défi technique 1"
+title: "Rattrapage R pour le défi technique 1"
 format:
   html:
     embed-resources: true
@@ -7,13 +7,13 @@ format:
 
 ## Objectif
 
-Cette fiche aide à se préparer au défi technique 1 sans révéler la consigne évaluée. Elle regroupe les gestes à pratiquer avant le défi: structure de projet, importation CSV, nettoyage minimal, assertions, sauvegarde et commits Git.
+Cette fiche aide à se préparer au défi technique 1 sans révéler la consigne évaluée. Elle regroupe les gestes à pratiquer avant le défi: structure de projet, importation CSV, nettoyage minimal, assertions, proportion, sauvegarde et README. Les [modalités du défi](../defis/preparation-defi-technique-1.qmd) prévoient des comptes Windows sans Internet, des documents papier personnels et des ressources numériques fournies par l’enseignant. Aucun fichier personnel ne peut être importé sur les comptes.
 
 ## Séquence minimale à pratiquer
 
 Avant le défi, refaire cette séquence sans IA:
 
-1. créer les dossiers `data/raw/`, `data/processed/`, `R/` et `docs/`;
+1. créer les dossiers `data/raw/`, `data/processed/`, `R/` et le fichier `README.md`;
 2. placer un fichier CSV dans `data/raw/`;
 3. créer un script dans `R/`;
 4. charger explicitement les packages;
@@ -21,10 +21,10 @@ Avant le défi, refaire cette séquence sans IA:
 6. inspecter les noms, types et valeurs manquantes;
 7. convertir une date ou une colonne numérique;
 8. créer une variable dérivée simple;
-9. écrire au moins quatre assertions;
+9. écrire au moins cinq assertions pertinentes;
 10. sauvegarder une version propre dans `data/processed/`;
 11. écrire un README court;
-12. faire au moins deux commits lisibles.
+12. relancer le script dans une session R propre et vérifier que tous les résultats sont recréés.
 
 ## Structure de projet
 
@@ -122,20 +122,13 @@ Le README devrait indiquer:
 - une limite restante;
 - la règle IA respectée.
 
-## Git avant remise
+## Calcul bref de proportion
 
-Commandes utiles:
+Une proportion rapporte un nombre de cas au nombre total d’observations concernées. Pour une proportion de valeurs manquantes, le dénominateur comprend toutes les lignes du groupe, y compris celles dont la valeur manque. La moyenne d’un indicateur logique peut représenter cette proportion : `TRUE` compte pour 1 et `FALSE` pour 0.
 
-```bash
-git status
-git add .
-git commit -m "Ajouter la structure du defi"
-git commit -m "Nettoyer et valider les donnees"
-git status
-git push
-```
+## Enregistrer le dossier avant la récupération
 
-Avant de remettre, vérifier que `git status` ne cache pas un fichier important oublié.
+Enregistrer le script, le README et les résultats à l’emplacement indiqué sur le compte d’examen. L’enseignant récupère directement ce dossier. Aucun dépôt Git, commit, ZIP ou envoi en ligne n’est demandé. Attendre l’autorisation avant de fermer la session.
 
 ## Erreurs à éviter
 
@@ -145,7 +138,7 @@ Avant de remettre, vérifier que `git status` ne cache pas un fichier important 
 - sauvegarder la donnée propre dans `data/raw/`;
 - oublier de relancer le script depuis une session propre;
 - écrire des assertions qui ne testent rien;
-- committer seulement à la toute fin avec un message vague;
+- oublier d’enregistrer les fichiers avant la récupération du dossier;
 - utiliser l’IA pendant le défi.
 
 ## Sources utiles
@@ -154,4 +147,3 @@ Avant de remettre, vérifier que `git status` ne cache pas un fichier important 
 - Documentation officielle `readr`: <https://readr.tidyverse.org/>.
 - Documentation officielle `dplyr`: <https://dplyr.tidyverse.org/>.
 - Documentation officielle `stringr`: <https://stringr.tidyverse.org/>.
-- Bryan, J. et Hester, J. Happy Git and GitHub for the useR: <https://happygitwithr.com/>.

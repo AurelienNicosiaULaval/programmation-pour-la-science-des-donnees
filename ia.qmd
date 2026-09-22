@@ -36,7 +36,7 @@ Tu peux utiliser l’IA si tu peux ensuite expliquer, vérifier, modifier et dé
 
 ### IA non permise
 
-L’utilisation d’outils d’IA générative n’est pas permise pour cette évaluation. L’objectif est de vérifier les compétences individuelles de base en structuration de projet, manipulation de fichiers, importation de données, utilisation de Git et rédaction minimale de documentation. Les notes de cours, la documentation officielle et le code produit antérieurement par l’étudiante ou l’étudiant sont permis. Toute utilisation d’un outil d’IA générative pendant cette évaluation constitue un non-respect des consignes.
+L’utilisation d’outils d’IA générative n’est pas permise pour le défi technique 1. L’objectif est de vérifier les compétences individuelles en organisation d’un projet R, importation, nettoyage, validation et documentation. L’épreuve se fait sur un compte Windows sans Internet. Les étudiants peuvent apporter leurs documents papier; les ressources numériques autorisées sont celles mises à disposition par l’enseignant sur les comptes, avec l’aide locale de R et des packages installés. Aucun fichier personnel ne peut être importé. Les assistants génératifs de l’éditeur sont interdits. L’enseignant récupère directement les dossiers; Git, les commits et l’archivage ne sont pas demandés.
 
 ### IA permise, déclarée
 

@@ -103,7 +103,7 @@ Les ressources de rattrapage couvrent au minimum:
 - lecture de messages d’erreur.
 
 - Avant le cours: [Mise à niveau des bases de R](ressources/mise-a-niveau-r.qmd).
-- Avant le premier défi: [Rattrapage R/Git pour le défi technique 1](ressources/rattrapage-r-git-defi-1.qmd).
+- Avant le premier défi: [Rattrapage R pour le défi technique 1](ressources/rattrapage-r-git-defi-1.qmd).
 
 ## Authentification GitHub
 
