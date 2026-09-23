@@ -543,51 +543,6 @@ Attention : la moyenne de Québec repose sur un seul jour, celle de Lévis sur t
 [regroupement par opération](https://dplyr.tidyverse.org/reference/dplyr_by.html)
 :::
 
-## À vous : compter les jours pluvieux {#exercice .compact}
-
-À partir de `propre`, comptez pour chaque station :<br>les jours où la pluie est connue et, parmi eux, les jours où il a plu.
-
-::: fragment
-::: columns
-::: {.column width="60%"}
-
-```{r}
-#| label: exercice
-#| results: hide
-#| echo: !expr 1
-```
-
-:::
-::: {.column width="40%"}
-
-```{r}
-#| echo: false
-#| results: asis
-knitr::kable(jours_pluvieux, col.names = c("Station", "Observés", "Pluvieux"))
-```
-
-:::
-:::
-:::
-
-::: small
-Il reste une ligne par station et par date : compter les lignes revient donc à compter les jours.<br>Si la quantité de pluie est inconnue, on ne peut pas conclure qu’il n’a pas plu.
-:::
-
-## Vérifier, puis sauvegarder {#validation .compact}
-
-```{r}
-#| label: validation-sauvegarde
-```
-
-::: {.takeaway}
-`stopifnot()` arrête le script si une de ces vérifications échoue.<br>Le fichier nettoyé est enregistré dans `data/processed/`; le fichier brut est conservé.
-:::
-
-::: small
-On vérifie ici les dates, les répétitions station-date et les pluies négatives.<br>Une valeur de pluie manquante reste permise.
-:::
-
 ## Défi 1 : mercredi 30 septembre {#defi-horaire .compact}
 
 PLT-3928 · Travail individuel · 60 minutes · 10 % de la note finale
