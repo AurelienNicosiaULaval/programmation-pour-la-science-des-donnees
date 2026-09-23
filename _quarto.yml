@@ -91,6 +91,8 @@ website:
           href: lectures.qmd
         - text: "Ressources techniques"
           href: ressources.qmd
+        - text: "Aide-mémoire R (PDF)"
+          href: ressources.qmd#aide-memoire-r
         - text: "Dépendances"
           href: dependances.qmd
         - text: "Soutien technique"
