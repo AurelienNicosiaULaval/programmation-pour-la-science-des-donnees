@@ -13,6 +13,7 @@ Les diaporamas présentés en début de séance reprennent les idées essentiell
 |:--|:--|:--|
 | 2 | 9 septembre 2026 | [Des fichiers aux objets R](diaporamas/semaine-02.qmd) |
 | 3 | 16 septembre 2026 | [Calculs et simulation en R](diaporamas/semaine-03.qmd) · [Script R](diaporamas/demonstration-semaine-03.R) |
+| 4 | 23 septembre 2026 | [Prétraitement avec le tidyverse](diaporamas/semaine-04.qmd) · [Script R](diaporamas/demonstration-semaine-04.R) |
 
 Ouvrez le diaporama, puis utilisez les flèches du clavier pour avancer ou revenir en arrière. La touche Échap affiche une vue d'ensemble des diapositives.
 

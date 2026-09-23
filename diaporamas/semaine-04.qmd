@@ -1,0 +1,732 @@
+---
+pagetitle: "Semaine 4 : prétraitement avec le tidyverse"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    code-line-numbers: false
+    theme: simple
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    transition: none
+    background-transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    chalkboard: false
+    preview-links: false
+    footer: "STT-4230 / STT-6230 · 23 septembre 2026"
+    include-in-header:
+      text: |
+        <style>
+        :root { --ink:#17303d; --navy:#083d53; --teal:#087d85; --paper:#f7fafb; --muted:#536975; --line:#c9dce1; }
+        .reveal { font-family:"Helvetica Neue",Arial,sans-serif; color:var(--ink); background:var(--paper); font-size:36px; }
+        .reveal .slides { text-align:left; }
+        .reveal .slides section { box-sizing:border-box; padding:34px 54px 54px; }
+        .reveal h1,.reveal h2,.reveal h3 { font-family:inherit; color:var(--navy); font-weight:400; text-transform:none; }
+        .reveal h2 { margin:0 0 34px; font-size:61px; line-height:1.12; letter-spacing:-.035em; }
+        .reveal h3 { font-size:36px; margin:18px 0; }
+        .reveal p,.reveal li { line-height:1.35; }
+        .reveal p { margin:17px 0; }
+        .reveal li { margin:15px 0; }
+        .reveal ul,.reveal ol { margin-left:1em; }
+        .reveal strong,.reveal b { font-weight:400; }
+        .reveal code { font-size:.88em; color:var(--navy); }
+        .reveal pre { box-sizing:border-box; width:100%; margin:14px 0; box-shadow:none; font-size:29px; line-height:1.35; }
+        .reveal pre.sourceCode { border-left:4px solid var(--teal); padding:16px 20px; background:#eaf2f4; }
+        .reveal pre code { padding:0; max-height:none; font-size:inherit; white-space:pre; }
+        .reveal .cell-output pre { padding:14px 20px; background:#fff; color:#254b5c; border-left:4px solid #b5cbd3; }
+        .reveal .cell { margin:0; }
+        .reveal table { width:100%; margin:20px 0; font-size:32px; border-collapse:collapse; }
+        .reveal table th { font-weight:400; color:var(--navy); border-bottom:2px solid var(--teal); }
+        .reveal table th,.reveal table td { padding:15px 16px; border-bottom:1px solid var(--line); }
+        .reveal table tr:last-child td { border-bottom:1px solid var(--line); }
+        .reveal a { color:var(--teal); text-decoration:underline; text-underline-offset:5px; }
+        .reveal .columns { gap:55px; }
+        .reveal .column { min-width:0; }
+        .reveal #defi-ressources .column:first-child { box-sizing:border-box; padding-right:32px; }
+        .reveal .lead { font-size:49px; line-height:1.28; max-width:1300px; }
+        .reveal .small { font-size:27px; color:var(--muted); }
+        .reveal .source { margin-top:18px; font-size:23px; color:var(--muted); }
+        .reveal .takeaway { border-top:2px solid var(--teal); margin-top:30px; padding-top:20px; font-size:37px; }
+        .reveal .hero-title { font-size:96px; line-height:1.03; letter-spacing:-.045em; margin:30px 0 36px; }
+        .reveal .hero-subtitle { color:#bbdade; font-size:41px; max-width:1120px; }
+        .reveal .hero-meta { margin-top:68px; font-size:29px; color:#d5e5e9; }
+        .reveal section.dark { color:#fff; }
+        .reveal section.dark h1,.reveal section.dark h2 { color:#fff; }
+        .reveal section.dark a { color:#bfe7e8; }
+        .reveal section.dark .small { color:#d5e5e9; }
+        .reveal section.compact table { font-size:29px; }
+        .reveal section.compact table td,.reveal section.compact table th { padding:12px 14px; }
+        .reveal section.compact pre { font-size:27px; }
+        .reveal section.compact .takeaway { margin-top:20px; padding-top:14px; }
+        .reveal section.refs p,.reveal section.refs li { font-size:27px; }
+        .reveal .slide-number { font-size:19px; right:22px; bottom:18px; color:#536975; background:transparent; }
+        .reveal .footer { font-size:18px; bottom:18px; color:#647e89; }
+        .reveal .progress { height:5px; color:var(--teal); }
+        .reveal .controls { color:var(--teal); }
+        .reveal .fragment { transition:none; }
+        </style>
+embed-resources: true
+execute:
+  collapse: true
+  echo: true
+  warning: false
+  message: false
+  error: false
+editor: source
+---
+
+```{r}
+#| label: preparation
+#| include: false
+library(knitr)
+knitr::opts_chunk$set(results = "hold", collapse = TRUE, comment = "#>")
+knitr::read_chunk("demonstration-semaine-04.R")
+```
+
+```{r}
+#| label: initialisation
+#| include: false
+```
+
+## {#ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Prétraitement<br>avec le tidyverse</h1>
+
+<p class="hero-subtitle">Importer, nettoyer et vérifier des données en R</p>
+
+<p class="hero-meta">Aurélien Nicosia · 23 septembre 2026<br>STT-4230 / STT-6230</p>
+
+## Enchaîner les opérations avec |> {#parcours .compact}
+
+::: columns
+::: {.column width="50%"}
+
+```r
+meteo |>
+  filter(station == "Lévis") |>
+  select(date, precip_mm) |>
+  arrange(date)
+```
+
+:::
+::: {.column width="50%"}
+
+| Code | Ce qu’il fait |
+|:--|:--|
+| `meteo` | Le tableau de départ |
+| `filter()` | Garder les lignes de Lévis |
+| `select()` | Garder deux colonnes |
+| `arrange()` | Trier les lignes par date |
+
+:::
+:::
+
+::: {.takeaway}
+Ici, `|>` passe le tableau à la fonction suivante comme premier argument.<br>Chaque étape utilise le résultat de la précédente.
+:::
+
+::: source
+[R for Data Science, Data transformation](https://r4ds.hadley.nz/data-transform.html)
+:::
+
+## Retour sur le mini-test {#mini-test .compact}
+
+### Importation {#rappel-importation}
+
+Un fichier utilise `;` entre les colonnes et `,` pour les décimales.<br>Quelle fonction utiliser pour le lire ?
+
+::: fragment
+`readr::read_csv2()` est conçu pour ce format.
+:::
+
+::: source
+[readr : read_csv2](https://readr.tidyverse.org/reference/read_delim.html)
+:::
+
+## Un exemple : des données météo {#donnees .compact}
+
+Mesures météo fictives à Québec et à Lévis. Températures en °C, pluie en mm.
+
+```{r}
+#| echo: false
+#| results: asis
+apercu <- read_delim(I(paste(lignes_brutes, collapse = "\n")),
+                     delim = ";", trim_ws = FALSE,
+                     col_types = cols(.default = col_character())) |>
+  mutate(ville = str_c('"', ville, '"'))
+knitr::kable(apercu, col.names = c("Date", "Station", "Min.", "Max.", "Pluie"))
+```
+
+::: {.takeaway}
+Que faut-il corriger avant de faire des calculs ?<br>Regardez les noms des villes, les dates, la pluie négative et la ligne répétée.
+:::
+
+## Importer le fichier et examiner les données {#importation .compact}
+
+::: columns
+::: {.column width="56%"}
+
+```{r}
+#| label: importation
+#| results: hide
+```
+
+:::
+::: {.column width="44%"}
+
+`glimpse(brut)` montre :
+
+- 7 lignes et 5 colonnes;
+- les dates et les stations stockées comme du texte;
+- les trois mesures numériques.
+
+:::
+:::
+
+::: {.takeaway}
+Les trois mesures sont déjà numériques.<br>Les dates sont encore du texte : il faudra les convertir.
+:::
+
+::: source
+[read_csv2](https://readr.tidyverse.org/reference/read_delim.html)
+:::
+
+## Choisir et renommer les colonnes {#selection .compact}
+
+```{r}
+#| label: selection
+#| echo: !expr 1
+#| results: hide
+```
+
+| Fonction | Ce qu'elle change |
+|:--|:--|
+| `rename(nouveau = ancien)` | Les noms des colonnes |
+| `select()` | Les colonnes conservées et leur ordre |
+| `starts_with("temp_")` | Sélectionne les noms qui commencent par `temp_` |
+
+::: {.takeaway}
+Les sept lignes sont conservées.
+:::
+
+::: source
+[rename](https://dplyr.tidyverse.org/reference/rename.html) · [select](https://dplyr.tidyverse.org/reference/select.html)
+:::
+
+## Uniformiser les noms et convertir les dates {#formats .compact}
+
+::: columns
+::: {.column width="61%"}
+
+```{r}
+#| label: formats
+#| echo: !expr 1
+#| results: hide
+```
+
+:::
+::: {.column width="39%"}
+
+`str_squish()` enlève les espaces superflus.
+
+`str_to_title()` transforme ici « QUÉBEC » en « Québec ».
+
+`dmy()` lit une date écrite dans l’ordre jour, mois, année.
+
+`relocate()` déplace la colonne `date` au début du tableau.
+
+:::
+:::
+
+::: {.takeaway}
+« québec », « QUÉBEC » et « Québec » deviennent « Québec ».<br>La colonne `date` est maintenant de type `Date`.
+:::
+
+::: source
+[espaces](https://stringr.tidyverse.org/reference/str_trim.html) · [casse](https://stringr.tidyverse.org/reference/case.html) · [dates](https://lubridate.tidyverse.org/reference/ymd.html)
+:::
+
+## Créer une variable avec mutate {#amplitude .compact}
+
+```{r}
+#| label: amplitude
+#| echo: !expr 1
+#| results: hide
+```
+
+```{r}
+#| echo: false
+#| results: asis
+meteo |> select(date, station, temp_min_c, temp_max_c, amplitude_c) |>
+  slice_head(n = 3) |>
+  knitr::kable(col.names = c("Date", "Station", "Min. °C", "Max. °C", "Amplitude °C"))
+```
+
+::: {.takeaway}
+L'amplitude est calculée ligne par ligne.<br>Si une des deux températures manque, l'amplitude reste manquante.
+:::
+
+::: source
+[mutate](https://dplyr.tidyverse.org/reference/mutate.html)
+:::
+
+## Recoder avec if_else et case_when {#recodage .compact}
+
+::: columns
+::: {.column width="60%"}
+
+```{r}
+#| label: recodage
+#| echo: !expr 1
+#| results: hide
+```
+
+:::
+::: {.column width="40%"}
+
+`if_else()` remplace les pluies négatives par `NA`.
+
+`case_when()` classe chaque valeur : manquante, nulle ou positive.
+
+Sur les sept lignes de départ :
+
+```{r}
+#| echo: false
+#| results: asis
+knitr::kable(controle_pluie,
+             col.names = c("Étape", "Négatives", "Manquantes"))
+```
+
+:::
+:::
+
+::: {.takeaway}
+La pluie négative devient `NA` : on passe de 1 à 2 valeurs manquantes.<br>On ne la remplace pas par zéro, car on ne sait pas s’il a plu.
+:::
+
+::: source
+[if_else](https://dplyr.tidyverse.org/reference/if_else.html) · [case_when](https://dplyr.tidyverse.org/reference/case_when.html)
+:::
+
+## Repérer et retirer les doublons {#doublons .compact}
+
+::: columns
+::: {.column width="56%"}
+
+```{r}
+#| label: doublons
+#| echo: !expr c(1, 2)
+#| results: hide
+```
+
+:::
+::: {.column width="44%"}
+
+Cette station apparaît deux fois à la même date :
+
+```{r}
+#| echo: false
+#| results: asis
+knitr::kable(doublons)
+```
+
+Ici, les deux lignes sont identiques.<br>`distinct()` ramène la table à six lignes.
+
+:::
+:::
+
+::: {.takeaway}
+Si les deux lignes contenaient des mesures différentes,<br>il faudrait comprendre pourquoi avant d’en supprimer une.
+:::
+
+::: source
+[count](https://dplyr.tidyverse.org/reference/count.html) · [distinct](https://dplyr.tidyverse.org/reference/distinct.html)
+:::
+
+## Choisir des lignes et les trier {#filtrage .compact}
+
+```{r}
+#| label: filtrage
+```
+
+::: {.takeaway}
+Les conditions séparées par une virgule doivent toutes être vraies.<br>`desc()` trie les valeurs de la plus grande à la plus petite.
+:::
+
+::: small
+`filter()` garde seulement les lignes pour lesquelles la condition vaut `TRUE`.<br>Une ligne dont la condition vaut `NA` est donc retirée.
+:::
+
+::: source
+[filter](https://dplyr.tidyverse.org/reference/filter.html) · [arrange](https://dplyr.tidyverse.org/reference/arrange.html)
+:::
+
+## Une ligne de résumé par station {#groupes .compact}
+
+::: columns
+::: {.column width="61%"}
+
+```{r}
+#| label: resume-groupes
+#| echo: !expr 1
+#| results: hide
+```
+
+:::
+::: {.column width="39%"}
+
+```{r}
+#| echo: false
+#| results: asis
+bilan |> select(station, n_mesures, pluie_moy) |>
+  knitr::kable(col.names = c("Station", "Mesures", "Moy. mm"))
+```
+
+`na.rm = TRUE` exclut les valeurs manquantes du calcul de la moyenne.
+
+:::
+:::
+
+::: {.takeaway}
+`n()` compte les lignes; `sum(!is.na(...))` compte les mesures observées.<br>À Québec, la moyenne repose sur une seule mesure de pluie.
+:::
+
+::: small
+`group_by()` définit les groupes; `summarise()` produit les résumés.<br>`.groups = "drop"` retire le regroupement du résultat.
+:::
+
+::: source
+[summarise](https://dplyr.tidyverse.org/reference/summarise.html)
+:::
+
+## Appliquer un calcul à plusieurs colonnes {#across .compact}
+
+```{r}
+#| label: across
+#| echo: !expr 1
+#| results: hide
+```
+
+```{r}
+#| echo: false
+#| results: asis
+knitr::kable(bilan_na)
+```
+
+::: {.takeaway}
+`across()` répète le calcul pour chaque colonne choisie.<br>Ici, `.x` désigne la colonne et `sum(is.na(.x))` compte ses valeurs manquantes.
+:::
+
+::: source
+[across](https://dplyr.tidyverse.org/reference/across.html)
+:::
+
+## Ajouter une information avec left_join {#jointure .compact}
+
+```{r}
+#| label: repertoire-stations
+#| include: false
+```
+
+::: columns
+::: {.column width="61%"}
+
+```{r}
+#| label: jointure
+#| echo: !expr 1
+#| results: hide
+```
+
+:::
+::: {.column width="39%"}
+
+La table `stations` :
+
+```{r}
+#| echo: false
+#| results: asis
+knitr::kable(stations)
+```
+
+:::
+:::
+
+::: {.takeaway}
+La jointure ajoute la rive en associant les noms de stations.<br>Avec `many-to-one`, R s’arrête si une station correspond à plusieurs lignes de `stations`.
+:::
+
+::: small
+Une station absente de `stations` aura une rive manquante. Il faut aussi vérifier ce cas.
+:::
+
+::: source
+[Jointures](https://dplyr.tidyverse.org/reference/mutate-joins.html)
+:::
+
+## Passer au format long avec pivot_longer {#format-long .compact}
+
+::: columns
+::: {.column width="58%"}
+
+```{r}
+#| label: format-long
+#| results: hide
+#| echo: !expr 1
+```
+
+:::
+::: {.column width="42%"}
+
+Québec, le 1er septembre :
+
+```{r}
+#| echo: false
+#| results: asis
+long |> slice_head(n = 2) |> select(mesure, temp_c) |>
+  knitr::kable(col.names = c("Mesure", "Température °C"))
+```
+
+Les colonnes `date` et `station` sont répétées pour les deux mesures.
+
+:::
+:::
+
+::: {.takeaway}
+Chaque température occupe maintenant une ligne.<br>`mesure` indique s’il s’agit du minimum ou du maximum; `temp_c` contient la valeur.
+:::
+
+::: source
+[pivot_longer](https://tidyr.tidyverse.org/reference/pivot_longer.html)
+:::
+
+## Comparer les moyennes des deux stations {#pipeline .compact}
+
+Calculons la pluie moyenne pour chaque station, en excluant les valeurs manquantes.
+
+::: columns
+::: {.column width="60%"}
+
+```{r}
+#| label: pipeline
+#| results: hide
+#| echo: !expr 1
+```
+
+:::
+::: {.column width="40%"}
+
+```{r}
+#| echo: false
+#| results: asis
+knitr::kable(classement, col.names = c("Station", "Mesures", "Moy. mm"))
+```
+
+:::
+:::
+
+::: {.takeaway}
+`.by = station` fait le calcul séparément pour chaque station.<br>Ce regroupement s’applique seulement à cet appel de `summarise()`.
+:::
+
+::: small
+Attention : la moyenne de Québec repose sur un seul jour, celle de Lévis sur trois jours.
+:::
+
+::: source
+[regroupement par opération](https://dplyr.tidyverse.org/reference/dplyr_by.html)
+:::
+
+## À vous : compter les jours pluvieux {#exercice .compact}
+
+À partir de `propre`, comptez pour chaque station :<br>les jours où la pluie est connue et, parmi eux, les jours où il a plu.
+
+::: fragment
+::: columns
+::: {.column width="60%"}
+
+```{r}
+#| label: exercice
+#| results: hide
+#| echo: !expr 1
+```
+
+:::
+::: {.column width="40%"}
+
+```{r}
+#| echo: false
+#| results: asis
+knitr::kable(jours_pluvieux, col.names = c("Station", "Observés", "Pluvieux"))
+```
+
+:::
+:::
+:::
+
+::: small
+Il reste une ligne par station et par date : compter les lignes revient donc à compter les jours.<br>Si la quantité de pluie est inconnue, on ne peut pas conclure qu’il n’a pas plu.
+:::
+
+## Vérifier, puis sauvegarder {#validation .compact}
+
+```{r}
+#| label: validation-sauvegarde
+```
+
+::: {.takeaway}
+`stopifnot()` arrête le script si une de ces vérifications échoue.<br>Le fichier nettoyé est enregistré dans `data/processed/`; le fichier brut est conservé.
+:::
+
+::: small
+On vérifie ici les dates, les répétitions station-date et les pluies négatives.<br>Une valeur de pluie manquante reste permise.
+:::
+
+## Défi 1 : mercredi 30 septembre {#defi-horaire .compact}
+
+PLT-3928 · Travail individuel · 60 minutes · 10 % de la note finale
+
+| Heure | Déroulement |
+|:--|:--|
+| 13 h 30 à 14 h 30 | Travail individuel sur un poste Windows, sans Internet. |
+| À 14 h 30 | Vous enregistrez vos fichiers et vous arrêtez de travailler. |
+| 14 h 30 à 14 h 45 | Je récupère vos dossiers de travail. |
+| Ensuite | Introduction aux graphiques sur un autre exemple. |
+
+::: small
+Pas de mini-test la semaine du 30 septembre.
+:::
+
+## Ce que vous aurez à faire {#defi-livrables .compact}
+
+::: columns
+::: {.column width="54%"}
+
+### Dans le script
+
+1. Lire le fichier et examiner les données.
+2. Corriger les textes, traiter les valeurs manquantes et retirer les doublons.
+3. Créer une variable, compter et calculer une proportion par groupe.
+4. Ajouter au moins cinq vérifications dans le code, puis enregistrer les résultats.
+
+:::
+::: {.column width="46%"}
+
+### Les fichiers à enregistrer
+
+- Le fichier brut, sans le modifier.
+- Le script `R/defi1.R`.
+- Deux fichiers CSV dans `data/processed/` : les données nettoyées et le résumé.
+- Un README d’environ 8 à 12 lignes.
+
+:::
+:::
+
+::: {.small}
+Le README explique comment exécuter le script, vos choix de nettoyage et une limite.<br>La consigne complète et les données seront fournies au début du défi.
+:::
+
+## Ce que vous pouvez consulter {#defi-ressources .compact}
+
+::: columns
+::: {.column width="50%"}
+
+### Documents permis
+
+- Vos documents papier.
+- Les notes et documents que je déposerai sur le compte d’examen.
+- L’aide de R et des packages installés sur le poste.
+
+:::
+::: {.column width="50%"}
+
+### Pendant le défi, il est interdit de…
+
+- importer vos propres fichiers;
+- consulter Internet ou vos comptes personnels;
+- utiliser une IA, même pour comprendre une erreur;
+- échanger des réponses ou vous faire aider pour réaliser le travail.
+
+:::
+:::
+
+## À la fin du défi {#defi-remise .compact}
+
+1. Avant la fin, redémarrez R et exécutez votre script du début à la fin.
+2. Vérifiez que le script, le README et les deux fichiers de résultats sont enregistrés dans le dossier `defi-1`, avec le fichier brut.
+3. À 14 h 30, enregistrez une dernière fois et arrêtez de modifier vos réponses.
+4. Attendez que je confirme la récupération de votre dossier avant de fermer la session.
+
+::: {.takeaway}
+Vous n’avez rien à envoyer : je récupère les fichiers sur votre compte.<br>Vous n’avez pas à utiliser Git ni à créer une archive ZIP.
+:::
+
+::: small
+Si vous avez un problème pour enregistrer vos fichiers, prévenez-moi tout de suite.
+:::
+
+## Comment le défi sera évalué {#defi-bareme .compact}
+
+| Critère | Points |
+|:--|--:|
+| Exactitude technique | 3 |
+| Reproductibilité | 2 |
+| Qualité du code | 2 |
+| Documentation et remise | 1 |
+| Validation et explication | 1 |
+| Respect du statut IA | 1 |
+
+::: {.small}
+Le travail et le barème sont les mêmes pour STT-4230 et STT-6230.<br>Vous devez expliquer au moins un de vos choix de nettoyage dans le README.
+:::
+
+::: small
+Vous pouvez utiliser R de base ou les packages vus en classe.<br>Vous n’avez pas à produire de graphique ou de rapport Quarto, ni à écrire vos propres fonctions.
+:::
+
+::: source
+[Grille d’évaluation](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/grille-defis-techniques.html)
+:::
+
+## Quoi pratiquer cette semaine {#laboratoire .compact}
+
+[Exercices de prétraitement](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/exercices/module-04-pretraitement-donnees.html)
+
+- Refaites sans IA un exercice complet : lire un fichier, nettoyer les données, les vérifier et enregistrer le résultat.
+- Calculez une proportion et expliquez ce que vous comptez au numérateur et au dénominateur.
+- Ajoutez une erreur dans une copie des données et vérifiez que votre script la détecte.
+- Exercez-vous à consulter l’aide de R. Préparez les documents papier que vous voulez apporter.
+
+::: {.small}
+Pour le portfolio, conservez votre exemple de cette semaine dans `semaines/semaine-04/`, avec quelques lignes pour expliquer ce que vous avez fait et vérifié.
+:::
+
+## Pour préparer le défi 1 {#preparation-defi1 .compact}
+
+Sur le site du cours :
+
+- [Consignes et préparation du défi 1](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/defis/preparation-defi-technique-1.html) : déroulement, ressources autorisées et travail attendu.
+- [Module 2 : structures et fichiers](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/exercices/module-02-structures-fichiers.html) et [module 4 : prétraitement](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/exercices/module-04-pretraitement-donnees.html) : les exercices à refaire en priorité.
+- [Module 3 : calculs en R](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/exercices/module-03-calculs-r.html) : revoir les proportions et les valeurs manquantes.
+- [Fiche de rattrapage R pour le défi 1](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/ressources/rattrapage-r-git-defi-1.html) : reprendre les bases pas à pas.
+
+## Documentation utile {#references .refs}
+
+- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). R for Data Science, 2e édition : [Data transformation](https://r4ds.hadley.nz/data-transform.html) et [Missing values](https://r4ds.hadley.nz/missing-values.html).
+- Équipe dplyr : [référence des fonctions](https://dplyr.tidyverse.org/reference/index.html), [across](https://dplyr.tidyverse.org/reference/across.html), [regroupement avec .by](https://dplyr.tidyverse.org/reference/dplyr_by.html) et [jointures](https://dplyr.tidyverse.org/reference/mutate-joins.html).
+- Équipe tidyr : [pivot_longer](https://tidyr.tidyverse.org/reference/pivot_longer.html).
+- Équipes stringr et lubridate : [traitement du texte](https://stringr.tidyverse.org/reference/index.html) et [conversion des dates](https://lubridate.tidyverse.org/reference/ymd.html).
+
+::: {.takeaway}
+Le script `demonstration-semaine-04.R` reproduit tous les exemples et vérifie les résultats.
+:::
+
+::: small
+R 4.1 ou plus; dplyr 1.1.1 ou plus; readr, tidyr, stringr, lubridate et tibble.
+:::
