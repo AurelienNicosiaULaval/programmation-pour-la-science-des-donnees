@@ -38,11 +38,40 @@ Les données évaluées seront fournies au début du défi. Elles proviendront d
 
 ## Ressources autorisées et règle IA
 
-Vous pouvez apporter vos documents papier. Sur les comptes d’examen, seules les ressources numériques mises à disposition par l’enseignant sont autorisées, dont les extraits de notes de cours fournis. Aucun fichier personnel ne peut être importé sur le compte d’examen.
+Vous pouvez apporter vos documents papier. Sur les comptes d’examen, seules les ressources numériques mises à disposition par l’enseignant sont autorisées. Le dossier de références présenté ci-dessous sera installé sur les comptes et consultable sans Internet. Aucun fichier personnel ne peut être importé sur le compte d’examen.
 
 L’aide locale de R et des packages installés, la recherche dans l’éditeur et l’autocomplétion habituelle restent permises. Les logiciels et les packages nécessaires seront préparés sur les postes.
 
 Statut : IA non permise. Pendant le défi, il est interdit d’utiliser un outil d’IA générative pour écrire, corriger, expliquer, traduire ou diagnostiquer le code ou la documentation, y compris un assistant génératif intégré à l’éditeur. Les échanges de solutions et l’aide d’une autre personne au contenu évalué sont interdits. Signaler à l’équipe toute question de consigne ou tout incident matériel.
+
+## Dossier de références à télécharger avant le défi {#references-hors-ligne}
+
+[Télécharger les références du défi 1, ZIP de 65,1 Mo](../assets/documents/defi-1/references-defi-1.zip){.btn .btn-primary download="references-defi-1.zip"}
+
+Ce dossier rassemble les documents que vous pourrez consulter sur les comptes d’examen. Téléchargez-le dès maintenant pour vous familiariser avec son organisation et retrouver rapidement les notions utiles. Version du 24 septembre 2026.
+
+| Contenu | Documents inclus |
+|---|---|
+| Notes de cours | Les 10 documents complets des semaines 1 à 4, soit 270 pages, et un recueil de 50 pages d’extraits pour consultation rapide |
+| Présentations et démonstrations | 7 présentations, les 2 scripts R publiés et 12 pages d’aide et de préparation, dont le diagnostic, le rattrapage et la grille publique |
+| Lectures complémentaires | Les 7 chapitres de livres associés aux lectures des semaines 1 à 4; les sections assignées sont indiquées dans le sommaire |
+| Exercices et solutions | Le laboratoire guidé de la semaine 1, les laboratoires corrigés des semaines 2 à 4, les 3 PDF supplémentaires et les données fournies |
+| Aide-mémoire et fiches | Un aide-mémoire en français de 6 pages et les 19 cheat sheets de la galerie du cours, dont les versions françaises de ggplot2 et de RStudio |
+
+Les solutions disponibles sont celles des laboratoires. Les PDF d’exercices supplémentaires sont fournis sans corrigé publié.
+
+### Comment consulter le dossier
+
+1. Télécharger le ZIP sur votre ordinateur et le décompresser complètement.
+2. Ouvrir le dossier `references`, puis le fichier `ACCUEIL.html` dans un navigateur.
+3. Utiliser le lien « Le cours, semaine par semaine » pour retrouver les notes, lectures, présentations et scripts; les exercices et les fiches sont accessibles depuis le même accueil.
+4. Essayer une recherche avec `Ctrl+F` dans un document et repérer les références dont vous aurez besoin.
+
+Les documents se consultent hors ligne; les liens vers d’autres sites Internet ne seront pas accessibles pendant l’épreuve. Les scripts peuvent être lus dans RStudio. Les opérations Internet ou Git illustrées dans certains supports concernent les activités habituelles du cours et ne sont pas à réaliser pendant le défi.
+
+Ce matériel est fourni pour référence : vous n’avez pas à tout relire ou à tout refaire. La matière évaluée reste celle annoncée plus haut, avec une contribution limitée du module 3.
+
+Le ZIP contient uniquement les références autorisées. Le dossier de travail `defi-1`, son énoncé et ses données seront fournis séparément sur les comptes au début de l’épreuve, le 30 septembre à 13 h 30. Vous n’avez aucun fichier personnel à transférer sur le compte d’examen.
 
 ## Préparation recommandée
 

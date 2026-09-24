@@ -11,6 +11,7 @@ project:
     - "!modules/"
   resources:
     - assets/documents/exercices-consolidation/**
+    - assets/documents/defi-1/references-defi-1.zip
     - diaporamas/*.R
 
 lang: fr

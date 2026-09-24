@@ -46,6 +46,8 @@ La remise est figée à la fin de l'heure évaluée. Elle doit permettre de retr
 
 Préparation et directives publiques: [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd).
 
+Les [références autorisées et leur ZIP à télécharger](defis/preparation-defi-technique-1.qmd#references-hors-ligne) sont disponibles avant l’épreuve pour vous familiariser avec les documents qui seront installés sur les comptes d’examen.
+
 Le premier défi vérifie les bases du travail individuel sans IA:
 
 - structure de projet;
