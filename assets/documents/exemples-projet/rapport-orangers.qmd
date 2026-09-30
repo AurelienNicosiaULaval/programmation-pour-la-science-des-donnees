@@ -1,0 +1,91 @@
+---
+title: "Croissance de cinq orangers"
+subtitle: "Exemple de rapport Quarto"
+author: "STT-4230 / STT-6230"
+lang: fr
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: "Dans ce rapport"
+    include-in-header:
+      text: |
+        <style>
+        body {color:#17303d; font-size:18px;}
+        h1,h2,h3 {color:#083d53; font-weight:500;}
+        a {color:#087d85;}
+        strong,b {font-weight:inherit;}
+        .quarto-title .subtitle {color:#087d85;}
+        </style>
+embed-resources: true
+execute:
+  echo: false
+  warning: true
+  message: false
+  error: false
+---
+
+```{r}
+#| include: false
+library(ggplot2)
+library(dplyr)
+library(knitr)
+arbres <- as_tibble(datasets::Orange) |>
+  transmute(arbre = factor(Tree, levels = as.character(1:5), ordered = FALSE),
+            temps_j = age, circonf_mm = circumference)
+bilan <- arbres |>
+  arrange(temps_j) |>
+  summarise(debut = first(circonf_mm), fin = last(circonf_mm),
+            variation = fin - debut, .by = arbre) |>
+  arrange(arbre)
+stopifnot(nrow(arbres) == 35L, n_distinct(arbres$arbre) == 5L,
+          n_distinct(arbres$temps_j) == 7L, !anyNA(arbres),
+          all(count(arbres, arbre)$n == 7L), all(bilan$variation > 0))
+figure <- ggplot(arbres, aes(temps_j, circonf_mm, colour = arbre, group = arbre)) +
+  geom_line(linewidth = 0.8) + geom_point(size = 2.8) +
+  scale_colour_brewer(palette = "Dark2") +
+  labs(x = "Temps (jours depuis le 31 décembre 1968)",
+       y = "Circonférence du tronc (mm)", colour = "Arbre") +
+  theme_minimal(base_size = 14) + theme(legend.position = "bottom")
+```
+
+## Question et données
+
+Comment la circonférence du tronc évolue-t-elle pour chacun des cinq arbres suivis ? Les données réelles `Orange`, incluses dans R, contiennent 35 mesures prises à 7 dates par arbre. Une ligne représente une mesure sur un arbre à une date.
+
+## Résultat graphique
+
+```{r}
+#| label: fig-croissance
+#| fig-cap: "Circonférences mesurées sur les cinq arbres au cours du suivi."
+#| fig-width: 9
+#| fig-height: 3.8
+#| fig-alt: "Évolution de la circonférence de cinq orangers : chaque arbre est représenté par une couleur et une ligne reliant ses sept mesures."
+figure
+```
+
+Les lignes relient les observations du même arbre. Dans ce petit échantillon, la circonférence augmente entre la première et la dernière mesure pour chacun des cinq arbres.
+
+## Comparaison entre la première et la dernière mesure
+
+```{r}
+#| results: asis
+kable(bilan, col.names = c("Arbre", "Première mesure (mm)",
+                          "Dernière mesure (mm)", "Variation (mm)"))
+```
+
+## Méthode et vérifications
+
+Les calculs utilisent les valeurs du jeu `datasets::Orange`. Le script vérifie les 35 lignes, les 5 arbres, les 7 dates, l’absence de valeurs manquantes et la présence de 7 mesures par arbre. La variation est la différence entre la dernière et la première circonférence de chaque arbre.
+
+## Limites
+
+Il s’agit de mesures répétées sur cinq arbres. Cette description ne permet pas d’attribuer les différences à une cause particulière ni de généraliser à tous les orangers. Aucun test statistique n’est réalisé ici.
+
+## Source et rôle de cet exemple
+
+Source des données : [documentation de R, jeu Orange](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/Orange.html), qui renvoie à Draper et Smith (1998), *Applied Regression Analysis*, et Pinheiro et Bates (2000), *Mixed-Effects Models in S and S-PLUS*.
+
+Ce petit document illustre un format de rendu. Votre projet utilise sa propre question, ses données et les autres éléments demandés dans les consignes, notamment le nettoyage, les contributions et la documentation de reproduction.
+
+[Voir les mêmes données sous forme de tableau de bord](tableau-bord-orangers.html).

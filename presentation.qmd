@@ -43,7 +43,7 @@ Cette séance n’est pas une deuxième correction complète du projet. Elle ser
 Le format exact peut être ajusté selon le nombre d’équipes. Par défaut, chaque équipe dispose d’un court bloc comprenant:
 
 - une présentation synthétique du projet;
-- une démonstration du rapport, tableau de bord ou application;
+- une démonstration du produit retenu : rapport, tableau de bord, application, tutoriel, site, outil R ou autre format approuvé;
 - une revue d’un extrait de code ou d’une pull request;
 - une discussion des validations, limites et compromis;
 - des questions posées à l’équipe et à certaines personnes individuellement.
@@ -54,7 +54,7 @@ Avant la présentation, chaque équipe doit avoir stabilisé:
 
 - le dépôt GitHub final;
 - le README;
-- le rapport Quarto, tableau de bord ou application;
+- le produit final dans le format approuvé;
 - `docs/contributions.md`;
 - `docs/ai-log.md` lorsque l’IA a été utilisée de façon significative;
 - `docs/note-technique-stt6230.md` pour les personnes inscrites à STT-6230;

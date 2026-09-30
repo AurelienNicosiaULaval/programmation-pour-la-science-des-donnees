@@ -56,7 +56,7 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 |---|---|
 | Mini-tests de préparation | Résultat enregistré dans Brio avant la fermeture du mardi à 23 h 59 et difficulté ou observation personnelle non notée à reprendre pendant la séance |
 | Portfolio GitHub individuel | Dépôt privé `portfolio-stt4230-IDUL` ou `portfolio-stt6230-IDUL`, selon le sigle d'inscription, créé une fois par l'équipe enseignante à partir du modèle A2026, cloné par la personne étudiante, dossiers ajoutés semaine après semaine, productions personnelles issues des lectures, exercices et activités, README, vérifications, bilan final et commits réguliers |
-| Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, rapport Quarto, application ou tableau de bord, validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
+| Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, produit dans le format approuvé (rapport, tableau de bord, application, tutoriel, site, outil R ou autre), validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
 | Défi 1 | Dossier récupéré par l’enseignant, fichier brut, script R, résultats et README court, sans IA |
 | Défi 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `docs/ai-log.md` ou fichier de réflexion IA |
 | Défi 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
@@ -150,7 +150,7 @@ Le dépôt contient uniquement le travail de l'étudiante ou de l'étudiant: cod
 
 ### Projet filé en équipe
 
-Le projet filé en équipe intègre plusieurs compétences du cours dans un dépôt reproductible. Il peut inclure un pipeline de données, un rapport Quarto, des visualisations, une application ou un tableau de bord, un pipeline de modèle et une documentation de reproduction.
+Le projet filé en équipe intègre plusieurs compétences du cours dans un dépôt reproductible. Le produit peut prendre la forme d’un rapport Quarto, d’un tableau de bord, d’une application Shiny, d’un tutoriel learnr, d’un site pédagogique, d’un outil R documenté ou d’un autre format approuvé. Il s’appuie sur un travail de données et de programmation reproductible, avec des visualisations, une validation adaptée et une documentation. Les [consignes du projet](projets.qmd#exemples-rendus) précisent les possibilités et les exigences communes.
 
 La contribution individuelle doit être vérifiable par Git, issues, pull requests, fichier de contributions, bilan individuel et questions orales si nécessaire.
 

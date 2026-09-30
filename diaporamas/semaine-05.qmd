@@ -1,0 +1,759 @@
+---
+pagetitle: "Semaine 5 : introduction à ggplot2 et projet d’équipe"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    theme: simple
+    css: semaine-05.css
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    transition: none
+    background-transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    preview-links: false
+    code-line-numbers: false
+    footer: "STT-4230 / STT-6230 · 30 septembre 2026"
+embed-resources: true
+execute:
+  echo: false
+  warning: true
+  message: false
+  error: false
+  fig-width: 7.2
+  fig-height: 5.1
+  dpi: 160
+editor: source
+---
+
+```{r}
+#| include: false
+library(knitr)
+knitr::opts_chunk$set(comment = "#>")
+```
+
+```{r}
+#| include: false
+# Packages requis : ggplot2 et dplyr.
+# Installation une fois, au besoin : install.packages(c("ggplot2", "dplyr"))
+library(ggplot2)
+library(dplyr)
+
+# Taille des textes adaptée à la projection.
+theme_set(theme_gray(base_size = 16))
+
+# Données réelles incluses dans R. Aucune connexion Internet requise.
+# Source : datasets::Orange ; help("Orange", package = "datasets").
+arbres <- as_tibble(datasets::Orange) |>
+  transmute(
+    arbre = factor(Tree, levels = as.character(1:5), ordered = FALSE),
+    temps_j = age,
+    circonf_mm = circumference
+  )
+stopifnot(nrow(arbres) == 35L, n_distinct(arbres$arbre) == 5L,
+          !anyNA(arbres), all(count(arbres, arbre)$n == 7L))
+p0 <- ggplot(
+  arbres,
+  aes(x = temps_j, y = circonf_mm)
+)
+p0
+p1 <- p0 +
+  geom_point(size = 3)
+p1
+p2 <- p0 +
+  geom_point(aes(colour = arbre),
+             size = 3)
+p2
+p_fixe <- p0 +
+  geom_point(colour = "steelblue",
+             size = 3)
+p_fixe
+p_piege <- p0 +
+  geom_point(aes(colour = "steelblue"),
+             size = 3)
+p_piege
+p3 <- p0 +
+  geom_line(aes(group = arbre),
+            colour = "grey65") +
+  geom_point(aes(colour = arbre),
+             size = 3)
+p3
+p4 <- ggplot(
+  arbres,
+  aes(temps_j, circonf_mm,
+      colour = arbre, group = arbre)
+) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 3)
+p4
+p5 <- p4 +
+  labs(
+    title = "Croissance de cinq orangers",
+    x = "Temps (jours)",
+    y = "Circonférence du tronc (mm)",
+    colour = "Arbre"
+  )
+p5
+p6 <- p5 +
+  scale_colour_brewer(palette = "Dark2")
+p6
+p7 <- p6 +
+  facet_wrap(vars(arbre), nrow = 1) +
+  guides(colour = "none")
+p7
+p8 <- p6 +
+  theme_minimal(base_size = 16) +
+  theme(legend.position = "bottom")
+p8
+figure <- ggplot(
+  arbres,
+  aes(temps_j, circonf_mm,
+      colour = arbre, group = arbre)
+) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 3) +
+  scale_colour_brewer(palette = "Dark2") +
+  labs(
+    title = "Croissance de cinq orangers",
+    x = "Temps (jours)",
+    y = "Circonférence du tronc (mm)",
+    colour = "Arbre"
+  ) +
+  theme_minimal(base_size = 16) +
+  theme(legend.position = "bottom")
+figure
+solution <- ggplot(
+  arbres,
+  aes(temps_j, circonf_mm)
+) +
+  geom_line(aes(group = arbre),
+            colour = "grey60") +
+  geom_point(colour = "steelblue", size = 3) +
+  facet_wrap(vars(arbre), nrow = 1) +
+  labs(x = "Temps (jours)",
+       y = "Circonférence du tronc (mm)") +
+  theme_minimal(base_size = 16)
+solution
+```
+
+##  { #ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Introduction<br>à ggplot2</h1>
+<p class="hero-subtitle">Construire une figure par couches<br>Puis lancer le projet d’équipe</p>
+<p class="hero-meta">Aurélien Nicosia · 30 septembre 2026<br>STT-4230 / STT-6230</p>
+
+## Les éléments d’une figure { #elements}
+
+| Élément | Rôle | Fonction |
+|:--|:--|:--|
+| Données | Le tableau à représenter | `ggplot(data = ...)` |
+| Associations esthétiques | Variables liées à x, y, couleur… | `aes()` |
+| Couches géométriques | Points, lignes, barres… | `geom_*()` |
+| Échelles | Correspondance entre valeurs et apparence | `scale_*()` |
+| Facettes | Une vue par sous-groupe | `facet_wrap()` |
+| Étiquettes et thème | Texte et apparence générale | `labs()`, `theme_*()` |
+
+::: takeaway
+`+` ajoute une couche ou un composant au graphique.
+:::
+
+::: source
+[ggplot2 : création d’un graphique](https://ggplot2.tidyverse.org/reference/ggplot.html)
+:::
+
+## Des données réelles, déjà disponibles dans R { #donnees}
+
+::: columns
+::: {.column width="51%"}
+
+```r
+library(ggplot2)
+library(dplyr)
+
+arbres <- as_tibble(datasets::Orange) |>
+  transmute(
+    arbre = factor(Tree, levels = 1:5,
+                   ordered = FALSE),
+    temps_j = age,
+    circonf_mm = circumference
+  )
+```
+
+:::
+::: {.column width="49%"}
+
+35 mesures, 5 orangers, 7 dates par arbre.
+
+```{r}
+#| results: asis
+knitr::kable(head(arbres, 5), col.names = c("Arbre", "Temps (jours)", "Circonf. (mm)"))
+```
+
+Le temps est compté depuis le 31 décembre 1968.
+
+:::
+:::
+
+::: small
+Une ligne du tableau correspond à une mesure sur un arbre. Les mesures d’un même arbre sont répétées.
+:::
+
+::: source
+[R datasets : Orange ; Draper et Smith (1998)](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/Orange.html)
+:::
+
+## 1. Les données et les axes { #axes}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p0 <- ggplot(
+  arbres,
+  aes(x = temps_j, y = circonf_mm)
+)
+p0
+```
+
+`aes()` associe une colonne à une propriété visuelle.
+
+Les axes sont prêts. Aucune géométrie ne représente encore les mesures.
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p0
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/aes.html)
+:::
+
+## 2. Une couche de points { #points}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p1 <- p0 +
+  geom_point(size = 3)
+p1
+```
+
+Chaque mesure devient un point.
+
+`size = 3` fixe la taille pour toute la couche.
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p1
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/geom_point.html)
+:::
+
+## 3. Une couleur liée à une variable { #couleur}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p2 <- p0 +
+  geom_point(aes(colour = arbre),
+             size = 3)
+p2
+```
+
+`colour = arbre` se trouve dans `aes()`.
+
+Les couleurs distinguent les arbres. Une légende apparaît.
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p2
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/aes.html)
+:::
+
+## Une couleur fixe pour tous les points { #constante}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p_fixe <- p0 +
+  geom_point(colour = "steelblue",
+             size = 3)
+p_fixe
+```
+
+La couleur se trouve hors de `aes()`.
+
+Tous les points deviennent bleus.
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p_fixe
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/geom_point.html)
+:::
+
+## Le piège de la constante dans aes() { #piege}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p_piege <- p0 +
+  geom_point(aes(colour = "steelblue"),
+             size = 3)
+p_piege
+```
+
+Ici, `"steelblue"` devient une catégorie.
+
+L’échelle choisit sa couleur et produit une légende nommée « steelblue ».
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p_piege
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/aes.html)
+:::
+
+## 4. Superposer deux couches { #lignes}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p3 <- p0 +
+  geom_line(aes(group = arbre),
+            colour = "grey65") +
+  geom_point(aes(colour = arbre),
+             size = 3)
+p3
+```
+
+`group = arbre` indique quelles mesures relier.
+
+Les points sont dessinés après les lignes.
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p3
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/geom_path.html)
+:::
+
+## Associations globales et locales { #heritage}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p4 <- ggplot(
+  arbres,
+  aes(temps_j, circonf_mm,
+      colour = arbre, group = arbre)
+) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 3)
+p4
+```
+
+Les associations dans `ggplot()` sont héritées par les deux couches.
+
+Une association dans `geom_point()` concerne cette couche.
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p4
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/geom_point.html)
+:::
+
+## 5. Donner des étiquettes utiles { #etiquettes}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p5 <- p4 +
+  labs(
+    title = "Croissance de cinq orangers",
+    x = "Temps (jours)",
+    y = "Circonférence du tronc (mm)",
+    colour = "Arbre"
+  )
+p5
+```
+
+`labs()` précise le titre, les axes et le titre de la légende.
+
+Les unités rendent la figure interprétable.
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p5
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/labs.html)
+:::
+
+## 6. Choisir une échelle de couleurs { #echelle}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p6 <- p5 +
+  scale_colour_brewer(palette = "Dark2")
+p6
+```
+
+`scale_colour_brewer()` choisit une palette pour les catégories.
+
+L’association `colour = arbre` reste la même.
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p6
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/scale_brewer.html)
+:::
+
+## 7. Séparer les arbres en facettes { #facettes}
+
+```r
+p7 <- p6 +
+  facet_wrap(vars(arbre), nrow = 1) +
+  guides(colour = "none")
+p7
+```
+
+```{r}
+#| fig-width: 13
+#| fig-height: 3.1
+p7
+```
+
+::: small
+Les axes sont communs par défaut. Chaque panneau représente un arbre.
+:::
+
+::: source
+[ggplot2 : facet_wrap](https://ggplot2.tidyverse.org/reference/facet_wrap.html)
+:::
+
+## 8. Régler l’apparence générale { #theme}
+
+::: columns
+::: {.column width="48%"}
+
+```r
+p8 <- p6 +
+  theme_minimal(base_size = 16) +
+  theme(legend.position = "bottom")
+p8
+```
+
+Le thème règle le fond, la grille et les textes.
+
+Il conserve les données et les associations esthétiques.
+
+:::
+::: {.column width="52%"}
+
+```{r}
+p8
+```
+
+:::
+:::
+
+::: source
+[Documentation ggplot2](https://ggplot2.tidyverse.org/reference/theme.html)
+:::
+
+## La construction complète { #complet .compact}
+
+::: columns
+::: {.column width="57%"}
+
+```r
+figure <- ggplot(
+  arbres,
+  aes(temps_j, circonf_mm,
+      colour = arbre, group = arbre)
+) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 3) +
+  scale_colour_brewer(palette = "Dark2") +
+  labs(
+    title = "Croissance de cinq orangers",
+    x = "Temps (jours)",
+    y = "Circonférence du tronc (mm)",
+    colour = "Arbre"
+  ) +
+  theme_minimal(base_size = 16) +
+  theme(legend.position = "bottom")
+figure
+```
+
+:::
+::: {.column width="43%"}
+
+Les deux `geom_*()` ajoutent les couches.
+
+`scale_*()`, `labs()` et `theme_*()` configurent les autres composants.
+
+::: takeaway
+Ici, les lignes relient les observations d’un même arbre. Elles ne sont pas des régressions.
+:::
+
+:::
+:::
+
+## Conserver une figure reproductible { #export}
+
+```r
+dir.create("figures", showWarnings = FALSE)
+ggsave(
+  "figures/croissance-orangers.png",
+  plot = figure,
+  width = 9, height = 5, units = "in",
+  dpi = 300
+)
+```
+
+Le script conserve les instructions de construction.
+
+Le fichier PNG sert à intégrer la figure dans un document.
+
+::: takeaway
+`plot = figure` indique explicitement quel graphique enregistrer.
+:::
+
+::: source
+[ggplot2 : ggsave](https://ggplot2.tidyverse.org/reference/ggsave.html)
+:::
+
+## À vous : une figure en cinq panneaux { #exercice}
+
+::: exercise
+À partir de `arbres`, produire une figure avec :
+:::
+
+- un panneau par arbre;
+- des lignes grises reliant les mesures du même arbre;
+- des points bleus de taille 3;
+- des axes nommés avec leurs unités et un thème minimal.
+
+::: takeaway
+Avant d’exécuter : quelles propriétés vont dans `aes()` ?
+:::
+
+::: small
+Travail individuel, sans IA. Comparer ensuite vos choix avec une autre personne.
+:::
+
+## Une solution possible { #solution .compact}
+
+```r
+solution <- ggplot(
+  arbres,
+  aes(temps_j, circonf_mm)
+) +
+  geom_line(aes(group = arbre),
+            colour = "grey60") +
+  geom_point(colour = "steelblue", size = 3) +
+  facet_wrap(vars(arbre), nrow = 1) +
+  labs(x = "Temps (jours)",
+       y = "Circonférence du tronc (mm)") +
+  theme_minimal(base_size = 16)
+solution
+```
+
+::: takeaway
+`group` varie selon l’arbre. La couleur des points est une constante.
+:::
+
+## Le projet filé en équipe { #projet}
+
+::: lead
+Un projet de science des données qui compte pour 30 % de la note finale.
+:::
+
+- Équipes de 3 personnes par défaut. Une équipe de 2 ou 4 nécessite une approbation.
+- Sujet et source de données choisis par l’équipe, puis approuvés.
+- Produit final : rapport, tableau de bord, Shiny, learnr, site, outil R ou autre format approuvé.
+- Contributions individuelles visibles dans le dépôt GitHub.
+
+::: small
+L’IA est permise et doit être déclarée lorsqu’elle influence significativement le travail.
+:::
+
+::: source
+[Modalités du projet](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/projets.html)
+:::
+
+## Ce que le projet doit rendre visible { #livrables}
+
+| Dans le dépôt | Ce que l’équipe doit pouvoir expliquer |
+|:--|:--|
+| Données et pipeline R | Provenance, nettoyage, transformations |
+| Produit dans le format retenu | Objectif, public, résultats ou fonctionnalités utiles |
+| README et dépendances | Procédure pour reproduire le travail |
+| Vérifications et limites | Contrôles effectués, portée des conclusions |
+| Historique GitHub et contributions | Travail réalisé et relu par chaque membre |
+
+::: small
+STT-6230 : une note technique liée au projet est également obligatoire.
+:::
+
+::: source
+[Livrables attendus](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/projets.html)
+:::
+
+## Les étapes du projet { #jalons}
+
+| Date | Étape |
+|:--|:--|
+| 7 octobre · semaine 6 | Proposition et dépôt initial |
+| 4 novembre · semaine 9 | Suivi formatif |
+| 25 novembre · semaine 12 | Version intermédiaire |
+| 9 décembre · semaine 14 | Remise finale et défense pendant la séance |
+
+::: takeaway
+La présentation, la revue de code et le bilan final font partie du projet de 30 %.
+:::
+
+::: source
+[Calendrier du cours](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/calendrier.html)
+:::
+
+::: source
+[Présentation et revue du projet](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/presentation.html)
+:::
+
+## La proposition du 7 octobre { #proposition}
+
+::: columns
+::: {.column width="50%"}
+
+- Titre provisoire et membres.
+- Question précise.
+- Source et variables utiles.
+- Limites connues des données.
+
+:::
+::: {.column width="50%"}
+
+- Produit final envisagé.
+- Risques techniques.
+- Première répartition des tâches.
+- Lien vers le dépôt GitHub.
+
+:::
+:::
+
+::: takeaway
+Le [gabarit de proposition](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/proposition-projet.html) peut servir de point de départ.
+:::
+
+::: source
+[Proposition : consignes du projet](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/projets.html)
+:::
+
+## Atelier de lancement des équipes { #equipes}
+
+1. Former une équipe de trois et vérifier les disponibilités communes.
+2. Retenir un thème et formuler une première question.
+3. Repérer une source et ouvrir un fichier pour examiner les variables.
+4. Répartir les premières tâches et convenir d’un prochain échange.
+
+::: takeaway
+Avant de partir : une équipe, une question provisoire, une source et une prochaine action par personne.
+:::
+
+::: small
+Pistes de sources : [Données Québec](https://www.donneesquebec.ca/), [Statistique Canada](https://www.statcan.gc.ca/fr/debut), [Ville de Québec](https://www.ville.quebec.qc.ca/apropos/gouvernance/donnees-ouvertes/).
+:::
+
+## Références et ressources { #references .refs}
+
+- [Documentation officielle de ggplot2](https://ggplot2.tidyverse.org/reference/index.html), consultée le 30 septembre 2026.
+- [R : jeu Orange](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/Orange.html). Données documentées dans Draper et Smith (1998), *Applied Regression Analysis*, et Pinheiro et Bates (2000), *Mixed-Effects Models in S and S-PLUS*.
+- [Script R complet](demonstration-semaine-05.R).
+- [Projet d’équipe](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/projets.html) et [gabarit de proposition](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/proposition-projet.html).
+- [Exercices sur les graphiques](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/exercices/modules-05-06-graphiques-r.html).
+
+::: small
+Les mesures répétées servent ici à apprendre la construction graphique. Ce support ne réalise pas de test statistique sur les arbres.
+:::

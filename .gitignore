@@ -26,5 +26,6 @@ data/processed/*
 
 **/*.quarto_ipynb
 *.html
+!assets/documents/exemples-projet/*.html
 Rplots.pdf
 git_diff_real.txt

@@ -21,7 +21,7 @@ Grille détaillée: [Grille d’évaluation du projet](gabarits/grille-projet.qm
 | Type | Équipe, avec traces individuelles |
 | Taille d’équipe | 3 personnes par défaut; 2 ou 4 avec approbation |
 | Remise | Dépôt GitHub d’équipe |
-| Produit final | Rapport Quarto ou tableau de bord Quarto/Shiny |
+| Produit final | Format adapté à l’objectif : rapport, tableau de bord, application Shiny, tutoriel learnr, site pédagogique, outil R documenté ou autre produit approuvé |
 | Jalons officiels | Semaines 6, 12 et 14 |
 | IA | Permise, déclarée |
 
@@ -35,11 +35,71 @@ Le projet doit permettre de vérifier les compétences suivantes:
 - documenter une source de données;
 - importer, nettoyer et valider des données;
 - produire des visualisations ou tableaux interprétables;
-- construire un rapport, un tableau de bord ou une application légère;
+- construire un produit utilisable, adapté à un objectif d’analyse, d’exploration, d’apprentissage ou d’automatisation;
 - utiliser GitHub pour collaborer;
 - documenter les contributions individuelles;
 - expliquer les limites du travail;
 - déclarer et vérifier l’usage de l’IA lorsque pertinent.
+
+## Exemples de produits finaux {#exemples-rendus}
+
+Le format est ouvert. Choisissez-le selon ce que votre public doit pouvoir comprendre, explorer, apprendre ou réaliser. La liste ci-dessous donne des possibilités; elle n’est pas exhaustive. Le format et la portée du projet sont précisés dans la proposition et validés avec l’enseignant.
+
+| Format possible | Exemple de projet à adapter à vos données |
+|---|---|
+| Rapport Quarto | Expliquer les variations saisonnières des précipitations avec des figures commentées |
+| Tableau de bord | Réunir des indicateurs par station, une courbe temporelle et un tableau de synthèse |
+| Application Shiny | Laisser le public choisir une station et une période pour recalculer les résumés et les graphiques |
+| Tutoriel interactif learnr | Guider l’apprentissage du nettoyage de données avec du code R à compléter et des questions |
+| Site pédagogique ou mini-livre Quarto | Organiser un parcours sur l’analyse de données en plusieurs pages avec des exemples reproductibles |
+| Outil R documenté, éventuellement sous forme de petit package | Automatiser l’importation et la validation de fichiers, avec des fonctions testées et un exemple d’utilisation |
+| Autre produit ou combinaison de formats | Proposer un simulateur, une carte interactive ou un autre outil répondant à un besoin précis |
+
+Chaque format doit permettre de démontrer les compétences du cours : travail sur des données documentées, programmation en R, validation, reproductibilité, communication et collaboration. La complexité de l’interface ne constitue pas un objectif en soi.
+
+Les deux rendus suivants illustrent seulement deux possibilités. Quarto est un outil qui transforme un fichier source `.qmd`, réunissant texte et code R, en un document consultable.
+
+### Un rapport Quarto : expliquer une analyse
+
+Un rapport se lit de haut en bas. Il présente la question, les données et la méthode, puis des figures ou tableaux commentés, une interprétation et les limites. Par exemple, un projet sur les précipitations pourrait expliquer leur évolution saisonnière à l’aide d’un graphique et d’un tableau de synthèse.
+
+[Ouvrir l’exemple de rapport : croissance de cinq orangers](assets/documents/exemples-projet/rapport-orangers.html).
+
+![Aperçu d’un rapport Quarto : texte explicatif et graphique dans un document.](assets/documents/exemples-projet/apercu-rapport.png){width=85%}
+
+### Un tableau de bord : consulter plusieurs vues
+
+Un tableau de bord rassemble sur un même écran des indicateurs, des graphiques et des tableaux pour comparer ou suivre les données. Par exemple, un projet sur les précipitations pourrait réunir des totaux par station, une courbe mensuelle et un tableau récapitulatif. Des filtres peuvent être utiles, mais un tableau de bord simple peut aussi être statique.
+
+[Ouvrir l’exemple de tableau de bord sur les mêmes orangers](assets/documents/exemples-projet/tableau-bord-orangers.html).
+
+![Aperçu d’un tableau de bord Quarto : indicateurs, graphique, tableau et informations de contexte.](assets/documents/exemples-projet/apercu-tableau-bord.png){width=100%}
+
+Les deux exemples utilisent les mêmes données réelles, `datasets::Orange`, pour illustrer la différence de présentation. Ce sont des exemples de formats, pas des projets complets à reproduire. Les exigences de provenance, de nettoyage, de validation, de collaboration et de documentation s’appliquent au format retenu. L’équipe peut retenir un autre format ou en combiner plusieurs si cela répond à son objectif.
+
+### Une application Shiny : explorer ou agir
+
+Une application Shiny propose une interface dont les commandes déclenchent des calculs en R. Par exemple, le public choisit une station et une période, puis consulte les graphiques et les résumés correspondants. Un simulateur pédagogique ou un outil d’exploration sont aussi possibles.
+
+Pour voir des interfaces concrètes : [galerie officielle Shiny pour R](https://shiny.posit.co/r/gallery/), avec des démonstrations et leur code source.
+
+### Un tutoriel learnr : apprendre en pratiquant
+
+Un tutoriel learnr associe des explications, des exercices de code R exécutables dans le navigateur et des questions. Par exemple, votre équipe pourrait concevoir un parcours qui fait importer des données, repérer des valeurs manquantes, nettoyer les observations et interpréter un graphique. Les objectifs d’apprentissage, les exercices et les résultats attendus doivent être explicites.
+
+Pour voir le fonctionnement : [exemples officiels de learnr](https://rstudio.github.io/learnr/#examples). learnr s’appuie sur R Markdown; un projet de ce type n’a donc pas à être converti en Quarto.
+
+### Un site pédagogique ou un outil R : transmettre ou automatiser
+
+Un site ou un mini-livre peut organiser un parcours en plusieurs pages, avec des explications et des analyses reproductibles. Un outil R peut prendre la forme de fonctions documentées, éventuellement regroupées dans un petit package, qui automatisent une tâche sur des données. Dans les deux cas, les exemples d’utilisation et les validations doivent permettre de comprendre ce que le produit apporte et de vérifier son fonctionnement.
+
+### Ce qu’on attend dans la proposition du 7 octobre
+
+À ce stade, nommez le format envisagé, le public visé et ce que ce public pourra y voir, y faire ou y apprendre. Vous n’avez pas encore à livrer le produit fonctionnel, ni à maîtriser l’outil retenu.
+
+Exemple de formulation : « Nous prévoyons un rapport Quarto présentant les précipitations par saison et par station, avec un graphique commenté, un tableau de synthèse et une discussion des limites. » Autre exemple : « Nous prévoyons un tutoriel learnr qui guide des débutants dans le nettoyage de données de précipitations, avec des exercices de code et des questions d’interprétation. » Ces formulations doivent être adaptées à une source dont vous avez vérifié les variables.
+
+Sources pour les fonctionnalités : documentation de Quarto ([rapports HTML](https://quarto.org/docs/output-formats/html-basics.html), [tableaux de bord](https://quarto.org/docs/dashboards/)); Posit, [Shiny pour R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/); équipe learnr, [tutoriels interactifs](https://rstudio.github.io/learnr/). Pages consultées le 30 septembre 2026.
 
 ## Choix du sujet
 
@@ -90,7 +150,7 @@ Un sujet peut être refusé si:
 
 ## Structure minimale du dépôt
 
-La structure peut être adaptée, mais le README doit expliquer clairement l’organisation retenue.
+La structure doit être adaptée au produit retenu; les dossiers `reports/` et `dashboard/` sont des exemples, pas deux livrables imposés. Une application ou un tutoriel peut avoir son propre dossier. Le README doit expliquer clairement l’organisation retenue.
 
 ```text
 projet-stt4230/
@@ -98,6 +158,7 @@ projet-stt4230/
   .gitignore
   renv.lock
   docs/
+    proposition.md
     contributions.md
     ai-log.md
     limites.md
@@ -120,12 +181,14 @@ projet-stt4230/
 |---|---|---|
 | Semaine 6 | Proposition | Sujet, équipe, question, source de données, risques, dépôt initial |
 | Semaine 9 | Point de suivi | Importation, nettoyage initial, premières visualisations, problèmes rencontrés |
-| Semaine 12 | Version intermédiaire | Pipeline partiel, rapport ou tableau de bord partiel, validations initiales, contributions visibles |
+| Semaine 12 | Version intermédiaire | Pipeline partiel, produit partiel dans le format retenu, validations initiales, contributions visibles |
 | Semaine 14 | Remise finale et défense du projet | Produit complet, documentation de reproduction, limites, contribution individuelle, `docs/ai-log.md` si pertinent, démonstration, revue de code, questions et bilan final individuel |
 
 Le point de suivi de la semaine 9 est formatif. Il sert à éviter les projets trop tardifs, trop larges ou techniquement bloqués.
 
 ## Livrable de la semaine 6
+
+Pour le 7 octobre, conserver la proposition dans `docs/proposition.md` du dépôt GitHub d’équipe. Les changements doivent être enregistrés dans des commits et poussés sur GitHub. Le [gabarit de proposition](gabarits/proposition-projet.qmd) guide le contenu.
 
 La proposition doit contenir:
 
@@ -135,7 +198,7 @@ La proposition doit contenir:
 - la source de données;
 - une courte description des variables utiles;
 - les limites connues des données;
-- le type de produit final envisagé;
+- le type de produit final envisagé, le public visé et ce qu’il pourra voir, faire ou apprendre;
 - les risques techniques;
 - une première répartition des tâches;
 - le lien vers le dépôt GitHub.
@@ -149,7 +212,7 @@ La version intermédiaire doit contenir:
 - un nettoyage initial;
 - au moins une visualisation ou un tableau utile;
 - une première trace de validation;
-- un rapport ou tableau de bord partiel;
+- un produit partiel dans le format retenu;
 - des issues, commits ou pull requests montrant les contributions;
 - une liste des tâches restantes.
 
@@ -161,7 +224,7 @@ Le dépôt final doit contenir:
 - une procédure de reproduction;
 - les scripts ou fonctions nécessaires;
 - les données brutes et traitées lorsque leur diffusion est permise;
-- un rapport Quarto ou un tableau de bord;
+- le produit final dans le format approuvé, avec les fichiers sources nécessaires;
 - des visualisations interprétables;
 - une trace de validation ou de tests;
 - une discussion des limites;
@@ -179,6 +242,8 @@ Chaque projet doit rendre visibles:
 - une attention aux données sensibles et à l’usage de l’IA;
 - une décision de communication ou d’accessibilité;
 - une trace de contribution individuelle.
+
+Les validations sont adaptées au produit : vérifier les calculs d’un rapport, les réactions d’une application, les exercices et les résultats attendus d’un tutoriel, ou les fonctions d’un outil R. Un tutoriel ou un site pédagogique doit s’appuyer sur un travail de données et de programmation vérifiable.
 
 ## Travail en équipe
 
@@ -209,7 +274,7 @@ Une entrée dans `docs/ai-log.md` est attendue lorsque l’IA influence de faço
 
 - le code;
 - la structure du dépôt;
-- la rédaction du rapport;
+- la rédaction du contenu du produit;
 - l’interprétation;
 - la correction d’erreurs;
 - la comparaison de méthodes.
@@ -251,9 +316,9 @@ Le projet compte pour 30 points. Le point de suivi de la semaine 9 est formatif 
 | Élément évalué | Points |
 |---|---:|
 | Proposition de la semaine 6: sujet, question, source, portée, risques et dépôt initial | 4 |
-| Version intermédiaire de la semaine 12: progression, pipeline partiel, rapport ou tableau de bord partiel | 6 |
+| Version intermédiaire de la semaine 12: progression, pipeline partiel, produit partiel dans le format retenu | 6 |
 | Pipeline de données et reproductibilité: importation, nettoyage, dépendances, chemins relatifs, relance | 6 |
-| Produit final: analyse, visualisations, rapport Quarto ou tableau de bord | 7 |
+| Produit final: qualité du contenu, visualisations et utilité du produit dans le format retenu | 7 |
 | Validation, limites et jugement: tests, contrôles de cohérence, interprétation prudente | 3 |
 | Collaboration et traces individuelles: issues, commits, pull requests, `docs/contributions.md` | 3 |
 | Transparence IA et documentation finale: `docs/ai-log.md`, README, documentation de reproduction | 1 |

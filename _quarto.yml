@@ -9,8 +9,10 @@ project:
     - "ressources/*.qmd"
     - "diaporamas/*.qmd"
     - "!modules/"
+    - "!assets/documents/exemples-projet/"
   resources:
     - assets/documents/exercices-consolidation/**
+    - assets/documents/exemples-projet/**
     - assets/documents/defi-1/references-defi-1.zip
     - diaporamas/*.R
 

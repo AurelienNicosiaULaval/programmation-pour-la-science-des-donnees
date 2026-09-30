@@ -8,13 +8,15 @@ Cette grille stabilise les critères du projet filé en équipe. Le projet compt
 | Critère | Points | Indicateurs |
 |---|---:|---|
 | Proposition de la semaine 6 | 4 | sujet, question, source de données, portée, risques et dépôt initial |
-| Version intermédiaire de la semaine 12 | 5 | pipeline partiel, rapport ou tableau de bord partiel, validations initiales, contributions visibles |
+| Version intermédiaire de la semaine 12 | 5 | pipeline partiel, produit partiel dans le format retenu, validations initiales, contributions visibles |
 | Pipeline de données et reproductibilité | 6 | importation, nettoyage, dépendances, chemins relatifs, relance documentée |
-| Produit final | 6 | analyse, visualisations, rapport Quarto, tableau de bord ou application légère |
+| Produit final | 6 | qualité du contenu, visualisations, utilité et fonctionnement du produit dans le format approuvé |
 | Validation, limites et jugement | 3 | tests, contrôles de cohérence, interprétation prudente, limites nommées |
 | Collaboration et traces individuelles | 3 | issues, commits, pull requests, `docs/contributions.md`, contribution vérifiable |
 | Présentation, revue de code et défense | 2 | démonstration claire, extrait de code pertinent, réponses aux questions, limites défendues |
 | Transparence IA et documentation finale | 1 | `docs/ai-log.md`, README et documentation de reproduction |
 | Total | 30 |  |
+
+Les [formats possibles](../projets.qmd#exemples-rendus) comprennent notamment rapport, tableau de bord, application Shiny, tutoriel learnr, site pédagogique et outil R documenté. Les critères s’appliquent au format retenu; les validations peuvent porter sur des calculs, des interactions, des exercices ou des fonctions.
 
 Pour STT-6230, `docs/note-technique-stt6230.md` est obligatoire. Son absence limite l’accès aux points liés à la validation, aux limites, au jugement et à la documentation finale.

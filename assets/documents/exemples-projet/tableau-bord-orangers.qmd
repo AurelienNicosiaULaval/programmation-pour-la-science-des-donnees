@@ -1,0 +1,98 @@
+---
+title: "Suivi de cinq orangers"
+author: "STT-4230 / STT-6230 · exemple de tableau de bord"
+lang: fr
+format:
+  dashboard:
+    theme: cosmo
+    include-in-header:
+      text: |
+        <style>
+        body {color:#17303d;}
+        .navbar {background:#083d53 !important;}
+        .navbar * {color:#fff !important;}
+        .card-header {color:#083d53; font-weight:500;}
+        strong,b {font-weight:inherit;}
+        </style>
+embed-resources: true
+execute:
+  echo: false
+  warning: true
+  message: false
+  error: false
+---
+
+```{r}
+#| include: false
+library(ggplot2)
+library(dplyr)
+library(knitr)
+arbres <- as_tibble(datasets::Orange) |>
+  transmute(arbre = factor(Tree, levels = as.character(1:5), ordered = FALSE),
+            temps_j = age, circonf_mm = circumference)
+bilan <- arbres |>
+  arrange(temps_j) |>
+  summarise(debut = first(circonf_mm), fin = last(circonf_mm),
+            variation = fin - debut, .by = arbre) |>
+  arrange(arbre)
+stopifnot(nrow(arbres) == 35L, n_distinct(arbres$arbre) == 5L,
+          n_distinct(arbres$temps_j) == 7L, !anyNA(arbres),
+          all(count(arbres, arbre)$n == 7L), all(bilan$variation > 0))
+figure <- ggplot(arbres, aes(temps_j, circonf_mm, colour = arbre, group = arbre)) +
+  geom_line(linewidth = 0.8) + geom_point(size = 2.8) +
+  scale_colour_brewer(palette = "Dark2") +
+  labs(x = "Temps (jours depuis le 31 décembre 1968)",
+       y = "Circonférence du tronc (mm)", colour = "Arbre") +
+  theme_minimal(base_size = 14) + theme(legend.position = "bottom")
+```
+
+## Row {height=18%}
+
+```{r}
+#| content: valuebox
+#| title: "Arbres suivis"
+#| color: primary
+list(value = n_distinct(arbres$arbre))
+```
+
+```{r}
+#| content: valuebox
+#| title: "Mesures au total"
+#| color: secondary
+list(value = nrow(arbres))
+```
+
+```{r}
+#| content: valuebox
+#| title: "Dates par arbre"
+#| color: info
+list(value = n_distinct(arbres$temps_j))
+```
+
+## Row {height=56%}
+
+```{r}
+#| title: "Évolution des circonférences"
+#| fig-width: 8
+#| fig-height: 4.5
+#| fig-alt: "Courbes de circonférence des cinq arbres au cours du temps."
+figure
+```
+
+```{r}
+#| title: "Première et dernière mesure"
+#| results: asis
+kable(bilan, col.names = c("Arbre", "Début (mm)", "Fin (mm)", "Variation (mm)"))
+```
+
+## Row {height=26%}
+
+### Lecture et limites
+
+Chaque couleur représente un arbre. Les circonférences augmentent entre la première et la dernière mesure pour les cinq arbres. Les mesures sont répétées sur les mêmes individus. Ce tableau de bord décrit les observations sans expliquer leurs causes.
+
+### Données et rôle de cet exemple
+
+Source : [`datasets::Orange`, documentation de R](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/Orange.html). Le temps est compté depuis le 31 décembre 1968. Les calculs et le graphique sont produits en R.
+
+Exemple simple de mise en page, sans filtres. [Voir le rapport sur les mêmes données](rapport-orangers.html).

@@ -1,0 +1,228 @@
+---
+pagetitle: "Lancement du projet d’équipe"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    theme: simple
+    css: lancement-projet.css
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    transition: none
+    background-transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    preview-links: false
+    footer: "STT-4230 / STT-6230 · 30 septembre 2026"
+embed-resources: true
+---
+
+## {#ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Le projet<br>d’équipe</h1>
+<p class="hero-subtitle">Former les équipes et choisir un sujet</p>
+<p class="hero-meta">30 % de la note finale<br>STT-4230 / STT-6230 · 30 septembre 2026</p>
+
+## Un produit de science des données reproductible {#produit}
+
+| Dans votre projet | Ce qu’on doit pouvoir comprendre |
+|:--|:--|
+| Une question et des données | Le problème étudié, la source et ses limites |
+| Un pipeline en R | L’importation, le nettoyage et les vérifications |
+| Un produit final | Un format adapté à l’objectif et au public visé |
+| Un dépôt GitHub documenté | Comment reproduire le travail et qui y a contribué |
+
+::: takeaway
+L’équipe doit pouvoir expliquer les choix techniques et défendre ses résultats.
+:::
+
+::: source
+[Consignes du projet](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/projets.html)
+:::
+
+## Un format adapté à votre objectif {#formats .compact}
+
+| Format possible | Exemple de ce que le public pourra faire |
+|:--|:--|
+| Rapport Quarto | Lire une analyse et ses figures commentées |
+| Tableau de bord | Consulter plusieurs indicateurs et graphiques |
+| Application Shiny | Choisir une station et recalculer ses résumés |
+| Tutoriel learnr | Compléter du code R et répondre à des questions |
+| Site ou mini-livre Quarto | Suivre un parcours en plusieurs pages |
+| Outil R documenté | Réutiliser des fonctions pour traiter des fichiers |
+
+::: takeaway
+Liste ouverte : d’autres produits ou combinaisons sont possibles.<br>Précisez le public, l’objectif et la portée à faire approuver.
+:::
+
+::: source
+[Exemples Shiny](https://shiny.posit.co/r/gallery/) · [Exemples learnr](https://rstudio.github.io/learnr/#examples)<br>Les deux rendus suivants illustrent seulement deux possibilités.
+:::
+
+## Exemple 1 : un rapport Quarto {#exemple-rapport}
+
+::: columns
+::: {.column width="35%"}
+
+Un document à lire de haut en bas.
+
+- Une question et une méthode.
+- Des figures commentées.
+- Une interprétation et des limites.
+
+[Ouvrir le rapport](../assets/documents/exemples-projet/rapport-orangers.html)
+
+:::
+::: {.column width="65%"}
+
+![Rapport Quarto présentant une question, des données et une figure commentée.](../assets/documents/exemples-projet/apercu-rapport.png){.render-preview}
+
+:::
+:::
+
+::: small
+Quarto transforme un fichier réunissant texte et code R en un document consultable.
+:::
+
+## Exemple 2 : un tableau de bord {#exemple-tableau-bord}
+
+::: columns
+::: {.column width="35%"}
+
+Une vue d’ensemble à consulter.
+
+- Des indicateurs.
+- Des graphiques et des tableaux.
+- Des filtres, si cela est utile.
+
+[Ouvrir le tableau de bord](../assets/documents/exemples-projet/tableau-bord-orangers.html)
+
+:::
+::: {.column width="65%"}
+
+![Tableau de bord Quarto réunissant des indicateurs, un graphique, un tableau et des informations de contexte.](../assets/documents/exemples-projet/apercu-tableau-bord.png){.render-preview}
+
+:::
+:::
+
+::: small
+Quarto peut produire les deux formats. Cet exemple est statique; Shiny n’est pas obligatoire.
+:::
+
+## Une équipe et des contributions individuelles {#equipes}
+
+- Trois personnes par défaut. Deux ou quatre avec approbation.
+- Une organisation compatible avec vos disponibilités.
+- Des tâches réparties, puis du code relu et testé entre collègues.
+- Des contributions visibles dans GitHub et dans `docs/contributions.md`.
+
+::: small
+L’IA est permise et déclarée lorsqu’elle influence significativement le travail.<br>STT-6230 : une note technique liée au projet est également exigée.
+:::
+
+::: source
+[Travail en équipe et modalités](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/projets.html)
+:::
+
+## Les étapes de la session {#calendrier}
+
+| Date | Ce qui est attendu |
+|:--|:--|
+| 7 octobre | Proposition et dépôt initial |
+| 4 novembre | Point de suivi formatif |
+| 25 novembre | Pipeline et produit partiels, premières validations |
+| 9 décembre | Produit final, présentation et défense du projet |
+
+::: takeaway
+La présentation et la revue de code font partie du projet de 30 %.
+:::
+
+::: source
+[Calendrier du cours](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/calendrier.html) · [Défense du projet](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/presentation.html)
+:::
+
+## Un sujet assez précis pour une session {#sujet}
+
+Une question réalisable avec des données accessibles et réutilisables.
+
+| Question possible, à adapter aux données | Ce qu’il faut préciser |
+|:--|:--|
+| Comment les collisions varient-elles selon le quartier ? | Le territoire, la période et la mesure comparée |
+| Comment les précipitations varient-elles selon la saison ? | Les stations, les dates et les variables disponibles |
+
+::: takeaway
+Ouvrez un fichier et examinez ses variables avant de retenir le sujet.<br>Le sujet doit être approuvé par l’enseignant.
+:::
+
+::: source
+Sources suggérées : [Données Québec](https://www.donneesquebec.ca/) · [Statistique Canada](https://www.statcan.gc.ca/fr/debut) · [Ville de Québec](https://www.ville.quebec.qc.ca/services/donnees-services-ouverts/)
+:::
+
+## La proposition du 7 octobre {#proposition}
+
+::: columns
+::: {.column width="49%"}
+
+- Titre provisoire et membres.
+- Question ou problème étudié.
+- Source et variables utiles.
+- Limites connues des données.
+
+:::
+::: {.column width="51%"}
+
+- Format, public et usage envisagés.
+- Risques techniques.
+- Première répartition des tâches.
+- Lien vers le dépôt GitHub.
+
+:::
+:::
+
+::: takeaway
+Pour le 7 octobre : conserver la proposition dans `docs/proposition.md` du dépôt d’équipe et pousser les commits sur GitHub.
+:::
+
+::: small
+Décrivez ce que le public pourra voir, faire ou apprendre. Le produit fonctionnel sera développé pendant la session.
+:::
+
+::: source
+[Livrable de la semaine 6](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/projets.html)
+:::
+
+## Un dépôt GitHub commun {#depot}
+
+- Le dépôt d’équipe rassemble le code, la documentation et le produit final.
+- Chaque membre travaille avec son propre compte GitHub.
+- Les commits, issues et pull requests permettent de suivre les contributions.
+- Le README explique comment relancer le projet.
+
+::: takeaway
+Les gabarits du cours sont déjà disponibles :<br>[proposition](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/proposition-projet.html), [contributions](https://github.com/AurelienNicosiaULaval/programmation-pour-la-science-des-donnees/blob/main/gabarits/contributions.md) et [journal IA](https://github.com/AurelienNicosiaULaval/programmation-pour-la-science-des-donnees/blob/main/gabarits/ai-log.md).
+:::
+
+::: small
+Le portfolio individuel conserve vos apprentissages et votre contribution personnelle.
+:::
+
+## Aujourd’hui : former l’équipe et amorcer le sujet {#atelier}
+
+1. Regroupez-vous par trois et vérifiez vos disponibilités.
+2. Formulez une première question et repérez une source.
+3. Ouvrez les données pour vérifier que la question est réalisable.
+4. Répartissez les prochaines tâches et fixez votre prochain échange.
+
+::: takeaway
+Avant de partir, présentez à l’enseignant :<br>les membres, la question provisoire, la source et la prochaine action de chacun.
+:::
+
+::: small
+Si vous cherchez une équipe, signalez-le pendant l’atelier.<br>La proposition complète est attendue sur GitHub le 7 octobre.
+:::

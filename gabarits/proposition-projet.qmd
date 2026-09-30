@@ -13,6 +13,8 @@ Date:
 
 Lien vers le dépôt GitHub:
 
+Pour le 7 octobre, compléter les éléments ci-dessous dans `docs/proposition.md` du dépôt d’équipe et pousser les commits sur GitHub.
+
 ## Titre provisoire
 
 Indiquer un titre court et descriptif.
@@ -54,12 +56,31 @@ Décrire les variables principales ou les éléments de données qui seront util
 
 ## Produit final envisagé
 
-Cocher ou décrire le produit final prévu:
+Décrire le format envisagé, le public visé et ce que ce public pourra voir, faire ou apprendre. Le choix est ouvert; les exemples suivants ne constituent pas une liste exhaustive.
 
-- Rapport Quarto.
-- Tableau de bord Quarto.
-- Application Shiny légère.
-- Autre produit, à préciser.
+| Format | À quoi ressemble le rendu ? | Exemple |
+|---|---|---|
+| Rapport Quarto | Un document à lire, avec des explications, des figures commentées et des limites | [Rapport sur cinq orangers](../assets/documents/exemples-projet/rapport-orangers.html) |
+| Tableau de bord | Une vue réunissant indicateurs, graphiques et tableaux | [Tableau de bord sur les mêmes données](../assets/documents/exemples-projet/tableau-bord-orangers.html) |
+| Application Shiny | Une interface pour explorer les données ou déclencher des calculs en R | Choisir une station et une période; voir la [galerie Shiny](https://shiny.posit.co/r/gallery/) |
+| Tutoriel interactif learnr | Un parcours avec explications, exercices de code R et questions | Apprendre à nettoyer des données; voir les [exemples learnr](https://rstudio.github.io/learnr/#examples) |
+| Site pédagogique ou mini-livre Quarto | Plusieurs pages organisant des explications et des analyses reproductibles | Guider une analyse complète de données québécoises |
+| Outil R documenté ou petit package | Des fonctions réutilisables, avec documentation, tests et exemple d’utilisation | Importer et vérifier une série de fichiers |
+| Autre produit ou combinaison | Décrire le besoin, le fonctionnement et la portée à faire approuver | Simulateur, carte interactive ou autre proposition |
+
+La page des [consignes du projet](../projets.qmd#exemples-rendus) explique ces possibilités et présente deux aperçus. Ce sont des illustrations de formats, pas des projets complets à reproduire. Les exigences de données, de programmation, de validation, de reproductibilité et de collaboration s’appliquent à tous les formats.
+
+Pour la proposition, une description suffit : le produit fonctionnel sera développé pendant la session. Vous n’avez pas à maîtriser l’outil retenu dès le 7 octobre.
+
+Format envisagé :
+
+Public visé :
+
+Ce que le public pourra voir, faire ou apprendre :
+
+Exemples de contenus ou de fonctionnalités :
+
+Première idée de vérification du fonctionnement ou des résultats :
 
 ## Plan de travail initial
 
@@ -69,7 +90,7 @@ Cocher ou décrire le produit final prévu:
 | Nettoyer les données |  |  |
 | Explorer les données |  |  |
 | Produire les visualisations |  |  |
-| Construire le rapport ou tableau de bord |  |  |
+| Construire le produit dans le format retenu |  |  |
 | Vérifier ou tester le pipeline |  |  |
 | Documenter les limites |  |  |
 
