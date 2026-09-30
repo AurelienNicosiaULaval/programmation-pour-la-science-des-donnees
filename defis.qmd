@@ -134,7 +134,8 @@ Ce tableau est indicatif. Pour le défi 1 du 30 septembre, les horaires précis 
 - Reproductibilité.
 - Qualité du code.
 - Documentation minimale.
-- Respect du statut d’IA.
 - Capacité à expliquer les décisions.
+
+Le défi 1 est noté sur ces cinq dimensions, sans critère noté pour l'IA : l'interdiction d'Internet et de l'IA est une règle de l'épreuve. Les défis 2 et 3 ajoutent l'évaluation du respect de leur statut IA. Les points sont précisés dans la [grille d'évaluation](gabarits/grille-defis-techniques.qmd).
 
 Les données et fichiers exacts des défis évalués sont fournis au moment prévu par l’équipe enseignante. Les jeux de données publics utilisés pour l’entraînement doivent respecter les règles de [Données autorisées](donnees.qmd).

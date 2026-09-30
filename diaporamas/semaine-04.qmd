@@ -630,12 +630,12 @@ Si vous avez un problème pour enregistrer vos fichiers, prévenez-moi tout de s
 
 | Critère | Points |
 |:--|--:|
-| Exactitude technique | 3 |
+| Exactitude technique | 4 |
 | Reproductibilité | 2 |
 | Qualité du code | 2 |
 | Documentation et remise | 1 |
 | Validation et explication | 1 |
-| Respect du statut IA | 1 |
+| Total | 10 |
 
 ::: {.small}
 Le travail et le barème sont les mêmes pour STT-4230 et STT-6230.<br>Vous devez expliquer au moins un de vos choix de nettoyage dans le README.

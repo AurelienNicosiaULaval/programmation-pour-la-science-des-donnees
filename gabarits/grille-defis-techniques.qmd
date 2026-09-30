@@ -3,7 +3,30 @@ title: "Grille d’évaluation des défis techniques"
 embed-resources: true
 ---
 
-Chaque défi technique compte pour 10 points. La grille commune ci-dessous est ajustée selon le statut IA du défi.
+Chaque défi technique est évalué sur 10 points. Le défi 1 comporte cinq critères; les défis 2 et 3 ajoutent un critère relatif à leur usage autorisé de l'IA.
+
+Les fichiers exacts des défis évalués sont fournis au moment de l’évaluation. Ils ne sont pas publiés sur le site avant la séance.
+
+## Application au défi technique 1
+
+Le travail se déroule sans Internet ni IA. Cette règle ne constitue pas un critère noté : les 10 points portent sur le travail remis.
+
+| Critère | Points | Indicateurs |
+|---|---:|---|
+| Exactitude technique | 4 | importation, transformations et résultats conformes à la consigne |
+| Reproductibilité | 2 | fichiers présents, chemins relatifs, brut intact et script relançable en session propre |
+| Qualité du code | 2 | code lisible, packages chargés et transformations explicites |
+| Documentation et remise | 1 | README utile et dossier enregistré à l'emplacement demandé |
+| Validation et explication | 1 | assertions exécutées et décisions brièvement justifiées |
+| Total | 10 | |
+
+L’enseignant récupère directement le dossier contenant les données fournies, le script, les résultats et le README. Git, les commits, la création d’un ZIP et l’envoi en ligne ne sont pas demandés ni évalués.
+
+L’épreuve dure 60 minutes, sur un compte d’examen Windows sans Internet. Les étudiants peuvent apporter leurs documents papier. Les seules ressources numériques consultables sont celles mises à disposition par l’enseignant sur les comptes, avec l’aide locale de R et des packages installés. Aucun fichier personnel ne peut être importé. L’IA générative est interdite.
+
+Les compétences, les modalités et les attentes sont précisées dans la [page de préparation au défi technique 1](../defis/preparation-defi-technique-1.qmd).
+
+## Défis techniques 2 et 3
 
 | Critère | Points | Indicateurs |
 |---|---:|---|
@@ -12,18 +35,8 @@ Chaque défi technique compte pour 10 points. La grille commune ci-dessous est a
 | Qualité du code | 2 | code lisible, structure minimale, choix proportionnés à la tâche |
 | Documentation et remise | 1 | README court, note de reproduction ou mini-rapport selon le défi |
 | Validation et explication | 1 | vérifications, tests simples, capacité à expliquer les décisions |
-| Respect du statut IA | 1 | aucune IA pour le défi 1, déclaration pour le défi 2, usage vérifié et documenté pour le défi 3 |
+| Respect du statut IA | 1 | déclaration pour le défi 2, usage vérifié et documenté pour le défi 3 |
 | Total | 10 |  |
-
-Les fichiers exacts des défis évalués sont fournis au moment de l’évaluation. Ils ne sont pas publiés sur le site avant la séance.
-
-## Application au défi technique 1
-
-Le total reste de 10 points selon les six dimensions ci-dessus. Pour le défi 1, l’enseignant récupère directement le dossier contenant les données fournies, le script, les résultats et le README. Git, les commits, la création d’un ZIP et l’envoi en ligne ne sont pas demandés ni évalués.
-
-L’épreuve dure 60 minutes, sur un compte d’examen Windows sans Internet. Les étudiants peuvent apporter leurs documents papier. Les seules ressources numériques consultables sont celles mises à disposition par l’enseignant sur les comptes, avec l’aide locale de R et des packages installés. Aucun fichier personnel ne peut être importé. L’IA générative est interdite.
-
-Les compétences, les modalités et les attentes sont précisées dans la [page de préparation au défi technique 1](../defis/preparation-defi-technique-1.qmd).
 
 ## Usage dans les défis de module
 

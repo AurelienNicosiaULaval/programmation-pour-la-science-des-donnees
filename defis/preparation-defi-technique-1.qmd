@@ -46,9 +46,9 @@ Statut : IA non permise. Pendant le défi, il est interdit d’utiliser un outil
 
 ## Dossier de références à télécharger avant le défi {#references-hors-ligne}
 
-[Télécharger les références du défi 1, ZIP de 65,1 Mo](../assets/documents/defi-1/references-defi-1.zip){.btn .btn-primary download="references-defi-1.zip"}
+[Télécharger les références du défi 1 (ZIP)](../assets/documents/defi-1/references-defi-1.zip){.btn .btn-primary download="references-defi-1.zip"}
 
-Ce dossier rassemble les documents que vous pourrez consulter sur les comptes d’examen. Téléchargez-le dès maintenant pour vous familiariser avec son organisation et retrouver rapidement les notions utiles. Version du 24 septembre 2026.
+Ce dossier rassemble les documents que vous pourrez consulter sur les comptes d’examen. Téléchargez-le dès maintenant pour vous familiariser avec son organisation et retrouver rapidement les notions utiles. Version actualisée le 30 septembre 2026.
 
 | Contenu | Documents inclus |
 |---|---|
@@ -112,16 +112,15 @@ La consigne exacte et les noms des fichiers seront fournis au début du défi.
 
 ## Grille sur 10 points
 
-Les six dimensions sont celles de la [grille commune des défis techniques](../gabarits/grille-defis-techniques.qmd).
+Le défi 1 est évalué selon les cinq dimensions de la [grille du défi technique 1](../gabarits/grille-defis-techniques.qmd#application-au-défi-technique-1). Le travail sans Internet ni IA est une règle de l'épreuve, sans point attribué.
 
 | Dimension | Points | Attente pour le défi 1 |
 |---|---:|---|
-| Exactitude technique | 3 | Importation, transformations et résultats conformes à la consigne |
+| Exactitude technique | 4 | Importation, transformations et résultats conformes à la consigne |
 | Reproductibilité | 2 | Script relançable en session propre, chemins relatifs, brut intact et fichiers présents |
 | Qualité du code | 2 | Noms clairs, packages chargés, transformations explicites et code lisible |
 | Documentation et remise | 1 | README utile et fichiers enregistrés à l’emplacement demandé |
 | Validation et explication | 1 | Assertions exécutées et décisions brièvement justifiées |
-| Respect du statut IA | 1 | Travail individuel avec les seules ressources autorisées, sans IA générative |
 | Total | 10 | |
 
 ## À éviter
