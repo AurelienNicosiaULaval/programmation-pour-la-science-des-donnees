@@ -62,7 +62,7 @@ Liste ouverte : d’autres produits ou combinaisons sont possibles.<br>Précisez
 :::
 
 ::: source
-[Exemples Shiny](https://shiny.posit.co/r/gallery/) · [Exemples learnr](https://rstudio.github.io/learnr/#examples)<br>Les deux rendus suivants illustrent seulement deux possibilités.
+[Exemples Shiny](https://shiny.posit.co/r/gallery/) · [Exemples learnr](https://rstudio.github.io/learnr/#examples)<br>Quatre exemples concrets sont présentés dans les diapositives suivantes.
 :::
 
 ## Exemple 1 : un rapport Quarto {#exemple-rapport}
@@ -113,6 +113,64 @@ Une vue d’ensemble à consulter.
 
 ::: small
 Quarto peut produire les deux formats. Cet exemple est statique; Shiny n’est pas obligatoire.
+:::
+
+## Exemple 3 : une application Shiny {#exemple-shiny}
+
+::: columns
+::: {.column width="35%"}
+
+Explorer un catalogue de films.
+
+- Choisir des filtres.
+- Modifier les variables des axes.
+- Voir le graphique se mettre à jour.
+
+[Essayer l’application](https://gallery.shinyapps.io/051-movie-explorer/)
+
+:::
+::: {.column width="65%"}
+
+![Movie explorer : des filtres pilotent le graphique.](../assets/documents/exemples-projet/apercu-shiny-movie-explorer.png){.render-preview}
+
+:::
+:::
+
+::: small
+Votre équipe concevrait l’interface, les calculs en R et les validations.
+:::
+
+::: source
+Capture d’une démonstration externe en anglais : [Movie explorer, galerie Shiny de Posit](https://shiny.posit.co/r/gallery/interactive-visualizations/movie-explorer/), 30 septembre 2026.
+:::
+
+## Exemple 4 : un tutoriel learnr {#exemple-learnr}
+
+::: columns
+::: {.column width="35%"}
+
+Apprendre à filtrer des observations.
+
+- Lire une consigne.
+- Compléter et exécuter du code R.
+- Consulter le résultat.
+
+[Essayer le tutoriel](https://learnr-examples.shinyapps.io/ex-data-filter/#section-exercises)
+
+:::
+::: {.column width="65%"}
+
+![Filter observations : une consigne, un éditeur R et le résultat du code.](../assets/documents/exemples-projet/apercu-learnr-filter.png){.render-preview}
+
+:::
+:::
+
+::: small
+Votre équipe concevrait le parcours, les exercices et leurs résultats attendus.
+:::
+
+::: source
+Capture d’un tutoriel externe en anglais : [Filter observations, exemples officiels learnr](https://rstudio.github.io/learnr/#examples), 30 septembre 2026.
 :::
 
 ## Une équipe et des contributions individuelles {#equipes}
