@@ -38,6 +38,7 @@ editor: source
 #| include: false
 library(knitr)
 source("demonstration-semaine-06.R", local = TRUE)
+source("bonnes-pratiques-visualisation-semaine-06.R", local = TRUE)
 knitr::opts_chunk$set(comment = "#>")
 ```
 
@@ -267,21 +268,6 @@ Le script doit fonctionner sans objets créés à la main.
 [Wickham, Çetinkaya-Rundel et Grolemund (2023), bonnes pratiques](https://r4ds.hadley.nz/workflow-style.html)
 :::
 
-## À vous : comparer les profondeurs {#atelier}
-
-1. Former trois classes : moins de 100 km, de 100 à moins de 300 km, au moins 300 km.
-2. Calculer les proportions dans Ouest et Est.
-3. Produire et enregistrer une figure lisible.
-4. Écrire une comparaison et une limite.
-
-::: takeaway
-Avant de terminer, vérifier le dénominateur et la somme des proportions.
-:::
-
-::: small
-La [fiche d’atelier](atelier-semaine-06.qmd) donne les étapes. Les classes sont choisies pour l’exercice.
-:::
-
 ## Un premier rapport reproductible {#rapport}
 
 Un fichier Quarto réunit :
@@ -302,16 +288,168 @@ La semaine prochaine approfondira R Markdown et Quarto.
 [Équipe Quarto, documents avec du code R](https://quarto.org/docs/computations/r.html)
 :::
 
-## Votre trace de semaine 6 {#portfolio}
+## Des barres qui partent de zéro {#viz-zero .comparison}
 
-Dans `semaines/semaine-06/`, conserver :
+::: small
+Part des séismes de magnitude inférieure à 5 dans chaque sous-ensemble.
+:::
 
-- le script et votre figure;
-- un choix de conception expliqué;
-- une vérification du rendu et le lien d’une ressource utilisée.
+::: columns
+::: {.column width="50%"}
+
+### À éviter : axe tronqué
+
+```{r}
+#| fig-width: 6.8
+#| fig-height: 4.6
+#| fig-alt: "Deux proportions identiques aux données initiales, 73,7 % et 81,9 %, représentées par des barres dont l’axe commence à 70 %."
+figure_viz_zero_eviter
+```
+
+:::
+::: {.column width="50%"}
+
+### À privilégier : origine à zéro
+
+```{r}
+#| fig-width: 6.8
+#| fig-height: 4.6
+#| fig-alt: "Les mêmes proportions, 73,7 % et 81,9 %, représentées par des barres avec un axe de 0 à 100 %."
+figure_viz_zero_choisir
+```
+
+:::
+:::
+
+::: takeaway
+Sur une échelle linéaire, la longueur d’une barre représente la valeur : commencer à zéro.
+:::
 
 ::: source
-[Consignes de semaine 6 dans Brio](https://www.brioeducation.ca/sites/ptmndbs906/modules/ptmndbs906-ohpiuyv79/pages/ptmndbs906-ohpiuyv81)
+[Wilke (2019), principe de proportionnalité](https://clauswilke.com/dataviz/proportional-ink.html)
+:::
+
+## Comparer avec une échelle commune {#viz-echelles .comparison}
+
+::: small
+Même tableau de proportions, présenté séparément pour Ouest et Est.
+:::
+
+::: columns
+::: {.column width="50%"}
+
+### À éviter pour comparer : axes différents
+
+```{r}
+#| fig-width: 6.8
+#| fig-height: 4.6
+#| fig-alt: "Composition des magnitudes dans Ouest et Est, avec une échelle verticale différente dans chaque panneau."
+figure_viz_echelles_eviter
+```
+
+:::
+::: {.column width="50%"}
+
+### À privilégier : le même axe
+
+```{r}
+#| fig-width: 6.8
+#| fig-height: 4.6
+#| fig-alt: "Même composition des magnitudes avec une échelle commune de 0 à 100 % dans les deux panneaux."
+figure_viz_echelles_choisir
+```
+
+:::
+:::
+
+::: takeaway
+Pour comparer les hauteurs entre panneaux, garder la même échelle.
+:::
+
+::: source
+[Équipe ggplot2, échelles des facettes](https://ggplot2.tidyverse.org/reference/facet_wrap.html)
+:::
+
+## Une moyenne ne montre pas la dispersion {#viz-distribution .comparison}
+
+::: small
+Question : comment les profondeurs se répartissent-elles dans chaque sous-ensemble ?
+:::
+
+::: columns
+::: {.column width="50%"}
+
+### À éviter ici : la moyenne seule
+
+```{r}
+#| fig-width: 6.8
+#| fig-height: 4.6
+#| fig-alt: "Deux barres montrant seulement la profondeur moyenne par sous-ensemble; la dispersion est invisible."
+figure_viz_distribution_eviter
+```
+
+:::
+::: {.column width="50%"}
+
+### À privilégier : boîtes et points
+
+```{r}
+#| fig-width: 6.8
+#| fig-height: 4.6
+#| fig-alt: "Boîtes à moustaches et 1000 points montrant les profondeurs dans Ouest et Est. Les points sont décalés horizontalement seulement."
+figure_viz_distribution_choisir
+```
+
+:::
+:::
+
+::: takeaway
+Pour montrer une distribution, rendre sa dispersion visible. Ici, chaque point représente un séisme.
+:::
+
+::: source
+[Équipe ggplot2, boîtes à moustaches](https://ggplot2.tidyverse.org/reference/geom_boxplot.html) · Points décalés horizontalement pour les distinguer; profondeurs inchangées.
+:::
+
+## Limiter le chevauchement des points {#viz-points .comparison}
+
+::: small
+Même nuage de 1 000 séismes, mêmes axes et mêmes valeurs.
+:::
+
+::: columns
+::: {.column width="50%"}
+
+### À éviter : gros points opaques
+
+```{r}
+#| fig-width: 6.8
+#| fig-height: 4.6
+#| fig-alt: "Magnitude et profondeur des 1000 séismes, avec de gros points opaques qui se superposent."
+figure_viz_points_eviter
+```
+
+:::
+::: {.column width="50%"}
+
+### À privilégier : petits points transparents
+
+```{r}
+#| fig-width: 6.8
+#| fig-height: 4.6
+#| fig-alt: "Même nuage avec des points plus petits et partiellement transparents, sans déplacement des valeurs."
+figure_viz_points_choisir
+```
+
+:::
+:::
+
+::: takeaway
+Réduire la taille et utiliser la transparence pour mieux voir les superpositions.
+:::
+
+::: source
+[Wilke (2019), points superposés](https://clauswilke.com/dataviz/overlapping-points.html) · La transparence ne permet pas de compter exactement les points superposés.
 :::
 
 ## Proposition du projet : 7 octobre {#proposition}
@@ -333,22 +471,10 @@ STT-6230 : une note technique liée au projet est obligatoire. L’IA est permis
 [Consignes du projet](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/projets.html) · [Gabarit](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/proposition-projet.html)
 :::
 
-## Avant de partir {#sortie}
-
-- Votre figure est enregistrée et vous pouvez l’expliquer.
-- Votre proposition d’équipe est accessible sur GitHub.
-
-::: takeaway
-Pour le 14 octobre : lectures de semaine 7 et mini-test 5 avant le mardi 13 octobre à 23 h 59.
-:::
-
-::: source
-[Calendrier](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/calendrier.html) · [Lectures de semaine 7](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/lectures.html#semaine-07)
-:::
-
 ## Références et fichiers {#references .refs}
 
 - Baillargeon, S. (2021). [Graphiques avec ggplot2 en R](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/), notes du cours.
 - Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). [R for Data Science, 2e édition](https://r4ds.hadley.nz/communication.html), communication graphique.
 - R Core Team. [Données quakes](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html). Équipes [ggplot2](https://ggplot2.tidyverse.org/reference/) et [Quarto](https://quarto.org/docs/computations/r.html), documentation consultée le 5 octobre 2026.
-- Fichiers : [démonstration R](demonstration-semaine-06.R), [atelier](atelier-semaine-06.qmd), [rapport](rapport-semaine-06.qmd).
+- Wilke, C. O. (2019). [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/), principes graphiques.
+- Fichiers : [démonstration R](demonstration-semaine-06.R), [comparaisons graphiques R](bonnes-pratiques-visualisation-semaine-06.R), [atelier](atelier-semaine-06.qmd), [rapport](rapport-semaine-06.qmd).
