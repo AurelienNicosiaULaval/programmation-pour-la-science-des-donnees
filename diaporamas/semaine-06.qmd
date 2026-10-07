@@ -1,0 +1,354 @@
+---
+pagetitle: "Semaine 6 : graphiques vérifiables et rapports reproductibles"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    theme: simple
+    css: semaine-06.css
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: c/t
+    show-slide-number: all
+    transition: none
+    background-transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    preview-links: false
+    code-line-numbers: false
+    code-copy: false
+    footer: "STT-4230 / STT-6230 · 7 octobre 2026"
+embed-resources: true
+execute:
+  echo: false
+  warning: true
+  message: false
+  error: false
+  fig-width: 7.6
+  fig-height: 5
+  dpi: 160
+editor: source
+---
+
+```{r}
+#| include: false
+library(knitr)
+source("demonstration-semaine-06.R", local = TRUE)
+knitr::opts_chunk$set(comment = "#>")
+```
+
+##  {#ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Graphiques en R</h1>
+<p class="hero-subtitle">Choisir une figure<br>Vérifier et expliquer le résultat</p>
+<p class="hero-meta">Aurélien Nicosia · 7 octobre 2026<br>STT-4230 / STT-6230 · Semaine 6</p>
+
+## Aujourd’hui {#objectifs}
+
+- Choisir un graphique adapté à la question.
+- Comprendre ce que représentent les axes.
+- Enregistrer une figure et la commenter dans un rapport.
+
+::: takeaway
+Nous ferons aussi le point sur les propositions de projet.
+:::
+
+## Retour du mini-test : quoi vérifier ? {#retour-mini-test}
+
+- Choisir le graphique selon la question et les variables.
+- Préciser les axes, les unités, la légende et les échelles.
+- Lire les avertissements et vérifier les lignes retirées.
+
+::: takeaway
+Un point hors des moustaches d’une boîte n’est pas automatiquement une erreur. Vérifier la saisie, l’unité et le contexte avant d’écarter une valeur.
+:::
+
+::: source
+Retour anonymisé sur la question 3 du mini-test 4 (semaine 6).<br>
+Équipe ggplot2 : [étiquettes](https://ggplot2.tidyverse.org/reference/labs.html), [boîtes et valeurs manquantes](https://ggplot2.tidyverse.org/reference/geom_boxplot.html) · [NIST/SEMATECH, valeurs atypiques](https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm), consultés le 7 octobre 2026.
+:::
+
+## Avant le code, la question {#question}
+
+| Ce que l’on veut voir | Variables | Géométrie possible |
+|:--|:--|:--|
+| Une relation | Deux variables numériques | `geom_point()` |
+| Une distribution | Une variable numérique | `geom_histogram()` |
+| Une distribution par groupe | Numérique et catégorie | `geom_boxplot()` |
+| Un nombre par catégorie | Une catégorie | `geom_bar()` |
+
+::: takeaway
+Quelle quantité la hauteur ou la position représente-t-elle ?
+:::
+
+::: source
+[Baillargeon (2021), graphiques avec ggplot2](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/)
+:::
+
+## Un exemple des notes du cours {#donnees}
+
+`datasets::quakes` contient 1 000 séismes près de Fidji.
+
+Une ligne représente un séisme.
+
+| Variable | Ce qu’elle décrit |
+|:--|:--|
+| `mag` | La magnitude |
+| `depth` | La profondeur, en km |
+| `long` | La longitude |
+
+::: small
+Pour la démonstration, Ouest correspond aux longitudes inférieures à 175° et Est aux autres. Ce découpage est pédagogique.
+:::
+
+::: source
+[R Core Team, quakes](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html) · [Baillargeon (2021), notes du cours](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/)
+:::
+
+## geom_bar() compte les observations {#comptage}
+
+::: columns
+::: {.column width="43%"}
+
+```r
+ggplot(seismes, aes(classe)) +
+  geom_bar() +
+  labs(x = "Classe de magnitude",
+       y = "Nombre de séismes")
+```
+
+`classe` regroupe les magnitudes : `[4, 5[`, `[5, 6[` et `[6, 7[`.
+
+La couche compte les observations, sans colonne `y` à fournir.
+
+:::
+::: {.column width="57%"}
+
+```{r}
+figure_comptage
+```
+
+:::
+:::
+
+::: source
+[Équipe ggplot2, geom_bar et stat_count](https://ggplot2.tidyverse.org/reference/geom_bar.html)
+:::
+
+## Des hauteurs déjà calculées : geom_col() {#resume}
+
+::: columns
+::: {.column width="46%"}
+
+```r
+effectifs <- seismes |>
+  count(region, classe, .drop = FALSE)
+
+ggplot(effectifs,
+       aes(classe, n, fill = region)) +
+  geom_col(position = "dodge")
+```
+
+Ici, la colonne `n` donne les hauteurs.
+
+:::
+::: {.column width="54%"}
+
+```{r}
+figure_effectifs
+```
+
+:::
+:::
+
+::: source
+[Équipe ggplot2, geom_bar et geom_col](https://ggplot2.tidyverse.org/reference/geom_bar.html)
+:::
+
+## Un nombre ou une proportion ? {#denominateur}
+
+Dans Ouest, 151 des 205 séismes appartiennent à la classe `[4, 5[`.
+
+| Ce que l’on décrit | Valeur |
+|:--|:--|
+| Nombre de séismes dans cette classe et ce sous-ensemble | 151 |
+| Part de cette classe parmi les séismes d’Ouest | 151 / 205 ≈ 73,7 % |
+
+::: takeaway
+Pour interpréter un pourcentage, demander : « Parmi quelles observations ? »
+:::
+
+## Calculer avant de dessiner {#proportions}
+
+```r
+proportions <- effectifs |>
+  group_by(region) |>
+  mutate(proportion = n / sum(n)) |>
+  ungroup()
+```
+
+Le calcul est fait séparément pour Ouest et Est.
+
+::: takeaway
+Vérifier que les proportions totalisent 100 % dans chaque sous-ensemble.
+:::
+
+::: source
+[Équipe dplyr, group_by](https://dplyr.tidyverse.org/reference/group_by.html)
+:::
+
+## Cette figure se comprend-elle seule ? {#critique}
+
+::: columns
+::: {.column width="36%"}
+
+Que faudrait-il préciser ?
+
+- Le titre.
+- Le sens de l’axe y.
+- Les groupes comparés.
+
+:::
+::: {.column width="64%"}
+
+```{r}
+figure_a_revoir
+```
+
+:::
+:::
+
+## La même figure, plus lisible {#figure-finale}
+
+```{r}
+#| fig-width: 12
+#| fig-height: 4.4
+figure_annotee
+```
+
+::: takeaway
+La figure décrit les observations de ce tableau. Elle ne mesure pas un risque sismique.
+:::
+
+## Enregistrer la figure {#export}
+
+```r
+dir.create("outputs", showWarnings = FALSE)
+ggsave("outputs/06-proportions-seismes.png",
+       plot = figure_annotee,
+       width = 10, height = 6, dpi = 300)
+```
+
+Ouvrir le PNG et vérifier que les textes sont lisibles et complets.
+
+::: takeaway
+Le script permet de refaire la figure.
+:::
+
+::: source
+[Équipe ggplot2, ggsave](https://ggplot2.tidyverse.org/reference/ggsave.html)
+:::
+
+## Trois habitudes utiles {#pratiques}
+
+1. Charger les bibliothèques au début du script.
+2. Employer des noms clairs et des chemins relatifs.
+3. Relancer le script dans une session R neuve.
+
+::: takeaway
+Le script doit fonctionner sans objets créés à la main.
+:::
+
+::: source
+[Wickham, Çetinkaya-Rundel et Grolemund (2023), bonnes pratiques](https://r4ds.hadley.nz/workflow-style.html)
+:::
+
+## À vous : comparer les profondeurs {#atelier}
+
+1. Former trois classes : moins de 100 km, de 100 à moins de 300 km, au moins 300 km.
+2. Calculer les proportions dans Ouest et Est.
+3. Produire et enregistrer une figure lisible.
+4. Écrire une comparaison et une limite.
+
+::: takeaway
+Avant de terminer, vérifier le dénominateur et la somme des proportions.
+:::
+
+::: small
+La [fiche d’atelier](atelier-semaine-06.qmd) donne les étapes. Les classes sont choisies pour l’exercice.
+:::
+
+## Un premier rapport reproductible {#rapport}
+
+Un fichier Quarto réunit :
+
+- la question et la source des données;
+- le code, le tableau et la figure;
+- une interprétation et les limites.
+
+::: takeaway
+[Ouvrir le rapport de démonstration](rapport-semaine-06.qmd), puis regarder sa source `.qmd`.
+:::
+
+::: small
+La semaine prochaine approfondira R Markdown et Quarto.
+:::
+
+::: source
+[Équipe Quarto, documents avec du code R](https://quarto.org/docs/computations/r.html)
+:::
+
+## Votre trace de semaine 6 {#portfolio}
+
+Dans `semaines/semaine-06/`, conserver :
+
+- le script et votre figure;
+- un choix de conception expliqué;
+- une vérification du rendu et le lien d’une ressource utilisée.
+
+::: source
+[Consignes de semaine 6 dans Brio](https://www.brioeducation.ca/sites/ptmndbs906/modules/ptmndbs906-ohpiuyv79/pages/ptmndbs906-ohpiuyv81)
+:::
+
+## Proposition du projet : 7 octobre {#proposition}
+
+- Une équipe et une question précise.
+- Une source accessible, ses variables et ses limites.
+- Un produit envisagé, un public et un plan de travail.
+- Un dépôt GitHub avec `docs/proposition.md` et les commits poussés.
+
+::: takeaway
+La proposition vaut 4 points sur les 30 du projet. Le produit fonctionnel sera développé ensuite.
+:::
+
+::: small
+STT-6230 : une note technique liée au projet est obligatoire. L’IA est permise et déclarée selon les consignes du projet.
+:::
+
+::: source
+[Consignes du projet](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/projets.html) · [Gabarit](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/proposition-projet.html)
+:::
+
+## Avant de partir {#sortie}
+
+- Votre figure est enregistrée et vous pouvez l’expliquer.
+- Votre proposition d’équipe est accessible sur GitHub.
+
+::: takeaway
+Pour le 14 octobre : lectures de semaine 7 et mini-test 5 avant le mardi 13 octobre à 23 h 59.
+:::
+
+::: source
+[Calendrier](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/calendrier.html) · [Lectures de semaine 7](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/lectures.html#semaine-07)
+:::
+
+## Références et fichiers {#references .refs}
+
+- Baillargeon, S. (2021). [Graphiques avec ggplot2 en R](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/), notes du cours.
+- Wickham, H., Çetinkaya-Rundel, M. et Grolemund, G. (2023). [R for Data Science, 2e édition](https://r4ds.hadley.nz/communication.html), communication graphique.
+- R Core Team. [Données quakes](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html). Équipes [ggplot2](https://ggplot2.tidyverse.org/reference/) et [Quarto](https://quarto.org/docs/computations/r.html), documentation consultée le 5 octobre 2026.
+- Fichiers : [démonstration R](demonstration-semaine-06.R), [atelier](atelier-semaine-06.qmd), [rapport](rapport-semaine-06.qmd).

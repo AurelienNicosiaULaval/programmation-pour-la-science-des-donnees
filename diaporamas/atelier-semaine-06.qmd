@@ -1,0 +1,66 @@
+---
+title: "Atelier : une figure que l’on peut vérifier"
+subtitle: "STT-4230 / STT-6230, semaine 6, 7 octobre 2026"
+lang: fr
+format:
+  html:
+    theme: cosmo
+    toc: false
+embed-resources: true
+---
+
+## Question
+
+Comment se répartissent les profondeurs des séismes dans chacun des deux sous-ensembles définis par la longitude ?
+
+Cette activité transfère la démarche de la démonstration vers une autre variable. Utiliser les données réelles `datasets::quakes`, incluses dans R. La profondeur est exprimée en kilomètres. Ouest désigne ici les observations de longitude inférieure à 175°; Est désigne les autres. Ces catégories sont un découpage pédagogique.
+
+Source : [R Core Team, aide de quakes](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html). Découpage repris des [notes de Sophie Baillargeon (2021)](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/).
+
+## Point de départ exécutable
+
+```r
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(scales)
+
+seismes <- as_tibble(datasets::quakes) |>
+  mutate(region = factor(if_else(long < 175, "Ouest", "Est"),
+                         levels = c("Ouest", "Est")))
+stopifnot(nrow(seismes) == 1000L, !anyNA(seismes))
+```
+
+## Travail à réaliser
+
+1. Ajouter une variable de classes de profondeur avec `case_when()` : moins de 100 km, de 100 à moins de 300 km, au moins 300 km. Conserver cet ordre dans un facteur. Les classes sont choisies pour l’exercice.
+2. Calculer le nombre d’observations par classe et sous-ensemble. Conserver les combinaisons de fréquence nulle avec `.drop = FALSE`.
+3. Calculer les proportions dans chaque sous-ensemble et nommer explicitement leur dénominateur.
+4. Vérifier que les effectifs totalisent 1 000 et que les proportions totalisent 1 par sous-ensemble, à l’arrondi numérique près.
+5. Choisir des barres côte à côte ou des facettes. Donner un titre, un axe en pourcentage et des libellés lisibles.
+6. Enregistrer le PNG par code. Ouvrir le fichier et vérifier les textes, les couleurs et les coupures éventuelles.
+7. Écrire deux phrases : une comparaison descriptive fondée sur les proportions, puis une limite de cette comparaison.
+
+Pour construire les classes, le cas `depth < 100` doit précéder `depth < 300`. Une profondeur de 100 km appartient à la deuxième classe; une profondeur de 300 km à la troisième.
+
+## Relecture à deux
+
+Échanger les figures et répondre aux questions suivantes :
+
+- Le titre permet-il de comprendre la question ?
+- L’axe y et le texte permettent-ils de retrouver le dénominateur ?
+- Les couleurs ou les panneaux permettent-ils d’identifier les sous-ensembles ?
+- La somme est-elle vérifiée sur les valeurs non arrondies ?
+- L’interprétation décrit-elle ce tableau sans conclure à un risque sismique général ?
+
+## Trace dans le portfolio
+
+Dans `semaines/semaine-06/`, conserver le script, une figure personnelle, un choix de conception expliqué, une vérification du rendu et un lien vers une ressource utilisée. Par exemple, expliquer pourquoi des facettes ou des barres côte à côte conviennent à la comparaison.
+
+Si une aide d’IA influence significativement le travail, la déclarer selon les [règles du cours](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/ia.html) et vérifier le code et les résultats retenus.
+
+## Prolongement facultatif
+
+Pour approfondir, refaire la figure avec `after_stat(prop)` et un groupement explicite. Comparer ses valeurs au tableau résumé, puis expliquer quelle approche facilite la réutilisation du calcul dans un rapport.
+
+Ressources : [démonstration R](demonstration-semaine-06.R), [documentation de geom_bar et geom_col](https://ggplot2.tidyverse.org/reference/geom_bar.html), [rapport de démonstration](rapport-semaine-06.qmd).

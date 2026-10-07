@@ -1,0 +1,79 @@
+---
+title: "Une figure, un calcul, une interprétation"
+subtitle: "Exemple de rapport reproductible, STT-4230 / STT-6230, 7 octobre 2026"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  html:
+    theme: cosmo
+    toc: false
+    code-fold: true
+    code-summary: "Afficher le code"
+embed-resources: true
+execute:
+  message: false
+  warning: true
+  error: false
+---
+
+```{r}
+#| include: false
+library(knitr)
+source("demonstration-semaine-06.R", local = TRUE)
+```
+
+## Question et données
+
+Comment se répartissent les classes de magnitude dans deux sous-ensembles géographiques des séismes présents dans `datasets::quakes` ?
+
+Ce tableau réel, inclus dans R, contient `r nrow(seismes)` événements sismiques près de Fidji. Une ligne correspond à un séisme. La [documentation de R Core Team](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html) décrit la provenance et les cinq variables du tableau.
+
+Comme dans les [notes de Sophie Baillargeon (2021)](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/), le sous-ensemble Ouest correspond aux longitudes strictement inférieures à 175°, et Est aux autres observations. Il s’agit d’un découpage pédagogique. Les classes de magnitude sont `[4, 5[`, `[5, 6[` et `[6, 7[`.
+
+## Calcul et contrôle
+
+Le dénominateur est le nombre total de séismes dans chaque sous-ensemble. Le calcul conserve les combinaisons dont l’effectif est nul.
+
+```{r}
+effectifs <- seismes |>
+  count(region, classe, .drop = FALSE)
+proportions <- effectifs |>
+  group_by(region) |>
+  mutate(total_region = sum(n), proportion = n / total_region) |>
+  ungroup()
+verification <- proportions |>
+  group_by(region) |>
+  summarise(total = sum(n), somme = sum(proportion), .groups = "drop")
+stopifnot(all(abs(verification$somme - 1) < 1e-12))
+knitr::kable(verification,
+             col.names = c("Sous-ensemble", "Nombre de séismes", "Somme des proportions"))
+```
+
+## Figure
+
+```{r}
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "Répartition des classes de magnitude dans chaque sous-ensemble. Les pourcentages sont calculés avant leur arrondi pour l’affichage."
+figure_annotee
+```
+
+## Interprétation
+
+Dans Ouest, `r effectifs |> filter(region == "Ouest", classe == "[4, 5[") |> pull(n)` des `r verification |> filter(region == "Ouest") |> pull(total)` événements appartiennent à la classe `[4, 5[`, soit `r etiquette_pct(proportions |> filter(region == "Ouest", classe == "[4, 5[") |> pull(proportion))`. Dans Est, cette classe représente `r etiquette_pct(proportions |> filter(region == "Est", classe == "[4, 5[") |> pull(proportion))` des événements du sous-ensemble.
+
+Ces valeurs décrivent la composition du tableau fourni. Le calcul porte sur les observations de cet exemple; il ne mesure pas un taux de séismes par unité de temps ou de surface.
+
+## Limites
+
+Le découpage à 175° et les classes ont été choisis pour la démonstration. Le tableau ne fournit pas les dates individuelles des événements, ni une mesure de l’exposition ou de l’effort de détection. La différence de proportions ne suffit donc pas à conclure qu’un sous-ensemble présente un risque sismique supérieur. Une fréquence nulle dans une classe ne démontre pas l’impossibilité de tels événements.
+
+## Reproduire le rapport
+
+Conserver ce fichier et `demonstration-semaine-06.R` dans le même dossier. Le script charge explicitement `ggplot2`, `dplyr`, `readr` et `scales`; le rendu utilise aussi `knitr` et `rmarkdown`. Depuis ce dossier, exécuter :
+
+```text
+quarto render rapport-semaine-06.qmd
+```
+
+Le script produit aussi `outputs/06-proportions-seismes.png` et le tableau CSV. Le HTML contient ses ressources graphiques. Les références externes restent des liens nécessitant une connexion.
