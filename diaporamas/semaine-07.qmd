@@ -1,0 +1,739 @@
+---
+pagetitle: "Semaine 7 : bonnes pratiques et rapports Quarto"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    theme: simple
+    css: semaine-07.css
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: false
+    transition: none
+    background-transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    preview-links: false
+    code-line-numbers: false
+embed-resources: true
+execute:
+  echo: false
+  message: false
+  warning: true
+  error: false
+  cache: false
+  fig-width: 9
+  fig-height: 4.8
+  dpi: 150
+editor: source
+---
+
+```{r}
+#| include: false
+
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+library(tibble)
+
+lots_demo <- tibble(lot_id = c("A", "B", "C"), code = c("001", "001", "002"), quantite = c(10, 20, 5))
+prix_demo <- tibble(code = c("001", "001", "002"), version = c("v1", "v2", "v2"), prix_unitaire = c(4, 6, 8))
+jointure_demo <- lots_demo |>
+  left_join(filter(prix_demo, version == "v2"), by = "code")
+stopifnot(nrow(jointure_demo) == nrow(lots_demo), !anyDuplicated(jointure_demo$lot_id))
+
+seismes <- read_csv("donnees/seismes-fidji.csv", show_col_types = FALSE)
+stopifnot(nrow(seismes) == 1000L, !anyNA(seismes$mag))
+
+seismes <- seismes |>
+  mutate(classe_magnitude = cut(mag, c(4, 5, 6, 7), right = FALSE))
+
+repartition <- seismes |>
+  count(classe_magnitude, .drop = FALSE) |>
+  mutate(proportion = n / sum(n))
+
+stopifnot(!anyNA(seismes$classe_magnitude), sum(repartition$n) == nrow(seismes))
+
+pourcentage_4_5 <- repartition |>
+  filter(classe_magnitude == "[4,5)") |>
+  pull(proportion) |>
+  (function(x) formatC(100 * x, format = "f", digits = 1, decimal.mark = ","))()
+
+figure <- ggplot(repartition, aes(classe_magnitude, n)) +
+  geom_col(fill = "#087d85", width = 0.65) +
+  geom_text(aes(label = n), vjust = -0.4, size = 7) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(x = "Classe de magnitude", y = "Nombre de séismes") +
+  theme_minimal(base_size = 23)
+```
+
+##  {#ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Du code<br>au rapport Quarto</h1>
+<p class="hero-subtitle">Calculer, expliquer et reproduire</p>
+<p class="hero-meta">Aurélien Nicosia · 14 octobre 2026<br>STT-4230 / STT-6230</p>
+
+## Ce qu'on construit aujourd'hui {#objectif}
+
+::: lead
+Un rapport court dont le texte, le tableau et la figure concordent.
+:::
+
+- Une question et une source de données explicites.
+- Des résultats calculés par R au moment du rendu.
+- Une interprétation qui précise les limites.
+- Un fichier HTML lisible et une source `.qmd` reproductible.
+
+::: takeaway
+La semaine dernière : construire une figure. Aujourd'hui : l'intégrer à une explication vérifiable.
+:::
+
+## Un code qu'on peut relire {#style}
+
+::: columns
+::: {.column width="47%"}
+
+### Difficile à suivre
+
+```r
+x<-read_csv("donnees/seismes-fidji.csv")
+y<-x|>filter(mag>=5);nrow(y)
+```
+
+:::
+::: {.column width="53%"}
+
+### Les étapes sont visibles
+
+```r
+seismes <- read_csv(
+  "donnees/seismes-fidji.csv"
+)
+
+seismes_magnitude_5 <- seismes |>
+  filter(mag >= 5)
+
+nrow(seismes_magnitude_5)
+```
+
+:::
+:::
+
+::: takeaway
+Nommer les objets, séparer les étapes et commenter les décisions de traitement.
+:::
+
+## Organiser les fichiers et les chemins {#projet}
+
+::: columns
+::: {.column width="45%"}
+
+```text
+portfolio/
+  data/
+    processed/
+      seismes.csv
+  reports/
+    rapport.qmd
+  README.md
+```
+
+:::
+::: {.column width="55%"}
+
+Depuis `reports/rapport.qmd` :
+
+```r
+read_csv("../data/processed/seismes.csv")
+```
+
+`..` remonte d'un dossier.
+
+Dans le paquet de démonstration, le rapport et `donnees/` sont au même niveau.
+
+:::
+:::
+
+Par défaut, les blocs R utilisent le dossier du `.qmd`.
+
+## Trois parties dans un fichier .qmd {#structure}
+
+<div class="flow">
+<div class="flow-step"><h3>YAML</h3><p>Titre, langue,<br>format et options.</p></div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><h3>Markdown</h3><p>Question, méthode,<br>lecture des résultats.</p></div>
+<div class="flow-arrow">+</div>
+<div class="flow-step"><h3>Blocs R</h3><p>Données, calculs,<br>tableaux et figures.</p></div>
+</div>
+
+::: takeaway
+Quarto assemble ces éléments pour produire le document final.
+:::
+
+## Le YAML configure le document {#yaml .compact}
+
+::: columns
+::: {.column width="53%"}
+
+```yaml
+---
+title: "Mon rapport"
+author: "Votre nom"
+lang: fr
+format:
+  html:
+    toc: true
+    code-fold: true
+embed-resources: true
+execute:
+  echo: true
+  warning: true
+  message: false
+---
+```
+
+:::
+::: {.column width="47%"}
+
+`format: html` choisit la sortie.
+
+`toc` ajoute un sommaire.
+
+`code-fold` permet de replier le code.
+
+L'indentation en espaces indique quelles options vont ensemble.
+
+:::
+:::
+
+## Le Markdown structure l'explication {#markdown}
+
+::: columns
+::: {.column width="50%"}
+
+### Dans la source
+
+```markdown
+## Question
+
+Comment se répartissent les magnitudes?
+
+- Une ligne représente un séisme.
+- La profondeur est mesurée en km.
+
+La variable `mag` contient la magnitude.
+```
+
+:::
+::: {.column width="50%"}
+
+### À la lecture
+
+Une section, une question, des précisions sur les données.
+
+La variable `mag` contient la magnitude.
+
+Le texte aide le lecteur à comprendre les résultats sans parcourir tout le code.
+
+:::
+:::
+
+## Les accolades rendent le bloc exécutable {#blocs .compact}
+
+::: columns
+::: {.column width="50%"}
+
+### Afficher du code
+
+<pre class="literal"><code>&#96;&#96;&#96;r
+nrow(seismes)
+&#96;&#96;&#96;</code></pre>
+
+Ce bloc montre le code sans l'exécuter.
+
+:::
+::: {.column width="50%"}
+
+### Exécuter du code
+
+<pre class="literal"><code>&#96;&#96;&#96;{r}
+nrow(seismes)
+&#96;&#96;&#96;</code></pre>
+
+Ce bloc calcule le nombre de lignes au rendu.
+
+:::
+:::
+
+::: takeaway
+Dans les blocs R exécutables, les lignes `#|` placées au début règlent les options Quarto.
+:::
+
+## Pendant le rendu, qui fait quoi? {#moteur-r}
+
+::: lead
+Quarto pilote le rendu. Pour les blocs R, il utilise `knitr`.
+:::
+
+<div class="flow">
+<div class="flow-step"><h3>Source .qmd</h3><p>Texte et<br>blocs de code.</p></div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><h3>knitr + R</h3><p>Exécuter les blocs<br>et récupérer les résultats.</p></div>
+<div class="flow-arrow">→</div>
+<div class="flow-step"><h3>HTML final</h3><p>Texte, tableaux<br>et figures assemblés.</p></div>
+</div>
+
+::: takeaway
+`ggplot2` produit les figures; `knitr` fait exécuter les blocs R pendant le rendu.
+:::
+
+## Render reconstruit le rapport {#rendu}
+
+1. Enregistrer le `.qmd` et vérifier les fichiers requis.
+2. Utiliser le bouton Render dans l'éditeur, ou le terminal :
+
+```text
+quarto render rapport-semaine-07.qmd
+```
+
+3. Ouvrir le HTML produit et lire les résultats.
+
+::: takeaway
+Avec le cache désactivé, les blocs R sont réexécutés dans leur ordre. Le rapport doit charger ses bibliothèques, lire ses données et créer ses objets.
+:::
+
+Tous les objets utilisés doivent être créés dans le document.
+
+## Afficher et exécuter : deux décisions {#options}
+
+| Option du bloc | Le code s'exécute? | Le lecteur voit quoi? |
+|:--|:--|:--|
+| `echo: false` | Oui | Les résultats, sans le code |
+| `eval: false` | Non | Le code, si `echo: true` |
+| `include: false` | Oui | Ni le code, ni ses sorties |
+
+
+::: takeaway
+Pour cacher le code et garder une figure : quelle option choisir?
+:::
+
+::: {.fragment}
+`echo: false`. Avec `include: false`, la figure serait aussi cachée.
+:::
+
+## Une règle globale, une exception locale {#global-local .compact}
+
+::: columns
+::: {.column width="43%"}
+
+### Dans le YAML
+
+```yaml
+execute:
+  echo: false
+  warning: true
+```
+
+Le code est masqué par défaut.
+
+:::
+::: {.column width="57%"}
+
+### Dans un bloc précis
+
+<pre class="literal"><code>&#96;&#96;&#96;{r}
+#| label: verification
+#| echo: true
+
+nrow(seismes)
+&#96;&#96;&#96;</code></pre>
+
+Ici, le lecteur voit le code et le résultat.
+
+:::
+:::
+
+::: takeaway
+Choisir les options selon le public du rapport. Les contrôles de préparation peuvent rester dans un bloc `include: false`.
+:::
+
+## Reprendre un exemple connu {#donnees}
+
+`datasets::quakes` contient `r nrow(seismes)` événements près de Fidji.
+
+| Variable | Signification |
+|:--|:--|
+| `lat`, `long` | Coordonnées de l'événement |
+| `depth` | Profondeur, en kilomètres |
+| `mag` | Magnitude |
+| `stations` | Nombre de stations ayant rapporté l'événement |
+
+::: takeaway
+Question descriptive : comment se répartissent les magnitudes dans ce tableau?
+:::
+
+## Lire les données et vérifier la variable {#importation}
+
+```r
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+seismes <- read_csv(
+  "donnees/seismes-fidji.csv",
+  show_col_types = FALSE
+)
+
+stopifnot(!anyNA(seismes$mag))
+```
+
+::: takeaway
+Le contrôle arrête le rendu si une magnitude est manquante. Il faut alors décider du traitement avant de poursuivre.
+:::
+
+## Calculer le résumé une seule fois {#calcul .compact}
+
+```r
+seismes <- seismes |>
+  mutate(classe_magnitude = cut(
+    mag, breaks = c(4, 5, 6, 7), right = FALSE
+  ))
+
+repartition <- seismes |>
+  count(classe_magnitude, .drop = FALSE) |>
+  mutate(proportion = n / sum(n))
+
+stopifnot(sum(repartition$n) == nrow(seismes))
+```
+
+`right = FALSE` inclut la borne de gauche et exclut celle de droite.
+
+::: takeaway
+Le même objet `repartition` alimente le tableau, le graphique et l'interprétation.
+:::
+
+## Produire un tableau dans le rapport {#tableau .compact}
+
+<pre class="literal"><code>&#96;&#96;&#96;{r}
+#| label: tbl-repartition
+#| tbl-cap: "Effectifs par classe de magnitude."
+
+kable(repartition, digits = 3)
+&#96;&#96;&#96;</code></pre>
+
+```{r}
+kable(
+  repartition,
+  digits = 3,
+  col.names = c("Classe de magnitude", "Effectif", "Proportion")
+)
+```
+
+## Une figure avec une légende et un texte alternatif {#figure-code .compact}
+
+<pre class="literal"><code>&#96;&#96;&#96;{r}
+#| label: fig-repartition
+#| fig-cap: "Effectifs par classe de magnitude."
+#| fig-alt: "Barres des trois classes; [4,5) est la plus fréquente."
+#| fig-width: 8
+#| fig-height: 4.5
+
+ggplot(repartition, aes(classe_magnitude, n)) +
+  geom_col(fill = "#087d85") +
+  labs(x = "Classe de magnitude", y = "Nombre de séismes") +
+  theme_minimal()
+&#96;&#96;&#96;</code></pre>
+
+::: takeaway
+La légende accompagne la figure. Le texte alternatif en décrit le contenu pour une lecture assistée.
+:::
+
+## Lire la figure, puis préciser sa portée {#figure-resultat}
+
+```{r}
+#| fig-alt: "Trois barres avec 802, 193 et 5 événements pour les classes [4,5), [5,6) et [6,7)."
+figure
+```
+
+Ces effectifs décrivent seulement le tableau fourni.
+
+## Référencer sans taper les numéros {#renvois}
+
+Le préfixe indique le type de résultat :
+
+| Identifiant du bloc | Renvoi dans le texte |
+|:--|:--|
+| `label: fig-repartition` | `@fig-repartition` |
+| `label: tbl-repartition` | `@tbl-repartition` |
+
+### Dans la source
+
+```markdown
+La @fig-repartition représente les effectifs du @tbl-repartition.
+```
+
+::: takeaway
+Quarto ajoute les numéros et les liens. Utiliser des identifiants uniques et une légende `fig-cap` ou `tbl-cap`.
+:::
+
+## Des nombres qui suivent les données {#texte-dynamique}
+
+### Dans le texte du .qmd
+
+<pre class="literal"><code>Le tableau contient &#96;r nrow(seismes)&#96; séismes.</code></pre>
+
+### Dans le HTML
+
+::: lead
+Le tableau contient `r nrow(seismes)` séismes.
+:::
+
+::: takeaway
+L'expression R entre accents graves est recalculée au rendu. Le texte reste cohérent si le nombre de lignes change.
+:::
+
+## Un résultat, puis une interprétation {#interpretation}
+
+::: lead
+La classe `[4, 5[` représente `r pourcentage_4_5` % des événements du tableau.
+:::
+
+Cette phrase précise la classe, la valeur et le dénominateur.
+
+Pour l'interpréter :
+
+- rappeler que l'analyse est descriptive;
+- relier le texte aux effectifs du tableau et de la figure;
+- préciser ce que les données ne permettent pas de conclure.
+
+::: takeaway
+Un chiffre dynamique peut toujours soutenir une mauvaise conclusion. Le code ne remplace pas le raisonnement.
+:::
+
+## Lire le HTML et refaire l'analyse {#portabilite}
+
+| Pour lire le résultat | Pour refaire les calculs |
+|:--|:--|
+| Le HTML avec `embed-resources: true` | Le `.qmd` et les données sources |
+| Un navigateur, sans R pour ce HTML statique | R, Quarto et les bibliothèques |
+| Images et styles intégrés | Les chemins et l'ordre des traitements |
+
+`embed-resources` n'installe pas R et n'embarque pas automatiquement les fichiers de données.
+
+::: takeaway
+Partager le HTML permet de lire le résultat. Refaire l'analyse demande le dossier reproductible et un environnement adapté.
+:::
+
+
+## Quand le rendu échoue {#erreurs .compact}
+
+| Symptôme | Première vérification |
+|:--|:--|
+| Erreur YAML | Espaces, indentation, deux-points et guillemets |
+| Fichier introuvable | Chemin depuis le `.qmd`, nom exact et extension |
+| Objet introuvable | Bloc qui crée l'objet, ordre et `eval` |
+| Fonction introuvable | Bibliothèque chargée dans le document |
+| Renvoi non résolu | Identifiant, préfixe et légende |
+
+::: takeaway
+Lire le premier message d'erreur et le bloc concerné. Corriger la cause, puis refaire le rendu.
+:::
+
+## Revenir sur votre premier rendu {#retour-premier-rendu}
+
+1. Nommer un résultat obtenu ou le premier message d'erreur.
+2. Repérer le bloc, le fichier ou l'option concernés.
+3. Expliquer ce qui reste à vérifier ou à reprendre au laboratoire.
+
+::: takeaway
+Un rendu réussi ne suffit pas : vérifier aussi qu'un résultat du HTML concorde avec les données et le calcul.
+:::
+
+## Démonstration : suivre un rapport complet {#demonstration}
+
+Ouvrir [la source du rapport](rapport-semaine-07.qmd), puis [son HTML](rapport-semaine-07.html).
+
+1. Repérer le YAML et le bloc de préparation.
+2. Suivre l'objet `repartition` jusqu'au tableau et à la figure.
+3. Retrouver les renvois et les nombres calculés dans le texte.
+4. Refaire le rendu et vérifier le code repliable.
+
+::: takeaway
+Changer le titre pour tester le rendu, puis une option d'affichage pour comprendre son effet.
+:::
+
+## À vous : construire un rapport court {#atelier}
+
+À partir du [rapport de démonstration](rapport-semaine-07.qmd) et de [l'atelier](atelier-semaine-07.html) :
+
+1. Choisir une question descriptive sur la profondeur.
+2. Créer un résumé et une figure qui répondent à cette question.
+3. Ajouter un nombre calculé dans le texte et un renvoi à la figure.
+4. Expliquer un résultat et une limite, puis rendre le document.
+
+
+::: takeaway
+On doit pouvoir relier chaque nombre écrit à un calcul du rapport.
+:::
+
+## Avant de considérer le rapport terminé {#verification}
+
+- Je peux rendre le `.qmd` sans objet créé auparavant dans la console.
+- Je connais la source, l'unité d'observation et les unités des variables.
+- Mon texte, mon tableau et ma figure donnent des résultats cohérents.
+- Mes figures ont des axes lisibles, une légende et un texte alternatif.
+- Mes renvois fonctionnent et mes conclusions respectent les données.
+- J'ai ouvert le HTML final et documenté comment reproduire le rapport.
+
+::: takeaway
+Le rendu réussi est un contrôle technique. La lecture du résultat est un contrôle supplémentaire.
+:::
+
+## Garder une trace dans le portfolio {#portfolio}
+
+Toujours conserver et versionner la source `.qmd`.
+
+| Choix pour le HTML | Pourquoi et comment |
+|:--|:--|
+| Le suivre dans Git | Le dépôt sert à remettre ou lire directement le résultat |
+| L'exclure de Git | Le résultat est régénéré; fournir la procédure et les dépendances |
+
+Documenter cette décision dans le `README.md` et suivre les consignes de remise.
+
+Si l'IA influence significativement le travail, documenter son usage et les vérifications dans `docs/ai-log.md`, selon les règles du cours.
+
+## Faire avancer le projet d'équipe {#equipe}
+
+Transformer la proposition en premières réalisations :
+
+- une source de données accessible et documentée;
+- un premier traitement qu'une autre personne peut relancer;
+- une question reliée à un tableau ou à une figure;
+- une prochaine tâche claire pour chaque membre.
+
+::: takeaway
+Si le produit retenu est un rapport, le `.qmd` devient une première version du livrable. Adapter ce travail au format approuvé de l'équipe.
+:::
+
+## Défi 2 : simulation de tarifs douaniers {#defi-2-cadre}
+
+::: lead
+Mercredi 21 octobre · 13 h 30 à 14 h 30<br>Travail individuel · 10 % du cours
+:::
+
+- Travailler sur une commande fictive et des tables documentées.
+- Choisir les bonnes périodes et relier les tables avec les bonnes clés.
+- Produire un pipeline R, une figure et un court rapport Quarto.
+- Utiliser l'IA si vous le souhaitez, en déclarant son aide.
+
+::: takeaway
+L'énoncé et le canevas Quarto sont donnés à 13 h 30. Le travail évalué commence à ce moment.
+:::
+
+## Avant la séance : prendre en main le dépôt {#defi-2-depot}
+
+- Cloner le dépôt privé attribué par l'équipe enseignante.
+- Lire les trois CSV et leur dictionnaire : colonnes, codes, unités et périodes.
+- Vérifier l'environnement, puis tester un commit et un push.
+- Se familiariser avec les données; le code et le rapport évalués seront rédigés pendant le défi.
+
+::: takeaway
+Le dépôt anticipé contient les données et leurs explications, sans énoncé ni gabarit d'analyse.
+:::
+
+## IA : une trace précise de l'aide reçue {#defi-2-ia}
+
+Créer `docs/ai-log.md`, même sans utilisation d'IA.
+
+| Rubrique | Ce qu'il faut préciser |
+|:--|:--|
+| Usage ou non-usage | Outils, dates et ressources |
+| 1 à 3 contributions significatives, si IA | Passage influencé, décision et vérification |
+| Décision personnelle | Un choix relié au travail et une attestation |
+
+::: takeaway
+Déclarer aussi une aide reçue avant la séance si elle influence la remise.
+:::
+
+## À 14 h 30 : remettre la version finale {#defi-2-remise}
+
+1. Terminer les calculs, le rendu HTML et les vérifications.
+2. Enregistrer le commit final et le pousser sur GitHub.
+3. Remettre l'adresse du dépôt et le SHA du commit dans le canal annoncé.
+4. Arrêter les modifications; les entretiens suivent la remise figée.
+
+::: takeaway
+Le rendu et la transmission font partie des 60 minutes.
+:::
+
+## Entretien individuel après la remise {#defi-2-entretien}
+
+Cinq minutes, avec votre code et votre rapport visibles, sans IA ni aide extérieure.
+
+1. Expliquer comment un lot reçoit le taux du bon scénario.
+2. Prévoir l'effet d'une petite modification des données.
+3. Faire ou décrire l'adaptation et une vérification.
+
+::: takeaway
+0,6 point sur les 10 du défi : compréhension, prédiction et vérification.
+:::
+
+## Se préparer avant le défi {#defi-2-preparation}
+
+- Lire les fichiers, leurs colonnes, unités et périodes.
+- Réviser les clés et le choix de la bonne version d'une table.
+- Prévoir l'effet d'une jointure sur le nombre de lignes.
+- Distinguer une valeur nulle d'une valeur inconnue dans une figure.
+- Tester Git et un rendu Quarto sur l'entraînement distinct.
+
+::: takeaway
+[Lire les directives](preparation-defi-2/directives-preparation.html), puis faire [l'entraînement](preparation-defi-2/entrainement.html).
+:::
+
+## Joindre la bonne version d'une table {#defi-2-demonstration-jointure}
+
+::: columns
+::: {.column width="52%"}
+
+```r
+prix_v2 <- prix_demo |>
+  filter(version == "v2")
+
+resultat <- lots_demo |>
+  left_join(prix_v2, by = "code")
+
+stopifnot(nrow(resultat) == nrow(lots_demo))
+```
+
+Choisir la version, puis vérifier l'effectif et les clés.
+
+:::
+::: {.column width="45%"}
+
+Deux lots peuvent porter le même code et rester distincts.
+
+```{r}
+#| echo: false
+kable(jointure_demo |> select(lot_id, code, quantite, prix_unitaire),
+  col.names = c("Lot", "Code", "Quantité", "Prix"))
+```
+
+Données de stock entièrement fictives.
+
+:::
+:::
+
+## Fichiers et liens utiles {#references .refs}
+
+- [Rapport : source Quarto](rapport-semaine-07.qmd) et [HTML](rapport-semaine-07.html).
+- [Atelier](atelier-semaine-07.html) et [données](donnees/seismes-fidji.csv).
+- [Préparation du défi 2](preparation-defi-2/directives-preparation.html) et [entraînement](preparation-defi-2/entrainement.html).
+- [Documentation Quarto](https://quarto.org/docs/guide/).
+- [Guide de style R](https://style.tidyverse.org/).
+- [Documentation des données quakes](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html).

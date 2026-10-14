@@ -1,0 +1,108 @@
+---
+title: "Atelier : du code au rapport Quarto"
+subtitle: "STT-4230 / STT-6230, 14 octobre 2026"
+lang: fr
+format:
+  html:
+    theme: cosmo
+    toc: true
+embed-resources: true
+execute:
+  eval: false
+---
+
+## Objectif
+
+Produire un rapport descriptif court sur la profondeur des séismes du tableau fourni. Le rapport doit réunir une question, un calcul, une figure et une interprétation vérifiables.
+
+Cet atelier est un entraînement à Quarto. Les consignes et le matériel du défi technique sont communiqués séparément.
+
+## Fichiers fournis
+
+- [Rapport de démonstration, source `.qmd`](rapport-semaine-07.qmd).
+- [Rapport rendu, HTML](rapport-semaine-07.html).
+- [Données, CSV](donnees/seismes-fidji.csv) et [provenance](donnees/SOURCES.md).
+
+Copier le rapport de démonstration sous le nom `rapport-profondeur.qmd` dans le même dossier. Conserver `donnees/` à côté. Les bibliothèques nécessaires sont `readr`, `dplyr`, `ggplot2` et `knitr`.
+
+## 1. Définir la question
+
+Choisir une question descriptive qui utilise la profondeur, par exemple sa distribution ou sa comparaison entre sous-ensembles définis explicitement. La variable `depth` est mesurée en kilomètres. Une ligne représente un séisme.
+
+Justifier les classes, seuils ou sous-ensembles retenus. Ils servent ici à décrire ce tableau et ne doivent pas être présentés comme des catégories scientifiques validées sans source.
+
+## 2. Préparer les calculs
+
+Adapter le bloc de préparation du modèle. Vérifier la présence de la variable et ses valeurs manquantes avant de calculer un résumé.
+
+```r
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+seismes <- read_csv("donnees/seismes-fidji.csv", show_col_types = FALSE)
+
+stopifnot("depth" %in% names(seismes), !anyNA(seismes$depth))
+```
+
+Créer un résumé pertinent pour la question : effectifs, médiane, quartiles ou autre mesure justifiée. Ne pas conserver les objets propres à l'analyse des magnitudes si le nouveau rapport ne les utilise plus.
+
+## 3. Faire un tableau et une figure
+
+Présenter un tableau calculé par R, avec `knitr::kable()` et une légende `tbl-cap`. Produire une figure avec des axes nommés et des unités.
+
+Dans le bloc de la figure, utiliser les options suivantes en adaptant les descriptions à ce qui est réellement montré :
+
+```yaml
+label: fig-profondeur
+fig-cap: "Distribution des profondeurs dans le tableau fourni."
+fig-alt: "Description du type de figure, des variables et du résultat visible."
+```
+
+Ces options se placent au début d'un bloc R exécutable, chacune précédée de `#|`. Référencer la figure dans le texte avec `@fig-profondeur`.
+
+## 4. Rédiger à partir des résultats
+
+Écrire une phrase qui contient un nombre calculé avec du code R en ligne. Le nombre doit provenir du même traitement que le tableau ou la figure.
+
+Expliquer un résultat dans le contexte du tableau. Ajouter une limite : données historiques, sélection des événements, absence de dates individuelles ou portée descriptive de la comparaison.
+
+## 5. Rendre et relire
+
+Depuis le dossier contenant le rapport :
+
+```text
+quarto render rapport-profondeur.qmd
+```
+
+Ouvrir le HTML. Vérifier les renvois, les unités, les nombres et les blocs de code repliables. Faire ensuite rendre le fichier par une autre personne à partir des seuls fichiers fournis.
+
+## Trace à conserver
+
+- Le `.qmd` qui produit le rapport.
+- Le HTML généré et relu.
+- Les données et leur provenance.
+- La commande de rendu et les bibliothèques utilisées.
+- La décision documentée de suivre ou non le HTML dans Git.
+- Une entrée dans `docs/ai-log.md` si l'IA a influencé significativement le travail, selon les règles du cours.
+
+## Auto-vérification
+
+- [ ] Je peux expliquer la question, l'unité d'observation et les unités.
+- [ ] Je peux relancer les calculs sans objet déjà présent dans ma console.
+- [ ] Je peux retrouver le calcul de chaque nombre écrit dans le texte.
+- [ ] Ma figure possède une légende et un texte alternatif adaptés.
+- [ ] Mes renvois conduisent au bon tableau ou à la bonne figure.
+- [ ] Mon interprétation respecte les limites des données.
+
+## Prolongement STT-6230
+
+En 150 à 250 mots, justifier le choix d'un HTML avec ressources intégrées pour ce rapport. Expliquer aussi ce qui serait nécessaire pour refaire les calculs et ce qu'apporterait une version PDF pour la lecture ou l'impression. Distinguer la portabilité du résultat de la reproductibilité de l'analyse.
+
+## Références
+
+- R Core Team, [quakes](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html).
+- Équipe Quarto, [options d'exécution](https://quarto.org/docs/computations/execution-options.html), [renvois](https://quarto.org/docs/authoring/cross-references.html) et [code en ligne](https://quarto.org/docs/computations/inline-code.html).
+
+Documentation consultée le 13 octobre 2026.

@@ -16,6 +16,7 @@ Les diaporamas présentés en début de séance reprennent les idées essentiell
 | 4 | 23 septembre 2026 | [Prétraitement avec le tidyverse](diaporamas/semaine-04.qmd) · [Script R](diaporamas/demonstration-semaine-04.R) |
 | 5 | 30 septembre 2026 | [Introduction à ggplot2](diaporamas/semaine-05.qmd) · [Lancement du projet d’équipe](diaporamas/lancement-projet.qmd) · [Script R](diaporamas/demonstration-semaine-05.R) |
 | 6 | 7 octobre 2026 | [Graphiques vérifiables et rapports reproductibles](diaporamas/semaine-06.qmd) · [Script R](diaporamas/demonstration-semaine-06.R) |
+| 7 | 14 octobre 2026 | [Du code au rapport Quarto](diaporamas/semaine-07.qmd) · [Rapport de démonstration](diaporamas/rapport-semaine-07.qmd) · [Matériel à télécharger, ZIP](assets/documents/exercices-consolidation/a2026/semaine-07/STT4230-semaine-07-materiel.zip) |
 
 Ouvrez le diaporama, puis utilisez les flèches du clavier pour avancer ou revenir en arrière. La touche Échap affiche une vue d'ensemble des diapositives.
 

@@ -17,6 +17,8 @@ project:
     - assets/documents/exemples-projet/**
     - assets/documents/defi-1/references-defi-1.zip
     - diaporamas/*.R
+    - diaporamas/donnees/seismes-fidji.csv
+    - diaporamas/donnees/SOURCES.md
     - diaporamas/preparation-defi-2/entrainement.html
     - diaporamas/preparation-defi-2/directives-preparation.pdf
 

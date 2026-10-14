@@ -1,0 +1,148 @@
+---
+title: "Répartition des magnitudes des séismes près de Fidji"
+subtitle: "Un rapport descriptif reproductible avec Quarto"
+author: "Aurélien Nicosia"
+date: "2026-10-14"
+lang: fr
+crossref:
+  tbl-title: "Tableau"
+  tbl-prefix: "tableau"
+  fig-title: "Figure"
+  fig-prefix: "figure"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    code-summary: "Afficher le code"
+    code-tools: true
+embed-resources: true
+execute:
+  echo: true
+  message: false
+  warning: true
+  error: false
+  cache: false
+---
+
+```{r}
+#| label: preparation
+#| include: false
+
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+# Le chemin est relatif au dossier de ce fichier .qmd.
+seismes <- read_csv("donnees/seismes-fidji.csv", show_col_types = FALSE)
+
+# Contrôler les variables utilisées avant de classer les événements.
+stopifnot(
+  all(c("lat", "long", "depth", "mag", "stations") %in% names(seismes)),
+  nrow(seismes) > 0L,
+  !anyNA(seismes$mag),
+  all(seismes$mag >= 4 & seismes$mag < 7)
+)
+
+seismes <- seismes |>
+  mutate(classe_magnitude = cut(
+    mag,
+    breaks = c(4, 5, 6, 7),
+    right = FALSE
+  ))
+
+repartition <- seismes |>
+  count(classe_magnitude, .drop = FALSE) |>
+  mutate(proportion = n / sum(n))
+
+# Les proportions sont calculées avant tout arrondi d'affichage.
+stopifnot(
+  sum(repartition$n) == nrow(seismes),
+  abs(sum(repartition$proportion) - 1) < 1e-12
+)
+
+part_classe_4_5 <- repartition |>
+  filter(classe_magnitude == "[4,5)") |>
+  pull(proportion)
+
+pourcentage_4_5 <- formatC(
+  100 * part_classe_4_5,
+  format = "f", digits = 1, decimal.mark = ","
+)
+```
+
+## Question et source
+
+Comment se répartissent les magnitudes des événements présents dans ce tableau?
+
+Les données sont une copie de `datasets::quakes`, un jeu réel inclus dans R. Elles contiennent `r nrow(seismes)` séismes près de Fidji. Une ligne correspond à un événement. Le tableau fournit sa latitude, sa longitude, sa profondeur en kilomètres, sa magnitude et le nombre de stations qui l'ont rapporté.
+
+La [documentation de R Core Team sur quakes](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html), consultée le 13 octobre 2026, situe les données à partir de 1964. Le fichier `donnees/SOURCES.md` documente la copie utilisée.
+
+## Préparation et contrôles
+
+L'analyse utilise trois classes de magnitude : `[4, 5[`, `[5, 6[` et `[6, 7[`. La borne de gauche est incluse et la borne de droite est exclue. R affiche ces mêmes intervalles sous la forme `[4,5)`, `[5,6)` et `[6,7)`.
+
+Les contrôles vérifient que les magnitudes sont renseignées et comprises dans les classes retenues. Aucun événement n'est supprimé dans cet exemple. Une modification des données qui viole ces conditions interrompt le rendu et demande une révision du traitement.
+
+## Tableau de répartition
+
+Le @tbl-repartition présente les effectifs et les proportions. Chaque proportion utilise le nombre total d'événements du tableau comme dénominateur.
+
+```{r}
+#| label: tbl-repartition
+#| tbl-cap: "Effectifs et pourcentages par classe de magnitude."
+
+tableau <- repartition |>
+  transmute(
+    Classe = as.character(classe_magnitude),
+    Effectif = n,
+    `Pourcentage (%)` = 100 * proportion
+  )
+
+kable(tableau, digits = 1, format.args = list(decimal.mark = ","))
+```
+
+## Figure
+
+La @fig-repartition représente les mêmes effectifs que le @tbl-repartition. Les classes sont ordonnées et l'axe des effectifs commence à zéro.
+
+```{r}
+#| label: fig-repartition
+#| fig-cap: "Nombre de séismes par classe de magnitude dans le tableau fourni."
+#| fig-alt: "Diagramme à barres des trois classes de magnitude. La barre de la classe de 4 inclus à 5 exclu est la plus haute. Chaque barre affiche son effectif."
+#| fig-width: 8
+#| fig-height: 4.5
+
+ggplot(repartition, aes(x = classe_magnitude, y = n)) +
+  geom_col(fill = "#087d85", width = 0.65) +
+  geom_text(aes(label = n), vjust = -0.4, size = 5) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(x = "Classe de magnitude", y = "Nombre de séismes") +
+  theme_minimal(base_size = 15)
+```
+
+## Interprétation et limites
+
+La classe `[4, 5[` représente `r pourcentage_4_5` % des événements de ce tableau. Elle est la classe la plus fréquente dans cet exemple. Les effectifs, le tableau, la figure et le pourcentage dans cette phrase sont calculés à partir des mêmes données.
+
+Ces valeurs décrivent les observations fournies. Le tableau ne contient pas de date individuelle, de durée précise de suivi ni de mesure de l'effort de détection. Il ne permet donc pas de calculer un taux annuel ou de conclure sur le risque sismique actuel près de Fidji. Une classe sans observation ne démontre pas l'impossibilité d'un événement dans cet intervalle.
+
+## Reproduire le rapport
+
+Conserver le fichier `.qmd` et le dossier `donnees/` ensemble. Les bibliothèques utilisées sont `readr`, `dplyr`, `ggplot2` et `knitr`. Depuis le dossier qui contient ce rapport :
+
+```text
+quarto render rapport-semaine-07.qmd
+```
+
+Dans ce document, le cache est désactivé. Le rendu réexécute les blocs R dans leur ordre et reconstruit le tableau, la figure et les nombres intégrés au texte.
+
+Le HTML intègre ses images et ses ressources de présentation. Sa lecture et ses renvois internes fonctionnent sans les données sources. Les liens vers des sites externes demandent une connexion; refaire les calculs demande le `.qmd`, les données, R, Quarto et les bibliothèques.
+
+## Références
+
+- R Core Team, [quakes](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html), documentation consultée le 13 octobre 2026.
+- Équipe Quarto, [blocs R](https://quarto.org/docs/computations/r.html), [renvois aux figures et tableaux](https://quarto.org/docs/authoring/cross-references.html) et [HTML avec ressources intégrées](https://quarto.org/docs/output-formats/html-basics.html#self-contained), documentation consultée le 13 octobre 2026.
