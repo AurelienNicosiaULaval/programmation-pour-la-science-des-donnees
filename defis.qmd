@@ -7,7 +7,7 @@ format:
 
 Les défis techniques sont des évaluations individuelles réalisées en laboratoire. Ils vérifient la capacité à produire, diagnostiquer, documenter, justifier et vérifier du code R dans un temps limité.
 
-Chaque défi technique dure environ une heure. Le reste de la séance demeure un atelier d’apprentissage, de consolidation ou de transfert vers le portfolio et le projet. Une fois le défi remis, le livrable évalué n’est plus modifié.
+Chaque défi technique dure une heure. Après la remise, la séance peut comprendre un entretien de compréhension, puis un atelier d'apprentissage, de consolidation ou de transfert vers le portfolio et le projet. Une fois le défi remis, le livrable évalué n'est plus modifié. Pour le défi 2, l'entretien a lieu après cette heure de travail.
 
 Grille détaillée: [Grille d’évaluation des défis techniques](gabarits/grille-defis-techniques.qmd).
 
@@ -18,7 +18,7 @@ Les ateliers suivants font partie des modules du cours, mais ne sont pas des év
 | Après le défi | Atelier | Objet de l'apprentissage |
 |---|---|---|
 | Défi 1 | Introduction aux graphiques en R, ressources fournies hors ligne | Produire et interpréter une figure sur un autre exemple, sans IA |
-| Défi 2 | Exercice analogue dans le dépôt GitHub | Vérifier une proposition sur un exemple analogue et documenter la décision |
+| Défi 2 | Entretiens, puis exercice analogue | Vérifier une proposition sur un exemple distinct et documenter la décision après le dernier entretien |
 | Défi 3 | Exercice analogue dans le dépôt GitHub | Comparer avant et après, écrire une limite et transférer une pratique vers le projet |
 
 ## Vue d’ensemble
@@ -26,7 +26,7 @@ Les ateliers suivants font partie des modules du cours, mais ne sont pas des év
 | Défi | Semaine | Poids | Rôle | IA |
 |---|---:|---:|---|---|
 | Défi technique 1 | 5 | 10 % | Vérifier les bases individuelles | Non permise |
-| Défi technique 2 | 8 | 10 % | Vérifier la programmation avec aide encadrée | Permise, déclarée |
+| Défi technique 2 | 8 | 10 % | Vérifier la programmation et la compréhension avec aide encadrée | Permise, facultative, déclarée |
 | Défi technique 3 | 13 | 10 % | Vérifier le jugement professionnel avec IA | Intégrée |
 
 ## Ce qui est connu avant la séance
@@ -35,14 +35,15 @@ Les ateliers suivants font partie des modules du cours, mais ne sont pas des év
 |---|---|---|
 | Compétences évaluées | Oui, dans cette page et les modules de préparation | Rappel ciblé dans la consigne |
 | Règle IA | Oui | Confirmée avant le départ du temps évalué |
-| Famille de livrables | Oui: code, documentation et vérification selon le défi | Noms exacts des fichiers et structure de départ |
+| Famille de livrables | Code, documentation et vérification; noms des fichiers du défi 2 précisés ci-dessous | Structure du rapport et consignes de travail |
 | Critères | Oui, dans la grille commune | Adaptation des indicateurs à la tâche précise |
-| Données et mini-projet | Source et contraintes générales seulement | Fichiers exacts, valeurs et cas particuliers |
+| Données | Pour le défi 2 : dépôt privé, CSV et explications accessibles à l'avance; pour les autres défis, selon leurs directives | Rappel des fichiers à utiliser |
+| Énoncé et code à examiner | Compétences et modalités seulement | Pour le défi 2 : énoncé et canevas QMD avec la proposition de code à 13 h 30 |
 | Canal de remise | Indiqué par l'équipe enseignante avant la séance | Vérifié pendant la mise en place |
 
 La remise est figée à la fin de l'heure évaluée. Elle doit permettre de retrouver les fichiers demandés et, lorsque Git est exigé, l'identifiant du dernier commit remis.
 
-## Défi technique 1
+## Défi technique 1 {#defi-technique-1}
 
 Préparation et directives publiques: [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd).
 
@@ -65,27 +66,57 @@ Le défi 1 se déroule le 30 septembre 2026 au PLT-3928, de 13 h 30 à 14 h 30, 
 
 Après la remise, poursuivre avec les [graphiques en R](exercices/modules-05-06-graphiques-r.qmd), sur un autre exemple avec des ressources fournies hors ligne. L’atelier reste sans IA.
 
-## Défi technique 2
+## Défi technique 2 {#defi-technique-2}
 
-Le deuxième défi autorise l’IA avec déclaration. Il vise:
+Le défi 2 a lieu le mercredi 21 octobre 2026, de 13 h 30 à 14 h 30. Le travail est individuel et compte pour 10 % de la note du cours. Le rendu du rapport, le commit, le push et la remise sont compris dans les 60 minutes. L'IA est permise, facultative et déclarée.
 
-- pipeline simple;
-- visualisation;
-- rapport Quarto court;
-- adaptation et vérification de toute aide reçue;
-- entrée obligatoire dans `docs/ai-log.md` ou dans le fichier de réflexion IA fourni.
+Lire les [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd), également disponibles en [PDF](diaporamas/preparation-defi-2/directives-preparation.pdf). Un [entraînement distinct sur les jointures et les valeurs manquantes](diaporamas/preparation-defi-2/entrainement.html) permet de réviser les notions.
 
-Question centrale: est-ce que l’étudiante ou l’étudiant peut produire un livrable technique en utilisant l’IA de façon transparente et contrôlée?
+Le thème est celui des tarifs douaniers, avec des taux documentaires et une commande fictive. Les compétences évaluées sont l'importation contrôlée, le choix des périodes, les jointures, les valeurs manquantes, la vérification d'une proposition de code, une figure et un court rapport Quarto. Aucune expertise juridique n'est nécessaire.
 
-### Repère de remise publié
+### Avant la séance : dépôt et données
 
-La remise contient au minimum le code adapté, un rapport Quarto court ou une note de vérification selon la tâche, et `docs/ai-log.md` ou le fichier de réflexion IA fourni. Les noms exacts, le squelette et le mini-projet sont communiqués au début du défi. À la fermeture, remettre les fichiers dans le canal annoncé et, si Git est demandé, vérifier que le dernier commit remis est identifiable.
+L'équipe enseignante attribue un dépôt GitHub privé contenant les données, leurs explications et un script de vérification technique. Avant le défi, cloner ce dépôt, ouvrir `defi-2.Rproj`, lire les fichiers et vérifier l'environnement ainsi qu'un commit suivi d'un push. Tester le rendu Quarto avec l'entraînement dans un dossier distinct.
 
-Après la remise, poursuivre avec l'exercice analogue annoncé dans le module Brio et distribué par GitHub. Le défi remis n'est pas corrigé pendant cet atelier.
+Cette préparation sert à se familiariser avec les données et à vérifier les outils. La rédaction du code et du rapport évalués commence à 13 h 30. Une aide d'IA à la compréhension des données doit être déclarée si elle influence la remise.
 
-Avant la séance, les étudiantes et étudiants connaissent donc les compétences, la règle IA, la famille de livrables et la grille. Le mini-projet, les fichiers de départ et les cas exacts à traiter sont fournis au début du défi.
+### À 13 h 30 : début du travail évalué
 
-## Défi technique 3
+L'énoncé et le canevas `rapport-defi-2.qmd` sont distribués à 13 h 30. Le canevas contient les sections à compléter et la proposition de code à examiner. L'enregistrer à la racine du projet déjà prêt. Écrire le script d'analyse pendant l'épreuve et conserver les données brutes sans modification.
+
+Vous pouvez consulter vos notes personnelles, le site du cours et la documentation officielle. Le travail doit être réalisé sans l'aide d'une autre personne. L'usage déclaré de l'IA et le non-usage sont évalués avec le même barème; aucun abonnement payant n'est requis.
+
+### Avant 14 h 30 : remise
+
+Le dépôt doit contenir les données d'origine et les fichiers suivants :
+
+- `R/defi2.R` : importation, calculs et contrôles;
+- `rapport-defi-2.qmd` : rapport complété, appelant le script;
+- `rapport-defi-2.html` : rapport rendu;
+- `sorties/comparaison_lots.csv` : tableau exporté par le code;
+- `docs/ai-log.md` : déclaration d'usage ou de non-usage de l'IA.
+
+Faire le commit final et le push avant 14 h 30, puis remettre l'adresse du dépôt et le SHA complet, c'est-à-dire l'identifiant du commit final, dans le canal annoncé. À 14 h 30, arrêter toute modification. En cas d'incident GitHub, le signaler avant l'échéance; la procédure de secours porte sur les fichiers déjà figés et ne prolonge pas le travail.
+
+### Déclaration IA pour tous
+
+Créer `docs/ai-log.md`, même sans IA, avec trois rubriques :
+
+1. Usage ou non-usage de l'IA; outils, dates et ressources utilisés, s'il y a lieu.
+2. Si IA : une à trois contributions significatives, chacune reliée à un passage, à votre décision et à une vérification. Sans IA, indiquer « Sans objet ».
+3. Pour tous : une décision personnelle liée à un passage du travail et une attestation que la déclaration décrit les aides réellement reçues.
+
+Une ligne peut suffire par contribution. Ne pas inventer d'interactions et ne pas transmettre votre nom, IDUL ou identifiants à un outil externe. Le compagnon GPT du cours peut refuser une question d'évaluation; son usage est facultatif et aucune réponse n'est garantie.
+
+### Après la remise : entretien de compréhension
+
+Chaque personne passe un entretien de cinq minutes, avec son code et son rapport visibles, sans IA ni aide extérieure. Il faut expliquer le passage qui associe les lots aux taux, prévoir l'effet d'une petite modification des données, puis faire ou décrire précisément l'adaptation du code et sa vérification.
+
+L'entretien compte pour 0,6 point sur les 10 du défi; les contrôles écrits comptent pour 0,4 point dans le même critère « Validation et explication ». La syntaxe par cœur et l'aisance orale ne sont pas notées. Un temps de réflexion est prévu et les accommodements reconnus s'appliquent. L'entretien évalue la compréhension, sans chercher à déterminer si une IA a été utilisée.
+
+La salle, le canal de remise et les créneaux d'entretien sont communiqués avant la séance. L'atelier et le retour sur l'exemple analogue commencent après le dernier entretien concerné. Le travail remis reste figé.
+
+## Défi technique 3 {#defi-technique-3}
 
 Le troisième défi intègre l’IA à la tâche. Il évalue:
 
@@ -111,6 +142,8 @@ Avant la séance, les étudiantes et étudiants connaissent les dimensions du di
 
 Ce tableau est indicatif. Pour le défi 1 du 30 septembre, les horaires précis de la [page de préparation](defis/preparation-defi-technique-1.qmd) s’appliquent : travail de 13 h 30 à 14 h 30, puis récupération jusqu’à 14 h 45.
 
+Pour le défi 2 du 21 octobre, suivre le [déroulement précisé ci-dessus](#defi-technique-2) : travail et remise de 13 h 30 à 14 h 30, puis entretiens. Les vérifications techniques ont lieu avant l'épreuve; la période de remise du tableau indicatif ne constitue pas un délai supplémentaire.
+
 | Moment | Activité | Rôle |
 |---:|---|---|
 | 0:00 à 0:15 | Mise en place | Rappeler les consignes, vérifier les fichiers, le dépôt et la règle IA |
@@ -125,7 +158,7 @@ Ce tableau est indicatif. Pour le défi 1 du 30 septembre, les horaires précis 
 | Défi | Traces |
 |---|---|
 | Défi technique 1 | Dossier récupéré par l’enseignant, fichier brut, script R, résultats et README court, sans IA |
-| Défi technique 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `docs/ai-log.md` ou fichier de réflexion IA |
+| Défi technique 2 | Dépôt GitHub privé figé : script R, QMD, HTML, tableau CSV et `docs/ai-log.md` pour tous; URL et SHA final remis; entretien de compréhension |
 | Défi technique 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
 
 ## Critères communs

@@ -228,7 +228,7 @@ Source interne: calendrier.qmd; evaluations.qmd.
 <div class="roadmap roadmap--five">
 <div><span class="week">S6</span><h3>Graphiques et rapports</h3><p>Figures, bonnes pratiques et introduction aux rapports reproductibles.</p></div>
 <div><span class="week">S7</span><h3>Bien rédiger</h3><p>Bonnes pratiques, R Markdown et transition vers Quarto.</p></div>
-<div class="roadmap-challenge"><span class="week">S8</span><h3>Défi 2</h3><p>Défi individuel, IA permise et déclarée, puis consolidation.</p></div>
+<div class="roadmap-challenge"><span class="week">S8</span><h3>Défi 2</h3><p>Défi individuel, IA facultative et déclarée, puis entretien de compréhension et consolidation.</p></div>
 <div><span class="week">S9</span><h3>Contrôle et fonctions</h3><p>Conditions, boucles et premières fonctions.</p></div>
 <div><span class="week">S10</span><h3>Tests et débogage</h3><p>Fonctions, exceptions et correction d'erreurs.</p></div>
 </div>
@@ -287,7 +287,7 @@ Source interne: evaluations.qmd; calendrier.qmd.
 
 <div class="challenge-ladder">
 <div class="challenge-step challenge-step--one"><span>Défi 1 · 10 %</span><h3>Faire seul</h3><p>Structure de projet, importation, nettoyage simple, validation et README.</p><small>IA non permise</small></div>
-<div class="challenge-step challenge-step--two"><span>Défi 2 · 10 %</span><h3>Faire avec une aide transparente</h3><p>Pipeline simple, visualisation et rapport Quarto court.</p><small>IA permise, déclarée</small></div>
+<div class="challenge-step challenge-step--two"><span>Défi 2 · 10 %</span><h3>Faire avec une aide transparente</h3><p>Traitements vérifiés, visualisation, rapport Quarto court et explication du code.</p><small>IA permise, facultative et déclarée</small></div>
 <div class="challenge-step challenge-step--three"><span>Défi 3 · 10 %</span><h3>Faire preuve de jugement</h3><p>Diagnostic, amélioration et validation d'un mini-projet.</p><small>IA intégrée et vérifiée</small></div>
 </div>
 

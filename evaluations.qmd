@@ -15,7 +15,7 @@ Cette page présente les pondérations, les échéances, les traces attendues et
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Jalon 1: 16 septembre à 16 h 20, 4 points; semaine 9: 6 points; semaine 14: 10 points | Permise, déclarée |
 | Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6 et 12; remise finale et défense en semaine 14, pendant la séance du mercredi 9 décembre | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
-| Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
+| Défi technique 2 | 10 % | Individuel, 1 h puis entretien de 5 min | Semaine 8, 21 octobre, travail et remise de 13 h 30 à 14 h 30 | Permise, facultative, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
 | Site Quarto personnel | 10 % | Individuel | Semaine 15, mercredi 16 décembre à 23 h 55 | Permise, déclarée |
 | Total | 100 % |  |  |  |
@@ -27,16 +27,16 @@ Les trois défis techniques ne sont pas trois examens semblables. Ils ont trois 
 | Défi | Moment | Rôle | Ce qui est vérifié | Règle IA |
 |---|---:|---|---|---|
 | Défi 1 | Semaine 5 | Vérifier les bases individuelles | Structure de projet, importation, nettoyage simple, proportion, validation, chemins relatifs et README minimal | Non permise |
-| Défi 2 | Semaine 8 | Vérifier la programmation avec aide encadrée | Pipeline simple, visualisation, rapport Quarto court, capacité à documenter l’aide reçue | Permise, déclarée |
+| Défi 2 | Semaine 8 | Vérifier la programmation avec aide encadrée | Périodes et jointures, valeurs manquantes, validation, figure, rapport Quarto et explication du code | Permise, facultative, déclarée |
 | Défi 3 | Semaine 13 | Vérifier le jugement professionnel avec IA | Diagnostic, débogage, optimisation, parallélisation ou amélioration d’un mini-projet, validation des suggestions IA | Intégrée |
 
-Les directives publiques de préparation au premier défi sont disponibles ici: [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd).
+Directives publiques : [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd) et [Préparation au défi technique 2](diaporamas/preparation-defi-2/directives-preparation.qmd).
 
-La consigne exacte et le fichier de données évalué sont fournis au moment du défi. Ils ne sont pas publiés sur le site du cours.
+Les énoncés évalués sont distribués au début des défis. Pour le défi 2, le dépôt privé, les données et leurs explications sont accessibles avant la séance pour la familiarisation et la vérification technique; l'énoncé et le canevas QMD avec le code à examiner sont fournis à 13 h 30.
 
 Le défi 1 répond à la question suivante: est-ce que l’étudiante ou l’étudiant peut fonctionner seul dans un projet R propre?
 
-Le défi 2 répond à la question suivante: est-ce que l’étudiante ou l’étudiant peut produire un livrable technique en utilisant l’IA de façon transparente et contrôlée?
+Le défi 2 vérifie la capacité à produire un livrable technique vérifié, à expliquer le code et à documenter les aides réellement reçues. L'usage de l'IA est facultatif.
 
 Le défi 3 répond à la question suivante: est-ce que l’étudiante ou l’étudiant sait utiliser l’IA comme assistant technique sans perdre son jugement professionnel?
 
@@ -44,10 +44,12 @@ Seuls les trois défis techniques indiqués dans la table d’évaluation compte
 
 Chaque défi technique occupe environ une heure de la séance. La partie restante du laboratoire sert au retour technique, à la consolidation, au portfolio ou au projet. Cette partie n’est pas utilisée pour modifier le livrable évalué.
 
+Pour le défi 2, un entretien individuel de cinq minutes suit la remise figée. Le retour sur l'exemple analogue et l'atelier commencent après le dernier entretien concerné. Les modalités complètes se trouvent dans les [consignes du défi 2](defis.qmd#defi-technique-2).
+
 | Après le défi | Module non évalué | Travail |
 |---|---|---|
 | Défi 1 | Introduction aux graphiques en R, sur un autre exemple | Produire et interpréter une figure sans IA; ajouter la trace au portfolio après la séance |
-| Défi 2 | Exercice analogue sur le site du cours | Valider une proposition sur un exemple analogue et documenter la démarche dans le portfolio |
+| Défi 2 | Entretiens, puis exercice analogue | Valider une proposition sur un exemple distinct après le dernier entretien et documenter la démarche dans le portfolio |
 | Défi 3 | Exercice analogue sur le site du cours | Faire un post-mortem et transférer une pratique vers le portfolio ou le projet |
 
 ## Traces attendues
@@ -58,7 +60,7 @@ Chaque défi technique occupe environ une heure de la séance. La partie restant
 | Portfolio GitHub individuel | Dépôt privé `portfolio-stt4230-IDUL` ou `portfolio-stt6230-IDUL`, selon le sigle d'inscription, créé une fois par l'équipe enseignante à partir du modèle A2026, cloné par la personne étudiante, dossiers ajoutés semaine après semaine, productions personnelles issues des lectures, exercices et activités, README, vérifications, bilan final et commits réguliers |
 | Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, produit dans le format approuvé (rapport, tableau de bord, application, tutoriel, site, outil R ou autre), validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
 | Défi 1 | Dossier récupéré par l’enseignant, fichier brut, script R, résultats et README court, sans IA |
-| Défi 2 | Dépôt ou dossier remis, code, rapport court, entrée obligatoire dans `docs/ai-log.md` ou fichier de réflexion IA |
+| Défi 2 | Dépôt privé figé : script R, rapport QMD et HTML, tableau CSV et `docs/ai-log.md` même sans IA; adresse et SHA final remis; entretien de cinq minutes |
 | Défi 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
 | Site Quarto personnel | Adresse GitHub Pages publique, dépôt source du site, dernier commit évalué, page de présentation ou compétences, au moins deux réalisations commentées, lien ou référence vers une trace du portfolio, déclaration IA si pertinente |
 
@@ -111,6 +113,8 @@ L’utilisation d’outils d’IA générative n’est pas permise pour le défi
 Cette règle s’applique au portfolio GitHub individuel, au projet filé en équipe, au défi technique 2 et au site Quarto personnel.
 
 L’utilisation d’outils d’IA générative est permise, à condition d’être déclarée lorsque l’aide obtenue influence de manière significative le code, la documentation, l’analyse ou le livrable remis. L’étudiante ou l’étudiant doit documenter l’usage dans `docs/ai-log.md` ou dans la section prévue à cet effet. Le travail remis doit être compris, vérifié, adapté au contexte du projet et défendable. Le fait de remettre du code ou du texte non compris, non vérifié ou non déclaré peut être pénalisé.
+
+Pour le défi 2, `docs/ai-log.md` est obligatoire même sans IA, selon les trois rubriques des [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd). L'usage déclaré et le non-usage sont évalués avec le même barème. Déclarer aussi une aide d'IA à la compréhension des données avant la séance si elle influence la remise. L'entretien se déroule sans IA.
 
 ### IA intégrée
 

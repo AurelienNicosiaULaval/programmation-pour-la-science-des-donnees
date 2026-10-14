@@ -104,7 +104,7 @@ format:
 <th scope="row"><span class="week-label">S8</span><time datetime="2026-10-21">19 au 25 oct.</time></th>
 <td><span class="calendar-date">19 oct.</span><span class="event event--prepare">Réviser graphiques, rapports et validation.</span></td>
 <td><span class="calendar-date">20 oct.</span><span class="event event--prepare">Préparer le défi. Aucun mini-test à remettre.</span></td>
-<td><span class="calendar-date">21 oct.</span><span class="event event--challenge">S8 · Défi technique 2 et consolidation.</span><span class="event event--milestone">Défi 2 · 10 % · IA permise et déclarée.</span></td>
+<td><span class="calendar-date">21 oct.</span><span class="event event--challenge">S8 · Défi 2 de 13 h 30 à 14 h 30, puis entretiens.</span><span class="event event--milestone">10 % · IA permise, facultative et déclarée.</span></td>
 <td><span class="calendar-date">22 au 25 oct.</span><span class="event event--after">Après le défi, noter une validation ou une réflexion.</span><span class="event event--deadline">Mini-test 6 ouvre le 21 oct. à 16 h 20.</span></td>
 </tr>
 <tr class="semester-calendar__break">

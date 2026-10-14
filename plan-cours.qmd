@@ -69,7 +69,7 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 | 5 | Défi 1, puis graphiques en R | Défi individuel 1 h sans IA, puis reprise des systèmes graphiques |
 | 6 | Graphiques et bonnes pratiques | Produire et améliorer des figures lisibles; proposer le projet d'équipe |
 | 7 | Bonnes pratiques et Quarto, R Markdown en complément | Compiler un rapport reproductible court |
-| 8 | Défi 2, puis consolidation | Défi individuel 1 h avec IA déclarée, puis correction d'un cas analogue |
+| 8 | Défi 2, puis entretiens et consolidation | Défi individuel de 13 h 30 à 14 h 30, IA facultative et déclarée; entretien de 5 min après la remise; cas analogue après les entretiens |
 | 9 | Structures de contrôle et fonctions | Écrire des conditions, boucles et fonctions simples |
 | 10 | Fonctions, tests, exceptions et débogage | Transformer du code exploratoire en fonctions vérifiables |
 | 11 | Programmation orientée objet | Comprendre S3 et R6 et structurer un objet simple |
@@ -88,7 +88,7 @@ Le tableau suivant présente les composantes évaluées du cours.
 | Portfolio GitHub individuel | 20 % | Individuel cumulatif | Semaine 3: 4 points; semaine 9: 6 points; semaine 14: 10 points | Permise, déclarée |
 | Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6 et 12; remise finale et défense en semaine 14, pendant la séance du mercredi 9 décembre | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
-| Défi technique 2 | 10 % | Individuel en laboratoire, 1 h | Semaine 8 | Permise, déclarée |
+| Défi technique 2 | 10 % | Individuel, 1 h puis entretien de 5 min | Semaine 8, mercredi 21 octobre, travail et remise de 13 h 30 à 14 h 30 | Permise, facultative, déclarée |
 | Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
 | Site Quarto personnel | 10 % | Individuel | Semaine 15, mercredi 16 décembre à 23 h 55 | Permise, déclarée |
 | Total | 100 % |  |  |  |

@@ -8,6 +8,7 @@ project:
     - "gabarits/*.qmd"
     - "ressources/*.qmd"
     - "diaporamas/*.qmd"
+    - "diaporamas/preparation-defi-2/*.qmd"
     - "!modules/"
     - "!assets/documents/exemples-projet/"
     - "!assets/documents/exercices-consolidation/a2026/semaine-07/"
@@ -17,6 +18,7 @@ project:
     - assets/documents/defi-1/references-defi-1.zip
     - diaporamas/*.R
     - diaporamas/preparation-defi-2/entrainement.html
+    - diaporamas/preparation-defi-2/directives-preparation.pdf
 
 lang: fr
 

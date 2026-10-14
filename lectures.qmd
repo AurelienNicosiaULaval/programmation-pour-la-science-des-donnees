@@ -115,13 +115,15 @@ Matière: bonnes pratiques et rapports Quarto. R Markdown reste une ressource ad
 
 ## Semaine 8, 21 octobre {#semaine-08}
 
-Cette semaine permet de revoir les fiches suivantes.
+Préparer le défi 2 avec les [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd) et l'[entraînement distinct](diaporamas/preparation-defi-2/entrainement.html). Le travail et la remise ont lieu de 13 h 30 à 14 h 30, puis les entretiens de compréhension suivent la remise figée.
 
 ### Révision dans les notes de cours STT-4230 / STT-6230
 
 - [Prétraitement de données en R](https://stt4230.rbind.io/manipulation_donnees/pretraitement_donnees_r/).
 - [Graphiques avec ggplot2 en R](https://stt4230.rbind.io/communication_resultats/graphiques_ggplot2_r/).
-- [Rédaction de documents en R Markdown](https://stt4230.rbind.io/communication_resultats/redaction_r_markdown/).
+- [Bonnes pratiques et rapports Quarto](exercices/module-07-bonnes-pratiques-rmarkdown.qmd).
+
+Complément facultatif : [rédaction de documents en R Markdown](https://stt4230.rbind.io/communication_resultats/redaction_r_markdown/).
 
 ## Semaine 9, 4 novembre {#semaine-09}
 
