@@ -498,24 +498,6 @@ Le tableau contient `r nrow(seismes)` séismes.
 L'expression R entre accents graves est recalculée au rendu. Le texte reste cohérent si le nombre de lignes change.
 :::
 
-## Un résultat, puis une interprétation {#interpretation}
-
-::: lead
-La classe `[4, 5[` représente `r pourcentage_4_5` % des événements du tableau.
-:::
-
-Cette phrase précise la classe, la valeur et le dénominateur.
-
-Pour l'interpréter :
-
-- rappeler que l'analyse est descriptive;
-- relier le texte aux effectifs du tableau et de la figure;
-- préciser ce que les données ne permettent pas de conclure.
-
-::: takeaway
-Un chiffre dynamique peut toujours soutenir une mauvaise conclusion. Le code ne remplace pas le raisonnement.
-:::
-
 ## Lire le HTML et refaire l'analyse {#portabilite}
 
 | Pour lire le résultat | Pour refaire les calculs |
