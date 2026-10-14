@@ -1,0 +1,201 @@
+---
+title: "Module 7 : bonnes pratiques et Quarto"
+subtitle: "Exercices de laboratoire"
+lang: fr
+embed-resources: true
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+    code-copy: true
+execute:
+  eval: false
+---
+
+Le laboratoire part d'un script R qui fonctionne, mais qui est difficile à relire. Vous l'améliorerez, puis vous utiliserez ses calculs dans un rapport Quarto. Les pistes de correction sont à consulter après un premier essai.
+
+[Télécharger les fichiers du laboratoire, ZIP](fichiers-laboratoire-quarto.zip)
+
+## Avant de commencer
+
+Extraire le ZIP dans un dossier de travail. Il contient :
+
+```text
+laboratoire-quarto/
+  LIRE-MOI.md
+  script-a-reviser.R
+  rapport.qmd
+  donnees/
+    seismes-fidji.csv
+    SOURCES.md
+```
+
+Le CSV est une copie de `datasets::quakes`, fourni avec R. Une ligne correspond à un séisme près de Fidji. La variable `depth` donne sa profondeur en kilomètres. Le fichier `donnees/SOURCES.md` décrit les autres variables et la provenance.
+
+La question du laboratoire est descriptive : comment les événements de ce tableau se répartissent-ils entre les profondeurs inférieures à 300 km et les profondeurs de 300 km ou plus? Le seuil de 300 km est un choix pour l'exercice; il ne sert pas ici à établir un risque sismique.
+
+Les bibliothèques nécessaires sont `readr`, `dplyr`, `ggplot2` et `knitr`. Si une bibliothèque manque, l'installer une fois depuis la console avec `install.packages()`, puis la charger dans le code avec `library()`. Ne pas mettre les installations dans le rapport.
+
+## Exercice 1 : rendre un script lisible
+
+Ouvrir `script-a-reviser.R`. Pour l'exécuter, partir du dossier `laboratoire-quarto/`, qui contient le sous-dossier `donnees/`.
+
+```r
+library(readr);library(dplyr);library(ggplot2)
+a<-read_csv("donnees/seismes-fidji.csv",show_col_types=FALSE)
+b<-a|>mutate(classe=if_else(depth<300,"Moins de 300 km","300 km ou plus"))
+c<-b|>count(classe)
+d<-ggplot(c,aes(classe,n))+geom_col()
+d
+```
+
+1. Exécuter le script original et noter les effectifs obtenus.
+2. Enregistrer une copie personnelle nommée `analyse-profondeur.R`.
+3. Remplacer les noms `a`, `b`, `c` et `d` par des noms qui décrivent les objets. Aérer les appels et séparer l'importation, la préparation, le résumé et la figure.
+4. Ajouter un commentaire qui explique le choix des classes. Vérifier dans quelle classe tombe une profondeur exactement égale à 300 km.
+5. Donner des titres explicites aux axes et ordonner les deux classes de la plus faible profondeur à la plus forte.
+6. Ajouter deux contrôles : les profondeurs utilisées sont renseignées et la somme des effectifs correspond au nombre de lignes importées. Ne pas retirer des lignes pour faire passer un contrôle.
+7. Exécuter la nouvelle version et comparer ses effectifs à ceux de l'original. Expliquer une amélioration qui aide une autre personne à comprendre le script.
+
+<details>
+<summary>Piste de correction : organisation du script</summary>
+
+Une version possible conserve les mêmes calculs tout en nommant les étapes et les résultats.
+
+```r
+# Charger les bibliothèques
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+# Importer les données depuis le dossier de travail
+seismes <- read_csv("donnees/seismes-fidji.csv", show_col_types = FALSE)
+stopifnot(!anyNA(seismes$depth))
+
+# Le seuil de 300 km sépare les deux classes choisies pour cet exercice.
+# Une profondeur exactement égale au seuil appartient à la seconde classe.
+seismes_classes <- seismes |>
+  mutate(
+    classe_profondeur = factor(
+      if_else(depth < 300, "Moins de 300 km", "300 km ou plus"),
+      levels = c("Moins de 300 km", "300 km ou plus")
+    )
+  )
+
+# Résumer les effectifs sans modifier les données importées
+repartition_profondeur <- seismes_classes |>
+  count(classe_profondeur, name = "effectif", .drop = FALSE)
+
+stopifnot(sum(repartition_profondeur$effectif) == nrow(seismes))
+print(repartition_profondeur)
+
+# Représenter les effectifs avec des axes explicites
+figure_profondeur <- ggplot(
+  repartition_profondeur,
+  aes(x = classe_profondeur, y = effectif)
+) +
+  geom_col(fill = "#087d85", width = 0.65) +
+  labs(x = "Classe de profondeur", y = "Nombre de séismes") +
+  theme_minimal(base_size = 13)
+
+print(figure_profondeur)
+```
+
+Le contrôle sur les valeurs manquantes arrête ce script si son hypothèse n'est plus respectée. Il faut alors examiner les données et choisir un traitement explicite. Masquer le problème avec `na.rm = TRUE` ne remplace pas cette décision.
+
+</details>
+
+## Exercice 2 : comprendre les options Quarto
+
+Ouvrir `rapport.qmd` et produire une première version HTML avec le bouton Render de RStudio ou, depuis le dossier contenant le fichier, avec :
+
+```text
+quarto render rapport.qmd
+```
+
+Le gabarit contient un bloc de préparation et un tableau d'aperçu. Il compile avant vos modifications; il reste à construire l'analyse demandée.
+
+1. Repérer l'en-tête YAML, le bloc R de préparation, le bloc du tableau et le texte ordinaire.
+2. Dans le bloc `tbl-apercu`, essayer successivement `echo: false`, `eval: false` et `include: false`. Garder les autres options inchangées et refaire le rendu après chaque essai. Noter si le code est exécuté, si le code est visible et si le tableau est visible.
+3. Rétablir le bloc du tableau avant de continuer. Expliquer pourquoi `include: false` convient au bloc de préparation, mais ferait disparaître un tableau que l'on veut montrer.
+4. Désactiver puis réactiver `code-fold` dans l'en-tête HTML. Le calcul change-t-il? Quelle différence voit le lecteur?
+5. Un camarade veut cacher le code tout en montrant sa figure. Il propose `eval: false`. Choisir une option adaptée et justifier la réponse.
+
+<details>
+<summary>Piste de correction : exécution et affichage</summary>
+
+Ces effets supposent les autres options du gabarit inchangées et un bloc qui produit un résultat.
+
+| Option essayée | Code exécuté | Code dans le HTML | Résultat dans le HTML |
+| --- | --- | --- | --- |
+| `echo: false` | Oui | Caché | Visible |
+| `eval: false` | Non | Présent, repliable | Absent |
+| `include: false` | Oui | Caché | Caché |
+| `code-fold: true` avec les options initiales | Oui | Présent, repliable | Visible |
+
+`echo: false` convient pour afficher une figure sans son code. Le repli du code est un choix de lecture du HTML; il ne désactive pas l'exécution. Dans ces essais, le renvoi au tableau peut devenir incomplet si le tableau est supprimé du rendu. Rétablir ses options avant l'exercice suivant.
+
+</details>
+
+## Exercice 3 : produire un rapport reproductible
+
+Compléter `rapport.qmd` en reprenant votre travail personnel de l'exercice 1. Le rapport doit répondre à la question sur les deux classes de profondeur.
+
+1. Compléter le titre et l'auteur. Décrire en deux ou trois phrases la question, l'unité d'observation et la variable utilisée.
+2. Dans le bloc de préparation, calculer les classes, les effectifs et les pourcentages. Le dénominateur doit correspondre aux événements décrits. Contrôler la somme des effectifs et des proportions avant d'arrondir l'affichage.
+3. Remplacer le tableau d'aperçu par un tableau de répartition avec trois colonnes : classe de profondeur, effectif et pourcentage. Afficher les pourcentages à une décimale sans arrondir les valeurs utilisées dans les calculs.
+4. Ajouter une figure qui représente les mêmes classes et les mêmes effectifs. Indiquer la profondeur en kilomètres dans les classes et nommer l'axe des effectifs.
+5. Donner au tableau et à la figure une légende et un identifiant, puis les citer dans le texte. Ajouter un texte alternatif à la figure.
+6. Intégrer au moins un résultat calculé directement dans une phrase avec le code R en ligne. Ne pas recopier un pourcentage à la main.
+7. Rédiger une courte interprétation et une limite. Peut-on calculer un nombre annuel de séismes avec ce fichier? Vérifier ce que les variables permettent avant de répondre.
+
+<details>
+<summary>Aide : légendes, renvois et code en ligne</summary>
+
+Dans le bloc R du tableau, placer les options avant le code :
+
+```r
+#| label: tbl-profondeur
+#| tbl-cap: "Répartition des événements par classe de profondeur."
+```
+
+Pour la figure :
+
+```r
+#| label: fig-profondeur
+#| fig-cap: "Nombre de séismes par classe de profondeur."
+#| fig-alt: "À compléter pour décrire les barres et leur comparaison."
+```
+
+Dans une phrase ordinaire du fichier `.qmd`, écrire `@tbl-profondeur` ou `@fig-profondeur` pour créer le renvoi correspondant. Ces identifiants doivent être uniques dans le document.
+
+Un nombre calculé peut être inséré dans une phrase. Par exemple, avec l'objet `seismes` créé par la préparation :
+
+<pre>Le tableau contient &#96;r nrow(seismes)&#96; événements.</pre>
+
+Le bloc de préparation doit créer les objets utilisés plus loin. Garder ses contrôles même si le code et les messages de préparation ne sont pas affichés.
+
+</details>
+
+## Exercice 4 : vérifier et transmettre le travail
+
+1. Redémarrer R dans RStudio. Refaire le rendu complet sans exécuter au préalable des commandes dans la console. Vérifier que le document retrouve ses données et ses objets.
+2. Relire le HTML : unités, ordre des classes, total des effectifs, légendes, renvois, texte alternatif et cohérence entre phrase, tableau et figure. Examiner les avertissements du rendu plutôt que de les masquer systématiquement.
+3. Copier le dossier contenant le `.qmd` et `donnees/` dans un autre emplacement. Refaire le rendu depuis cette copie. Éviter les chemins absolus propres à votre ordinateur.
+4. Ouvrir le HTML final depuis un dossier qui ne contient pas le CSV. Distinguer les fichiers nécessaires pour lire le rapport de ceux nécessaires pour refaire les calculs. `embed-resources: true` intègre les ressources du HTML; il ne remplace pas les données et les bibliothèques utilisées par R.
+5. Montrer le rapport à un camarade. Lui demander de retrouver la question, un résultat et une limite, puis d'ouvrir le code associé au résultat.
+6. Conserver votre script, votre rapport et une courte note de vérification dans le dossier de la semaine 7 de votre portfolio. Ajouter un lien vers ces exercices; ne pas copier les énoncés ou les pistes de correction. Documenter les usages significatifs de l'IA selon les règles du cours.
+
+Le laboratoire est terminé lorsque le rapport compile depuis la copie, que ses résultats concordent et que le README explique ce qui a été produit et vérifié.
+
+## Pour continuer
+
+L'entraînement aux jointures du défi 2 est un exercice distinct, accessible dans la page du module 7. Les anciens exercices R Markdown sont additionnels et facultatifs.
+
+## Ressources
+
+- Équipe Quarto, [options d'exécution](https://quarto.org/docs/computations/execution-options.html), [renvois aux tableaux et figures](https://quarto.org/docs/authoring/cross-references.html) et [code en ligne](https://quarto.org/docs/computations/inline-code.html).
+- R Core Team, [documentation de quakes](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html). La copie utilisée et le dictionnaire sont décrits dans `donnees/SOURCES.md`.
+
+Matériel pédagogique du cours STT-4230 / STT-6230, Université Laval, sous licence CC BY-NC-SA 4.0, sauf indication contraire pour les données.

@@ -10,11 +10,13 @@ project:
     - "diaporamas/*.qmd"
     - "!modules/"
     - "!assets/documents/exemples-projet/"
+    - "!assets/documents/exercices-consolidation/a2026/semaine-07/"
   resources:
     - assets/documents/exercices-consolidation/**
     - assets/documents/exemples-projet/**
     - assets/documents/defi-1/references-defi-1.zip
     - diaporamas/*.R
+    - diaporamas/preparation-defi-2/entrainement.html
 
 lang: fr
 
@@ -50,7 +52,7 @@ website:
           href: exercices/module-04-pretraitement-donnees.qmd
         - text: "Modules 5 et 6 - Graphiques en R"
           href: exercices/modules-05-06-graphiques-r.qmd
-        - text: "Module 7 - Bonnes pratiques et R Markdown"
+        - text: "Module 7 - Bonnes pratiques et Quarto"
           href: exercices/module-07-bonnes-pratiques-rmarkdown.qmd
         - text: "Module 9 - Contrôle, boucles et fonctions"
           href: exercices/module-09-controle-fonctions.qmd

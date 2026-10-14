@@ -98,17 +98,20 @@ Matière: graphiques en R et communication visuelle.
 
 ## Semaine 7, 14 octobre {#semaine-07}
 
-Matière: bonnes pratiques, R Markdown et transition vers Quarto.
+Matière: bonnes pratiques et rapports Quarto. R Markdown reste une ressource additionnelle.
 
 ### Notes de cours STT-4230 / STT-6230
 
 - [Bonnes pratiques en R](https://stt4230.rbind.io/amelioration_code/bonnes_pratiques_r/).
-- [Rédaction de documents en R Markdown](https://stt4230.rbind.io/communication_resultats/redaction_r_markdown/).
 
 ### Livre en accès libre
 
 - R for Data Science, chapitre 4, [Workflow: code style](https://r4ds.hadley.nz/workflow-style.html), sections 4.1 à 4.4.
 - R for Data Science, chapitre 28, [Quarto](https://r4ds.hadley.nz/quarto.html), sections 28.1 à 28.4.
+
+### Lecture additionnelle facultative
+
+- [Rédaction de documents en R Markdown](https://stt4230.rbind.io/communication_resultats/redaction_r_markdown/).
 
 ## Semaine 8, 21 octobre {#semaine-08}
 

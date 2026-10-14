@@ -61,9 +61,9 @@ Graphiques de base, annotations, sous-fenêtres et `ggplot2`.
 ::: {.exercise-module-card #semaine-07}
 ### Module 7
 
-#### Bonnes pratiques et R Markdown
+#### Bonnes pratiques et Quarto
 
-Style de programmation et reconstruction d’un document reproductible.
+Lisibilité du code, blocs R, rapport Quarto et vérification du rendu. Entraînement aux jointures et R Markdown en complément.
 
 [Voir les exercices du module 7](exercices/module-07-bonnes-pratiques-rmarkdown.qmd){.exercise-module-link}
 :::

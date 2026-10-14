@@ -1,0 +1,85 @@
+---
+title: "Mon rapport sur la profondeur des séismes"
+author: "Nom et IDUL à compléter"
+lang: fr
+embed-resources: true
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-summary: "Afficher le code"
+crossref:
+  tbl-title: "Tableau"
+  tbl-prefix: "tableau"
+  fig-title: "Figure"
+  fig-prefix: "figure"
+execute:
+  echo: true
+  message: false
+  warning: true
+  error: false
+  cache: false
+---
+
+```{r}
+#| label: preparation
+#| include: false
+
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+# Conserver le fichier .qmd et le dossier donnees/ ensemble.
+seismes <- read_csv("donnees/seismes-fidji.csv", show_col_types = FALSE)
+
+# Ces contrôles portent sur la variable utilisée dans le laboratoire.
+stopifnot(
+  "depth" %in% names(seismes),
+  is.numeric(seismes$depth),
+  nrow(seismes) > 0L,
+  !anyNA(seismes$depth)
+)
+
+# Ajouter ici vos calculs de classes, d'effectifs et de proportions.
+```
+
+## Question et données
+
+À compléter : présenter la question, l'unité d'observation et la profondeur en kilomètres.
+
+Le fichier importé contient `r nrow(seismes)` événements. Il est fourni avec le laboratoire; sa provenance et son dictionnaire sont dans `donnees/SOURCES.md`.
+
+## Préparation
+
+À compléter : expliquer les deux classes, le seuil de 300 km et les contrôles effectués.
+
+## Tableau
+
+Le @tbl-apercu montre les premières lignes. Remplacer cet aperçu par votre tableau de répartition, puis adapter le renvoi et la phrase.
+
+```{r}
+#| label: tbl-apercu
+#| tbl-cap: "Aperçu des observations importées, avec la profondeur en kilomètres."
+
+kable(head(seismes), digits = 2)
+```
+
+## Figure
+
+À compléter : ajouter un bloc R qui produit votre figure, sa légende et son texte alternatif. Faire ensuite un renvoi à la figure dans une phrase.
+
+## Interprétation et limite
+
+À compléter : insérer un résultat calculé avec le code R en ligne, l'interpréter et expliquer une limite du fichier.
+
+## Reproduction
+
+Pour refaire ce rapport, conserver le fichier `.qmd` et le dossier `donnees/` ensemble. Les bibliothèques utilisées sont `readr`, `dplyr`, `ggplot2` et `knitr`.
+
+```text
+quarto render rapport.qmd
+```
+
+À compléter : indiquer la vérification réalisée depuis une session propre et depuis une copie du dossier.

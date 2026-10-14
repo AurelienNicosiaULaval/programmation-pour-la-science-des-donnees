@@ -68,7 +68,7 @@ Développer la capacité à concevoir, programmer, documenter, tester et livrer 
 | 4 | Prétraitement des données | Transformer, nettoyer et vérifier des données |
 | 5 | Défi 1, puis graphiques en R | Défi individuel 1 h sans IA, puis reprise des systèmes graphiques |
 | 6 | Graphiques et bonnes pratiques | Produire et améliorer des figures lisibles; proposer le projet d'équipe |
-| 7 | Bonnes pratiques, R Markdown et Quarto | Compiler un rapport reproductible court |
+| 7 | Bonnes pratiques et Quarto, R Markdown en complément | Compiler un rapport reproductible court |
 | 8 | Défi 2, puis consolidation | Défi individuel 1 h avec IA déclarée, puis correction d'un cas analogue |
 | 9 | Structures de contrôle et fonctions | Écrire des conditions, boucles et fonctions simples |
 | 10 | Fonctions, tests, exceptions et débogage | Transformer du code exploratoire en fonctions vérifiables |

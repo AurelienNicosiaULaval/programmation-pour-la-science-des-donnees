@@ -1,6 +1,6 @@
 ---
-title: "Module 7 - Bonnes pratiques et R Markdown"
-subtitle: "Exercices de laboratoire et défi reproductible"
+title: "Module 7 - Bonnes pratiques et Quarto"
+subtitle: "Exercices de laboratoire, rapport reproductible et compléments"
 body-classes: page-exercises
 page-layout: full
 format:
@@ -11,26 +11,58 @@ format:
 
 {{< include ../includes/exercise-module-nav.md >}}
 
-Thèmes : style et bonnes pratiques de programmation, puis reconstruction d’un document reproductible à partir d’une sortie HTML.
+Le parcours principal porte sur la lisibilité du code R et la production d'un rapport Quarto reproductible. Commencer par les exercices ci-dessous, puis consulter les pistes de correction après avoir essayé.
+
+## Exercices principaux
+
+Les exercices suivent quatre étapes : améliorer un script, comprendre les options des blocs R, construire un rapport avec un tableau et une figure, puis vérifier le rendu depuis une session propre.
 
 <details class="exercise-document">
-<summary>Exercices de laboratoire corrigés</summary>
+<summary>Bonnes pratiques et Quarto : exercices de laboratoire</summary>
 <div class="exercise-frame">
-<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-07/exercices-laboratoire-corriges.html" title="Exercices de laboratoire corrigés sur les bonnes pratiques et R Markdown" loading="lazy"></iframe>
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/a2026/semaine-07/exercices-bonnes-pratiques-quarto.html" title="Exercices de laboratoire sur les bonnes pratiques en R et Quarto" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../assets/documents/exercices-consolidation/a2026/semaine-07/exercices-bonnes-pratiques-quarto.html" target="_blank" rel="noopener">Ouvrir les exercices principaux dans un nouvel onglet</a></p>
+</details>
+
+[Télécharger les fichiers du laboratoire Quarto, ZIP](../assets/documents/exercices-consolidation/a2026/semaine-07/fichiers-laboratoire-quarto.zip){.exercise-download}
+
+Le paquet contient le script à réviser, un gabarit `.qmd` qui compile, les données et leur provenance. Extraire les fichiers ensemble dans le dossier de la semaine 7 de votre portfolio. Conserver vos productions personnelles et un lien vers cette page, sans copier les énoncés ni les corrigés dans le portfolio.
+
+## Entraînement complémentaire au défi 2
+
+Cet exemple distinct et fictif permet de travailler les clés, les versions des tables, les jointures et la différence entre un montant nul et un montant inconnu. Il peut être repris après le parcours principal ou avant le défi.
+
+<details class="exercise-document">
+<summary>Jointures, versions et valeurs manquantes</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../diaporamas/preparation-defi-2/entrainement.html" title="Entraînement distinct au défi 2 sur les jointures et les valeurs manquantes" loading="lazy"></iframe>
+</div>
+<p class="exercise-open"><a href="../diaporamas/preparation-defi-2/entrainement.html" target="_blank" rel="noopener">Ouvrir l'entraînement au défi 2 dans un nouvel onglet</a></p>
+</details>
+
+## Exercices additionnels
+
+Les supports de l'ancienne édition restent disponibles pour aller plus loin. Les activités R Markdown sont facultatives; le rapport du parcours principal est réalisé avec Quarto.
+
+<details class="exercise-document">
+<summary>Ancien laboratoire de bonnes pratiques : exercices et solutions</summary>
+<div class="exercise-frame">
+<iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-07/exercices-laboratoire-corriges.html" title="Exercices additionnels corrigés sur les bonnes pratiques en R" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-07/exercices-laboratoire-corriges.html" target="_blank" rel="noopener">Ouvrir les exercices de laboratoire dans un nouvel onglet</a></p>
 </details>
 
 <details class="exercise-document">
-<summary>Défi R Markdown</summary>
+<summary>R Markdown : exercice additionnel de reconstruction d'un document</summary>
 <div class="exercise-frame">
 <iframe data-exercise-file="../assets/documents/exercices-consolidation/h2023/semaine-07/defi-r-markdown.html" title="Défi R Markdown" loading="lazy"></iframe>
 </div>
 <p class="exercise-open"><a href="../assets/documents/exercices-consolidation/h2023/semaine-07/defi-r-markdown.html" target="_blank" rel="noopener">Ouvrir le défi dans un nouvel onglet</a></p>
 </details>
 
-[Télécharger les fichiers du défi, ZIP](../assets/documents/exercices-consolidation/h2023/semaine-07/fichiers-donnees.zip){.exercise-download}
+[Télécharger les fichiers de l'exercice additionnel R Markdown, ZIP](../assets/documents/exercices-consolidation/h2023/semaine-07/fichiers-donnees.zip){.exercise-download}
 
-Le ZIP contient l’image `join.jpg`, le document à reproduire `merge.html` et sa source corrigée `merge.Rmd`.
+Ce second ZIP contient l’image `join.jpg`, le document à reproduire `merge.html` et sa source corrigée `merge.Rmd`.
 
 {{< include ../includes/exercise-loader.md >}}
