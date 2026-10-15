@@ -8,11 +8,11 @@ Ce document explique ce que représente une ligne dans chaque fichier, le sens d
 |---|---|---:|---:|
 | `observations_contre_tarifs.csv` | Des taux de surtaxe pour plusieurs périodes | 2774 | 19 |
 | `lots_essai.csv` | Trois lots fictifs | 3 | 4 |
-| `scenarios_essai.csv` | Une situation fictive associée à une date | 1 | 3 |
+| `scenarios_essai.csv` | Deux situations fictives : avant et après | 2 | 3 |
 
-Les lots et le scénario d'essai servent à comprendre les fichiers. À 13 h 30, vous recevrez `lots_importation.csv` et `scenarios.csv` pour l'épreuve. Ces fichiers auront les mêmes colonnes, avec d'autres lignes et d'autres valeurs.
+Les lots et les deux scénarios d'essai servent à comprendre les fichiers. À 13 h 30, vous recevrez `lots_importation.csv` et `scenarios.csv` pour l'épreuve. Ces fichiers auront les mêmes colonnes, avec d'autres lignes et d'autres valeurs.
 
-Les taux proviennent du ministère des Finances du Canada, à partir des données préparées par Données bleues. Les lots d'essai, leurs valeurs et le scénario d'essai sont fictifs. La provenance et les conditions de réutilisation sont précisées dans `SOURCE.md` et `DATA_LICENSE.md`.
+Les taux proviennent du ministère des Finances du Canada, à partir des données préparées par Données bleues. Les lots d'essai, leurs valeurs et les deux scénarios d'essai sont fictifs. La provenance et les conditions de réutilisation sont précisées dans `SOURCE.md` et `DATA_LICENSE.md`.
 
 ## Formats et unités
 
@@ -24,13 +24,13 @@ Les taux proviennent du ministère des Finances du Canada, à partir des donnée
 
 ## Le fichier des taux : `observations_contre_tarifs.csv`
 
-Le fichier réunit trois tableaux correspondant à des périodes différentes. La colonne `source_table` indique de quel tableau vient chaque ligne.
+Le fichier rassemble des taux pour plusieurs périodes. La colonne `source_table` est le repère fourni pour associer une ligne de taux à un scénario daté.
 
-Une ligne décrit un code tarifaire dans un tableau donné. Un même code peut apparaître dans plusieurs tableaux. Le nombre de lignes n'est donc pas le nombre de codes distincts.
+Une ligne décrit un code tarifaire pour une période donnée. Un même code peut apparaître à plusieurs périodes. Le nombre de lignes n'est donc pas le nombre de codes distincts.
 
 | Colonne | Signification |
 |---|---|
-| `source_table` | Identifiant du tableau : `1`, `2` ou `3` |
+| `source_table` | Repère des taux à utiliser pour un scénario daté |
 | `code_tarifaire` | Code tarifaire canadien à huit chiffres, à conserver comme texte |
 | `taux_surtaxe_pourcent` | Taux de surtaxe indiqué dans ce tableau, en pourcentage |
 | `description_source` | Description de la marchandise dans la source |
@@ -69,12 +69,12 @@ Les codes sont déjà fournis. Vous n'avez pas à classer les marchandises vous-
 
 ## Les scénarios : `scenarios_essai.csv`, puis `scenarios.csv`
 
-Un scénario décrit une situation à une date donnée et indique le tableau des taux qui lui est associé. Chaque ligne représente un scénario.
+Un scénario est une situation à une date donnée. Le fichier d'essai a deux lignes : `avant_exemple` au 20 août 2025 et `apres_exemple` au 10 septembre 2025. On applique ces deux situations aux mêmes lots, avec les mêmes valeurs.
 
 | Colonne | Signification |
 |---|---|
-| `scenario` | Nom du scénario : `exemple` dans le fichier d'essai |
+| `scenario` | Nom de la situation : `avant_exemple` ou `apres_exemple` dans le fichier d'essai |
 | `date_reference` | Date associée au scénario |
-| `source_table` | Identifiant du tableau des taux associé à ce scénario |
+| `source_table` | Repère fourni pour retrouver les taux associés à la date du scénario |
 
-Le fichier d'essai utilise la date fictive du 20 août 2025 et le tableau `3`. Les dates et les tableaux de l'épreuve seront communiqués à 13 h 30.
+Les deux dates d'essai illustrent la comparaison avant/après. Les dates et les repères de l'épreuve seront communiqués à 13 h 30.

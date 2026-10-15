@@ -76,7 +76,7 @@ Les [directives de préparation](diaporamas/preparation-defi-2/directives-prepar
 
 ### Avant la séance : comprendre les fichiers et tester le projet
 
-Un dépôt GitHub privé vous sera attribué. Il contiendra le fichier des taux, trois lots d'essai, un scénario d'essai, le dictionnaire et le guide des données en PDF, HTML et QMD. Les lots et les scénarios de l'épreuve seront fournis à 13 h 30.
+Un dépôt GitHub privé vous sera attribué. Il contiendra le fichier des taux, trois lots d'essai, deux scénarios d'essai, avant et après, le dictionnaire et le guide des données en PDF, HTML et QMD. Les lots et les scénarios de l'épreuve seront fournis à 13 h 30.
 
 1. Clonez votre dépôt dans RStudio et ouvrez `defi-2.Rproj`.
 2. Lisez le [guide des données](diaporamas/preparation-defi-2/guide-donnees.html), aussi disponible en [PDF](diaporamas/preparation-defi-2/guide-donnees.pdf), puis le [dictionnaire des colonnes](diaporamas/preparation-defi-2/data/DICTIONNAIRE.md).
