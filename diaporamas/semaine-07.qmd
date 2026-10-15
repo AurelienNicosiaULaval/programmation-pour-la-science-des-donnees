@@ -615,7 +615,7 @@ Mercredi 21 octobre · 13 h 30 à 14 h 30<br>Travail individuel · 10 % du cours
 - Utiliser l'IA si vous le souhaitez, en déclarant son aide.
 
 ::: takeaway
-L'énoncé et le canevas Quarto sont donnés à 13 h 30. Le travail évalué commence à ce moment.
+Les vrais lots et scénarios, l'énoncé et le canevas Quarto sont donnés à 13 h 30. Le travail évalué commence à ce moment.
 :::
 
 ## Avant la séance : prendre en main le dépôt {#defi-2-depot}
@@ -626,7 +626,7 @@ L'énoncé et le canevas Quarto sont donnés à 13 h 30. Le travail évalué com
 - Se familiariser avec les données; le code et le rapport évalués seront rédigés pendant le défi.
 
 ::: takeaway
-Le dépôt anticipé contient les données et leurs explications, sans énoncé ni gabarit d'analyse.
+Le dépôt anticipé contient les tableaux tarifaires, des fichiers d'essai et un guide des données. Les fichiers de l'épreuve sont fournis à 13 h 30.
 :::
 
 ## IA : une trace précise de l'aide reçue {#defi-2-ia}

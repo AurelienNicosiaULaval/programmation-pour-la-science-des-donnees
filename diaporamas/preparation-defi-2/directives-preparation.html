@@ -2179,7 +2179,7 @@ vertical-align: -.125em;
   <li><a href="#grille" id="toc-grille" class="nav-link" data-scroll-target="#grille">Grille</a></li>
   <li><a href="#avant-la-séance" id="toc-avant-la-séance" class="nav-link" data-scroll-target="#avant-la-séance">Avant la séance</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="directives-preparation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -2206,7 +2206,7 @@ vertical-align: -.125em;
 <section id="cadre" class="level2">
 <h2 class="anchored" data-anchor-id="cadre">Cadre</h2>
 <p>Le défi individuel aura lieu le mercredi 21 octobre 2026, de 13 h 30 à 14 h 30. Il dure 60 minutes et compte pour 10 % de la note du cours. Le rendu du rapport, le commit, le push et la remise sont compris dans cette heure. L’IA est permise, facultative et doit être déclarée si vous l’utilisez.</p>
-<p>Vous devrez écrire un script R, produire une figure et compléter un court rapport Quarto. Le dépôt et les données sont fournis avant la séance. L’énoncé et le canevas QMD seront distribués à 13 h 30; le canevas contiendra les sections à compléter et la proposition de code à examiner.</p>
+<p>Vous devrez écrire un script R, produire une figure et compléter un court rapport Quarto. Le dépôt anticipé contient les tableaux tarifaires documentaires, des fichiers d’essai et un guide de lecture avec le dictionnaire des données. Les lots et les scénarios exacts à analyser, l’énoncé et le canevas QMD seront distribués à 13 h 30; le canevas contiendra les sections à compléter et la proposition de code à examiner.</p>
 <p>Le thème est celui des tarifs douaniers. Vous travaillerez avec des taux documentaires préparés par Données bleues et une commande fictive. Il faudra choisir les bonnes périodes, associer les fichiers avec les bonnes clés, calculer des montants simulés et vérifier une proposition de code.</p>
 </section>
 <section id="à-réviser" class="level2">
@@ -2284,15 +2284,15 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="avant-la-séance">Avant la séance</h2>
 <p>Utiliser le dépôt GitHub privé attribué par l’équipe enseignante. Avant la séance :</p>
 <ul>
-<li>cloner le dépôt, ouvrir <code>defi-2.Rproj</code> et lire les trois CSV ainsi que leurs explications;</li>
+<li>cloner le dépôt, ouvrir <code>defi-2.Rproj</code>, lire le guide PDF et le dictionnaire, puis ouvrir les tableaux tarifaires et les fichiers <code>lots_essai.csv</code> et <code>scenarios_essai.csv</code>;</li>
 <li>vérifier R et les bibliothèques <code>readr</code>, <code>dplyr</code>, <code>stringr</code>, <code>tidyr</code>, <code>ggplot2</code> et <code>knitr</code> avec le script de vérification fourni;</li>
 <li>tester un commit suivi d’un push;</li>
-<li>tester le rendu Quarto HTML dans un dossier distinct, par exemple avec l’exercice d’entraînement;</li>
+<li>tester le rendu HTML de <code>guide-donnees.qmd</code> dans le projet; le PDF est déjà fourni et LaTeX n’est pas nécessaire pour produire le HTML;</li>
 <li>signaler tout problème avant la séance.</li>
 </ul>
-<p>Cette préparation porte sur la familiarisation avec les données et la vérification technique. La rédaction du code ou du rapport évalués commence à 13 h 30. Les dossiers de travail du dépôt sont vides; aucun script d’analyse ni canevas de rapport n’est fourni à l’avance. Déclarer aussi toute aide d’IA à la compréhension des données avant la séance si elle influence la remise.</p>
+<p>Cette préparation porte sur la familiarisation avec les données et la vérification technique. La rédaction du code ou du rapport évalués commence à 13 h 30. Les dossiers de travail du dépôt sont vides. Le QMD du guide explique les données; le canevas du rapport évalué et la proposition de code à examiner restent réservés à 13 h 30. Déclarer aussi toute aide d’IA à la compréhension des données avant la séance si elle influence la remise.</p>
 <p>L’entraînement fourni est un exercice distinct. Vous pouvez le réaliser pour réviser les notions; il ne constitue pas une partie du travail évalué.</p>
-<p>À 13 h 30, enregistrer le QMD reçu à la racine du projet déjà prêt. Écrire le script d’analyse et compléter le rapport pendant l’épreuve. Vous pouvez consulter vos notes personnelles, le site du cours et la documentation officielle. Le travail reste individuel.</p>
+<p>À 13 h 30, décompresser le paquet de départ et copier son contenu à la racine du projet déjà prêt, en conservant le dossier <code>data/</code>. Il ajoute <code>data/lots_importation.csv</code>, <code>data/scenarios.csv</code>, l’énoncé et <code>rapport-defi-2.qmd</code>, sans remplacer les fichiers d’essai ni demander de fusion Git. Écrire le script d’analyse et compléter le rapport pendant l’épreuve. Vous pouvez consulter vos notes personnelles, le site du cours et la documentation officielle. Le travail reste individuel.</p>
 <p>Avant 14 h 30, rendre le rapport, faire le commit final et le push, puis remettre l’adresse du dépôt et le SHA complet, c’est-à-dire l’identifiant du commit final, dans le canal annoncé. À 14 h 30, arrêter les modifications. En cas d’incident GitHub, le signaler avant l’échéance; la procédure de secours porte uniquement sur les fichiers déjà figés.</p>
 <p>La salle, le canal de remise et les heures d’entretien seront annoncés avant la séance.</p>
 <p>Sources : <a href="https://donneesbleues.ca/datasets/tarifs-douaniers-quebec/fiche.html">Données bleues, tarifs douaniers</a>; <a href="https://www.enseigner.ulaval.ca/pedagogie/strategie-devaluation/evaluation-des-apprentissages-lapproche-des-deux-voies">Université Laval, approche des deux voies</a>, consultées le 13 octobre 2026.</p>

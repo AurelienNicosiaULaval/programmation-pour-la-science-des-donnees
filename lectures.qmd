@@ -115,7 +115,7 @@ Matière: bonnes pratiques et rapports Quarto. R Markdown reste une ressource ad
 
 ## Semaine 8, 21 octobre {#semaine-08}
 
-Préparer le défi 2 avec les [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd) et l'[entraînement distinct](diaporamas/preparation-defi-2/entrainement.html). Le travail et la remise ont lieu de 13 h 30 à 14 h 30, puis les entretiens de compréhension suivent la remise figée.
+Préparer le défi 2 avec les [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd), le [guide de lecture des données](diaporamas/preparation-defi-2/guide-donnees.html) et l'[entraînement distinct](diaporamas/preparation-defi-2/entrainement.html). Les fichiers d'essai permettent de comprendre les colonnes; les vrais lots et scénarios seront fournis à 13 h 30. Le travail et la remise ont lieu de 13 h 30 à 14 h 30, puis les entretiens de compréhension suivent la remise figée.
 
 ### Révision dans les notes de cours STT-4230 / STT-6230
 

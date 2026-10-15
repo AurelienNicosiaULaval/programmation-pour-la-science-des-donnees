@@ -37,7 +37,7 @@ Les ateliers suivants font partie des modules du cours, mais ne sont pas des év
 | Règle IA | Oui | Confirmée avant le départ du temps évalué |
 | Famille de livrables | Code, documentation et vérification; noms des fichiers du défi 2 précisés ci-dessous | Structure du rapport et consignes de travail |
 | Critères | Oui, dans la grille commune | Adaptation des indicateurs à la tâche précise |
-| Données | Pour le défi 2 : dépôt privé, CSV et explications accessibles à l'avance; pour les autres défis, selon leurs directives | Rappel des fichiers à utiliser |
+| Données | Pour le défi 2 : tableaux tarifaires documentaires, fichiers d'essai, dictionnaire et guide; pour les autres défis, selon leurs directives | Pour le défi 2 : lots et scénarios exacts à analyser à 13 h 30 |
 | Énoncé et code à examiner | Compétences et modalités seulement | Pour le défi 2 : énoncé et canevas QMD avec la proposition de code à 13 h 30 |
 | Canal de remise | Indiqué par l'équipe enseignante avant la séance | Vérifié pendant la mise en place |
 
@@ -74,15 +74,19 @@ Lire les [directives de préparation](diaporamas/preparation-defi-2/directives-p
 
 Le thème est celui des tarifs douaniers, avec des taux documentaires et une commande fictive. Les compétences évaluées sont l'importation contrôlée, le choix des périodes, les jointures, les valeurs manquantes, la vérification d'une proposition de code, une figure et un court rapport Quarto. Aucune expertise juridique n'est nécessaire.
 
-### Avant la séance : dépôt et données
+### Avant la séance : comprendre les données et tester les outils
 
-L'équipe enseignante attribue un dépôt GitHub privé contenant les données, leurs explications et un script de vérification technique. Avant le défi, cloner ce dépôt, ouvrir `defi-2.Rproj`, lire les fichiers et vérifier l'environnement ainsi qu'un commit suivi d'un push. Tester le rendu Quarto avec l'entraînement dans un dossier distinct.
+L'équipe enseignante attribue un dépôt GitHub privé contenant les tableaux tarifaires documentaires, trois lots fictifs dans `lots_essai.csv`, un scénario fictif dans `scenarios_essai.csv`, le dictionnaire, un guide PDF/HTML avec son QMD et un script de vérification technique. Les lots et scénarios exacts de l'épreuve sont réservés à 13 h 30.
+
+Lire le [guide de lecture des données](diaporamas/preparation-defi-2/guide-donnees.html), aussi disponible en [PDF](diaporamas/preparation-defi-2/guide-donnees.pdf), et le [dictionnaire des colonnes](diaporamas/preparation-defi-2/data/DICTIONNAIRE.md). Avant le défi, cloner le dépôt, ouvrir `defi-2.Rproj`, lire les fichiers et vérifier l'environnement ainsi qu'un commit suivi d'un push. Le QMD du guide permet de tester le rendu HTML dans ce même projet.
 
 Cette préparation sert à se familiariser avec les données et à vérifier les outils. La rédaction du code et du rapport évalués commence à 13 h 30. Une aide d'IA à la compréhension des données doit être déclarée si elle influence la remise.
 
 ### À 13 h 30 : début du travail évalué
 
-L'énoncé et le canevas `rapport-defi-2.qmd` sont distribués à 13 h 30. Le canevas contient les sections à compléter et la proposition de code à examiner. L'enregistrer à la racine du projet déjà prêt. Écrire le script d'analyse pendant l'épreuve et conserver les données brutes sans modification.
+À 13 h 30, un paquet de départ fournit `lots_importation.csv`, `scenarios.csv`, l'énoncé et le canevas `rapport-defi-2.qmd`. Décompresser le paquet et copier son contenu à la racine du projet déjà prêt, en conservant son dossier `data/`. Les vrais lots et scénarios s'ajoutent dans `data/`; le QMD s'ajoute à côté de `defi-2.Rproj`. Les fichiers d'essai restent distincts et ne servent pas au travail évalué. Aucun nouveau clonage ni aucune fusion Git n'est nécessaire.
+
+Le canevas contient les sections à compléter et la proposition de code à examiner. Écrire le script d'analyse pendant l'épreuve et conserver les données brutes sans modification.
 
 Vous pouvez consulter vos notes personnelles, le site du cours et la documentation officielle. Le travail doit être réalisé sans l'aide d'une autre personne. L'usage déclaré de l'IA et le non-usage sont évalués avec le même barème; aucun abonnement payant n'est requis.
 

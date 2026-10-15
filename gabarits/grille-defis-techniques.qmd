@@ -5,7 +5,7 @@ embed-resources: true
 
 Chaque défi technique est évalué sur 10 points. Le défi 1 comporte cinq critères; les défis 2 et 3 ajoutent un critère relatif à leur usage autorisé de l'IA.
 
-Les énoncés évalués sont distribués au début des épreuves. Pour le défi 2, les données et leurs explications sont accessibles à l'avance dans le dépôt privé attribué; l'énoncé et le canevas QMD sont fournis à 13 h 30.
+Les énoncés évalués sont distribués au début des épreuves. Pour le défi 2, les tableaux tarifaires documentaires, les fichiers d'essai, leur dictionnaire et le guide sont accessibles à l'avance dans le dépôt privé attribué. Les vrais lots et scénarios, l'énoncé et le canevas QMD sont fournis à 13 h 30.
 
 ## Application au défi technique 1
 

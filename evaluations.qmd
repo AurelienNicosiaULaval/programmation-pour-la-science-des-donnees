@@ -32,7 +32,7 @@ Les trois défis techniques ne sont pas trois examens semblables. Ils ont trois 
 
 Directives publiques : [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd) et [Préparation au défi technique 2](diaporamas/preparation-defi-2/directives-preparation.qmd).
 
-Les énoncés évalués sont distribués au début des défis. Pour le défi 2, le dépôt privé, les données et leurs explications sont accessibles avant la séance pour la familiarisation et la vérification technique; l'énoncé et le canevas QMD avec le code à examiner sont fournis à 13 h 30.
+Les énoncés évalués sont distribués au début des défis. Pour le défi 2, le dépôt privé fournit avant la séance les tableaux tarifaires documentaires, des fichiers d'essai, un dictionnaire et un guide PDF/HTML avec son QMD pour comprendre les données et vérifier les outils. Les lots et les scénarios exacts à analyser, l'énoncé et le canevas QMD avec le code à examiner sont fournis à 13 h 30.
 
 Le défi 1 répond à la question suivante: est-ce que l’étudiante ou l’étudiant peut fonctionner seul dans un projet R propre?
 

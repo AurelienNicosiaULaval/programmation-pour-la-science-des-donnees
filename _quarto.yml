@@ -21,6 +21,9 @@ project:
     - diaporamas/donnees/SOURCES.md
     - diaporamas/preparation-defi-2/entrainement.html
     - diaporamas/preparation-defi-2/directives-preparation.pdf
+    - diaporamas/preparation-defi-2/guide-donnees.html
+    - diaporamas/preparation-defi-2/guide-donnees.pdf
+    - diaporamas/preparation-defi-2/data/DICTIONNAIRE.md
 
 lang: fr
 

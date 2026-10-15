@@ -16,7 +16,7 @@ execute:
 
 Le défi individuel aura lieu le mercredi 21 octobre 2026, de 13 h 30 à 14 h 30. Il dure 60 minutes et compte pour 10 % de la note du cours. Le rendu du rapport, le commit, le push et la remise sont compris dans cette heure. L'IA est permise, facultative et doit être déclarée si vous l'utilisez.
 
-Vous devrez écrire un script R, produire une figure et compléter un court rapport Quarto. Le dépôt et les données sont fournis avant la séance. L'énoncé et le canevas QMD seront distribués à 13 h 30; le canevas contiendra les sections à compléter et la proposition de code à examiner.
+Vous devrez écrire un script R, produire une figure et compléter un court rapport Quarto. Le dépôt anticipé contient les tableaux tarifaires documentaires, des fichiers d'essai et un guide de lecture avec le dictionnaire des données. Les lots et les scénarios exacts à analyser, l'énoncé et le canevas QMD seront distribués à 13 h 30; le canevas contiendra les sections à compléter et la proposition de code à examiner.
 
 Le thème est celui des tarifs douaniers. Vous travaillerez avec des taux documentaires préparés par Données bleues et une commande fictive. Il faudra choisir les bonnes périodes, associer les fichiers avec les bonnes clés, calculer des montants simulés et vérifier une proposition de code.
 
@@ -67,17 +67,17 @@ L'entretien compte pour 0,6 point sur les 10 du défi, dans le critère « Valid
 
 Utiliser le dépôt GitHub privé attribué par l'équipe enseignante. Avant la séance :
 
-- cloner le dépôt, ouvrir `defi-2.Rproj` et lire les trois CSV ainsi que leurs explications;
+- cloner le dépôt, ouvrir `defi-2.Rproj`, lire le guide PDF et le dictionnaire, puis ouvrir les tableaux tarifaires et les fichiers `lots_essai.csv` et `scenarios_essai.csv`;
 - vérifier R et les bibliothèques `readr`, `dplyr`, `stringr`, `tidyr`, `ggplot2` et `knitr` avec le script de vérification fourni;
 - tester un commit suivi d'un push;
-- tester le rendu Quarto HTML dans un dossier distinct, par exemple avec l'exercice d'entraînement;
+- tester le rendu HTML de `guide-donnees.qmd` dans le projet; le PDF est déjà fourni et LaTeX n'est pas nécessaire pour produire le HTML;
 - signaler tout problème avant la séance.
 
-Cette préparation porte sur la familiarisation avec les données et la vérification technique. La rédaction du code ou du rapport évalués commence à 13 h 30. Les dossiers de travail du dépôt sont vides; aucun script d'analyse ni canevas de rapport n'est fourni à l'avance. Déclarer aussi toute aide d'IA à la compréhension des données avant la séance si elle influence la remise.
+Cette préparation porte sur la familiarisation avec les données et la vérification technique. La rédaction du code ou du rapport évalués commence à 13 h 30. Les dossiers de travail du dépôt sont vides. Le QMD du guide explique les données; le canevas du rapport évalué et la proposition de code à examiner restent réservés à 13 h 30. Déclarer aussi toute aide d'IA à la compréhension des données avant la séance si elle influence la remise.
 
 L'entraînement fourni est un exercice distinct. Vous pouvez le réaliser pour réviser les notions; il ne constitue pas une partie du travail évalué.
 
-À 13 h 30, enregistrer le QMD reçu à la racine du projet déjà prêt. Écrire le script d'analyse et compléter le rapport pendant l'épreuve. Vous pouvez consulter vos notes personnelles, le site du cours et la documentation officielle. Le travail reste individuel.
+À 13 h 30, décompresser le paquet de départ et copier son contenu à la racine du projet déjà prêt, en conservant le dossier `data/`. Il ajoute `data/lots_importation.csv`, `data/scenarios.csv`, l'énoncé et `rapport-defi-2.qmd`, sans remplacer les fichiers d'essai ni demander de fusion Git. Écrire le script d'analyse et compléter le rapport pendant l'épreuve. Vous pouvez consulter vos notes personnelles, le site du cours et la documentation officielle. Le travail reste individuel.
 
 Avant 14 h 30, rendre le rapport, faire le commit final et le push, puis remettre l'adresse du dépôt et le SHA complet, c'est-à-dire l'identifiant du commit final, dans le canal annoncé. À 14 h 30, arrêter les modifications. En cas d'incident GitHub, le signaler avant l'échéance; la procédure de secours porte uniquement sur les fichiers déjà figés.
 
