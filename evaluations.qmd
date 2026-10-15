@@ -32,7 +32,7 @@ Les trois défis techniques ne sont pas trois examens semblables. Ils ont trois 
 
 Directives publiques : [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd) et [Préparation au défi technique 2](diaporamas/preparation-defi-2/directives-preparation.qmd).
 
-Les énoncés évalués sont distribués au début des défis. Pour le défi 2, le dépôt privé fournit avant la séance les tableaux tarifaires documentaires, des fichiers d'essai, un dictionnaire et un guide PDF/HTML avec son QMD pour comprendre les données et vérifier les outils. Les lots et les scénarios exacts à analyser, l'énoncé et le canevas QMD avec le code à examiner sont fournis à 13 h 30.
+Les énoncés évalués sont distribués au début des défis. Pour le défi 2, le dépôt privé est fourni avant la séance pour comprendre les données et vérifier les outils. Il contient le fichier des taux, des exemples de lots et de scénarios, un dictionnaire et un guide en PDF, HTML et QMD. Les lots et les scénarios de l'épreuve, l'énoncé et le rapport QMD à compléter seront fournis sur Brio à 13 h 30. Le dernier push doit être terminé avant 14 h 30; l'équipe enseignante récupère alors les dépôts directement sur GitHub.
 
 Le défi 1 répond à la question suivante: est-ce que l’étudiante ou l’étudiant peut fonctionner seul dans un projet R propre?
 
@@ -114,7 +114,7 @@ Cette règle s’applique au portfolio GitHub individuel, au projet filé en éq
 
 L’utilisation d’outils d’IA générative est permise, à condition d’être déclarée lorsque l’aide obtenue influence de manière significative le code, la documentation, l’analyse ou le livrable remis. L’étudiante ou l’étudiant doit documenter l’usage dans `docs/ai-log.md` ou dans la section prévue à cet effet. Le travail remis doit être compris, vérifié, adapté au contexte du projet et défendable. Le fait de remettre du code ou du texte non compris, non vérifié ou non déclaré peut être pénalisé.
 
-Pour le défi 2, `docs/ai-log.md` est obligatoire même sans IA, selon les trois rubriques des [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd). L'usage déclaré et le non-usage sont évalués avec le même barème. Déclarer aussi une aide d'IA à la compréhension des données avant la séance si elle influence la remise. L'entretien se déroule sans IA.
+Pour le défi 2, `docs/ai-log.md` est obligatoire même sans IA, selon les trois rubriques des [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd). L'usage déclaré et le non-usage sont évalués avec le même barème. Si une IA vous a aidé avant la séance à comprendre les données et que cette aide a servi dans votre travail, mentionnez-la dans `docs/ai-log.md` le jour du défi. L'entretien se déroule sans IA.
 
 ### IA intégrée
 

@@ -68,39 +68,57 @@ Après la remise, poursuivre avec les [graphiques en R](exercices/modules-05-06-
 
 ## Défi technique 2 {#defi-technique-2}
 
-Le défi 2 a lieu le mercredi 21 octobre 2026, de 13 h 30 à 14 h 30. Le travail est individuel et compte pour 10 % de la note du cours. Le rendu du rapport, le commit, le push et la remise sont compris dans les 60 minutes. L'IA est permise, facultative et déclarée.
+Le défi est individuel. Il aura lieu le mercredi 21 octobre 2026, de 13 h 30 à 14 h 30, et compte pour 10 % de la note du cours. Le travail et la remise doivent être terminés dans cette heure. L'IA est permise et facultative; son utilisation doit être déclarée.
 
-Lire les [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd), également disponibles en [PDF](diaporamas/preparation-defi-2/directives-preparation.pdf). Un [entraînement distinct sur les jointures et les valeurs manquantes](diaporamas/preparation-defi-2/entrainement.html) permet de réviser les notions.
+Vous travaillerez sur une commande fictive et des tarifs douaniers. Vous devrez lire les données, utiliser les tableaux correspondant aux périodes demandées, vérifier vos calculs et une proposition de code, puis produire une figure et un court rapport Quarto. Les règles de calcul seront fournies; aucune connaissance douanière n'est nécessaire.
 
-Le thème est celui des tarifs douaniers, avec des taux documentaires et une commande fictive. Les compétences évaluées sont l'importation contrôlée, le choix des périodes, les jointures, les valeurs manquantes, la vérification d'une proposition de code, une figure et un court rapport Quarto. Aucune expertise juridique n'est nécessaire.
+Les [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd), aussi disponibles en [PDF](diaporamas/preparation-defi-2/directives-preparation.pdf), présentent les modalités et les notions à réviser.
 
-### Avant la séance : comprendre les données et tester les outils
+### Avant la séance : comprendre les fichiers et tester le projet
 
-L'équipe enseignante attribue un dépôt GitHub privé contenant les tableaux tarifaires documentaires, trois lots fictifs dans `lots_essai.csv`, un scénario fictif dans `scenarios_essai.csv`, le dictionnaire, un guide PDF/HTML avec son QMD et un script de vérification technique. Les lots et scénarios exacts de l'épreuve sont réservés à 13 h 30.
+Un dépôt GitHub privé vous sera attribué. Il contiendra le fichier des taux, trois lots d'essai, un scénario d'essai, le dictionnaire et le guide des données en PDF, HTML et QMD. Les lots et les scénarios de l'épreuve seront fournis à 13 h 30.
 
-Lire le [guide de lecture des données](diaporamas/preparation-defi-2/guide-donnees.html), aussi disponible en [PDF](diaporamas/preparation-defi-2/guide-donnees.pdf), et le [dictionnaire des colonnes](diaporamas/preparation-defi-2/data/DICTIONNAIRE.md). Avant le défi, cloner le dépôt, ouvrir `defi-2.Rproj`, lire les fichiers et vérifier l'environnement ainsi qu'un commit suivi d'un push. Le QMD du guide permet de tester le rendu HTML dans ce même projet.
+1. Clonez votre dépôt dans RStudio et ouvrez `defi-2.Rproj`.
+2. Lisez le [guide des données](diaporamas/preparation-defi-2/guide-donnees.html), aussi disponible en [PDF](diaporamas/preparation-defi-2/guide-donnees.pdf), puis le [dictionnaire des colonnes](diaporamas/preparation-defi-2/data/DICTIONNAIRE.md).
+3. Lancez la vérification technique et testez le rendu HTML de `guide-donnees.qmd`, un commit et un push. Le README donne les étapes.
 
-Cette préparation sert à se familiariser avec les données et à vérifier les outils. La rédaction du code et du rapport évalués commence à 13 h 30. Une aide d'IA à la compréhension des données doit être déclarée si elle influence la remise.
+Cette préparation sert à comprendre les fichiers et à vérifier les outils. Le code et le rapport évalués doivent être rédigés pendant l'épreuve. Si une IA vous a aidé avant la séance à comprendre les données et que cette aide a servi dans votre travail, mentionnez-la dans `docs/ai-log.md` le jour du défi.
 
-### À 13 h 30 : début du travail évalué
+Un [exercice d'entraînement sur un autre exemple](diaporamas/preparation-defi-2/entrainement.html) permet de réviser les jointures et les valeurs manquantes.
 
-À 13 h 30, un paquet de départ fournit `lots_importation.csv`, `scenarios.csv`, l'énoncé et le canevas `rapport-defi-2.qmd`. Décompresser le paquet et copier son contenu à la racine du projet déjà prêt, en conservant son dossier `data/`. Les vrais lots et scénarios s'ajoutent dans `data/`; le QMD s'ajoute à côté de `defi-2.Rproj`. Les fichiers d'essai restent distincts et ne servent pas au travail évalué. Aucun nouveau clonage ni aucune fusion Git n'est nécessaire.
+### À 13 h 30 : installer les fichiers et commencer
 
-Le canevas contient les sections à compléter et la proposition de code à examiner. Écrire le script d'analyse pendant l'épreuve et conserver les données brutes sans modification.
+Ouvrez votre projet déjà testé. Téléchargez le ZIP sur Brio à 13 h 30. Décompressez-le hors de votre projet, par exemple dans Téléchargements, puis copiez les trois fichiers suivants un à un dans votre projet :
 
-Vous pouvez consulter vos notes personnelles, le site du cours et la documentation officielle. Le travail doit être réalisé sans l'aide d'une autre personne. L'usage déclaré de l'IA et le non-usage sont évalués avec le même barème; aucun abonnement payant n'est requis.
+| Dans le ZIP décompressé | Où copier le fichier dans votre projet |
+|---|---|
+| `data/lots_importation.csv` | Dans le dossier `data/` existant |
+| `data/scenarios.csv` | Dans le dossier `data/` existant |
+| `rapport-defi-2.qmd` | À côté de `defi-2.Rproj` |
 
-### Avant 14 h 30 : remise
+Ne remplacez pas le dossier `data/` de votre projet : il contient déjà le fichier des taux. Gardez aussi les fichiers d'essai. Lisez `consigne-defi-2.pdf` ou sa version HTML sans copier les fichiers `consigne-defi-2.*` dans le projet. Le fichier `rapport-defi-2.qmd` contient les sections à compléter et la proposition de code à examiner. Créez le dossier `docs/`, puis le fichier `docs/ai-log.md` pour votre déclaration.
 
-Le dépôt doit contenir les données d'origine et les fichiers suivants :
+Vous pouvez consulter vos notes, le site du cours, la documentation officielle et les autres sites Web, y compris les forums. Les outils d'IA sont permis et facultatifs. L'aide d'une autre personne, en classe ou à distance, est interdite. L'usage déclaré de l'IA et le non-usage sont évalués avec le même barème; aucun abonnement payant n'est requis.
 
-- `R/defi2.R` : importation, calculs et contrôles;
-- `rapport-defi-2.qmd` : rapport complété, appelant le script;
-- `rapport-defi-2.html` : rapport rendu;
-- `sorties/comparaison_lots.csv` : tableau exporté par le code;
-- `docs/ai-log.md` : déclaration d'usage ou de non-usage de l'IA.
+### Avant 14 h 30 : vérifier et transmettre le travail sur GitHub
 
-Faire le commit final et le push avant 14 h 30, puis remettre l'adresse du dépôt et le SHA complet, c'est-à-dire l'identifiant du commit final, dans le canal annoncé. À 14 h 30, arrêter toute modification. En cas d'incident GitHub, le signaler avant l'échéance; la procédure de secours porte sur les fichiers déjà figés et ne prolonge pas le travail.
+| Fichier à remettre | Contenu |
+|---|---|
+| `R/defi2.R` | Importation, calculs et contrôles |
+| `rapport-defi-2.qmd` | Rapport complété, qui appelle le script |
+| `rapport-defi-2.html` | Rapport généré par Quarto |
+| `sorties/comparaison_lots.csv` | Tableau exporté par le script |
+| `docs/ai-log.md` | Déclaration d'usage ou de non-usage de l'IA |
+
+Conservez aussi les données fournies.
+
+1. Générez le rapport HTML et ouvrez-le pour le vérifier.
+2. Faites le commit final et le push vers GitHub.
+3. Vérifiez sur GitHub que les fichiers et le commit final sont visibles.
+
+Ces étapes doivent être terminées avant 14 h 30. À 14 h 30, l'équipe enseignante récupère votre travail directement dans votre dépôt GitHub privé. La version évaluée est le dernier commit transmis par un push avant l'échéance.
+
+En cas de problème avec GitHub, levez la main avant 14 h 30. La personne surveillante vous indiquera comment lui remettre les fichiers déjà terminés. Cela ne donne pas de temps supplémentaire. À 14 h 30, arrêtez les modifications.
 
 ### Déclaration IA pour tous
 
@@ -118,7 +136,7 @@ Chaque personne passe un entretien de cinq minutes, avec son code et son rapport
 
 L'entretien compte pour 0,6 point sur les 10 du défi; les contrôles écrits comptent pour 0,4 point dans le même critère « Validation et explication ». La syntaxe par cœur et l'aisance orale ne sont pas notées. Un temps de réflexion est prévu et les accommodements reconnus s'appliquent. L'entretien évalue la compréhension, sans chercher à déterminer si une IA a été utilisée.
 
-La salle, le canal de remise et les créneaux d'entretien sont communiqués avant la séance. L'atelier et le retour sur l'exemple analogue commencent après le dernier entretien concerné. Le travail remis reste figé.
+La salle et les créneaux d'entretien sont communiqués avant la séance. L'atelier et le retour sur l'exemple analogue commencent après le dernier entretien concerné. Le travail remis reste figé.
 
 ## Défi technique 3 {#defi-technique-3}
 
@@ -146,7 +164,7 @@ Avant la séance, les étudiantes et étudiants connaissent les dimensions du di
 
 Ce tableau est indicatif. Pour le défi 1 du 30 septembre, les horaires précis de la [page de préparation](defis/preparation-defi-technique-1.qmd) s’appliquent : travail de 13 h 30 à 14 h 30, puis récupération jusqu’à 14 h 45.
 
-Pour le défi 2 du 21 octobre, suivre le [déroulement précisé ci-dessus](#defi-technique-2) : travail et remise de 13 h 30 à 14 h 30, puis entretiens. Les vérifications techniques ont lieu avant l'épreuve; la période de remise du tableau indicatif ne constitue pas un délai supplémentaire.
+Pour le défi 2 du 21 octobre, suivre le [déroulement précisé ci-dessus](#defi-technique-2) : travail et remise de 13 h 30 à 14 h 30, puis entretiens. Les vérifications techniques ont lieu avant l'épreuve. Pour le défi 2, le tableau indicatif ci-dessous ne s'applique pas : le dernier push doit être fait avant 14 h 30.
 
 | Moment | Activité | Rôle |
 |---:|---|---|
@@ -162,7 +180,7 @@ Pour le défi 2 du 21 octobre, suivre le [déroulement précisé ci-dessus](#def
 | Défi | Traces |
 |---|---|
 | Défi technique 1 | Dossier récupéré par l’enseignant, fichier brut, script R, résultats et README court, sans IA |
-| Défi technique 2 | Dépôt GitHub privé figé : script R, QMD, HTML, tableau CSV et `docs/ai-log.md` pour tous; URL et SHA final remis; entretien de compréhension |
+| Défi technique 2 | Dépôt GitHub privé figé : script R, QMD, HTML, tableau CSV et `docs/ai-log.md` pour tous; collecte par l’équipe enseignante sur GitHub à 14 h 30; entretien de compréhension |
 | Défi technique 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
 
 ## Critères communs

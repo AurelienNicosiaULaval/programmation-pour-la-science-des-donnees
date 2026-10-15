@@ -5,7 +5,7 @@ embed-resources: true
 
 Chaque défi technique est évalué sur 10 points. Le défi 1 comporte cinq critères; les défis 2 et 3 ajoutent un critère relatif à leur usage autorisé de l'IA.
 
-Les énoncés évalués sont distribués au début des épreuves. Pour le défi 2, les tableaux tarifaires documentaires, les fichiers d'essai, leur dictionnaire et le guide sont accessibles à l'avance dans le dépôt privé attribué. Les vrais lots et scénarios, l'énoncé et le canevas QMD sont fournis à 13 h 30.
+Les énoncés évalués sont distribués au début des épreuves. Pour le défi 2, le fichier des taux, les fichiers d'essai, leur dictionnaire et le guide sont accessibles à l'avance dans le dépôt privé attribué. Les vrais lots et scénarios, l'énoncé et le canevas QMD sont fournis à 13 h 30.
 
 ## Application au défi technique 1
 
@@ -44,7 +44,7 @@ Les six critères totalisent 10 points. Le critère « Validation et explication
 
 Le point relatif à l'IA porte sur la déclaration dans `docs/ai-log.md`, obligatoire même sans IA. L'usage déclaré et le non-usage donnent accès au même maximum. Le journal peut être court; suivre les trois rubriques des [directives de préparation](../diaporamas/preparation-defi-2/directives-preparation.qmd).
 
-Le rendu HTML, le commit, le push et la remise de l'adresse du dépôt et du SHA final sont compris dans les 60 minutes, de 13 h 30 à 14 h 30. L'entretien suit la remise figée; la syntaxe par cœur et l'aisance orale ne sont pas notées. Les [consignes du défi 2](../defis.qmd#defi-technique-2) précisent le déroulement.
+Le rendu HTML, le commit et le push doivent être terminés dans les 60 minutes, de 13 h 30 à 14 h 30. L'équipe enseignante récupère les dépôts sur GitHub à 14 h 30 et conserve les commits collectés. L'entretien suit la remise figée; la syntaxe par cœur et l'aisance orale ne sont pas notées. Les [consignes du défi 2](../defis.qmd#defi-technique-2) précisent le déroulement.
 
 ## Usage dans les défis de module
 

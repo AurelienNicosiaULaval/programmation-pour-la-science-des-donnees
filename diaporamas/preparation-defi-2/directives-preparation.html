@@ -2172,14 +2172,16 @@ vertical-align: -.125em;
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#cadre" id="toc-cadre" class="nav-link active" data-scroll-target="#cadre">Cadre</a></li>
-  <li><a href="#à-réviser" id="toc-à-réviser" class="nav-link" data-scroll-target="#à-réviser">À réviser</a></li>
+  <li><a href="#date-durée-et-travail-demandé" id="toc-date-durée-et-travail-demandé" class="nav-link active" data-scroll-target="#date-durée-et-travail-demandé">Date, durée et travail demandé</a></li>
+  <li><a href="#avant-la-séance-comprendre-les-fichiers-et-tester-le-projet" id="toc-avant-la-séance-comprendre-les-fichiers-et-tester-le-projet" class="nav-link" data-scroll-target="#avant-la-séance-comprendre-les-fichiers-et-tester-le-projet">Avant la séance : comprendre les fichiers et tester le projet</a></li>
+  <li><a href="#à-13-h-30-installer-les-fichiers-et-commencer" id="toc-à-13-h-30-installer-les-fichiers-et-commencer" class="nav-link" data-scroll-target="#à-13-h-30-installer-les-fichiers-et-commencer">À 13 h 30 : installer les fichiers et commencer</a></li>
+  <li><a href="#notions-à-réviser" id="toc-notions-à-réviser" class="nav-link" data-scroll-target="#notions-à-réviser">Notions à réviser</a></li>
   <li><a href="#ia-et-déclaration" id="toc-ia-et-déclaration" class="nav-link" data-scroll-target="#ia-et-déclaration">IA et déclaration</a></li>
-  <li><a href="#entretien-annoncé" id="toc-entretien-annoncé" class="nav-link" data-scroll-target="#entretien-annoncé">Entretien annoncé</a></li>
+  <li><a href="#avant-14-h-30-remettre-le-travail" id="toc-avant-14-h-30-remettre-le-travail" class="nav-link" data-scroll-target="#avant-14-h-30-remettre-le-travail">Avant 14 h 30 : remettre le travail</a></li>
+  <li><a href="#après-la-remise-entretien-de-cinq-minutes" id="toc-après-la-remise-entretien-de-cinq-minutes" class="nav-link" data-scroll-target="#après-la-remise-entretien-de-cinq-minutes">Après la remise : entretien de cinq minutes</a></li>
   <li><a href="#grille" id="toc-grille" class="nav-link" data-scroll-target="#grille">Grille</a></li>
-  <li><a href="#avant-la-séance" id="toc-avant-la-séance" class="nav-link" data-scroll-target="#avant-la-séance">Avant la séance</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="directives-preparation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="../directives-preparation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -2203,28 +2205,62 @@ vertical-align: -.125em;
 </header>
 
 
-<section id="cadre" class="level2">
-<h2 class="anchored" data-anchor-id="cadre">Cadre</h2>
-<p>Le défi individuel aura lieu le mercredi 21 octobre 2026, de 13 h 30 à 14 h 30. Il dure 60 minutes et compte pour 10 % de la note du cours. Le rendu du rapport, le commit, le push et la remise sont compris dans cette heure. L’IA est permise, facultative et doit être déclarée si vous l’utilisez.</p>
-<p>Vous devrez écrire un script R, produire une figure et compléter un court rapport Quarto. Le dépôt anticipé contient les tableaux tarifaires documentaires, des fichiers d’essai et un guide de lecture avec le dictionnaire des données. Les lots et les scénarios exacts à analyser, l’énoncé et le canevas QMD seront distribués à 13 h 30; le canevas contiendra les sections à compléter et la proposition de code à examiner.</p>
-<p>Le thème est celui des tarifs douaniers. Vous travaillerez avec des taux documentaires préparés par Données bleues et une commande fictive. Il faudra choisir les bonnes périodes, associer les fichiers avec les bonnes clés, calculer des montants simulés et vérifier une proposition de code.</p>
+<section id="date-durée-et-travail-demandé" class="level2">
+<h2 class="anchored" data-anchor-id="date-durée-et-travail-demandé">Date, durée et travail demandé</h2>
+<p>Défi individuel, le mercredi 21 octobre 2026, de 13 h 30 à 14 h 30, pour 10 % de la note du cours. Vous produirez un script R, une figure et un court rapport Quarto sur une commande fictive et des tarifs douaniers. Le rendu HTML, le commit, le push et la remise font partie de cette heure. L’IA est permise et facultative; son utilisation doit être déclarée.</p>
 </section>
-<section id="à-réviser" class="level2">
-<h2 class="anchored" data-anchor-id="à-réviser">À réviser</h2>
+<section id="avant-la-séance-comprendre-les-fichiers-et-tester-le-projet" class="level2">
+<h2 class="anchored" data-anchor-id="avant-la-séance-comprendre-les-fichiers-et-tester-le-projet">Avant la séance : comprendre les fichiers et tester le projet</h2>
+<p>Le dépôt privé attribué contient le fichier des taux, trois lots d’essai, un scénario d’essai, le guide et le dictionnaire. Les lots et les scénarios à analyser pendant le défi seront fournis à 13 h 30.</p>
+<ol type="1">
+<li>Clonez votre dépôt dans RStudio et ouvrez <code>defi-2.Rproj</code>.</li>
+<li>Lisez le guide et le dictionnaire, puis ouvrez les trois CSV.</li>
+<li>Suivez le README pour vérifier les outils et tester un rendu HTML, un commit et un push.</li>
+<li>Signalez les problèmes avant la séance.</li>
+</ol>
+<p><code>guide-donnees.qmd</code> sert à tester Quarto. Le code et le rapport évalués doivent être rédigés pendant l’épreuve.</p>
+</section>
+<section id="à-13-h-30-installer-les-fichiers-et-commencer" class="level2">
+<h2 class="anchored" data-anchor-id="à-13-h-30-installer-les-fichiers-et-commencer">À 13 h 30 : installer les fichiers et commencer</h2>
+<p>Ouvrez votre projet déjà testé. Téléchargez le ZIP sur Brio à 13 h 30. Décompressez-le hors de votre projet, par exemple dans Téléchargements, puis copiez les trois fichiers suivants un à un dans votre projet :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dans le ZIP décompressé</th>
+<th>Où copier le fichier dans votre projet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data/lots_importation.csv</code></td>
+<td>Dans le dossier <code>data/</code> existant</td>
+</tr>
+<tr class="even">
+<td><code>data/scenarios.csv</code></td>
+<td>Dans le dossier <code>data/</code> existant</td>
+</tr>
+<tr class="odd">
+<td><code>rapport-defi-2.qmd</code></td>
+<td>À côté de <code>defi-2.Rproj</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ne remplacez pas le dossier <code>data/</code> de votre projet : il contient déjà le fichier des taux. Gardez aussi les fichiers d’essai. Lisez <code>consigne-defi-2.pdf</code> ou sa version HTML sans copier les fichiers <code>consigne-defi-2.*</code> dans le projet. Ouvrez <code>rapport-defi-2.qmd</code>, qui contient les sections à compléter et le code à examiner. Écrivez votre script dans <code>R/defi2.R</code>. Créez le dossier <code>docs/</code>, puis le fichier <code>docs/ai-log.md</code> pour votre déclaration.</p>
+<p>Vous pouvez consulter vos notes, le site du cours, la documentation officielle et les autres sites Web, y compris les forums. Les outils d’IA sont permis et facultatifs. L’aide d’une autre personne, en classe ou à distance, est interdite.</p>
+</section>
+<section id="notions-à-réviser" class="level2">
+<h2 class="anchored" data-anchor-id="notions-à-réviser">Notions à réviser</h2>
 <ul>
-<li>Lire un CSV et conserver les identifiants et codes comme texte, y compris les zéros initiaux.</li>
-<li>Examiner les types de colonnes, les clés, les valeurs manquantes et les doublons.</li>
-<li>Filtrer un tableau et effectuer une jointure, avec <code>left_join()</code> ou un équivalent.</li>
-<li>Vérifier que la jointure produit le nombre de lignes attendu et conserve les observations.</li>
-<li>Créer des variables par <code>mutate()</code> et classer les résultats avec <code>case_when()</code> ou des équivalents.</li>
-<li>Produire une figure lisible avec unités, titres et légende.</li>
-<li>Rendre un rapport Quarto à partir des données brutes, avec des chemins relatifs, des valeurs calculées dans le texte et <code>embed-resources: true</code>.</li>
-<li>Écrire des contrôles exécutables simples.</li>
+<li>Importation : CSV, types de colonnes, codes conservés comme texte, valeurs manquantes et doublons.</li>
+<li>Manipulation : filtres, jointures, clés, vérification du nombre de lignes, <code>mutate()</code> et conditions (<code>case_when()</code> ou équivalent).</li>
+<li>Vérification et figure : contrôles en R; graphique avec titre, unités et légende.</li>
+<li>Quarto : chemins relatifs, valeurs calculées dans le texte, rendu HTML et <code>embed-resources: true</code>.</li>
 </ul>
-<p>Il n’est pas nécessaire d’écrire vos propres fonctions R, d’ajuster un modèle statistique ou d’effectuer une optimisation. Les formules et la correspondance entre les scénarios et les tableaux seront fournies. Le défi demande de vérifier les opérations et d’expliquer leurs conséquences.</p>
+<p>Les règles de calcul seront fournies. Vous n’avez pas à écrire vos propres fonctions R, à ajuster un modèle statistique ou à faire une optimisation. L’entraînement proposé porte sur un autre exemple.</p>
 </section>
 <section id="ia-et-déclaration" class="level2">
 <h2 class="anchored" data-anchor-id="ia-et-déclaration">IA et déclaration</h2>
+<p>Si une IA vous a aidé avant la séance à comprendre les données et que cette aide a servi dans votre travail, mentionnez-la dans <code>docs/ai-log.md</code> le jour du défi.</p>
 <p>Remettre <code>docs/ai-log.md</code>, même sans IA, avec trois rubriques :</p>
 <ol type="1">
 <li>Usage ou non-usage de l’IA. Indiquer les outils, les dates et les ressources utilisés, s’il y a lieu.</li>
@@ -2234,10 +2270,20 @@ vertical-align: -.125em;
 <p>Un résumé fidèle suffit. Ne pas inventer d’interactions ni de nom de modèle non affiché.</p>
 <p>L’usage déclaré et le non-usage sont admis avec le même barème. Aucun abonnement payant n’est requis. Ne pas transmettre votre nom, IDUL, identifiants ou conversations personnelles à un outil externe. Le journal ne demande pas l’historique complet de votre compte.</p>
 </section>
-<section id="entretien-annoncé" class="level2">
-<h2 class="anchored" data-anchor-id="entretien-annoncé">Entretien annoncé</h2>
-<p>Après la remise figée, chaque personne passe un entretien de cinq minutes, avec son code et son rapport visibles, sans IA ni aide extérieure. Il faut expliquer un passage choisi par l’équipe enseignante, prévoir l’effet d’une petite modification des données, puis faire ou décrire précisément l’adaptation du code et sa vérification.</p>
-<p>L’entretien compte pour 0,6 point sur les 10 du défi, dans le critère « Validation et explication ». La syntaxe par cœur et l’aisance orale ne sont pas notées. Un temps de réflexion est prévu; les accommodements reconnus s’appliquent. L’entretien évalue la compréhension du travail remis.</p>
+<section id="avant-14-h-30-remettre-le-travail" class="level2">
+<h2 class="anchored" data-anchor-id="avant-14-h-30-remettre-le-travail">Avant 14 h 30 : remettre le travail</h2>
+<ol type="1">
+<li>Générez le rapport HTML et ouvrez-le pour le vérifier.</li>
+<li>Faites le commit final et le push avant 14 h 30.</li>
+<li>Vérifiez sur GitHub que les fichiers du travail et le commit final sont visibles.</li>
+</ol>
+<p>À 14 h 30, l’équipe enseignante récupère votre travail directement dans votre dépôt GitHub privé. La version évaluée est le dernier commit transmis par un push avant l’échéance.</p>
+<p>En cas de problème avec GitHub, levez la main avant 14 h 30. La personne surveillante vous indiquera comment lui remettre les fichiers déjà terminés. Cela ne donne pas de temps supplémentaire. À 14 h 30, arrêtez les modifications.</p>
+</section>
+<section id="après-la-remise-entretien-de-cinq-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="après-la-remise-entretien-de-cinq-minutes">Après la remise : entretien de cinq minutes</h2>
+<p>Avec votre code et votre rapport visibles, sans IA ni aide extérieure : expliquez le passage de votre code qui associe les lots aux taux, prévoyez l’effet d’une petite modification, puis faites ou décrivez précisément l’adaptation du code et sa vérification.</p>
+<p>L’entretien évalue votre compréhension et vaut 0,6 point sur 10. La syntaxe par cœur et l’aisance orale ne sont pas notées. Un temps de réflexion est prévu; les accommodements reconnus s’appliquent.</p>
 </section>
 <section id="grille" class="level2">
 <h2 class="anchored" data-anchor-id="grille">Grille</h2>
@@ -2279,22 +2325,7 @@ vertical-align: -.125em;
 </tr>
 </tbody>
 </table>
-</section>
-<section id="avant-la-séance" class="level2">
-<h2 class="anchored" data-anchor-id="avant-la-séance">Avant la séance</h2>
-<p>Utiliser le dépôt GitHub privé attribué par l’équipe enseignante. Avant la séance :</p>
-<ul>
-<li>cloner le dépôt, ouvrir <code>defi-2.Rproj</code>, lire le guide PDF et le dictionnaire, puis ouvrir les tableaux tarifaires et les fichiers <code>lots_essai.csv</code> et <code>scenarios_essai.csv</code>;</li>
-<li>vérifier R et les bibliothèques <code>readr</code>, <code>dplyr</code>, <code>stringr</code>, <code>tidyr</code>, <code>ggplot2</code> et <code>knitr</code> avec le script de vérification fourni;</li>
-<li>tester un commit suivi d’un push;</li>
-<li>tester le rendu HTML de <code>guide-donnees.qmd</code> dans le projet; le PDF est déjà fourni et LaTeX n’est pas nécessaire pour produire le HTML;</li>
-<li>signaler tout problème avant la séance.</li>
-</ul>
-<p>Cette préparation porte sur la familiarisation avec les données et la vérification technique. La rédaction du code ou du rapport évalués commence à 13 h 30. Les dossiers de travail du dépôt sont vides. Le QMD du guide explique les données; le canevas du rapport évalué et la proposition de code à examiner restent réservés à 13 h 30. Déclarer aussi toute aide d’IA à la compréhension des données avant la séance si elle influence la remise.</p>
-<p>L’entraînement fourni est un exercice distinct. Vous pouvez le réaliser pour réviser les notions; il ne constitue pas une partie du travail évalué.</p>
-<p>À 13 h 30, décompresser le paquet de départ et copier son contenu à la racine du projet déjà prêt, en conservant le dossier <code>data/</code>. Il ajoute <code>data/lots_importation.csv</code>, <code>data/scenarios.csv</code>, l’énoncé et <code>rapport-defi-2.qmd</code>, sans remplacer les fichiers d’essai ni demander de fusion Git. Écrire le script d’analyse et compléter le rapport pendant l’épreuve. Vous pouvez consulter vos notes personnelles, le site du cours et la documentation officielle. Le travail reste individuel.</p>
-<p>Avant 14 h 30, rendre le rapport, faire le commit final et le push, puis remettre l’adresse du dépôt et le SHA complet, c’est-à-dire l’identifiant du commit final, dans le canal annoncé. À 14 h 30, arrêter les modifications. En cas d’incident GitHub, le signaler avant l’échéance; la procédure de secours porte uniquement sur les fichiers déjà figés.</p>
-<p>La salle, le canal de remise et les heures d’entretien seront annoncés avant la séance.</p>
+<p>La salle et les heures d’entretien seront annoncées avant la séance.</p>
 <p>Sources : <a href="https://donneesbleues.ca/datasets/tarifs-douaniers-quebec/fiche.html">Données bleues, tarifs douaniers</a>; <a href="https://www.enseigner.ulaval.ca/pedagogie/strategie-devaluation/evaluation-des-apprentissages-lapproche-des-deux-voies">Université Laval, approche des deux voies</a>, consultées le 13 octobre 2026.</p>
 </section>
 
