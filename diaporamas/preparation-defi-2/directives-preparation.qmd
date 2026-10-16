@@ -19,7 +19,7 @@ Défi individuel, le mercredi 21 octobre 2026, de 13 h 30 à 14 h 30, pour 10 % 
 
 ## Avant la séance : comprendre les fichiers et tester le projet
 
-Le dépôt privé attribué contient le fichier des taux, trois lots d'essai, deux scénarios d'essai, avant et après, le guide et le dictionnaire. Les lots et les scénarios à analyser pendant le défi seront fournis à 13 h 30.
+Le dépôt privé attribué contient le fichier des taux, trois lots d'essai, deux scénarios d'essai, avant et après, le guide, le dictionnaire et le modèle de déclaration `docs/ai-log.md`. Les lots et les scénarios à analyser pendant le défi seront fournis à 13 h 30.
 
 1. Clonez votre dépôt dans RStudio et ouvrez `defi-2.Rproj`.
 2. Lisez le guide et le dictionnaire, puis ouvrez les trois CSV.
@@ -38,7 +38,7 @@ Ouvrez votre projet déjà testé. Téléchargez le ZIP sur Brio à 13 h 30. Dé
 | `data/scenarios.csv` | Dans le dossier `data/` existant |
 | `rapport-defi-2.qmd` | À côté de `defi-2.Rproj` |
 
-Ne remplacez pas le dossier `data/` de votre projet : il contient déjà le fichier des taux. Gardez aussi les fichiers d'essai. Lisez `consigne-defi-2.pdf` ou sa version HTML sans copier les fichiers `consigne-defi-2.*` dans le projet. Ouvrez `rapport-defi-2.qmd`, qui contient les sections à compléter et le code à examiner. Écrivez votre script dans `R/defi2.R`. Créez le dossier `docs/`, puis le fichier `docs/ai-log.md` pour votre déclaration.
+Ne remplacez pas le dossier `data/` de votre projet : il contient déjà le fichier des taux. Gardez aussi les fichiers d'essai. Ouvrez `rapport-defi-2.qmd`, qui contient les sections à compléter et le code à examiner. Écrivez votre script dans `R/defi2.R`. Le dossier `docs/` et le modèle `docs/ai-log.md` sont déjà fournis dans votre dépôt. Complétez ce modèle pour déclarer votre usage ou votre non-usage de l’IA.
 
 Vous pouvez consulter vos notes, le site du cours, la documentation officielle et les autres sites Web, y compris les forums. Les outils d'IA sont permis et facultatifs. L'aide d'une autre personne, en classe ou à distance, est interdite.
 
@@ -55,7 +55,7 @@ Les règles de calcul seront fournies. Vous n'avez pas à écrire vos propres fo
 
 Si une IA vous a aidé avant la séance à comprendre les données et que cette aide a servi dans votre travail, mentionnez-la dans `docs/ai-log.md` le jour du défi.
 
-Remettre `docs/ai-log.md`, même sans IA, avec trois rubriques :
+Compléter le modèle `docs/ai-log.md` déjà présent dans votre dépôt, même sans IA. Ses trois rubriques sont :
 
 1. Usage ou non-usage de l'IA. Indiquer les outils, les dates et les ressources utilisés, s'il y a lieu.
 2. Si vous avez utilisé l'IA : décrire une à trois contributions significatives. Pour chacune, préciser le passage concerné, votre décision et la vérification effectuée. Sans IA, indiquer « Sans objet ».
@@ -73,7 +73,7 @@ L'usage déclaré et le non-usage sont admis avec le même barème. Aucun abonne
 
 À 14 h 30, l'équipe enseignante récupère votre travail directement dans votre dépôt GitHub privé. La version évaluée est le dernier commit transmis par un push avant l'échéance.
 
-En cas de problème avec GitHub, levez la main avant 14 h 30. La personne surveillante vous indiquera comment lui remettre les fichiers déjà terminés. Cela ne donne pas de temps supplémentaire. À 14 h 30, arrêtez les modifications.
+En cas de problème avec GitHub, levez la main avant 14 h 30. La personne enseignante vous indiquera comment lui remettre les fichiers déjà terminés. Cela ne donne pas de temps supplémentaire. À 14 h 30, arrêtez les modifications.
 
 ## Après la remise : entretien de cinq minutes
 
