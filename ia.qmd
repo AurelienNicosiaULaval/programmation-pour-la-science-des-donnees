@@ -87,6 +87,8 @@ Un gabarit est disponible dans [gabarits/declaration-ia.qmd](gabarits/declaratio
 
 ### Cas du défi technique 2
 
+Pour le défi 2, le modèle fourni dans le dépôt remplace la liste ci-dessus et le gabarit général. Indiquer tout usage dans la rubrique 1; seules les contributions significatives sont détaillées dans la rubrique 2.
+
 Pour le défi 2, compléter le modèle `docs/ai-log.md` déjà fourni, même sans IA, en suivant les trois rubriques des [directives de préparation](diaporamas/preparation-defi-2/directives-preparation.qmd) : usage ou non-usage; une à trois contributions significatives si IA; décision personnelle et attestation pour tous. Si une IA vous a aidé avant la séance à comprendre les données et que cette aide a servi dans votre travail, mentionnez-la dans `docs/ai-log.md` le jour du défi.
 
 L'IA est facultative et aucun abonnement payant n'est requis. L'usage déclaré et le non-usage sont évalués avec le même barème. Après la remise figée, l'entretien de cinq minutes se déroule sans IA ni aide extérieure; il évalue la compréhension du code, sans chercher à déterminer si une IA a été utilisée.

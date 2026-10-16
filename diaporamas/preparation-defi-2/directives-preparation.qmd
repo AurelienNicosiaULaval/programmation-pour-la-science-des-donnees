@@ -58,8 +58,8 @@ Si une IA vous a aidé avant la séance à comprendre les données et que cette 
 Compléter le modèle `docs/ai-log.md` déjà présent dans votre dépôt, même sans IA. Ses trois rubriques sont :
 
 1. Usage ou non-usage de l'IA. Indiquer les outils, les dates et les ressources utilisés, s'il y a lieu.
-2. Si vous avez utilisé l'IA : décrire une à trois contributions significatives. Pour chacune, préciser le passage concerné, votre décision et la vérification effectuée. Sans IA, indiquer « Sans objet ».
-3. Pour tous : expliquer une décision personnelle liée à un passage du travail et attester que la déclaration décrit les aides réellement reçues.
+2. Si vous avez utilisé l'IA : décrire une à trois contributions significatives. Pour chacune, préciser le passage concerné, ce que l’outil a proposé, votre décision et la vérification effectuée avec son résultat. Sans IA, indiquer « Sans objet ».
+3. Pour tous : expliquer une décision personnelle liée à un passage précis du travail, indiquer comment vous l’avez vérifiée, puis attester que la déclaration décrit les aides réellement reçues.
 
 Un résumé fidèle suffit. Ne pas inventer d'interactions ni de nom de modèle non affiché.
 

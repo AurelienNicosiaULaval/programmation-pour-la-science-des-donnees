@@ -60,7 +60,7 @@ Un lot est un ensemble de marchandises auquel on associe une valeur. Chaque lign
 
 | Colonne | Signification |
 |---|---|
-| `lot_id` | Identifiant du lot |
+| `lot_id` | Identifiant du lot. Deux lots distincts peuvent avoir le même `code_tarifaire`. |
 | `code_tarifaire` | Code du produit, fourni pour le lot et conservé comme texte |
 | `libelle_pedagogique` | Description simplifiée et fictive du lot |
 | `valeur_lot_cad` | Valeur fictive du lot, en dollars canadiens |

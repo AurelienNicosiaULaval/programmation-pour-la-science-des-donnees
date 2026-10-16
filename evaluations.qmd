@@ -182,6 +182,6 @@ La remise du site personnel doit inclure l’adresse GitHub Pages, l’adresse d
 
 ## Différenciation STT-4230 / STT-6230
 
-STT-4230 exige des livrables fonctionnels, reproductibles, bien structurés et documentés. STT-6230 ajoute une justification technique, une comparaison d’approches, des tests supplémentaires, une analyse de performance ou une note méthodologique courte selon le livrable.
+STT-4230 exige des livrables fonctionnels, reproductibles, bien structurés et documentés. STT-6230 ajoute une justification technique, une comparaison d’approches, des tests supplémentaires, une analyse de performance ou une note méthodologique courte selon le livrable. Pour le défi technique 2, les consignes et le barème sont les mêmes pour les deux sigles.
 
 Consulter aussi les pages [Portfolio individuel](portfolio.qmd), [Projets](projets.qmd), [Site Quarto personnel](site-personnel.qmd), [Défis techniques](defis.qmd), [Données autorisées](donnees.qmd), [Politique IA](ia.qmd) et [Présentation et revue du projet](presentation.qmd).

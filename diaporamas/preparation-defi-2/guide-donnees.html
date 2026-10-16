@@ -2270,16 +2270,19 @@ vertical-align: -.125em;
 <tr class="header">
 <th style="text-align: left;">Scénario</th>
 <th style="text-align: left;">Date de référence</th>
+<th style="text-align: left;">source_table à utiliser</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">avant_exemple</td>
 <td style="text-align: left;">2025-08-20</td>
+<td style="text-align: left;">3</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">apres_exemple</td>
 <td style="text-align: left;">2025-09-10</td>
+<td style="text-align: left;">2</td>
 </tr>
 </tbody>
 </table>
@@ -2295,7 +2298,7 @@ vertical-align: -.125em;
 </div>
 </div>
 </div>
-<p>Le code de l’aspirateur est présent dans la liste du 20 août, au taux de 25 %, et absent de celle du 10 septembre. Pour cette simulation, on attribue un taux de 0 % au produit absent de la liste à la date étudiée.</p>
+<p>Le 20 août, on cherche le code de l’aspirateur dans le tableau 3, indiqué par le scénario « avant » : il y figure, au taux de 25 %. Le 10 septembre, on le cherche dans le tableau 2, indiqué par le scénario « après » : il n’y figure pas. Pour cette simulation, on lui attribue alors un taux de 0 %.</p>
 <p>La surtaxe passe donc de 1 600 CAD à 0 CAD, alors que le lot vaut toujours 6 400 CAD. On compare ainsi deux situations tarifaires pour un même achat.</p>
 <div style="page-break-after: always;"></div>
 </section>
