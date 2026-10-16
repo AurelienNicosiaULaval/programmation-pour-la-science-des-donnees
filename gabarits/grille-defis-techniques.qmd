@@ -42,6 +42,8 @@ Les compétences, les modalités et les attentes sont précisées dans la [page 
 
 Les six critères totalisent 10 points. Le critère « Validation et explication » comprend 0,4 point pour les contrôles exécutables présentés dans le rapport et 0,6 point pour l'entretien de cinq minutes : explication du code (0,2), prédiction justifiée (0,2), adaptation et vérification (0,2).
 
+Vous pouvez choisir les tableaux en lisant `scenarios.csv` ou indiquer leurs numéros directement dans le code. Les deux méthodes sont acceptées. Dans le second cas, un commentaire doit expliquer le lien entre les numéros et les scénarios.
+
 Le point relatif à l'IA porte sur le modèle `docs/ai-log.md` déjà fourni, à compléter même sans IA. L'usage déclaré et le non-usage donnent accès au même maximum. Le journal peut être court; suivre les trois rubriques des [directives de préparation](../diaporamas/preparation-defi-2/directives-preparation.qmd).
 
 Le rendu HTML, le commit et le push doivent être terminés dans les 60 minutes, de 13 h 30 à 14 h 30. L'équipe enseignante récupère les dépôts sur GitHub à 14 h 30 et conserve les commits collectés. L'entretien suit la remise figée; la syntaxe par cœur et l'aisance orale ne sont pas notées. Les [consignes du défi 2](../defis.qmd#defi-technique-2) précisent le déroulement.

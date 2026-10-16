@@ -100,6 +100,8 @@ Ne remplacez pas le dossier `data/` de votre projet : il contient déjà le fich
 
 Vous pouvez consulter vos notes, le site du cours, la documentation officielle et les autres sites Web, y compris les forums. Les outils d'IA sont permis et facultatifs. L'aide d'une autre personne, en classe ou à distance, est interdite. L'usage déclaré de l'IA et le non-usage sont évalués avec le même barème; aucun abonnement payant n'est requis.
 
+Vous pouvez choisir les tableaux en lisant `scenarios.csv` ou indiquer leurs numéros directement dans le code. Les deux méthodes sont acceptées. Dans le second cas, un commentaire doit expliquer le lien entre les numéros et les scénarios.
+
 ### Avant 14 h 30 : vérifier et transmettre le travail sur GitHub
 
 | Fichier à remettre | Contenu |

@@ -49,6 +49,10 @@ Vous pouvez consulter vos notes, le site du cours, la documentation officielle e
 - Vérification et figure : contrôles en R; graphique avec titre, unités et légende.
 - Quarto : chemins relatifs, valeurs calculées dans le texte, rendu HTML et `embed-resources: true`.
 
+{{< pagebreak >}}
+
+Vous pouvez choisir les tableaux en lisant `scenarios.csv` ou indiquer leurs numéros directement dans le code. Les deux méthodes sont acceptées. Dans le second cas, un commentaire doit expliquer le lien entre les numéros et les scénarios.
+
 Les règles de calcul seront fournies. Vous n'avez pas à écrire vos propres fonctions R, à ajuster un modèle statistique ou à faire une optimisation. L'entraînement proposé porte sur un autre exemple.
 
 ## IA et déclaration
