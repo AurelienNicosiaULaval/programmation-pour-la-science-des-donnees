@@ -44,38 +44,15 @@ Le site doit être assez simple pour être maintenu après le cours. Il n’est 
 | Support | Site Quarto publié sur GitHub Pages et dépôt GitHub source |
 | IA | Permise, déclarée |
 
-## Ce qui doit être publié sur GitHub Pages
+## Créer et publier votre site {#ce-qui-doit-être-publié-sur-github-pages}
 
-Le site publié doit être un site Quarto consultable publiquement dans le navigateur. La méthode minimale recommandée pour le cours est:
+Créez vous-même un dépôt public dans votre compte GitHub, distinct du portfolio et du projet d’équipe. Si votre site est déjà commencé, poursuivez le dépôt existant.
 
-- créer un dépôt GitHub distinct pour le site personnel;
-- configurer Quarto pour rendre le site dans le dossier `docs/`;
-- publier le dossier `docs/` avec GitHub Pages;
-- vérifier l’adresse publique du site après publication.
+1. Récupérez le gabarit dans la [semaine 8 de Brio](https://www.brioeducation.ca/sites/ptmndbs906/modules/ptmndbs906-ohpafrz708/pages/ptmndbs906-ohpafrz710/) et placez son contenu à la racine du dépôt : `_quarto.yml` et `index.qmd` doivent s’y trouver directement. Conservez `.nojekyll`.
+2. Personnalisez le site, exécutez `quarto render`, puis poussez les sources et le dossier `docs/` sur GitHub. Le gabarit est déjà configuré pour produire ce dossier.
+3. Dans GitHub : *Settings → Pages → Deploy from a branch → main → /docs → Save*. Vérifiez ensuite que l’adresse publique ouvre bien votre site.
 
-Le site publié doit contenir au minimum:
-
-- une page d’accueil ou une page `À propos`;
-- une page `Parcours`, `CV` ou `Compétences`;
-- une page `Réalisations`;
-- une page ou section de déclaration IA lorsque pertinente.
-
-Le dépôt source doit contenir les fichiers Quarto du site, par exemple:
-
-```text
-site-personnel/
-  _quarto.yml
-  .nojekyll
-  index.qmd
-  parcours.qmd
-  realisations.qmd
-  declaration-ia.qmd
-  styles.css
-  README.md
-  docs/
-```
-
-Le dossier `docs/` contient le site rendu. Le fichier `.nojekyll` indique à GitHub Pages de publier les fichiers déjà rendus sans traitement Jekyll supplémentaire. Les fichiers sources `.qmd` restent nécessaires pour évaluer la structure et la reproductibilité du site.
+La fiche et le gabarit sont accessibles en tout temps dans la semaine 8 de Brio. Pour les mises à jour suivantes, rendez à nouveau le site et poussez les fichiers modifiés, y compris `docs/`.
 
 ## Contenu minimal
 
