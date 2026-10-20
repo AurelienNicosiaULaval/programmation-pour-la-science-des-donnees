@@ -9,6 +9,8 @@ Cette composante compte pour 10 % de la note finale. Elle est individuelle et re
 
 Grille détaillée: [Grille du site Quarto personnel](gabarits/grille-site-personnel.qmd).
 
+Fiche : [Poursuivre votre site personnel](ressources/poursuivre-site-personnel.qmd).
+
 Gabarit : [Télécharger le projet de démarrage (ZIP)](assets/documents/site-personnel/site-personnel-demarrage.zip).
 
 Structure du gabarit : [Template minimal de site Quarto personnel](gabarits/template-site-personnel.qmd).

@@ -1,0 +1,50 @@
+---
+title: "Poursuivre votre site Quarto personnel"
+subtitle: "STT-4230 / STT-6230 · Repères pour la suite"
+lang: fr
+embed-resources: true
+format:
+  html:
+    toc: true
+---
+
+Le site personnel est individuel et compte pour 10 % de la note du cours. La remise finale est fixée au mercredi 16 décembre 2026 à 23 h 55.
+
+## Ce que vous présentez
+
+Une vitrine courte avec votre présentation, votre parcours ou vos compétences, et au moins deux réalisations commentées : une issue du portfolio individuel, l'autre du projet d'équipe ou d'un module avancé. Le CV complet n'est pas obligatoire.
+
+Pour chaque réalisation : contexte, production, outils, vérification, compétence démontrée et limite ou amélioration. Ajoutez une justification technique; en STT-6230, approfondissez une dimension, par exemple une comparaison ou une validation supplémentaire.
+
+## Pour avancer dès maintenant
+
+1. Reprenez votre site existant si vous avez déjà commencé. Sinon, décompressez `site-personnel-demarrage.zip` dans un dossier distinct du portfolio, puis ouvrez `site-personnel.Rproj`.
+2. Personnalisez l'accueil et la page de parcours ou de compétences avec les informations que vous acceptez de rendre publiques.
+3. Choisissez une trace du portfolio qui peut être présentée publiquement. Rédigez son contexte, ce que vous avez produit et comment vous l'avez vérifié.
+4. Réservez la seconde réalisation au projet ou à un module avancé; complétez-la lorsque le travail correspondant est disponible.
+5. Lancez `quarto render` dans le terminal du dossier du site. Ouvrez `docs/index.html` et vérifiez les quatre pages et leur navigation.
+
+Ces étapes sont des repères de progression; elles n'ajoutent aucune remise intermédiaire.
+
+## Préparer la publication et la remise
+
+Utilisez un dépôt distinct pour le site. La méthode proposée rend le site dans `docs/`, puis publie ce dossier sur GitHub Pages. Le README du gabarit donne les étapes. Les sources QMD et le dossier rendu sont conservés dans le dépôt. Après publication, vérifiez l'adresse publique et chaque lien.
+
+Dans le README du site, indiquez l'adresse publique, le dépôt source, le commit à évaluer et l'emplacement des deux réalisations. Dans le portfolio, indiquez l'adresse du site et la trace reprise. Une trace privée peut être présentée sous une forme publique résumée sans exposer le dépôt original.
+
+## Confidentialité et IA
+
+Publiez seulement ce que vous êtes autorisé à partager. Écartez les renseignements personnels non souhaités, données non redistribuables, secrets, clés et documents d'évaluation réservés. Pour un travail d'équipe, assurez-vous que les éléments présentés peuvent être diffusés.
+
+Déclarez les usages significatifs de l'IA qui ont influencé le texte, la structure, le code ou le design. La page de déclaration fournie est à compléter fidèlement.
+
+## Télécharger le gabarit
+
+[Téléchargez le gabarit de démarrage (ZIP)](../assets/documents/site-personnel/site-personnel-demarrage.zip), accessible en tout temps sur le site du cours. Ouvrez le projet décompressé pour le personnaliser.
+
+## Consignes et grille de référence
+
+- [Consignes du site personnel](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/site-personnel.html).
+- [Grille d'évaluation sur 10 points](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/grille-site-personnel.html).
+- [Gabarit expliqué](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/template-site-personnel.html).
+- [Quarto, publication sur GitHub Pages](https://quarto.org/docs/publishing/github-pages.html), documentation officielle consultée le 20 octobre 2026.
