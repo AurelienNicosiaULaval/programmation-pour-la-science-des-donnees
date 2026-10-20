@@ -9,6 +9,8 @@ Ce template donne une structure minimale pour créer le site Quarto personnel. I
 
 La méthode minimale proposée ici publie le site rendu dans `docs/` avec GitHub Pages.
 
+[Télécharger le gabarit complet (ZIP)](../assets/documents/site-personnel/site-personnel-demarrage.zip).
+
 ## Structure minimale
 
 ```text

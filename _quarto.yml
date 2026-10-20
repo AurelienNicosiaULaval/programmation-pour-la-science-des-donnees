@@ -13,6 +13,7 @@ project:
     - "!assets/documents/exemples-projet/"
     - "!assets/documents/exercices-consolidation/a2026/semaine-07/"
   resources:
+    - assets/documents/site-personnel/site-personnel-demarrage.zip
     - assets/documents/exercices-consolidation/**
     - assets/documents/exemples-projet/**
     - assets/documents/defi-1/references-defi-1.zip

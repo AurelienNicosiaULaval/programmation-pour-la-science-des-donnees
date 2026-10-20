@@ -9,7 +9,9 @@ Cette composante compte pour 10 % de la note finale. Elle est individuelle et re
 
 Grille détaillée: [Grille du site Quarto personnel](gabarits/grille-site-personnel.qmd).
 
-Template minimal: [Template minimal de site Quarto personnel](gabarits/template-site-personnel.qmd).
+Gabarit : [Télécharger le projet de démarrage (ZIP)](assets/documents/site-personnel/site-personnel-demarrage.zip).
+
+Structure du gabarit : [Template minimal de site Quarto personnel](gabarits/template-site-personnel.qmd).
 
 ## Résumé attendu
 
@@ -48,11 +50,11 @@ Le site doit être assez simple pour être maintenu après le cours. Il n’est 
 
 Créez vous-même un dépôt public dans votre compte GitHub, distinct du portfolio et du projet d’équipe. Si votre site est déjà commencé, poursuivez le dépôt existant.
 
-1. Récupérez le gabarit dans la [semaine 8 de Brio](https://www.brioeducation.ca/sites/ptmndbs906/modules/ptmndbs906-ohpafrz708/pages/ptmndbs906-ohpafrz710/) et placez son contenu à la racine du dépôt : `_quarto.yml` et `index.qmd` doivent s’y trouver directement. Conservez `.nojekyll`.
+1. Téléchargez le [gabarit ZIP](assets/documents/site-personnel/site-personnel-demarrage.zip) et placez son contenu à la racine du dépôt : `_quarto.yml` et `index.qmd` doivent s’y trouver directement. Conservez `.nojekyll`.
 2. Personnalisez le site, exécutez `quarto render`, puis poussez les sources et le dossier `docs/` sur GitHub. Le gabarit est déjà configuré pour produire ce dossier.
 3. Dans GitHub : *Settings → Pages → Deploy from a branch → main → /docs → Save*. Vérifiez ensuite que l’adresse publique ouvre bien votre site.
 
-La fiche et le gabarit sont accessibles en tout temps dans la semaine 8 de Brio. Pour les mises à jour suivantes, rendez à nouveau le site et poussez les fichiers modifiés, y compris `docs/`.
+Le gabarit est accessible en tout temps sur cette page. Pour les mises à jour suivantes, rendez à nouveau le site et poussez les fichiers modifiés, y compris `docs/`.
 
 ## Contenu minimal
 
