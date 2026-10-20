@@ -15,6 +15,8 @@ Gabarit : [Télécharger le projet de démarrage (ZIP)](assets/documents/site-pe
 
 Structure du gabarit : [Template minimal de site Quarto personnel](gabarits/template-site-personnel.qmd).
 
+Présentation du 21 octobre : [diaporama, démos et guide](assets/documents/site-personnel/presentation-2026-10-21/COMMENCER.html) · [Dossier complet (ZIP)](assets/documents/site-personnel/presentation-site-personnel-2026-10-21.zip).
+
 ## Résumé attendu
 
 À la fin de la session, chaque personne remet:

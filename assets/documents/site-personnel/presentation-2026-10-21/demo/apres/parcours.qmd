@@ -1,0 +1,18 @@
+---
+title: "Parcours et compétences"
+format:
+  html:
+    embed-resources: true
+---
+
+## Ce que cette page peut présenter
+
+Votre formation, vos intérêts et les compétences que vos travaux permettent de montrer.
+
+## Relier une compétence à une trace
+
+- Programmation R : un script que vous pouvez expliquer et exécuter.
+- Communication : un rapport Quarto lisible par une autre personne.
+- Validation : des contrôles qui permettent de vérifier un résultat.
+
+Ces exemples décrivent le contenu à adapter; ils ne constituent pas un CV réel.

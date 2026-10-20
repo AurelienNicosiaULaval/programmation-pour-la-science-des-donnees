@@ -1,0 +1,74 @@
+---
+title: "Guide de présentation : le site personnel"
+subtitle: "21 octobre 2026 · Environ 8 à 10 minutes"
+lang: fr
+embed-resources: true
+format:
+  html:
+    toc: true
+---
+
+## Préparer la séance
+
+Ouvrir [la présentation](presentation.html), puis [le site de démonstration](demo/apres/docs/index.html) dans un deuxième onglet. Les liens locaux fonctionnent aussi après décompression du dossier complet. Pour présenter les diapositives, utiliser les flèches et la touche F pour le plein écran; Échap revient à la vue normale.
+
+La démonstration ne modifie aucun dépôt étudiant et ne publie aucun nouveau site. Le rapport présenté est un exemple déjà utilisé dans le cours. Les étudiants doivent choisir leurs propres traces.
+
+## Déroulé proposé
+
+| Diapositive | Durée indicative | À montrer ou à dire |
+|---|---|---|
+| Vos réalisations, en ligne | 30 s | Une vitrine publique courte de travaux choisis. |
+| Le résultat attendu | 1 min | Accueil et parcours; deux réalisations commentées. Une vient du portfolio et l’autre du projet ou d’un module avancé. |
+| Démo : visiter le site | 3 min | Ouvrir le site, naviguer et suivre le lien vers le rapport. |
+| Démo : modifier et rendre | 2 min | Montrer la modification d’un titre dans index.qmd puis le résultat du vrai rendu Quarto. |
+| Publication sur GitHub Pages | 1 min | Dépôt personnel public, sources et docs, configuration Pages. |
+| Pour la suite | 1 min | Avancer sur une trace du portfolio; rappeler la remise finale et le lien des consignes. |
+
+La dernière diapositive regroupe les références; elle n’ajoute aucune étape au travail.
+
+## Démo 1 : naviguer et commenter une réalisation
+
+1. Ouvrir [l’accueil du site](demo/apres/docs/index.html).
+2. Cliquer sur Parcours. Expliquer qu’un CV complet n’est pas obligatoire et que les étudiants choisissent les renseignements rendus publics.
+3. Ouvrir Réalisations. Montrer le contexte, la production, la vérification et la limite de la première réalisation.
+4. Suivre le lien vers le rapport descriptif des séismes. Ouvrir un bloc de code repliable, puis montrer que le tableau, la figure et le texte proviennent des mêmes calculs.
+5. Revenir à Réalisations. La seconde réalisation de cette démo est volontairement incomplète : le site remis devra présenter deux travaux réellement effectués.
+6. Ouvrir la page IA. Le texte du gabarit est une consigne à compléter fidèlement; il ne constitue pas une déclaration déjà remplie. Rappeler que les usages significatifs doivent être déclarés.
+
+L’exemple de rapport appartient au matériel du cours. Il sert à montrer la présentation d’une réalisation et ne doit pas être présenté par un étudiant comme une production personnelle.
+
+## Démo 2 : une modification réelle dans Quarto
+
+Le dossier `demo/apres` contient le projet source. `demo/rendu` contient sa copie après la modification du titre et un nouveau rendu. Ce sont de vrais rendus Quarto.
+
+Pour faire la manipulation en direct :
+
+1. Ouvrir `demo/apres/site-personnel.Rproj` dans RStudio.
+2. Ouvrir `index.qmd` et remplacer `Des analyses à partager` par `Des résultats qui se vérifient`.
+3. Dans le terminal du projet, lancer `quarto render`.
+4. Ouvrir `docs/index.html` ou actualiser l’onglet local correspondant et constater le nouveau titre. La navigation doit toujours fonctionner.
+
+Le script `demo/refaire-demo.R` reproduit la modification dans une copie de travail `demo/direct`. Il conserve les deux versions préparées. Ouvrir ce script dans RStudio, puis l’exécuter pour refaire le rendu et ouvrir son résultat.
+
+Si la manipulation en direct prend trop de temps, passer simplement de [la version avant modification](demo/apres/docs/index.html) à [la version après rendu](demo/rendu/docs/index.html). Ces deux versions sont déjà incluses dans le dossier.
+
+## Publication : les points à préciser oralement
+
+Chaque étudiant crée son propre dépôt public, distinct du portfolio privé et du projet d’équipe. Un site déjà commencé peut être poursuivi. Le clonage et les opérations Git habituelles sont déjà connus.
+
+Avec le gabarit fourni, `quarto render` écrit dans `docs/`. Il faut pousser les sources, `.nojekyll` et `docs/`. Dans les réglages du dépôt, choisir Pages, Deploy from a branch, `main`, `/docs`, puis Save. Si la branche principale porte un autre nom, choisir cette branche. Attendre le déploiement et ouvrir l’adresse publique. Une page locale qui fonctionne ne prouve pas encore que la publication fonctionne.
+
+Ne pas modifier les réglages du dépôt du cours pour faire cette démonstration. Le bouton et les libellés exacts peuvent être montrés dans les consignes officielles GitHub. Le diaporama présente uniquement le parcours essentiel.
+
+## Remise et attentes
+
+Remise finale : mercredi 16 décembre 2026 à 23 h 55, individuel, 10 %. Les consignes demandent le site publié, le dépôt source, le commit à évaluer, les deux réalisations et la déclaration IA lorsque pertinente. Le lien avec le portfolio doit être identifiable. En STT-6230, approfondir une dimension technique d’au moins une réalisation. Ces démos n’ajoutent aucune remise intermédiaire.
+
+## Sources et provenance
+
+- Aurélien Nicosia, 2026. [Consignes du site personnel](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/site-personnel.html), [fiche](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/ressources/poursuivre-site-personnel.html) et [grille](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/grille-site-personnel.html). Version consultée le 20 octobre 2026.
+- Aurélien Nicosia, 2026. [Diaporama de la semaine 7](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/diaporamas/semaine-07.html) et [rapport descriptif](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/diaporamas/rapport-semaine-07.html). Style repris et exemple utilisé pour la démo. Matériel sous CC BY-NC-SA 4.0, sauf indication contraire.
+- Quarto, [Creating a Website](https://quarto.org/docs/websites/) et [Publishing to GitHub Pages](https://quarto.org/docs/publishing/github-pages.html).
+- GitHub Docs, [Configuring a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+- R Core Team, documentation de [`datasets::quakes`](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/quakes.html). La copie de données et sa provenance sont incluses dans `rapport/donnees/`.

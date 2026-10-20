@@ -1,0 +1,18 @@
+---
+title: "Déclaration IA"
+embed-resources: true
+---
+
+Indiquer ici les usages significatifs de l’IA générative qui ont influencé le texte, la structure, le code ou le design du site.
+
+Pour chaque usage significatif:
+
+- outil utilisé;
+- tâche demandée;
+- éléments conservés;
+- vérifications effectuées;
+- modifications apportées.
+
+Si aucun usage significatif n’a influencé le site, écrire:
+
+> Aucun usage significatif de l’IA générative n’a influencé le site remis.

@@ -1,0 +1,4 @@
+Gabarit adapté du cours STT-4230 / STT-6230, Université Laval.
+Source : https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/gabarits/template-site-personnel.html
+Contenu sous licence CC BY-NC-SA 4.0, sauf indication contraire.
+Licence : https://creativecommons.org/licenses/by-nc-sa/4.0/

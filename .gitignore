@@ -29,3 +29,6 @@ data/processed/*
 !assets/documents/exemples-projet/*.html
 Rplots.pdf
 git_diff_real.txt
+
+# Supports et demos du site personnel, destines a la publication.
+!assets/documents/site-personnel/presentation-2026-10-21/**

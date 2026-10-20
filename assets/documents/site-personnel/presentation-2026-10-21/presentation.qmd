@@ -1,0 +1,111 @@
+---
+pagetitle: "Site personnel : consignes et démonstrations"
+lang: fr
+embed-resources: true
+format:
+  revealjs:
+    theme: simple
+    css: presentation.css
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: false
+    transition: none
+    controls: true
+    progress: true
+    hash: true
+    preview-links: false
+---
+
+## Votre site personnel {.dark background-color="#083d53"}
+
+<h1 class="hero-title">Vos réalisations,<br>en ligne</h1>
+
+<p class="hero-subtitle">Un site Quarto court, personnel et public</p>
+
+<p class="hero-meta">STT-4230 / STT-6230 · 21 octobre 2026</p>
+
+## Le résultat attendu
+
+<div class="lead">
+
+Votre présentation et votre parcours
+
+Deux réalisations commentées
+
+Un site public qui fonctionne
+
+</div>
+
+Une réalisation du portfolio, une du projet ou d’un module avancé
+
+## Démo : visiter le site
+
+<div class="lead">
+
+[Ouvrir le site de démonstration](demo/apres/docs/index.html){target="_blank"}
+
+</div>
+
+Accueil → Parcours → Réalisations
+
+Une réalisation : production, vérification, limite
+
+<p class="takeaway">Présentez vos propres travaux et leur provenance</p>
+
+## Démo : modifier et rendre
+
+```markdown
+## Des analyses à partager
+```
+
+↓ Modifier dans `index.qmd`
+
+```markdown
+## Des résultats qui se vérifient
+```
+
+```bash
+quarto render
+```
+
+[Voir le résultat après rendu](demo/rendu/docs/index.html){target="_blank"}
+
+## Publication sur GitHub Pages
+
+Un dépôt public dans votre compte GitHub
+
+<div class="lead">
+
+Sources Quarto → `quarto render` → `docs/`
+
+</div>
+
+Un commit et un push des sources et de `docs/`
+
+GitHub : Settings → Pages → branche `main` → `/docs`
+
+<p class="takeaway">Ouvrez l’adresse publique et testez les liens</p>
+
+## Pour la suite
+
+- Personnalisez votre accueil et votre parcours
+- Choisissez une trace du portfolio à commenter
+- Vérifiez le rendu et la navigation
+
+<p class="takeaway">Remise : 16 décembre, 23 h 55 · Individuel · 10 %</p>
+
+Site publié, dépôt source, commit à évaluer et deux réalisations
+
+[Consignes, fiche et gabarit](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/site-personnel.html){target="_blank"}
+
+## Références et matériel
+
+- Consignes et gabarit du cours STT-4230 / STT-6230
+- Démonstration fondée sur le rapport de la semaine 7
+- Documentation Quarto et GitHub Pages
+
+Matériel du cours : Aurélien Nicosia, 2026 · CC BY-NC-SA 4.0
+
+Les liens détaillés et le déroulé des démos figurent dans le guide de présentation.

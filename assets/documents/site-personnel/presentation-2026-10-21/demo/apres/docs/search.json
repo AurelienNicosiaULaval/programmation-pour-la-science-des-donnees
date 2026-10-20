@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "declaration-ia.html",
+    "href": "declaration-ia.html",
+    "title": "Déclaration IA",
+    "section": "",
+    "text": "Indiquer ici les usages significatifs de l’IA générative qui ont influencé le texte, la structure, le code ou le design du site.\nPour chaque usage significatif:\n\noutil utilisé;\ntâche demandée;\néléments conservés;\nvérifications effectuées;\nmodifications apportées.\n\nSi aucun usage significatif n’a influencé le site, écrire:\n\nAucun usage significatif de l’IA générative n’a influencé le site remis."
+  },
+  {
+    "objectID": "parcours.html",
+    "href": "parcours.html",
+    "title": "Parcours et compétences",
+    "section": "",
+    "text": "Votre formation, vos intérêts et les compétences que vos travaux permettent de montrer."
+  },
+  {
+    "objectID": "parcours.html#ce-que-cette-page-peut-présenter",
+    "href": "parcours.html#ce-que-cette-page-peut-présenter",
+    "title": "Parcours et compétences",
+    "section": "",
+    "text": "Votre formation, vos intérêts et les compétences que vos travaux permettent de montrer."
+  },
+  {
+    "objectID": "parcours.html#relier-une-compétence-à-une-trace",
+    "href": "parcours.html#relier-une-compétence-à-une-trace",
+    "title": "Parcours et compétences",
+    "section": "Relier une compétence à une trace",
+    "text": "Relier une compétence à une trace\n\nProgrammation R : un script que vous pouvez expliquer et exécuter.\nCommunication : un rapport Quarto lisible par une autre personne.\nValidation : des contrôles qui permettent de vérifier un résultat.\n\nCes exemples décrivent le contenu à adapter; ils ne constituent pas un CV réel."
+  },
+  {
+    "objectID": "realisations.html",
+    "href": "realisations.html",
+    "title": "Réalisations",
+    "section": "",
+    "text": "Cette page illustre une façon de commenter un travail. La première réalisation reprend un exemple du cours; la seconde reste à compléter."
+  },
+  {
+    "objectID": "realisations.html#réalisation-1-un-rapport-descriptif-reproductible",
+    "href": "realisations.html#réalisation-1-un-rapport-descriptif-reproductible",
+    "title": "Réalisations",
+    "section": "Réalisation 1 : un rapport descriptif reproductible",
+    "text": "Réalisation 1 : un rapport descriptif reproductible\nContexte : décrire la répartition des magnitudes dans le jeu quakes fourni avec R, utilisé pendant la semaine 7.\nProduction : un rapport avec tableau, graphique et code.\nOutils : R, dplyr, ggplot2 et Quarto.\nVérification : les effectifs du tableau totalisent le nombre de lignes; les proportions totalisent 1; le graphique et le texte utilisent le même tableau calculé.\nCompétence démontrée : relier le traitement des données, les calculs et leur présentation dans un rapport reproductible.\nLimite : ces données ne permettent pas de calculer un taux annuel ni d’évaluer le risque sismique actuel.\nCet exemple appartient au matériel du cours. Pour votre site, présentez votre propre trace du portfolio et indiquez sa provenance."
+  },
+  {
+    "objectID": "realisations.html#réalisation-2-votre-projet-ou-un-module-avancé",
+    "href": "realisations.html#réalisation-2-votre-projet-ou-un-module-avancé",
+    "title": "Réalisations",
+    "section": "Réalisation 2 : votre projet ou un module avancé",
+    "text": "Réalisation 2 : votre projet ou un module avancé\nÀ compléter avec un travail réellement effectué : contexte, production, outils, vérification et limite."
+  },
+  {
+    "objectID": "realisations.html#justification-technique",
+    "href": "realisations.html#justification-technique",
+    "title": "Réalisations",
+    "section": "Justification technique",
+    "text": "Justification technique\nLe site est rendu dans docs/ pour utiliser la publication GitHub Pages à partir de la branche principale. Les sources sont conservées pour permettre les modifications et le rendu.\nEn STT-6230, approfondissez une dimension technique de votre réalisation."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Site de démonstration",
+    "section": "",
+    "text": "Ce site montre comment présenter un travail du cours avec Quarto. Les textes de cette démonstration sont à remplacer par votre propre parcours et vos réalisations."
+  },
+  {
+    "objectID": "index.html#des-analyses-à-partager",
+    "href": "index.html#des-analyses-à-partager",
+    "title": "Site de démonstration",
+    "section": "",
+    "text": "Ce site montre comment présenter un travail du cours avec Quarto. Les textes de cette démonstration sont à remplacer par votre propre parcours et vos réalisations."
+  },
+  {
+    "objectID": "index.html#découvrir-mon-travail",
+    "href": "index.html#découvrir-mon-travail",
+    "title": "Site de démonstration",
+    "section": "Découvrir mon travail",
+    "text": "Découvrir mon travail\n\nMon parcours et mes compétences\nMes réalisations commentées"
+  }
+]

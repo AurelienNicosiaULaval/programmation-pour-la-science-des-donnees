@@ -1,0 +1,16 @@
+---
+title: "Site de démonstration"
+format:
+  html:
+    embed-resources: true
+---
+
+## Des résultats qui se vérifient
+
+Ce site montre comment présenter un travail du cours avec Quarto. Les textes de cette démonstration sont à remplacer par votre propre parcours et vos réalisations.
+
+## Découvrir mon travail
+
+- [Mon parcours et mes compétences](parcours.qmd)
+- [Mes réalisations commentées](realisations.qmd)
+

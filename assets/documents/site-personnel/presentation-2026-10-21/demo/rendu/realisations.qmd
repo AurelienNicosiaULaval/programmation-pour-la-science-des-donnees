@@ -1,0 +1,34 @@
+---
+title: "Réalisations"
+format:
+  html:
+    embed-resources: true
+---
+
+Cette page illustre une façon de commenter un travail. La première réalisation reprend un exemple du cours; la seconde reste à compléter.
+
+## Réalisation 1 : un rapport descriptif reproductible
+
+Contexte : décrire la répartition des magnitudes dans le jeu `quakes` fourni avec R, utilisé pendant la semaine 7.
+
+Production : [un rapport avec tableau, graphique et code](rapport-semaine-07.html).
+
+Outils : R, dplyr, ggplot2 et Quarto.
+
+Vérification : les effectifs du tableau totalisent le nombre de lignes; les proportions totalisent 1; le graphique et le texte utilisent le même tableau calculé.
+
+Compétence démontrée : relier le traitement des données, les calculs et leur présentation dans un rapport reproductible.
+
+Limite : ces données ne permettent pas de calculer un taux annuel ni d'évaluer le risque sismique actuel.
+
+Cet exemple appartient au matériel du cours. Pour votre site, présentez votre propre trace du portfolio et indiquez sa provenance.
+
+## Réalisation 2 : votre projet ou un module avancé
+
+À compléter avec un travail réellement effectué : contexte, production, outils, vérification et limite.
+
+## Justification technique
+
+Le site est rendu dans `docs/` pour utiliser la publication GitHub Pages à partir de la branche principale. Les sources sont conservées pour permettre les modifications et le rendu.
+
+En STT-6230, approfondissez une dimension technique de votre réalisation.
