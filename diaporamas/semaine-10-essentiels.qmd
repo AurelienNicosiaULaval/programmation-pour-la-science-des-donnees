@@ -1,0 +1,181 @@
+---
+pagetitle: "Semaine 10 : fonctions, tests, exceptions et débogage"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    theme: simple
+    css: semaine-07.css
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: false
+    transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    code-line-numbers: false
+embed-resources: true
+---
+
+##  {#ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Que doit faire<br>la fonction ?</h1>
+<p class="hero-subtitle">Fonctions, tests, exceptions et débogage</p>
+<p class="hero-meta">Aurélien Nicosia · 11 novembre 2026<br>STT-4230 / STT-6230</p>
+
+## Définir le résultat attendu {#contrat}
+
+Quelle proportion des mesures atteint le seuil de 10 ?
+
+```r
+mesures <- c(12, 8, NA, 15, 10)
+```
+
+Parmi les quatre mesures observées, 12, 15 et 10 atteignent le seuil. On attend 3 sur 4, soit 0,75.
+
+La fonction reçoit des mesures numériques et un seuil. Elle ignore les valeurs manquantes.
+
+## Lire et appeler une fonction {#fonction}
+
+```r
+proportion_simple <- function(x, seuil = 10) {
+  mean(x >= seuil, na.rm = TRUE)
+}
+
+proportion_simple(c(12, 8, NA, 15, 10))
+# 0.75
+proportion_simple(c(12, 8, NA, 15, 10), seuil = 12)
+# 0.5
+```
+
+`x` et `seuil` sont les arguments. `na.rm = TRUE` exclut les valeurs manquantes du calcul.
+
+## Quels cas tester ? {#choix-tests}
+
+- Un cas simple dont on connaît le résultat.
+- Une valeur à la frontière, ici une mesure égale au seuil.
+- Une entrée qui demande un traitement particulier, comme un vecteur vide.
+
+On détermine le résultat attendu avant de lancer le test.
+
+## Un test révèle le bogue {#bogue}
+
+```r
+library(testthat)
+
+proportion_boguee <- function(x, seuil = 10) {
+  sum(x >= seuil, na.rm = TRUE) / length(x)
+}
+
+expect_equal(proportion_boguee(c(12, 8, NA, 15, 10)), 0.75)
+```
+
+Le test échoue. La fonction renvoie 0,60 alors qu’on attend 0,75.
+
+## Examiner le calcul dans le débogueur {#debugonce}
+
+```r
+debugonce(proportion_boguee)
+proportion_boguee(c(12, 8, NA, 15, 10))
+```
+
+- À l’invite `Browse`, comparez `length(x)` et `sum(!is.na(x))`.
+- `length(x)` compte 5 éléments. Seulement 4 mesures sont observées.
+- Tapez `c` pour reprendre l’exécution.
+
+Après une erreur non interceptée, `traceback()` affiche la suite des appels.
+
+## Corriger la fonction et vérifier les entrées {#validation}
+
+```r
+proportion_seuil <- function(x, seuil = 10) {
+  if (sum(!is.na(x)) == 0) {
+    stop("Aucune mesure observée.")
+  }
+  mean(x >= seuil, na.rm = TRUE)
+}
+```
+
+`mean()` calcule la proportion de `TRUE` parmi les comparaisons disponibles.
+
+## Retrouver l’origine d’une erreur {#traceback}
+
+Dans la console, on exécute les deux appels séparément :
+
+```r
+proportion_seuil(numeric(0))
+# Erreur : Aucune mesure observée.
+
+traceback()
+```
+
+`traceback()` montre les appels qui ont mené à la dernière erreur non interceptée.
+
+## Quel signal convient ? {#conditions}
+
+| Appel | Effet |
+|---|---|
+| `stop()` | Signale une erreur et interrompt le calcul |
+| `warning()` | Signale un problème et laisse habituellement le calcul se poursuivre |
+| `message()` | Informe sur le déroulement du calcul |
+
+Dans notre exemple, `stop()` signale qu’aucune mesure n’est observée.
+
+## Un avertissement permet de continuer {#avertissement}
+
+```r
+mesures <- 8
+
+if (length(mesures) == 1) {
+  warning("Une seule mesure disponible.")
+}
+mean(mesures)
+# 8
+```
+
+L’avertissement attire l’attention sur le petit nombre de mesures.
+
+## Relancer les tests après la correction {#regression}
+
+```r
+test_that("la fonction calcule la proportion et vérifie les mesures", {
+  expect_equal(proportion_seuil(c(12, 8, NA, 15, 10)), 0.75)
+  expect_equal(proportion_seuil(c(2, 4)), 0)
+  expect_error(proportion_seuil(numeric(0)), "Aucune mesure observée")
+})
+```
+
+On vérifie le cas qui révélait le bogue, le cas où aucune mesure n’atteint le seuil et le cas du vecteur vide.
+
+## Poursuivre quand un appel échoue {#intercepter}
+
+```r
+tryCatch(
+  proportion_seuil(numeric(0)),
+  error = function(e) message(conditionMessage(e))
+)
+
+proportion_seuil(c(12, 8, NA, 15, 10))
+# 0.75
+```
+
+Le gestionnaire affiche « Aucune mesure observée. » L’appel suivant s’exécute.
+
+## À retenir pour vos fonctions {#bilan}
+
+- Définir les entrées et le résultat attendu.
+- Tester un exemple simple, une frontière et une entrée problématique.
+- Signaler clairement ce qui empêche le calcul.
+- Reproduire un bogue, comprendre sa cause et relancer les tests.
+
+## Références {#references-livres .refs}
+
+- Baillargeon, S. (2021). [Fonctions en R](https://stt4230.rbind.io/programmation/fonctions_r/) et [Tests et exceptions en R](https://stt4230.rbind.io/programmation/tests_exceptions_r/). Notes du cours STT-4230 / STT-6230, Université Laval. CC BY-NC-SA 4.0.
+- Wickham, H. (2019). *Advanced R*, 2e éd. [Conditions](https://adv-r.hadley.nz/conditions.html) et [Debugging](https://adv-r.hadley.nz/debugging.html). Texte sous CC BY-NC-SA 4.0 et code sous licence MIT.
+- Wickham, H. et Bryan, J. (2023). *R Packages*, 2e éd. [Testing basics](https://r-pkgs.org/testing-basics.html). CC BY-NC-ND 4.0.
+- Documentations officielles de [R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/conditions.html) et de [testthat](https://testthat.r-lib.org/reference/index.html).
+
+Diaporama sous licence CC BY-NC-SA 4.0. Données fictives.

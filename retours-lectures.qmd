@@ -18,6 +18,7 @@ Les diaporamas présentés en début de séance reprennent les idées essentiell
 | 6 | 7 octobre 2026 | [Graphiques vérifiables et rapports reproductibles](diaporamas/semaine-06.qmd) · [Script R](diaporamas/demonstration-semaine-06.R) |
 | 7 | 14 octobre 2026 | [Du code au rapport Quarto](diaporamas/semaine-07.qmd) · [Rapport de démonstration](diaporamas/rapport-semaine-07.qmd) · [Matériel à télécharger, ZIP](assets/documents/exercices-consolidation/a2026/semaine-07/STT4230-semaine-07-materiel.zip) |
 | 9 | 4 novembre 2026 | [Fonctions en R et retour sur le défi 2](diaporamas/semaine-09.qmd) |
+| 10 | 11 novembre 2026 | [Fonctions, tests, exceptions et débogage](diaporamas/semaine-10-essentiels.qmd) · [Script R](diaporamas/demonstration-semaine-10-essentiels.R) · [Tests R](diaporamas/tests-semaine-10-essentiels.R) |
 
 Ouvrez le diaporama, puis utilisez les flèches du clavier pour avancer ou revenir en arrière. La touche Échap affiche une vue d'ensemble des diapositives.
 
