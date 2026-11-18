@@ -1,0 +1,276 @@
+---
+pagetitle: "Semaine 11 | Retour sur les lectures"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    theme: simple
+    css: semaine-07.css
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: false
+    transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    code-line-numbers: false
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+---
+
+##  {#ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Comment R choisit-il<br>la bonne méthode ?</h1>
+<p class="hero-subtitle">Retour sur les lectures · Programmation orientée objet</p>
+<p class="hero-meta">Aurélien Nicosia · 18 novembre 2026<br>STT-4230 / STT-6230</p>
+
+::: {.notes}
+Prévoir environ 15 minutes. Partir du mini-test, faire prédire deux résultats à voix haute et terminer par un choix que les équipes peuvent appliquer à leur projet.
+
+Mini-test de la semaine 11, vérifié dans Brio le 18 novembre après la fermeture. Les deux groupes ont remis 14 copies (10 en STT-4230 et 4 en STT-6230). Les 14 personnes ont reconnu le nom plot.matrix. Sur les 12 réponses à la question ouverte, 9 proposent S3 pour leur projet et 3 privilégient les objets déjà disponibles. Deux personnes ont laissé cette question vide.
+:::
+
+## Prédisez la méthode {#prediction}
+
+```r
+class(datasets::WWWusage)
+# [1] "ts"
+
+summary(datasets::WWWusage)
+```
+
+Quelle méthode est exécutée ?
+
+- `summary.ts()`
+- `summary.default()`
+
+::: {.notes}
+Laisser 20 à 30 secondes. Demander quelle information manque pour trancher. Le nom de la classe indique quel nom de méthode chercher. Il reste à vérifier que cette méthode existe.
+:::
+
+## R cherche d’abord une méthode pour `ts` {#wwwusage}
+
+```{r}
+#| label: methode-wwwusage
+#| collapse: true
+x <- datasets::WWWusage
+getS3method("summary", "ts", optional = TRUE)
+
+methode <- getS3method("summary", "default")
+identical(summary(x), methode(x))
+```
+
+1. `summary()` est la **fonction générique**.
+2. En R de base, la recherche de `summary.ts` donne `NULL`.
+3. R utilise alors la **méthode par défaut**, `summary.default()`.
+
+::: {.notes}
+Dans le mini-test, 9 personnes ont choisi summary.default et 5 ont choisi summary.ts. Demander à celles et ceux qui avaient prédit summary.ts ce que NULL leur apprend. La classe « ts » indique où commencer la recherche. Le résultat TRUE confirme que le générique donne ici le même résumé que la méthode par défaut. Un package ou du code utilisateur pourrait fournir une autre méthode dans une autre session.
+:::
+
+## Une classe peut être implicite {#classes-implicites}
+
+```{r}
+#| label: classe-matrice
+#| collapse: true
+m <- matrix(1:4, nrow = 2)
+attr(m, "class", exact = TRUE)
+class(m)
+.class2(m)
+```
+
+`attr()` inspecte l’attribut stocké. `class()` indique les classes usuelles de l’objet.
+
+Pour cette matrice, `.class2()` donne l’ordre complet des classes essayées par le dispatch S3.
+
+::: {.notes}
+Une personne demande comment un objet peut avoir une classe quand l’attribut class est absent. Faire prédire class(m) après avoir montré le résultat NULL. La matrice a un attribut dim et ses valeurs sont de type integer. R en déduit les classes affichées par .class2(). La diapositive suivante montre qu’une de ces classes suffit à sélectionner une méthode.
+:::
+
+## Le nom d’une méthode suit `générique.classe` {#nom-methode}
+
+Pour le générique `plot()` et la classe `matrix`, le nom attendu est **`plot.matrix`**.
+
+Vérifions le même principe avec notre propre générique.
+
+```{r}
+#| label: dispatch-implicite
+#| collapse: true
+decrire <- function(x) UseMethod("decrire")
+decrire.matrix <- function(x) sprintf("%d × %d", nrow(x), ncol(x))
+decrire(m)
+```
+
+R sélectionne `decrire.matrix()` à partir de la classe implicite de `m`.
+
+::: {.notes}
+Le mini-test portait sur la convention de nommage. Le fait que le nom soit bien formé ne dit pas si la méthode existe dans la session. Dans cet exemple, la méthode decrire.matrix est définie dans le code présenté.
+:::
+
+## Une classe S3 pour un bilan de contrôles {#s3}
+
+Chaque lot contient des contrôles effectués, dont certains ont réussi.
+
+```{r}
+#| label: creer-bilan
+#| collapse: true
+bilan <- structure(
+  list(lots = c("A", "B", "C"),
+       n = c(5L, 4L, 6L),
+       reussis = c(4L, 2L, 6L)),
+  class = "bilan_controles"
+)
+class(bilan)
+```
+
+**L’objet** `bilan` contient les données des trois lots. Sa **classe** `bilan_controles` permet aux fonctions génériques `print()` et `plot()` de trouver chacune sa **méthode**, la fonction qui précise quoi faire avec ce type de bilan.
+
+::: {.notes}
+Montrer les trois vecteurs, puis l’attribut de classe. Le lot B a deux réussites sur quatre contrôles. Demander ce qu’on veut voir en console, puis ce qu’on veut comparer dans le graphique.
+:::
+
+## `print(bilan)` donne le total {#methode-print}
+
+```{r}
+#| label: methode-print
+#| collapse: true
+print.bilan_controles <- function(x, ...) {
+  cat(sum(x$reussis), "contrôles réussis sur", sum(x$n), "\n")
+  invisible(x)
+}
+
+print(bilan)
+```
+
+`print()` appelle `print.bilan_controles()`. La méthode affiche le total et renvoie le bilan de façon invisible.
+
+::: {.notes}
+Faire repérer print pour le générique et bilan_controles pour la classe. cat() produit l’affichage. invisible(x) renvoie le bilan sans déclencher un second affichage.
+:::
+
+## `plot.bilan_controles()` construit un ggplot {#methode-plot}
+
+La méthode calcule le pourcentage de réussite dans chaque lot.
+
+```{r}
+#| label: methode-plot
+plot.bilan_controles <- function(x, ...) {
+  donnees <- data.frame(lot = x$lots, taux = 100 * x$reussis / x$n)
+
+  ggplot2::ggplot(donnees, ggplot2::aes(x = lot, y = taux)) +
+    ggplot2::geom_col(fill = "#087d85") +
+    ggplot2::scale_y_continuous(limits = c(0, 100)) +
+    ggplot2::labs(x = "Lot", y = "Réussite (%)") +
+    ggplot2::theme_minimal(base_size = 16)
+}
+```
+
+`plot(bilan)` appelle cette méthode et renvoie un objet `ggplot` qu’on peut compléter avec `+`.
+
+::: {.notes}
+Rappeler le dénominateur : les lots ont respectivement 5, 4 et 6 contrôles. Comparer les taux tient compte de cette différence. Dans cet exemple, les nombres de contrôles sont strictement positifs.
+:::
+
+## `plot(bilan)` compare les lots {#graphique}
+
+```{r}
+#| label: graphique-bilan
+#| fig-width: 9
+#| fig-height: 4
+#| fig-alt: "Diagramme en barres des taux de réussite. Lot A : 80 %, lot B : 50 %, lot C : 100 %."
+plot(bilan)
+```
+
+::: {.notes}
+Faire lire le graphique : 80 %, 50 %, 100 %. Relier les deux appels au même objet. print(bilan) donne le total global. plot(bilan) montre où les résultats diffèrent. Pour ajouter un titre en direct, exécuter plot(bilan) + ggplot2::labs(title = "Contrôles par lot").
+:::
+
+## R parcourt les classes dans l’ordre {#ordre-classes}
+
+Quelle méthode `print()` choisit-il pour le bilan hebdomadaire ?
+
+```{r}
+#| label: heritage-bilan
+#| output: false
+bilan_hebdo <- bilan
+class(bilan_hebdo) <- c("bilan_hebdo", "bilan_controles")
+print(bilan_hebdo)
+```
+
+::: {.fragment}
+R cherche `print.bilan_hebdo()`, puis trouve **`print.bilan_controles()`**. La méthode existante affiche **12 contrôles réussis sur 15**.
+:::
+
+::: {.notes}
+Faire prédire la méthode avant de révéler le résultat. Comparer avec WWWusage : la méthode par défaut est essayée après les classes de l’objet. Ici la deuxième classe fournit déjà une méthode.
+:::
+
+## Une ACP a-t-elle besoin de sa propre classe ? {#acp}
+
+Une question du mini-test portait sur l’analyse en composantes principales (ACP). Voyons ce que sait déjà faire l’objet renvoyé par `prcomp()`.
+
+```{r}
+#| label: acp-prcomp
+#| collapse: true
+acp <- prcomp(iris[, 1:4], scale. = TRUE)
+class(acp)
+variance <- summary(acp)$importance["Proportion of Variance", 1:2]
+round(100 * variance, 1)
+```
+
+**Gardez l’objet `prcomp` pour cette analyse.** Sa méthode `summary.prcomp()` fournit déjà la part de variance expliquée par chaque composante.
+
+::: {.notes}
+Le calcul porte sur les quatre mesures quantitatives d’iris, centrées et réduites. La première composante explique 73,0 % de la variance et la deuxième 22,9 %. La question du mini-test évoquait aussi print() et plot(), qui ont tous deux une méthode pour la classe prcomp. Demander ce qu’une nouvelle classe apporterait au projet si ces méthodes répondent déjà aux besoins.
+:::
+
+## Quel comportement pour votre projet ? {#discussion}
+
+Deux exemples viennent du mini-test. Dans **Shiny**, on peut afficher directement un tableau. Pour une **régression linéaire** ajustée avec `lm()`, `summary(modele)` fournit déjà les coefficients et leurs erreurs-types.
+
+1. Choisissez un résultat de votre projet. Que voulez-vous lire en console ou comparer dans un graphique ?
+2. Quelle fonction pouvez-vous déjà appeler sur cet objet ?
+3. Quel comportement, s’il en manque un, voudriez-vous définir avec une méthode S3 ?
+
+::: {.notes}
+Donner une minute aux équipes. Pour une application Shiny, un data.frame peut être passé à renderTable(). Pour la régression, lm() renvoie un objet de classe lm et summary() appelle summary.lm(). Inviter une équipe qui propose une méthode à nommer la classe, le générique et le résultat attendu. Revenir au bilan de contrôles si elle cherche un exemple.
+:::
+
+## Références {#references .refs}
+
+- Baillargeon, S. (2021). [Programmation orientée objet en R](https://stt4230.rbind.io/programmation/oop_r/). Notes du cours STT-4230 / STT-6230, Université Laval.
+- Wickham, H. (2019). *Advanced R*, 2e éd. [S3, chap. 13](https://adv-r.hadley.nz/s3.html).
+- R Core Team. Documentation de [`class()` et `.class2()`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/class.html).
+- R Core Team. Documentation de [`prcomp()`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/prcomp.html) et de [`summary.lm()`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/summary.lm.html).
+
+::: {.notes}
+Source des observations sur le groupe, accessible à l’équipe enseignante : https://www.brioeducation.ca/sites/ptmndbs906/evaluations/ptmndbs906-ohpczyz904/a-propos
+:::
+
+```{r}
+#| label: verification-exemples
+#| include: false
+stopifnot(
+  identical(class(acp), "prcomp"),
+  identical(summary(acp), getS3method("summary", "prcomp")(acp)),
+  identical(unname(round(100 * variance, 1)), c(73.0, 22.9)),
+  identical(class(x), "ts"),
+  is.null(getS3method("summary", "ts", optional = TRUE)),
+  identical(summary(x), methode(x)),
+  is.null(attr(m, "class", exact = TRUE)),
+  identical(class(m), c("matrix", "array")),
+  identical(.class2(m), c("matrix", "array", "integer", "numeric")),
+  identical(decrire(m), "2 × 2"),
+  identical(getS3method("print", "bilan_controles"), print.bilan_controles),
+  identical(getS3method("plot", "bilan_controles"), plot.bilan_controles),
+  inherits(plot(bilan), "ggplot"),
+  identical(trimws(capture.output(print(bilan))), "12 contrôles réussis sur 15"),
+  identical(capture.output(print(bilan_hebdo)), capture.output(print(bilan))),
+  identical(100 * bilan$reussis / bilan$n, c(80, 50, 100))
+)
+```
