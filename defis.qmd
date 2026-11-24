@@ -27,7 +27,7 @@ Les ateliers suivants font partie des modules du cours, mais ne sont pas des év
 |---|---:|---:|---|---|
 | Défi technique 1 | 5 | 10 % | Vérifier les bases individuelles | Non permise |
 | Défi technique 2 | 8 | 10 % | Vérifier la programmation et la compréhension avec aide encadrée | Permise, facultative, déclarée |
-| Défi technique 3 | 13 | 10 % | Vérifier le jugement professionnel avec IA | Intégrée |
+| Défi technique 3 | 13 | 10 % | Vérifier le jugement professionnel avec IA | Obligatoire |
 
 ## Ce qui est connu avant la séance
 
@@ -140,27 +140,38 @@ L'entretien compte pour 0,6 point sur les 10 du défi; les contrôles écrits co
 
 La salle et les créneaux d'entretien sont communiqués avant la séance. L'atelier et le retour sur l'exemple analogue commencent après le dernier entretien concerné. Le travail remis reste figé.
 
-## Défi technique 3 {#defi-technique-3}
+## Se préparer au défi technique 3 {#defi-technique-3}
 
-Le troisième défi intègre l’IA à la tâche. Il évalue:
+Le défi se fait **individuellement**, dure **60 minutes** et compte pour **10 % de la note du cours**. **L’utilisation d’une IA est obligatoire.** L’objectif est de mobiliser les notions de programmation vues depuis le défi 2, d’exercer votre jugement sur le code proposé par l’IA et de montrer comment vous avez vérifié votre solution.
 
-- diagnostic technique;
-- débogage;
-- optimisation, parallélisation ou amélioration d’un mini-projet;
-- comparaison avant/après;
-- vérification obligatoire;
-- mini-rapport technique;
-- jugement critique sur les propositions de l’IA.
+### Quelle matière réviser?
 
-Question centrale: est-ce que l’étudiante ou l’étudiant sait utiliser l’IA comme assistant technique sans perdre son jugement professionnel?
+| Notion | Questions à vous poser en révisant |
+|---|---|
+| **Fonctions en R** | Quels arguments la fonction reçoit-elle? Que retourne-t-elle? Si le résultat est une liste nommée, comment puis-je accéder à chacune de ses composantes? |
+| **Objets et méthodes S3** | Qu’est-ce que `class()` m’apprend sur un objet? Qu’est-ce que `str()` me permet de voir de plus? Est-ce que je sais attribuer une classe à un objet et expliquer comment R choisit la méthode à appeler lorsqu’on utilise `print()` ou `plot()`? |
+| **Graphiques avec `ggplot2`** | Quelles variables sont représentées sur les axes? Que représente chaque point, ligne ou barre? Est-ce que je peux prévoir l’effet d’un changement dans `aes()` ou de l’ajout d’une couche au graphique? |
+| **Tests et débogage** | Est-ce que je peux choisir des valeurs simples et prévoir le résultat avant d’exécuter le code? Si j’obtiens un résultat inattendu, comment puis-je repérer l’étape qui explique l’écart? Quel cas limite mériterait aussi d’être testé? |
 
-### Repère de remise publié
+### Comment pratiquer avec l’IA?
 
-La remise contient au minimum le code diagnostiqué ou amélioré, une comparaison avant/après, les vérifications exécutées, un mini-rapport technique et la trace détaillée de l'usage de l'IA. Le code de départ, les anomalies et les contraintes exactes sont communiqués au début du défi. À la fermeture, remettre les fichiers dans le canal annoncé et, si Git est demandé, vérifier que le dernier commit remis est identifiable.
+Exercez-vous à juger une réponse de l’IA même lorsque le code s’exécute sans erreur. Par exemple, demandez-lui d’écrire une fonction qui enlève les espaces au début et à la fin d’un nom de ville. Un essai avec `"  Québec  "` permet de vérifier que les espaces aux extrémités disparaissent. Un essai avec `"  La Malbaie  "` permet aussi de vérifier que l’espace au milieu du nom est conservé.
 
-Après la remise, poursuivre avec l'exercice analogue annoncé dans le module Brio et distribué par GitHub. Le défi remis n'est pas corrigé pendant cet atelier.
+Si la fonction retourne `"LaMalbaie"`, vous avez de quoi faire une relance précise. Vous pourriez écrire :
 
-Avant la séance, les étudiantes et étudiants connaissent les dimensions du diagnostic, la trace IA attendue et la grille. Le code à diagnostiquer, les contraintes de performance et les anomalies précises sont fournis au début du défi.
+> J’ai essayé ta fonction avec `"  La Malbaie  "`. J’obtiens `"LaMalbaie"`, alors que je m’attends à `"La Malbaie"`. Peux-tu expliquer d’où vient l’écart et corriger la fonction?
+
+Exécutez ensuite la nouvelle version sur les deux noms. L’important est de pouvoir expliquer pourquoi vous acceptez la correction et ce que vos essais ont permis de vérifier.
+
+### Comment vous préparer concrètement?
+
+1. **Reprenez le bilan de contrôles vu en classe.** Exécutez l’exemple et observez ce que produisent `print()` et `plot()`. Utilisez ensuite `str()` pour regarder ce que contient l’objet. Pouvez-vous y retrouver la valeur affichée dans la console et les données utilisées pour tracer le graphique? Modifiez une donnée, puis prédisez ce qui changera avant de relancer le code. [Revoir l’exemple de la semaine 11](diaporamas/semaine-11.html#/s3)
+2. **Refaites un exercice avec l’IA.** Choisissez une fonction parmi les exercices déjà faits. Avant de demander une solution à l’IA, choisissez des valeurs simples et notez le résultat attendu. Testez sa proposition, puis essayez un deuxième cas qui vérifie un comportement différent. Entraînez-vous à expliquer en une ou deux phrases quelle suggestion vous avez retenue ou modifiée, et quel essai justifie votre décision. [Reprendre les exercices des semaines 10 et 11](exercices/modules-10-11-objets-tests.qmd)
+3. **Faites un essai de remise avec un ancien exercice.** Générez le HTML à partir de votre fichier `.qmd`, puis ouvrez-le pour vérifier que les résultats et les graphiques s’affichent comme prévu. Faites un *commit* et un *push*, puis ouvrez votre dépôt sur GitHub pour vérifier que la dernière version des deux fichiers s’y trouve.
+
+### Le jour du défi
+
+Vous recevrez l’énoncé et un fichier Quarto à compléter au début du défi. Prévoyez quelques minutes à la fin de l’heure pour générer le HTML et remettre **votre fichier `.qmd` et le document HTML** dans votre dépôt GitHub.
 
 ## Déroulement type d’une séance de défi
 
@@ -183,7 +194,7 @@ Pour le défi 2 du 21 octobre, suivre le [déroulement précisé ci-dessus](#def
 |---|---|
 | Défi technique 1 | Dossier récupéré par l’enseignant, fichier brut, script R, résultats et README court, sans IA |
 | Défi technique 2 | Dépôt GitHub privé figé : script R, QMD, HTML, tableau CSV et `docs/ai-log.md` pour tous; collecte par l’équipe enseignante sur GitHub à 14 h 30; entretien de compréhension |
-| Défi technique 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
+| Défi technique 3 | Fichier `.qmd` complété et document HTML généré, remis dans le dépôt GitHub individuel |
 
 ## Critères communs
 
