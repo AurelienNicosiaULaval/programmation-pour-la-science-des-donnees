@@ -1,0 +1,195 @@
+---
+pagetitle: "Semaine 12 | Mesurer et optimiser du code R"
+author: "Aurélien Nicosia"
+lang: fr
+format:
+  revealjs:
+    theme: simple
+    css: semaine-07.css
+    width: 1600
+    height: 900
+    margin: 0.04
+    center: false
+    slide-number: false
+    transition: none
+    controls: true
+    progress: true
+    hash: true
+    navigation-mode: linear
+    code-line-numbers: false
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+##  {#ouverture .dark background-color="#083d53"}
+
+<h1 class="hero-title">Que fait R quand on<br>lui passe du code&nbsp;?</h1>
+<p class="hero-subtitle">Comparer deux façons de calculer une moyenne par ligne</p>
+<p class="hero-meta">Aurélien Nicosia · 25 novembre 2026<br>STT-4230 / STT-6230 · Retour sur les lectures</p>
+
+::: {.notes}
+Consacrer environ 8 minutes à la comparaison des moyennes par ligne, puis 2 minutes à l’échange sur les projets. La démonstration reprend une question du mini-test de préparation de la semaine 12. Les six copies disponibles dans Brio le matin du 24 novembre ont été consultées, quatre en STT-4230 et deux en STT-6230. Le questionnaire fermait le 24 novembre à 23 h 59.
+:::
+
+## Une moyenne pour chaque station {#matrice}
+
+Chaque ligne représente une station et chaque colonne une mesure. `NA` indique une mesure manquante.
+
+```{r}
+#| label: stations
+#| echo: false
+stations <- rbind(A = c(12, 14, 16), B = c(8, NA, 12),
+                  C = c(NA, NA, NA))
+colnames(stations) <- paste("Mesure", 1:3)
+knitr::kable(stations)
+```
+
+```r
+apply(stations, 1, mean, na.rm = TRUE)
+rowMeans(stations, na.rm = TRUE)
+```
+
+Quelles valeurs attendez-vous pour **A**, **B** et **C** ?
+
+::: {.notes}
+Faire lire la ligne B à voix haute. Dans apply(), le 1 désigne les lignes. Sur chaque ligne, mean() reçoit les observations de la station. rowMeans() est la fonction spécialisée pour cette opération. Laisser prédire les trois sorties avant de passer à la suite.
+:::
+
+## La station C permet de vérifier les deux calculs {#equivalence}
+
+```{r}
+#| label: moyennes-stations
+#| collapse: true
+par_apply <- apply(stations, 1, mean, na.rm = TRUE)
+par_ligne <- rowMeans(stations, na.rm = TRUE)
+par_ligne
+all.equal(par_apply, par_ligne)
+```
+
+Pour B, on calcule (8 + 12) / 2 = 10. Pour C, il reste **zéro observation** après le retrait des `NA`. Les deux fonctions renvoient `NaN` à cette position.
+
+::: {.notes}
+Demander ce qui change si on retire na.rm = TRUE uniquement de rowMeans(). B devient NA au lieu de 10. Chronométrer ces deux versions reviendrait alors à comparer des comportements différents. all.equal() permet une tolérance numérique. Ici, R confirme l’accord des résultats sur notre exemple.
+:::
+
+## Comment chronométrer ces deux appels ? {#protocole}
+
+```r
+set.seed(4230)
+n <- 100L
+m <- matrix(rnorm(n * 20L), nrow = n)
+m[1, 1] <- NA_real_
+
+temps <- bench::mark(
+  apply    = apply(m, 1, mean, na.rm = TRUE),
+  rowMeans = rowMeans(m, na.rm = TRUE),
+  iterations = 50, check = TRUE, filter_gc = FALSE
+)
+temps[, c("expression", "median")]
+```
+
+Les deux appels reçoivent **la même matrice**. Sa création se fait avant le chronométrage. On refait ensuite l’expérience avec `n <- 10000L`.
+
+::: {.notes}
+La question du mini-test était de savoir ce qu’on peut affirmer avant toute mesure. Ici, demander un pronostic pour 100 lignes, puis demander si le facteur d’accélération sera identique à 10 000 lignes. Pour reproduire les mesures, relancer tout le bloc avec la nouvelle valeur de n. bench::mark vérifie l’équivalence des sorties avec check = TRUE. La médiane résume 50 répétitions par expression. filter_gc = FALSE conserve aussi les répétitions pendant lesquelles le ramasse-miettes est intervenu. Le package bench sert à la démonstration.
+:::
+
+## Que change la taille de la matrice ? {#mesures}
+
+Temps médian de 50 répétitions sur la machine de démonstration. Les matrices ont toutes deux **20 colonnes**.
+
+| Nombre de lignes | `apply()` | `rowMeans()` | Rapport des temps¹ |
+|:---|---:|---:|---:|
+| 100 | 0,263 ms | 0,00379 ms | 69 fois |
+| 10 000 | 29,7 ms | 0,155 ms | 191 fois |
+
+¹ Temps médian de `apply()` divisé par celui de `rowMeans()`, calculé avant arrondi.
+
+::: {.takeaway}
+À 100 lignes, choisir `rowMeans()` économise environ **0,26 ms par appel**. À 10 000 lignes, le gain atteint **29,5 ms par appel** dans cet essai.
+:::
+
+::: {.notes}
+Mesures effectuées le 24 novembre 2026 sous macOS sur processeur ARM64, avec R 4.5.0 et bench 1.1.4. Les temps médians bruts en millisecondes étaient 0,26303553 et 0,00379252 pour 100 lignes, puis 29,700010 et 0,155226 pour 10 000 lignes. Relier le gain absolu au nombre d’appels dans un projet. Le rapport varie selon la taille, le matériel et les conditions d’exécution. Dans ce calcul sur une matrice numérique, apply() appelle mean() pour chaque ligne, tandis que rowMeans() utilise une routine spécialisée.
+:::
+
+## À essayer avec votre projet {#laboratoire}
+
+Choisissez l’une des deux expériences pour le laboratoire.
+
+**Mesurer.** Repérez un calcul répété dans votre projet. Comparez deux versions sur la même entrée, vérifiez les sorties et estimez combien de temps vous gagneriez sur une exécution complète.
+
+**Capturer.** Écrivez une expression avec `quote()`. Échangez-la avec une autre équipe. Peut-elle nommer les objets à fournir, puis obtenir deux résultats différents en changeant les données ?
+
+::: {.notes}
+Donner une minute aux équipes, puis inviter une personne à décrire son expérience en une phrase. Pour un calcul répété, demander un temps par appel et un nombre d’appels. Pour l’expression, faire distinguer ce qui est écrit dans l’appel de ce qui sera fourni au moment de l’évaluer. Il s’agit d’une discussion de laboratoire.
+:::
+
+## Lectures et documentation {#references .refs}
+
+- Sophie Baillargeon (2021). Notes du cours STT-4230 / STT-6230, Université Laval. [Optimisation de temps d’exécution en R](https://stt4230.rbind.io/amelioration_code/optim_temps_r/) et [Métaprogrammation en R](https://stt4230.rbind.io/amelioration_code/metaprogrammation_r/).
+- Hadley Wickham (2019). *Advanced R*, 2ᵉ éd. [Mesure de la performance, sections 23.1 à 23.3](https://adv-r.hadley.nz/perf-measure.html) et [métaprogrammation, sections 17.1 et 17.2](https://adv-r.hadley.nz/meta-big-picture.html).
+- R Core Team. Documentation de [`rowMeans()`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/colSums.html) et de [`eval()`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/eval.html).
+- Documentation des packages [`bench::mark()`](https://bench.r-lib.org/reference/mark.html) et [`rlang::expr()`](https://rlang.r-lib.org/reference/expr.html).
+
+::: {.notes}
+Les demandes de démonstration proviennent de la question réflexive du mini-test de préparation de la semaine 12, consultée le 24 novembre 2026 dans Brio. Les mesures présentées correspondent à l’exécution décrite dans les notes de la diapositive de résultats.
+:::
+
+## Se préparer au défi technique 3 {#preparation-defi-3}
+
+**Mercredi 2 décembre** · Travail individuel · 60 minutes · 10 % de la note · IA obligatoire
+
+1. **Reprenez le bilan de contrôles de la semaine 11.** Explorez l’objet avec `str()`. Modifiez une donnée, puis prédisez ce qui changera dans le résumé de `print()` et dans le graphique `ggplot2` de `plot()`. Quelles méthodes S3 sont appelées ?
+2. **Testez une fonction proposée par l’IA.** Choisissez un cas simple et un cas limite. Notez les résultats attendus avant d’exécuter le code. Si un résultat diffère, expliquez l’écart à l’IA, puis testez sa correction.
+3. **Faites un essai de remise.** Générez le HTML d’un ancien exercice Quarto et ouvrez-le. Après le commit et le push, vérifiez sur GitHub que le `.qmd` et le `.html` sont tous deux à jour.
+
+[Consignes de préparation et liens vers les exercices](https://aureliennicosiaulaval.github.io/programmation-pour-la-science-des-donnees/defis.html#defi-technique-3)
+
+::: {.notes}
+Le bilan de contrôles permet de revoir les composantes d’une liste nommée, la classe de l’objet et les données utilisées dans le graphique. Pour la pratique avec l’IA, demander à une personne quel essai lui permettrait d’accepter ou de modifier une suggestion. L’énoncé et le gabarit Quarto seront distribués au début du défi.
+:::
+
+## Présentations orales du 9 décembre {#horaire-oraux .compact}
+
+**Mercredi 9 décembre 2026 · Pavillon Adrien-Pouliot · Oraux de 13 h 30 à 15 h 05**
+
+| Heure | Équipe | Projet ou activité |
+|:---------------------|:------:|:----------------------------------------------------------------------|
+| 13 h 30 à 13 h 45 | 01 | Listes d’attente en chirurgie et délais aux urgences au Québec<br>Arthur Mayer, Ninive Cunha Vigeant et Jillian Dore |
+| 13 h 50 à 14 h 05 | 02 | Résultats académiques et utilisation de l’IA<br>Anne-Sophie Gagné, Édith Aboflan et Jalila Prestley Yerbanga |
+| 14 h 10 à 14 h 25 | 03 | Évolution de la qualité de l’air au Québec<br>Ève Richard, Mary-Kim Godbout et Julianne Fréchette |
+
+Chaque équipe dispose de **5 minutes** pour s’installer après le passage de l’équipe précédente.
+
+::: {.notes}
+Présenter les trois premières équipes. L’équipe 01 commence à 13 h 30. L’horaire est celui du document « Présentations orales des projets », STT-4230 / STT-6230, automne 2026.
+:::
+
+## Présentations des équipes 04 et 05 et bilan du cours {#horaire-oraux-suite .compact}
+
+**Mercredi 9 décembre 2026 · Pavillon Adrien-Pouliot**
+
+| Heure | Équipe | Projet ou activité |
+|:---------------------|:------:|:----------------------------------------------------------------------|
+| 14 h 30 à 14 h 45 | 04 | Écrans au coucher et fatigue du lendemain<br>Anne-Sophie Bissonnette, Mehdi Ouchcham et Guillaume Ouellet |
+| 14 h 50 à 15 h 05 | 05 | Tutoriel sur l’analyse en composantes principales avec R<br>Saa Moussa Tenguiano, Assa Yao Syelemy Hausmel Darrell et Fahd Keneth Ouattara |
+| 15 h 05 à 15 h 25 | | Bilan du cours et dernières questions sur le portfolio |
+
+**15 minutes par équipe** · Environ 12 minutes pour présenter le projet, faire la démonstration et expliquer le code, puis 3 minutes pour les questions. Comptez environ 4 minutes de présentation par personne.
+
+::: {.notes}
+Laisser cette diapositive affichée au moment de prendre les questions sur les présentations. Les 12 minutes comprennent la démonstration et la revue de code. Le bilan du cours commence à 15 h 05 après la cinquième équipe.
+:::
+
+```{r}
+#| label: verifier-exemples
+#| include: false
+stopifnot(
+  isTRUE(all.equal(par_apply, par_ligne)),
+  identical(unname(par_ligne), c(14, 10, NaN))
+)
+```
