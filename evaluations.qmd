@@ -16,7 +16,7 @@ Cette page présente les pondérations, les échéances, les traces attendues et
 | Projet filé en équipe | 30 % | Équipe, avec traces individuelles | Jalons semaines 6 et 12; remise finale et défense en semaine 14, pendant la séance du mercredi 9 décembre | Permise, déclarée |
 | Défi technique 1 | 10 % | Individuel en laboratoire, 1 h | Semaine 5 | Non permise |
 | Défi technique 2 | 10 % | Individuel, 1 h puis entretien de 5 min | Semaine 8, 21 octobre, travail et remise de 13 h 30 à 14 h 30 | Permise, facultative, déclarée |
-| Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Intégrée |
+| Défi technique 3 | 10 % | Individuel en laboratoire, 1 h | Semaine 13 | Obligatoire |
 | Site Quarto personnel | 10 % | Individuel | Semaine 15, mercredi 16 décembre à 23 h 55 | Permise, déclarée |
 | Total | 100 % |  |  |  |
 
@@ -28,9 +28,9 @@ Les trois défis techniques ne sont pas trois examens semblables. Ils ont trois 
 |---|---:|---|---|---|
 | Défi 1 | Semaine 5 | Vérifier les bases individuelles | Structure de projet, importation, nettoyage simple, proportion, validation, chemins relatifs et README minimal | Non permise |
 | Défi 2 | Semaine 8 | Vérifier la programmation avec aide encadrée | Périodes et jointures, valeurs manquantes, validation, figure, rapport Quarto et explication du code | Permise, facultative, déclarée |
-| Défi 3 | Semaine 13 | Vérifier le jugement professionnel avec IA | Diagnostic, débogage, optimisation, parallélisation ou amélioration d’un mini-projet, validation des suggestions IA | Intégrée |
+| Défi 3 | Semaine 13 | Vérifier le jugement professionnel avec IA | Fonctions en R, méthodes S3, graphiques avec `ggplot2`, tests et vérification des réponses de l’IA | Obligatoire |
 
-Directives publiques : [Préparation au défi technique 1](defis/preparation-defi-technique-1.qmd) et [Préparation au défi technique 2](diaporamas/preparation-defi-2/directives-preparation.qmd).
+Consultez les pages de préparation du [défi technique 1](defis/preparation-defi-technique-1.qmd), du [défi technique 2](diaporamas/preparation-defi-2/directives-preparation.qmd) et du [défi technique 3](defis.qmd#defi-technique-3).
 
 Les énoncés évalués sont distribués au début des défis. Pour le défi 2, le dépôt privé est fourni avant la séance pour comprendre les données et vérifier les outils. Il contient le fichier des taux, des exemples de lots et de scénarios, un dictionnaire et un guide en PDF, HTML et QMD. Les lots et les scénarios de l'épreuve, l'énoncé et le rapport QMD à compléter seront fournis sur Brio à 13 h 30. Le dernier push doit être terminé avant 14 h 30; l'équipe enseignante récupère alors les dépôts directement sur GitHub.
 
@@ -61,7 +61,7 @@ Pour le défi 2, un entretien individuel de cinq minutes suit la remise figée. 
 | Projet filé en équipe | Dépôt d’équipe, README, pipeline de données, produit dans le format approuvé (rapport, tableau de bord, application, tutoriel, site, outil R ou autre), validation adaptée au produit, documentation, issues, contributions, `docs/ai-log.md`, présentation et revue de code |
 | Défi 1 | Dossier récupéré par l’enseignant, fichier brut, script R, résultats et README court, sans IA |
 | Défi 2 | Dépôt privé figé : script R, rapport QMD et HTML, tableau CSV et `docs/ai-log.md` même sans IA; collecte par l’équipe enseignante sur GitHub à 14 h 30; entretien de cinq minutes |
-| Défi 3 | Mini-rapport technique, code amélioré, comparaison avant/après, validation, trace détaillée de l’usage de l’IA |
+| Défi 3 | Fichier `.qmd` complété et HTML généré, à remettre dans le dépôt GitHub individuel avant la fin des 60 minutes. Indiquez l’outil d’IA utilisé et consignez vos essais et vérifications dans le `.qmd`. |
 | Site Quarto personnel | Adresse GitHub Pages publique, dépôt source du site, dernier commit évalué, page de présentation ou compétences, au moins deux réalisations commentées, lien ou référence vers une trace du portfolio, déclaration IA si pertinente |
 
 ## Repères de fin de session
